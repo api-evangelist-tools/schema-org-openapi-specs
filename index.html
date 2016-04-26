@@ -20,7 +20,7 @@ title: 'Schema.org OpenAPI Specs'
 
 </script>
 
-4 - 1<br />
+5 - 1<br />
 
 <table cellpadding="1" cellspacing="1" width="100%" border="1">
 {% for folder in site.data.apis %}
@@ -35,6 +35,7 @@ title: 'Schema.org OpenAPI Specs'
              {% assign thisname = thisname | replace: ' API','' %}
              {% assign thisname = thisname | append:'/' %}
              {% assign thisname = thisname | replace: ' ','-' %}
+             
              thisname: {{ thisname }}<br />
 
              {% if property.type == 'x-json-schema' %}

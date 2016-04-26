@@ -25,7 +25,6 @@ title: 'Schema.org OpenAPI Specs'
 {% for folder in site.data %}
   {% for item in folder %}
     {% assign file = item %}
-    {% if file.apis != null %}
 
       {{ file }}
       <br /><hr /><br />
@@ -38,7 +37,6 @@ title: 'Schema.org OpenAPI Specs'
 
     {% endif %}
   {% endfor %}
-{% endif %}
 {% endfor %}
 {% endfor %}
 </table>

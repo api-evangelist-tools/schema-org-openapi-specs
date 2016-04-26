@@ -14,7 +14,7 @@ layout: page
       }
     }
 </script>
-5-1
+5-2
 <table cellpadding="3" cellspacing="2" width="100%" border="0" style="margin-top: 0px;">
 
 {% assign index = site.data.apis %}
@@ -64,8 +64,7 @@ layout: page
                   {% for entry in apicommons %}
                     {% assign thisname = entry[0] %}
                     {% assign thisentry = entry[1] %}
-                    {{ thisname }} == {{ pathname }}<br />
-                    {% if thisname == pathname %}
+                    {% if pathname contains thisname %}
                       {% assign openapi_spec_json = thisentry %}
                     {% endif %}
                   {% endfor %}

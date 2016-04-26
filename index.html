@@ -58,7 +58,7 @@ title: 'Schema.org OpenAPI Specs'
                       {% assign thisname = apijson.name | downcase %}
                       {% assign thisname = thisname | append:'/' %}
                       {% assign thisname = thisname | replace: ' ','-' %}
-
+                      thisname: {{ thisname }}<br />
                       {% if property.type == 'x-json-schema' %}
                         {% assign json_schema_url = property.url %}
                       {% endif %}
@@ -67,23 +67,23 @@ title: 'Schema.org OpenAPI Specs'
 
                         {% assign openapi_json_spec_url = property.url %}
                         {% assign pathname = openapi_json_spec_url | replace: site.url,'' %}
-                        {% assign pathname = pathname | replace: '/_data/api-commons/','' %}
+                        {% assign pathname = pathname | replace: '/_data/','' %}
                         {% assign pathname = pathname | replace: thisname,'' %}
                         {% assign pathname = pathname | replace: '/','' %}
                         {% assign pathname = pathname | replace: '.json','' %}
                         {% assign openapi_spec_json = file | map: pathname %}
-                        1: {{ pathname }}
+                        1: {{ pathname }}<br />
                       {% endif %}
 
                       {% if property.type == 'X-openapi-spec-yaml' %}
 
                         {% assign openapi_yaml_spec_url = property.url %}
                         {% assign pathname = openapi_json_spec_url | replace: site.url,'' %}
-                        {% assign pathname = pathname | replace: '/_data/api-commons/','' %}
+                        {% assign pathname = pathname | replace: '/_data/','' %}
                         {% assign pathname = pathname | replace: thisname,'' %}
                         {% assign pathname = pathname | replace: '/','' %}
                         {% assign pathname = pathname | replace: '.yaml','' %}
-                        2: {{ pathname }}
+                        2: {{ pathname }}<br />
                         {% assign openapi_spec_yaml = file | map: pathname %}
 
                       {% endif %}

@@ -1,26 +1,13 @@
 ---
 layout: page
 ---
-<script type="text/javascript">
-  function showme($id)
-    {
-    if(document.getElementById($id).style.display=='none')
-      {
-      document.getElementById($id).style.display = '';
-      }
-    else
-      {
-      document.getElementById($id).style.display = 'none';
-      }
-    }
-</script>
-<table cellpadding="3" cellspacing="2" width="100%" border="0" style="margin-top: 0px;">
 
 {% assign index = site.data.apis %}
 {% assign apijson = index[0] %}
 {% assign contents = site.data.api-commons %}
 {% assign apicommons = contents %}
 
+<table cellpadding="3" cellspacing="2" width="100%" border="0" style="margin-top: 0px;">
   <tr>
     <td>
         <span style="font-size: 24px;"><strong>{{ apijson.name }}</strong></span>
@@ -34,7 +21,6 @@ layout: page
   <tr>
     <td>
           {% for api in apijson.apis %}
-
           <table cellpadding="3" cellspacing="2" width="100%" border="0">
 
               {% assign openapi_spec_json = '' %}
@@ -86,7 +72,6 @@ layout: page
 
             </table>
           {% endfor %}
-
       </td>
     </tr>
   </table>

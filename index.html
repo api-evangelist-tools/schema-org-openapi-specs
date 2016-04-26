@@ -89,7 +89,7 @@ title: 'Schema.org OpenAPI Specs'
 
   <tr>
     <td>
-        <span style="font-size: 22px;"><strong>API Documentation</strong></span>
+        <span style="font-size: 22px;"><strong>{{ apijson.name }}</strong></span>
     </td>
   </tr>
   <tr>
@@ -136,14 +136,15 @@ title: 'Schema.org OpenAPI Specs'
 
                     {% endfor %}
 
-                    <tr style="background-color: #D3D3D3;">
+                    <tr>
                       <td align="left" style="font-size: 18px; font-weight: bold; padding: 10px;">
                         {{ api.name }}
                       </td>
-                      <td align="right" style="padding: 10px;">
-                        {% if openapi_spec_url != null and openapi_spec_url != empty %}
-                          <a href="{{ site.url }}{{ openapi_spec_url }}" target="_blank" title="View OpenAPI Spec" style="font-size: 16px; font-weight: normal;">OpenAPI Spec</a>
-                        {% endif %}
+                      <td align="center" style="padding: 10px; width: 50px;">
+                        <a href="{{ site.url }}{{ openapi_spec_url }}" target="_blank" title="View OpenAPI Spec" style="font-size: 16px; font-weight: normal;">OpenAPI Spec</a>
+                      </td>
+                      <td align="center" style="padding: 10px; width: 50px;">                        
+                        <a href="{{ site.url }}{{ openapi_spec_url }}" target="_blank" title="View OpenAPI Spec" style="font-size: 16px; font-weight: normal;">OpenAPI Spec</a>
                       </td>
                     </tr>
                     <tr id="methods-for-{{ pathname }}">

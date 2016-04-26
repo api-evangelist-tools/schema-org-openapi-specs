@@ -126,11 +126,11 @@ title: 'Schema.org OpenAPI Specs'
                       {% endif %}
 
                       {% if property.type == 'X-openapi-spec-json' %}
-                        {% assign openapi_spec_url = property.url %}
+                        {% assign openapi_json_spec_url = property.url %}
                       {% endif %}
 
                       {% if property.type == 'X-openapi-spec-yaml' %}
-                        {% assign openapi_spec_url = property.url %}
+                        {% assign openapi_yaml_spec_url = property.url %}
                       {% endif %}
 
 
@@ -141,10 +141,14 @@ title: 'Schema.org OpenAPI Specs'
                         {{ api.name }}
                       </td>
                       <td align="center" style="padding: 10px; width: 50px;">
-                        <a href="{{ site.url }}{{ openapi_spec_url }}" target="_blank" title="View OpenAPI Spec" style="font-size: 16px; font-weight: normal;">OpenAPI Spec</a>
+                        <a href="{{ openapi_json_spec_url }}" target="_blank" title="OpenAPI Spec JSON">
+                          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-swagger-round.png" width="25" align="right" />
+                        </a>
                       </td>
-                      <td align="center" style="padding: 10px; width: 50px;">                        
-                        <a href="{{ site.url }}{{ openapi_spec_url }}" target="_blank" title="View OpenAPI Spec" style="font-size: 16px; font-weight: normal;">OpenAPI Spec</a>
+                      <td align="center" style="padding: 10px; width: 50px;">
+                        <a href="{{ openapi_yaml_spec_url }}" target="_blank" title="OpenAPI Spec Yaml">
+                          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-yaml.png" width="25" align="right" />
+                        </a>
                       </td>
                     </tr>
                     <tr id="methods-for-{{ pathname }}">

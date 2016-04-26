@@ -28,7 +28,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: #/definitions/item'
         tags:
         - Hospital
       post:
@@ -38,7 +38,7 @@
         parameters:
         - name: additionalproperty
           in: formData
-          description: 'A property-value pair representing an additional characteristics
+          description: A property-value pair representing an additional characteristics
             of the entitity, e.g. a product feature or another characteristic for which
             there is no matching property in schema.org. Note: Publishers should be
             aware that applications designed to use specific schema.org properties (e.g.
@@ -75,7 +75,7 @@
           type: text
         - name: alumni
           in: formData
-          description: 'Alumni of an organization. Inverse property: alumniOf.'
+          description: Alumni of an organization. Inverse property: alumniOf.'
           required: false
           type: person
         - name: areaserved
@@ -96,10 +96,10 @@
           type: text
         - name: branchcode
           in: formData
-          description: 'A short textual code (also called "store code") that uniquely
+          description: A short textual code (also called store code) that uniquely
             identifies a place of business. The code is typically assigned by the parentOrganization
             and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code "3047" is a branchCode for a particular branch.      '
+            the code 3047 is a branchCode for a particular branch.      '
           required: false
           type: text
         - name: brand
@@ -115,13 +115,13 @@
           type: contactpoint
         - name: containedinplace
           in: formData
-          description: 'The basic containment relation between a place and one that
+          description: The basic containment relation between a place and one that
             contains it. Supersedes containedIn. Inverse property: containsPlace.'
           required: false
           type: place
         - name: containsplace
           in: formData
-          description: 'The basic containment relation between a place and another that
+          description: The basic containment relation between a place and another that
             it contains. Inverse property: containsPlace.'
           required: false
           type: place
@@ -132,7 +132,7 @@
           type: text
         - name: department
           in: formData
-          description: 'A relationship between an organization and a department of that
+          description: A relationship between an organization and a department of that
             organization, also described as an organization (allowing different urls,
             logos, opening hours). For example: a store with a pharmacy, or a bakery
             with a cafe.'
@@ -221,7 +221,7 @@
           type: place
         - name: hospitalaffiliation
           in: formData
-          description: 'A hospital with which the physician or office is affiliated. '
+          description: A hospital with which the physician or office is affiliated. '
           required: false
           type: physician
         - name: image
@@ -256,14 +256,14 @@
           type: url or  imageobject
         - name: mainentityofpage
           in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
+          description: Indicates a page (or other CreativeWork) for which this thing
             is the main entity being described.            See background notes for
             details.       Inverse property: mainEntity.'
           required: false
           type: creativework or  url
         - name: makesoffer
           in: formData
-          description: 'A pointer to products or services offered by the organization
+          description: A pointer to products or services offered by the organization
             or person. Inverse property: offeredBy.'
           required: false
           type: offer
@@ -274,14 +274,14 @@
           type: medicalspecialty
         - name: member
           in: formData
-          description: 'A member of an Organization or a ProgramMembership. Organizations
+          description: A member of an Organization or a ProgramMembership. Organizations
             can be members of organizations; ProgramMembership is typically for individuals.
             Supersedes musicGroupMember, members. Inverse property: memberOf.'
           required: false
           type: person or  organization
         - name: memberof
           in: formData
-          description: 'An Organization (or ProgramMembership) to which this Person
+          description: An Organization (or ProgramMembership) to which this Person
             or Organization belongs. Inverse property: member.'
           required: false
           type: programmembership or  organization
@@ -303,7 +303,7 @@
           type: quantitativevalue
         - name: openinghours
           in: formData
-          description: 'The opening hours for a business. Opening hours can be specified
+          description: The opening hours for a business. Opening hours can be specified
             as a weekly time range, starting with days, then times per day. Multiple
             days can be listed with commas '','' separating each day. Day or time ranges
             are specified using a hyphen ''-''.- Days are specified using the following
@@ -327,7 +327,7 @@
           type: product or  ownershipinfo
         - name: parentorganization
           in: formData
-          description: 'The larger organization that this organization is a branch of,
+          description: The larger organization that this organization is a branch of,
             if any. Supersedes branchOf. Inverse property: subOrganization.'
           required: false
           type: organization
@@ -372,8 +372,8 @@
           type: demand
         - name: suborganization
           in: formData
-          description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific ''department''
+          description: A relationship between two organizations where the first includes
+            the second, e.g., as a subsidiary. See also: the more specific department
             property. Inverse property: parentOrganization.'
           required: false
           type: organization
@@ -404,7 +404,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: #/definitions/item'
         tags:
         - Hospital
     /hospital/{id}/:
@@ -424,7 +424,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: #/definitions/item'
         tags:
         - Hospital
       put:
@@ -439,7 +439,7 @@
           type: integer
         - name: additionalproperty
           in: formData
-          description: 'A property-value pair representing an additional characteristics
+          description: A property-value pair representing an additional characteristics
             of the entitity, e.g. a product feature or another characteristic for which
             there is no matching property in schema.org. Note: Publishers should be
             aware that applications designed to use specific schema.org properties (e.g.
@@ -476,7 +476,7 @@
           type: text
         - name: alumni
           in: formData
-          description: 'Alumni of an organization. Inverse property: alumniOf.'
+          description: Alumni of an organization. Inverse property: alumniOf.'
           required: false
           type: person
         - name: areaserved
@@ -497,10 +497,10 @@
           type: text
         - name: branchcode
           in: formData
-          description: 'A short textual code (also called "store code") that uniquely
+          description: A short textual code (also called store code) that uniquely
             identifies a place of business. The code is typically assigned by the parentOrganization
             and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code "3047" is a branchCode for a particular branch.      '
+            the code 3047 is a branchCode for a particular branch.      '
           required: false
           type: text
         - name: brand
@@ -516,13 +516,13 @@
           type: contactpoint
         - name: containedinplace
           in: formData
-          description: 'The basic containment relation between a place and one that
+          description: The basic containment relation between a place and one that
             contains it. Supersedes containedIn. Inverse property: containsPlace.'
           required: false
           type: place
         - name: containsplace
           in: formData
-          description: 'The basic containment relation between a place and another that
+          description: The basic containment relation between a place and another that
             it contains. Inverse property: containsPlace.'
           required: false
           type: place
@@ -533,7 +533,7 @@
           type: text
         - name: department
           in: formData
-          description: 'A relationship between an organization and a department of that
+          description: A relationship between an organization and a department of that
             organization, also described as an organization (allowing different urls,
             logos, opening hours). For example: a store with a pharmacy, or a bakery
             with a cafe.'
@@ -622,7 +622,7 @@
           type: place
         - name: hospitalaffiliation
           in: formData
-          description: 'A hospital with which the physician or office is affiliated. '
+          description: A hospital with which the physician or office is affiliated. '
           required: false
           type: physician
         - name: image
@@ -657,14 +657,14 @@
           type: url or  imageobject
         - name: mainentityofpage
           in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
+          description: Indicates a page (or other CreativeWork) for which this thing
             is the main entity being described.            See background notes for
             details.       Inverse property: mainEntity.'
           required: false
           type: creativework or  url
         - name: makesoffer
           in: formData
-          description: 'A pointer to products or services offered by the organization
+          description: A pointer to products or services offered by the organization
             or person. Inverse property: offeredBy.'
           required: false
           type: offer
@@ -675,14 +675,14 @@
           type: medicalspecialty
         - name: member
           in: formData
-          description: 'A member of an Organization or a ProgramMembership. Organizations
+          description: A member of an Organization or a ProgramMembership. Organizations
             can be members of organizations; ProgramMembership is typically for individuals.
             Supersedes musicGroupMember, members. Inverse property: memberOf.'
           required: false
           type: person or  organization
         - name: memberof
           in: formData
-          description: 'An Organization (or ProgramMembership) to which this Person
+          description: An Organization (or ProgramMembership) to which this Person
             or Organization belongs. Inverse property: member.'
           required: false
           type: programmembership or  organization
@@ -704,7 +704,7 @@
           type: quantitativevalue
         - name: openinghours
           in: formData
-          description: 'The opening hours for a business. Opening hours can be specified
+          description: The opening hours for a business. Opening hours can be specified
             as a weekly time range, starting with days, then times per day. Multiple
             days can be listed with commas '','' separating each day. Day or time ranges
             are specified using a hyphen ''-''.- Days are specified using the following
@@ -728,7 +728,7 @@
           type: product or  ownershipinfo
         - name: parentorganization
           in: formData
-          description: 'The larger organization that this organization is a branch of,
+          description: The larger organization that this organization is a branch of,
             if any. Supersedes branchOf. Inverse property: subOrganization.'
           required: false
           type: organization
@@ -773,8 +773,8 @@
           type: demand
         - name: suborganization
           in: formData
-          description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific ''department''
+          description: A relationship between two organizations where the first includes
+            the second, e.g., as a subsidiary. See also: the more specific department
             property. Inverse property: parentOrganization.'
           required: false
           type: organization
@@ -805,7 +805,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: #/definitions/item'
         tags:
         - Hospital
       delete:
@@ -824,7 +824,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: #/definitions/item'
         tags:
         - Hospital
   definitions:
@@ -834,7 +834,7 @@
           description: additionalproperty
           type: propertyvalue
         description:
-          description: 'A property-value pair representing an additional characteristics
+          description: A property-value pair representing an additional characteristics
             of the entitity, e.g. a product feature or another characteristic for which
             there is no matching property in schema.org. Note: Publishers should be
             aware that applications designed to use specific schema.org properties (e.g.
@@ -876,7 +876,7 @@
           description: alumni
           type: person
         description:
-          description: 'Alumni of an organization. Inverse property: alumniOf.'
+          description: Alumni of an organization. Inverse property: alumniOf.'
           type: person
       - name:
           description: areaserved
@@ -901,10 +901,10 @@
           description: branchcode
           type: text
         description:
-          description: 'A short textual code (also called "store code") that uniquely
+          description: A short textual code (also called store code) that uniquely
             identifies a place of business. The code is typically assigned by the parentOrganization
             and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code "3047" is a branchCode for a particular branch.      '
+            the code 3047 is a branchCode for a particular branch.      '
           type: text
       - name:
           description: brand
@@ -923,14 +923,14 @@
           description: containedinplace
           type: place
         description:
-          description: 'The basic containment relation between a place and one that
+          description: The basic containment relation between a place and one that
             contains it. Supersedes containedIn. Inverse property: containsPlace.'
           type: place
       - name:
           description: containsplace
           type: place
         description:
-          description: 'The basic containment relation between a place and another that
+          description: The basic containment relation between a place and another that
             it contains. Inverse property: containsPlace.'
           type: place
       - name:
@@ -943,7 +943,7 @@
           description: department
           type: organization
         description:
-          description: 'A relationship between an organization and a department of that
+          description: A relationship between an organization and a department of that
             organization, also described as an organization (allowing different urls,
             logos, opening hours). For example: a store with a pharmacy, or a bakery
             with a cafe.'
@@ -1048,7 +1048,7 @@
           description: hospitalaffiliation
           type: physician
         description:
-          description: 'A hospital with which the physician or office is affiliated. '
+          description: A hospital with which the physician or office is affiliated. '
           type: physician
       - name:
           description: image
@@ -1089,7 +1089,7 @@
           description: mainentityofpage
           type: creativework or  url
         description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
+          description: Indicates a page (or other CreativeWork) for which this thing
             is the main entity being described.            See background notes for
             details.       Inverse property: mainEntity.'
           type: creativework or  url
@@ -1097,7 +1097,7 @@
           description: makesoffer
           type: offer
         description:
-          description: 'A pointer to products or services offered by the organization
+          description: A pointer to products or services offered by the organization
             or person. Inverse property: offeredBy.'
           type: offer
       - name:
@@ -1110,7 +1110,7 @@
           description: member
           type: person or  organization
         description:
-          description: 'A member of an Organization or a ProgramMembership. Organizations
+          description: A member of an Organization or a ProgramMembership. Organizations
             can be members of organizations; ProgramMembership is typically for individuals.
             Supersedes musicGroupMember, members. Inverse property: memberOf.'
           type: person or  organization
@@ -1118,7 +1118,7 @@
           description: memberof
           type: programmembership or  organization
         description:
-          description: 'An Organization (or ProgramMembership) to which this Person
+          description: An Organization (or ProgramMembership) to which this Person
             or Organization belongs. Inverse property: member.'
           type: programmembership or  organization
       - name:
@@ -1144,7 +1144,7 @@
           description: openinghours
           type: text
         description:
-          description: 'The opening hours for a business. Opening hours can be specified
+          description: The opening hours for a business. Opening hours can be specified
             as a weekly time range, starting with days, then times per day. Multiple
             days can be listed with commas '','' separating each day. Day or time ranges
             are specified using a hyphen ''-''.- Days are specified using the following
@@ -1171,7 +1171,7 @@
           description: parentorganization
           type: organization
         description:
-          description: 'The larger organization that this organization is a branch of,
+          description: The larger organization that this organization is a branch of,
             if any. Supersedes branchOf. Inverse property: subOrganization.'
           type: organization
       - name:
@@ -1224,8 +1224,8 @@
           description: suborganization
           type: organization
         description:
-          description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific ''department''
+          description: A relationship between two organizations where the first includes
+            the second, e.g., as a subsidiary. See also: the more specific department
             property. Inverse property: parentOrganization.'
           type: organization
       - name:

@@ -14,7 +14,6 @@ layout: page
       }
     }
 </script>
-8-1
 <table cellpadding="3" cellspacing="2" width="100%" border="0" style="margin-top: 0px;">
 
 {% assign index = site.data.apis %}
@@ -110,12 +109,12 @@ layout: page
                 </td>
               </tr>
               <tr id="methods-for-{{ pathname }}-spec-json" style="display; none;">
-                <td colspan="2">
+                <td colspan="3">
                     {{ openapi_spec_json.openapi-spec | json }}
                 </td>
               </tr>
               <tr id="methods-for-{{ pathname }}-spec-yaml" style="display: none;">
-                <td colspan="2">
+                <td colspan="3">
                     {{ openapi_spec_yaml }}
                 </td>
               </tr>

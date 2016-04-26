@@ -31,8 +31,6 @@ title: 'Schema.org OpenAPI Specs'
       <br /><hr /><br />
       {% assign masterapisjson = file.apis %}
 
-      {% assign common_api_action_url = '' %}
-
       {% for apisjson in masterapisjson %}
 
         {% if apisjson.specificationVersion != null %}

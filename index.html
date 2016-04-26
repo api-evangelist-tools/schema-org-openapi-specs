@@ -20,7 +20,7 @@ title: 'Schema.org OpenAPI Specifications'
 
 </script>
 
-7 - 1<br />
+8 - 1<br />
 
 <table cellpadding="1" cellspacing="1" width="100%" border="1">
 {% for folder in site.data %}
@@ -36,8 +36,6 @@ title: 'Schema.org OpenAPI Specifications'
              {% assign thisname = thisname | append:'/' %}
              {% assign thisname = thisname | replace: ' ','-' %}
 
-             thisname: {{ thisname }}<br />
-
              {% if property.type == 'x-json-schema' %}
                {% assign json_schema_url = property.url %}
              {% endif %}
@@ -51,7 +49,6 @@ title: 'Schema.org OpenAPI Specifications'
                {% assign pathname = pathname | replace: '/','-' %}
                {% assign pathname = pathname | replace: '.json','' %}
                {% assign openapi_spec_json = file | map: pathname %}
-               1: {{ pathname }}<br />
              {% endif %}
 
              {% if property.type == 'X-openapi-spec-yaml' %}
@@ -62,7 +59,6 @@ title: 'Schema.org OpenAPI Specifications'
                {% assign pathname = pathname | replace: thisname,'' %}
                {% assign pathname = pathname | replace: '/','' %}
                {% assign pathname = pathname | replace: '.yaml','' %}
-               2: {{ pathname }}<br />
                {% assign openapi_spec_yaml = file | map: pathname %}
 
              {% endif %}

@@ -18,28 +18,21 @@ title: 'Schema.org OpenAPI Specs'
     }
 </script>
 
-5
-
-<table cellpadding="3" cellspacing="2" width="100%" border="0" style="margin-top: 0px;">
+6
 
 {% for folder in site.data %}
   {% for item in folder %}
     {% assign file = item %}
-
-      {% for api in file.apis %}
+    {% for api in file.apis %}
 
       <table cellpadding="1" cellspacing="1" width="100%" border="0">
-
-          {% assign api_action_spec = '' %}
-          {% assign api_action_url = '' %}
-          {% assign openapi_spec_json = '' %}
 
           {% for property in api.properties %}
 
             {% assign thisname = apijson.name | downcase %}
             {% assign thisname = thisname | append:'/' %}
             {% assign thisname = thisname | replace: ' ','-' %}
-            thisname: {{ thisname }}<br />
+            
             {% if property.type == 'x-json-schema' %}
               {% assign json_schema_url = property.url %}
             {% endif %}

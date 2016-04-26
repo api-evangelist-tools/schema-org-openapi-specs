@@ -50,7 +50,7 @@ layout: page
                   {% assign json_schema_url = property.url %}
                 {% endif %}
 
-                {% if property.type == 'x-openapi-spec' %}
+                {% if property.type == 'X-openapi-spec-json' %}
 
                   {% assign openapi_spec_url = property.url %}
                   {% assign pathname = openapi_spec_url | replace: '_data/api-commons/','' %}

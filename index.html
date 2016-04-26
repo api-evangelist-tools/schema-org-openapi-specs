@@ -19,12 +19,20 @@ title: 'Schema.org OpenAPI Specs'
 </script>
 
 22
+
 <table cellpadding="3" cellspacing="2" width="100%" border="0" style="margin-top: 0px;">
 
-{% assign index = site.data.apis %}
-{% assign apijson = index[0] %}
-{% assign contents = site.data.api-commons %}
-{% assign apicommons = contents %}
+{% for folder in site.data %}
+  {% for item in folder %}
+    {% assign file = item %}
+    {% if file.apis != null %}
+      {% assign masterapisjson = file.apis %}
+
+      {% assign common_api_action_url = '' %}
+
+      {% for apisjson in masterapisjson %}
+
+        {% if apisjson.specificationVersion != null %}
 
   <tr>
     <td>
@@ -123,4 +131,9 @@ title: 'Schema.org OpenAPI Specs'
         </table>
       </td>
     </tr>
-  </table>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+</table>

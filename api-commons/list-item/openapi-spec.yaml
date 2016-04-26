@@ -28,7 +28,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ListItem'
         tags:
         - List Item
       post:
@@ -41,7 +41,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -65,20 +65,20 @@
         - name: item
           in: formData
           description: "An entity represented by an entry in a list or data feed (e.g.
-            an 'artist' in a list of 'artists')\u2019."
+            an \\'artist\\' in a list of \\'artists\\')\u2019."
           required: false
           type: thing
         - name: itemlistelement
           in: formData
           description: 'For itemListElement values, you can use simple strings (e.g.
-            "Peter", "Paul", "Mary"), existing entities, or use ListItem.        Text
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
             values are best if the elements in the list are plain strings. Existing
             entities are best for a simple, unordered list of existing things in your
             data. ListItem is used with ordered lists when you want to provide additional
             context about the element in that list or when the same item might be in
             different places in different lists.        Note: The order of elements
             in your mark-up is not sufficient for indicating the order or elements.  Use
-            ListItem with a ''position'' property in such cases. '
+            ListItem with a \''position\'' property in such cases. '
           required: false
           type: itemlist
         - name: mainentityofpage
@@ -106,7 +106,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: previousitem
@@ -117,7 +117,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -132,7 +132,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ListItem'
         tags:
         - List Item
     /list-item/{id}/:
@@ -152,7 +152,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ListItem'
         tags:
         - List Item
       put:
@@ -170,7 +170,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -194,20 +194,20 @@
         - name: item
           in: formData
           description: "An entity represented by an entry in a list or data feed (e.g.
-            an 'artist' in a list of 'artists')\u2019."
+            an \\'artist\\' in a list of \\'artists\\')\u2019."
           required: false
           type: thing
         - name: itemlistelement
           in: formData
           description: 'For itemListElement values, you can use simple strings (e.g.
-            "Peter", "Paul", "Mary"), existing entities, or use ListItem.        Text
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
             values are best if the elements in the list are plain strings. Existing
             entities are best for a simple, unordered list of existing things in your
             data. ListItem is used with ordered lists when you want to provide additional
             context about the element in that list or when the same item might be in
             different places in different lists.        Note: The order of elements
             in your mark-up is not sufficient for indicating the order or elements.  Use
-            ListItem with a ''position'' property in such cases. '
+            ListItem with a \''position\'' property in such cases. '
           required: false
           type: itemlist
         - name: mainentityofpage
@@ -235,7 +235,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: previousitem
@@ -246,7 +246,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -261,7 +261,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ListItem'
         tags:
         - List Item
       delete:
@@ -280,11 +280,11 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ListItem'
         tags:
         - List Item
   definitions:
-    item:
+    ListItem:
       properties:
       - name:
           description: additionaltype
@@ -293,7 +293,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -321,21 +321,21 @@
           type: thing
         description:
           description: "An entity represented by an entry in a list or data feed (e.g.
-            an 'artist' in a list of 'artists')\u2019."
+            an \\'artist\\' in a list of \\'artists\\')\u2019."
           type: thing
       - name:
           description: itemlistelement
           type: itemlist
         description:
           description: 'For itemListElement values, you can use simple strings (e.g.
-            "Peter", "Paul", "Mary"), existing entities, or use ListItem.        Text
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
             values are best if the elements in the list are plain strings. Existing
             entities are best for a simple, unordered list of existing things in your
             data. ListItem is used with ordered lists when you want to provide additional
             context about the element in that list or when the same item might be in
             different places in different lists.        Note: The order of elements
             in your mark-up is not sufficient for indicating the order or elements.  Use
-            ListItem with a ''position'' property in such cases. '
+            ListItem with a \''position\'' property in such cases. '
           type: itemlist
       - name:
           description: mainentityofpage
@@ -368,7 +368,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: previousitem
@@ -381,7 +381,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:

@@ -35,7 +35,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/CheckInAction'
         tags:
         - Check In Action
       post:
@@ -58,7 +58,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -135,7 +135,7 @@
           in: formData
           description: The object upon the action is carried out, whose state is kept
             intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn't). e.g. John
+            undergoer (which change their state) or theme (which doesn\'t). e.g. John
             read *a book*.
           required: false
           type: thing
@@ -148,7 +148,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: recipient
@@ -165,7 +165,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -195,7 +195,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/CheckInAction'
         tags:
         - Check In Action
     /check-in-action/{id}/:
@@ -215,7 +215,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/CheckInAction'
         tags:
         - Check In Action
       put:
@@ -243,7 +243,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -320,7 +320,7 @@
           in: formData
           description: The object upon the action is carried out, whose state is kept
             intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn't). e.g. John
+            undergoer (which change their state) or theme (which doesn\'t). e.g. John
             read *a book*.
           required: false
           type: thing
@@ -333,7 +333,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: recipient
@@ -350,7 +350,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -380,7 +380,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/CheckInAction'
         tags:
         - Check In Action
       delete:
@@ -399,11 +399,11 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/CheckInAction'
         tags:
         - Check In Action
   definitions:
-    item:
+    CheckInAction:
       properties:
       - name:
           description: about
@@ -424,7 +424,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -513,7 +513,7 @@
         description:
           description: The object upon the action is carried out, whose state is kept
             intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn't). e.g. John
+            undergoer (which change their state) or theme (which doesn\'t). e.g. John
             read *a book*.
           type: thing
       - name:
@@ -528,7 +528,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: recipient
@@ -548,7 +548,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:

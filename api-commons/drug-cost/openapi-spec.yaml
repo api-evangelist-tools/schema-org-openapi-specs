@@ -6,7 +6,7 @@
       that. This type will typically be used to tag wholesale or average retail cost
       of a drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending
       on how and where they are paid for, so while this type captures some of the variables,
-      costs should be used with caution by consumers of this schemas markup.
+      costs should be used with caution by consumers of this schema\'s markup.
     termsOfService: http://apievangelist.com/terms-of-service.html
     version: v1
   host: drug.cost.example.com
@@ -33,7 +33,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/DrugCost'
         tags:
         - Drug Cost
       post:
@@ -46,7 +46,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -86,7 +86,7 @@
         - name: costorigin
           in: formData
           description: Additional details to capture the origin of the cost data. For
-            example, 'Medicare Part B'.
+            example, \'Medicare Part B\'.
           required: false
           type: text
         - name: costperunit
@@ -101,7 +101,7 @@
           type: text
         - name: drugunit
           in: formData
-          description: The unit in which the drug is measured, e.g. '5 mg tablet'.
+          description: The unit in which the drug is measured, e.g. \'5 mg tablet\'.
           required: false
           type: text
         - name: guideline
@@ -125,7 +125,7 @@
         - name: medicinesystem
           in: formData
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           required: false
           type: medicinesystem
         - name: name
@@ -136,7 +136,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: recognizingauthority
@@ -153,7 +153,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -173,7 +173,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/DrugCost'
         tags:
         - Drug Cost
     /drug-cost/{id}/:
@@ -193,7 +193,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/DrugCost'
         tags:
         - Drug Cost
       put:
@@ -211,7 +211,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -251,7 +251,7 @@
         - name: costorigin
           in: formData
           description: Additional details to capture the origin of the cost data. For
-            example, 'Medicare Part B'.
+            example, \'Medicare Part B\'.
           required: false
           type: text
         - name: costperunit
@@ -266,7 +266,7 @@
           type: text
         - name: drugunit
           in: formData
-          description: The unit in which the drug is measured, e.g. '5 mg tablet'.
+          description: The unit in which the drug is measured, e.g. \'5 mg tablet\'.
           required: false
           type: text
         - name: guideline
@@ -290,7 +290,7 @@
         - name: medicinesystem
           in: formData
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           required: false
           type: medicinesystem
         - name: name
@@ -301,7 +301,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: recognizingauthority
@@ -318,7 +318,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -338,7 +338,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/DrugCost'
         tags:
         - Drug Cost
       delete:
@@ -357,11 +357,190 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/DrugCost'
         tags:
         - Drug Cost
   definitions:
-    item:
+    DonateAction:
+      properties:
+      - name:
+          description: actionstatus
+          type: actionstatustype
+        description:
+          description: Indicates the current disposition of the Action.
+          type: actionstatustype
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: agent
+          type: person or  organization
+        description:
+          description: The direct performer or driver of the action (animate or inanimate).
+            e.g. *John* wrote a book.
+          type: person or  organization
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: endtime
+          type: datetime
+        description:
+          description: The endTime of something. For a reserved event or service (e.g.
+            FoodEstablishmentReservation), the time that it is expected to end. For
+            actions that span a period of time, when the action was performed. e.g.
+            John wrote a book from January to *December*.Note that Event uses startDate/endDate
+            instead of startTime/endTime, even when describing dates with times. This
+            situation may be clarified in future revisions.
+          type: datetime
+      - name:
+          description: error
+          type: thing
+        description:
+          description: For failed actions, more information on the cause of the failure.
+          type: thing
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: instrument
+          type: thing
+        description:
+          description: The object that helped the agent perform the action. e.g. John
+            wrote a book with *a pen*.
+          type: thing
+      - name:
+          description: location
+          type: text or  place or  postaladdress
+        description:
+          description: The location of for example where the event is happening, an
+            organization is located, or where an action takes place.
+          type: text or  place or  postaladdress
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: object
+          type: thing
+        description:
+          description: The object upon the action is carried out, whose state is kept
+            intact or changed. Also known as the semantic roles patient, affected or
+            undergoer (which change their state) or theme (which doesn\'t). e.g. John
+            read *a book*.
+          type: thing
+      - name:
+          description: participant
+          type: person or  organization
+        description:
+          description: Other co-agents that participated in the action indirectly. e.g.
+            John wrote a book with *Steve*.
+          type: person or  organization
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: price
+          type: text or  number
+        description:
+          description: 'The offer price of a product, or of a price component when attached
+            to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency
+            property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous
+            symbols such as \''$\'' in the value.      Use \''.\'' (Unicode \''FULL
+            STOP\'' (U+002E)) rather than \'',\'' to indicate a decimal point. Avoid
+            using these symbols as a readability separator.      Note that both RDFa
+            and Microdata syntax allow the use of a \"content=\" attribute for publishing
+            simple machine-readable values      alongside more human-friendly formatting.      Use
+            values from 0123456789 (Unicode \''DIGIT ZERO\'' (U+0030) to \''DIGIT NINE\''
+            (U+0039)) rather than superficially similiar Unicode symbols.      '
+          type: text or  number
+      - name:
+          description: pricespecification
+          type: pricespecification
+        description:
+          description: One or more detailed price specifications, indicating the unit
+            price and delivery or payment charges.
+          type: pricespecification
+      - name:
+          description: recipient
+          type: person or  audience or  organization
+        description:
+          description: A sub property of participant. The participant who is at the
+            receiving end of the action.
+          type: person or  audience or  organization
+      - name:
+          description: result
+          type: thing
+        description:
+          description: The result produced in the action. e.g. John wrote *a book*.
+          type: thing
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: starttime
+          type: datetime
+        description:
+          description: The startTime of something. For a reserved event or service (e.g.
+            FoodEstablishmentReservation), the time that it is expected to start. For
+            actions that span a period of time, when the action was performed. e.g.
+            John wrote a book from *January* to December.Note that Event uses startDate/endDate
+            instead of startTime/endTime, even when describing dates with times. This
+            situation may be clarified in future revisions.
+          type: datetime
+      - name:
+          description: target
+          type: entrypoint
+        description:
+          description: Indicates a target EntryPoint for an Action.
+          type: entrypoint
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    DoseSchedule:
       properties:
       - name:
           description: additionaltype
@@ -370,7 +549,1254 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: doseschedule
+          type: drug
+        description:
+          description: 'A dosing schedule for the drug for a given population, either
+            observed, recommended, or maximum dose based on the type used. '
+          type: drug
+      - name:
+          description: doseunit
+          type: text
+        description:
+          description: The unit of the dose, e.g. \'mg\'.
+          type: text
+      - name:
+          description: dosevalue
+          type: number
+        description:
+          description: The value of the dose, e.g. 500.
+          type: number
+      - name:
+          description: frequency
+          type: text
+        description:
+          description: How often the dose is taken, e.g. \'daily\'.
+          type: text
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: targetpopulation
+          type: text
+        description:
+          description: Characteristics of the population for which this is intended,
+            or which typically uses it, e.g. \'adults\'.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    DownloadAction:
+      properties:
+      - name:
+          description: actionstatus
+          type: actionstatustype
+        description:
+          description: Indicates the current disposition of the Action.
+          type: actionstatustype
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: agent
+          type: person or  organization
+        description:
+          description: The direct performer or driver of the action (animate or inanimate).
+            e.g. *John* wrote a book.
+          type: person or  organization
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: endtime
+          type: datetime
+        description:
+          description: The endTime of something. For a reserved event or service (e.g.
+            FoodEstablishmentReservation), the time that it is expected to end. For
+            actions that span a period of time, when the action was performed. e.g.
+            John wrote a book from January to *December*.Note that Event uses startDate/endDate
+            instead of startTime/endTime, even when describing dates with times. This
+            situation may be clarified in future revisions.
+          type: datetime
+      - name:
+          description: error
+          type: thing
+        description:
+          description: For failed actions, more information on the cause of the failure.
+          type: thing
+      - name:
+          description: fromlocation
+          type: place
+        description:
+          description: A sub property of location. The original location of the object
+            or the agent before the action.
+          type: place
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: instrument
+          type: thing
+        description:
+          description: The object that helped the agent perform the action. e.g. John
+            wrote a book with *a pen*.
+          type: thing
+      - name:
+          description: location
+          type: text or  place or  postaladdress
+        description:
+          description: The location of for example where the event is happening, an
+            organization is located, or where an action takes place.
+          type: text or  place or  postaladdress
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: object
+          type: thing
+        description:
+          description: The object upon the action is carried out, whose state is kept
+            intact or changed. Also known as the semantic roles patient, affected or
+            undergoer (which change their state) or theme (which doesn\'t). e.g. John
+            read *a book*.
+          type: thing
+      - name:
+          description: participant
+          type: person or  organization
+        description:
+          description: Other co-agents that participated in the action indirectly. e.g.
+            John wrote a book with *Steve*.
+          type: person or  organization
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: result
+          type: thing
+        description:
+          description: The result produced in the action. e.g. John wrote *a book*.
+          type: thing
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: starttime
+          type: datetime
+        description:
+          description: The startTime of something. For a reserved event or service (e.g.
+            FoodEstablishmentReservation), the time that it is expected to start. For
+            actions that span a period of time, when the action was performed. e.g.
+            John wrote a book from *January* to December.Note that Event uses startDate/endDate
+            instead of startTime/endTime, even when describing dates with times. This
+            situation may be clarified in future revisions.
+          type: datetime
+      - name:
+          description: target
+          type: entrypoint
+        description:
+          description: Indicates a target EntryPoint for an Action.
+          type: entrypoint
+      - name:
+          description: tolocation
+          type: place
+        description:
+          description: A sub property of location. The final location of the object
+            or the agent after the action.
+          type: place
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    DrawAction:
+      properties:
+      - name:
+          description: actionstatus
+          type: actionstatustype
+        description:
+          description: Indicates the current disposition of the Action.
+          type: actionstatustype
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: agent
+          type: person or  organization
+        description:
+          description: The direct performer or driver of the action (animate or inanimate).
+            e.g. *John* wrote a book.
+          type: person or  organization
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: endtime
+          type: datetime
+        description:
+          description: The endTime of something. For a reserved event or service (e.g.
+            FoodEstablishmentReservation), the time that it is expected to end. For
+            actions that span a period of time, when the action was performed. e.g.
+            John wrote a book from January to *December*.Note that Event uses startDate/endDate
+            instead of startTime/endTime, even when describing dates with times. This
+            situation may be clarified in future revisions.
+          type: datetime
+      - name:
+          description: error
+          type: thing
+        description:
+          description: For failed actions, more information on the cause of the failure.
+          type: thing
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: instrument
+          type: thing
+        description:
+          description: The object that helped the agent perform the action. e.g. John
+            wrote a book with *a pen*.
+          type: thing
+      - name:
+          description: location
+          type: text or  place or  postaladdress
+        description:
+          description: The location of for example where the event is happening, an
+            organization is located, or where an action takes place.
+          type: text or  place or  postaladdress
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: object
+          type: thing
+        description:
+          description: The object upon the action is carried out, whose state is kept
+            intact or changed. Also known as the semantic roles patient, affected or
+            undergoer (which change their state) or theme (which doesn\'t). e.g. John
+            read *a book*.
+          type: thing
+      - name:
+          description: participant
+          type: person or  organization
+        description:
+          description: Other co-agents that participated in the action indirectly. e.g.
+            John wrote a book with *Steve*.
+          type: person or  organization
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: result
+          type: thing
+        description:
+          description: The result produced in the action. e.g. John wrote *a book*.
+          type: thing
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: starttime
+          type: datetime
+        description:
+          description: The startTime of something. For a reserved event or service (e.g.
+            FoodEstablishmentReservation), the time that it is expected to start. For
+            actions that span a period of time, when the action was performed. e.g.
+            John wrote a book from *January* to December.Note that Event uses startDate/endDate
+            instead of startTime/endTime, even when describing dates with times. This
+            situation may be clarified in future revisions.
+          type: datetime
+      - name:
+          description: target
+          type: entrypoint
+        description:
+          description: Indicates a target EntryPoint for an Action.
+          type: entrypoint
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    DrinkAction:
+      properties:
+      - name:
+          description: actionstatus
+          type: actionstatustype
+        description:
+          description: Indicates the current disposition of the Action.
+          type: actionstatustype
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: agent
+          type: person or  organization
+        description:
+          description: The direct performer or driver of the action (animate or inanimate).
+            e.g. *John* wrote a book.
+          type: person or  organization
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: endtime
+          type: datetime
+        description:
+          description: The endTime of something. For a reserved event or service (e.g.
+            FoodEstablishmentReservation), the time that it is expected to end. For
+            actions that span a period of time, when the action was performed. e.g.
+            John wrote a book from January to *December*.Note that Event uses startDate/endDate
+            instead of startTime/endTime, even when describing dates with times. This
+            situation may be clarified in future revisions.
+          type: datetime
+      - name:
+          description: error
+          type: thing
+        description:
+          description: For failed actions, more information on the cause of the failure.
+          type: thing
+      - name:
+          description: expectsacceptanceof
+          type: offer
+        description:
+          description: An Offer which must be accepted before the user can perform the
+            Action. For example, the user may need to buy a movie before being able
+            to watch it.
+          type: offer
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: instrument
+          type: thing
+        description:
+          description: The object that helped the agent perform the action. e.g. John
+            wrote a book with *a pen*.
+          type: thing
+      - name:
+          description: location
+          type: text or  place or  postaladdress
+        description:
+          description: The location of for example where the event is happening, an
+            organization is located, or where an action takes place.
+          type: text or  place or  postaladdress
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: object
+          type: thing
+        description:
+          description: The object upon the action is carried out, whose state is kept
+            intact or changed. Also known as the semantic roles patient, affected or
+            undergoer (which change their state) or theme (which doesn\'t). e.g. John
+            read *a book*.
+          type: thing
+      - name:
+          description: participant
+          type: person or  organization
+        description:
+          description: Other co-agents that participated in the action indirectly. e.g.
+            John wrote a book with *Steve*.
+          type: person or  organization
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: result
+          type: thing
+        description:
+          description: The result produced in the action. e.g. John wrote *a book*.
+          type: thing
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: starttime
+          type: datetime
+        description:
+          description: The startTime of something. For a reserved event or service (e.g.
+            FoodEstablishmentReservation), the time that it is expected to start. For
+            actions that span a period of time, when the action was performed. e.g.
+            John wrote a book from *January* to December.Note that Event uses startDate/endDate
+            instead of startTime/endTime, even when describing dates with times. This
+            situation may be clarified in future revisions.
+          type: datetime
+      - name:
+          description: target
+          type: entrypoint
+        description:
+          description: Indicates a target EntryPoint for an Action.
+          type: entrypoint
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    DriveWheelConfigurationValue:
+      properties:
+      - name:
+          description: additionalproperty
+          type: propertyvalue
+        description:
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          type: propertyvalue
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: drivewheelconfiguration
+          type: vehicle
+        description:
+          description: 'The drive wheel configuration, i.e. which roadwheels will receive
+            torque from the vehicle\''s engine via the drivetrain. '
+          type: vehicle
+      - name:
+          description: equal
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is equal to the object.
+          type: qualitativevalue
+      - name:
+          description: greater
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is greater than the object.
+          type: qualitativevalue
+      - name:
+          description: greaterorequal
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is greater than or equal to the object.
+          type: qualitativevalue
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: lesser
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is lesser than the object.
+          type: qualitativevalue
+      - name:
+          description: lesserorequal
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is lesser than or equal to the object.
+          type: qualitativevalue
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: nonequal
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is not equal to the object.
+          type: qualitativevalue
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: supersededby
+          type: class or  property or  enumeration
+        description:
+          description: Relates a term (i.e. a property, class or enumeration) to one
+            that supersedes it.
+          type: class or  property or  enumeration
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: valuereference
+          type: qualitativevalue or  enumeration or  structuredvalue or  quantitativevalue
+            or  propertyvalue
+        description:
+          description: A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+          type: qualitativevalue or  enumeration or  structuredvalue or  quantitativevalue
+            or  propertyvalue
+    Drug:
+      properties:
+      - name:
+          description: activeingredient
+          type: text
+        description:
+          description: An active ingredient, typically chemical compounds and/or biologic
+            substances.
+          type: text
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: administrationroute
+          type: text
+        description:
+          description: A route by which this drug may be administered, e.g. \'oral\'.
+          type: text
+      - name:
+          description: adverseoutcome
+          type: medicalentity
+        description:
+          description: A possible complication and/or side effect of this therapy. If
+            it is known that an adverse outcome is serious (resulting in death, disability,
+            or permanent damage; requiring hospitalization; or is otherwise life-threatening
+            or requires immediate medical attention), tag it as a seriouseAdverseOutcome
+            instead.
+          type: medicalentity
+      - name:
+          description: affectedby
+          type: medicaltest
+        description:
+          description: 'Drugs that affect the test\''s results. '
+          type: medicaltest
+      - name:
+          description: alcoholwarning
+          type: text
+        description:
+          description: Any precaution, guidance, contraindication, etc. related to consumption
+            of alcohol while taking this drug.
+          type: text
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: availablestrength
+          type: drugstrength
+        description:
+          description: An available dosage strength for the drug.
+          type: drugstrength
+      - name:
+          description: breastfeedingwarning
+          type: text
+        description:
+          description: Any precaution, guidance, contraindication, etc. related to this
+            drug\'s use by breastfeeding mothers.
+          type: text
+      - name:
+          description: clinicalpharmacology
+          type: text
+        description:
+          description: Description of the absorption and elimination of drugs, including
+            their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics,
+            pD). Supersedes clincalPharmacology.
+          type: text
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: contraindication
+          type: medicalcontraindication
+        description:
+          description: A contraindication for this therapy.
+          type: medicalcontraindication
+      - name:
+          description: cost
+          type: drugcost
+        description:
+          description: Cost per unit of the drug, as reported by the source being tagged.
+          type: drugcost
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: dosageform
+          type: text
+        description:
+          description: A dosage form in which this drug/supplement is available, e.g.
+            \'tablet\', \'suspension\', \'injection\'.
+          type: text
+      - name:
+          description: doseschedule
+          type: doseschedule
+        description:
+          description: A dosing schedule for the drug for a given population, either
+            observed, recommended, or maximum dose based on the type used.
+          type: doseschedule
+      - name:
+          description: drug
+          type: drugclass
+        description:
+          description: 'A drug in this drug class. '
+          type: drugclass
+      - name:
+          description: drugclass
+          type: drugclass
+        description:
+          description: The class of drug this belongs to (e.g., statins).
+          type: drugclass
+      - name:
+          description: duplicatetherapy
+          type: medicaltherapy
+        description:
+          description: A therapy that duplicates or overlaps this one.
+          type: medicaltherapy
+      - name:
+          description: foodwarning
+          type: text
+        description:
+          description: Any precaution, guidance, contraindication, etc. related to consumption
+            of specific foods while taking this drug.
+          type: text
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: indication
+          type: medicalindication
+        description:
+          description: A factor that indicates use of this therapy for treatment and/or
+            prevention of a condition, symptom, etc. For therapies such as drugs, indications
+            can include both officially-approved indications as well as off-label uses.
+            These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.
+          type: medicalindication
+      - name:
+          description: interactingdrug
+          type: drug
+        description:
+          description: 'Another drug that is known to interact with this drug in a way
+            that impacts the effect of this drug or causes a risk to the patient. Note:
+            disease interactions are typically captured as contraindications.'
+          type: drug
+      - name:
+          description: isavailablegenerically
+          type: boolean
+        description:
+          description: True if the drug is available in a generic form (regardless of
+            name).
+          type: boolean
+      - name:
+          description: isproprietary
+          type: boolean
+        description:
+          description: True if this item\'s name is a proprietary/brand name (vs. generic
+            name).
+          type: boolean
+      - name:
+          description: labeldetails
+          type: url
+        description:
+          description: Link to the drug\'s label details.
+          type: url
+      - name:
+          description: legalstatus
+          type: druglegalstatus
+        description:
+          description: The drug or supplement\'s legal status, including any controlled
+            substance schedules that apply.
+          type: druglegalstatus
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: manufacturer
+          type: organization
+        description:
+          description: The manufacturer of the product.
+          type: organization
+      - name:
+          description: mechanismofaction
+          type: text
+        description:
+          description: The specific biochemical interaction through which this drug
+            or supplement produces its pharmacological effect.
+          type: text
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: nonproprietaryname
+          type: text
+        description:
+          description: The generic name of this drug or supplement.
+          type: text
+      - name:
+          description: overdosage
+          type: text
+        description:
+          description: Any information related to overdose on a drug, including signs
+            or symptoms, treatments, contact information for emergency response.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: pregnancycategory
+          type: drugpregnancycategory
+        description:
+          description: Pregnancy category of this drug.
+          type: drugpregnancycategory
+      - name:
+          description: pregnancywarning
+          type: text
+        description:
+          description: Any precaution, guidance, contraindication, etc. related to this
+            drug\'s use during pregnancy.
+          type: text
+      - name:
+          description: prescribinginfo
+          type: url
+        description:
+          description: Link to prescribing information for the drug.
+          type: url
+      - name:
+          description: prescriptionstatus
+          type: drugprescriptionstatus
+        description:
+          description: Indicates whether this drug is available by prescription or over-the-counter.
+          type: drugprescriptionstatus
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relateddrug
+          type: drug
+        description:
+          description: Any other drug related to this one, for example commonly-prescribed
+            alternatives.
+          type: drug
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: seriousadverseoutcome
+          type: medicalentity
+        description:
+          description: A possible serious complication and/or serious side effect of
+            this therapy. Serious adverse outcomes include those that are life-threatening;
+            result in death, disability, or permanent damage; require hospitalization
+            or prolong existing hospitalization; cause congenital anomalies or birth
+            defects; or jeopardize the patient and may require medical or surgical intervention
+            to prevent one of the outcomes in this definition.
+          type: medicalentity
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: warning
+          type: text or  url
+        description:
+          description: Any FDA or other warnings about the drug (text or URL).
+          type: text or  url
+    DrugClass:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: adverseoutcome
+          type: medicalentity
+        description:
+          description: A possible complication and/or side effect of this therapy. If
+            it is known that an adverse outcome is serious (resulting in death, disability,
+            or permanent damage; requiring hospitalization; or is otherwise life-threatening
+            or requires immediate medical attention), tag it as a seriouseAdverseOutcome
+            instead.
+          type: medicalentity
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: contraindication
+          type: medicalcontraindication
+        description:
+          description: A contraindication for this therapy.
+          type: medicalcontraindication
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: drug
+          type: drug
+        description:
+          description: A drug in this drug class.
+          type: drug
+      - name:
+          description: drugclass
+          type: drug
+        description:
+          description: 'The class of drug this belongs to (e.g., statins). '
+          type: drug
+      - name:
+          description: duplicatetherapy
+          type: medicaltherapy
+        description:
+          description: A therapy that duplicates or overlaps this one.
+          type: medicaltherapy
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: indication
+          type: medicalindication
+        description:
+          description: A factor that indicates use of this therapy for treatment and/or
+            prevention of a condition, symptom, etc. For therapies such as drugs, indications
+            can include both officially-approved indications as well as off-label uses.
+            These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.
+          type: medicalindication
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: seriousadverseoutcome
+          type: medicalentity
+        description:
+          description: A possible serious complication and/or serious side effect of
+            this therapy. Serious adverse outcomes include those that are life-threatening;
+            result in death, disability, or permanent damage; require hospitalization
+            or prolong existing hospitalization; cause congenital anomalies or birth
+            defects; or jeopardize the patient and may require medical or surgical intervention
+            to prevent one of the outcomes in this definition.
+          type: medicalentity
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    DrugCost:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -417,7 +1843,7 @@
           type: text
         description:
           description: Additional details to capture the origin of the cost data. For
-            example, 'Medicare Part B'.
+            example, \'Medicare Part B\'.
           type: text
       - name:
           description: costperunit
@@ -435,7 +1861,7 @@
           description: drugunit
           type: text
         description:
-          description: The unit in which the drug is measured, e.g. '5 mg tablet'.
+          description: The unit in which the drug is measured, e.g. \'5 mg tablet\'.
           type: text
       - name:
           description: guideline
@@ -463,7 +1889,7 @@
           type: medicinesystem
         description:
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           type: medicinesystem
       - name:
           description: name
@@ -476,7 +1902,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: recognizingauthority
@@ -496,7 +1922,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:

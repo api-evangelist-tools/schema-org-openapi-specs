@@ -28,7 +28,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/AudioObject'
         tags:
         - Audio Object
       post:
@@ -77,7 +77,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -168,8 +168,8 @@
           type: place
         - name: contentrating
           in: formData
-          description: Official rating of a piece of content&#x2014;for example,'MPAA
-            PG-13'.
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
           required: false
           type: text
         - name: contentsize
@@ -214,7 +214,7 @@
         - name: datemodified
           in: formData
           description: The date on which the CreativeWork was most recently modified
-            or when the item's entry was modified within a DataFeed.
+            or when the item\'s entry was modified within a DataFeed.
           required: false
           type: datetime or  date
         - name: datepublished
@@ -251,7 +251,7 @@
         - name: educationaluse
           in: formData
           description: The purpose of a work in the context of education; for example,
-            'assignment', 'group work'.
+            \'assignment\', \'group work\'.
           required: false
           type: text
         - name: embedurl
@@ -293,7 +293,7 @@
           in: formData
           description: Media type (aka MIME format, see IANA site) of the content e.g.
             application/zip of a SoftwareApplication binary. In cases where a CreativeWork
-            has several media type representations, 'encoding' can be used to indicate
+            has several media type representations, \'encoding\' can be used to indicate
             each MediaObject alongside particular fileFormat information.
           required: false
           type: text
@@ -341,7 +341,7 @@
         - name: interactivitytype
           in: formData
           description: The predominant mode of learning supported by the learning resource.
-            Acceptable values are 'active', 'expositive', or 'mixed'.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
           required: false
           type: text
         - name: isbasedonurl
@@ -370,7 +370,7 @@
         - name: learningresourcetype
           in: formData
           description: The predominant type or kind characterizing the learning resource.
-            For example, 'presentation', 'handout'.
+            For example, \'presentation\', \'handout\'.
           required: false
           type: text
         - name: license
@@ -429,7 +429,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: producer
@@ -477,7 +477,7 @@
         - name: regionsallowed
           in: formData
           description: The regions where the media is allowed. If not specified, then
-            it's assumed to be allowed everywhere. Specify the countries in ISO 3166
+            it\'s assumed to be allowed everywhere. Specify the countries in ISO 3166
             format.
           required: false
           type: place
@@ -490,7 +490,7 @@
           in: formData
           description: Indicates if use of the media require a subscription  (either
             paid or free). Allowed values are true or false (note that an earlier version
-            had 'yes', 'no').
+            had \'yes\', \'no\').
           required: false
           type: boolean
         - name: review
@@ -501,7 +501,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -531,8 +531,8 @@
         - name: timerequired
           in: formData
           description: Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. 'P30M',
-            'P1H25M'.
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
           required: false
           type: duration
         - name: transcript
@@ -549,7 +549,7 @@
           type: organization or  person
         - name: typicalagerange
           in: formData
-          description: The typical expected age range, e.g. '7-9', '11-'.
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
           required: false
           type: text
         - name: uploaddate
@@ -590,7 +590,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/AudioObject'
         tags:
         - Audio Object
     /audio-object/{id}/:
@@ -610,7 +610,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/AudioObject'
         tags:
         - Audio Object
       put:
@@ -664,7 +664,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -755,8 +755,8 @@
           type: place
         - name: contentrating
           in: formData
-          description: Official rating of a piece of content&#x2014;for example,'MPAA
-            PG-13'.
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
           required: false
           type: text
         - name: contentsize
@@ -801,7 +801,7 @@
         - name: datemodified
           in: formData
           description: The date on which the CreativeWork was most recently modified
-            or when the item's entry was modified within a DataFeed.
+            or when the item\'s entry was modified within a DataFeed.
           required: false
           type: datetime or  date
         - name: datepublished
@@ -838,7 +838,7 @@
         - name: educationaluse
           in: formData
           description: The purpose of a work in the context of education; for example,
-            'assignment', 'group work'.
+            \'assignment\', \'group work\'.
           required: false
           type: text
         - name: embedurl
@@ -880,7 +880,7 @@
           in: formData
           description: Media type (aka MIME format, see IANA site) of the content e.g.
             application/zip of a SoftwareApplication binary. In cases where a CreativeWork
-            has several media type representations, 'encoding' can be used to indicate
+            has several media type representations, \'encoding\' can be used to indicate
             each MediaObject alongside particular fileFormat information.
           required: false
           type: text
@@ -928,7 +928,7 @@
         - name: interactivitytype
           in: formData
           description: The predominant mode of learning supported by the learning resource.
-            Acceptable values are 'active', 'expositive', or 'mixed'.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
           required: false
           type: text
         - name: isbasedonurl
@@ -957,7 +957,7 @@
         - name: learningresourcetype
           in: formData
           description: The predominant type or kind characterizing the learning resource.
-            For example, 'presentation', 'handout'.
+            For example, \'presentation\', \'handout\'.
           required: false
           type: text
         - name: license
@@ -1016,7 +1016,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: producer
@@ -1064,7 +1064,7 @@
         - name: regionsallowed
           in: formData
           description: The regions where the media is allowed. If not specified, then
-            it's assumed to be allowed everywhere. Specify the countries in ISO 3166
+            it\'s assumed to be allowed everywhere. Specify the countries in ISO 3166
             format.
           required: false
           type: place
@@ -1077,7 +1077,7 @@
           in: formData
           description: Indicates if use of the media require a subscription  (either
             paid or free). Allowed values are true or false (note that an earlier version
-            had 'yes', 'no').
+            had \'yes\', \'no\').
           required: false
           type: boolean
         - name: review
@@ -1088,7 +1088,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -1118,8 +1118,8 @@
         - name: timerequired
           in: formData
           description: Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. 'P30M',
-            'P1H25M'.
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
           required: false
           type: duration
         - name: transcript
@@ -1136,7 +1136,7 @@
           type: organization or  person
         - name: typicalagerange
           in: formData
-          description: The typical expected age range, e.g. '7-9', '11-'.
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
           required: false
           type: text
         - name: uploaddate
@@ -1177,7 +1177,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/AudioObject'
         tags:
         - Audio Object
       delete:
@@ -1196,11 +1196,11 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/AudioObject'
         tags:
         - Audio Object
   definitions:
-    item:
+    AudioObject:
       properties:
       - name:
           description: about
@@ -1251,7 +1251,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -1358,8 +1358,8 @@
           description: contentrating
           type: text
         description:
-          description: Official rating of a piece of content&#x2014;for example,'MPAA
-            PG-13'.
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
           type: text
       - name:
           description: contentsize
@@ -1412,7 +1412,7 @@
           type: datetime or  date
         description:
           description: The date on which the CreativeWork was most recently modified
-            or when the item's entry was modified within a DataFeed.
+            or when the item\'s entry was modified within a DataFeed.
           type: datetime or  date
       - name:
           description: datepublished
@@ -1456,7 +1456,7 @@
           type: text
         description:
           description: The purpose of a work in the context of education; for example,
-            'assignment', 'group work'.
+            \'assignment\', \'group work\'.
           type: text
       - name:
           description: embedurl
@@ -1505,7 +1505,7 @@
         description:
           description: Media type (aka MIME format, see IANA site) of the content e.g.
             application/zip of a SoftwareApplication binary. In cases where a CreativeWork
-            has several media type representations, 'encoding' can be used to indicate
+            has several media type representations, \'encoding\' can be used to indicate
             each MediaObject alongside particular fileFormat information.
           type: text
       - name:
@@ -1561,7 +1561,7 @@
           type: text
         description:
           description: The predominant mode of learning supported by the learning resource.
-            Acceptable values are 'active', 'expositive', or 'mixed'.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
           type: text
       - name:
           description: isbasedonurl
@@ -1595,7 +1595,7 @@
           type: text
         description:
           description: The predominant type or kind characterizing the learning resource.
-            For example, 'presentation', 'handout'.
+            For example, \'presentation\', \'handout\'.
           type: text
       - name:
           description: license
@@ -1664,7 +1664,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: producer
@@ -1720,7 +1720,7 @@
           type: place
         description:
           description: The regions where the media is allowed. If not specified, then
-            it's assumed to be allowed everywhere. Specify the countries in ISO 3166
+            it\'s assumed to be allowed everywhere. Specify the countries in ISO 3166
             format.
           type: place
       - name:
@@ -1735,7 +1735,7 @@
         description:
           description: Indicates if use of the media require a subscription  (either
             paid or free). Allowed values are true or false (note that an earlier version
-            had 'yes', 'no').
+            had \'yes\', \'no\').
           type: boolean
       - name:
           description: review
@@ -1748,7 +1748,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:
@@ -1783,8 +1783,8 @@
           type: duration
         description:
           description: Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. 'P30M',
-            'P1H25M'.
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
           type: duration
       - name:
           description: transcript
@@ -1804,7 +1804,7 @@
           description: typicalagerange
           type: text
         description:
-          description: The typical expected age range, e.g. '7-9', '11-'.
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
           type: text
       - name:
           description: uploaddate

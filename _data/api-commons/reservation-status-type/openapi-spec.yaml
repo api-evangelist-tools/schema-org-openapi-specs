@@ -28,7 +28,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ReservationStatusType'
         tags:
         - Reservation Status Type
       post:
@@ -41,7 +41,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -77,7 +77,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: reservationstatus
@@ -88,7 +88,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -109,7 +109,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ReservationStatusType'
         tags:
         - Reservation Status Type
     /reservation-status-type/{id}/:
@@ -129,7 +129,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ReservationStatusType'
         tags:
         - Reservation Status Type
       put:
@@ -147,7 +147,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -183,7 +183,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: reservationstatus
@@ -194,7 +194,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -215,7 +215,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ReservationStatusType'
         tags:
         - Reservation Status Type
       delete:
@@ -234,11 +234,11 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ReservationStatusType'
         tags:
         - Reservation Status Type
   definitions:
-    item:
+    ReservationPackage:
       properties:
       - name:
           description: additionaltype
@@ -247,7 +247,163 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: bookingtime
+          type: datetime
+        description:
+          description: The date and time the reservation was booked.
+          type: datetime
+      - name:
+          description: broker
+          type: person or  organization
+        description:
+          description: An entity that arranges for an exchange between a buyer and a
+            seller.  In most cases a broker never acquires or releases ownership of
+            a product or service involved in an exchange.  If it is not clear whether
+            an entity is a broker, seller, or buyer, the latter two terms are preferred.
+            Supersedes bookingAgent.
+          type: person or  organization
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: modifiedtime
+          type: datetime
+        description:
+          description: The date and time the reservation was modified.
+          type: datetime
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: pricecurrency
+          type: text
+        description:
+          description: The currency (in 3-letter ISO 4217 format) of the price or a
+            price component, when attached to PriceSpecification and its subtypes.
+          type: text
+      - name:
+          description: programmembershipused
+          type: programmembership
+        description:
+          description: Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+          type: programmembership
+      - name:
+          description: provider
+          type: person or  organization
+        description:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: person or  organization
+      - name:
+          description: reservationfor
+          type: thing
+        description:
+          description: The thing -- flight, event, restaurant,etc. being reserved.
+          type: thing
+      - name:
+          description: reservationid
+          type: text
+        description:
+          description: A unique identifier for the reservation.
+          type: text
+      - name:
+          description: reservationstatus
+          type: reservationstatustype
+        description:
+          description: The current status of the reservation.
+          type: reservationstatustype
+      - name:
+          description: reservedticket
+          type: ticket
+        description:
+          description: A ticket associated with the reservation.
+          type: ticket
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: subreservation
+          type: reservation
+        description:
+          description: The individual reservations included in the package. Typically
+            a repeated property.
+          type: reservation
+      - name:
+          description: totalprice
+          type: pricespecification or  number or  text
+        description:
+          description: The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          type: pricespecification or  number or  text
+      - name:
+          description: undername
+          type: person or  organization
+        description:
+          description: The person or organization the reservation or ticket is for.
+          type: person or  organization
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    ReservationStatusType:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -289,7 +445,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: reservationstatus
@@ -302,7 +458,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:

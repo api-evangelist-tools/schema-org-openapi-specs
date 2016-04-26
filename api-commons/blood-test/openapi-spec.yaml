@@ -1,7 +1,7 @@
 - swagger: "2.0"
   info:
     title: Blood Test API
-    description: A medical test performed on a sample of a patients blood.
+    description: A medical test performed on a sample of a patient\'s blood.
     termsOfService: http://apievangelist.com/terms-of-service.html
     version: v1
   host: blood.test.example.com
@@ -28,7 +28,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/BloodTest'
         tags:
         - Blood Test
       post:
@@ -41,14 +41,14 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
           type: url
         - name: affectedby
           in: formData
-          description: Drugs that affect the test's results.
+          description: Drugs that affect the test\'s results.
           required: false
           type: drug
         - name: alternatename
@@ -88,7 +88,7 @@
         - name: medicinesystem
           in: formData
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           required: false
           type: medicinesystem
         - name: name
@@ -104,7 +104,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: recognizingauthority
@@ -121,7 +121,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -156,7 +156,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/BloodTest'
         tags:
         - Blood Test
     /blood-test/{id}/:
@@ -176,7 +176,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/BloodTest'
         tags:
         - Blood Test
       put:
@@ -194,14 +194,14 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
           type: url
         - name: affectedby
           in: formData
-          description: Drugs that affect the test's results.
+          description: Drugs that affect the test\'s results.
           required: false
           type: drug
         - name: alternatename
@@ -241,7 +241,7 @@
         - name: medicinesystem
           in: formData
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           required: false
           type: medicinesystem
         - name: name
@@ -257,7 +257,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: recognizingauthority
@@ -274,7 +274,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -309,7 +309,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/BloodTest'
         tags:
         - Blood Test
       delete:
@@ -328,11 +328,11 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/BloodTest'
         tags:
         - Blood Test
   definitions:
-    item:
+    BloodTest:
       properties:
       - name:
           description: additionaltype
@@ -341,7 +341,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -349,7 +349,7 @@
           description: affectedby
           type: drug
         description:
-          description: Drugs that affect the test's results.
+          description: Drugs that affect the test\'s results.
           type: drug
       - name:
           description: alternatename
@@ -396,7 +396,7 @@
           type: medicinesystem
         description:
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           type: medicinesystem
       - name:
           description: name
@@ -415,7 +415,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: recognizingauthority
@@ -435,7 +435,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:

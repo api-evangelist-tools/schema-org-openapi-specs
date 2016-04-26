@@ -28,7 +28,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalTrialDesign'
         tags:
         - Medical Trial Design
       post:
@@ -41,7 +41,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -83,7 +83,7 @@
         - name: medicinesystem
           in: formData
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           required: false
           type: medicinesystem
         - name: name
@@ -94,7 +94,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: recognizingauthority
@@ -111,7 +111,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -142,7 +142,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalTrialDesign'
         tags:
         - Medical Trial Design
     /medical-trial-design/{id}/:
@@ -162,7 +162,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalTrialDesign'
         tags:
         - Medical Trial Design
       put:
@@ -180,7 +180,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -222,7 +222,7 @@
         - name: medicinesystem
           in: formData
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           required: false
           type: medicinesystem
         - name: name
@@ -233,7 +233,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: recognizingauthority
@@ -250,7 +250,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -281,7 +281,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalTrialDesign'
         tags:
         - Medical Trial Design
       delete:
@@ -300,11 +300,11 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalTrialDesign'
         tags:
         - Medical Trial Design
   definitions:
-    item:
+    MedicalTest:
       properties:
       - name:
           description: additionaltype
@@ -313,7 +313,651 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: affectedby
+          type: drug
+        description:
+          description: Drugs that affect the test\'s results.
+          type: drug
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: availableservice
+          type: medicalclinic or physician or hospital
+        description:
+          description: 'A medical service available from this provider. '
+          type: medicalclinic or physician or hospital
+      - name:
+          description: availabletest
+          type: diagnosticlab
+        description:
+          description: 'A diagnostic test or procedure offered by this lab. '
+          type: diagnosticlab
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: identifyingtest
+          type: medicalsign
+        description:
+          description: 'A diagnostic test that can identify this sign. '
+          type: medicalsign
+      - name:
+          description: image
+          type: imageobject or  url
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: imageobject or  url
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: normalrange
+          type: text
+        description:
+          description: Range of acceptable values for a typical patient, when applicable.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: signdetected
+          type: medicalsign
+        description:
+          description: A sign detected by the test.
+          type: medicalsign
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: subtest
+          type: medicaltestpanel
+        description:
+          description: 'A component test of the panel. '
+          type: medicaltestpanel
+      - name:
+          description: typicaltest
+          type: medicalcondition
+        description:
+          description: 'A medical test typically performed given this condition. '
+          type: medicalcondition
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: usedtodiagnose
+          type: medicalcondition
+        description:
+          description: A condition the test is used to diagnose.
+          type: medicalcondition
+      - name:
+          description: usesdevice
+          type: medicaldevice
+        description:
+          description: Device used to perform the test.
+          type: medicaldevice
+    MedicalTestPanel:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: affectedby
+          type: drug
+        description:
+          description: Drugs that affect the test\'s results.
+          type: drug
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: normalrange
+          type: text
+        description:
+          description: Range of acceptable values for a typical patient, when applicable.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: signdetected
+          type: medicalsign
+        description:
+          description: A sign detected by the test.
+          type: medicalsign
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: subtest
+          type: medicaltest
+        description:
+          description: A component test of the panel.
+          type: medicaltest
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: usedtodiagnose
+          type: medicalcondition
+        description:
+          description: A condition the test is used to diagnose.
+          type: medicalcondition
+      - name:
+          description: usesdevice
+          type: medicaldevice
+        description:
+          description: Device used to perform the test.
+          type: medicaldevice
+    MedicalTherapy:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: adverseoutcome
+          type: medicalentity
+        description:
+          description: A possible complication and/or side effect of this therapy. If
+            it is known that an adverse outcome is serious (resulting in death, disability,
+            or permanent damage; requiring hospitalization; or is otherwise life-threatening
+            or requires immediate medical attention), tag it as a seriouseAdverseOutcome
+            instead.
+          type: medicalentity
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: availableservice
+          type: medicalclinic or physician or hospital
+        description:
+          description: 'A medical service available from this provider. '
+          type: medicalclinic or physician or hospital
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: contraindication
+          type: medicalcontraindication
+        description:
+          description: A contraindication for this therapy.
+          type: medicalcontraindication
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: duplicatetherapy
+          type: medicaltherapy
+        description:
+          description: A therapy that duplicates or overlaps this one.
+          type: medicaltherapy
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: image
+          type: imageobject or  url
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: imageobject or  url
+      - name:
+          description: indication
+          type: medicalindication
+        description:
+          description: A factor that indicates use of this therapy for treatment and/or
+            prevention of a condition, symptom, etc. For therapies such as drugs, indications
+            can include both officially-approved indications as well as off-label uses.
+            These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.
+          type: medicalindication
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: possibletreatment
+          type: medicalcondition or medicalsignorsymptom
+        description:
+          description: 'A possible treatment to address this condition, sign or symptom. '
+          type: medicalcondition or medicalsignorsymptom
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: primaryprevention
+          type: medicalcondition
+        description:
+          description: 'A preventative therapy used to prevent an initial occurrence
+            of the medical condition, such as vaccination. '
+          type: medicalcondition
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relatedtherapy
+          type: anatomicalsystem or superficialanatomy or anatomicalstructure
+        description:
+          description: 'A medical therapy related to this anatomy. '
+          type: anatomicalsystem or superficialanatomy or anatomicalstructure
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: secondaryprevention
+          type: medicalcondition
+        description:
+          description: 'A preventative therapy used to prevent reoccurrence of the medical
+            condition after an initial episode of the condition. '
+          type: medicalcondition
+      - name:
+          description: seriousadverseoutcome
+          type: medicalentity
+        description:
+          description: A possible serious complication and/or serious side effect of
+            this therapy. Serious adverse outcomes include those that are life-threatening;
+            result in death, disability, or permanent damage; require hospitalization
+            or prolong existing hospitalization; cause congenital anomalies or birth
+            defects; or jeopardize the patient and may require medical or surgical intervention
+            to prevent one of the outcomes in this definition.
+          type: medicalentity
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    MedicalTrial:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: outcome
+          type: text
+        description:
+          description: Expected or actual outcomes of the study.
+          type: text
+      - name:
+          description: phase
+          type: text
+        description:
+          description: The phase of the trial.
+          type: text
+      - name:
+          description: population
+          type: text
+        description:
+          description: Any characteristics of the population used in the study, e.g.
+            \'males under 65\'.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: sponsor
+          type: organization
+        description:
+          description: Sponsor of the study.
+          type: organization
+      - name:
+          description: status
+          type: medicalstudystatus
+        description:
+          description: The status of the study (enumerated).
+          type: medicalstudystatus
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: studylocation
+          type: administrativearea
+        description:
+          description: The location in which the study is taking/took place.
+          type: administrativearea
+      - name:
+          description: studysubject
+          type: medicalentity
+        description:
+          description: A subject of the study, i.e. one of the medical conditions, therapies,
+            devices, drugs, etc. investigated by the study.
+          type: medicalentity
+      - name:
+          description: trialdesign
+          type: medicaltrialdesign
+        description:
+          description: Specifics about the trial design (enumerated).
+          type: medicaltrialdesign
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    MedicalTrialDesign:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -362,7 +1006,7 @@
           type: medicinesystem
         description:
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           type: medicinesystem
       - name:
           description: name
@@ -375,7 +1019,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: recognizingauthority
@@ -395,7 +1039,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:

@@ -29,7 +29,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MovieSeries"
 							}
 						}
 					}
@@ -92,7 +92,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -190,7 +190,7 @@
 				{
 					"name": "contentrating",
 					"in": "formData",
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -232,7 +232,7 @@
 				{
 					"name": "datemodified",
 					"in": "formData",
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"required": false,
 					"type": "date or  datetime"
 				},
@@ -281,7 +281,7 @@
 				{
 					"name": "educationaluse",
 					"in": "formData",
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -309,7 +309,7 @@
 				{
 					"name": "fileformat",
 					"in": "formData",
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"required": false,
 					"type": "text"
 				},
@@ -358,7 +358,7 @@
 				{
 					"name": "interactivitytype",
 					"in": "formData",
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -393,7 +393,7 @@
 				{
 					"name": "learningresourcetype",
 					"in": "formData",
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -463,7 +463,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -533,7 +533,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -575,7 +575,7 @@
 				{
 					"name": "timerequired",
 					"in": "formData",
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"required": false,
 					"type": "duration"
 				},
@@ -596,7 +596,7 @@
 				{
 					"name": "typicalagerange",
 					"in": "formData",
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -634,7 +634,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MovieSeries"
 							}
 						}
 					}
@@ -660,7 +660,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MovieSeries"
 							}
 						}
 					}
@@ -730,7 +730,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -828,7 +828,7 @@
 				{
 					"name": "contentrating",
 					"in": "formData",
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -870,7 +870,7 @@
 				{
 					"name": "datemodified",
 					"in": "formData",
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"required": false,
 					"type": "date or  datetime"
 				},
@@ -919,7 +919,7 @@
 				{
 					"name": "educationaluse",
 					"in": "formData",
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -947,7 +947,7 @@
 				{
 					"name": "fileformat",
 					"in": "formData",
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"required": false,
 					"type": "text"
 				},
@@ -996,7 +996,7 @@
 				{
 					"name": "interactivitytype",
 					"in": "formData",
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1031,7 +1031,7 @@
 				{
 					"name": "learningresourcetype",
 					"in": "formData",
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1101,7 +1101,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -1171,7 +1171,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -1213,7 +1213,7 @@
 				{
 					"name": "timerequired",
 					"in": "formData",
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"required": false,
 					"type": "duration"
 				},
@@ -1234,7 +1234,7 @@
 				{
 					"name": "typicalagerange",
 					"in": "formData",
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1272,7 +1272,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MovieSeries"
 							}
 						}
 					}
@@ -1296,7 +1296,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MovieSeries"
 							}
 						}
 					}
@@ -1306,7 +1306,7 @@
 		}
 	},
 	"definitions": {
-		"item": {
+		"MovieSeries": {
 			"properties": [{
 				"name": {
 					"description": "about",
@@ -1383,7 +1383,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
 				}
 			},
@@ -1523,7 +1523,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"type": "text"
 				}
 			},
@@ -1583,7 +1583,7 @@
 					"type": "date or  datetime"
 				},
 				"description": {
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"type": "date or  datetime"
 				}
 			},
@@ -1653,7 +1653,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"type": "text"
 				}
 			},
@@ -1693,7 +1693,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"type": "text"
 				}
 			},
@@ -1763,7 +1763,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"type": "text"
 				}
 			},
@@ -1813,7 +1813,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"type": "text"
 				}
 			},
@@ -1913,7 +1913,7 @@
 					"type": "action"
 				},
 				"description": {
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
 				}
 			},
@@ -2013,7 +2013,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
 				}
 			},
@@ -2073,7 +2073,7 @@
 					"type": "duration"
 				},
 				"description": {
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"type": "duration"
 				}
 			},
@@ -2103,7 +2103,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"type": "text"
 				}
 			},

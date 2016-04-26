@@ -29,7 +29,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/CheckoutPage"
 							}
 						}
 					}
@@ -85,7 +85,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -190,7 +190,7 @@
 				{
 					"name": "contentrating",
 					"in": "formData",
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -232,7 +232,7 @@
 				{
 					"name": "datemodified",
 					"in": "formData",
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"required": false,
 					"type": "date or  datetime"
 				},
@@ -274,7 +274,7 @@
 				{
 					"name": "educationaluse",
 					"in": "formData",
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -295,7 +295,7 @@
 				{
 					"name": "fileformat",
 					"in": "formData",
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"required": false,
 					"type": "text"
 				},
@@ -344,7 +344,7 @@
 				{
 					"name": "interactivitytype",
 					"in": "formData",
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -386,7 +386,7 @@
 				{
 					"name": "learningresourcetype",
 					"in": "formData",
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -456,7 +456,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -540,7 +540,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -568,7 +568,7 @@
 				{
 					"name": "specialty",
 					"in": "formData",
-					"description": "One of the domain specialities to which this web page's content applies.",
+					"description": "One of the domain specialities to which this web page\'s content applies.",
 					"required": false,
 					"type": "specialty"
 				},
@@ -589,7 +589,7 @@
 				{
 					"name": "timerequired",
 					"in": "formData",
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"required": false,
 					"type": "duration"
 				},
@@ -603,7 +603,7 @@
 				{
 					"name": "typicalagerange",
 					"in": "formData",
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -641,7 +641,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/CheckoutPage"
 							}
 						}
 					}
@@ -667,7 +667,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/CheckoutPage"
 							}
 						}
 					}
@@ -730,7 +730,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -835,7 +835,7 @@
 				{
 					"name": "contentrating",
 					"in": "formData",
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -877,7 +877,7 @@
 				{
 					"name": "datemodified",
 					"in": "formData",
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"required": false,
 					"type": "date or  datetime"
 				},
@@ -919,7 +919,7 @@
 				{
 					"name": "educationaluse",
 					"in": "formData",
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -940,7 +940,7 @@
 				{
 					"name": "fileformat",
 					"in": "formData",
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"required": false,
 					"type": "text"
 				},
@@ -989,7 +989,7 @@
 				{
 					"name": "interactivitytype",
 					"in": "formData",
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1031,7 +1031,7 @@
 				{
 					"name": "learningresourcetype",
 					"in": "formData",
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1101,7 +1101,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -1185,7 +1185,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -1213,7 +1213,7 @@
 				{
 					"name": "specialty",
 					"in": "formData",
-					"description": "One of the domain specialities to which this web page's content applies.",
+					"description": "One of the domain specialities to which this web page\'s content applies.",
 					"required": false,
 					"type": "specialty"
 				},
@@ -1234,7 +1234,7 @@
 				{
 					"name": "timerequired",
 					"in": "formData",
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"required": false,
 					"type": "duration"
 				},
@@ -1248,7 +1248,7 @@
 				{
 					"name": "typicalagerange",
 					"in": "formData",
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1286,7 +1286,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/CheckoutPage"
 							}
 						}
 					}
@@ -1310,7 +1310,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/CheckoutPage"
 							}
 						}
 					}
@@ -1320,7 +1320,471 @@
 		}
 	},
 	"definitions": {
-		"item": {
+		"CheckInAction": {
+			"properties": [{
+				"name": {
+					"description": "about",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The subject matter of the content.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "actionstatus",
+					"type": "actionstatustype"
+				},
+				"description": {
+					"description": "Indicates the current disposition of the Action.",
+					"type": "actionstatustype"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "agent",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "endtime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "error",
+					"type": "thing"
+				},
+				"description": {
+					"description": "For failed actions, more information on the cause of the failure.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "inlanguage",
+					"type": "text or  language"
+				},
+				"description": {
+					"description": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. Supersedes language.",
+					"type": "text or  language"
+				}
+			},
+			{
+				"name": {
+					"description": "instrument",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "location",
+					"type": "text or  place or  postaladdress"
+				},
+				"description": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "text or  place or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "object",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn\'t). e.g. John read *a book*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "participant",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "recipient",
+					"type": "person or  audience or  organization"
+				},
+				"description": {
+					"description": "A sub property of participant. The participant who is at the receiving end of the action.",
+					"type": "person or  audience or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "result",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The result produced in the action. e.g. John wrote *a book*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "starttime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "target",
+					"type": "entrypoint"
+				},
+				"description": {
+					"description": "Indicates a target EntryPoint for an Action.",
+					"type": "entrypoint"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"CheckOutAction": {
+			"properties": [{
+				"name": {
+					"description": "about",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The subject matter of the content.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "actionstatus",
+					"type": "actionstatustype"
+				},
+				"description": {
+					"description": "Indicates the current disposition of the Action.",
+					"type": "actionstatustype"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "agent",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "endtime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "error",
+					"type": "thing"
+				},
+				"description": {
+					"description": "For failed actions, more information on the cause of the failure.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "inlanguage",
+					"type": "text or  language"
+				},
+				"description": {
+					"description": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. Supersedes language.",
+					"type": "text or  language"
+				}
+			},
+			{
+				"name": {
+					"description": "instrument",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "location",
+					"type": "text or  place or  postaladdress"
+				},
+				"description": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "text or  place or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "object",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn\'t). e.g. John read *a book*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "participant",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "recipient",
+					"type": "person or  audience or  organization"
+				},
+				"description": {
+					"description": "A sub property of participant. The participant who is at the receiving end of the action.",
+					"type": "person or  audience or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "result",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The result produced in the action. e.g. John wrote *a book*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "starttime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "target",
+					"type": "entrypoint"
+				},
+				"description": {
+					"description": "Indicates a target EntryPoint for an Action.",
+					"type": "entrypoint"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"CheckoutPage": {
 			"properties": [{
 				"name": {
 					"description": "about",
@@ -1387,7 +1851,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
 				}
 			},
@@ -1537,7 +2001,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"type": "text"
 				}
 			},
@@ -1597,7 +2061,7 @@
 					"type": "date or  datetime"
 				},
 				"description": {
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"type": "date or  datetime"
 				}
 			},
@@ -1657,7 +2121,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"type": "text"
 				}
 			},
@@ -1687,7 +2151,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"type": "text"
 				}
 			},
@@ -1757,7 +2221,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"type": "text"
 				}
 			},
@@ -1817,7 +2281,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"type": "text"
 				}
 			},
@@ -1917,7 +2381,7 @@
 					"type": "action"
 				},
 				"description": {
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
 				}
 			},
@@ -2037,7 +2501,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
 				}
 			},
@@ -2077,7 +2541,7 @@
 					"type": "specialty"
 				},
 				"description": {
-					"description": "One of the domain specialities to which this web page's content applies.",
+					"description": "One of the domain specialities to which this web page\'s content applies.",
 					"type": "specialty"
 				}
 			},
@@ -2107,7 +2571,7 @@
 					"type": "duration"
 				},
 				"description": {
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"type": "duration"
 				}
 			},
@@ -2127,7 +2591,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"type": "text"
 				}
 			},

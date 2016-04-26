@@ -29,7 +29,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MedicalGuidelineRecommendation"
 							}
 						}
 					}
@@ -43,7 +43,7 @@
 				"parameters": [{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -92,7 +92,7 @@
 				{
 					"name": "guidelinedate",
 					"in": "formData",
-					"description": "Date on which this guideline's recommendation was made.",
+					"description": "Date on which this guideline\'s recommendation was made.",
 					"required": false,
 					"type": "date"
 				},
@@ -120,7 +120,7 @@
 				{
 					"name": "medicinesystem",
 					"in": "formData",
-					"description": "The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.",
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"required": false,
 					"type": "medicinesystem"
 				},
@@ -134,7 +134,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -148,7 +148,7 @@
 				{
 					"name": "recommendationstrength",
 					"in": "formData",
-					"description": "Strength of the guideline's recommendation (e.g. 'class I').",
+					"description": "Strength of the guideline\'s recommendation (e.g. \'class I\').",
 					"required": false,
 					"type": "text"
 				},
@@ -162,7 +162,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -186,7 +186,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MedicalGuidelineRecommendation"
 							}
 						}
 					}
@@ -212,7 +212,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MedicalGuidelineRecommendation"
 							}
 						}
 					}
@@ -233,7 +233,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -282,7 +282,7 @@
 				{
 					"name": "guidelinedate",
 					"in": "formData",
-					"description": "Date on which this guideline's recommendation was made.",
+					"description": "Date on which this guideline\'s recommendation was made.",
 					"required": false,
 					"type": "date"
 				},
@@ -310,7 +310,7 @@
 				{
 					"name": "medicinesystem",
 					"in": "formData",
-					"description": "The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.",
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"required": false,
 					"type": "medicinesystem"
 				},
@@ -324,7 +324,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -338,7 +338,7 @@
 				{
 					"name": "recommendationstrength",
 					"in": "formData",
-					"description": "Strength of the guideline's recommendation (e.g. 'class I').",
+					"description": "Strength of the guideline\'s recommendation (e.g. \'class I\').",
 					"required": false,
 					"type": "text"
 				},
@@ -352,7 +352,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -376,7 +376,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MedicalGuidelineRecommendation"
 							}
 						}
 					}
@@ -400,7 +400,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MedicalGuidelineRecommendation"
 							}
 						}
 					}
@@ -410,14 +410,14 @@
 		}
 	},
 	"definitions": {
-		"item": {
+		"MedicalGuidelineRecommendation": {
 			"properties": [{
 				"name": {
 					"description": "additionaltype",
 					"type": "url"
 				},
 				"description": {
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
 				}
 			},
@@ -487,7 +487,7 @@
 					"type": "date"
 				},
 				"description": {
-					"description": "Date on which this guideline's recommendation was made.",
+					"description": "Date on which this guideline\'s recommendation was made.",
 					"type": "date"
 				}
 			},
@@ -527,7 +527,7 @@
 					"type": "medicinesystem"
 				},
 				"description": {
-					"description": "The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.",
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"type": "medicinesystem"
 				}
 			},
@@ -547,7 +547,7 @@
 					"type": "action"
 				},
 				"description": {
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
 				}
 			},
@@ -567,7 +567,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "Strength of the guideline's recommendation (e.g. 'class I').",
+					"description": "Strength of the guideline\'s recommendation (e.g. \'class I\').",
 					"type": "text"
 				}
 			},
@@ -587,7 +587,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
 				}
 			},

@@ -29,7 +29,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Car"
 							}
 						}
 					}
@@ -50,7 +50,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -134,21 +134,21 @@
 				{
 					"name": "drivewheelconfiguration",
 					"in": "formData",
-					"description": "The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.",
+					"description": "The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle\'s engine via the drivetrain.",
 					"required": false,
 					"type": "drivewheelconfigurationvalue or  text"
 				},
 				{
 					"name": "fuelconsumption",
 					"in": "formData",
-					"description": "The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).Note 1: There are unfortunately no standard unit codes for liters per 100 km.Use unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use valueReference to link the value for the fuel consumption to another value.",
+					"description": "The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).Note 1: There are unfortunately no standard unit codes for liters per 100 km.Use unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use valueReference to link the value for the fuel consumption to another value.",
 					"required": false,
 					"type": "quantitativevalue"
 				},
 				{
 					"name": "fuelefficiency",
 					"in": "formData",
-					"description": "The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter.Use unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use valueReference to link the value for the fuel economy to another value.",
+					"description": "The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter.Use unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use valueReference to link the value for the fuel economy to another value.",
 					"required": false,
 					"type": "quantitativevalue"
 				},
@@ -337,14 +337,14 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
 				{
 					"name": "productid",
 					"in": "formData",
-					"description": "The product identifier, such as ISBN. For example: &lt;meta itemprop='productID' content='isbn:123-456-789'/&gt;.",
+					"description": "The product identifier, such as ISBN. For example: &lt;meta itemprop=\'productID\' content=\'isbn:123-456-789\'/&gt;.",
 					"required": false,
 					"type": "text"
 				},
@@ -379,7 +379,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -407,7 +407,7 @@
 				{
 					"name": "vehicleconfiguration",
 					"in": "formData",
-					"description": "A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.",
+					"description": "A short text indicating the configuration of the vehicle, e.g. \'5dr hatchback ST 2.5 MT 225 hp\' or \'limited edition\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -456,7 +456,7 @@
 				{
 					"name": "vehicletransmission",
 					"in": "formData",
-					"description": "The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars).",
+					"description": "The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) (\"gearbox\" for cars).",
 					"required": false,
 					"type": "qualitativevalue or  text or  url"
 				},
@@ -480,7 +480,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Car"
 							}
 						}
 					}
@@ -506,7 +506,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Car"
 							}
 						}
 					}
@@ -534,7 +534,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -618,21 +618,21 @@
 				{
 					"name": "drivewheelconfiguration",
 					"in": "formData",
-					"description": "The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.",
+					"description": "The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle\'s engine via the drivetrain.",
 					"required": false,
 					"type": "drivewheelconfigurationvalue or  text"
 				},
 				{
 					"name": "fuelconsumption",
 					"in": "formData",
-					"description": "The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).Note 1: There are unfortunately no standard unit codes for liters per 100 km.Use unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use valueReference to link the value for the fuel consumption to another value.",
+					"description": "The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).Note 1: There are unfortunately no standard unit codes for liters per 100 km.Use unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use valueReference to link the value for the fuel consumption to another value.",
 					"required": false,
 					"type": "quantitativevalue"
 				},
 				{
 					"name": "fuelefficiency",
 					"in": "formData",
-					"description": "The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter.Use unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use valueReference to link the value for the fuel economy to another value.",
+					"description": "The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter.Use unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use valueReference to link the value for the fuel economy to another value.",
 					"required": false,
 					"type": "quantitativevalue"
 				},
@@ -821,14 +821,14 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
 				{
 					"name": "productid",
 					"in": "formData",
-					"description": "The product identifier, such as ISBN. For example: &lt;meta itemprop='productID' content='isbn:123-456-789'/&gt;.",
+					"description": "The product identifier, such as ISBN. For example: &lt;meta itemprop=\'productID\' content=\'isbn:123-456-789\'/&gt;.",
 					"required": false,
 					"type": "text"
 				},
@@ -863,7 +863,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -891,7 +891,7 @@
 				{
 					"name": "vehicleconfiguration",
 					"in": "formData",
-					"description": "A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.",
+					"description": "A short text indicating the configuration of the vehicle, e.g. \'5dr hatchback ST 2.5 MT 225 hp\' or \'limited edition\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -940,7 +940,7 @@
 				{
 					"name": "vehicletransmission",
 					"in": "formData",
-					"description": "The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars).",
+					"description": "The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) (\"gearbox\" for cars).",
 					"required": false,
 					"type": "qualitativevalue or  text or  url"
 				},
@@ -964,7 +964,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Car"
 							}
 						}
 					}
@@ -988,7 +988,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Car"
 							}
 						}
 					}
@@ -998,7 +998,619 @@
 		}
 	},
 	"definitions": {
-		"item": {
+		"CafeOrCoffeeShop": {
+			"properties": [{
+				"name": {
+					"description": "acceptsreservations",
+					"type": "text or  url or  boolean"
+				},
+				"description": {
+					"description": "Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, a URL at which reservations can be made or (for backwards compatibility) the strings Yes or No.",
+					"type": "text or  url or  boolean"
+				}
+			},
+			{
+				"name": {
+					"description": "additionalproperty",
+					"type": "propertyvalue"
+				},
+				"description": {
+					"description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+					"type": "propertyvalue"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "address",
+					"type": "text or  postaladdress"
+				},
+				"description": {
+					"description": "Physical address of the item.",
+					"type": "text or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "alumni",
+					"type": "person"
+				},
+				"description": {
+					"description": "Alumni of an organization. Inverse property: alumniOf.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "areaserved",
+					"type": "text or  place or  geoshape or  administrativearea"
+				},
+				"description": {
+					"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+					"type": "text or  place or  geoshape or  administrativearea"
+				}
+			},
+			{
+				"name": {
+					"description": "award",
+					"type": "text"
+				},
+				"description": {
+					"description": "An award won by or for this item. Supersedes awards.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "branchcode",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short textual code (also called \"store code\") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code \"3047\" is a branchCode for a particular branch.      ",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "brand",
+					"type": "brand or  organization"
+				},
+				"description": {
+					"description": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.",
+					"type": "brand or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "contactpoint",
+					"type": "contactpoint"
+				},
+				"description": {
+					"description": "A contact point for a person or organization. Supersedes contactPoints.",
+					"type": "contactpoint"
+				}
+			},
+			{
+				"name": {
+					"description": "containedinplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and one that contains it. Supersedes containedIn. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "containsplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and another that it contains. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "currenciesaccepted",
+					"type": "text"
+				},
+				"description": {
+					"description": "The currency accepted (in ISO 4217 currency format).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "department",
+					"type": "organization"
+				},
+				"description": {
+					"description": "A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "dissolutiondate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The date that this organization was dissolved.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "duns",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Dun & Bradstreet DUNS number for identifying an organization or business person.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "email",
+					"type": "text"
+				},
+				"description": {
+					"description": "Email address.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "employee",
+					"type": "person"
+				},
+				"description": {
+					"description": "Someone working for this organization. Supersedes employees.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "event",
+					"type": "event"
+				},
+				"description": {
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "faxnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The fax number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "founder",
+					"type": "person"
+				},
+				"description": {
+					"description": "A person who founded this organization. Supersedes founders.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "foundingdate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The date that this organization was founded.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "foundinglocation",
+					"type": "place"
+				},
+				"description": {
+					"description": "The place where the Organization was founded.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "geo",
+					"type": "geocoordinates or  geoshape"
+				},
+				"description": {
+					"description": "The geo coordinates of the place.",
+					"type": "geocoordinates or  geoshape"
+				}
+			},
+			{
+				"name": {
+					"description": "globallocationnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "hasmap",
+					"type": "url or  map"
+				},
+				"description": {
+					"description": "A URL to a map of the place. Supersedes map, maps.",
+					"type": "url or  map"
+				}
+			},
+			{
+				"name": {
+					"description": "hasoffercatalog",
+					"type": "offercatalog"
+				},
+				"description": {
+					"description": "Indicates an OfferCatalog listing for this Organization, Person, or Service.",
+					"type": "offercatalog"
+				}
+			},
+			{
+				"name": {
+					"description": "haspos",
+					"type": "place"
+				},
+				"description": {
+					"description": "Points-of-Sales operated by the organization or person.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "isicv4",
+					"type": "text"
+				},
+				"description": {
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "legalname",
+					"type": "text"
+				},
+				"description": {
+					"description": "The official name of the organization, e.g. the registered company name.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "location",
+					"type": "text or  place or  postaladdress"
+				},
+				"description": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "text or  place or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "logo",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An associated logo.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "makesoffer",
+					"type": "offer"
+				},
+				"description": {
+					"description": "A pointer to products or services offered by the organization or person. Inverse property: offeredBy.",
+					"type": "offer"
+				}
+			},
+			{
+				"name": {
+					"description": "member",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "memberof",
+					"type": "programmembership or  organization"
+				},
+				"description": {
+					"description": "An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member.",
+					"type": "programmembership or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "menu",
+					"type": "text or  url"
+				},
+				"description": {
+					"description": "Either the actual menu or a URL of the menu.",
+					"type": "text or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "naics",
+					"type": "text"
+				},
+				"description": {
+					"description": "The North American Industry Classification System (NAICS) code for a particular organization or business person.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "numberofemployees",
+					"type": "quantitativevalue"
+				},
+				"description": {
+					"description": "The number of employees in an organization e.g. business.",
+					"type": "quantitativevalue"
+				}
+			},
+			{
+				"name": {
+					"description": "openinghours",
+					"type": "text"
+				},
+				"description": {
+					"description": "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas \',\' separating each day. Day or time ranges are specified using a hyphen \'-\'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "openinghoursspecification",
+					"type": "openinghoursspecification"
+				},
+				"description": {
+					"description": "The opening hours of a certain place.",
+					"type": "openinghoursspecification"
+				}
+			},
+			{
+				"name": {
+					"description": "owns",
+					"type": "product or  ownershipinfo"
+				},
+				"description": {
+					"description": "Products owned by the organization or person.",
+					"type": "product or  ownershipinfo"
+				}
+			},
+			{
+				"name": {
+					"description": "parentorganization",
+					"type": "organization"
+				},
+				"description": {
+					"description": "The larger organization that this organization is a branch of, if any. Supersedes branchOf. Inverse property: subOrganization.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "paymentaccepted",
+					"type": "text"
+				},
+				"description": {
+					"description": "Cash, credit card, etc.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "photo",
+					"type": "photograph or  imageobject"
+				},
+				"description": {
+					"description": "A photograph of this place. Supersedes photos.",
+					"type": "photograph or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "pricerange",
+					"type": "text"
+				},
+				"description": {
+					"description": "The price range of the business, for example $$$.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "seeks",
+					"type": "demand"
+				},
+				"description": {
+					"description": "A pointer to products or services sought by the organization or person (demand).",
+					"type": "demand"
+				}
+			},
+			{
+				"name": {
+					"description": "servescuisine",
+					"type": "text"
+				},
+				"description": {
+					"description": "The cuisine of the restaurant.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "suborganization",
+					"type": "organization"
+				},
+				"description": {
+					"description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific \'department\' property. Inverse property: parentOrganization.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "taxid",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "telephone",
+					"type": "text"
+				},
+				"description": {
+					"description": "The telephone number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "vatid",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Value-added Tax ID of the organization or person.",
+					"type": "text"
+				}
+			}]
+		},
+		"Campground": {
 			"properties": [{
 				"name": {
 					"description": "additionalproperty",
@@ -1015,7 +1627,753 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "address",
+					"type": "text or  postaladdress"
+				},
+				"description": {
+					"description": "Physical address of the item.",
+					"type": "text or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "branchcode",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short textual code (also called \"store code\") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code \"3047\" is a branchCode for a particular branch.      ",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "containedinplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and one that contains it. Supersedes containedIn. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "containsplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and another that it contains. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "event",
+					"type": "event"
+				},
+				"description": {
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "faxnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The fax number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "geo",
+					"type": "geocoordinates or  geoshape"
+				},
+				"description": {
+					"description": "The geo coordinates of the place.",
+					"type": "geocoordinates or  geoshape"
+				}
+			},
+			{
+				"name": {
+					"description": "globallocationnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "hasmap",
+					"type": "url or  map"
+				},
+				"description": {
+					"description": "A URL to a map of the place. Supersedes map, maps.",
+					"type": "url or  map"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "isicv4",
+					"type": "text"
+				},
+				"description": {
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "logo",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An associated logo.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "openinghours",
+					"type": "text"
+				},
+				"description": {
+					"description": "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas \',\' separating each day. Day or time ranges are specified using a hyphen \'-\'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "openinghoursspecification",
+					"type": "openinghoursspecification"
+				},
+				"description": {
+					"description": "The opening hours of a certain place.",
+					"type": "openinghoursspecification"
+				}
+			},
+			{
+				"name": {
+					"description": "photo",
+					"type": "photograph or  imageobject"
+				},
+				"description": {
+					"description": "A photograph of this place. Supersedes photos.",
+					"type": "photograph or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "telephone",
+					"type": "text"
+				},
+				"description": {
+					"description": "The telephone number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"Canal": {
+			"properties": [{
+				"name": {
+					"description": "additionalproperty",
+					"type": "propertyvalue"
+				},
+				"description": {
+					"description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+					"type": "propertyvalue"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "address",
+					"type": "text or  postaladdress"
+				},
+				"description": {
+					"description": "Physical address of the item.",
+					"type": "text or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "branchcode",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short textual code (also called \"store code\") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code \"3047\" is a branchCode for a particular branch.      ",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "containedinplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and one that contains it. Supersedes containedIn. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "containsplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and another that it contains. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "event",
+					"type": "event"
+				},
+				"description": {
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "faxnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The fax number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "geo",
+					"type": "geocoordinates or  geoshape"
+				},
+				"description": {
+					"description": "The geo coordinates of the place.",
+					"type": "geocoordinates or  geoshape"
+				}
+			},
+			{
+				"name": {
+					"description": "globallocationnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "hasmap",
+					"type": "url or  map"
+				},
+				"description": {
+					"description": "A URL to a map of the place. Supersedes map, maps.",
+					"type": "url or  map"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "isicv4",
+					"type": "text"
+				},
+				"description": {
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "logo",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An associated logo.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "openinghoursspecification",
+					"type": "openinghoursspecification"
+				},
+				"description": {
+					"description": "The opening hours of a certain place.",
+					"type": "openinghoursspecification"
+				}
+			},
+			{
+				"name": {
+					"description": "photo",
+					"type": "photograph or  imageobject"
+				},
+				"description": {
+					"description": "A photograph of this place. Supersedes photos.",
+					"type": "photograph or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "telephone",
+					"type": "text"
+				},
+				"description": {
+					"description": "The telephone number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"CancelAction": {
+			"properties": [{
+				"name": {
+					"description": "actionstatus",
+					"type": "actionstatustype"
+				},
+				"description": {
+					"description": "Indicates the current disposition of the Action.",
+					"type": "actionstatustype"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "agent",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "endtime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "error",
+					"type": "thing"
+				},
+				"description": {
+					"description": "For failed actions, more information on the cause of the failure.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "instrument",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "location",
+					"type": "text or  place or  postaladdress"
+				},
+				"description": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "text or  place or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "object",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn\'t). e.g. John read *a book*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "participant",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "result",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The result produced in the action. e.g. John wrote *a book*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "scheduledtime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The time the object is scheduled to.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "starttime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "target",
+					"type": "entrypoint"
+				},
+				"description": {
+					"description": "Indicates a target EntryPoint for an Action.",
+					"type": "entrypoint"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"Car": {
+			"properties": [{
+				"name": {
+					"description": "additionalproperty",
+					"type": "propertyvalue"
+				},
+				"description": {
+					"description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+					"type": "propertyvalue"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
 				}
 			},
@@ -1135,7 +2493,7 @@
 					"type": "drivewheelconfigurationvalue or  text"
 				},
 				"description": {
-					"description": "The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.",
+					"description": "The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle\'s engine via the drivetrain.",
 					"type": "drivewheelconfigurationvalue or  text"
 				}
 			},
@@ -1145,7 +2503,7 @@
 					"type": "quantitativevalue"
 				},
 				"description": {
-					"description": "The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).Note 1: There are unfortunately no standard unit codes for liters per 100 km.Use unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use valueReference to link the value for the fuel consumption to another value.",
+					"description": "The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).Note 1: There are unfortunately no standard unit codes for liters per 100 km.Use unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use valueReference to link the value for the fuel consumption to another value.",
 					"type": "quantitativevalue"
 				}
 			},
@@ -1155,7 +2513,7 @@
 					"type": "quantitativevalue"
 				},
 				"description": {
-					"description": "The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter.Use unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can use valueReference to link the value for the fuel economy to another value.",
+					"description": "The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter.Use unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use valueReference to link the value for the fuel economy to another value.",
 					"type": "quantitativevalue"
 				}
 			},
@@ -1425,7 +2783,7 @@
 					"type": "action"
 				},
 				"description": {
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
 				}
 			},
@@ -1435,7 +2793,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The product identifier, such as ISBN. For example: &lt;meta itemprop='productID' content='isbn:123-456-789'/&gt;.",
+					"description": "The product identifier, such as ISBN. For example: &lt;meta itemprop=\'productID\' content=\'isbn:123-456-789\'/&gt;.",
 					"type": "text"
 				}
 			},
@@ -1485,7 +2843,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
 				}
 			},
@@ -1525,7 +2883,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.",
+					"description": "A short text indicating the configuration of the vehicle, e.g. \'5dr hatchback ST 2.5 MT 225 hp\' or \'limited edition\'.",
 					"type": "text"
 				}
 			},
@@ -1595,7 +2953,7 @@
 					"type": "qualitativevalue or  text or  url"
 				},
 				"description": {
-					"description": "The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars).",
+					"description": "The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) (\"gearbox\" for cars).",
 					"type": "qualitativevalue or  text or  url"
 				}
 			},

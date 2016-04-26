@@ -29,7 +29,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/AggregateOffer"
 							}
 						}
 					}
@@ -50,7 +50,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -316,14 +316,14 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
 				{
 					"name": "price",
 					"in": "formData",
-					"description": "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. "USD") instead of      including ambiguous symbols such as '$' in the value.      Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.      Note that both RDFa and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable values      alongside more human-friendly formatting.      Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.      ",
+					"description": "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous symbols such as \'$\' in the value.      Use \'.\' (Unicode \'FULL STOP\' (U+002E)) rather than \',\' to indicate a decimal point. Avoid using these symbols as a readability separator.      Note that both RDFa and Microdata syntax allow the use of a \"content=\" attribute for publishing simple machine-readable values      alongside more human-friendly formatting.      Use values from 0123456789 (Unicode \'DIGIT ZERO\' (U+0030) to \'DIGIT NINE\' (U+0039)) rather than superficially similiar Unicode symbols.      ",
 					"required": false,
 					"type": "text or  number"
 				},
@@ -358,7 +358,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -417,7 +417,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/AggregateOffer"
 							}
 						}
 					}
@@ -443,7 +443,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/AggregateOffer"
 							}
 						}
 					}
@@ -471,7 +471,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -737,14 +737,14 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
 				{
 					"name": "price",
 					"in": "formData",
-					"description": "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. "USD") instead of      including ambiguous symbols such as '$' in the value.      Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.      Note that both RDFa and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable values      alongside more human-friendly formatting.      Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.      ",
+					"description": "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous symbols such as \'$\' in the value.      Use \'.\' (Unicode \'FULL STOP\' (U+002E)) rather than \',\' to indicate a decimal point. Avoid using these symbols as a readability separator.      Note that both RDFa and Microdata syntax allow the use of a \"content=\" attribute for publishing simple machine-readable values      alongside more human-friendly formatting.      Use values from 0123456789 (Unicode \'DIGIT ZERO\' (U+0030) to \'DIGIT NINE\' (U+0039)) rather than superficially similiar Unicode symbols.      ",
 					"required": false,
 					"type": "text or  number"
 				},
@@ -779,7 +779,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -838,7 +838,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/AggregateOffer"
 							}
 						}
 					}
@@ -862,7 +862,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/AggregateOffer"
 							}
 						}
 					}
@@ -872,7 +872,7 @@
 		}
 	},
 	"definitions": {
-		"item": {
+		"AggregateOffer": {
 			"properties": [{
 				"name": {
 					"description": "acceptedpaymentmethod",
@@ -889,7 +889,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
 				}
 			},
@@ -1269,7 +1269,7 @@
 					"type": "action"
 				},
 				"description": {
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
 				}
 			},
@@ -1279,7 +1279,7 @@
 					"type": "text or  number"
 				},
 				"description": {
-					"description": "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. "USD") instead of      including ambiguous symbols such as '$' in the value.      Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.      Note that both RDFa and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable values      alongside more human-friendly formatting.      Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.      ",
+					"description": "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous symbols such as \'$\' in the value.      Use \'.\' (Unicode \'FULL STOP\' (U+002E)) rather than \',\' to indicate a decimal point. Avoid using these symbols as a readability separator.      Note that both RDFa and Microdata syntax allow the use of a \"content=\" attribute for publishing simple machine-readable values      alongside more human-friendly formatting.      Use values from 0123456789 (Unicode \'DIGIT ZERO\' (U+0030) to \'DIGIT NINE\' (U+0039)) rather than superficially similiar Unicode symbols.      ",
 					"type": "text or  number"
 				}
 			},
@@ -1329,7 +1329,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
 				}
 			},

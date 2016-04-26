@@ -28,7 +28,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/SportsEvent'
         tags:
         - Sports Event
       post:
@@ -41,7 +41,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -156,7 +156,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: previousstartdate
@@ -182,7 +182,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -213,7 +213,7 @@
           type: event
         - name: typicalagerange
           in: formData
-          description: The typical expected age range, e.g. '7-9', '11-'.
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
           required: false
           type: text
         - name: url
@@ -240,7 +240,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/SportsEvent'
         tags:
         - Sports Event
     /sports-event/{id}/:
@@ -260,7 +260,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/SportsEvent'
         tags:
         - Sports Event
       put:
@@ -278,7 +278,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -393,7 +393,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: previousstartdate
@@ -419,7 +419,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -450,7 +450,7 @@
           type: event
         - name: typicalagerange
           in: formData
-          description: The typical expected age range, e.g. '7-9', '11-'.
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
           required: false
           type: text
         - name: url
@@ -477,7 +477,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/SportsEvent'
         tags:
         - Sports Event
       delete:
@@ -496,11 +496,2139 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/SportsEvent'
         tags:
         - Sports Event
   definitions:
-    item:
+    SocialMediaPosting:
+      properties:
+      - name:
+          description: about
+          type: thing
+        description:
+          description: The subject matter of the content.
+          type: thing
+      - name:
+          description: accessibilityapi
+          type: text
+        description:
+          description: Indicates that the resource is compatible with the referenced
+            accessibility API (WebSchemas wiki lists possible values).
+          type: text
+      - name:
+          description: accessibilitycontrol
+          type: text
+        description:
+          description: Identifies input methods that are sufficient to fully control
+            the described resource (WebSchemas wiki lists possible values).
+          type: text
+      - name:
+          description: accessibilityfeature
+          type: text
+        description:
+          description: Content features of the resource, such as accessible media, alternatives
+            and supported enhancements for accessibility (WebSchemas wiki lists possible
+            values).
+          type: text
+      - name:
+          description: accessibilityhazard
+          type: text
+        description:
+          description: A characteristic of the described resource that is physiologically
+            dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki
+            lists possible values).
+          type: text
+      - name:
+          description: accountableperson
+          type: person
+        description:
+          description: Specifies the Person that is legally accountable for the CreativeWork.
+          type: person
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: aggregaterating
+          type: aggregaterating
+        description:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: alternativeheadline
+          type: text
+        description:
+          description: A secondary title of the CreativeWork.
+          type: text
+      - name:
+          description: articlebody
+          type: text
+        description:
+          description: The actual body of the article.
+          type: text
+      - name:
+          description: articlesection
+          type: text
+        description:
+          description: Articles may belong to one or more \'sections\' in a magazine
+            or newspaper, such as Sports, Lifestyle, etc.
+          type: text
+      - name:
+          description: associatedmedia
+          type: mediaobject
+        description:
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for encoding.
+          type: mediaobject
+      - name:
+          description: audience
+          type: audience
+        description:
+          description: An intended audience, i.e. a group for whom something was created.
+            Supersedes serviceAudience.
+          type: audience
+      - name:
+          description: audio
+          type: audioobject
+        description:
+          description: An embedded audio object.
+          type: audioobject
+      - name:
+          description: author
+          type: person or  organization
+        description:
+          description: The author of this content. Please note that author is special
+            in that HTML 5 provides a special mechanism for indicating authorship via
+            the rel tag. That is equivalent to this and may be used interchangeably.
+          type: person or  organization
+      - name:
+          description: award
+          type: text
+        description:
+          description: An award won by or for this item. Supersedes awards.
+          type: text
+      - name:
+          description: character
+          type: person
+        description:
+          description: Fictional person connected with a creative work.
+          type: person
+      - name:
+          description: citation
+          type: creativework or  text
+        description:
+          description: A citation or reference to another creative work, such as another
+            publication, web page, scholarly article, etc.
+          type: creativework or  text
+      - name:
+          description: comment
+          type: comment
+        description:
+          description: Comments, typically from users.
+          type: comment
+      - name:
+          description: commentcount
+          type: integer
+        description:
+          description: The number of comments this CreativeWork (e.g. Article, Question
+            or Answer) has received. This is most applicable to works published in Web
+            sites with commenting system; additional comments may exist elsewhere.
+          type: integer
+      - name:
+          description: contentlocation
+          type: place
+        description:
+          description: The location depicted or described in the content. For example,
+            the location in a photograph or painting.
+          type: place
+      - name:
+          description: contentrating
+          type: text
+        description:
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
+          type: text
+      - name:
+          description: contributor
+          type: person or  organization
+        description:
+          description: A secondary contributor to the CreativeWork.
+          type: person or  organization
+      - name:
+          description: copyrightholder
+          type: person or  organization
+        description:
+          description: The party holding the legal copyright to the CreativeWork.
+          type: person or  organization
+      - name:
+          description: copyrightyear
+          type: number
+        description:
+          description: The year during which the claimed copyright for the CreativeWork
+            was first asserted.
+          type: number
+      - name:
+          description: creator
+          type: person or  organization
+        description:
+          description: The creator/author of this CreativeWork. This is the same as
+            the Author property for CreativeWork.
+          type: person or  organization
+      - name:
+          description: datecreated
+          type: date or  datetime
+        description:
+          description: The date on which the CreativeWork was created or the item was
+            added to a DataFeed.
+          type: date or  datetime
+      - name:
+          description: datemodified
+          type: date or  datetime
+        description:
+          description: The date on which the CreativeWork was most recently modified
+            or when the item\'s entry was modified within a DataFeed.
+          type: date or  datetime
+      - name:
+          description: datepublished
+          type: date
+        description:
+          description: Date of first broadcast/publication.
+          type: date
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: discussionurl
+          type: url
+        description:
+          description: A link to the page containing the comments of the CreativeWork.
+          type: url
+      - name:
+          description: editor
+          type: person
+        description:
+          description: Specifies the Person who edited the CreativeWork.
+          type: person
+      - name:
+          description: educationalalignment
+          type: alignmentobject
+        description:
+          description: An alignment to an established educational framework.
+          type: alignmentobject
+      - name:
+          description: educationaluse
+          type: text
+        description:
+          description: The purpose of a work in the context of education; for example,
+            \'assignment\', \'group work\'.
+          type: text
+      - name:
+          description: encoding
+          type: mediaobject
+        description:
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for associatedMedia. Supersedes encodings.
+          type: mediaobject
+      - name:
+          description: exampleofwork
+          type: creativework
+        description:
+          description: 'A creative work that this work is an example/instance/realization/derivation
+            of. Inverse property: workExample.'
+          type: creativework
+      - name:
+          description: fileformat
+          type: text
+        description:
+          description: Media type (aka MIME format, see IANA site) of the content e.g.
+            application/zip of a SoftwareApplication binary. In cases where a CreativeWork
+            has several media type representations, \'encoding\' can be used to indicate
+            each MediaObject alongside particular fileFormat information.
+          type: text
+      - name:
+          description: genre
+          type: text or  url
+        description:
+          description: Genre of the creative work or group.
+          type: text or  url
+      - name:
+          description: haspart
+          type: creativework
+        description:
+          description: 'Indicates a CreativeWork that is (in some sense) a part of this
+            CreativeWork. Inverse property: isPartOf.'
+          type: creativework
+      - name:
+          description: headline
+          type: text
+        description:
+          description: Headline of the article.
+          type: text
+      - name:
+          description: image
+          type: imageobject or  url
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: imageobject or  url
+      - name:
+          description: inlanguage
+          type: text or  language
+        description:
+          description: The language of the content or performance or used in an action.
+            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
+            language.
+          type: text or  language
+      - name:
+          description: interactionstatistic
+          type: interactioncounter
+        description:
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication. The most specific child type of InteractionCounter
+            should be used. Supersedes interactionCount.
+          type: interactioncounter
+      - name:
+          description: interactivitytype
+          type: text
+        description:
+          description: The predominant mode of learning supported by the learning resource.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
+          type: text
+      - name:
+          description: isbasedonurl
+          type: url
+        description:
+          description: A resource that was used in the creation of this resource. This
+            term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+          type: url
+      - name:
+          description: isfamilyfriendly
+          type: boolean
+        description:
+          description: Indicates whether this content is family friendly.
+          type: boolean
+      - name:
+          description: ispartof
+          type: creativework
+        description:
+          description: 'Indicates a CreativeWork that this CreativeWork is (in some
+            sense) part of. Inverse property: hasPart.'
+          type: creativework
+      - name:
+          description: keywords
+          type: text
+        description:
+          description: Keywords or tags used to describe this content. Multiple entries
+            in a keywords list are typically delimited by commas.
+          type: text
+      - name:
+          description: learningresourcetype
+          type: text
+        description:
+          description: The predominant type or kind characterizing the learning resource.
+            For example, \'presentation\', \'handout\'.
+          type: text
+      - name:
+          description: license
+          type: creativework or  url
+        description:
+          description: A license document that applies to this content, typically indicated
+            by URL.
+          type: creativework or  url
+      - name:
+          description: locationcreated
+          type: place
+        description:
+          description: The location where the CreativeWork was created, which may not
+            be the same as the location depicted in the CreativeWork.
+          type: place
+      - name:
+          description: mainentity
+          type: thing
+        description:
+          description: 'Indicates the primary entity described in some page or other
+            CreativeWork. Inverse property: mainEntityOfPage.'
+          type: thing
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: mentions
+          type: thing
+        description:
+          description: Indicates that the CreativeWork contains a reference to, but
+            is not necessarily about a concept.
+          type: thing
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: offers
+          type: offer
+        description:
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          type: offer
+      - name:
+          description: pageend
+          type: integer or  text
+        description:
+          description: The page on which the work ends; for example \"138\" or \"xvi\".
+          type: integer or  text
+      - name:
+          description: pagestart
+          type: integer or  text
+        description:
+          description: The page on which the work starts; for example \"135\" or \"xiii\".
+          type: integer or  text
+      - name:
+          description: pagination
+          type: text
+        description:
+          description: Any description of pages that is not separated into pageStart
+            and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".
+          type: text
+      - name:
+          description: position
+          type: integer or  text
+        description:
+          description: The position of an item in a series or sequence of items.
+          type: integer or  text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: producer
+          type: person or  organization
+        description:
+          description: The person or organization who produced the work (e.g. music
+            album, movie, tv/radio series etc.).
+          type: person or  organization
+      - name:
+          description: provider
+          type: person or  organization
+        description:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: person or  organization
+      - name:
+          description: publication
+          type: publicationevent
+        description:
+          description: A publication event associated with the item.
+          type: publicationevent
+      - name:
+          description: publisher
+          type: person or  organization
+        description:
+          description: The publisher of the creative work.
+          type: person or  organization
+      - name:
+          description: publishingprinciples
+          type: url
+        description:
+          description: Link to page describing the editorial principles of the organization
+            primarily responsible for the creation of the CreativeWork.
+          type: url
+      - name:
+          description: recordedat
+          type: event
+        description:
+          description: 'The Event where the CreativeWork was recorded. The CreativeWork
+            may capture all or part of the event. Inverse property: recordedIn.'
+          type: event
+      - name:
+          description: releasedevent
+          type: publicationevent
+        description:
+          description: The place and time the release was issued, expressed as a PublicationEvent.
+          type: publicationevent
+      - name:
+          description: review
+          type: review
+        description:
+          description: A review of the item. Supersedes reviews.
+          type: review
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: schemaversion
+          type: text or  url
+        description:
+          description: 'Indicates (by URL or string) a particular version of a schema
+            used in some CreativeWork. For example, a document could declare a schemaVersion
+            using a URL such as http://schema.org/version/2.0/ if precise indication
+            of schema version was required by some application. '
+          type: text or  url
+      - name:
+          description: sharedcontent
+          type: creativework
+        description:
+          description: A CreativeWork such as an image, video, or audio clip shared
+            as part of this posting.
+          type: creativework
+      - name:
+          description: sourceorganization
+          type: organization
+        description:
+          description: The Organization on whose behalf the creator was working.
+          type: organization
+      - name:
+          description: text
+          type: text
+        description:
+          description: The textual content of this CreativeWork.
+          type: text
+      - name:
+          description: thumbnailurl
+          type: url
+        description:
+          description: A thumbnail image relevant to the Thing.
+          type: url
+      - name:
+          description: timerequired
+          type: duration
+        description:
+          description: Approximate or typical time it takes to work with or through
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
+          type: duration
+      - name:
+          description: translator
+          type: person or  organization
+        description:
+          description: Organization or person who adapts a creative work to different
+            languages, regional differences and technical requirements of a target market.
+          type: person or  organization
+      - name:
+          description: typicalagerange
+          type: text
+        description:
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: version
+          type: number
+        description:
+          description: The version of the CreativeWork embodied by a specified resource.
+          type: number
+      - name:
+          description: video
+          type: videoobject
+        description:
+          description: An embedded video object.
+          type: videoobject
+      - name:
+          description: wordcount
+          type: integer
+        description:
+          description: The number of words in the text of the Article.
+          type: integer
+      - name:
+          description: workexample
+          type: creativework
+        description:
+          description: 'Example/instance/realization/derivation of the concept of this
+            creative work. eg. The paperback edition, first edition, or eBook. Inverse
+            property: exampleOfWork.'
+          type: creativework
+    SoftwareApplication:
+      properties:
+      - name:
+          description: about
+          type: thing
+        description:
+          description: The subject matter of the content.
+          type: thing
+      - name:
+          description: accessibilityapi
+          type: text
+        description:
+          description: Indicates that the resource is compatible with the referenced
+            accessibility API (WebSchemas wiki lists possible values).
+          type: text
+      - name:
+          description: accessibilitycontrol
+          type: text
+        description:
+          description: Identifies input methods that are sufficient to fully control
+            the described resource (WebSchemas wiki lists possible values).
+          type: text
+      - name:
+          description: accessibilityfeature
+          type: text
+        description:
+          description: Content features of the resource, such as accessible media, alternatives
+            and supported enhancements for accessibility (WebSchemas wiki lists possible
+            values).
+          type: text
+      - name:
+          description: accessibilityhazard
+          type: text
+        description:
+          description: A characteristic of the described resource that is physiologically
+            dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki
+            lists possible values).
+          type: text
+      - name:
+          description: accountableperson
+          type: person
+        description:
+          description: Specifies the Person that is legally accountable for the CreativeWork.
+          type: person
+      - name:
+          description: actionapplication
+          type: entrypoint
+        description:
+          description: An application that can complete the request.  Supersedes application.
+          type: entrypoint
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: aggregaterating
+          type: aggregaterating
+        description:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: alternativeheadline
+          type: text
+        description:
+          description: A secondary title of the CreativeWork.
+          type: text
+      - name:
+          description: applicationcategory
+          type: url or  text
+        description:
+          description: Type of software application, e.g. \"Game, Multimedia\".
+          type: url or  text
+      - name:
+          description: applicationsubcategory
+          type: url or  text
+        description:
+          description: Subcategory of the application, e.g. \"Arcade Game\".
+          type: url or  text
+      - name:
+          description: applicationsuite
+          type: text
+        description:
+          description: The name of the application suite to which the application belongs
+            (e.g. Excel belongs to Office).
+          type: text
+      - name:
+          description: associatedmedia
+          type: mediaobject
+        description:
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for encoding.
+          type: mediaobject
+      - name:
+          description: audience
+          type: audience
+        description:
+          description: An intended audience, i.e. a group for whom something was created.
+            Supersedes serviceAudience.
+          type: audience
+      - name:
+          description: audio
+          type: audioobject
+        description:
+          description: An embedded audio object.
+          type: audioobject
+      - name:
+          description: author
+          type: organization or  person
+        description:
+          description: The author of this content. Please note that author is special
+            in that HTML 5 provides a special mechanism for indicating authorship via
+            the rel tag. That is equivalent to this and may be used interchangeably.
+          type: organization or  person
+      - name:
+          description: availableondevice
+          type: text
+        description:
+          description: Device required to run the application. Used in cases where a
+            specific make/model is required to run the application. Supersedes device.
+          type: text
+      - name:
+          description: award
+          type: text
+        description:
+          description: An award won by or for this item. Supersedes awards.
+          type: text
+      - name:
+          description: character
+          type: person
+        description:
+          description: Fictional person connected with a creative work.
+          type: person
+      - name:
+          description: citation
+          type: creativework or  text
+        description:
+          description: A citation or reference to another creative work, such as another
+            publication, web page, scholarly article, etc.
+          type: creativework or  text
+      - name:
+          description: comment
+          type: comment
+        description:
+          description: Comments, typically from users.
+          type: comment
+      - name:
+          description: commentcount
+          type: integer
+        description:
+          description: The number of comments this CreativeWork (e.g. Article, Question
+            or Answer) has received. This is most applicable to works published in Web
+            sites with commenting system; additional comments may exist elsewhere.
+          type: integer
+      - name:
+          description: contentlocation
+          type: place
+        description:
+          description: The location depicted or described in the content. For example,
+            the location in a photograph or painting.
+          type: place
+      - name:
+          description: contentrating
+          type: text
+        description:
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
+          type: text
+      - name:
+          description: contributor
+          type: organization or  person
+        description:
+          description: A secondary contributor to the CreativeWork.
+          type: organization or  person
+      - name:
+          description: copyrightholder
+          type: organization or  person
+        description:
+          description: The party holding the legal copyright to the CreativeWork.
+          type: organization or  person
+      - name:
+          description: copyrightyear
+          type: number
+        description:
+          description: The year during which the claimed copyright for the CreativeWork
+            was first asserted.
+          type: number
+      - name:
+          description: countriesnotsupported
+          type: text
+        description:
+          description: Countries for which the application is not supported. You can
+            also provide the two-letter ISO 3166-1 alpha-2 country code.
+          type: text
+      - name:
+          description: countriessupported
+          type: text
+        description:
+          description: Countries for which the application is supported. You can also
+            provide the two-letter ISO 3166-1 alpha-2 country code.
+          type: text
+      - name:
+          description: creator
+          type: organization or  person
+        description:
+          description: The creator/author of this CreativeWork. This is the same as
+            the Author property for CreativeWork.
+          type: organization or  person
+      - name:
+          description: datecreated
+          type: date or  datetime
+        description:
+          description: The date on which the CreativeWork was created or the item was
+            added to a DataFeed.
+          type: date or  datetime
+      - name:
+          description: datemodified
+          type: date or  datetime
+        description:
+          description: The date on which the CreativeWork was most recently modified
+            or when the item\'s entry was modified within a DataFeed.
+          type: date or  datetime
+      - name:
+          description: datepublished
+          type: date
+        description:
+          description: Date of first broadcast/publication.
+          type: date
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: discussionurl
+          type: url
+        description:
+          description: A link to the page containing the comments of the CreativeWork.
+          type: url
+      - name:
+          description: downloadurl
+          type: url
+        description:
+          description: If the file can be downloaded, URL to download the binary.
+          type: url
+      - name:
+          description: editor
+          type: person
+        description:
+          description: Specifies the Person who edited the CreativeWork.
+          type: person
+      - name:
+          description: educationalalignment
+          type: alignmentobject
+        description:
+          description: An alignment to an established educational framework.
+          type: alignmentobject
+      - name:
+          description: educationaluse
+          type: text
+        description:
+          description: The purpose of a work in the context of education; for example,
+            \'assignment\', \'group work\'.
+          type: text
+      - name:
+          description: encoding
+          type: mediaobject
+        description:
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for associatedMedia. Supersedes encodings.
+          type: mediaobject
+      - name:
+          description: exampleofwork
+          type: creativework
+        description:
+          description: 'A creative work that this work is an example/instance/realization/derivation
+            of. Inverse property: workExample.'
+          type: creativework
+      - name:
+          description: featurelist
+          type: url or  text
+        description:
+          description: Features or modules provided by this application (and possibly
+            required by other applications).
+          type: url or  text
+      - name:
+          description: fileformat
+          type: text
+        description:
+          description: Media type (aka MIME format, see IANA site) of the content e.g.
+            application/zip of a SoftwareApplication binary. In cases where a CreativeWork
+            has several media type representations, \'encoding\' can be used to indicate
+            each MediaObject alongside particular fileFormat information.
+          type: text
+      - name:
+          description: filesize
+          type: text
+        description:
+          description: Size of the application / package (e.g. 18MB). In the absence
+            of a unit (MB, KB etc.), KB will be assumed.
+          type: text
+      - name:
+          description: genre
+          type: url or  text
+        description:
+          description: Genre of the creative work or group.
+          type: url or  text
+      - name:
+          description: haspart
+          type: creativework
+        description:
+          description: 'Indicates a CreativeWork that is (in some sense) a part of this
+            CreativeWork. Inverse property: isPartOf.'
+          type: creativework
+      - name:
+          description: headline
+          type: text
+        description:
+          description: Headline of the article.
+          type: text
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: inlanguage
+          type: language or  text
+        description:
+          description: The language of the content or performance or used in an action.
+            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
+            language.
+          type: language or  text
+      - name:
+          description: installurl
+          type: url
+        description:
+          description: URL at which the app may be installed, if different from the
+            URL of the item.
+          type: url
+      - name:
+          description: interactionservice
+          type: interactioncounter
+        description:
+          description: 'The WebSite or SoftwareApplication where the interactions took
+            place. '
+          type: interactioncounter
+      - name:
+          description: interactionstatistic
+          type: interactioncounter
+        description:
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication. The most specific child type of InteractionCounter
+            should be used. Supersedes interactionCount.
+          type: interactioncounter
+      - name:
+          description: interactivitytype
+          type: text
+        description:
+          description: The predominant mode of learning supported by the learning resource.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
+          type: text
+      - name:
+          description: isbasedonurl
+          type: url
+        description:
+          description: A resource that was used in the creation of this resource. This
+            term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+          type: url
+      - name:
+          description: isfamilyfriendly
+          type: boolean
+        description:
+          description: Indicates whether this content is family friendly.
+          type: boolean
+      - name:
+          description: ispartof
+          type: creativework
+        description:
+          description: 'Indicates a CreativeWork that this CreativeWork is (in some
+            sense) part of. Inverse property: hasPart.'
+          type: creativework
+      - name:
+          description: keywords
+          type: text
+        description:
+          description: Keywords or tags used to describe this content. Multiple entries
+            in a keywords list are typically delimited by commas.
+          type: text
+      - name:
+          description: learningresourcetype
+          type: text
+        description:
+          description: The predominant type or kind characterizing the learning resource.
+            For example, \'presentation\', \'handout\'.
+          type: text
+      - name:
+          description: license
+          type: url or  creativework
+        description:
+          description: A license document that applies to this content, typically indicated
+            by URL.
+          type: url or  creativework
+      - name:
+          description: locationcreated
+          type: place
+        description:
+          description: The location where the CreativeWork was created, which may not
+            be the same as the location depicted in the CreativeWork.
+          type: place
+      - name:
+          description: mainentity
+          type: thing
+        description:
+          description: 'Indicates the primary entity described in some page or other
+            CreativeWork. Inverse property: mainEntityOfPage.'
+          type: thing
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: memoryrequirements
+          type: url or  text
+        description:
+          description: Minimum memory requirements.
+          type: url or  text
+      - name:
+          description: mentions
+          type: thing
+        description:
+          description: Indicates that the CreativeWork contains a reference to, but
+            is not necessarily about a concept.
+          type: thing
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: offers
+          type: offer
+        description:
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          type: offer
+      - name:
+          description: operatingsystem
+          type: text
+        description:
+          description: Operating systems supported (Windows 7, OSX 10.6, Android 1.6).
+          type: text
+      - name:
+          description: permissions
+          type: text
+        description:
+          description: Permission(s) required to run the app (for example, a mobile
+            app may require full internet access or may run only on wifi).
+          type: text
+      - name:
+          description: position
+          type: integer or  text
+        description:
+          description: The position of an item in a series or sequence of items.
+          type: integer or  text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: processorrequirements
+          type: text
+        description:
+          description: Processor architecture required to run the application (e.g.
+            IA64).
+          type: text
+      - name:
+          description: producer
+          type: organization or  person
+        description:
+          description: The person or organization who produced the work (e.g. music
+            album, movie, tv/radio series etc.).
+          type: organization or  person
+      - name:
+          description: provider
+          type: organization or  person
+        description:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: organization or  person
+      - name:
+          description: publication
+          type: publicationevent
+        description:
+          description: A publication event associated with the item.
+          type: publicationevent
+      - name:
+          description: publisher
+          type: organization or  person
+        description:
+          description: The publisher of the creative work.
+          type: organization or  person
+      - name:
+          description: publishingprinciples
+          type: url
+        description:
+          description: Link to page describing the editorial principles of the organization
+            primarily responsible for the creation of the CreativeWork.
+          type: url
+      - name:
+          description: recordedat
+          type: event
+        description:
+          description: 'The Event where the CreativeWork was recorded. The CreativeWork
+            may capture all or part of the event. Inverse property: recordedIn.'
+          type: event
+      - name:
+          description: releasedevent
+          type: publicationevent
+        description:
+          description: The place and time the release was issued, expressed as a PublicationEvent.
+          type: publicationevent
+      - name:
+          description: releasenotes
+          type: url or  text
+        description:
+          description: Description of what changed in this version.
+          type: url or  text
+      - name:
+          description: review
+          type: review
+        description:
+          description: A review of the item. Supersedes reviews.
+          type: review
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: schemaversion
+          type: url or  text
+        description:
+          description: 'Indicates (by URL or string) a particular version of a schema
+            used in some CreativeWork. For example, a document could declare a schemaVersion
+            using a URL such as http://schema.org/version/2.0/ if precise indication
+            of schema version was required by some application. '
+          type: url or  text
+      - name:
+          description: screenshot
+          type: url or  imageobject
+        description:
+          description: A link to a screenshot image of the app.
+          type: url or  imageobject
+      - name:
+          description: softwareaddon
+          type: softwareapplication
+        description:
+          description: Additional content for a software application.
+          type: softwareapplication
+      - name:
+          description: softwarehelp
+          type: creativework
+        description:
+          description: Software application help.
+          type: creativework
+      - name:
+          description: softwarerequirements
+          type: url or  text
+        description:
+          description: 'Component dependency requirements for application. This includes
+            runtime environments and shared libraries that are not included in the application
+            distribution package, but required to run the application (Examples: DirectX,
+            Java or .NET runtime). Supersedes requirements.'
+          type: url or  text
+      - name:
+          description: softwareversion
+          type: text
+        description:
+          description: Version of the software instance.
+          type: text
+      - name:
+          description: sourceorganization
+          type: organization
+        description:
+          description: The Organization on whose behalf the creator was working.
+          type: organization
+      - name:
+          description: storagerequirements
+          type: url or  text
+        description:
+          description: Storage requirements (free space required).
+          type: url or  text
+      - name:
+          description: supportingdata
+          type: datafeed
+        description:
+          description: Supporting data for a SoftwareApplication.
+          type: datafeed
+      - name:
+          description: targetproduct
+          type: softwaresourcecode
+        description:
+          description: 'Target Operating System / Product to which the code applies.  If
+            applies to several versions, just the product name can be used. '
+          type: softwaresourcecode
+      - name:
+          description: text
+          type: text
+        description:
+          description: The textual content of this CreativeWork.
+          type: text
+      - name:
+          description: thumbnailurl
+          type: url
+        description:
+          description: A thumbnail image relevant to the Thing.
+          type: url
+      - name:
+          description: timerequired
+          type: duration
+        description:
+          description: Approximate or typical time it takes to work with or through
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
+          type: duration
+      - name:
+          description: translator
+          type: organization or  person
+        description:
+          description: Organization or person who adapts a creative work to different
+            languages, regional differences and technical requirements of a target market.
+          type: organization or  person
+      - name:
+          description: typicalagerange
+          type: text
+        description:
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: version
+          type: number
+        description:
+          description: The version of the CreativeWork embodied by a specified resource.
+          type: number
+      - name:
+          description: video
+          type: videoobject
+        description:
+          description: An embedded video object.
+          type: videoobject
+      - name:
+          description: workexample
+          type: creativework
+        description:
+          description: 'Example/instance/realization/derivation of the concept of this
+            creative work. eg. The paperback edition, first edition, or eBook. Inverse
+            property: exampleOfWork.'
+          type: creativework
+    SoftwareSourceCode:
+      properties:
+      - name:
+          description: about
+          type: thing
+        description:
+          description: The subject matter of the content.
+          type: thing
+      - name:
+          description: accessibilityapi
+          type: text
+        description:
+          description: Indicates that the resource is compatible with the referenced
+            accessibility API (WebSchemas wiki lists possible values).
+          type: text
+      - name:
+          description: accessibilitycontrol
+          type: text
+        description:
+          description: Identifies input methods that are sufficient to fully control
+            the described resource (WebSchemas wiki lists possible values).
+          type: text
+      - name:
+          description: accessibilityfeature
+          type: text
+        description:
+          description: Content features of the resource, such as accessible media, alternatives
+            and supported enhancements for accessibility (WebSchemas wiki lists possible
+            values).
+          type: text
+      - name:
+          description: accessibilityhazard
+          type: text
+        description:
+          description: A characteristic of the described resource that is physiologically
+            dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki
+            lists possible values).
+          type: text
+      - name:
+          description: accountableperson
+          type: person
+        description:
+          description: Specifies the Person that is legally accountable for the CreativeWork.
+          type: person
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: aggregaterating
+          type: aggregaterating
+        description:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: alternativeheadline
+          type: text
+        description:
+          description: A secondary title of the CreativeWork.
+          type: text
+      - name:
+          description: associatedmedia
+          type: mediaobject
+        description:
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for encoding.
+          type: mediaobject
+      - name:
+          description: audience
+          type: audience
+        description:
+          description: An intended audience, i.e. a group for whom something was created.
+            Supersedes serviceAudience.
+          type: audience
+      - name:
+          description: audio
+          type: audioobject
+        description:
+          description: An embedded audio object.
+          type: audioobject
+      - name:
+          description: author
+          type: organization or  person
+        description:
+          description: The author of this content. Please note that author is special
+            in that HTML 5 provides a special mechanism for indicating authorship via
+            the rel tag. That is equivalent to this and may be used interchangeably.
+          type: organization or  person
+      - name:
+          description: award
+          type: text
+        description:
+          description: An award won by or for this item. Supersedes awards.
+          type: text
+      - name:
+          description: character
+          type: person
+        description:
+          description: Fictional person connected with a creative work.
+          type: person
+      - name:
+          description: citation
+          type: creativework or  text
+        description:
+          description: A citation or reference to another creative work, such as another
+            publication, web page, scholarly article, etc.
+          type: creativework or  text
+      - name:
+          description: coderepository
+          type: url
+        description:
+          description: Link to the repository where the un-compiled, human readable
+            code and related code is located (SVN, github, CodePlex).
+          type: url
+      - name:
+          description: codesampletype
+          type: text
+        description:
+          description: 'What type of code sample: full (compile ready) solution, code
+            snippet, inline code, scripts, template. Supersedes sampleType.'
+          type: text
+      - name:
+          description: comment
+          type: comment
+        description:
+          description: Comments, typically from users.
+          type: comment
+      - name:
+          description: commentcount
+          type: integer
+        description:
+          description: The number of comments this CreativeWork (e.g. Article, Question
+            or Answer) has received. This is most applicable to works published in Web
+            sites with commenting system; additional comments may exist elsewhere.
+          type: integer
+      - name:
+          description: contentlocation
+          type: place
+        description:
+          description: The location depicted or described in the content. For example,
+            the location in a photograph or painting.
+          type: place
+      - name:
+          description: contentrating
+          type: text
+        description:
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
+          type: text
+      - name:
+          description: contributor
+          type: organization or  person
+        description:
+          description: A secondary contributor to the CreativeWork.
+          type: organization or  person
+      - name:
+          description: copyrightholder
+          type: organization or  person
+        description:
+          description: The party holding the legal copyright to the CreativeWork.
+          type: organization or  person
+      - name:
+          description: copyrightyear
+          type: number
+        description:
+          description: The year during which the claimed copyright for the CreativeWork
+            was first asserted.
+          type: number
+      - name:
+          description: creator
+          type: organization or  person
+        description:
+          description: The creator/author of this CreativeWork. This is the same as
+            the Author property for CreativeWork.
+          type: organization or  person
+      - name:
+          description: datecreated
+          type: date or  datetime
+        description:
+          description: The date on which the CreativeWork was created or the item was
+            added to a DataFeed.
+          type: date or  datetime
+      - name:
+          description: datemodified
+          type: date or  datetime
+        description:
+          description: The date on which the CreativeWork was most recently modified
+            or when the item\'s entry was modified within a DataFeed.
+          type: date or  datetime
+      - name:
+          description: datepublished
+          type: date
+        description:
+          description: Date of first broadcast/publication.
+          type: date
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: discussionurl
+          type: url
+        description:
+          description: A link to the page containing the comments of the CreativeWork.
+          type: url
+      - name:
+          description: editor
+          type: person
+        description:
+          description: Specifies the Person who edited the CreativeWork.
+          type: person
+      - name:
+          description: educationalalignment
+          type: alignmentobject
+        description:
+          description: An alignment to an established educational framework.
+          type: alignmentobject
+      - name:
+          description: educationaluse
+          type: text
+        description:
+          description: The purpose of a work in the context of education; for example,
+            \'assignment\', \'group work\'.
+          type: text
+      - name:
+          description: encoding
+          type: mediaobject
+        description:
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for associatedMedia. Supersedes encodings.
+          type: mediaobject
+      - name:
+          description: exampleofwork
+          type: creativework
+        description:
+          description: 'A creative work that this work is an example/instance/realization/derivation
+            of. Inverse property: workExample.'
+          type: creativework
+      - name:
+          description: fileformat
+          type: text
+        description:
+          description: Media type (aka MIME format, see IANA site) of the content e.g.
+            application/zip of a SoftwareApplication binary. In cases where a CreativeWork
+            has several media type representations, \'encoding\' can be used to indicate
+            each MediaObject alongside particular fileFormat information.
+          type: text
+      - name:
+          description: genre
+          type: url or  text
+        description:
+          description: Genre of the creative work or group.
+          type: url or  text
+      - name:
+          description: haspart
+          type: creativework
+        description:
+          description: 'Indicates a CreativeWork that is (in some sense) a part of this
+            CreativeWork. Inverse property: isPartOf.'
+          type: creativework
+      - name:
+          description: headline
+          type: text
+        description:
+          description: Headline of the article.
+          type: text
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: inlanguage
+          type: language or  text
+        description:
+          description: The language of the content or performance or used in an action.
+            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
+            language.
+          type: language or  text
+      - name:
+          description: interactionstatistic
+          type: interactioncounter
+        description:
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication. The most specific child type of InteractionCounter
+            should be used. Supersedes interactionCount.
+          type: interactioncounter
+      - name:
+          description: interactivitytype
+          type: text
+        description:
+          description: The predominant mode of learning supported by the learning resource.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
+          type: text
+      - name:
+          description: isbasedonurl
+          type: url
+        description:
+          description: A resource that was used in the creation of this resource. This
+            term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+          type: url
+      - name:
+          description: isfamilyfriendly
+          type: boolean
+        description:
+          description: Indicates whether this content is family friendly.
+          type: boolean
+      - name:
+          description: ispartof
+          type: creativework
+        description:
+          description: 'Indicates a CreativeWork that this CreativeWork is (in some
+            sense) part of. Inverse property: hasPart.'
+          type: creativework
+      - name:
+          description: keywords
+          type: text
+        description:
+          description: Keywords or tags used to describe this content. Multiple entries
+            in a keywords list are typically delimited by commas.
+          type: text
+      - name:
+          description: learningresourcetype
+          type: text
+        description:
+          description: The predominant type or kind characterizing the learning resource.
+            For example, \'presentation\', \'handout\'.
+          type: text
+      - name:
+          description: license
+          type: url or  creativework
+        description:
+          description: A license document that applies to this content, typically indicated
+            by URL.
+          type: url or  creativework
+      - name:
+          description: locationcreated
+          type: place
+        description:
+          description: The location where the CreativeWork was created, which may not
+            be the same as the location depicted in the CreativeWork.
+          type: place
+      - name:
+          description: mainentity
+          type: thing
+        description:
+          description: 'Indicates the primary entity described in some page or other
+            CreativeWork. Inverse property: mainEntityOfPage.'
+          type: thing
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: mentions
+          type: thing
+        description:
+          description: Indicates that the CreativeWork contains a reference to, but
+            is not necessarily about a concept.
+          type: thing
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: offers
+          type: offer
+        description:
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          type: offer
+      - name:
+          description: position
+          type: integer or  text
+        description:
+          description: The position of an item in a series or sequence of items.
+          type: integer or  text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: producer
+          type: organization or  person
+        description:
+          description: The person or organization who produced the work (e.g. music
+            album, movie, tv/radio series etc.).
+          type: organization or  person
+      - name:
+          description: programminglanguage
+          type: language
+        description:
+          description: The computer programming language.
+          type: language
+      - name:
+          description: provider
+          type: organization or  person
+        description:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: organization or  person
+      - name:
+          description: publication
+          type: publicationevent
+        description:
+          description: A publication event associated with the item.
+          type: publicationevent
+      - name:
+          description: publisher
+          type: organization or  person
+        description:
+          description: The publisher of the creative work.
+          type: organization or  person
+      - name:
+          description: publishingprinciples
+          type: url
+        description:
+          description: Link to page describing the editorial principles of the organization
+            primarily responsible for the creation of the CreativeWork.
+          type: url
+      - name:
+          description: recordedat
+          type: event
+        description:
+          description: 'The Event where the CreativeWork was recorded. The CreativeWork
+            may capture all or part of the event. Inverse property: recordedIn.'
+          type: event
+      - name:
+          description: releasedevent
+          type: publicationevent
+        description:
+          description: The place and time the release was issued, expressed as a PublicationEvent.
+          type: publicationevent
+      - name:
+          description: review
+          type: review
+        description:
+          description: A review of the item. Supersedes reviews.
+          type: review
+      - name:
+          description: runtimeplatform
+          type: text
+        description:
+          description: Runtime platform or script interpreter dependencies (Example
+            - Java v1, Python2.3, .Net Framework 3.0). Supersedes runtime.
+          type: text
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: schemaversion
+          type: url or  text
+        description:
+          description: 'Indicates (by URL or string) a particular version of a schema
+            used in some CreativeWork. For example, a document could declare a schemaVersion
+            using a URL such as http://schema.org/version/2.0/ if precise indication
+            of schema version was required by some application. '
+          type: url or  text
+      - name:
+          description: sourceorganization
+          type: organization
+        description:
+          description: The Organization on whose behalf the creator was working.
+          type: organization
+      - name:
+          description: targetproduct
+          type: softwareapplication
+        description:
+          description: Target Operating System / Product to which the code applies.  If
+            applies to several versions, just the product name can be used.
+          type: softwareapplication
+      - name:
+          description: text
+          type: text
+        description:
+          description: The textual content of this CreativeWork.
+          type: text
+      - name:
+          description: thumbnailurl
+          type: url
+        description:
+          description: A thumbnail image relevant to the Thing.
+          type: url
+      - name:
+          description: timerequired
+          type: duration
+        description:
+          description: Approximate or typical time it takes to work with or through
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
+          type: duration
+      - name:
+          description: translator
+          type: organization or  person
+        description:
+          description: Organization or person who adapts a creative work to different
+            languages, regional differences and technical requirements of a target market.
+          type: organization or  person
+      - name:
+          description: typicalagerange
+          type: text
+        description:
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: version
+          type: number
+        description:
+          description: The version of the CreativeWork embodied by a specified resource.
+          type: number
+      - name:
+          description: video
+          type: videoobject
+        description:
+          description: An embedded video object.
+          type: videoobject
+      - name:
+          description: workexample
+          type: creativework
+        description:
+          description: 'Example/instance/realization/derivation of the concept of this
+            creative work. eg. The paperback edition, first edition, or eBook. Inverse
+            property: exampleOfWork.'
+          type: creativework
+    SomeProducts:
+      properties:
+      - name:
+          description: additionalproperty
+          type: propertyvalue
+        description:
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          type: propertyvalue
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: aggregaterating
+          type: aggregaterating
+        description:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: audience
+          type: audience
+        description:
+          description: An intended audience, i.e. a group for whom something was created.
+            Supersedes serviceAudience.
+          type: audience
+      - name:
+          description: award
+          type: text
+        description:
+          description: An award won by or for this item. Supersedes awards.
+          type: text
+      - name:
+          description: brand
+          type: brand or  organization
+        description:
+          description: The brand(s) associated with a product or service, or the brand(s)
+            maintained by an organization or business person.
+          type: brand or  organization
+      - name:
+          description: category
+          type: physicalactivitycategory or  thing or  text
+        description:
+          description: A category for the item. Greater signs or slashes can be used
+            to informally indicate a category hierarchy.
+          type: physicalactivitycategory or  thing or  text
+      - name:
+          description: color
+          type: text
+        description:
+          description: The color of the product.
+          type: text
+      - name:
+          description: depth
+          type: quantitativevalue or  distance
+        description:
+          description: The depth of the item.
+          type: quantitativevalue or  distance
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: gtin12
+          type: text
+        description:
+          description: The GTIN-12 code of the product, or the product to which the
+            offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed
+            of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify
+            trade items. See GS1 GTIN Summary for more details.
+          type: text
+      - name:
+          description: gtin13
+          type: text
+        description:
+          description: The GTIN-13 code of the product, or the product to which the
+            offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13.
+            Former 12-digit UPC codes can be converted into a GTIN-13 code by simply
+            adding a preceeding zero. See GS1 GTIN Summary for more details.
+          type: text
+      - name:
+          description: gtin14
+          type: text
+        description:
+          description: The GTIN-14 code of the product, or the product to which the
+            offer refers. See GS1 GTIN Summary for more details.
+          type: text
+      - name:
+          description: gtin8
+          type: text
+        description:
+          description: The GTIN-8 code of the product, or the product to which the offer
+            refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See GS1 GTIN
+            Summary for more details.
+          type: text
+      - name:
+          description: height
+          type: quantitativevalue or  distance
+        description:
+          description: The height of the item.
+          type: quantitativevalue or  distance
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: inventorylevel
+          type: quantitativevalue
+        description:
+          description: The current approximate inventory level for the item or items.
+          type: quantitativevalue
+      - name:
+          description: isaccessoryorsparepartfor
+          type: product
+        description:
+          description: A pointer to another product (or multiple products) for which
+            this product is an accessory or spare part.
+          type: product
+      - name:
+          description: isconsumablefor
+          type: product
+        description:
+          description: A pointer to another product (or multiple products) for which
+            this product is a consumable.
+          type: product
+      - name:
+          description: isrelatedto
+          type: product
+        description:
+          description: A pointer to another, somehow related product (or multiple products).
+          type: product
+      - name:
+          description: issimilarto
+          type: product
+        description:
+          description: A pointer to another, functionally similar product (or multiple
+            products).
+          type: product
+      - name:
+          description: itemcondition
+          type: offeritemcondition
+        description:
+          description: A predefined value from OfferItemCondition or a textual description
+            of the condition of the product or service, or the products or services
+            included in the offer.
+          type: offeritemcondition
+      - name:
+          description: logo
+          type: url or  imageobject
+        description:
+          description: An associated logo.
+          type: url or  imageobject
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: manufacturer
+          type: organization
+        description:
+          description: The manufacturer of the product.
+          type: organization
+      - name:
+          description: model
+          type: productmodel or  text
+        description:
+          description: The model of the product. Use with the URL of a ProductModel
+            or a textual representation of the model identifier. The URL of the ProductModel
+            can be from an external source. It is recommended to additionally provide
+            strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.
+          type: productmodel or  text
+      - name:
+          description: mpn
+          type: text
+        description:
+          description: The Manufacturer Part Number (MPN) of the product, or the product
+            to which the offer refers.
+          type: text
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: offers
+          type: offer
+        description:
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          type: offer
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: productid
+          type: text
+        description:
+          description: 'The product identifier, such as ISBN. For example: &lt;meta
+            itemprop=\''productID\'' content=\''isbn:123-456-789\''/&gt;.'
+          type: text
+      - name:
+          description: productiondate
+          type: date
+        description:
+          description: The date of production of the item, e.g. vehicle.
+          type: date
+      - name:
+          description: purchasedate
+          type: date
+        description:
+          description: The date the item e.g. vehicle was purchased by the current owner.
+          type: date
+      - name:
+          description: releasedate
+          type: date
+        description:
+          description: The release date of a product or product model. This can be used
+            to distinguish the exact variant of a product.
+          type: date
+      - name:
+          description: review
+          type: review
+        description:
+          description: A review of the item. Supersedes reviews.
+          type: review
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: sku
+          type: text
+        description:
+          description: The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier
+            for a product or service, or the product to which the offer refers.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: weight
+          type: quantitativevalue
+        description:
+          description: The weight of the product or person.
+          type: quantitativevalue
+      - name:
+          description: width
+          type: quantitativevalue or  distance
+        description:
+          description: The width of the item.
+          type: quantitativevalue or  distance
+    Specialty:
       properties:
       - name:
           description: additionaltype
@@ -509,7 +2637,1316 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: specialty
+          type: webpage
+        description:
+          description: 'One of the domain specialities to which this web page\''s content
+            applies. '
+          type: webpage
+      - name:
+          description: supersededby
+          type: class or  property or  enumeration
+        description:
+          description: Relates a term (i.e. a property, class or enumeration) to one
+            that supersedes it.
+          type: class or  property or  enumeration
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    SportingGoodsStore:
+      properties:
+      - name:
+          description: additionalproperty
+          type: propertyvalue
+        description:
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          type: propertyvalue
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: address
+          type: text or  postaladdress
+        description:
+          description: Physical address of the item.
+          type: text or  postaladdress
+      - name:
+          description: aggregaterating
+          type: aggregaterating
+        description:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: alumni
+          type: person
+        description:
+          description: 'Alumni of an organization. Inverse property: alumniOf.'
+          type: person
+      - name:
+          description: areaserved
+          type: text or  place or  geoshape or  administrativearea
+        description:
+          description: The geographic area where a service or offered item is provided.
+            Supersedes serviceArea.
+          type: text or  place or  geoshape or  administrativearea
+      - name:
+          description: award
+          type: text
+        description:
+          description: An award won by or for this item. Supersedes awards.
+          type: text
+      - name:
+          description: branchcode
+          type: text
+        description:
+          description: 'A short textual code (also called \"store code\") that uniquely
+            identifies a place of business. The code is typically assigned by the parentOrganization
+            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
+            the code \"3047\" is a branchCode for a particular branch.      '
+          type: text
+      - name:
+          description: brand
+          type: brand or  organization
+        description:
+          description: The brand(s) associated with a product or service, or the brand(s)
+            maintained by an organization or business person.
+          type: brand or  organization
+      - name:
+          description: contactpoint
+          type: contactpoint
+        description:
+          description: A contact point for a person or organization. Supersedes contactPoints.
+          type: contactpoint
+      - name:
+          description: containedinplace
+          type: place
+        description:
+          description: 'The basic containment relation between a place and one that
+            contains it. Supersedes containedIn. Inverse property: containsPlace.'
+          type: place
+      - name:
+          description: containsplace
+          type: place
+        description:
+          description: 'The basic containment relation between a place and another that
+            it contains. Inverse property: containsPlace.'
+          type: place
+      - name:
+          description: currenciesaccepted
+          type: text
+        description:
+          description: The currency accepted (in ISO 4217 currency format).
+          type: text
+      - name:
+          description: department
+          type: organization
+        description:
+          description: 'A relationship between an organization and a department of that
+            organization, also described as an organization (allowing different urls,
+            logos, opening hours). For example: a store with a pharmacy, or a bakery
+            with a cafe.'
+          type: organization
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: dissolutiondate
+          type: date
+        description:
+          description: The date that this organization was dissolved.
+          type: date
+      - name:
+          description: duns
+          type: text
+        description:
+          description: The Dun & Bradstreet DUNS number for identifying an organization
+            or business person.
+          type: text
+      - name:
+          description: email
+          type: text
+        description:
+          description: Email address.
+          type: text
+      - name:
+          description: employee
+          type: person
+        description:
+          description: Someone working for this organization. Supersedes employees.
+          type: person
+      - name:
+          description: event
+          type: event
+        description:
+          description: Upcoming or past event associated with this place, organization,
+            or action. Supersedes events.
+          type: event
+      - name:
+          description: faxnumber
+          type: text
+        description:
+          description: The fax number.
+          type: text
+      - name:
+          description: founder
+          type: person
+        description:
+          description: A person who founded this organization. Supersedes founders.
+          type: person
+      - name:
+          description: foundingdate
+          type: date
+        description:
+          description: The date that this organization was founded.
+          type: date
+      - name:
+          description: foundinglocation
+          type: place
+        description:
+          description: The place where the Organization was founded.
+          type: place
+      - name:
+          description: geo
+          type: geocoordinates or  geoshape
+        description:
+          description: The geo coordinates of the place.
+          type: geocoordinates or  geoshape
+      - name:
+          description: globallocationnumber
+          type: text
+        description:
+          description: The Global Location Number (GLN, sometimes also referred to as
+            International Location Number or ILN) of the respective organization, person,
+            or place. The GLN is a 13-digit number used to identify parties and physical
+            locations.
+          type: text
+      - name:
+          description: hasmap
+          type: url or  map
+        description:
+          description: A URL to a map of the place. Supersedes map, maps.
+          type: url or  map
+      - name:
+          description: hasoffercatalog
+          type: offercatalog
+        description:
+          description: Indicates an OfferCatalog listing for this Organization, Person,
+            or Service.
+          type: offercatalog
+      - name:
+          description: haspos
+          type: place
+        description:
+          description: Points-of-Sales operated by the organization or person.
+          type: place
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: isicv4
+          type: text
+        description:
+          description: The International Standard of Industrial Classification of All
+            Economic Activities (ISIC), Revision 4 code for a particular organization,
+            business person, or place.
+          type: text
+      - name:
+          description: legalname
+          type: text
+        description:
+          description: The official name of the organization, e.g. the registered company
+            name.
+          type: text
+      - name:
+          description: location
+          type: text or  place or  postaladdress
+        description:
+          description: The location of for example where the event is happening, an
+            organization is located, or where an action takes place.
+          type: text or  place or  postaladdress
+      - name:
+          description: logo
+          type: url or  imageobject
+        description:
+          description: An associated logo.
+          type: url or  imageobject
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: makesoffer
+          type: offer
+        description:
+          description: 'A pointer to products or services offered by the organization
+            or person. Inverse property: offeredBy.'
+          type: offer
+      - name:
+          description: member
+          type: person or  organization
+        description:
+          description: 'A member of an Organization or a ProgramMembership. Organizations
+            can be members of organizations; ProgramMembership is typically for individuals.
+            Supersedes musicGroupMember, members. Inverse property: memberOf.'
+          type: person or  organization
+      - name:
+          description: memberof
+          type: programmembership or  organization
+        description:
+          description: 'An Organization (or ProgramMembership) to which this Person
+            or Organization belongs. Inverse property: member.'
+          type: programmembership or  organization
+      - name:
+          description: naics
+          type: text
+        description:
+          description: The North American Industry Classification System (NAICS) code
+            for a particular organization or business person.
+          type: text
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: numberofemployees
+          type: quantitativevalue
+        description:
+          description: The number of employees in an organization e.g. business.
+          type: quantitativevalue
+      - name:
+          description: openinghours
+          type: text
+        description:
+          description: 'The opening hours for a business. Opening hours can be specified
+            as a weekly time range, starting with days, then times per day. Multiple
+            days can be listed with commas \'',\'' separating each day. Day or time
+            ranges are specified using a hyphen \''-\''.- Days are specified using the
+            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
+            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
+            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
+            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
+            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
+            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
+          type: text
+      - name:
+          description: openinghoursspecification
+          type: openinghoursspecification
+        description:
+          description: The opening hours of a certain place.
+          type: openinghoursspecification
+      - name:
+          description: owns
+          type: product or  ownershipinfo
+        description:
+          description: Products owned by the organization or person.
+          type: product or  ownershipinfo
+      - name:
+          description: parentorganization
+          type: organization
+        description:
+          description: 'The larger organization that this organization is a branch of,
+            if any. Supersedes branchOf. Inverse property: subOrganization.'
+          type: organization
+      - name:
+          description: paymentaccepted
+          type: text
+        description:
+          description: Cash, credit card, etc.
+          type: text
+      - name:
+          description: photo
+          type: photograph or  imageobject
+        description:
+          description: A photograph of this place. Supersedes photos.
+          type: photograph or  imageobject
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: pricerange
+          type: text
+        description:
+          description: The price range of the business, for example $$$.
+          type: text
+      - name:
+          description: review
+          type: review
+        description:
+          description: A review of the item. Supersedes reviews.
+          type: review
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: seeks
+          type: demand
+        description:
+          description: A pointer to products or services sought by the organization
+            or person (demand).
+          type: demand
+      - name:
+          description: suborganization
+          type: organization
+        description:
+          description: 'A relationship between two organizations where the first includes
+            the second, e.g., as a subsidiary. See also: the more specific \''department\''
+            property. Inverse property: parentOrganization.'
+          type: organization
+      - name:
+          description: taxid
+          type: text
+        description:
+          description: The Tax / Fiscal ID of the organization or person, e.g. the TIN
+            in the US or the CIF/NIF in Spain.
+          type: text
+      - name:
+          description: telephone
+          type: text
+        description:
+          description: The telephone number.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: vatid
+          type: text
+        description:
+          description: The Value-added Tax ID of the organization or person.
+          type: text
+    SportsActivityLocation:
+      properties:
+      - name:
+          description: additionalproperty
+          type: propertyvalue
+        description:
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          type: propertyvalue
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: address
+          type: text or  postaladdress
+        description:
+          description: Physical address of the item.
+          type: text or  postaladdress
+      - name:
+          description: aggregaterating
+          type: aggregaterating
+        description:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: alumni
+          type: person
+        description:
+          description: 'Alumni of an organization. Inverse property: alumniOf.'
+          type: person
+      - name:
+          description: areaserved
+          type: text or  place or  geoshape or  administrativearea
+        description:
+          description: The geographic area where a service or offered item is provided.
+            Supersedes serviceArea.
+          type: text or  place or  geoshape or  administrativearea
+      - name:
+          description: award
+          type: text
+        description:
+          description: An award won by or for this item. Supersedes awards.
+          type: text
+      - name:
+          description: branchcode
+          type: text
+        description:
+          description: 'A short textual code (also called \"store code\") that uniquely
+            identifies a place of business. The code is typically assigned by the parentOrganization
+            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
+            the code \"3047\" is a branchCode for a particular branch.      '
+          type: text
+      - name:
+          description: brand
+          type: brand or  organization
+        description:
+          description: The brand(s) associated with a product or service, or the brand(s)
+            maintained by an organization or business person.
+          type: brand or  organization
+      - name:
+          description: contactpoint
+          type: contactpoint
+        description:
+          description: A contact point for a person or organization. Supersedes contactPoints.
+          type: contactpoint
+      - name:
+          description: containedinplace
+          type: place
+        description:
+          description: 'The basic containment relation between a place and one that
+            contains it. Supersedes containedIn. Inverse property: containsPlace.'
+          type: place
+      - name:
+          description: containsplace
+          type: place
+        description:
+          description: 'The basic containment relation between a place and another that
+            it contains. Inverse property: containsPlace.'
+          type: place
+      - name:
+          description: currenciesaccepted
+          type: text
+        description:
+          description: The currency accepted (in ISO 4217 currency format).
+          type: text
+      - name:
+          description: department
+          type: organization
+        description:
+          description: 'A relationship between an organization and a department of that
+            organization, also described as an organization (allowing different urls,
+            logos, opening hours). For example: a store with a pharmacy, or a bakery
+            with a cafe.'
+          type: organization
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: dissolutiondate
+          type: date
+        description:
+          description: The date that this organization was dissolved.
+          type: date
+      - name:
+          description: duns
+          type: text
+        description:
+          description: The Dun & Bradstreet DUNS number for identifying an organization
+            or business person.
+          type: text
+      - name:
+          description: email
+          type: text
+        description:
+          description: Email address.
+          type: text
+      - name:
+          description: employee
+          type: person
+        description:
+          description: Someone working for this organization. Supersedes employees.
+          type: person
+      - name:
+          description: event
+          type: event
+        description:
+          description: Upcoming or past event associated with this place, organization,
+            or action. Supersedes events.
+          type: event
+      - name:
+          description: faxnumber
+          type: text
+        description:
+          description: The fax number.
+          type: text
+      - name:
+          description: founder
+          type: person
+        description:
+          description: A person who founded this organization. Supersedes founders.
+          type: person
+      - name:
+          description: foundingdate
+          type: date
+        description:
+          description: The date that this organization was founded.
+          type: date
+      - name:
+          description: foundinglocation
+          type: place
+        description:
+          description: The place where the Organization was founded.
+          type: place
+      - name:
+          description: geo
+          type: geocoordinates or  geoshape
+        description:
+          description: The geo coordinates of the place.
+          type: geocoordinates or  geoshape
+      - name:
+          description: globallocationnumber
+          type: text
+        description:
+          description: The Global Location Number (GLN, sometimes also referred to as
+            International Location Number or ILN) of the respective organization, person,
+            or place. The GLN is a 13-digit number used to identify parties and physical
+            locations.
+          type: text
+      - name:
+          description: hasmap
+          type: url or  map
+        description:
+          description: A URL to a map of the place. Supersedes map, maps.
+          type: url or  map
+      - name:
+          description: hasoffercatalog
+          type: offercatalog
+        description:
+          description: Indicates an OfferCatalog listing for this Organization, Person,
+            or Service.
+          type: offercatalog
+      - name:
+          description: haspos
+          type: place
+        description:
+          description: Points-of-Sales operated by the organization or person.
+          type: place
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: isicv4
+          type: text
+        description:
+          description: The International Standard of Industrial Classification of All
+            Economic Activities (ISIC), Revision 4 code for a particular organization,
+            business person, or place.
+          type: text
+      - name:
+          description: legalname
+          type: text
+        description:
+          description: The official name of the organization, e.g. the registered company
+            name.
+          type: text
+      - name:
+          description: location
+          type: text or  place or  postaladdress
+        description:
+          description: The location of for example where the event is happening, an
+            organization is located, or where an action takes place.
+          type: text or  place or  postaladdress
+      - name:
+          description: logo
+          type: url or  imageobject
+        description:
+          description: An associated logo.
+          type: url or  imageobject
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: makesoffer
+          type: offer
+        description:
+          description: 'A pointer to products or services offered by the organization
+            or person. Inverse property: offeredBy.'
+          type: offer
+      - name:
+          description: member
+          type: person or  organization
+        description:
+          description: 'A member of an Organization or a ProgramMembership. Organizations
+            can be members of organizations; ProgramMembership is typically for individuals.
+            Supersedes musicGroupMember, members. Inverse property: memberOf.'
+          type: person or  organization
+      - name:
+          description: memberof
+          type: programmembership or  organization
+        description:
+          description: 'An Organization (or ProgramMembership) to which this Person
+            or Organization belongs. Inverse property: member.'
+          type: programmembership or  organization
+      - name:
+          description: naics
+          type: text
+        description:
+          description: The North American Industry Classification System (NAICS) code
+            for a particular organization or business person.
+          type: text
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: numberofemployees
+          type: quantitativevalue
+        description:
+          description: The number of employees in an organization e.g. business.
+          type: quantitativevalue
+      - name:
+          description: openinghours
+          type: text
+        description:
+          description: 'The opening hours for a business. Opening hours can be specified
+            as a weekly time range, starting with days, then times per day. Multiple
+            days can be listed with commas \'',\'' separating each day. Day or time
+            ranges are specified using a hyphen \''-\''.- Days are specified using the
+            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
+            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
+            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
+            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
+            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
+            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
+          type: text
+      - name:
+          description: openinghoursspecification
+          type: openinghoursspecification
+        description:
+          description: The opening hours of a certain place.
+          type: openinghoursspecification
+      - name:
+          description: owns
+          type: product or  ownershipinfo
+        description:
+          description: Products owned by the organization or person.
+          type: product or  ownershipinfo
+      - name:
+          description: parentorganization
+          type: organization
+        description:
+          description: 'The larger organization that this organization is a branch of,
+            if any. Supersedes branchOf. Inverse property: subOrganization.'
+          type: organization
+      - name:
+          description: paymentaccepted
+          type: text
+        description:
+          description: Cash, credit card, etc.
+          type: text
+      - name:
+          description: photo
+          type: photograph or  imageobject
+        description:
+          description: A photograph of this place. Supersedes photos.
+          type: photograph or  imageobject
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: pricerange
+          type: text
+        description:
+          description: The price range of the business, for example $$$.
+          type: text
+      - name:
+          description: review
+          type: review
+        description:
+          description: A review of the item. Supersedes reviews.
+          type: review
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: seeks
+          type: demand
+        description:
+          description: A pointer to products or services sought by the organization
+            or person (demand).
+          type: demand
+      - name:
+          description: sportsactivitylocation
+          type: exerciseaction
+        description:
+          description: 'A sub property of location. The sports activity location where
+            this action occurred. '
+          type: exerciseaction
+      - name:
+          description: suborganization
+          type: organization
+        description:
+          description: 'A relationship between two organizations where the first includes
+            the second, e.g., as a subsidiary. See also: the more specific \''department\''
+            property. Inverse property: parentOrganization.'
+          type: organization
+      - name:
+          description: taxid
+          type: text
+        description:
+          description: The Tax / Fiscal ID of the organization or person, e.g. the TIN
+            in the US or the CIF/NIF in Spain.
+          type: text
+      - name:
+          description: telephone
+          type: text
+        description:
+          description: The telephone number.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: vatid
+          type: text
+        description:
+          description: The Value-added Tax ID of the organization or person.
+          type: text
+    SportsClub:
+      properties:
+      - name:
+          description: additionalproperty
+          type: propertyvalue
+        description:
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          type: propertyvalue
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: address
+          type: text or  postaladdress
+        description:
+          description: Physical address of the item.
+          type: text or  postaladdress
+      - name:
+          description: aggregaterating
+          type: aggregaterating
+        description:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: alumni
+          type: person
+        description:
+          description: 'Alumni of an organization. Inverse property: alumniOf.'
+          type: person
+      - name:
+          description: areaserved
+          type: text or  place or  geoshape or  administrativearea
+        description:
+          description: The geographic area where a service or offered item is provided.
+            Supersedes serviceArea.
+          type: text or  place or  geoshape or  administrativearea
+      - name:
+          description: award
+          type: text
+        description:
+          description: An award won by or for this item. Supersedes awards.
+          type: text
+      - name:
+          description: branchcode
+          type: text
+        description:
+          description: 'A short textual code (also called \"store code\") that uniquely
+            identifies a place of business. The code is typically assigned by the parentOrganization
+            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
+            the code \"3047\" is a branchCode for a particular branch.      '
+          type: text
+      - name:
+          description: brand
+          type: brand or  organization
+        description:
+          description: The brand(s) associated with a product or service, or the brand(s)
+            maintained by an organization or business person.
+          type: brand or  organization
+      - name:
+          description: contactpoint
+          type: contactpoint
+        description:
+          description: A contact point for a person or organization. Supersedes contactPoints.
+          type: contactpoint
+      - name:
+          description: containedinplace
+          type: place
+        description:
+          description: 'The basic containment relation between a place and one that
+            contains it. Supersedes containedIn. Inverse property: containsPlace.'
+          type: place
+      - name:
+          description: containsplace
+          type: place
+        description:
+          description: 'The basic containment relation between a place and another that
+            it contains. Inverse property: containsPlace.'
+          type: place
+      - name:
+          description: currenciesaccepted
+          type: text
+        description:
+          description: The currency accepted (in ISO 4217 currency format).
+          type: text
+      - name:
+          description: department
+          type: organization
+        description:
+          description: 'A relationship between an organization and a department of that
+            organization, also described as an organization (allowing different urls,
+            logos, opening hours). For example: a store with a pharmacy, or a bakery
+            with a cafe.'
+          type: organization
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: dissolutiondate
+          type: date
+        description:
+          description: The date that this organization was dissolved.
+          type: date
+      - name:
+          description: duns
+          type: text
+        description:
+          description: The Dun & Bradstreet DUNS number for identifying an organization
+            or business person.
+          type: text
+      - name:
+          description: email
+          type: text
+        description:
+          description: Email address.
+          type: text
+      - name:
+          description: employee
+          type: person
+        description:
+          description: Someone working for this organization. Supersedes employees.
+          type: person
+      - name:
+          description: event
+          type: event
+        description:
+          description: Upcoming or past event associated with this place, organization,
+            or action. Supersedes events.
+          type: event
+      - name:
+          description: faxnumber
+          type: text
+        description:
+          description: The fax number.
+          type: text
+      - name:
+          description: founder
+          type: person
+        description:
+          description: A person who founded this organization. Supersedes founders.
+          type: person
+      - name:
+          description: foundingdate
+          type: date
+        description:
+          description: The date that this organization was founded.
+          type: date
+      - name:
+          description: foundinglocation
+          type: place
+        description:
+          description: The place where the Organization was founded.
+          type: place
+      - name:
+          description: geo
+          type: geocoordinates or  geoshape
+        description:
+          description: The geo coordinates of the place.
+          type: geocoordinates or  geoshape
+      - name:
+          description: globallocationnumber
+          type: text
+        description:
+          description: The Global Location Number (GLN, sometimes also referred to as
+            International Location Number or ILN) of the respective organization, person,
+            or place. The GLN is a 13-digit number used to identify parties and physical
+            locations.
+          type: text
+      - name:
+          description: hasmap
+          type: url or  map
+        description:
+          description: A URL to a map of the place. Supersedes map, maps.
+          type: url or  map
+      - name:
+          description: hasoffercatalog
+          type: offercatalog
+        description:
+          description: Indicates an OfferCatalog listing for this Organization, Person,
+            or Service.
+          type: offercatalog
+      - name:
+          description: haspos
+          type: place
+        description:
+          description: Points-of-Sales operated by the organization or person.
+          type: place
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: isicv4
+          type: text
+        description:
+          description: The International Standard of Industrial Classification of All
+            Economic Activities (ISIC), Revision 4 code for a particular organization,
+            business person, or place.
+          type: text
+      - name:
+          description: legalname
+          type: text
+        description:
+          description: The official name of the organization, e.g. the registered company
+            name.
+          type: text
+      - name:
+          description: location
+          type: text or  place or  postaladdress
+        description:
+          description: The location of for example where the event is happening, an
+            organization is located, or where an action takes place.
+          type: text or  place or  postaladdress
+      - name:
+          description: logo
+          type: url or  imageobject
+        description:
+          description: An associated logo.
+          type: url or  imageobject
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: makesoffer
+          type: offer
+        description:
+          description: 'A pointer to products or services offered by the organization
+            or person. Inverse property: offeredBy.'
+          type: offer
+      - name:
+          description: member
+          type: organization or  person
+        description:
+          description: 'A member of an Organization or a ProgramMembership. Organizations
+            can be members of organizations; ProgramMembership is typically for individuals.
+            Supersedes musicGroupMember, members. Inverse property: memberOf.'
+          type: organization or  person
+      - name:
+          description: memberof
+          type: programmembership or  organization
+        description:
+          description: 'An Organization (or ProgramMembership) to which this Person
+            or Organization belongs. Inverse property: member.'
+          type: programmembership or  organization
+      - name:
+          description: naics
+          type: text
+        description:
+          description: The North American Industry Classification System (NAICS) code
+            for a particular organization or business person.
+          type: text
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: numberofemployees
+          type: quantitativevalue
+        description:
+          description: The number of employees in an organization e.g. business.
+          type: quantitativevalue
+      - name:
+          description: openinghours
+          type: text
+        description:
+          description: 'The opening hours for a business. Opening hours can be specified
+            as a weekly time range, starting with days, then times per day. Multiple
+            days can be listed with commas \'',\'' separating each day. Day or time
+            ranges are specified using a hyphen \''-\''.- Days are specified using the
+            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
+            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
+            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
+            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
+            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
+            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
+          type: text
+      - name:
+          description: openinghoursspecification
+          type: openinghoursspecification
+        description:
+          description: The opening hours of a certain place.
+          type: openinghoursspecification
+      - name:
+          description: owns
+          type: product or  ownershipinfo
+        description:
+          description: Products owned by the organization or person.
+          type: product or  ownershipinfo
+      - name:
+          description: parentorganization
+          type: organization
+        description:
+          description: 'The larger organization that this organization is a branch of,
+            if any. Supersedes branchOf. Inverse property: subOrganization.'
+          type: organization
+      - name:
+          description: paymentaccepted
+          type: text
+        description:
+          description: Cash, credit card, etc.
+          type: text
+      - name:
+          description: photo
+          type: photograph or  imageobject
+        description:
+          description: A photograph of this place. Supersedes photos.
+          type: photograph or  imageobject
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: pricerange
+          type: text
+        description:
+          description: The price range of the business, for example $$$.
+          type: text
+      - name:
+          description: review
+          type: review
+        description:
+          description: A review of the item. Supersedes reviews.
+          type: review
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: seeks
+          type: demand
+        description:
+          description: A pointer to products or services sought by the organization
+            or person (demand).
+          type: demand
+      - name:
+          description: suborganization
+          type: organization
+        description:
+          description: 'A relationship between two organizations where the first includes
+            the second, e.g., as a subsidiary. See also: the more specific \''department\''
+            property. Inverse property: parentOrganization.'
+          type: organization
+      - name:
+          description: taxid
+          type: text
+        description:
+          description: The Tax / Fiscal ID of the organization or person, e.g. the TIN
+            in the US or the CIF/NIF in Spain.
+          type: text
+      - name:
+          description: telephone
+          type: text
+        description:
+          description: The telephone number.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: vatid
+          type: text
+        description:
+          description: The Value-added Tax ID of the organization or person.
+          type: text
+    SportsEvent:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -644,7 +4081,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: previousstartdate
@@ -674,7 +4111,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:
@@ -710,7 +4147,7 @@
           description: typicalagerange
           type: text
         description:
-          description: The typical expected age range, e.g. '7-9', '11-'.
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
           type: text
       - name:
           description: url

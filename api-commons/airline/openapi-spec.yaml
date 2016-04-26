@@ -28,7 +28,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/Airline'
         tags:
         - Airline
       post:
@@ -41,7 +41,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -265,7 +265,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: review
@@ -276,7 +276,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -289,7 +289,7 @@
         - name: suborganization
           in: formData
           description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific ''department''
+            the second, e.g., as a subsidiary. See also: the more specific \''department\''
             property. Inverse property: parentOrganization.'
           required: false
           type: organization
@@ -320,7 +320,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/Airline'
         tags:
         - Airline
     /airline/{id}/:
@@ -340,7 +340,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/Airline'
         tags:
         - Airline
       put:
@@ -358,7 +358,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -582,7 +582,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: review
@@ -593,7 +593,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -606,7 +606,7 @@
         - name: suborganization
           in: formData
           description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific ''department''
+            the second, e.g., as a subsidiary. See also: the more specific \''department\''
             property. Inverse property: parentOrganization.'
           required: false
           type: organization
@@ -637,7 +637,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/Airline'
         tags:
         - Airline
       delete:
@@ -656,11 +656,11 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/Airline'
         tags:
         - Airline
   definitions:
-    item:
+    Airline:
       properties:
       - name:
           description: additionaltype
@@ -669,7 +669,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -932,7 +932,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: review
@@ -945,7 +945,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:
@@ -960,7 +960,7 @@
           type: organization
         description:
           description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific ''department''
+            the second, e.g., as a subsidiary. See also: the more specific \''department\''
             property. Inverse property: parentOrganization.'
           type: organization
       - name:

@@ -2,7 +2,7 @@
   info:
     title: Quantity API
     description: Quantities such as distance, time, mass, weight, etc. Particular instances
-      of say Mass are entities like 3 Kg or 4 milligrams.
+      of say Mass are entities like \'3 Kg\' or \'4 milligrams\'.
     termsOfService: http://apievangelist.com/terms-of-service.html
     version: v1
   host: quantity.example.com
@@ -29,7 +29,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/Quantity'
         tags:
         - Quantity
       post:
@@ -42,7 +42,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -78,13 +78,13 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -99,7 +99,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/Quantity'
         tags:
         - Quantity
     /quantity/{id}/:
@@ -119,7 +119,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/Quantity'
         tags:
         - Quantity
       put:
@@ -137,7 +137,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -173,13 +173,13 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -194,7 +194,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/Quantity'
         tags:
         - Quantity
       delete:
@@ -213,11 +213,1081 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/Quantity'
         tags:
         - Quantity
   definitions:
-    item:
+    QAPage:
+      properties:
+      - name:
+          description: about
+          type: thing
+        description:
+          description: The subject matter of the content.
+          type: thing
+      - name:
+          description: accessibilityapi
+          type: text
+        description:
+          description: Indicates that the resource is compatible with the referenced
+            accessibility API (WebSchemas wiki lists possible values).
+          type: text
+      - name:
+          description: accessibilitycontrol
+          type: text
+        description:
+          description: Identifies input methods that are sufficient to fully control
+            the described resource (WebSchemas wiki lists possible values).
+          type: text
+      - name:
+          description: accessibilityfeature
+          type: text
+        description:
+          description: Content features of the resource, such as accessible media, alternatives
+            and supported enhancements for accessibility (WebSchemas wiki lists possible
+            values).
+          type: text
+      - name:
+          description: accessibilityhazard
+          type: text
+        description:
+          description: A characteristic of the described resource that is physiologically
+            dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki
+            lists possible values).
+          type: text
+      - name:
+          description: accountableperson
+          type: person
+        description:
+          description: Specifies the Person that is legally accountable for the CreativeWork.
+          type: person
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: aggregaterating
+          type: aggregaterating
+        description:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: alternativeheadline
+          type: text
+        description:
+          description: A secondary title of the CreativeWork.
+          type: text
+      - name:
+          description: associatedmedia
+          type: mediaobject
+        description:
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for encoding.
+          type: mediaobject
+      - name:
+          description: audience
+          type: audience
+        description:
+          description: An intended audience, i.e. a group for whom something was created.
+            Supersedes serviceAudience.
+          type: audience
+      - name:
+          description: audio
+          type: audioobject
+        description:
+          description: An embedded audio object.
+          type: audioobject
+      - name:
+          description: author
+          type: organization or  person
+        description:
+          description: The author of this content. Please note that author is special
+            in that HTML 5 provides a special mechanism for indicating authorship via
+            the rel tag. That is equivalent to this and may be used interchangeably.
+          type: organization or  person
+      - name:
+          description: award
+          type: text
+        description:
+          description: An award won by or for this item. Supersedes awards.
+          type: text
+      - name:
+          description: breadcrumb
+          type: text or  breadcrumblist
+        description:
+          description: A set of links that can help a user understand and navigate a
+            website hierarchy.
+          type: text or  breadcrumblist
+      - name:
+          description: character
+          type: person
+        description:
+          description: Fictional person connected with a creative work.
+          type: person
+      - name:
+          description: citation
+          type: text or  creativework
+        description:
+          description: A citation or reference to another creative work, such as another
+            publication, web page, scholarly article, etc.
+          type: text or  creativework
+      - name:
+          description: comment
+          type: comment
+        description:
+          description: Comments, typically from users.
+          type: comment
+      - name:
+          description: commentcount
+          type: integer
+        description:
+          description: The number of comments this CreativeWork (e.g. Article, Question
+            or Answer) has received. This is most applicable to works published in Web
+            sites with commenting system; additional comments may exist elsewhere.
+          type: integer
+      - name:
+          description: contentlocation
+          type: place
+        description:
+          description: The location depicted or described in the content. For example,
+            the location in a photograph or painting.
+          type: place
+      - name:
+          description: contentrating
+          type: text
+        description:
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
+          type: text
+      - name:
+          description: contributor
+          type: organization or  person
+        description:
+          description: A secondary contributor to the CreativeWork.
+          type: organization or  person
+      - name:
+          description: copyrightholder
+          type: organization or  person
+        description:
+          description: The party holding the legal copyright to the CreativeWork.
+          type: organization or  person
+      - name:
+          description: copyrightyear
+          type: number
+        description:
+          description: The year during which the claimed copyright for the CreativeWork
+            was first asserted.
+          type: number
+      - name:
+          description: creator
+          type: organization or  person
+        description:
+          description: The creator/author of this CreativeWork. This is the same as
+            the Author property for CreativeWork.
+          type: organization or  person
+      - name:
+          description: datecreated
+          type: datetime or  date
+        description:
+          description: The date on which the CreativeWork was created or the item was
+            added to a DataFeed.
+          type: datetime or  date
+      - name:
+          description: datemodified
+          type: datetime or  date
+        description:
+          description: The date on which the CreativeWork was most recently modified
+            or when the item\'s entry was modified within a DataFeed.
+          type: datetime or  date
+      - name:
+          description: datepublished
+          type: date
+        description:
+          description: Date of first broadcast/publication.
+          type: date
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: discussionurl
+          type: url
+        description:
+          description: A link to the page containing the comments of the CreativeWork.
+          type: url
+      - name:
+          description: editor
+          type: person
+        description:
+          description: Specifies the Person who edited the CreativeWork.
+          type: person
+      - name:
+          description: educationalalignment
+          type: alignmentobject
+        description:
+          description: An alignment to an established educational framework.
+          type: alignmentobject
+      - name:
+          description: educationaluse
+          type: text
+        description:
+          description: The purpose of a work in the context of education; for example,
+            \'assignment\', \'group work\'.
+          type: text
+      - name:
+          description: encoding
+          type: mediaobject
+        description:
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for associatedMedia. Supersedes encodings.
+          type: mediaobject
+      - name:
+          description: exampleofwork
+          type: creativework
+        description:
+          description: 'A creative work that this work is an example/instance/realization/derivation
+            of. Inverse property: workExample.'
+          type: creativework
+      - name:
+          description: fileformat
+          type: text
+        description:
+          description: Media type (aka MIME format, see IANA site) of the content e.g.
+            application/zip of a SoftwareApplication binary. In cases where a CreativeWork
+            has several media type representations, \'encoding\' can be used to indicate
+            each MediaObject alongside particular fileFormat information.
+          type: text
+      - name:
+          description: genre
+          type: text or  url
+        description:
+          description: Genre of the creative work or group.
+          type: text or  url
+      - name:
+          description: haspart
+          type: creativework
+        description:
+          description: 'Indicates a CreativeWork that is (in some sense) a part of this
+            CreativeWork. Inverse property: isPartOf.'
+          type: creativework
+      - name:
+          description: headline
+          type: text
+        description:
+          description: Headline of the article.
+          type: text
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: inlanguage
+          type: text or  language
+        description:
+          description: The language of the content or performance or used in an action.
+            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
+            language.
+          type: text or  language
+      - name:
+          description: interactionstatistic
+          type: interactioncounter
+        description:
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication. The most specific child type of InteractionCounter
+            should be used. Supersedes interactionCount.
+          type: interactioncounter
+      - name:
+          description: interactivitytype
+          type: text
+        description:
+          description: The predominant mode of learning supported by the learning resource.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
+          type: text
+      - name:
+          description: isbasedonurl
+          type: url
+        description:
+          description: A resource that was used in the creation of this resource. This
+            term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+          type: url
+      - name:
+          description: isfamilyfriendly
+          type: boolean
+        description:
+          description: Indicates whether this content is family friendly.
+          type: boolean
+      - name:
+          description: ispartof
+          type: creativework
+        description:
+          description: 'Indicates a CreativeWork that this CreativeWork is (in some
+            sense) part of. Inverse property: hasPart.'
+          type: creativework
+      - name:
+          description: keywords
+          type: text
+        description:
+          description: Keywords or tags used to describe this content. Multiple entries
+            in a keywords list are typically delimited by commas.
+          type: text
+      - name:
+          description: lastreviewed
+          type: date
+        description:
+          description: Date on which the content on this web page was last reviewed
+            for accuracy and/or completeness.
+          type: date
+      - name:
+          description: learningresourcetype
+          type: text
+        description:
+          description: The predominant type or kind characterizing the learning resource.
+            For example, \'presentation\', \'handout\'.
+          type: text
+      - name:
+          description: license
+          type: url or  creativework
+        description:
+          description: A license document that applies to this content, typically indicated
+            by URL.
+          type: url or  creativework
+      - name:
+          description: locationcreated
+          type: place
+        description:
+          description: The location where the CreativeWork was created, which may not
+            be the same as the location depicted in the CreativeWork.
+          type: place
+      - name:
+          description: maincontentofpage
+          type: webpageelement
+        description:
+          description: Indicates if this web page element is the main subject of the
+            page.
+          type: webpageelement
+      - name:
+          description: mainentity
+          type: thing
+        description:
+          description: 'Indicates the primary entity described in some page or other
+            CreativeWork. Inverse property: mainEntityOfPage.'
+          type: thing
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: mentions
+          type: thing
+        description:
+          description: Indicates that the CreativeWork contains a reference to, but
+            is not necessarily about a concept.
+          type: thing
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: offers
+          type: offer
+        description:
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          type: offer
+      - name:
+          description: position
+          type: text or  integer
+        description:
+          description: The position of an item in a series or sequence of items.
+          type: text or  integer
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: primaryimageofpage
+          type: imageobject
+        description:
+          description: Indicates the main image on the page.
+          type: imageobject
+      - name:
+          description: producer
+          type: organization or  person
+        description:
+          description: The person or organization who produced the work (e.g. music
+            album, movie, tv/radio series etc.).
+          type: organization or  person
+      - name:
+          description: provider
+          type: organization or  person
+        description:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: organization or  person
+      - name:
+          description: publication
+          type: publicationevent
+        description:
+          description: A publication event associated with the item.
+          type: publicationevent
+      - name:
+          description: publisher
+          type: organization or  person
+        description:
+          description: The publisher of the creative work.
+          type: organization or  person
+      - name:
+          description: publishingprinciples
+          type: url
+        description:
+          description: Link to page describing the editorial principles of the organization
+            primarily responsible for the creation of the CreativeWork.
+          type: url
+      - name:
+          description: recordedat
+          type: event
+        description:
+          description: 'The Event where the CreativeWork was recorded. The CreativeWork
+            may capture all or part of the event. Inverse property: recordedIn.'
+          type: event
+      - name:
+          description: relatedlink
+          type: url
+        description:
+          description: A link related to this web page, for example to other related
+            web pages.
+          type: url
+      - name:
+          description: releasedevent
+          type: publicationevent
+        description:
+          description: The place and time the release was issued, expressed as a PublicationEvent.
+          type: publicationevent
+      - name:
+          description: review
+          type: review
+        description:
+          description: A review of the item. Supersedes reviews.
+          type: review
+      - name:
+          description: reviewedby
+          type: organization or  person
+        description:
+          description: People or organizations that have reviewed the content on this
+            web page for accuracy and/or completeness.
+          type: organization or  person
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: schemaversion
+          type: text or  url
+        description:
+          description: 'Indicates (by URL or string) a particular version of a schema
+            used in some CreativeWork. For example, a document could declare a schemaVersion
+            using a URL such as http://schema.org/version/2.0/ if precise indication
+            of schema version was required by some application. '
+          type: text or  url
+      - name:
+          description: significantlink
+          type: url
+        description:
+          description: One of the more significant URLs on the page. Typically, these
+            are the non-navigation links that are clicked on the most. Supersedes significantLinks.
+          type: url
+      - name:
+          description: sourceorganization
+          type: organization
+        description:
+          description: The Organization on whose behalf the creator was working.
+          type: organization
+      - name:
+          description: specialty
+          type: specialty
+        description:
+          description: One of the domain specialities to which this web page\'s content
+            applies.
+          type: specialty
+      - name:
+          description: text
+          type: text
+        description:
+          description: The textual content of this CreativeWork.
+          type: text
+      - name:
+          description: thumbnailurl
+          type: url
+        description:
+          description: A thumbnail image relevant to the Thing.
+          type: url
+      - name:
+          description: timerequired
+          type: duration
+        description:
+          description: Approximate or typical time it takes to work with or through
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
+          type: duration
+      - name:
+          description: translator
+          type: organization or  person
+        description:
+          description: Organization or person who adapts a creative work to different
+            languages, regional differences and technical requirements of a target market.
+          type: organization or  person
+      - name:
+          description: typicalagerange
+          type: text
+        description:
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: version
+          type: number
+        description:
+          description: The version of the CreativeWork embodied by a specified resource.
+          type: number
+      - name:
+          description: video
+          type: videoobject
+        description:
+          description: An embedded video object.
+          type: videoobject
+      - name:
+          description: workexample
+          type: creativework
+        description:
+          description: 'Example/instance/realization/derivation of the concept of this
+            creative work. eg. The paperback edition, first edition, or eBook. Inverse
+            property: exampleOfWork.'
+          type: creativework
+    QualitativeValue:
+      properties:
+      - name:
+          description: additionalproperty
+          type: propertyvalue
+        description:
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          type: propertyvalue
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: equal
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is equal to the object.
+          type: qualitativevalue
+      - name:
+          description: fueltype
+          type: enginespecification or vehicle
+        description:
+          description: 'The type of fuel suitable for the engine or engines of the vehicle.
+            If the vehicle has only one engine, this property can be attached directly
+            to the vehicle. '
+          type: enginespecification or vehicle
+      - name:
+          description: greater
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is greater than the object.
+          type: qualitativevalue
+      - name:
+          description: greaterorequal
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is greater than or equal to the object.
+          type: qualitativevalue
+      - name:
+          description: image
+          type: imageobject or  url
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: imageobject or  url
+      - name:
+          description: lesser
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is lesser than the object.
+          type: qualitativevalue
+      - name:
+          description: lesserorequal
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is lesser than or equal to the object.
+          type: qualitativevalue
+      - name:
+          description: lodgingunittype
+          type: lodgingreservation
+        description:
+          description: 'Textual description of the unit type (including suite vs. room,
+            size of bed, etc.). '
+          type: lodgingreservation
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: nonequal
+          type: qualitativevalue
+        description:
+          description: This ordering relation for qualitative values indicates that
+            the subject is not equal to the object.
+          type: qualitativevalue
+      - name:
+          description: passengerprioritystatus
+          type: flightreservation
+        description:
+          description: 'The priority status assigned to a passenger for security or
+            boarding (e.g. FastTrack or Priority). '
+          type: flightreservation
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: seatingtype
+          type: seat
+        description:
+          description: 'The type/class of the seat. '
+          type: seat
+      - name:
+          description: supersededby
+          type: enumeration or  class or  property
+        description:
+          description: Relates a term (i.e. a property, class or enumeration) to one
+            that supersedes it.
+          type: enumeration or  class or  property
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: valuereference
+          type: propertyvalue or  qualitativevalue or  enumeration or  structuredvalue
+            or  quantitativevalue
+        description:
+          description: A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+          type: propertyvalue or  qualitativevalue or  enumeration or  structuredvalue
+            or  quantitativevalue
+      - name:
+          description: vehicletransmission
+          type: vehicle
+        description:
+          description: 'The type of component used for transmitting the power from a
+            rotating power source to the wheels or other relevant component(s) (\"gearbox\"
+            for cars). '
+          type: vehicle
+    QuantitativeValue:
+      properties:
+      - name:
+          description: additionalproperty
+          type: propertyvalue
+        description:
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          type: propertyvalue
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: advancebookingrequirement
+          type: demand or offer
+        description:
+          description: 'The amount of time that is required between accepting the offer
+            and the actual usage of the resource or service. '
+          type: demand or offer
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: cargovolume
+          type: vehicle
+        description:
+          description: 'The available volume for cargo or luggage. For automobiles,
+            this is usually the trunk volume.Typical unit code(s): LTR for liters, FTQ
+            for cubic foot/feetNote: You can use minValue and maxValue to indicate ranges. '
+          type: vehicle
+      - name:
+          description: deliveryleadtime
+          type: demand or offer
+        description:
+          description: 'The typical delay between the receipt of the order and the goods
+            leaving the warehouse. '
+          type: demand or offer
+      - name:
+          description: depth
+          type: visualartwork or product
+        description:
+          description: 'The depth of the item. '
+          type: visualartwork or product
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: durationofwarranty
+          type: warrantypromise
+        description:
+          description: 'The duration of the warranty promise. Common unitCode values
+            are ANN for year, MON for months, or DAY for days. '
+          type: warrantypromise
+      - name:
+          description: eligibleduration
+          type: demand or offer
+        description:
+          description: 'The duration for which the given offer is valid. '
+          type: demand or offer
+      - name:
+          description: eligiblequantity
+          type: demand or offer or pricespecification
+        description:
+          description: 'The interval and unit of measurement of ordering quantities
+            for which the offer or price specification is valid. This allows e.g. specifying
+            that a certain freight charge is valid only for a certain quantity. '
+          type: demand or offer or pricespecification
+      - name:
+          description: fuelconsumption
+          type: vehicle
+        description:
+          description: 'The amount of fuel consumed for traveling a particular distance
+            or temporal duration with the given vehicle (e.g. liters per 100 km).Note
+            1: There are unfortunately no standard unit codes for liters per 100 km.Use
+            unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There
+            are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8
+            liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are
+            reciprocal.Note 3: Often, the absolute value is useful only when related
+            to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You
+            can use valueReference to link the value for the fuel consumption to another
+            value. '
+          type: vehicle
+      - name:
+          description: fuelefficiency
+          type: vehicle
+        description:
+          description: 'The distance traveled per unit of fuel used; most commonly miles
+            per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately
+            no standard unit codes for miles per gallon or kilometers per liter.Use
+            unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There
+            are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8
+            liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are
+            reciprocal.Note 3: Often, the absolute value is useful only when related
+            to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You
+            can use valueReference to link the value for the fuel economy to another
+            value. '
+          type: vehicle
+      - name:
+          description: height
+          type: person or visualartwork or product or mediaobject
+        description:
+          description: 'The height of the item. '
+          type: person or visualartwork or product or mediaobject
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: inventorylevel
+          type: demand or someproducts or offer
+        description:
+          description: 'The current approximate inventory level for the item or items. '
+          type: demand or someproducts or offer
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: maxvalue
+          type: number
+        description:
+          description: The upper value of some characteristic or property.
+          type: number
+      - name:
+          description: mileagefromodometer
+          type: vehicle
+        description:
+          description: 'The total distance travelled by the particular vehicle since
+            its initial production, as read from its odometer.Typical unit code(s):
+            KMT for kilometers, SMI for statute miles '
+          type: vehicle
+      - name:
+          description: minvalue
+          type: number
+        description:
+          description: The lower value of some characteristic or property.
+          type: number
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: numadults
+          type: lodgingreservation
+        description:
+          description: 'The number of adults staying in the unit. '
+          type: lodgingreservation
+      - name:
+          description: numberofaxles
+          type: vehicle
+        description:
+          description: 'The number of axles.Typical unit code(s): C62 '
+          type: vehicle
+      - name:
+          description: numberofdoors
+          type: vehicle
+        description:
+          description: 'The number of doors.Typical unit code(s): C62 '
+          type: vehicle
+      - name:
+          description: numberofemployees
+          type: businessaudience or organization
+        description:
+          description: 'The number of employees in an organization e.g. business. '
+          type: businessaudience or organization
+      - name:
+          description: numberofforwardgears
+          type: vehicle
+        description:
+          description: 'The total number of forward gears available for the transmission
+            system of the vehicle.Typical unit code(s): C62 '
+          type: vehicle
+      - name:
+          description: numberofplayers
+          type: game or videogameseries
+        description:
+          description: 'Indicate how many people can play this game (minimum, maximum,
+            or range). '
+          type: game or videogameseries
+      - name:
+          description: numberofpreviousowners
+          type: vehicle
+        description:
+          description: 'The number of owners of the vehicle, including the current one.Typical
+            unit code(s): C62 '
+          type: vehicle
+      - name:
+          description: numchildren
+          type: lodgingreservation
+        description:
+          description: 'The number of children staying in the unit. '
+          type: lodgingreservation
+      - name:
+          description: partysize
+          type: foodestablishmentreservation or taxireservation
+        description:
+          description: 'Number of people the reservation should accommodate. '
+          type: foodestablishmentreservation or taxireservation
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: unitcode
+          type: text or  url
+        description:
+          description: The unit of measurement given using the UN/CEFACT Common Code
+            (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may
+            be used with a prefix followed by a colon.
+          type: text or  url
+      - name:
+          description: unittext
+          type: text
+        description:
+          description: A string or text indicating the unit of measurement. Useful if
+            you cannot provide a standard unit code forunitCode.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: value
+          type: text or  structuredvalue or  boolean or  number
+        description:
+          description: The value of the quantitative value or property value node. For
+            QuantitativeValue, the recommended type for values is \'Number\'. For PropertyValue,
+            it can be \'Text;\', \'Number\', \'Boolean\', or \'StructuredValue\'.
+          type: text or  structuredvalue or  boolean or  number
+      - name:
+          description: valuereference
+          type: qualitativevalue or  quantitativevalue or  enumeration or  structuredvalue
+            or  propertyvalue
+        description:
+          description: A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+          type: qualitativevalue or  quantitativevalue or  enumeration or  structuredvalue
+            or  propertyvalue
+      - name:
+          description: vehicleseatingcapacity
+          type: vehicle
+        description:
+          description: 'The number of passengers that can be seated in the vehicle,
+            both in terms of the physical space available, and in terms of limitations
+            set by law.Typical unit code(s): C62 for persons. '
+          type: vehicle
+      - name:
+          description: weight
+          type: person or product
+        description:
+          description: 'The weight of the product or person. '
+          type: person or product
+      - name:
+          description: width
+          type: visualartwork or product or mediaobject
+        description:
+          description: 'The width of the item. '
+          type: visualartwork or product or mediaobject
+      - name:
+          description: yearlyrevenue
+          type: businessaudience
+        description:
+          description: 'The size of the business in annual revenue. '
+          type: businessaudience
+      - name:
+          description: yearsinoperation
+          type: businessaudience
+        description:
+          description: 'The age of the business. '
+          type: businessaudience
+    Quantity:
       properties:
       - name:
           description: additionaltype
@@ -226,7 +1296,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -268,14 +1338,14 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: sameas
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:

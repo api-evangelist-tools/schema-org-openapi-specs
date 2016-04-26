@@ -29,7 +29,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Crematorium"
 							}
 						}
 					}
@@ -50,7 +50,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -78,7 +78,7 @@
 				{
 					"name": "branchcode",
 					"in": "formData",
-					"description": "A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.      ",
+					"description": "A short textual code (also called \"store code\") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code \"3047\" is a branchCode for a particular branch.      ",
 					"required": false,
 					"type": "text"
 				},
@@ -176,7 +176,7 @@
 				{
 					"name": "openinghours",
 					"in": "formData",
-					"description": "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.",
+					"description": "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas \',\' separating each day. Day or time ranges are specified using a hyphen \'-\'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.",
 					"required": false,
 					"type": "text"
 				},
@@ -197,7 +197,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -211,7 +211,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -235,7 +235,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Crematorium"
 							}
 						}
 					}
@@ -261,7 +261,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Crematorium"
 							}
 						}
 					}
@@ -289,7 +289,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -317,7 +317,7 @@
 				{
 					"name": "branchcode",
 					"in": "formData",
-					"description": "A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.      ",
+					"description": "A short textual code (also called \"store code\") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code \"3047\" is a branchCode for a particular branch.      ",
 					"required": false,
 					"type": "text"
 				},
@@ -415,7 +415,7 @@
 				{
 					"name": "openinghours",
 					"in": "formData",
-					"description": "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.",
+					"description": "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas \',\' separating each day. Day or time ranges are specified using a hyphen \'-\'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.",
 					"required": false,
 					"type": "text"
 				},
@@ -436,7 +436,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -450,7 +450,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -474,7 +474,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Crematorium"
 							}
 						}
 					}
@@ -498,7 +498,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Crematorium"
 							}
 						}
 					}
@@ -508,7 +508,711 @@
 		}
 	},
 	"definitions": {
-		"item": {
+		"CookAction": {
+			"properties": [{
+				"name": {
+					"description": "actionstatus",
+					"type": "actionstatustype"
+				},
+				"description": {
+					"description": "Indicates the current disposition of the Action.",
+					"type": "actionstatustype"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "agent",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "endtime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "error",
+					"type": "thing"
+				},
+				"description": {
+					"description": "For failed actions, more information on the cause of the failure.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "foodestablishment",
+					"type": "foodestablishment or  place"
+				},
+				"description": {
+					"description": "A sub property of location. The specific food establishment where the action occurred.",
+					"type": "foodestablishment or  place"
+				}
+			},
+			{
+				"name": {
+					"description": "foodevent",
+					"type": "foodevent"
+				},
+				"description": {
+					"description": "A sub property of location. The specific food event where the action occurred.",
+					"type": "foodevent"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "instrument",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "location",
+					"type": "text or  place or  postaladdress"
+				},
+				"description": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "text or  place or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "object",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn\'t). e.g. John read *a book*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "participant",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "recipe",
+					"type": "recipe"
+				},
+				"description": {
+					"description": "A sub property of instrument. The recipe/instructions used to perform the action.",
+					"type": "recipe"
+				}
+			},
+			{
+				"name": {
+					"description": "result",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The result produced in the action. e.g. John wrote *a book*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "starttime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "target",
+					"type": "entrypoint"
+				},
+				"description": {
+					"description": "Indicates a target EntryPoint for an Action.",
+					"type": "entrypoint"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"Corporation": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "address",
+					"type": "text or  postaladdress"
+				},
+				"description": {
+					"description": "Physical address of the item.",
+					"type": "text or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "alumni",
+					"type": "person"
+				},
+				"description": {
+					"description": "Alumni of an organization. Inverse property: alumniOf.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "areaserved",
+					"type": "text or  place or  geoshape or  administrativearea"
+				},
+				"description": {
+					"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+					"type": "text or  place or  geoshape or  administrativearea"
+				}
+			},
+			{
+				"name": {
+					"description": "award",
+					"type": "text"
+				},
+				"description": {
+					"description": "An award won by or for this item. Supersedes awards.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "brand",
+					"type": "brand or  organization"
+				},
+				"description": {
+					"description": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.",
+					"type": "brand or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "contactpoint",
+					"type": "contactpoint"
+				},
+				"description": {
+					"description": "A contact point for a person or organization. Supersedes contactPoints.",
+					"type": "contactpoint"
+				}
+			},
+			{
+				"name": {
+					"description": "department",
+					"type": "organization"
+				},
+				"description": {
+					"description": "A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "dissolutiondate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The date that this organization was dissolved.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "duns",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Dun & Bradstreet DUNS number for identifying an organization or business person.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "email",
+					"type": "text"
+				},
+				"description": {
+					"description": "Email address.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "employee",
+					"type": "person"
+				},
+				"description": {
+					"description": "Someone working for this organization. Supersedes employees.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "event",
+					"type": "event"
+				},
+				"description": {
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "faxnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The fax number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "founder",
+					"type": "person"
+				},
+				"description": {
+					"description": "A person who founded this organization. Supersedes founders.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "foundingdate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The date that this organization was founded.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "foundinglocation",
+					"type": "place"
+				},
+				"description": {
+					"description": "The place where the Organization was founded.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "globallocationnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "hasoffercatalog",
+					"type": "offercatalog"
+				},
+				"description": {
+					"description": "Indicates an OfferCatalog listing for this Organization, Person, or Service.",
+					"type": "offercatalog"
+				}
+			},
+			{
+				"name": {
+					"description": "haspos",
+					"type": "place"
+				},
+				"description": {
+					"description": "Points-of-Sales operated by the organization or person.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "isicv4",
+					"type": "text"
+				},
+				"description": {
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "legalname",
+					"type": "text"
+				},
+				"description": {
+					"description": "The official name of the organization, e.g. the registered company name.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "location",
+					"type": "text or  place or  postaladdress"
+				},
+				"description": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "text or  place or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "logo",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An associated logo.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "makesoffer",
+					"type": "offer"
+				},
+				"description": {
+					"description": "A pointer to products or services offered by the organization or person. Inverse property: offeredBy.",
+					"type": "offer"
+				}
+			},
+			{
+				"name": {
+					"description": "member",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "memberof",
+					"type": "programmembership or  organization"
+				},
+				"description": {
+					"description": "An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member.",
+					"type": "programmembership or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "naics",
+					"type": "text"
+				},
+				"description": {
+					"description": "The North American Industry Classification System (NAICS) code for a particular organization or business person.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "numberofemployees",
+					"type": "quantitativevalue"
+				},
+				"description": {
+					"description": "The number of employees in an organization e.g. business.",
+					"type": "quantitativevalue"
+				}
+			},
+			{
+				"name": {
+					"description": "owns",
+					"type": "product or  ownershipinfo"
+				},
+				"description": {
+					"description": "Products owned by the organization or person.",
+					"type": "product or  ownershipinfo"
+				}
+			},
+			{
+				"name": {
+					"description": "parentorganization",
+					"type": "organization"
+				},
+				"description": {
+					"description": "The larger organization that this organization is a branch of, if any. Supersedes branchOf. Inverse property: subOrganization.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "seeks",
+					"type": "demand"
+				},
+				"description": {
+					"description": "A pointer to products or services sought by the organization or person (demand).",
+					"type": "demand"
+				}
+			},
+			{
+				"name": {
+					"description": "suborganization",
+					"type": "organization"
+				},
+				"description": {
+					"description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific \'department\' property. Inverse property: parentOrganization.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "taxid",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "telephone",
+					"type": "text"
+				},
+				"description": {
+					"description": "The telephone number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "tickersymbol",
+					"type": "text"
+				},
+				"description": {
+					"description": "The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we reccommend using the controlled vocaulary of Market Identifier Codes (MIC) specified in ISO15022.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "vatid",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Value-added Tax ID of the organization or person.",
+					"type": "text"
+				}
+			}]
+		},
+		"Country": {
 			"properties": [{
 				"name": {
 					"description": "additionalproperty",
@@ -525,7 +1229,299 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "address",
+					"type": "text or  postaladdress"
+				},
+				"description": {
+					"description": "Physical address of the item.",
+					"type": "text or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "addresscountry",
+					"type": "geocoordinates or geoshape or postaladdress"
+				},
+				"description": {
+					"description": "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code. ",
+					"type": "geocoordinates or geoshape or postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "branchcode",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short textual code (also called \"store code\") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code \"3047\" is a branchCode for a particular branch.      ",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "containedinplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and one that contains it. Supersedes containedIn. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "containsplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and another that it contains. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "countryoforigin",
+					"type": "movie or tvepisode or tvseason or tvseries"
+				},
+				"description": {
+					"description": "The country of the principal offices of the production company or individual responsible for the movie or program. ",
+					"type": "movie or tvepisode or tvseason or tvseries"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "event",
+					"type": "event"
+				},
+				"description": {
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "faxnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The fax number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "geo",
+					"type": "geocoordinates or  geoshape"
+				},
+				"description": {
+					"description": "The geo coordinates of the place.",
+					"type": "geocoordinates or  geoshape"
+				}
+			},
+			{
+				"name": {
+					"description": "globallocationnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "hasmap",
+					"type": "url or  map"
+				},
+				"description": {
+					"description": "A URL to a map of the place. Supersedes map, maps.",
+					"type": "url or  map"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "isicv4",
+					"type": "text"
+				},
+				"description": {
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "logo",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An associated logo.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "nationality",
+					"type": "person"
+				},
+				"description": {
+					"description": "Nationality of the person. ",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "openinghoursspecification",
+					"type": "openinghoursspecification"
+				},
+				"description": {
+					"description": "The opening hours of a certain place.",
+					"type": "openinghoursspecification"
+				}
+			},
+			{
+				"name": {
+					"description": "photo",
+					"type": "photograph or  imageobject"
+				},
+				"description": {
+					"description": "A photograph of this place. Supersedes photos.",
+					"type": "photograph or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "telephone",
+					"type": "text"
+				},
+				"description": {
+					"description": "The telephone number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"Courthouse": {
+			"properties": [{
+				"name": {
+					"description": "additionalproperty",
+					"type": "propertyvalue"
+				},
+				"description": {
+					"description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+					"type": "propertyvalue"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
 				}
 			},
@@ -565,7 +1561,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.      ",
+					"description": "A short textual code (also called \"store code\") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code \"3047\" is a branchCode for a particular branch.      ",
 					"type": "text"
 				}
 			},
@@ -705,7 +1701,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.",
+					"description": "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas \',\' separating each day. Day or time ranges are specified using a hyphen \'-\'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.",
 					"type": "text"
 				}
 			},
@@ -735,7 +1731,7 @@
 					"type": "action"
 				},
 				"description": {
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
 				}
 			},
@@ -755,7 +1751,3149 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "telephone",
+					"type": "text"
+				},
+				"description": {
+					"description": "The telephone number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"CreateAction": {
+			"properties": [{
+				"name": {
+					"description": "actionstatus",
+					"type": "actionstatustype"
+				},
+				"description": {
+					"description": "Indicates the current disposition of the Action.",
+					"type": "actionstatustype"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "agent",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "endtime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "error",
+					"type": "thing"
+				},
+				"description": {
+					"description": "For failed actions, more information on the cause of the failure.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "instrument",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "location",
+					"type": "text or  place or  postaladdress"
+				},
+				"description": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "text or  place or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "object",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn\'t). e.g. John read *a book*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "participant",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "result",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The result produced in the action. e.g. John wrote *a book*.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "starttime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "target",
+					"type": "entrypoint"
+				},
+				"description": {
+					"description": "Indicates a target EntryPoint for an Action.",
+					"type": "entrypoint"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"CreativeWork": {
+			"properties": [{
+				"name": {
+					"description": "about",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The subject matter of the content.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilityapi",
+					"type": "text"
+				},
+				"description": {
+					"description": "Indicates that the resource is compatible with the referenced accessibility API (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilitycontrol",
+					"type": "text"
+				},
+				"description": {
+					"description": "Identifies input methods that are sufficient to fully control the described resource (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilityfeature",
+					"type": "text"
+				},
+				"description": {
+					"description": "Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilityhazard",
+					"type": "text"
+				},
+				"description": {
+					"description": "A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accountableperson",
+					"type": "person"
+				},
+				"description": {
+					"description": "Specifies the Person that is legally accountable for the CreativeWork.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "alternativeheadline",
+					"type": "text"
+				},
+				"description": {
+					"description": "A secondary title of the CreativeWork.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "associatedmedia",
+					"type": "mediaobject"
+				},
+				"description": {
+					"description": "A media object that encodes this CreativeWork. This property is a synonym for encoding.",
+					"type": "mediaobject"
+				}
+			},
+			{
+				"name": {
+					"description": "audience",
+					"type": "audience"
+				},
+				"description": {
+					"description": "An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
+					"type": "audience"
+				}
+			},
+			{
+				"name": {
+					"description": "audio",
+					"type": "audioobject"
+				},
+				"description": {
+					"description": "An embedded audio object.",
+					"type": "audioobject"
+				}
+			},
+			{
+				"name": {
+					"description": "author",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "award",
+					"type": "text"
+				},
+				"description": {
+					"description": "An award won by or for this item. Supersedes awards.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "character",
+					"type": "person"
+				},
+				"description": {
+					"description": "Fictional person connected with a creative work.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "cheatcode",
+					"type": "videogameseries or videogame"
+				},
+				"description": {
+					"description": "Cheat codes to the game. ",
+					"type": "videogameseries or videogame"
+				}
+			},
+			{
+				"name": {
+					"description": "citation",
+					"type": "creativework or  text"
+				},
+				"description": {
+					"description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+					"type": "creativework or  text"
+				}
+			},
+			{
+				"name": {
+					"description": "comment",
+					"type": "comment"
+				},
+				"description": {
+					"description": "Comments, typically from users.",
+					"type": "comment"
+				}
+			},
+			{
+				"name": {
+					"description": "commentcount",
+					"type": "integer"
+				},
+				"description": {
+					"description": "The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
+					"type": "integer"
+				}
+			},
+			{
+				"name": {
+					"description": "contentlocation",
+					"type": "place"
+				},
+				"description": {
+					"description": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "contentrating",
+					"type": "text"
+				},
+				"description": {
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "contributor",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "A secondary contributor to the CreativeWork.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "copyrightholder",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The party holding the legal copyright to the CreativeWork.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "copyrightyear",
+					"type": "number"
+				},
+				"description": {
+					"description": "The year during which the claimed copyright for the CreativeWork was first asserted.",
+					"type": "number"
+				}
+			},
+			{
+				"name": {
+					"description": "creator",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "datecreated",
+					"type": "date or  datetime"
+				},
+				"description": {
+					"description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+					"type": "date or  datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "datemodified",
+					"type": "date or  datetime"
+				},
+				"description": {
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
+					"type": "date or  datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "datepublished",
+					"type": "date"
+				},
+				"description": {
+					"description": "Date of first broadcast/publication.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "discusses",
+					"type": "usercomments"
+				},
+				"description": {
+					"description": "Specifies the CreativeWork associated with the UserComment. ",
+					"type": "usercomments"
+				}
+			},
+			{
+				"name": {
+					"description": "discussionurl",
+					"type": "url"
+				},
+				"description": {
+					"description": "A link to the page containing the comments of the CreativeWork.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "editor",
+					"type": "person"
+				},
+				"description": {
+					"description": "Specifies the Person who edited the CreativeWork.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "educationalalignment",
+					"type": "alignmentobject"
+				},
+				"description": {
+					"description": "An alignment to an established educational framework.",
+					"type": "alignmentobject"
+				}
+			},
+			{
+				"name": {
+					"description": "educationaluse",
+					"type": "text"
+				},
+				"description": {
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "encodescreativework",
+					"type": "mediaobject"
+				},
+				"description": {
+					"description": "The CreativeWork encoded by this media object. ",
+					"type": "mediaobject"
+				}
+			},
+			{
+				"name": {
+					"description": "encoding",
+					"type": "mediaobject"
+				},
+				"description": {
+					"description": "A media object that encodes this CreativeWork. This property is a synonym for associatedMedia. Supersedes encodings.",
+					"type": "mediaobject"
+				}
+			},
+			{
+				"name": {
+					"description": "exampleofwork",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "A creative work that this work is an example/instance/realization/derivation of. Inverse property: workExample.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "fileformat",
+					"type": "text"
+				},
+				"description": {
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "gametip",
+					"type": "videogame"
+				},
+				"description": {
+					"description": "Links to tips, tactics, etc. ",
+					"type": "videogame"
+				}
+			},
+			{
+				"name": {
+					"description": "genre",
+					"type": "text or  url"
+				},
+				"description": {
+					"description": "Genre of the creative work or group.",
+					"type": "text or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "haspart",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "Indicates a CreativeWork that is (in some sense) a part of this CreativeWork. Inverse property: isPartOf.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "headline",
+					"type": "text"
+				},
+				"description": {
+					"description": "Headline of the article.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "inlanguage",
+					"type": "text or  language"
+				},
+				"description": {
+					"description": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. Supersedes language.",
+					"type": "text or  language"
+				}
+			},
+			{
+				"name": {
+					"description": "interactionstatistic",
+					"type": "interactioncounter"
+				},
+				"description": {
+					"description": "The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used. Supersedes interactionCount.",
+					"type": "interactioncounter"
+				}
+			},
+			{
+				"name": {
+					"description": "interactivitytype",
+					"type": "text"
+				},
+				"description": {
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "isbasedonurl",
+					"type": "url"
+				},
+				"description": {
+					"description": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "isfamilyfriendly",
+					"type": "boolean"
+				},
+				"description": {
+					"description": "Indicates whether this content is family friendly.",
+					"type": "boolean"
+				}
+			},
+			{
+				"name": {
+					"description": "ispartof",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "Indicates a CreativeWork that this CreativeWork is (in some sense) part of. Inverse property: hasPart.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "keywords",
+					"type": "text"
+				},
+				"description": {
+					"description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "learningresourcetype",
+					"type": "text"
+				},
+				"description": {
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "license",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "A license document that applies to this content, typically indicated by URL.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "locationcreated",
+					"type": "place"
+				},
+				"description": {
+					"description": "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "lyrics",
+					"type": "musiccomposition"
+				},
+				"description": {
+					"description": "The words in the song. ",
+					"type": "musiccomposition"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentity",
+					"type": "thing"
+				},
+				"description": {
+					"description": "Indicates the primary entity described in some page or other CreativeWork. Inverse property: mainEntityOfPage.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "mentions",
+					"type": "thing"
+				},
+				"description": {
+					"description": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "offers",
+					"type": "offer"
+				},
+				"description": {
+					"description": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
+					"type": "offer"
+				}
+			},
+			{
+				"name": {
+					"description": "position",
+					"type": "text or  integer"
+				},
+				"description": {
+					"description": "The position of an item in a series or sequence of items.",
+					"type": "text or  integer"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "producer",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "provider",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "publication",
+					"type": "publicationevent"
+				},
+				"description": {
+					"description": "A publication event associated with the item.",
+					"type": "publicationevent"
+				}
+			},
+			{
+				"name": {
+					"description": "publisher",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The publisher of the creative work.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "publishingprinciples",
+					"type": "url"
+				},
+				"description": {
+					"description": "Link to page describing the editorial principles of the organization primarily responsible for the creation of the CreativeWork.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "recordedat",
+					"type": "event"
+				},
+				"description": {
+					"description": "The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event. Inverse property: recordedIn.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "recordedin",
+					"type": "event"
+				},
+				"description": {
+					"description": "The CreativeWork that captured all or part of this Event.  inverse property: recordedAt.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "releasedevent",
+					"type": "publicationevent"
+				},
+				"description": {
+					"description": "The place and time the release was issued, expressed as a PublicationEvent.",
+					"type": "publicationevent"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "schemaversion",
+					"type": "text or  url"
+				},
+				"description": {
+					"description": "Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using a URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. ",
+					"type": "text or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "sharedcontent",
+					"type": "socialmediaposting"
+				},
+				"description": {
+					"description": "A CreativeWork such as an image, video, or audio clip shared as part of this posting. ",
+					"type": "socialmediaposting"
+				}
+			},
+			{
+				"name": {
+					"description": "softwarehelp",
+					"type": "softwareapplication"
+				},
+				"description": {
+					"description": "Software application help. ",
+					"type": "softwareapplication"
+				}
+			},
+			{
+				"name": {
+					"description": "sourceorganization",
+					"type": "organization"
+				},
+				"description": {
+					"description": "The Organization on whose behalf the creator was working.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "text",
+					"type": "text"
+				},
+				"description": {
+					"description": "The textual content of this CreativeWork.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "thumbnailurl",
+					"type": "url"
+				},
+				"description": {
+					"description": "A thumbnail image relevant to the Thing.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "timerequired",
+					"type": "duration"
+				},
+				"description": {
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
+					"type": "duration"
+				}
+			},
+			{
+				"name": {
+					"description": "translator",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "typicalagerange",
+					"type": "text"
+				},
+				"description": {
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "version",
+					"type": "number"
+				},
+				"description": {
+					"description": "The version of the CreativeWork embodied by a specified resource.",
+					"type": "number"
+				}
+			},
+			{
+				"name": {
+					"description": "video",
+					"type": "videoobject"
+				},
+				"description": {
+					"description": "An embedded video object.",
+					"type": "videoobject"
+				}
+			},
+			{
+				"name": {
+					"description": "workexample",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook. Inverse property: exampleOfWork.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "workfeatured",
+					"type": "event"
+				},
+				"description": {
+					"description": "A work featured in some event, e.g. exhibited in an ExhibitionEvent.       Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent). ",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "workperformed",
+					"type": "event"
+				},
+				"description": {
+					"description": "A work performed in some event, for example a play performed in a TheaterEvent. ",
+					"type": "event"
+				}
+			}]
+		},
+		"CreativeWorkSeason": {
+			"properties": [{
+				"name": {
+					"description": "about",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The subject matter of the content.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilityapi",
+					"type": "text"
+				},
+				"description": {
+					"description": "Indicates that the resource is compatible with the referenced accessibility API (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilitycontrol",
+					"type": "text"
+				},
+				"description": {
+					"description": "Identifies input methods that are sufficient to fully control the described resource (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilityfeature",
+					"type": "text"
+				},
+				"description": {
+					"description": "Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilityhazard",
+					"type": "text"
+				},
+				"description": {
+					"description": "A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accountableperson",
+					"type": "person"
+				},
+				"description": {
+					"description": "Specifies the Person that is legally accountable for the CreativeWork.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "actor",
+					"type": "person"
+				},
+				"description": {
+					"description": "An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip. Supersedes actors.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "alternativeheadline",
+					"type": "text"
+				},
+				"description": {
+					"description": "A secondary title of the CreativeWork.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "associatedmedia",
+					"type": "mediaobject"
+				},
+				"description": {
+					"description": "A media object that encodes this CreativeWork. This property is a synonym for encoding.",
+					"type": "mediaobject"
+				}
+			},
+			{
+				"name": {
+					"description": "audience",
+					"type": "audience"
+				},
+				"description": {
+					"description": "An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
+					"type": "audience"
+				}
+			},
+			{
+				"name": {
+					"description": "audio",
+					"type": "audioobject"
+				},
+				"description": {
+					"description": "An embedded audio object.",
+					"type": "audioobject"
+				}
+			},
+			{
+				"name": {
+					"description": "author",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "award",
+					"type": "text"
+				},
+				"description": {
+					"description": "An award won by or for this item. Supersedes awards.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "character",
+					"type": "person"
+				},
+				"description": {
+					"description": "Fictional person connected with a creative work.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "citation",
+					"type": "creativework or  text"
+				},
+				"description": {
+					"description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+					"type": "creativework or  text"
+				}
+			},
+			{
+				"name": {
+					"description": "comment",
+					"type": "comment"
+				},
+				"description": {
+					"description": "Comments, typically from users.",
+					"type": "comment"
+				}
+			},
+			{
+				"name": {
+					"description": "commentcount",
+					"type": "integer"
+				},
+				"description": {
+					"description": "The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
+					"type": "integer"
+				}
+			},
+			{
+				"name": {
+					"description": "containsseason",
+					"type": "videogameseries or radioseries or tvseries"
+				},
+				"description": {
+					"description": "A season that is part of the media series.  Supersedes season.",
+					"type": "videogameseries or radioseries or tvseries"
+				}
+			},
+			{
+				"name": {
+					"description": "contentlocation",
+					"type": "place"
+				},
+				"description": {
+					"description": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "contentrating",
+					"type": "text"
+				},
+				"description": {
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "contributor",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "A secondary contributor to the CreativeWork.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "copyrightholder",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The party holding the legal copyright to the CreativeWork.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "copyrightyear",
+					"type": "number"
+				},
+				"description": {
+					"description": "The year during which the claimed copyright for the CreativeWork was first asserted.",
+					"type": "number"
+				}
+			},
+			{
+				"name": {
+					"description": "creator",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "datecreated",
+					"type": "date or  datetime"
+				},
+				"description": {
+					"description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+					"type": "date or  datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "datemodified",
+					"type": "date or  datetime"
+				},
+				"description": {
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
+					"type": "date or  datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "datepublished",
+					"type": "date"
+				},
+				"description": {
+					"description": "Date of first broadcast/publication.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "director",
+					"type": "person"
+				},
+				"description": {
+					"description": "A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip. Supersedes directors.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "discussionurl",
+					"type": "url"
+				},
+				"description": {
+					"description": "A link to the page containing the comments of the CreativeWork.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "editor",
+					"type": "person"
+				},
+				"description": {
+					"description": "Specifies the Person who edited the CreativeWork.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "educationalalignment",
+					"type": "alignmentobject"
+				},
+				"description": {
+					"description": "An alignment to an established educational framework.",
+					"type": "alignmentobject"
+				}
+			},
+			{
+				"name": {
+					"description": "educationaluse",
+					"type": "text"
+				},
+				"description": {
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "encoding",
+					"type": "mediaobject"
+				},
+				"description": {
+					"description": "A media object that encodes this CreativeWork. This property is a synonym for associatedMedia. Supersedes encodings.",
+					"type": "mediaobject"
+				}
+			},
+			{
+				"name": {
+					"description": "enddate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The end date and time of the item (in ISO 8601 date format).",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "episode",
+					"type": "episode"
+				},
+				"description": {
+					"description": "An episode of a tv, radio or game media within a series or season. Supersedes episodes.",
+					"type": "episode"
+				}
+			},
+			{
+				"name": {
+					"description": "exampleofwork",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "A creative work that this work is an example/instance/realization/derivation of. Inverse property: workExample.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "fileformat",
+					"type": "text"
+				},
+				"description": {
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "genre",
+					"type": "text or  url"
+				},
+				"description": {
+					"description": "Genre of the creative work or group.",
+					"type": "text or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "haspart",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "Indicates a CreativeWork that is (in some sense) a part of this CreativeWork. Inverse property: isPartOf.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "headline",
+					"type": "text"
+				},
+				"description": {
+					"description": "Headline of the article.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "inlanguage",
+					"type": "text or  language"
+				},
+				"description": {
+					"description": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. Supersedes language.",
+					"type": "text or  language"
+				}
+			},
+			{
+				"name": {
+					"description": "interactionstatistic",
+					"type": "interactioncounter"
+				},
+				"description": {
+					"description": "The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used. Supersedes interactionCount.",
+					"type": "interactioncounter"
+				}
+			},
+			{
+				"name": {
+					"description": "interactivitytype",
+					"type": "text"
+				},
+				"description": {
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "isbasedonurl",
+					"type": "url"
+				},
+				"description": {
+					"description": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "isfamilyfriendly",
+					"type": "boolean"
+				},
+				"description": {
+					"description": "Indicates whether this content is family friendly.",
+					"type": "boolean"
+				}
+			},
+			{
+				"name": {
+					"description": "ispartof",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "Indicates a CreativeWork that this CreativeWork is (in some sense) part of. Inverse property: hasPart.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "keywords",
+					"type": "text"
+				},
+				"description": {
+					"description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "learningresourcetype",
+					"type": "text"
+				},
+				"description": {
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "license",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "A license document that applies to this content, typically indicated by URL.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "locationcreated",
+					"type": "place"
+				},
+				"description": {
+					"description": "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentity",
+					"type": "thing"
+				},
+				"description": {
+					"description": "Indicates the primary entity described in some page or other CreativeWork. Inverse property: mainEntityOfPage.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "mentions",
+					"type": "thing"
+				},
+				"description": {
+					"description": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "numberofepisodes",
+					"type": "integer"
+				},
+				"description": {
+					"description": "The number of episodes in this season or series.",
+					"type": "integer"
+				}
+			},
+			{
+				"name": {
+					"description": "offers",
+					"type": "offer"
+				},
+				"description": {
+					"description": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
+					"type": "offer"
+				}
+			},
+			{
+				"name": {
+					"description": "partofseason",
+					"type": "episode or clip"
+				},
+				"description": {
+					"description": "The season to which this episode belongs. ",
+					"type": "episode or clip"
+				}
+			},
+			{
+				"name": {
+					"description": "partofseries",
+					"type": "creativeworkseries"
+				},
+				"description": {
+					"description": "The series to which this episode or season belongs. Supersedes partOfTVSeries.",
+					"type": "creativeworkseries"
+				}
+			},
+			{
+				"name": {
+					"description": "position",
+					"type": "text or  integer"
+				},
+				"description": {
+					"description": "The position of an item in a series or sequence of items.",
+					"type": "text or  integer"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "producer",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "productioncompany",
+					"type": "organization"
+				},
+				"description": {
+					"description": "The production company or studio responsible for the item e.g. series, video game, episode etc.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "provider",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "publication",
+					"type": "publicationevent"
+				},
+				"description": {
+					"description": "A publication event associated with the item.",
+					"type": "publicationevent"
+				}
+			},
+			{
+				"name": {
+					"description": "publisher",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The publisher of the creative work.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "publishingprinciples",
+					"type": "url"
+				},
+				"description": {
+					"description": "Link to page describing the editorial principles of the organization primarily responsible for the creation of the CreativeWork.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "recordedat",
+					"type": "event"
+				},
+				"description": {
+					"description": "The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event. Inverse property: recordedIn.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "releasedevent",
+					"type": "publicationevent"
+				},
+				"description": {
+					"description": "The place and time the release was issued, expressed as a PublicationEvent.",
+					"type": "publicationevent"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "schemaversion",
+					"type": "text or  url"
+				},
+				"description": {
+					"description": "Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using a URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. ",
+					"type": "text or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "seasonnumber",
+					"type": "text or  integer"
+				},
+				"description": {
+					"description": "Position of the season within an ordered group of seasons.",
+					"type": "text or  integer"
+				}
+			},
+			{
+				"name": {
+					"description": "sourceorganization",
+					"type": "organization"
+				},
+				"description": {
+					"description": "The Organization on whose behalf the creator was working.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "startdate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The start date and time of the item (in ISO 8601 date format).",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "text",
+					"type": "text"
+				},
+				"description": {
+					"description": "The textual content of this CreativeWork.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "thumbnailurl",
+					"type": "url"
+				},
+				"description": {
+					"description": "A thumbnail image relevant to the Thing.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "timerequired",
+					"type": "duration"
+				},
+				"description": {
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
+					"type": "duration"
+				}
+			},
+			{
+				"name": {
+					"description": "trailer",
+					"type": "videoobject"
+				},
+				"description": {
+					"description": "The trailer of a movie or tv/radio series, season, episode, etc.",
+					"type": "videoobject"
+				}
+			},
+			{
+				"name": {
+					"description": "translator",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "typicalagerange",
+					"type": "text"
+				},
+				"description": {
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "version",
+					"type": "number"
+				},
+				"description": {
+					"description": "The version of the CreativeWork embodied by a specified resource.",
+					"type": "number"
+				}
+			},
+			{
+				"name": {
+					"description": "video",
+					"type": "videoobject"
+				},
+				"description": {
+					"description": "An embedded video object.",
+					"type": "videoobject"
+				}
+			},
+			{
+				"name": {
+					"description": "workexample",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook. Inverse property: exampleOfWork.",
+					"type": "creativework"
+				}
+			}]
+		},
+		"CreativeWorkSeries": {
+			"properties": [{
+				"name": {
+					"description": "about",
+					"type": "thing"
+				},
+				"description": {
+					"description": "The subject matter of the content.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilityapi",
+					"type": "text"
+				},
+				"description": {
+					"description": "Indicates that the resource is compatible with the referenced accessibility API (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilitycontrol",
+					"type": "text"
+				},
+				"description": {
+					"description": "Identifies input methods that are sufficient to fully control the described resource (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilityfeature",
+					"type": "text"
+				},
+				"description": {
+					"description": "Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accessibilityhazard",
+					"type": "text"
+				},
+				"description": {
+					"description": "A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki lists possible values).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "accountableperson",
+					"type": "person"
+				},
+				"description": {
+					"description": "Specifies the Person that is legally accountable for the CreativeWork.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "alternativeheadline",
+					"type": "text"
+				},
+				"description": {
+					"description": "A secondary title of the CreativeWork.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "associatedmedia",
+					"type": "mediaobject"
+				},
+				"description": {
+					"description": "A media object that encodes this CreativeWork. This property is a synonym for encoding.",
+					"type": "mediaobject"
+				}
+			},
+			{
+				"name": {
+					"description": "audience",
+					"type": "audience"
+				},
+				"description": {
+					"description": "An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
+					"type": "audience"
+				}
+			},
+			{
+				"name": {
+					"description": "audio",
+					"type": "audioobject"
+				},
+				"description": {
+					"description": "An embedded audio object.",
+					"type": "audioobject"
+				}
+			},
+			{
+				"name": {
+					"description": "author",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "award",
+					"type": "text"
+				},
+				"description": {
+					"description": "An award won by or for this item. Supersedes awards.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "character",
+					"type": "person"
+				},
+				"description": {
+					"description": "Fictional person connected with a creative work.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "citation",
+					"type": "text or  creativework"
+				},
+				"description": {
+					"description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+					"type": "text or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "comment",
+					"type": "comment"
+				},
+				"description": {
+					"description": "Comments, typically from users.",
+					"type": "comment"
+				}
+			},
+			{
+				"name": {
+					"description": "commentcount",
+					"type": "integer"
+				},
+				"description": {
+					"description": "The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
+					"type": "integer"
+				}
+			},
+			{
+				"name": {
+					"description": "contentlocation",
+					"type": "place"
+				},
+				"description": {
+					"description": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "contentrating",
+					"type": "text"
+				},
+				"description": {
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "contributor",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "A secondary contributor to the CreativeWork.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "copyrightholder",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "The party holding the legal copyright to the CreativeWork.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "copyrightyear",
+					"type": "number"
+				},
+				"description": {
+					"description": "The year during which the claimed copyright for the CreativeWork was first asserted.",
+					"type": "number"
+				}
+			},
+			{
+				"name": {
+					"description": "creator",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "datecreated",
+					"type": "datetime or  date"
+				},
+				"description": {
+					"description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+					"type": "datetime or  date"
+				}
+			},
+			{
+				"name": {
+					"description": "datemodified",
+					"type": "datetime or  date"
+				},
+				"description": {
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
+					"type": "datetime or  date"
+				}
+			},
+			{
+				"name": {
+					"description": "datepublished",
+					"type": "date"
+				},
+				"description": {
+					"description": "Date of first broadcast/publication.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "discussionurl",
+					"type": "url"
+				},
+				"description": {
+					"description": "A link to the page containing the comments of the CreativeWork.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "editor",
+					"type": "person"
+				},
+				"description": {
+					"description": "Specifies the Person who edited the CreativeWork.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "educationalalignment",
+					"type": "alignmentobject"
+				},
+				"description": {
+					"description": "An alignment to an established educational framework.",
+					"type": "alignmentobject"
+				}
+			},
+			{
+				"name": {
+					"description": "educationaluse",
+					"type": "text"
+				},
+				"description": {
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "encoding",
+					"type": "mediaobject"
+				},
+				"description": {
+					"description": "A media object that encodes this CreativeWork. This property is a synonym for associatedMedia. Supersedes encodings.",
+					"type": "mediaobject"
+				}
+			},
+			{
+				"name": {
+					"description": "enddate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The end date and time of the item (in ISO 8601 date format).",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "exampleofwork",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "A creative work that this work is an example/instance/realization/derivation of. Inverse property: workExample.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "fileformat",
+					"type": "text"
+				},
+				"description": {
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "genre",
+					"type": "text or  url"
+				},
+				"description": {
+					"description": "Genre of the creative work or group.",
+					"type": "text or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "haspart",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "Indicates a CreativeWork that is (in some sense) a part of this CreativeWork. Inverse property: isPartOf.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "headline",
+					"type": "text"
+				},
+				"description": {
+					"description": "Headline of the article.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "inlanguage",
+					"type": "text or  language"
+				},
+				"description": {
+					"description": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. Supersedes language.",
+					"type": "text or  language"
+				}
+			},
+			{
+				"name": {
+					"description": "interactionstatistic",
+					"type": "interactioncounter"
+				},
+				"description": {
+					"description": "The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used. Supersedes interactionCount.",
+					"type": "interactioncounter"
+				}
+			},
+			{
+				"name": {
+					"description": "interactivitytype",
+					"type": "text"
+				},
+				"description": {
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "isbasedonurl",
+					"type": "url"
+				},
+				"description": {
+					"description": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "isfamilyfriendly",
+					"type": "boolean"
+				},
+				"description": {
+					"description": "Indicates whether this content is family friendly.",
+					"type": "boolean"
+				}
+			},
+			{
+				"name": {
+					"description": "ispartof",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "Indicates a CreativeWork that this CreativeWork is (in some sense) part of. Inverse property: hasPart.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "keywords",
+					"type": "text"
+				},
+				"description": {
+					"description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "learningresourcetype",
+					"type": "text"
+				},
+				"description": {
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "license",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "A license document that applies to this content, typically indicated by URL.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "locationcreated",
+					"type": "place"
+				},
+				"description": {
+					"description": "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentity",
+					"type": "thing"
+				},
+				"description": {
+					"description": "Indicates the primary entity described in some page or other CreativeWork. Inverse property: mainEntityOfPage.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "mentions",
+					"type": "thing"
+				},
+				"description": {
+					"description": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+					"type": "thing"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "offers",
+					"type": "offer"
+				},
+				"description": {
+					"description": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
+					"type": "offer"
+				}
+			},
+			{
+				"name": {
+					"description": "partofseries",
+					"type": "creativeworkseason or episode or clip"
+				},
+				"description": {
+					"description": "The series to which this episode or season belongs.  Supersedes partOfTVSeries.",
+					"type": "creativeworkseason or episode or clip"
+				}
+			},
+			{
+				"name": {
+					"description": "position",
+					"type": "text or  integer"
+				},
+				"description": {
+					"description": "The position of an item in a series or sequence of items.",
+					"type": "text or  integer"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "producer",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "provider",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "publication",
+					"type": "publicationevent"
+				},
+				"description": {
+					"description": "A publication event associated with the item.",
+					"type": "publicationevent"
+				}
+			},
+			{
+				"name": {
+					"description": "publisher",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "The publisher of the creative work.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "publishingprinciples",
+					"type": "url"
+				},
+				"description": {
+					"description": "Link to page describing the editorial principles of the organization primarily responsible for the creation of the CreativeWork.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "recordedat",
+					"type": "event"
+				},
+				"description": {
+					"description": "The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event. Inverse property: recordedIn.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "releasedevent",
+					"type": "publicationevent"
+				},
+				"description": {
+					"description": "The place and time the release was issued, expressed as a PublicationEvent.",
+					"type": "publicationevent"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "schemaversion",
+					"type": "text or  url"
+				},
+				"description": {
+					"description": "Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using a URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. ",
+					"type": "text or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "sourceorganization",
+					"type": "organization"
+				},
+				"description": {
+					"description": "The Organization on whose behalf the creator was working.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "startdate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The start date and time of the item (in ISO 8601 date format).",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "text",
+					"type": "text"
+				},
+				"description": {
+					"description": "The textual content of this CreativeWork.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "thumbnailurl",
+					"type": "url"
+				},
+				"description": {
+					"description": "A thumbnail image relevant to the Thing.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "timerequired",
+					"type": "duration"
+				},
+				"description": {
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
+					"type": "duration"
+				}
+			},
+			{
+				"name": {
+					"description": "translator",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "typicalagerange",
+					"type": "text"
+				},
+				"description": {
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "version",
+					"type": "number"
+				},
+				"description": {
+					"description": "The version of the CreativeWork embodied by a specified resource.",
+					"type": "number"
+				}
+			},
+			{
+				"name": {
+					"description": "video",
+					"type": "videoobject"
+				},
+				"description": {
+					"description": "An embedded video object.",
+					"type": "videoobject"
+				}
+			},
+			{
+				"name": {
+					"description": "workexample",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook. Inverse property: exampleOfWork.",
+					"type": "creativework"
+				}
+			}]
+		},
+		"CreditCard": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "supersededby",
+					"type": "enumeration or  class or  property"
+				},
+				"description": {
+					"description": "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+					"type": "enumeration or  class or  property"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"Crematorium": {
+			"properties": [{
+				"name": {
+					"description": "additionalproperty",
+					"type": "propertyvalue"
+				},
+				"description": {
+					"description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+					"type": "propertyvalue"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "address",
+					"type": "text or  postaladdress"
+				},
+				"description": {
+					"description": "Physical address of the item.",
+					"type": "text or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "branchcode",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short textual code (also called \"store code\") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code \"3047\" is a branchCode for a particular branch.      ",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "containedinplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and one that contains it. Supersedes containedIn. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "containsplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and another that it contains. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "event",
+					"type": "event"
+				},
+				"description": {
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "faxnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The fax number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "geo",
+					"type": "geocoordinates or  geoshape"
+				},
+				"description": {
+					"description": "The geo coordinates of the place.",
+					"type": "geocoordinates or  geoshape"
+				}
+			},
+			{
+				"name": {
+					"description": "globallocationnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "hasmap",
+					"type": "url or  map"
+				},
+				"description": {
+					"description": "A URL to a map of the place. Supersedes map, maps.",
+					"type": "url or  map"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "isicv4",
+					"type": "text"
+				},
+				"description": {
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "logo",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An associated logo.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "openinghours",
+					"type": "text"
+				},
+				"description": {
+					"description": "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas \',\' separating each day. Day or time ranges are specified using a hyphen \'-\'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "openinghoursspecification",
+					"type": "openinghoursspecification"
+				},
+				"description": {
+					"description": "The opening hours of a certain place.",
+					"type": "openinghoursspecification"
+				}
+			},
+			{
+				"name": {
+					"description": "photo",
+					"type": "photograph or  imageobject"
+				},
+				"description": {
+					"description": "A photograph of this place. Supersedes photos.",
+					"type": "photograph or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
 				}
 			},

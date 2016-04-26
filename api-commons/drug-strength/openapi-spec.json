@@ -29,7 +29,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/DrugStrength"
 							}
 						}
 					}
@@ -50,7 +50,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -113,7 +113,7 @@
 				{
 					"name": "medicinesystem",
 					"in": "formData",
-					"description": "The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.",
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"required": false,
 					"type": "medicinesystem"
 				},
@@ -127,7 +127,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -148,21 +148,21 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
 				{
 					"name": "strengthunit",
 					"in": "formData",
-					"description": "The units of an active ingredient's strength, e.g. mg.",
+					"description": "The units of an active ingredient\'s strength, e.g. mg.",
 					"required": false,
 					"type": "text"
 				},
 				{
 					"name": "strengthvalue",
 					"in": "formData",
-					"description": "The value of an active ingredient's strength, e.g. 325.",
+					"description": "The value of an active ingredient\'s strength, e.g. 325.",
 					"required": false,
 					"type": "number"
 				},
@@ -186,7 +186,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/DrugStrength"
 							}
 						}
 					}
@@ -212,7 +212,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/DrugStrength"
 							}
 						}
 					}
@@ -240,7 +240,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -303,7 +303,7 @@
 				{
 					"name": "medicinesystem",
 					"in": "formData",
-					"description": "The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.",
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"required": false,
 					"type": "medicinesystem"
 				},
@@ -317,7 +317,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -338,21 +338,21 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
 				{
 					"name": "strengthunit",
 					"in": "formData",
-					"description": "The units of an active ingredient's strength, e.g. mg.",
+					"description": "The units of an active ingredient\'s strength, e.g. mg.",
 					"required": false,
 					"type": "text"
 				},
 				{
 					"name": "strengthvalue",
 					"in": "formData",
-					"description": "The value of an active ingredient's strength, e.g. 325.",
+					"description": "The value of an active ingredient\'s strength, e.g. 325.",
 					"required": false,
 					"type": "number"
 				},
@@ -376,7 +376,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/DrugStrength"
 							}
 						}
 					}
@@ -400,7 +400,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/DrugStrength"
 							}
 						}
 					}
@@ -410,7 +410,523 @@
 		}
 	},
 	"definitions": {
-		"item": {
+		"DrugLegalStatus": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "applicablelocation",
+					"type": "administrativearea"
+				},
+				"description": {
+					"description": "The location in which the status applies.",
+					"type": "administrativearea"
+				}
+			},
+			{
+				"name": {
+					"description": "code",
+					"type": "medicalcode"
+				},
+				"description": {
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"type": "medicalcode"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "guideline",
+					"type": "medicalguideline"
+				},
+				"description": {
+					"description": "A medical guideline related to this entity.",
+					"type": "medicalguideline"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "legalstatus",
+					"type": "dietarysupplement or drug"
+				},
+				"description": {
+					"description": "The drug or supplement\'s legal status, including any controlled substance schedules that apply. ",
+					"type": "dietarysupplement or drug"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "medicinesystem",
+					"type": "medicinesystem"
+				},
+				"description": {
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
+					"type": "medicinesystem"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "recognizingauthority",
+					"type": "organization"
+				},
+				"description": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "relevantspecialty",
+					"type": "medicalspecialty"
+				},
+				"description": {
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"type": "medicalspecialty"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "study",
+					"type": "medicalstudy"
+				},
+				"description": {
+					"description": "A medical study or trial related to this entity.",
+					"type": "medicalstudy"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"DrugPregnancyCategory": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "code",
+					"type": "medicalcode"
+				},
+				"description": {
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"type": "medicalcode"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "guideline",
+					"type": "medicalguideline"
+				},
+				"description": {
+					"description": "A medical guideline related to this entity.",
+					"type": "medicalguideline"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "medicinesystem",
+					"type": "medicinesystem"
+				},
+				"description": {
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
+					"type": "medicinesystem"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "pregnancycategory",
+					"type": "drug"
+				},
+				"description": {
+					"description": "Pregnancy category of this drug. ",
+					"type": "drug"
+				}
+			},
+			{
+				"name": {
+					"description": "recognizingauthority",
+					"type": "organization"
+				},
+				"description": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "relevantspecialty",
+					"type": "medicalspecialty"
+				},
+				"description": {
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"type": "medicalspecialty"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "study",
+					"type": "medicalstudy"
+				},
+				"description": {
+					"description": "A medical study or trial related to this entity.",
+					"type": "medicalstudy"
+				}
+			},
+			{
+				"name": {
+					"description": "supersededby",
+					"type": "enumeration or  class or  property"
+				},
+				"description": {
+					"description": "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+					"type": "enumeration or  class or  property"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"DrugPrescriptionStatus": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "code",
+					"type": "medicalcode"
+				},
+				"description": {
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"type": "medicalcode"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "guideline",
+					"type": "medicalguideline"
+				},
+				"description": {
+					"description": "A medical guideline related to this entity.",
+					"type": "medicalguideline"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "medicinesystem",
+					"type": "medicinesystem"
+				},
+				"description": {
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
+					"type": "medicinesystem"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "prescriptionstatus",
+					"type": "drug"
+				},
+				"description": {
+					"description": "Indicates whether this drug is available by prescription or over-the-counter. ",
+					"type": "drug"
+				}
+			},
+			{
+				"name": {
+					"description": "recognizingauthority",
+					"type": "organization"
+				},
+				"description": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "relevantspecialty",
+					"type": "medicalspecialty"
+				},
+				"description": {
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"type": "medicalspecialty"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "study",
+					"type": "medicalstudy"
+				},
+				"description": {
+					"description": "A medical study or trial related to this entity.",
+					"type": "medicalstudy"
+				}
+			},
+			{
+				"name": {
+					"description": "supersededby",
+					"type": "enumeration or  class or  property"
+				},
+				"description": {
+					"description": "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+					"type": "enumeration or  class or  property"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"DrugStrength": {
 			"properties": [{
 				"name": {
 					"description": "activeingredient",
@@ -427,7 +943,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
 				}
 			},
@@ -517,7 +1033,7 @@
 					"type": "medicinesystem"
 				},
 				"description": {
-					"description": "The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.",
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"type": "medicinesystem"
 				}
 			},
@@ -537,7 +1053,7 @@
 					"type": "action"
 				},
 				"description": {
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
 				}
 			},
@@ -567,7 +1083,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
 				}
 			},
@@ -577,7 +1093,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The units of an active ingredient's strength, e.g. mg.",
+					"description": "The units of an active ingredient\'s strength, e.g. mg.",
 					"type": "text"
 				}
 			},
@@ -587,7 +1103,7 @@
 					"type": "number"
 				},
 				"description": {
-					"description": "The value of an active ingredient's strength, e.g. 325.",
+					"description": "The value of an active ingredient\'s strength, e.g. 325.",
 					"type": "number"
 				}
 			},

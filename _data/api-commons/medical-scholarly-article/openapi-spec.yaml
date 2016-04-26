@@ -28,7 +28,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalScholarlyArticle'
         tags:
         - Medical Scholarly Article
       post:
@@ -77,7 +77,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -105,8 +105,8 @@
           type: text
         - name: articlesection
           in: formData
-          description: Articles may belong to one or more 'sections' in a magazine or
-            newspaper, such as Sports, Lifestyle, etc.
+          description: Articles may belong to one or more \'sections\' in a magazine
+            or newspaper, such as Sports, Lifestyle, etc.
           required: false
           type: text
         - name: associatedmedia
@@ -169,8 +169,8 @@
           type: place
         - name: contentrating
           in: formData
-          description: Official rating of a piece of content&#x2014;for example,'MPAA
-            PG-13'.
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
           required: false
           type: text
         - name: contributor
@@ -204,7 +204,7 @@
         - name: datemodified
           in: formData
           description: The date on which the CreativeWork was most recently modified
-            or when the item's entry was modified within a DataFeed.
+            or when the item\'s entry was modified within a DataFeed.
           required: false
           type: date or  datetime
         - name: datepublished
@@ -235,7 +235,7 @@
         - name: educationaluse
           in: formData
           description: The purpose of a work in the context of education; for example,
-            'assignment', 'group work'.
+            \'assignment\', \'group work\'.
           required: false
           type: text
         - name: encoding
@@ -254,7 +254,7 @@
           in: formData
           description: Media type (aka MIME format, see IANA site) of the content e.g.
             application/zip of a SoftwareApplication binary. In cases where a CreativeWork
-            has several media type representations, 'encoding' can be used to indicate
+            has several media type representations, \'encoding\' can be used to indicate
             each MediaObject alongside particular fileFormat information.
           required: false
           type: text
@@ -297,7 +297,7 @@
         - name: interactivitytype
           in: formData
           description: The predominant mode of learning supported by the learning resource.
-            Acceptable values are 'active', 'expositive', or 'mixed'.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
           required: false
           type: text
         - name: isbasedonurl
@@ -326,7 +326,7 @@
         - name: learningresourcetype
           in: formData
           description: The predominant type or kind characterizing the learning resource.
-            For example, 'presentation', 'handout'.
+            For example, \'presentation\', \'handout\'.
           required: false
           type: text
         - name: license
@@ -374,18 +374,18 @@
           type: offer
         - name: pageend
           in: formData
-          description: The page on which the work ends; for example "138" or "xvi".
+          description: The page on which the work ends; for example \"138\" or \"xvi\".
           required: false
           type: integer or  text
         - name: pagestart
           in: formData
-          description: The page on which the work starts; for example "135" or "xiii".
+          description: The page on which the work starts; for example \"135\" or \"xiii\".
           required: false
           type: integer or  text
         - name: pagination
           in: formData
           description: Any description of pages that is not separated into pageStart
-            and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+            and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".
           required: false
           type: text
         - name: position
@@ -396,7 +396,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: producer
@@ -454,7 +454,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -484,8 +484,8 @@
         - name: timerequired
           in: formData
           description: Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. 'P30M',
-            'P1H25M'.
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
           required: false
           type: duration
         - name: translator
@@ -496,7 +496,7 @@
           type: person or  organization
         - name: typicalagerange
           in: formData
-          description: The typical expected age range, e.g. '7-9', '11-'.
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
           required: false
           type: text
         - name: url
@@ -532,7 +532,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalScholarlyArticle'
         tags:
         - Medical Scholarly Article
     /medical-scholarly-article/{id}/:
@@ -552,7 +552,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalScholarlyArticle'
         tags:
         - Medical Scholarly Article
       put:
@@ -606,7 +606,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -634,8 +634,8 @@
           type: text
         - name: articlesection
           in: formData
-          description: Articles may belong to one or more 'sections' in a magazine or
-            newspaper, such as Sports, Lifestyle, etc.
+          description: Articles may belong to one or more \'sections\' in a magazine
+            or newspaper, such as Sports, Lifestyle, etc.
           required: false
           type: text
         - name: associatedmedia
@@ -698,8 +698,8 @@
           type: place
         - name: contentrating
           in: formData
-          description: Official rating of a piece of content&#x2014;for example,'MPAA
-            PG-13'.
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
           required: false
           type: text
         - name: contributor
@@ -733,7 +733,7 @@
         - name: datemodified
           in: formData
           description: The date on which the CreativeWork was most recently modified
-            or when the item's entry was modified within a DataFeed.
+            or when the item\'s entry was modified within a DataFeed.
           required: false
           type: date or  datetime
         - name: datepublished
@@ -764,7 +764,7 @@
         - name: educationaluse
           in: formData
           description: The purpose of a work in the context of education; for example,
-            'assignment', 'group work'.
+            \'assignment\', \'group work\'.
           required: false
           type: text
         - name: encoding
@@ -783,7 +783,7 @@
           in: formData
           description: Media type (aka MIME format, see IANA site) of the content e.g.
             application/zip of a SoftwareApplication binary. In cases where a CreativeWork
-            has several media type representations, 'encoding' can be used to indicate
+            has several media type representations, \'encoding\' can be used to indicate
             each MediaObject alongside particular fileFormat information.
           required: false
           type: text
@@ -826,7 +826,7 @@
         - name: interactivitytype
           in: formData
           description: The predominant mode of learning supported by the learning resource.
-            Acceptable values are 'active', 'expositive', or 'mixed'.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
           required: false
           type: text
         - name: isbasedonurl
@@ -855,7 +855,7 @@
         - name: learningresourcetype
           in: formData
           description: The predominant type or kind characterizing the learning resource.
-            For example, 'presentation', 'handout'.
+            For example, \'presentation\', \'handout\'.
           required: false
           type: text
         - name: license
@@ -903,18 +903,18 @@
           type: offer
         - name: pageend
           in: formData
-          description: The page on which the work ends; for example "138" or "xvi".
+          description: The page on which the work ends; for example \"138\" or \"xvi\".
           required: false
           type: integer or  text
         - name: pagestart
           in: formData
-          description: The page on which the work starts; for example "135" or "xiii".
+          description: The page on which the work starts; for example \"135\" or \"xiii\".
           required: false
           type: integer or  text
         - name: pagination
           in: formData
           description: Any description of pages that is not separated into pageStart
-            and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+            and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".
           required: false
           type: text
         - name: position
@@ -925,7 +925,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: producer
@@ -983,7 +983,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -1013,8 +1013,8 @@
         - name: timerequired
           in: formData
           description: Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. 'P30M',
-            'P1H25M'.
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
           required: false
           type: duration
         - name: translator
@@ -1025,7 +1025,7 @@
           type: person or  organization
         - name: typicalagerange
           in: formData
-          description: The typical expected age range, e.g. '7-9', '11-'.
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
           required: false
           type: text
         - name: url
@@ -1061,7 +1061,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalScholarlyArticle'
         tags:
         - Medical Scholarly Article
       delete:
@@ -1080,11 +1080,381 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalScholarlyArticle'
         tags:
         - Medical Scholarly Article
   definitions:
-    item:
+    MedicalRiskEstimator:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: estimatesriskof
+          type: medicalentity
+        description:
+          description: The condition, complication, or symptom whose risk is being estimated.
+          type: medicalentity
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: includedriskfactor
+          type: medicalriskfactor
+        description:
+          description: A modifiable or non-modifiable risk factor included in the calculation,
+            e.g. age, coexisting condition.
+          type: medicalriskfactor
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    MedicalRiskFactor:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: includedriskfactor
+          type: medicalriskestimator
+        description:
+          description: 'A modifiable or non-modifiable risk factor included in the calculation,
+            e.g. age, coexisting condition. '
+          type: medicalriskestimator
+      - name:
+          description: increasesriskof
+          type: medicalentity
+        description:
+          description: The condition, complication, etc. influenced by this factor.
+          type: medicalentity
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: riskfactor
+          type: medicalcondition
+        description:
+          description: 'A modifiable or non-modifiable factor that increases the risk
+            of a patient contracting this condition, e.g. age,  coexisting condition. '
+          type: medicalcondition
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    MedicalRiskScore:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: algorithm
+          type: text
+        description:
+          description: The algorithm or rules to follow to compute the score.
+          type: text
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: estimatesriskof
+          type: medicalentity
+        description:
+          description: The condition, complication, or symptom whose risk is being estimated.
+          type: medicalentity
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: image
+          type: imageobject or  url
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: imageobject or  url
+      - name:
+          description: includedriskfactor
+          type: medicalriskfactor
+        description:
+          description: A modifiable or non-modifiable risk factor included in the calculation,
+            e.g. age, coexisting condition.
+          type: medicalriskfactor
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    MedicalScholarlyArticle:
       properties:
       - name:
           description: about
@@ -1135,7 +1505,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -1168,8 +1538,8 @@
           description: articlesection
           type: text
         description:
-          description: Articles may belong to one or more 'sections' in a magazine or
-            newspaper, such as Sports, Lifestyle, etc.
+          description: Articles may belong to one or more \'sections\' in a magazine
+            or newspaper, such as Sports, Lifestyle, etc.
           type: text
       - name:
           description: associatedmedia
@@ -1243,8 +1613,8 @@
           description: contentrating
           type: text
         description:
-          description: Official rating of a piece of content&#x2014;for example,'MPAA
-            PG-13'.
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
           type: text
       - name:
           description: contributor
@@ -1284,7 +1654,7 @@
           type: date or  datetime
         description:
           description: The date on which the CreativeWork was most recently modified
-            or when the item's entry was modified within a DataFeed.
+            or when the item\'s entry was modified within a DataFeed.
           type: date or  datetime
       - name:
           description: datepublished
@@ -1321,7 +1691,7 @@
           type: text
         description:
           description: The purpose of a work in the context of education; for example,
-            'assignment', 'group work'.
+            \'assignment\', \'group work\'.
           type: text
       - name:
           description: encoding
@@ -1343,7 +1713,7 @@
         description:
           description: Media type (aka MIME format, see IANA site) of the content e.g.
             application/zip of a SoftwareApplication binary. In cases where a CreativeWork
-            has several media type representations, 'encoding' can be used to indicate
+            has several media type representations, \'encoding\' can be used to indicate
             each MediaObject alongside particular fileFormat information.
           type: text
       - name:
@@ -1393,7 +1763,7 @@
           type: text
         description:
           description: The predominant mode of learning supported by the learning resource.
-            Acceptable values are 'active', 'expositive', or 'mixed'.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
           type: text
       - name:
           description: isbasedonurl
@@ -1427,7 +1797,7 @@
           type: text
         description:
           description: The predominant type or kind characterizing the learning resource.
-            For example, 'presentation', 'handout'.
+            For example, \'presentation\', \'handout\'.
           type: text
       - name:
           description: license
@@ -1483,20 +1853,20 @@
           description: pageend
           type: integer or  text
         description:
-          description: The page on which the work ends; for example "138" or "xvi".
+          description: The page on which the work ends; for example \"138\" or \"xvi\".
           type: integer or  text
       - name:
           description: pagestart
           type: integer or  text
         description:
-          description: The page on which the work starts; for example "135" or "xiii".
+          description: The page on which the work starts; for example \"135\" or \"xiii\".
           type: integer or  text
       - name:
           description: pagination
           type: text
         description:
           description: Any description of pages that is not separated into pageStart
-            and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+            and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".
           type: text
       - name:
           description: position
@@ -1509,7 +1879,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: producer
@@ -1577,7 +1947,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:
@@ -1612,8 +1982,8 @@
           type: duration
         description:
           description: Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. 'P30M',
-            'P1H25M'.
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
           type: duration
       - name:
           description: translator
@@ -1626,7 +1996,7 @@
           description: typicalagerange
           type: text
         description:
-          description: The typical expected age range, e.g. '7-9', '11-'.
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
           type: text
       - name:
           description: url

@@ -28,7 +28,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ComputerStore'
         tags:
         - Computer Store
       post:
@@ -52,7 +52,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -91,10 +91,10 @@
           type: text
         - name: branchcode
           in: formData
-          description: 'A short textual code (also called "store code") that uniquely
+          description: 'A short textual code (also called \"store code\") that uniquely
             identifies a place of business. The code is typically assigned by the parentOrganization
             and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code "3047" is a branchCode for a particular branch.      '
+            the code \"3047\" is a branchCode for a particular branch.      '
           required: false
           type: text
         - name: brand
@@ -290,14 +290,14 @@
           in: formData
           description: 'The opening hours for a business. Opening hours can be specified
             as a weekly time range, starting with days, then times per day. Multiple
-            days can be listed with commas '','' separating each day. Day or time ranges
-            are specified using a hyphen ''-''.- Days are specified using the following
-            two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified
-            using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example:
-            &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays
-            and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week,
-            then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday
-            through Sunday, all day&lt;/time&gt;.'
+            days can be listed with commas \'',\'' separating each day. Day or time
+            ranges are specified using a hyphen \''-\''.- Days are specified using the
+            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
+            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
+            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
+            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
+            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
+            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
           required: false
           type: text
         - name: openinghoursspecification
@@ -329,7 +329,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: pricerange
@@ -345,7 +345,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -358,7 +358,7 @@
         - name: suborganization
           in: formData
           description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific ''department''
+            the second, e.g., as a subsidiary. See also: the more specific \''department\''
             property. Inverse property: parentOrganization.'
           required: false
           type: organization
@@ -389,7 +389,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ComputerStore'
         tags:
         - Computer Store
     /computer-store/{id}/:
@@ -409,7 +409,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ComputerStore'
         tags:
         - Computer Store
       put:
@@ -438,7 +438,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -477,10 +477,10 @@
           type: text
         - name: branchcode
           in: formData
-          description: 'A short textual code (also called "store code") that uniquely
+          description: 'A short textual code (also called \"store code\") that uniquely
             identifies a place of business. The code is typically assigned by the parentOrganization
             and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code "3047" is a branchCode for a particular branch.      '
+            the code \"3047\" is a branchCode for a particular branch.      '
           required: false
           type: text
         - name: brand
@@ -676,14 +676,14 @@
           in: formData
           description: 'The opening hours for a business. Opening hours can be specified
             as a weekly time range, starting with days, then times per day. Multiple
-            days can be listed with commas '','' separating each day. Day or time ranges
-            are specified using a hyphen ''-''.- Days are specified using the following
-            two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified
-            using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example:
-            &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays
-            and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week,
-            then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday
-            through Sunday, all day&lt;/time&gt;.'
+            days can be listed with commas \'',\'' separating each day. Day or time
+            ranges are specified using a hyphen \''-\''.- Days are specified using the
+            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
+            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
+            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
+            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
+            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
+            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
           required: false
           type: text
         - name: openinghoursspecification
@@ -715,7 +715,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: pricerange
@@ -731,7 +731,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -744,7 +744,7 @@
         - name: suborganization
           in: formData
           description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific ''department''
+            the second, e.g., as a subsidiary. See also: the more specific \''department\''
             property. Inverse property: parentOrganization.'
           required: false
           type: organization
@@ -775,7 +775,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ComputerStore'
         tags:
         - Computer Store
       delete:
@@ -794,11 +794,182 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/ComputerStore'
         tags:
         - Computer Store
   definitions:
-    item:
+    CommunicateAction:
+      properties:
+      - name:
+          description: about
+          type: thing
+        description:
+          description: The subject matter of the content.
+          type: thing
+      - name:
+          description: actionstatus
+          type: actionstatustype
+        description:
+          description: Indicates the current disposition of the Action.
+          type: actionstatustype
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: agent
+          type: organization or  person
+        description:
+          description: The direct performer or driver of the action (animate or inanimate).
+            e.g. *John* wrote a book.
+          type: organization or  person
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: endtime
+          type: datetime
+        description:
+          description: The endTime of something. For a reserved event or service (e.g.
+            FoodEstablishmentReservation), the time that it is expected to end. For
+            actions that span a period of time, when the action was performed. e.g.
+            John wrote a book from January to *December*.Note that Event uses startDate/endDate
+            instead of startTime/endTime, even when describing dates with times. This
+            situation may be clarified in future revisions.
+          type: datetime
+      - name:
+          description: error
+          type: thing
+        description:
+          description: For failed actions, more information on the cause of the failure.
+          type: thing
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: inlanguage
+          type: text or  language
+        description:
+          description: The language of the content or performance or used in an action.
+            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
+            language.
+          type: text or  language
+      - name:
+          description: instrument
+          type: thing
+        description:
+          description: The object that helped the agent perform the action. e.g. John
+            wrote a book with *a pen*.
+          type: thing
+      - name:
+          description: location
+          type: text or  place or  postaladdress
+        description:
+          description: The location of for example where the event is happening, an
+            organization is located, or where an action takes place.
+          type: text or  place or  postaladdress
+      - name:
+          description: mainentityofpage
+          type: url or  creativework
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: object
+          type: thing
+        description:
+          description: The object upon the action is carried out, whose state is kept
+            intact or changed. Also known as the semantic roles patient, affected or
+            undergoer (which change their state) or theme (which doesn\'t). e.g. John
+            read *a book*.
+          type: thing
+      - name:
+          description: participant
+          type: organization or  person
+        description:
+          description: Other co-agents that participated in the action indirectly. e.g.
+            John wrote a book with *Steve*.
+          type: organization or  person
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: recipient
+          type: audience or  organization or  person
+        description:
+          description: A sub property of participant. The participant who is at the
+            receiving end of the action.
+          type: audience or  organization or  person
+      - name:
+          description: result
+          type: thing
+        description:
+          description: The result produced in the action. e.g. John wrote *a book*.
+          type: thing
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: starttime
+          type: datetime
+        description:
+          description: The startTime of something. For a reserved event or service (e.g.
+            FoodEstablishmentReservation), the time that it is expected to start. For
+            actions that span a period of time, when the action was performed. e.g.
+            John wrote a book from *January* to December.Note that Event uses startDate/endDate
+            instead of startTime/endTime, even when describing dates with times. This
+            situation may be clarified in future revisions.
+          type: datetime
+      - name:
+          description: target
+          type: entrypoint
+        description:
+          description: Indicates a target EntryPoint for an Action.
+          type: entrypoint
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    ComputerStore:
       properties:
       - name:
           description: additionalproperty
@@ -819,7 +990,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -865,10 +1036,10 @@
           description: branchcode
           type: text
         description:
-          description: 'A short textual code (also called "store code") that uniquely
+          description: 'A short textual code (also called \"store code\") that uniquely
             identifies a place of business. The code is typically assigned by the parentOrganization
             and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code "3047" is a branchCode for a particular branch.      '
+            the code \"3047\" is a branchCode for a particular branch.      '
           type: text
       - name:
           description: brand
@@ -1098,14 +1269,14 @@
         description:
           description: 'The opening hours for a business. Opening hours can be specified
             as a weekly time range, starting with days, then times per day. Multiple
-            days can be listed with commas '','' separating each day. Day or time ranges
-            are specified using a hyphen ''-''.- Days are specified using the following
-            two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified
-            using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example:
-            &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays
-            and Thursdays 4-8pm&lt;/time&gt;. - If a business is open 7 days a week,
-            then it can be specified as &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday
-            through Sunday, all day&lt;/time&gt;.'
+            days can be listed with commas \'',\'' separating each day. Day or time
+            ranges are specified using a hyphen \''-\''.- Days are specified using the
+            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
+            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
+            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
+            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
+            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
+            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
           type: text
       - name:
           description: openinghoursspecification
@@ -1143,7 +1314,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: pricerange
@@ -1162,7 +1333,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:
@@ -1177,7 +1348,7 @@
           type: organization
         description:
           description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific ''department''
+            the second, e.g., as a subsidiary. See also: the more specific \''department\''
             property. Inverse property: parentOrganization.'
           type: organization
       - name:

@@ -29,7 +29,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MusicPlaylist"
 							}
 						}
 					}
@@ -85,7 +85,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -183,7 +183,7 @@
 				{
 					"name": "contentrating",
 					"in": "formData",
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -225,7 +225,7 @@
 				{
 					"name": "datemodified",
 					"in": "formData",
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"required": false,
 					"type": "datetime or  date"
 				},
@@ -267,7 +267,7 @@
 				{
 					"name": "educationaluse",
 					"in": "formData",
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -288,7 +288,7 @@
 				{
 					"name": "fileformat",
 					"in": "formData",
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"required": false,
 					"type": "text"
 				},
@@ -344,7 +344,7 @@
 				{
 					"name": "interactivitytype",
 					"in": "formData",
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -379,7 +379,7 @@
 				{
 					"name": "learningresourcetype",
 					"in": "formData",
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -449,7 +449,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -512,7 +512,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -547,7 +547,7 @@
 				{
 					"name": "timerequired",
 					"in": "formData",
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"required": false,
 					"type": "duration"
 				},
@@ -568,7 +568,7 @@
 				{
 					"name": "typicalagerange",
 					"in": "formData",
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -606,7 +606,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MusicPlaylist"
 							}
 						}
 					}
@@ -632,7 +632,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MusicPlaylist"
 							}
 						}
 					}
@@ -695,7 +695,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -793,7 +793,7 @@
 				{
 					"name": "contentrating",
 					"in": "formData",
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -835,7 +835,7 @@
 				{
 					"name": "datemodified",
 					"in": "formData",
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"required": false,
 					"type": "datetime or  date"
 				},
@@ -877,7 +877,7 @@
 				{
 					"name": "educationaluse",
 					"in": "formData",
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -898,7 +898,7 @@
 				{
 					"name": "fileformat",
 					"in": "formData",
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"required": false,
 					"type": "text"
 				},
@@ -954,7 +954,7 @@
 				{
 					"name": "interactivitytype",
 					"in": "formData",
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -989,7 +989,7 @@
 				{
 					"name": "learningresourcetype",
 					"in": "formData",
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1059,7 +1059,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -1122,7 +1122,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -1157,7 +1157,7 @@
 				{
 					"name": "timerequired",
 					"in": "formData",
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"required": false,
 					"type": "duration"
 				},
@@ -1178,7 +1178,7 @@
 				{
 					"name": "typicalagerange",
 					"in": "formData",
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1216,7 +1216,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MusicPlaylist"
 							}
 						}
 					}
@@ -1240,7 +1240,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/MusicPlaylist"
 							}
 						}
 					}
@@ -1250,7 +1250,519 @@
 		}
 	},
 	"definitions": {
-		"item": {
+		"MusicGroup": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "address",
+					"type": "text or  postaladdress"
+				},
+				"description": {
+					"description": "Physical address of the item.",
+					"type": "text or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "album",
+					"type": "musicalbum"
+				},
+				"description": {
+					"description": "A music album. Supersedes albums.",
+					"type": "musicalbum"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "alumni",
+					"type": "person"
+				},
+				"description": {
+					"description": "Alumni of an organization. Inverse property: alumniOf.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "areaserved",
+					"type": "text or  place or  geoshape or  administrativearea"
+				},
+				"description": {
+					"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+					"type": "text or  place or  geoshape or  administrativearea"
+				}
+			},
+			{
+				"name": {
+					"description": "award",
+					"type": "text"
+				},
+				"description": {
+					"description": "An award won by or for this item. Supersedes awards.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "brand",
+					"type": "brand or  organization"
+				},
+				"description": {
+					"description": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.",
+					"type": "brand or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "byartist",
+					"type": "musicalbum or musicrecording"
+				},
+				"description": {
+					"description": "The artist that performed this album or recording. ",
+					"type": "musicalbum or musicrecording"
+				}
+			},
+			{
+				"name": {
+					"description": "contactpoint",
+					"type": "contactpoint"
+				},
+				"description": {
+					"description": "A contact point for a person or organization. Supersedes contactPoints.",
+					"type": "contactpoint"
+				}
+			},
+			{
+				"name": {
+					"description": "department",
+					"type": "organization"
+				},
+				"description": {
+					"description": "A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "dissolutiondate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The date that this organization was dissolved.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "duns",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Dun & Bradstreet DUNS number for identifying an organization or business person.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "email",
+					"type": "text"
+				},
+				"description": {
+					"description": "Email address.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "employee",
+					"type": "person"
+				},
+				"description": {
+					"description": "Someone working for this organization. Supersedes employees.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "event",
+					"type": "event"
+				},
+				"description": {
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "faxnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The fax number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "founder",
+					"type": "person"
+				},
+				"description": {
+					"description": "A person who founded this organization. Supersedes founders.",
+					"type": "person"
+				}
+			},
+			{
+				"name": {
+					"description": "foundingdate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The date that this organization was founded.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "foundinglocation",
+					"type": "place"
+				},
+				"description": {
+					"description": "The place where the Organization was founded.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "genre",
+					"type": "text or  url"
+				},
+				"description": {
+					"description": "Genre of the creative work or group.",
+					"type": "text or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "globallocationnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "hasoffercatalog",
+					"type": "offercatalog"
+				},
+				"description": {
+					"description": "Indicates an OfferCatalog listing for this Organization, Person, or Service.",
+					"type": "offercatalog"
+				}
+			},
+			{
+				"name": {
+					"description": "haspos",
+					"type": "place"
+				},
+				"description": {
+					"description": "Points-of-Sales operated by the organization or person.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "isicv4",
+					"type": "text"
+				},
+				"description": {
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "legalname",
+					"type": "text"
+				},
+				"description": {
+					"description": "The official name of the organization, e.g. the registered company name.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "location",
+					"type": "text or  place or  postaladdress"
+				},
+				"description": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "text or  place or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "logo",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An associated logo.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "makesoffer",
+					"type": "offer"
+				},
+				"description": {
+					"description": "A pointer to products or services offered by the organization or person. Inverse property: offeredBy.",
+					"type": "offer"
+				}
+			},
+			{
+				"name": {
+					"description": "member",
+					"type": "organization or  person"
+				},
+				"description": {
+					"description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.",
+					"type": "organization or  person"
+				}
+			},
+			{
+				"name": {
+					"description": "memberof",
+					"type": "programmembership or  organization"
+				},
+				"description": {
+					"description": "An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member.",
+					"type": "programmembership or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "musicby",
+					"type": "clip or movie or episode or movieseries or radioseries or tvseries or videogame or videoobject or videogameseries"
+				},
+				"description": {
+					"description": "The composer of the soundtrack. ",
+					"type": "clip or movie or episode or movieseries or radioseries or tvseries or videogame or videoobject or videogameseries"
+				}
+			},
+			{
+				"name": {
+					"description": "naics",
+					"type": "text"
+				},
+				"description": {
+					"description": "The North American Industry Classification System (NAICS) code for a particular organization or business person.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "numberofemployees",
+					"type": "quantitativevalue"
+				},
+				"description": {
+					"description": "The number of employees in an organization e.g. business.",
+					"type": "quantitativevalue"
+				}
+			},
+			{
+				"name": {
+					"description": "owns",
+					"type": "product or  ownershipinfo"
+				},
+				"description": {
+					"description": "Products owned by the organization or person.",
+					"type": "product or  ownershipinfo"
+				}
+			},
+			{
+				"name": {
+					"description": "parentorganization",
+					"type": "organization"
+				},
+				"description": {
+					"description": "The larger organization that this organization is a branch of, if any. Supersedes branchOf. Inverse property: subOrganization.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "seeks",
+					"type": "demand"
+				},
+				"description": {
+					"description": "A pointer to products or services sought by the organization or person (demand).",
+					"type": "demand"
+				}
+			},
+			{
+				"name": {
+					"description": "suborganization",
+					"type": "organization"
+				},
+				"description": {
+					"description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific \'department\' property. Inverse property: parentOrganization.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "taxid",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "telephone",
+					"type": "text"
+				},
+				"description": {
+					"description": "The telephone number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "track",
+					"type": "itemlist or  musicrecording"
+				},
+				"description": {
+					"description": "A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording. Supersedes tracks.",
+					"type": "itemlist or  musicrecording"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "vatid",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Value-added Tax ID of the organization or person.",
+					"type": "text"
+				}
+			}]
+		},
+		"MusicPlaylist": {
 			"properties": [{
 				"name": {
 					"description": "about",
@@ -1317,7 +1829,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
 				}
 			},
@@ -1457,7 +1969,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"type": "text"
 				}
 			},
@@ -1517,7 +2029,7 @@
 					"type": "datetime or  date"
 				},
 				"description": {
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"type": "datetime or  date"
 				}
 			},
@@ -1577,7 +2089,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"type": "text"
 				}
 			},
@@ -1607,7 +2119,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"type": "text"
 				}
 			},
@@ -1687,7 +2199,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"type": "text"
 				}
 			},
@@ -1737,7 +2249,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"type": "text"
 				}
 			},
@@ -1837,7 +2349,7 @@
 					"type": "action"
 				},
 				"description": {
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
 				}
 			},
@@ -1927,7 +2439,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
 				}
 			},
@@ -1977,7 +2489,7 @@
 					"type": "duration"
 				},
 				"description": {
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"type": "duration"
 				}
 			},
@@ -2007,7 +2519,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"type": "text"
 				}
 			},

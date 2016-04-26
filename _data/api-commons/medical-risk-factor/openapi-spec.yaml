@@ -1,8 +1,8 @@
 - swagger: "2.0"
   info:
     title: Medical Risk Factor API
-    description: A risk factor is anything that increases a persons likelihood of developing
-      or contracting a disease, medical condition, or complication.
+    description: A risk factor is anything that increases a person\'s likelihood of
+      developing or contracting a disease, medical condition, or complication.
     termsOfService: http://apievangelist.com/terms-of-service.html
     version: v1
   host: medical.risk.factor.example.com
@@ -29,7 +29,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalRiskFactor'
         tags:
         - Medical Risk Factor
       post:
@@ -42,7 +42,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -95,7 +95,7 @@
         - name: medicinesystem
           in: formData
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           required: false
           type: medicinesystem
         - name: name
@@ -106,7 +106,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: recognizingauthority
@@ -129,7 +129,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -149,7 +149,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalRiskFactor'
         tags:
         - Medical Risk Factor
     /medical-risk-factor/{id}/:
@@ -169,7 +169,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalRiskFactor'
         tags:
         - Medical Risk Factor
       put:
@@ -187,7 +187,7 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           required: false
@@ -240,7 +240,7 @@
         - name: medicinesystem
           in: formData
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           required: false
           type: medicinesystem
         - name: name
@@ -251,7 +251,7 @@
         - name: potentialaction
           in: formData
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           required: false
           type: action
         - name: recognizingauthority
@@ -274,7 +274,7 @@
         - name: sameas
           in: formData
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           required: false
           type: url
@@ -294,7 +294,7 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalRiskFactor'
         tags:
         - Medical Risk Factor
       delete:
@@ -313,11 +313,11 @@
             schema:
               type: array
               items:
-                $ref: '#/definitions/item'
+                $ref: '#/definitions/MedicalRiskFactor'
         tags:
         - Medical Risk Factor
   definitions:
-    item:
+    MedicalRiskEstimator:
       properties:
       - name:
           description: additionaltype
@@ -326,7 +326,126 @@
           description: An additional type for the item, typically used for adding more
             specific types from external vocabularies in microdata syntax. This is a
             relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: code
+          type: medicalcode
+        description:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: estimatesriskof
+          type: medicalentity
+        description:
+          description: The condition, complication, or symptom whose risk is being estimated.
+          type: medicalentity
+      - name:
+          description: guideline
+          type: medicalguideline
+        description:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: includedriskfactor
+          type: medicalriskfactor
+        description:
+          description: A modifiable or non-modifiable risk factor included in the calculation,
+            e.g. age, coexisting condition.
+          type: medicalriskfactor
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: medicinesystem
+          type: medicinesystem
+        description:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+      - name:
+          description: recognizingauthority
+          type: organization
+        description:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+      - name:
+          description: relevantspecialty
+          type: medicalspecialty
+        description:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: study
+          type: medicalstudy
+        description:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+    MedicalRiskFactor:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
             - for multiple types. Schema.org tools may have only weaker understanding
             of extra types, in particular those defined externally.
           type: url
@@ -388,7 +507,7 @@
           type: medicinesystem
         description:
           description: The system of medicine that includes this MedicalEntity, for
-            example 'evidence-based', 'homeopathic', 'chiropractic', etc.
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
           type: medicinesystem
       - name:
           description: name
@@ -401,7 +520,7 @@
           type: action
         description:
           description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an 'object' role.
+            in which this thing would play an \'object\' role.
           type: action
       - name:
           description: recognizingauthority
@@ -428,7 +547,7 @@
           type: url
         description:
           description: URL of a reference Web page that unambiguously indicates the
-            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
             or official website.
           type: url
       - name:

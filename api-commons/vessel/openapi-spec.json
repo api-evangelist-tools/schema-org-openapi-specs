@@ -29,7 +29,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Vessel"
 							}
 						}
 					}
@@ -43,7 +43,7 @@
 				"parameters": [{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -141,7 +141,7 @@
 				{
 					"name": "medicinesystem",
 					"in": "formData",
-					"description": "The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.",
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"required": false,
 					"type": "medicinesystem"
 				},
@@ -169,7 +169,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -211,7 +211,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -242,7 +242,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Vessel"
 							}
 						}
 					}
@@ -268,7 +268,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Vessel"
 							}
 						}
 					}
@@ -289,7 +289,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -387,7 +387,7 @@
 				{
 					"name": "medicinesystem",
 					"in": "formData",
-					"description": "The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.",
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"required": false,
 					"type": "medicinesystem"
 				},
@@ -415,7 +415,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -457,7 +457,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -488,7 +488,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Vessel"
 							}
 						}
 					}
@@ -512,7 +512,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Vessel"
 							}
 						}
 					}
@@ -522,14 +522,1210 @@
 		}
 	},
 	"definitions": {
-		"item": {
+		"UserTweets": {
 			"properties": [{
 				"name": {
 					"description": "additionaltype",
 					"type": "url"
 				},
 				"description": {
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "attendee",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "A person or organization attending the event. Supersedes attendees.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "doortime",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The time admission will commence.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "duration",
+					"type": "duration"
+				},
+				"description": {
+					"description": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.",
+					"type": "duration"
+				}
+			},
+			{
+				"name": {
+					"description": "enddate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The end date and time of the item (in ISO 8601 date format).",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "eventstatus",
+					"type": "eventstatustype"
+				},
+				"description": {
+					"description": "An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled.",
+					"type": "eventstatustype"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "inlanguage",
+					"type": "text or  language"
+				},
+				"description": {
+					"description": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. Supersedes language.",
+					"type": "text or  language"
+				}
+			},
+			{
+				"name": {
+					"description": "location",
+					"type": "text or  place or  postaladdress"
+				},
+				"description": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "text or  place or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "offers",
+					"type": "offer"
+				},
+				"description": {
+					"description": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
+					"type": "offer"
+				}
+			},
+			{
+				"name": {
+					"description": "organizer",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "An organizer of an Event.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "performer",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "A performer at the event&#x2014;for example, a presenter, musician, musical group or actor. Supersedes performers.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "previousstartdate",
+					"type": "date"
+				},
+				"description": {
+					"description": "Used in conjunction with eventStatus for rescheduled or cancelled events. This property contains the previously scheduled start date. For rescheduled events, the startDate property should be used for the newly scheduled start date. In the (rare) case of an event that has been postponed and rescheduled multiple times, this field may be repeated.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "recordedin",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "The CreativeWork that captured all or part of this Event. Inverse property: recordedAt.",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "startdate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The start date and time of the item (in ISO 8601 date format).",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "subevent",
+					"type": "event"
+				},
+				"description": {
+					"description": "An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes subEvents.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "superevent",
+					"type": "event"
+				},
+				"description": {
+					"description": "An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "typicalagerange",
+					"type": "text"
+				},
+				"description": {
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "workfeatured",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "A work featured in some event, e.g. exhibited in an ExhibitionEvent.       Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).",
+					"type": "creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "workperformed",
+					"type": "creativework"
+				},
+				"description": {
+					"description": "A work performed in some event, for example a play performed in a TheaterEvent.",
+					"type": "creativework"
+				}
+			}]
+		},
+		"Vehicle": {
+			"properties": [{
+				"name": {
+					"description": "additionalproperty",
+					"type": "propertyvalue"
+				},
+				"description": {
+					"description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+					"type": "propertyvalue"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "aircraft",
+					"type": "flight"
+				},
+				"description": {
+					"description": "The kind of aircraft (e.g., \"Boeing 747\"). ",
+					"type": "flight"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "audience",
+					"type": "audience"
+				},
+				"description": {
+					"description": "An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
+					"type": "audience"
+				}
+			},
+			{
+				"name": {
+					"description": "award",
+					"type": "text"
+				},
+				"description": {
+					"description": "An award won by or for this item. Supersedes awards.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "brand",
+					"type": "brand or  organization"
+				},
+				"description": {
+					"description": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.",
+					"type": "brand or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "cargovolume",
+					"type": "quantitativevalue"
+				},
+				"description": {
+					"description": "The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.Typical unit code(s): LTR for liters, FTQ for cubic foot/feetNote: You can use minValue and maxValue to indicate ranges.",
+					"type": "quantitativevalue"
+				}
+			},
+			{
+				"name": {
+					"description": "category",
+					"type": "physicalactivitycategory or  thing or  text"
+				},
+				"description": {
+					"description": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+					"type": "physicalactivitycategory or  thing or  text"
+				}
+			},
+			{
+				"name": {
+					"description": "color",
+					"type": "text"
+				},
+				"description": {
+					"description": "The color of the product.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "datevehiclefirstregistered",
+					"type": "date"
+				},
+				"description": {
+					"description": "The date of the first registration of the vehicle with the respective public authorities.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "depth",
+					"type": "quantitativevalue or  distance"
+				},
+				"description": {
+					"description": "The depth of the item.",
+					"type": "quantitativevalue or  distance"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "drivewheelconfiguration",
+					"type": "drivewheelconfigurationvalue or  text"
+				},
+				"description": {
+					"description": "The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle\'s engine via the drivetrain.",
+					"type": "drivewheelconfigurationvalue or  text"
+				}
+			},
+			{
+				"name": {
+					"description": "fuelconsumption",
+					"type": "quantitativevalue"
+				},
+				"description": {
+					"description": "The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).Note 1: There are unfortunately no standard unit codes for liters per 100 km.Use unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use valueReference to link the value for the fuel consumption to another value.",
+					"type": "quantitativevalue"
+				}
+			},
+			{
+				"name": {
+					"description": "fuelefficiency",
+					"type": "quantitativevalue"
+				},
+				"description": {
+					"description": "The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter.Use unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.Note 3: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use valueReference to link the value for the fuel economy to another value.",
+					"type": "quantitativevalue"
+				}
+			},
+			{
+				"name": {
+					"description": "fueltype",
+					"type": "url or  qualitativevalue or  text"
+				},
+				"description": {
+					"description": "The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.",
+					"type": "url or  qualitativevalue or  text"
+				}
+			},
+			{
+				"name": {
+					"description": "gtin12",
+					"type": "text"
+				},
+				"description": {
+					"description": "The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See GS1 GTIN Summary for more details.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "gtin13",
+					"type": "text"
+				},
+				"description": {
+					"description": "The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceeding zero. See GS1 GTIN Summary for more details.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "gtin14",
+					"type": "text"
+				},
+				"description": {
+					"description": "The GTIN-14 code of the product, or the product to which the offer refers. See GS1 GTIN Summary for more details.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "gtin8",
+					"type": "text"
+				},
+				"description": {
+					"description": "The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See GS1 GTIN Summary for more details.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "height",
+					"type": "quantitativevalue or  distance"
+				},
+				"description": {
+					"description": "The height of the item.",
+					"type": "quantitativevalue or  distance"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "isaccessoryorsparepartfor",
+					"type": "product"
+				},
+				"description": {
+					"description": "A pointer to another product (or multiple products) for which this product is an accessory or spare part.",
+					"type": "product"
+				}
+			},
+			{
+				"name": {
+					"description": "isconsumablefor",
+					"type": "product"
+				},
+				"description": {
+					"description": "A pointer to another product (or multiple products) for which this product is a consumable.",
+					"type": "product"
+				}
+			},
+			{
+				"name": {
+					"description": "isrelatedto",
+					"type": "product"
+				},
+				"description": {
+					"description": "A pointer to another, somehow related product (or multiple products).",
+					"type": "product"
+				}
+			},
+			{
+				"name": {
+					"description": "issimilarto",
+					"type": "product"
+				},
+				"description": {
+					"description": "A pointer to another, functionally similar product (or multiple products).",
+					"type": "product"
+				}
+			},
+			{
+				"name": {
+					"description": "itemcondition",
+					"type": "offeritemcondition"
+				},
+				"description": {
+					"description": "A predefined value from OfferItemCondition or a textual description of the condition of the product or service, or the products or services included in the offer.",
+					"type": "offeritemcondition"
+				}
+			},
+			{
+				"name": {
+					"description": "knownvehicledamages",
+					"type": "text"
+				},
+				"description": {
+					"description": "A textual description of known damages, both repaired and unrepaired.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "logo",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An associated logo.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "manufacturer",
+					"type": "organization"
+				},
+				"description": {
+					"description": "The manufacturer of the product.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "mileagefromodometer",
+					"type": "quantitativevalue"
+				},
+				"description": {
+					"description": "The total distance travelled by the particular vehicle since its initial production, as read from its odometer.Typical unit code(s): KMT for kilometers, SMI for statute miles",
+					"type": "quantitativevalue"
+				}
+			},
+			{
+				"name": {
+					"description": "model",
+					"type": "productmodel or  text"
+				},
+				"description": {
+					"description": "The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.",
+					"type": "productmodel or  text"
+				}
+			},
+			{
+				"name": {
+					"description": "mpn",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "numberofairbags",
+					"type": "number or  text"
+				},
+				"description": {
+					"description": "The number or type of airbags in the vehicle.",
+					"type": "number or  text"
+				}
+			},
+			{
+				"name": {
+					"description": "numberofaxles",
+					"type": "quantitativevalue or  number"
+				},
+				"description": {
+					"description": "The number of axles.Typical unit code(s): C62",
+					"type": "quantitativevalue or  number"
+				}
+			},
+			{
+				"name": {
+					"description": "numberofdoors",
+					"type": "quantitativevalue or  number"
+				},
+				"description": {
+					"description": "The number of doors.Typical unit code(s): C62",
+					"type": "quantitativevalue or  number"
+				}
+			},
+			{
+				"name": {
+					"description": "numberofforwardgears",
+					"type": "quantitativevalue or  number"
+				},
+				"description": {
+					"description": "The total number of forward gears available for the transmission system of the vehicle.Typical unit code(s): C62",
+					"type": "quantitativevalue or  number"
+				}
+			},
+			{
+				"name": {
+					"description": "numberofpreviousowners",
+					"type": "quantitativevalue or  number"
+				},
+				"description": {
+					"description": "The number of owners of the vehicle, including the current one.Typical unit code(s): C62",
+					"type": "quantitativevalue or  number"
+				}
+			},
+			{
+				"name": {
+					"description": "offers",
+					"type": "offer"
+				},
+				"description": {
+					"description": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
+					"type": "offer"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "productid",
+					"type": "text"
+				},
+				"description": {
+					"description": "The product identifier, such as ISBN. For example: &lt;meta itemprop=\'productID\' content=\'isbn:123-456-789\'/&gt;.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "productiondate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The date of production of the item, e.g. vehicle.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "purchasedate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The date the item e.g. vehicle was purchased by the current owner.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "releasedate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The release date of a product or product model. This can be used to distinguish the exact variant of a product.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "sku",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "steeringposition",
+					"type": "steeringpositionvalue"
+				},
+				"description": {
+					"description": "The position of the steering wheel or similar device (mostly for cars).",
+					"type": "steeringpositionvalue"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "vehicleconfiguration",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short text indicating the configuration of the vehicle, e.g. \'5dr hatchback ST 2.5 MT 225 hp\' or \'limited edition\'.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "vehicleengine",
+					"type": "enginespecification"
+				},
+				"description": {
+					"description": "Information about the engine or engines of the vehicle.",
+					"type": "enginespecification"
+				}
+			},
+			{
+				"name": {
+					"description": "vehicleidentificationnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "vehicleinteriorcolor",
+					"type": "text"
+				},
+				"description": {
+					"description": "The color or color combination of the interior of the vehicle.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "vehicleinteriortype",
+					"type": "text"
+				},
+				"description": {
+					"description": "The type or material of the interior of the vehicle (e.g. synthetic fabric, leather, wood, etc.). While most interior types are characterized by the material used, an interior type can also be based on vehicle usage or target audience.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "vehiclemodeldate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The release date of a vehicle model (often used to differentiate versions of the same make and model).",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "vehicleseatingcapacity",
+					"type": "quantitativevalue or  number"
+				},
+				"description": {
+					"description": "The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.Typical unit code(s): C62 for persons.",
+					"type": "quantitativevalue or  number"
+				}
+			},
+			{
+				"name": {
+					"description": "vehicletransmission",
+					"type": "url or  qualitativevalue or  text"
+				},
+				"description": {
+					"description": "The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) (\"gearbox\" for cars).",
+					"type": "url or  qualitativevalue or  text"
+				}
+			},
+			{
+				"name": {
+					"description": "weight",
+					"type": "quantitativevalue"
+				},
+				"description": {
+					"description": "The weight of the product or person.",
+					"type": "quantitativevalue"
+				}
+			},
+			{
+				"name": {
+					"description": "width",
+					"type": "quantitativevalue or  distance"
+				},
+				"description": {
+					"description": "The width of the item.",
+					"type": "quantitativevalue or  distance"
+				}
+			}]
+		},
+		"Vein": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "associatedpathophysiology",
+					"type": "text"
+				},
+				"description": {
+					"description": "If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "bodylocation",
+					"type": "text"
+				},
+				"description": {
+					"description": "Location in the body of the anatomical structure.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "code",
+					"type": "medicalcode"
+				},
+				"description": {
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"type": "medicalcode"
+				}
+			},
+			{
+				"name": {
+					"description": "connectedto",
+					"type": "anatomicalstructure"
+				},
+				"description": {
+					"description": "Other anatomical structures to which this structure is connected.",
+					"type": "anatomicalstructure"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "diagram",
+					"type": "imageobject"
+				},
+				"description": {
+					"description": "An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.",
+					"type": "imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "drainsto",
+					"type": "vessel"
+				},
+				"description": {
+					"description": "The vasculature that the vein drains into.",
+					"type": "vessel"
+				}
+			},
+			{
+				"name": {
+					"description": "function",
+					"type": "text"
+				},
+				"description": {
+					"description": "Function of the anatomical structure.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "guideline",
+					"type": "medicalguideline"
+				},
+				"description": {
+					"description": "A medical guideline related to this entity.",
+					"type": "medicalguideline"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "medicinesystem",
+					"type": "medicinesystem"
+				},
+				"description": {
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
+					"type": "medicinesystem"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "partofsystem",
+					"type": "anatomicalsystem"
+				},
+				"description": {
+					"description": "The anatomical or organ system that this structure is part of.",
+					"type": "anatomicalsystem"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "recognizingauthority",
+					"type": "organization"
+				},
+				"description": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "regiondrained",
+					"type": "anatomicalsystem or  anatomicalstructure"
+				},
+				"description": {
+					"description": "The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.",
+					"type": "anatomicalsystem or  anatomicalstructure"
+				}
+			},
+			{
+				"name": {
+					"description": "relatedcondition",
+					"type": "medicalcondition"
+				},
+				"description": {
+					"description": "A medical condition associated with this anatomy.",
+					"type": "medicalcondition"
+				}
+			},
+			{
+				"name": {
+					"description": "relatedtherapy",
+					"type": "medicaltherapy"
+				},
+				"description": {
+					"description": "A medical therapy related to this anatomy.",
+					"type": "medicaltherapy"
+				}
+			},
+			{
+				"name": {
+					"description": "relevantspecialty",
+					"type": "medicalspecialty"
+				},
+				"description": {
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"type": "medicalspecialty"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "study",
+					"type": "medicalstudy"
+				},
+				"description": {
+					"description": "A medical study or trial related to this entity.",
+					"type": "medicalstudy"
+				}
+			},
+			{
+				"name": {
+					"description": "substructure",
+					"type": "anatomicalstructure"
+				},
+				"description": {
+					"description": "Component (sub-)structure(s) that comprise this anatomical structure.",
+					"type": "anatomicalstructure"
+				}
+			},
+			{
+				"name": {
+					"description": "tributary",
+					"type": "anatomicalstructure"
+				},
+				"description": {
+					"description": "The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.",
+					"type": "anatomicalstructure"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"Vessel": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
 				}
 			},
@@ -669,7 +1865,7 @@
 					"type": "medicinesystem"
 				},
 				"description": {
-					"description": "The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.",
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"type": "medicinesystem"
 				}
 			},
@@ -709,7 +1905,7 @@
 					"type": "action"
 				},
 				"description": {
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
 				}
 			},
@@ -769,7 +1965,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
 				}
 			},

@@ -29,7 +29,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Book"
 							}
 						}
 					}
@@ -85,7 +85,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -197,7 +197,7 @@
 				{
 					"name": "contentrating",
 					"in": "formData",
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -239,7 +239,7 @@
 				{
 					"name": "datemodified",
 					"in": "formData",
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"required": false,
 					"type": "date or  datetime"
 				},
@@ -281,7 +281,7 @@
 				{
 					"name": "educationaluse",
 					"in": "formData",
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -302,7 +302,7 @@
 				{
 					"name": "fileformat",
 					"in": "formData",
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"required": false,
 					"type": "text"
 				},
@@ -358,7 +358,7 @@
 				{
 					"name": "interactivitytype",
 					"in": "formData",
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -400,7 +400,7 @@
 				{
 					"name": "learningresourcetype",
 					"in": "formData",
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -470,7 +470,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -533,7 +533,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -568,7 +568,7 @@
 				{
 					"name": "timerequired",
 					"in": "formData",
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"required": false,
 					"type": "duration"
 				},
@@ -582,7 +582,7 @@
 				{
 					"name": "typicalagerange",
 					"in": "formData",
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -620,7 +620,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Book"
 							}
 						}
 					}
@@ -646,7 +646,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Book"
 							}
 						}
 					}
@@ -709,7 +709,7 @@
 				{
 					"name": "additionaltype",
 					"in": "formData",
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"required": false,
 					"type": "url"
 				},
@@ -821,7 +821,7 @@
 				{
 					"name": "contentrating",
 					"in": "formData",
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -863,7 +863,7 @@
 				{
 					"name": "datemodified",
 					"in": "formData",
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"required": false,
 					"type": "date or  datetime"
 				},
@@ -905,7 +905,7 @@
 				{
 					"name": "educationaluse",
 					"in": "formData",
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -926,7 +926,7 @@
 				{
 					"name": "fileformat",
 					"in": "formData",
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"required": false,
 					"type": "text"
 				},
@@ -982,7 +982,7 @@
 				{
 					"name": "interactivitytype",
 					"in": "formData",
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1024,7 +1024,7 @@
 				{
 					"name": "learningresourcetype",
 					"in": "formData",
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1094,7 +1094,7 @@
 				{
 					"name": "potentialaction",
 					"in": "formData",
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"required": false,
 					"type": "action"
 				},
@@ -1157,7 +1157,7 @@
 				{
 					"name": "sameas",
 					"in": "formData",
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"required": false,
 					"type": "url"
 				},
@@ -1192,7 +1192,7 @@
 				{
 					"name": "timerequired",
 					"in": "formData",
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"required": false,
 					"type": "duration"
 				},
@@ -1206,7 +1206,7 @@
 				{
 					"name": "typicalagerange",
 					"in": "formData",
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"required": false,
 					"type": "text"
 				},
@@ -1244,7 +1244,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Book"
 							}
 						}
 					}
@@ -1268,7 +1268,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"$ref": "#/definitions/item"
+								"$ref": "#/definitions/Book"
 							}
 						}
 					}
@@ -1278,7 +1278,825 @@
 		}
 	},
 	"definitions": {
-		"item": {
+		"BloodTest": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "affectedby",
+					"type": "drug"
+				},
+				"description": {
+					"description": "Drugs that affect the test\'s results.",
+					"type": "drug"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "code",
+					"type": "medicalcode"
+				},
+				"description": {
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"type": "medicalcode"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "guideline",
+					"type": "medicalguideline"
+				},
+				"description": {
+					"description": "A medical guideline related to this entity.",
+					"type": "medicalguideline"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "medicinesystem",
+					"type": "medicinesystem"
+				},
+				"description": {
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
+					"type": "medicinesystem"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "normalrange",
+					"type": "text"
+				},
+				"description": {
+					"description": "Range of acceptable values for a typical patient, when applicable.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "recognizingauthority",
+					"type": "organization"
+				},
+				"description": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "relevantspecialty",
+					"type": "medicalspecialty"
+				},
+				"description": {
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"type": "medicalspecialty"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "signdetected",
+					"type": "medicalsign"
+				},
+				"description": {
+					"description": "A sign detected by the test.",
+					"type": "medicalsign"
+				}
+			},
+			{
+				"name": {
+					"description": "study",
+					"type": "medicalstudy"
+				},
+				"description": {
+					"description": "A medical study or trial related to this entity.",
+					"type": "medicalstudy"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "usedtodiagnose",
+					"type": "medicalcondition"
+				},
+				"description": {
+					"description": "A condition the test is used to diagnose.",
+					"type": "medicalcondition"
+				}
+			},
+			{
+				"name": {
+					"description": "usesdevice",
+					"type": "medicaldevice"
+				},
+				"description": {
+					"description": "Device used to perform the test.",
+					"type": "medicaldevice"
+				}
+			}]
+		},
+		"BoardingPolicyType": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "boardingpolicy",
+					"type": "airline or flight"
+				},
+				"description": {
+					"description": "The type of boarding policy used by the airline (e.g. zone-based or group-based). ",
+					"type": "airline or flight"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "supersededby",
+					"type": "class or  property or  enumeration"
+				},
+				"description": {
+					"description": "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+					"type": "class or  property or  enumeration"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"BodyOfWater": {
+			"properties": [{
+				"name": {
+					"description": "additionalproperty",
+					"type": "propertyvalue"
+				},
+				"description": {
+					"description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+					"type": "propertyvalue"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "address",
+					"type": "text or  postaladdress"
+				},
+				"description": {
+					"description": "Physical address of the item.",
+					"type": "text or  postaladdress"
+				}
+			},
+			{
+				"name": {
+					"description": "aggregaterating",
+					"type": "aggregaterating"
+				},
+				"description": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "branchcode",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short textual code (also called \"store code\") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code \"3047\" is a branchCode for a particular branch.      ",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "containedinplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and one that contains it. Supersedes containedIn. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "containsplace",
+					"type": "place"
+				},
+				"description": {
+					"description": "The basic containment relation between a place and another that it contains. Inverse property: containsPlace.",
+					"type": "place"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "event",
+					"type": "event"
+				},
+				"description": {
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"type": "event"
+				}
+			},
+			{
+				"name": {
+					"description": "faxnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The fax number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "geo",
+					"type": "geocoordinates or  geoshape"
+				},
+				"description": {
+					"description": "The geo coordinates of the place.",
+					"type": "geocoordinates or  geoshape"
+				}
+			},
+			{
+				"name": {
+					"description": "globallocationnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "hasmap",
+					"type": "url or  map"
+				},
+				"description": {
+					"description": "A URL to a map of the place. Supersedes map, maps.",
+					"type": "url or  map"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "isicv4",
+					"type": "text"
+				},
+				"description": {
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "logo",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An associated logo.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "openinghoursspecification",
+					"type": "openinghoursspecification"
+				},
+				"description": {
+					"description": "The opening hours of a certain place.",
+					"type": "openinghoursspecification"
+				}
+			},
+			{
+				"name": {
+					"description": "photo",
+					"type": "photograph or  imageobject"
+				},
+				"description": {
+					"description": "A photograph of this place. Supersedes photos.",
+					"type": "photograph or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "review",
+					"type": "review"
+				},
+				"description": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "telephone",
+					"type": "text"
+				},
+				"description": {
+					"description": "The telephone number.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"Bone": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "associatedpathophysiology",
+					"type": "text"
+				},
+				"description": {
+					"description": "If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "bodylocation",
+					"type": "text"
+				},
+				"description": {
+					"description": "Location in the body of the anatomical structure.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "code",
+					"type": "medicalcode"
+				},
+				"description": {
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"type": "medicalcode"
+				}
+			},
+			{
+				"name": {
+					"description": "connectedto",
+					"type": "anatomicalstructure"
+				},
+				"description": {
+					"description": "Other anatomical structures to which this structure is connected.",
+					"type": "anatomicalstructure"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "diagram",
+					"type": "imageobject"
+				},
+				"description": {
+					"description": "An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.",
+					"type": "imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "function",
+					"type": "text"
+				},
+				"description": {
+					"description": "Function of the anatomical structure.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "guideline",
+					"type": "medicalguideline"
+				},
+				"description": {
+					"description": "A medical guideline related to this entity.",
+					"type": "medicalguideline"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "medicinesystem",
+					"type": "medicinesystem"
+				},
+				"description": {
+					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
+					"type": "medicinesystem"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "partofsystem",
+					"type": "anatomicalsystem"
+				},
+				"description": {
+					"description": "The anatomical or organ system that this structure is part of.",
+					"type": "anatomicalsystem"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "recognizingauthority",
+					"type": "organization"
+				},
+				"description": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "relatedcondition",
+					"type": "medicalcondition"
+				},
+				"description": {
+					"description": "A medical condition associated with this anatomy.",
+					"type": "medicalcondition"
+				}
+			},
+			{
+				"name": {
+					"description": "relatedtherapy",
+					"type": "medicaltherapy"
+				},
+				"description": {
+					"description": "A medical therapy related to this anatomy.",
+					"type": "medicaltherapy"
+				}
+			},
+			{
+				"name": {
+					"description": "relevantspecialty",
+					"type": "medicalspecialty"
+				},
+				"description": {
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"type": "medicalspecialty"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "study",
+					"type": "medicalstudy"
+				},
+				"description": {
+					"description": "A medical study or trial related to this entity.",
+					"type": "medicalstudy"
+				}
+			},
+			{
+				"name": {
+					"description": "substructure",
+					"type": "anatomicalstructure"
+				},
+				"description": {
+					"description": "Component (sub-)structure(s) that comprise this anatomical structure.",
+					"type": "anatomicalstructure"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		},
+		"Book": {
 			"properties": [{
 				"name": {
 					"description": "about",
@@ -1345,7 +2163,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
 				}
 			},
@@ -1505,7 +2323,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+					"description": "Official rating of a piece of content&#x2014;for example,\'MPAA PG-13\'.",
 					"type": "text"
 				}
 			},
@@ -1565,7 +2383,7 @@
 					"type": "date or  datetime"
 				},
 				"description": {
-					"description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+					"description": "The date on which the CreativeWork was most recently modified or when the item\'s entry was modified within a DataFeed.",
 					"type": "date or  datetime"
 				}
 			},
@@ -1625,7 +2443,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+					"description": "The purpose of a work in the context of education; for example, \'assignment\', \'group work\'.",
 					"type": "text"
 				}
 			},
@@ -1655,7 +2473,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.",
+					"description": "Media type (aka MIME format, see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, \'encoding\' can be used to indicate each MediaObject alongside particular fileFormat information.",
 					"type": "text"
 				}
 			},
@@ -1735,7 +2553,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+					"description": "The predominant mode of learning supported by the learning resource. Acceptable values are \'active\', \'expositive\', or \'mixed\'.",
 					"type": "text"
 				}
 			},
@@ -1795,7 +2613,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+					"description": "The predominant type or kind characterizing the learning resource. For example, \'presentation\', \'handout\'.",
 					"type": "text"
 				}
 			},
@@ -1895,7 +2713,7 @@
 					"type": "action"
 				},
 				"description": {
-					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
 				}
 			},
@@ -1985,7 +2803,7 @@
 					"type": "url"
 				},
 				"description": {
-					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
 				}
 			},
@@ -2035,7 +2853,7 @@
 					"type": "duration"
 				},
 				"description": {
-					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \'P30M\', \'P1H25M\'.",
 					"type": "duration"
 				}
 			},
@@ -2055,7 +2873,7 @@
 					"type": "text"
 				},
 				"description": {
-					"description": "The typical expected age range, e.g. '7-9', '11-'.",
+					"description": "The typical expected age range, e.g. \'7-9\', \'11-\'.",
 					"type": "text"
 				}
 			},

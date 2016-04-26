@@ -1,0 +1,606 @@
+- swagger: "2.0"
+  info:
+    title: Lodging Reservation API
+    description: A reservation for lodging at a hotel, motel, inn, etc.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: lodging.reservation.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /lodging-reservation/:
+      get:
+        summary: Get Lodging Reservation
+        description: Returns Lodging Reservation
+        operationId: getLodgingReservation
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Lodging Reservation
+      post:
+        summary: Add Lodging Reservation
+        description: Add Lodging Reservation
+        operationId: addLodgingReservation
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: bookingtime
+          in: formData
+          description: The date and time the reservation was booked.
+          required: false
+          type: datetime
+        - name: broker
+          in: formData
+          description: An entity that arranges for an exchange between a buyer and a
+            seller.  In most cases a broker never acquires or releases ownership of
+            a product or service involved in an exchange.  If it is not clear whether
+            an entity is a broker, seller, or buyer, the latter two terms are preferred.
+            Supersedes bookingAgent.
+          required: false
+          type: person or  organization
+        - name: checkintime
+          in: formData
+          description: The earliest someone may check into a lodging establishment.
+          required: false
+          type: datetime
+        - name: checkouttime
+          in: formData
+          description: The latest someone may check out of a lodging establishment.
+          required: false
+          type: datetime
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: lodgingunitdescription
+          in: formData
+          description: A full description of the lodging unit.
+          required: false
+          type: text
+        - name: lodgingunittype
+          in: formData
+          description: Textual description of the unit type (including suite vs. room,
+            size of bed, etc.).
+          required: false
+          type: qualitativevalue or  text
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: modifiedtime
+          in: formData
+          description: The date and time the reservation was modified.
+          required: false
+          type: datetime
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: numadults
+          in: formData
+          description: The number of adults staying in the unit.
+          required: false
+          type: quantitativevalue or  integer
+        - name: numchildren
+          in: formData
+          description: The number of children staying in the unit.
+          required: false
+          type: quantitativevalue or  integer
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an 'object' role.
+          required: false
+          type: action
+        - name: pricecurrency
+          in: formData
+          description: The currency (in 3-letter ISO 4217 format) of the price or a
+            price component, when attached to PriceSpecification and its subtypes.
+          required: false
+          type: text
+        - name: programmembershipused
+          in: formData
+          description: Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+          required: false
+          type: programmembership
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: person or  organization
+        - name: reservationfor
+          in: formData
+          description: The thing -- flight, event, restaurant,etc. being reserved.
+          required: false
+          type: thing
+        - name: reservationid
+          in: formData
+          description: A unique identifier for the reservation.
+          required: false
+          type: text
+        - name: reservationstatus
+          in: formData
+          description: The current status of the reservation.
+          required: false
+          type: reservationstatustype
+        - name: reservedticket
+          in: formData
+          description: A ticket associated with the reservation.
+          required: false
+          type: ticket
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: totalprice
+          in: formData
+          description: The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          required: false
+          type: text or  pricespecification or  number
+        - name: undername
+          in: formData
+          description: The person or organization the reservation or ticket is for.
+          required: false
+          type: person or  organization
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Lodging Reservation
+    /lodging-reservation/{id}/:
+      get:
+        summary: Get Lodging Reservation
+        description: Returns a single Lodging Reservation
+        operationId: getLodgingReservation
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Lodging Reservation
+      put:
+        summary: Update Lodging Reservation
+        description: Update a single Lodging Reservation
+        operationId: updateLodgingReservationItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: bookingtime
+          in: formData
+          description: The date and time the reservation was booked.
+          required: false
+          type: datetime
+        - name: broker
+          in: formData
+          description: An entity that arranges for an exchange between a buyer and a
+            seller.  In most cases a broker never acquires or releases ownership of
+            a product or service involved in an exchange.  If it is not clear whether
+            an entity is a broker, seller, or buyer, the latter two terms are preferred.
+            Supersedes bookingAgent.
+          required: false
+          type: person or  organization
+        - name: checkintime
+          in: formData
+          description: The earliest someone may check into a lodging establishment.
+          required: false
+          type: datetime
+        - name: checkouttime
+          in: formData
+          description: The latest someone may check out of a lodging establishment.
+          required: false
+          type: datetime
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: lodgingunitdescription
+          in: formData
+          description: A full description of the lodging unit.
+          required: false
+          type: text
+        - name: lodgingunittype
+          in: formData
+          description: Textual description of the unit type (including suite vs. room,
+            size of bed, etc.).
+          required: false
+          type: qualitativevalue or  text
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: modifiedtime
+          in: formData
+          description: The date and time the reservation was modified.
+          required: false
+          type: datetime
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: numadults
+          in: formData
+          description: The number of adults staying in the unit.
+          required: false
+          type: quantitativevalue or  integer
+        - name: numchildren
+          in: formData
+          description: The number of children staying in the unit.
+          required: false
+          type: quantitativevalue or  integer
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an 'object' role.
+          required: false
+          type: action
+        - name: pricecurrency
+          in: formData
+          description: The currency (in 3-letter ISO 4217 format) of the price or a
+            price component, when attached to PriceSpecification and its subtypes.
+          required: false
+          type: text
+        - name: programmembershipused
+          in: formData
+          description: Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+          required: false
+          type: programmembership
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: person or  organization
+        - name: reservationfor
+          in: formData
+          description: The thing -- flight, event, restaurant,etc. being reserved.
+          required: false
+          type: thing
+        - name: reservationid
+          in: formData
+          description: A unique identifier for the reservation.
+          required: false
+          type: text
+        - name: reservationstatus
+          in: formData
+          description: The current status of the reservation.
+          required: false
+          type: reservationstatustype
+        - name: reservedticket
+          in: formData
+          description: A ticket associated with the reservation.
+          required: false
+          type: ticket
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: totalprice
+          in: formData
+          description: The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          required: false
+          type: text or  pricespecification or  number
+        - name: undername
+          in: formData
+          description: The person or organization the reservation or ticket is for.
+          required: false
+          type: person or  organization
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Lodging Reservation
+      delete:
+        summary: Lodging Reservation
+        description: Deletes a single Lodging Reservation
+        operationId: deleteLodgingReservation
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Lodging Reservation
+  definitions:
+    item:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: bookingtime
+          type: datetime
+        description:
+          description: The date and time the reservation was booked.
+          type: datetime
+      - name:
+          description: broker
+          type: person or  organization
+        description:
+          description: An entity that arranges for an exchange between a buyer and a
+            seller.  In most cases a broker never acquires or releases ownership of
+            a product or service involved in an exchange.  If it is not clear whether
+            an entity is a broker, seller, or buyer, the latter two terms are preferred.
+            Supersedes bookingAgent.
+          type: person or  organization
+      - name:
+          description: checkintime
+          type: datetime
+        description:
+          description: The earliest someone may check into a lodging establishment.
+          type: datetime
+      - name:
+          description: checkouttime
+          type: datetime
+        description:
+          description: The latest someone may check out of a lodging establishment.
+          type: datetime
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: lodgingunitdescription
+          type: text
+        description:
+          description: A full description of the lodging unit.
+          type: text
+      - name:
+          description: lodgingunittype
+          type: qualitativevalue or  text
+        description:
+          description: Textual description of the unit type (including suite vs. room,
+            size of bed, etc.).
+          type: qualitativevalue or  text
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: modifiedtime
+          type: datetime
+        description:
+          description: The date and time the reservation was modified.
+          type: datetime
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: numadults
+          type: quantitativevalue or  integer
+        description:
+          description: The number of adults staying in the unit.
+          type: quantitativevalue or  integer
+      - name:
+          description: numchildren
+          type: quantitativevalue or  integer
+        description:
+          description: The number of children staying in the unit.
+          type: quantitativevalue or  integer
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an 'object' role.
+          type: action
+      - name:
+          description: pricecurrency
+          type: text
+        description:
+          description: The currency (in 3-letter ISO 4217 format) of the price or a
+            price component, when attached to PriceSpecification and its subtypes.
+          type: text
+      - name:
+          description: programmembershipused
+          type: programmembership
+        description:
+          description: Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+          type: programmembership
+      - name:
+          description: provider
+          type: person or  organization
+        description:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: person or  organization
+      - name:
+          description: reservationfor
+          type: thing
+        description:
+          description: The thing -- flight, event, restaurant,etc. being reserved.
+          type: thing
+      - name:
+          description: reservationid
+          type: text
+        description:
+          description: A unique identifier for the reservation.
+          type: text
+      - name:
+          description: reservationstatus
+          type: reservationstatustype
+        description:
+          description: The current status of the reservation.
+          type: reservationstatustype
+      - name:
+          description: reservedticket
+          type: ticket
+        description:
+          description: A ticket associated with the reservation.
+          type: ticket
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: totalprice
+          type: text or  pricespecification or  number
+        description:
+          description: The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          type: text or  pricespecification or  number
+      - name:
+          description: undername
+          type: person or  organization
+        description:
+          description: The person or organization the reservation or ticket is for.
+          type: person or  organization
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url

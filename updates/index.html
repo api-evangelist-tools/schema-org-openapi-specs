@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<ul style="padding: 0px 50px 0px 50px;">
+{% for post in paginator.posts %}
+	{% if post.title != null %}
+	<li>
+		<a href="{{ post.source }}" title="{{ post.title }}" style="color:#000; font-size: 12px;">{{ post.title }}</a>
+		<span style="color:#000; font-size: 12px;">(&nbsp;<a href="http://{{ post.domain }}" style="color:#000; font-size: 12px;"><i>{{ post.date | date_to_string }}&nbsp;{% if post.domain != null %}on&nbsp;{{ post.domain }}{% endif %}</i></a>)</span>
+	</li>
+	{% endif %}
+{% endfor %}
+</ul>
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a href="/news/page{{paginator.next_page}}" class="older">Older</a>
+  {% else %}
+    <span class="next">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a href="/" class="newer">Newer</a>
+    {% else %}
+      <a href="/news/page{{paginator.previous_page}}" class="newer">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="previous">Newer</span>
+  {% endif %}
+</div>

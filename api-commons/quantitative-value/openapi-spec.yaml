@@ -1,0 +1,946 @@
+- swagger: "2.0"
+  info:
+    title: Quantitative Value API
+    description: ' A point value or interval for product characteristics and other purposes.'
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: quantitative.value.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /quantitative-value/:
+      get:
+        summary: Get Quantitative Value
+        description: Returns Quantitative Value
+        operationId: getQuantitativeValue
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Quantitative Value
+      post:
+        summary: Add Quantitative Value
+        description: Add Quantitative Value
+        operationId: addQuantitativeValue
+        parameters:
+        - name: additionalproperty
+          in: formData
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          required: false
+          type: propertyvalue
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: advancebookingrequirement
+          in: formData
+          description: 'The amount of time that is required between accepting the offer
+            and the actual usage of the resource or service. '
+          required: false
+          type: demand or offer
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: cargovolume
+          in: formData
+          description: 'The available volume for cargo or luggage. For automobiles,
+            this is usually the trunk volume.Typical unit code(s): LTR for liters, FTQ
+            for cubic foot/feetNote: You can use minValue and maxValue to indicate ranges. '
+          required: false
+          type: vehicle
+        - name: deliveryleadtime
+          in: formData
+          description: 'The typical delay between the receipt of the order and the goods
+            leaving the warehouse. '
+          required: false
+          type: demand or offer
+        - name: depth
+          in: formData
+          description: 'The depth of the item. '
+          required: false
+          type: visualartwork or product
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: durationofwarranty
+          in: formData
+          description: 'The duration of the warranty promise. Common unitCode values
+            are ANN for year, MON for months, or DAY for days. '
+          required: false
+          type: warrantypromise
+        - name: eligibleduration
+          in: formData
+          description: 'The duration for which the given offer is valid. '
+          required: false
+          type: demand or offer
+        - name: eligiblequantity
+          in: formData
+          description: 'The interval and unit of measurement of ordering quantities
+            for which the offer or price specification is valid. This allows e.g. specifying
+            that a certain freight charge is valid only for a certain quantity. '
+          required: false
+          type: demand or offer or pricespecification
+        - name: fuelconsumption
+          in: formData
+          description: 'The amount of fuel consumed for traveling a particular distance
+            or temporal duration with the given vehicle (e.g. liters per 100 km).Note
+            1: There are unfortunately no standard unit codes for liters per 100 km.Use
+            unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There
+            are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8
+            liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are
+            reciprocal.Note 3: Often, the absolute value is useful only when related
+            to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can
+            use valueReference to link the value for the fuel consumption to another
+            value. '
+          required: false
+          type: vehicle
+        - name: fuelefficiency
+          in: formData
+          description: 'The distance traveled per unit of fuel used; most commonly miles
+            per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately
+            no standard unit codes for miles per gallon or kilometers per liter.Use
+            unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There
+            are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8
+            liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are
+            reciprocal.Note 3: Often, the absolute value is useful only when related
+            to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can
+            use valueReference to link the value for the fuel economy to another value. '
+          required: false
+          type: vehicle
+        - name: height
+          in: formData
+          description: 'The height of the item. '
+          required: false
+          type: person or visualartwork or product or mediaobject
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: inventorylevel
+          in: formData
+          description: 'The current approximate inventory level for the item or items. '
+          required: false
+          type: demand or someproducts or offer
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: maxvalue
+          in: formData
+          description: The upper value of some characteristic or property.
+          required: false
+          type: number
+        - name: mileagefromodometer
+          in: formData
+          description: 'The total distance travelled by the particular vehicle since
+            its initial production, as read from its odometer.Typical unit code(s):
+            KMT for kilometers, SMI for statute miles '
+          required: false
+          type: vehicle
+        - name: minvalue
+          in: formData
+          description: The lower value of some characteristic or property.
+          required: false
+          type: number
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: numadults
+          in: formData
+          description: 'The number of adults staying in the unit. '
+          required: false
+          type: lodgingreservation
+        - name: numberofaxles
+          in: formData
+          description: 'The number of axles.Typical unit code(s): C62 '
+          required: false
+          type: vehicle
+        - name: numberofdoors
+          in: formData
+          description: 'The number of doors.Typical unit code(s): C62 '
+          required: false
+          type: vehicle
+        - name: numberofemployees
+          in: formData
+          description: 'The number of employees in an organization e.g. business. '
+          required: false
+          type: businessaudience or organization
+        - name: numberofforwardgears
+          in: formData
+          description: 'The total number of forward gears available for the transmission
+            system of the vehicle.Typical unit code(s): C62 '
+          required: false
+          type: vehicle
+        - name: numberofplayers
+          in: formData
+          description: 'Indicate how many people can play this game (minimum, maximum,
+            or range). '
+          required: false
+          type: game or videogameseries
+        - name: numberofpreviousowners
+          in: formData
+          description: 'The number of owners of the vehicle, including the current one.Typical
+            unit code(s): C62 '
+          required: false
+          type: vehicle
+        - name: numchildren
+          in: formData
+          description: 'The number of children staying in the unit. '
+          required: false
+          type: lodgingreservation
+        - name: partysize
+          in: formData
+          description: 'Number of people the reservation should accommodate. '
+          required: false
+          type: foodestablishmentreservation or taxireservation
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an 'object' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: unitcode
+          in: formData
+          description: The unit of measurement given using the UN/CEFACT Common Code
+            (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may
+            be used with a prefix followed by a colon.
+          required: false
+          type: text or  url
+        - name: unittext
+          in: formData
+          description: A string or text indicating the unit of measurement. Useful if
+            you cannot provide a standard unit code forunitCode.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: value
+          in: formData
+          description: The value of the quantitative value or property value node. For
+            QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue,
+            it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.
+          required: false
+          type: text or  structuredvalue or  boolean or  number
+        - name: valuereference
+          in: formData
+          description: A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+          required: false
+          type: qualitativevalue or  quantitativevalue or  enumeration or  structuredvalue
+            or  propertyvalue
+        - name: vehicleseatingcapacity
+          in: formData
+          description: 'The number of passengers that can be seated in the vehicle,
+            both in terms of the physical space available, and in terms of limitations
+            set by law.Typical unit code(s): C62 for persons. '
+          required: false
+          type: vehicle
+        - name: weight
+          in: formData
+          description: 'The weight of the product or person. '
+          required: false
+          type: person or product
+        - name: width
+          in: formData
+          description: 'The width of the item. '
+          required: false
+          type: visualartwork or product or mediaobject
+        - name: yearlyrevenue
+          in: formData
+          description: 'The size of the business in annual revenue. '
+          required: false
+          type: businessaudience
+        - name: yearsinoperation
+          in: formData
+          description: 'The age of the business. '
+          required: false
+          type: businessaudience
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Quantitative Value
+    /quantitative-value/{id}/:
+      get:
+        summary: Get Quantitative Value
+        description: Returns a single Quantitative Value
+        operationId: getQuantitativeValue
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Quantitative Value
+      put:
+        summary: Update Quantitative Value
+        description: Update a single Quantitative Value
+        operationId: updateQuantitativeValueItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionalproperty
+          in: formData
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          required: false
+          type: propertyvalue
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: advancebookingrequirement
+          in: formData
+          description: 'The amount of time that is required between accepting the offer
+            and the actual usage of the resource or service. '
+          required: false
+          type: demand or offer
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: cargovolume
+          in: formData
+          description: 'The available volume for cargo or luggage. For automobiles,
+            this is usually the trunk volume.Typical unit code(s): LTR for liters, FTQ
+            for cubic foot/feetNote: You can use minValue and maxValue to indicate ranges. '
+          required: false
+          type: vehicle
+        - name: deliveryleadtime
+          in: formData
+          description: 'The typical delay between the receipt of the order and the goods
+            leaving the warehouse. '
+          required: false
+          type: demand or offer
+        - name: depth
+          in: formData
+          description: 'The depth of the item. '
+          required: false
+          type: visualartwork or product
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: durationofwarranty
+          in: formData
+          description: 'The duration of the warranty promise. Common unitCode values
+            are ANN for year, MON for months, or DAY for days. '
+          required: false
+          type: warrantypromise
+        - name: eligibleduration
+          in: formData
+          description: 'The duration for which the given offer is valid. '
+          required: false
+          type: demand or offer
+        - name: eligiblequantity
+          in: formData
+          description: 'The interval and unit of measurement of ordering quantities
+            for which the offer or price specification is valid. This allows e.g. specifying
+            that a certain freight charge is valid only for a certain quantity. '
+          required: false
+          type: demand or offer or pricespecification
+        - name: fuelconsumption
+          in: formData
+          description: 'The amount of fuel consumed for traveling a particular distance
+            or temporal duration with the given vehicle (e.g. liters per 100 km).Note
+            1: There are unfortunately no standard unit codes for liters per 100 km.Use
+            unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There
+            are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8
+            liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are
+            reciprocal.Note 3: Often, the absolute value is useful only when related
+            to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can
+            use valueReference to link the value for the fuel consumption to another
+            value. '
+          required: false
+          type: vehicle
+        - name: fuelefficiency
+          in: formData
+          description: 'The distance traveled per unit of fuel used; most commonly miles
+            per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately
+            no standard unit codes for miles per gallon or kilometers per liter.Use
+            unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There
+            are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8
+            liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are
+            reciprocal.Note 3: Often, the absolute value is useful only when related
+            to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can
+            use valueReference to link the value for the fuel economy to another value. '
+          required: false
+          type: vehicle
+        - name: height
+          in: formData
+          description: 'The height of the item. '
+          required: false
+          type: person or visualartwork or product or mediaobject
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: inventorylevel
+          in: formData
+          description: 'The current approximate inventory level for the item or items. '
+          required: false
+          type: demand or someproducts or offer
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: maxvalue
+          in: formData
+          description: The upper value of some characteristic or property.
+          required: false
+          type: number
+        - name: mileagefromodometer
+          in: formData
+          description: 'The total distance travelled by the particular vehicle since
+            its initial production, as read from its odometer.Typical unit code(s):
+            KMT for kilometers, SMI for statute miles '
+          required: false
+          type: vehicle
+        - name: minvalue
+          in: formData
+          description: The lower value of some characteristic or property.
+          required: false
+          type: number
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: numadults
+          in: formData
+          description: 'The number of adults staying in the unit. '
+          required: false
+          type: lodgingreservation
+        - name: numberofaxles
+          in: formData
+          description: 'The number of axles.Typical unit code(s): C62 '
+          required: false
+          type: vehicle
+        - name: numberofdoors
+          in: formData
+          description: 'The number of doors.Typical unit code(s): C62 '
+          required: false
+          type: vehicle
+        - name: numberofemployees
+          in: formData
+          description: 'The number of employees in an organization e.g. business. '
+          required: false
+          type: businessaudience or organization
+        - name: numberofforwardgears
+          in: formData
+          description: 'The total number of forward gears available for the transmission
+            system of the vehicle.Typical unit code(s): C62 '
+          required: false
+          type: vehicle
+        - name: numberofplayers
+          in: formData
+          description: 'Indicate how many people can play this game (minimum, maximum,
+            or range). '
+          required: false
+          type: game or videogameseries
+        - name: numberofpreviousowners
+          in: formData
+          description: 'The number of owners of the vehicle, including the current one.Typical
+            unit code(s): C62 '
+          required: false
+          type: vehicle
+        - name: numchildren
+          in: formData
+          description: 'The number of children staying in the unit. '
+          required: false
+          type: lodgingreservation
+        - name: partysize
+          in: formData
+          description: 'Number of people the reservation should accommodate. '
+          required: false
+          type: foodestablishmentreservation or taxireservation
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an 'object' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: unitcode
+          in: formData
+          description: The unit of measurement given using the UN/CEFACT Common Code
+            (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may
+            be used with a prefix followed by a colon.
+          required: false
+          type: text or  url
+        - name: unittext
+          in: formData
+          description: A string or text indicating the unit of measurement. Useful if
+            you cannot provide a standard unit code forunitCode.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: value
+          in: formData
+          description: The value of the quantitative value or property value node. For
+            QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue,
+            it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.
+          required: false
+          type: text or  structuredvalue or  boolean or  number
+        - name: valuereference
+          in: formData
+          description: A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+          required: false
+          type: qualitativevalue or  quantitativevalue or  enumeration or  structuredvalue
+            or  propertyvalue
+        - name: vehicleseatingcapacity
+          in: formData
+          description: 'The number of passengers that can be seated in the vehicle,
+            both in terms of the physical space available, and in terms of limitations
+            set by law.Typical unit code(s): C62 for persons. '
+          required: false
+          type: vehicle
+        - name: weight
+          in: formData
+          description: 'The weight of the product or person. '
+          required: false
+          type: person or product
+        - name: width
+          in: formData
+          description: 'The width of the item. '
+          required: false
+          type: visualartwork or product or mediaobject
+        - name: yearlyrevenue
+          in: formData
+          description: 'The size of the business in annual revenue. '
+          required: false
+          type: businessaudience
+        - name: yearsinoperation
+          in: formData
+          description: 'The age of the business. '
+          required: false
+          type: businessaudience
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Quantitative Value
+      delete:
+        summary: Quantitative Value
+        description: Deletes a single Quantitative Value
+        operationId: deleteQuantitativeValue
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Quantitative Value
+  definitions:
+    item:
+      properties:
+      - name:
+          description: additionalproperty
+          type: propertyvalue
+        description:
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          type: propertyvalue
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: advancebookingrequirement
+          type: demand or offer
+        description:
+          description: 'The amount of time that is required between accepting the offer
+            and the actual usage of the resource or service. '
+          type: demand or offer
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: cargovolume
+          type: vehicle
+        description:
+          description: 'The available volume for cargo or luggage. For automobiles,
+            this is usually the trunk volume.Typical unit code(s): LTR for liters, FTQ
+            for cubic foot/feetNote: You can use minValue and maxValue to indicate ranges. '
+          type: vehicle
+      - name:
+          description: deliveryleadtime
+          type: demand or offer
+        description:
+          description: 'The typical delay between the receipt of the order and the goods
+            leaving the warehouse. '
+          type: demand or offer
+      - name:
+          description: depth
+          type: visualartwork or product
+        description:
+          description: 'The depth of the item. '
+          type: visualartwork or product
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: durationofwarranty
+          type: warrantypromise
+        description:
+          description: 'The duration of the warranty promise. Common unitCode values
+            are ANN for year, MON for months, or DAY for days. '
+          type: warrantypromise
+      - name:
+          description: eligibleduration
+          type: demand or offer
+        description:
+          description: 'The duration for which the given offer is valid. '
+          type: demand or offer
+      - name:
+          description: eligiblequantity
+          type: demand or offer or pricespecification
+        description:
+          description: 'The interval and unit of measurement of ordering quantities
+            for which the offer or price specification is valid. This allows e.g. specifying
+            that a certain freight charge is valid only for a certain quantity. '
+          type: demand or offer or pricespecification
+      - name:
+          description: fuelconsumption
+          type: vehicle
+        description:
+          description: 'The amount of fuel consumed for traveling a particular distance
+            or temporal duration with the given vehicle (e.g. liters per 100 km).Note
+            1: There are unfortunately no standard unit codes for liters per 100 km.Use
+            unitText to indicate the unit of measurement, e.g. L/100 km.Note 2: There
+            are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8
+            liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are
+            reciprocal.Note 3: Often, the absolute value is useful only when related
+            to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can
+            use valueReference to link the value for the fuel consumption to another
+            value. '
+          type: vehicle
+      - name:
+          description: fuelefficiency
+          type: vehicle
+        description:
+          description: 'The distance traveled per unit of fuel used; most commonly miles
+            per gallon (mpg) or kilometers per liter (km/L).Note 1: There are unfortunately
+            no standard unit codes for miles per gallon or kilometers per liter.Use
+            unitText to indicate the unit of measurement, e.g. mpg or km/L.Note 2: There
+            are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8
+            liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are
+            reciprocal.Note 3: Often, the absolute value is useful only when related
+            to driving speed ("at 80 km/h") or usage pattern ("city traffic"). You can
+            use valueReference to link the value for the fuel economy to another value. '
+          type: vehicle
+      - name:
+          description: height
+          type: person or visualartwork or product or mediaobject
+        description:
+          description: 'The height of the item. '
+          type: person or visualartwork or product or mediaobject
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: inventorylevel
+          type: demand or someproducts or offer
+        description:
+          description: 'The current approximate inventory level for the item or items. '
+          type: demand or someproducts or offer
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: maxvalue
+          type: number
+        description:
+          description: The upper value of some characteristic or property.
+          type: number
+      - name:
+          description: mileagefromodometer
+          type: vehicle
+        description:
+          description: 'The total distance travelled by the particular vehicle since
+            its initial production, as read from its odometer.Typical unit code(s):
+            KMT for kilometers, SMI for statute miles '
+          type: vehicle
+      - name:
+          description: minvalue
+          type: number
+        description:
+          description: The lower value of some characteristic or property.
+          type: number
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: numadults
+          type: lodgingreservation
+        description:
+          description: 'The number of adults staying in the unit. '
+          type: lodgingreservation
+      - name:
+          description: numberofaxles
+          type: vehicle
+        description:
+          description: 'The number of axles.Typical unit code(s): C62 '
+          type: vehicle
+      - name:
+          description: numberofdoors
+          type: vehicle
+        description:
+          description: 'The number of doors.Typical unit code(s): C62 '
+          type: vehicle
+      - name:
+          description: numberofemployees
+          type: businessaudience or organization
+        description:
+          description: 'The number of employees in an organization e.g. business. '
+          type: businessaudience or organization
+      - name:
+          description: numberofforwardgears
+          type: vehicle
+        description:
+          description: 'The total number of forward gears available for the transmission
+            system of the vehicle.Typical unit code(s): C62 '
+          type: vehicle
+      - name:
+          description: numberofplayers
+          type: game or videogameseries
+        description:
+          description: 'Indicate how many people can play this game (minimum, maximum,
+            or range). '
+          type: game or videogameseries
+      - name:
+          description: numberofpreviousowners
+          type: vehicle
+        description:
+          description: 'The number of owners of the vehicle, including the current one.Typical
+            unit code(s): C62 '
+          type: vehicle
+      - name:
+          description: numchildren
+          type: lodgingreservation
+        description:
+          description: 'The number of children staying in the unit. '
+          type: lodgingreservation
+      - name:
+          description: partysize
+          type: foodestablishmentreservation or taxireservation
+        description:
+          description: 'Number of people the reservation should accommodate. '
+          type: foodestablishmentreservation or taxireservation
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an 'object' role.
+          type: action
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: unitcode
+          type: text or  url
+        description:
+          description: The unit of measurement given using the UN/CEFACT Common Code
+            (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may
+            be used with a prefix followed by a colon.
+          type: text or  url
+      - name:
+          description: unittext
+          type: text
+        description:
+          description: A string or text indicating the unit of measurement. Useful if
+            you cannot provide a standard unit code forunitCode.
+          type: text
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: value
+          type: text or  structuredvalue or  boolean or  number
+        description:
+          description: The value of the quantitative value or property value node. For
+            QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue,
+            it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.
+          type: text or  structuredvalue or  boolean or  number
+      - name:
+          description: valuereference
+          type: qualitativevalue or  quantitativevalue or  enumeration or  structuredvalue
+            or  propertyvalue
+        description:
+          description: A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+          type: qualitativevalue or  quantitativevalue or  enumeration or  structuredvalue
+            or  propertyvalue
+      - name:
+          description: vehicleseatingcapacity
+          type: vehicle
+        description:
+          description: 'The number of passengers that can be seated in the vehicle,
+            both in terms of the physical space available, and in terms of limitations
+            set by law.Typical unit code(s): C62 for persons. '
+          type: vehicle
+      - name:
+          description: weight
+          type: person or product
+        description:
+          description: 'The weight of the product or person. '
+          type: person or product
+      - name:
+          description: width
+          type: visualartwork or product or mediaobject
+        description:
+          description: 'The width of the item. '
+          type: visualartwork or product or mediaobject
+      - name:
+          description: yearlyrevenue
+          type: businessaudience
+        description:
+          description: 'The size of the business in annual revenue. '
+          type: businessaudience
+      - name:
+          description: yearsinoperation
+          type: businessaudience
+        description:
+          description: 'The age of the business. '
+          type: businessaudience

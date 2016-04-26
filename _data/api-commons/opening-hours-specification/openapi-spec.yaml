@@ -1,0 +1,407 @@
+- swagger: "2.0"
+  info:
+    title: Opening Hours Specification API
+    description: A structured value providing information about the opening hours of
+      a place or a certain service inside a place.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: opening.hours.specification.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /opening-hours-specification/:
+      get:
+        summary: Get Opening Hours Specification
+        description: Returns Opening Hours Specification
+        operationId: getOpeningHoursSpecification
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Opening Hours Specification
+      post:
+        summary: Add Opening Hours Specification
+        description: Add Opening Hours Specification
+        operationId: addOpeningHoursSpecification
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: closes
+          in: formData
+          description: The closing hour of the place or service on the given day(s)
+            of the week.
+          required: false
+          type: time
+        - name: dayofweek
+          in: formData
+          description: The day of the week for which these opening hours are valid.
+          required: false
+          type: dayofweek
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: hoursavailable
+          in: formData
+          description: 'The hours during which this service or contact is available. '
+          required: false
+          type: contactpoint or service
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: openinghoursspecification
+          in: formData
+          description: 'The opening hours of a certain place. '
+          required: false
+          type: place
+        - name: opens
+          in: formData
+          description: The opening hour of the place or service on the given day(s)
+            of the week.
+          required: false
+          type: time
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an 'object' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: validfrom
+          in: formData
+          description: The date when the item becomes valid.
+          required: false
+          type: datetime
+        - name: validthrough
+          in: formData
+          description: The end of the validity of offer, price specification, or opening
+            hours data.
+          required: false
+          type: datetime
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Opening Hours Specification
+    /opening-hours-specification/{id}/:
+      get:
+        summary: Get Opening Hours Specification
+        description: Returns a single Opening Hours Specification
+        operationId: getOpeningHoursSpecification
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Opening Hours Specification
+      put:
+        summary: Update Opening Hours Specification
+        description: Update a single Opening Hours Specification
+        operationId: updateOpeningHoursSpecificationItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: closes
+          in: formData
+          description: The closing hour of the place or service on the given day(s)
+            of the week.
+          required: false
+          type: time
+        - name: dayofweek
+          in: formData
+          description: The day of the week for which these opening hours are valid.
+          required: false
+          type: dayofweek
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: hoursavailable
+          in: formData
+          description: 'The hours during which this service or contact is available. '
+          required: false
+          type: contactpoint or service
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: openinghoursspecification
+          in: formData
+          description: 'The opening hours of a certain place. '
+          required: false
+          type: place
+        - name: opens
+          in: formData
+          description: The opening hour of the place or service on the given day(s)
+            of the week.
+          required: false
+          type: time
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an 'object' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: validfrom
+          in: formData
+          description: The date when the item becomes valid.
+          required: false
+          type: datetime
+        - name: validthrough
+          in: formData
+          description: The end of the validity of offer, price specification, or opening
+            hours data.
+          required: false
+          type: datetime
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Opening Hours Specification
+      delete:
+        summary: Opening Hours Specification
+        description: Deletes a single Opening Hours Specification
+        operationId: deleteOpeningHoursSpecification
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/item'
+        tags:
+        - Opening Hours Specification
+  definitions:
+    item:
+      properties:
+      - name:
+          description: additionaltype
+          type: url
+        description:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the 'typeof' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+      - name:
+          description: alternatename
+          type: text
+        description:
+          description: An alias for the item.
+          type: text
+      - name:
+          description: closes
+          type: time
+        description:
+          description: The closing hour of the place or service on the given day(s)
+            of the week.
+          type: time
+      - name:
+          description: dayofweek
+          type: dayofweek
+        description:
+          description: The day of the week for which these opening hours are valid.
+          type: dayofweek
+      - name:
+          description: description
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+      - name:
+          description: hoursavailable
+          type: contactpoint or service
+        description:
+          description: 'The hours during which this service or contact is available. '
+          type: contactpoint or service
+      - name:
+          description: image
+          type: url or  imageobject
+        description:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+      - name:
+          description: mainentityofpage
+          type: creativework or  url
+        description:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+      - name:
+          description: name
+          type: text
+        description:
+          description: The name of the item.
+          type: text
+      - name:
+          description: openinghoursspecification
+          type: place
+        description:
+          description: 'The opening hours of a certain place. '
+          type: place
+      - name:
+          description: opens
+          type: time
+        description:
+          description: The opening hour of the place or service on the given day(s)
+            of the week.
+          type: time
+      - name:
+          description: potentialaction
+          type: action
+        description:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an 'object' role.
+          type: action
+      - name:
+          description: sameas
+          type: url
+        description:
+          description: URL of a reference Web page that unambiguously indicates the
+            item's identity. E.g. the URL of the item's Wikipedia page, Freebase page,
+            or official website.
+          type: url
+      - name:
+          description: url
+          type: url
+        description:
+          description: URL of the item.
+          type: url
+      - name:
+          description: validfrom
+          type: datetime
+        description:
+          description: The date when the item becomes valid.
+          type: datetime
+      - name:
+          description: validthrough
+          type: datetime
+        description:
+          description: The end of the validity of offer, price specification, or opening
+            hours data.
+          type: datetime

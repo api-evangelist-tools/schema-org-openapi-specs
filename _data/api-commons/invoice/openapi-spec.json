@@ -1,0 +1,736 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Invoice API",
+		"description": "A statement of the money due for goods or services; a bill.",
+		"termsOfService": "http://apievangelist.com/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "invoice.example.com",
+	"basePath": "/",
+	"schemes": ["http"],
+	"produces": ["application/json"],
+	"paths": {
+		"/invoice/": {
+			"get": {
+				"summary": "Get Invoice",
+				"description": "Returns Invoice",
+				"operationId": "getInvoice",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/item"
+							}
+						}
+					}
+				},
+				"tags": ["Invoice"]
+			},
+			"post": {
+				"summary": "Add Invoice",
+				"description": "Add Invoice",
+				"operationId": "addInvoice",
+				"parameters": [{
+					"name": "accountid",
+					"in": "formData",
+					"description": "The identifier for the account the payment will be applied to.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "billingperiod",
+					"in": "formData",
+					"description": "The time interval used to compute the invoice.",
+					"required": false,
+					"type": "duration"
+				},
+				{
+					"name": "broker",
+					"in": "formData",
+					"description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes bookingAgent.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "category",
+					"in": "formData",
+					"description": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+					"required": false,
+					"type": "thing or  text or  physicalactivitycategory"
+				},
+				{
+					"name": "confirmationnumber",
+					"in": "formData",
+					"description": "A number that confirms the given order or payment has been received.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "customer",
+					"in": "formData",
+					"description": "Party placing the order or paying the invoice.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "imageobject or  url"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "minimumpaymentdue",
+					"in": "formData",
+					"description": "The minimum payment required at this time.",
+					"required": false,
+					"type": "pricespecification"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "partofinvoice",
+					"in": "formData",
+					"description": "The order is being paid as part of the referenced Invoice. ",
+					"required": false,
+					"type": "order"
+				},
+				{
+					"name": "paymentduedate",
+					"in": "formData",
+					"description": "The date that payment is due. Supersedes paymentDue.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "paymentmethod",
+					"in": "formData",
+					"description": "The name of the credit card or other method of payment for the order.",
+					"required": false,
+					"type": "paymentmethod"
+				},
+				{
+					"name": "paymentmethodid",
+					"in": "formData",
+					"description": "An identifier for the method of payment used (e.g. the last 4 digits of the credit card).",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "paymentstatus",
+					"in": "formData",
+					"description": "The status of payment; whether the invoice has been paid or not.",
+					"required": false,
+					"type": "text or  paymentstatustype"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "provider",
+					"in": "formData",
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "referencesorder",
+					"in": "formData",
+					"description": "The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.",
+					"required": false,
+					"type": "order"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "scheduledpaymentdate",
+					"in": "formData",
+					"description": "The date the invoice is scheduled to be paid.",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "totalpaymentdue",
+					"in": "formData",
+					"description": "The total amount due.",
+					"required": false,
+					"type": "pricespecification"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/item"
+							}
+						}
+					}
+				},
+				"tags": ["Invoice"]
+			}
+		},
+		"/invoice/{id}/": {
+			"get": {
+				"summary": "Get Invoice",
+				"description": "Returns a single Invoice",
+				"operationId": "getInvoice",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/item"
+							}
+						}
+					}
+				},
+				"tags": ["Invoice"]
+			},
+			"put": {
+				"summary": "Update Invoice",
+				"description": "Update a single Invoice",
+				"operationId": "updateInvoiceItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "accountid",
+					"in": "formData",
+					"description": "The identifier for the account the payment will be applied to.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "billingperiod",
+					"in": "formData",
+					"description": "The time interval used to compute the invoice.",
+					"required": false,
+					"type": "duration"
+				},
+				{
+					"name": "broker",
+					"in": "formData",
+					"description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes bookingAgent.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "category",
+					"in": "formData",
+					"description": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+					"required": false,
+					"type": "thing or  text or  physicalactivitycategory"
+				},
+				{
+					"name": "confirmationnumber",
+					"in": "formData",
+					"description": "A number that confirms the given order or payment has been received.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "customer",
+					"in": "formData",
+					"description": "Party placing the order or paying the invoice.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "imageobject or  url"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "minimumpaymentdue",
+					"in": "formData",
+					"description": "The minimum payment required at this time.",
+					"required": false,
+					"type": "pricespecification"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "partofinvoice",
+					"in": "formData",
+					"description": "The order is being paid as part of the referenced Invoice. ",
+					"required": false,
+					"type": "order"
+				},
+				{
+					"name": "paymentduedate",
+					"in": "formData",
+					"description": "The date that payment is due. Supersedes paymentDue.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "paymentmethod",
+					"in": "formData",
+					"description": "The name of the credit card or other method of payment for the order.",
+					"required": false,
+					"type": "paymentmethod"
+				},
+				{
+					"name": "paymentmethodid",
+					"in": "formData",
+					"description": "An identifier for the method of payment used (e.g. the last 4 digits of the credit card).",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "paymentstatus",
+					"in": "formData",
+					"description": "The status of payment; whether the invoice has been paid or not.",
+					"required": false,
+					"type": "text or  paymentstatustype"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "provider",
+					"in": "formData",
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "referencesorder",
+					"in": "formData",
+					"description": "The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.",
+					"required": false,
+					"type": "order"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "scheduledpaymentdate",
+					"in": "formData",
+					"description": "The date the invoice is scheduled to be paid.",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "totalpaymentdue",
+					"in": "formData",
+					"description": "The total amount due.",
+					"required": false,
+					"type": "pricespecification"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/item"
+							}
+						}
+					}
+				},
+				"tags": ["Invoice"]
+			},
+			"delete": {
+				"summary": "Invoice",
+				"description": "Deletes a single Invoice",
+				"operationId": "deleteInvoice",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/item"
+							}
+						}
+					}
+				},
+				"tags": ["Invoice"]
+			}
+		}
+	},
+	"definitions": {
+		"item": {
+			"properties": [{
+				"name": {
+					"description": "accountid",
+					"type": "text"
+				},
+				"description": {
+					"description": "The identifier for the account the payment will be applied to.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "billingperiod",
+					"type": "duration"
+				},
+				"description": {
+					"description": "The time interval used to compute the invoice.",
+					"type": "duration"
+				}
+			},
+			{
+				"name": {
+					"description": "broker",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes bookingAgent.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "category",
+					"type": "thing or  text or  physicalactivitycategory"
+				},
+				"description": {
+					"description": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+					"type": "thing or  text or  physicalactivitycategory"
+				}
+			},
+			{
+				"name": {
+					"description": "confirmationnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "A number that confirms the given order or payment has been received.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "customer",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "Party placing the order or paying the invoice.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "imageobject or  url"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "imageobject or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "creativework or  url"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				}
+			},
+			{
+				"name": {
+					"description": "minimumpaymentdue",
+					"type": "pricespecification"
+				},
+				"description": {
+					"description": "The minimum payment required at this time.",
+					"type": "pricespecification"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "partofinvoice",
+					"type": "order"
+				},
+				"description": {
+					"description": "The order is being paid as part of the referenced Invoice. ",
+					"type": "order"
+				}
+			},
+			{
+				"name": {
+					"description": "paymentduedate",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "The date that payment is due. Supersedes paymentDue.",
+					"type": "datetime"
+				}
+			},
+			{
+				"name": {
+					"description": "paymentmethod",
+					"type": "paymentmethod"
+				},
+				"description": {
+					"description": "The name of the credit card or other method of payment for the order.",
+					"type": "paymentmethod"
+				}
+			},
+			{
+				"name": {
+					"description": "paymentmethodid",
+					"type": "text"
+				},
+				"description": {
+					"description": "An identifier for the method of payment used (e.g. the last 4 digits of the credit card).",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "paymentstatus",
+					"type": "text or  paymentstatustype"
+				},
+				"description": {
+					"description": "The status of payment; whether the invoice has been paid or not.",
+					"type": "text or  paymentstatustype"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "provider",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "referencesorder",
+					"type": "order"
+				},
+				"description": {
+					"description": "The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.",
+					"type": "order"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "scheduledpaymentdate",
+					"type": "date"
+				},
+				"description": {
+					"description": "The date the invoice is scheduled to be paid.",
+					"type": "date"
+				}
+			},
+			{
+				"name": {
+					"description": "totalpaymentdue",
+					"type": "pricespecification"
+				},
+				"description": {
+					"description": "The total amount due.",
+					"type": "pricespecification"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		}
+	}
+}

@@ -1,0 +1,496 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Program Membership API",
+		"description": "Used to describe membership in a loyalty programs (e.g. "StarAliance"), traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.",
+		"termsOfService": "http://apievangelist.com/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "program.membership.example.com",
+	"basePath": "/",
+	"schemes": ["http"],
+	"produces": ["application/json"],
+	"paths": {
+		"/program-membership/": {
+			"get": {
+				"summary": "Get Program Membership",
+				"description": "Returns Program Membership",
+				"operationId": "getProgramMembership",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/item"
+							}
+						}
+					}
+				},
+				"tags": ["Program Membership"]
+			},
+			"post": {
+				"summary": "Add Program Membership",
+				"description": "Add Program Membership",
+				"operationId": "addProgramMembership",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "hostingorganization",
+					"in": "formData",
+					"description": "The organization (airline, travelers' club, etc.) the membership is made with.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "url or  creativework"
+				},
+				{
+					"name": "member",
+					"in": "formData",
+					"description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "memberof",
+					"in": "formData",
+					"description": "An Organization (or ProgramMembership) to which this Person or Organization belongs.  inverse property: member.",
+					"required": false,
+					"type": "person or organization"
+				},
+				{
+					"name": "membershipnumber",
+					"in": "formData",
+					"description": "A unique identifier for the membership.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "programmembershipused",
+					"in": "formData",
+					"description": "Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation. ",
+					"required": false,
+					"type": "reservation"
+				},
+				{
+					"name": "programname",
+					"in": "formData",
+					"description": "The program providing the membership.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/item"
+							}
+						}
+					}
+				},
+				"tags": ["Program Membership"]
+			}
+		},
+		"/program-membership/{id}/": {
+			"get": {
+				"summary": "Get Program Membership",
+				"description": "Returns a single Program Membership",
+				"operationId": "getProgramMembership",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/item"
+							}
+						}
+					}
+				},
+				"tags": ["Program Membership"]
+			},
+			"put": {
+				"summary": "Update Program Membership",
+				"description": "Update a single Program Membership",
+				"operationId": "updateProgramMembershipItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "hostingorganization",
+					"in": "formData",
+					"description": "The organization (airline, travelers' club, etc.) the membership is made with.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "url or  creativework"
+				},
+				{
+					"name": "member",
+					"in": "formData",
+					"description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "memberof",
+					"in": "formData",
+					"description": "An Organization (or ProgramMembership) to which this Person or Organization belongs.  inverse property: member.",
+					"required": false,
+					"type": "person or organization"
+				},
+				{
+					"name": "membershipnumber",
+					"in": "formData",
+					"description": "A unique identifier for the membership.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "programmembershipused",
+					"in": "formData",
+					"description": "Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation. ",
+					"required": false,
+					"type": "reservation"
+				},
+				{
+					"name": "programname",
+					"in": "formData",
+					"description": "The program providing the membership.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/item"
+							}
+						}
+					}
+				},
+				"tags": ["Program Membership"]
+			},
+			"delete": {
+				"summary": "Program Membership",
+				"description": "Deletes a single Program Membership",
+				"operationId": "deleteProgramMembership",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/item"
+							}
+						}
+					}
+				},
+				"tags": ["Program Membership"]
+			}
+		}
+	},
+	"definitions": {
+		"item": {
+			"properties": [{
+				"name": {
+					"description": "additionaltype",
+					"type": "url"
+				},
+				"description": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "alternatename",
+					"type": "text"
+				},
+				"description": {
+					"description": "An alias for the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "description",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "hostingorganization",
+					"type": "organization"
+				},
+				"description": {
+					"description": "The organization (airline, travelers' club, etc.) the membership is made with.",
+					"type": "organization"
+				}
+			},
+			{
+				"name": {
+					"description": "image",
+					"type": "url or  imageobject"
+				},
+				"description": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				}
+			},
+			{
+				"name": {
+					"description": "mainentityofpage",
+					"type": "url or  creativework"
+				},
+				"description": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				}
+			},
+			{
+				"name": {
+					"description": "member",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.",
+					"type": "person or  organization"
+				}
+			},
+			{
+				"name": {
+					"description": "memberof",
+					"type": "person or organization"
+				},
+				"description": {
+					"description": "An Organization (or ProgramMembership) to which this Person or Organization belongs.  inverse property: member.",
+					"type": "person or organization"
+				}
+			},
+			{
+				"name": {
+					"description": "membershipnumber",
+					"type": "text"
+				},
+				"description": {
+					"description": "A unique identifier for the membership.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "name",
+					"type": "text"
+				},
+				"description": {
+					"description": "The name of the item.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "potentialaction",
+					"type": "action"
+				},
+				"description": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+					"type": "action"
+				}
+			},
+			{
+				"name": {
+					"description": "programmembershipused",
+					"type": "reservation"
+				},
+				"description": {
+					"description": "Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation. ",
+					"type": "reservation"
+				}
+			},
+			{
+				"name": {
+					"description": "programname",
+					"type": "text"
+				},
+				"description": {
+					"description": "The program providing the membership.",
+					"type": "text"
+				}
+			},
+			{
+				"name": {
+					"description": "sameas",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				}
+			},
+			{
+				"name": {
+					"description": "url",
+					"type": "url"
+				},
+				"description": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}]
+		}
+	}
+}

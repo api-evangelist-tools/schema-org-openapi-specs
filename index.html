@@ -14,8 +14,8 @@ layout: page
       }
     }
 </script>
-1-1
-<table cellpadding="3" cellspacing="2" width="100%" border="1" style="margin-top: 0px;">
+2-1
+<table cellpadding="3" cellspacing="2" width="100%" border="0" style="margin-top: 0px;">
 
 {% assign index = site.data.apis %}
 {% assign apijson = index[0] %}
@@ -36,7 +36,7 @@ layout: page
     <td>
           {% for api in apijson.apis %}
 
-          <table cellpadding="3" cellspacing="2" width="100%" border="0">
+          <table cellpadding="3" cellspacing="2" width="100%" border="1">
 
               {% assign openapi_spec_json = '' %}
 

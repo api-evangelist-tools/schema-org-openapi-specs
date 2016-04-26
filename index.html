@@ -110,12 +110,16 @@ layout: page
               </tr>
               <tr id="methods-for-{{ pathname }}-spec-json" style="display; none;">
                 <td colspan="3">
-                    {{ openapi_spec_json.openapi-spec | json }}
+                    <code>
+                      {{ openapi_spec_json.openapi-spec | json }}
+                    </code>
                 </td>
               </tr>
               <tr id="methods-for-{{ pathname }}-spec-yaml" style="display: none;">
                 <td colspan="3">
-                    {{ openapi_spec_yaml }}
+                    <code>
+                      {{ openapi_spec_yaml }}
+                    </code>
                 </td>
               </tr>
 

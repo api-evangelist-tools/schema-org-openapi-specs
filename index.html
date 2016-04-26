@@ -35,7 +35,7 @@ title: 'Schema.org OpenAPI Specs'
              {% assign thisname = thisname | replace: ' API','' %}
              {% assign thisname = thisname | append:'/' %}
              {% assign thisname = thisname | replace: ' ','-' %}
-             
+
              thisname: {{ thisname }}<br />
 
              {% if property.type == 'x-json-schema' %}
@@ -94,9 +94,9 @@ title: 'Schema.org OpenAPI Specs'
                  {{ openapi_spec_yaml }}
              </td>
            </tr>
-         </table>
 
       {% endfor %}
     {% endif %}
   {% endfor %}
 {% endfor %}
+ </table>

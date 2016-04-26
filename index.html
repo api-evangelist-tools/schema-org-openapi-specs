@@ -20,13 +20,15 @@ title: 'Schema.org OpenAPI Specs'
 
 </script>
 
-2 - 2<br />
+3 - 1<br />
 
 {% for folder in site.data.apis %}
   {% for item in folder %}
     {% if item[0] == 'apis' %}
       {% assign file = item[1] %}
-      {{ file }}
+      {% for api in file %}
+        {{ api }}<br /><hr />
+      {% endfor %}
     {% endif %}
   {% endfor %}
 {% endfor %}

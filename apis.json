@@ -1,6 +1,6 @@
 {
-  "name": "API Evangelist Schema.org API Definitions",
-  "description": "This is a collection of OpenAPI Specs for each Schema.org entity. It is meant to be a starting point for putting the valuable schemas in use as part of the API design process.",
+  "name": "Schema.org API Definitions",
+  "description": "This is a collection of OpenAPI Specs for each Schema.org entity, meant to provide a starting point for using the schemas throughout the API life cycle. Each entity has a JSON and YAML version, without GET, POST, PUT, and DELETE API methods, as well as the underlying schema. I am aware that the types will not validate for each parameter, and will work on relationships, and hierachy next.",
   "image": "https://s3.amazonaws.com/kinlane-productions/schema-org/schema-org.png",
   "tags": [
     "Schema.org",

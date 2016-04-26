@@ -25,7 +25,9 @@ layout: page
 
               {% assign openapi_spec_json = '' %}
               {% assign openapi_spec_yaml = '' %}
-              {% for property in api.properties %}
+
+              {% assign properties = api.properties | sort: 'name' %}
+              {% for property in properties %}
 
                 {% assign thisname = apijson.name | downcase %}
                 {% assign thisname = thisname | append:'/' %}

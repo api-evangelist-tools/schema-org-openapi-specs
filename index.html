@@ -6,6 +6,7 @@ title: 'Schema.org OpenAPI Specs'
 <script type="text/javascript">
   function showme($id)
     {
+    console.log($id);
     if(document.getElementById($id).style.display=='none')
       {
       document.getElementById($id).style.display = '';
@@ -109,7 +110,7 @@ title: 'Schema.org OpenAPI Specs'
                 {% assign api_action_url = '' %}
                 {% for api in apijson.apis %}
 
-                <table cellpadding="3" cellspacing="2" width="100%" border="0">
+                <table cellpadding="1" cellspacing="1" width="100%" border="0">
 
                     {% assign api_action_spec = '' %}
                     {% assign api_action_url = '' %}
@@ -152,16 +153,16 @@ title: 'Schema.org OpenAPI Specs'
                     {% endfor %}
 
                     <tr>
-                      <td align="left" style="font-size: 18px; font-weight: bold; padding: 10px;">
+                      <td align="left" style="font-size: 14px; padding: 10px;">
                         {{ api.name }}
                       </td>
                       <td align="center" style="padding: 10px; width: 50px;">
-                        <a href="#" target="_blank" onclick="showme('methods-for-{{ pathname }}-spec-json');" title="OpenAPI Spec JSON" style="font-size: 12px;">
+                        <a href="#" target="_blank" onclick="showme('methods-for-{{ pathname }}-spec-json'); return false;" title="OpenAPI Spec JSON" style="font-size: 12px;">
                           <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-swagger-round.png" width="25" align="right" />
                         </a>
                       </td>
                       <td align="center" style="padding: 10px; width: 50px;">
-                        <a href="#" target="_blank" onclick="showme('methods-for-{{ pathname }}-spec-json');" title="OpenAPI Spec YAML" style="font-size: 12px;">
+                        <a href="#" target="_blank" onclick="showme('methods-for-{{ pathname }}-spec-json'); return false;" title="OpenAPI Spec YAML" style="font-size: 12px;">
                           <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-yaml.png" width="25" align="right" />
                         </a>
                       </td>

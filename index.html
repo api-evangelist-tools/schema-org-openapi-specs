@@ -26,6 +26,9 @@ title: 'Schema.org OpenAPI Specs'
   {% for item in folder %}
     {% assign file = item %}
     {% if file.apis != null %}
+
+      {{ file }}
+      <br /><hr /><br />
       {% assign masterapisjson = file.apis %}
 
       {% assign common_api_action_url = '' %}
@@ -50,7 +53,6 @@ title: 'Schema.org OpenAPI Specs'
         <tr>
         <td align="center" style="margin-left: 90px; margin-right: 90px;">
 
-            {% assign api_action_url = '' %}
             {% assign numberofapis = apijson.apis | size %}
 
                 {% assign api_action_url = '' %}

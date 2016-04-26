@@ -17,12 +17,12 @@ title: 'Schema.org OpenAPI Specs'
       document.getElementById($id).style.display = 'none';
       }
     }
-    
+
 </script>
 
-13 - 1<br />
+14 - 1<br />
 
-{% for folder in site.data %}
+{% for folder in site.data.apis %}
   {% for item in folder %}
     {% assign file = item %}
       {% if file.apis != null %}

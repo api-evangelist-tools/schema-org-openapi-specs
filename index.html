@@ -45,9 +45,9 @@ title: 'Schema.org OpenAPI Specs'
 
                {% assign openapi_json_spec_url = property.url %}
                {% assign pathname = openapi_json_spec_url | replace: site.url,'' %}
-               {% assign pathname = pathname | replace: '/_data/','' %}
+               {% assign pathname = pathname | replace: '/_data/api-commons/','' %}
                {% assign pathname = pathname | replace: thisname,'' %}
-               {% assign pathname = pathname | replace: '/','' %}
+               {% assign pathname = pathname | replace: '/','-' %}
                {% assign pathname = pathname | replace: '.json','' %}
                {% assign openapi_spec_json = file | map: pathname %}
                1: {{ pathname }}<br />
@@ -57,7 +57,7 @@ title: 'Schema.org OpenAPI Specs'
 
                {% assign openapi_yaml_spec_url = property.url %}
                {% assign pathname = openapi_json_spec_url | replace: site.url,'' %}
-               {% assign pathname = pathname | replace: '/_data/','' %}
+               {% assign pathname = pathname | replace: '/_data/api-commons/','' %}
                {% assign pathname = pathname | replace: thisname,'' %}
                {% assign pathname = pathname | replace: '/','' %}
                {% assign pathname = pathname | replace: '.yaml','' %}

@@ -126,11 +126,31 @@ title: 'Schema.org OpenAPI Specs'
                       {% endif %}
 
                       {% if property.type == 'X-openapi-spec-json' %}
+
                         {% assign openapi_json_spec_url = property.url %}
+                        {% assign pathname = openapi_json_spec_url | replace: site.url,'' %}
+                        {% assign pathname = pathname | replace: '/data/','' %}
+                        {% assign pathname = pathname | replace: thisname,'' %}
+                        {% assign pathname = pathname | replace: '/','' %}
+                        {% assign pathname = pathname | replace: '.json','' %}
+                        {% assign openapi_spec_json = file | map: pathname %}
+
+                        {{ openapi_spec_json }}
+
                       {% endif %}
 
                       {% if property.type == 'X-openapi-spec-yaml' %}
+
                         {% assign openapi_yaml_spec_url = property.url %}
+                        {% assign pathname = openapi_json_spec_url | replace: site.url,'' %}
+                        {% assign pathname = pathname | replace: '/data/','' %}
+                        {% assign pathname = pathname | replace: thisname,'' %}
+                        {% assign pathname = pathname | replace: '/','' %}
+                        {% assign pathname = pathname | replace: '.yaml','' %}
+                        {% assign openapi_spec_yaml = file | map: pathname %}
+
+                        {{ openapi_spec_yaml }}
+
                       {% endif %}
 
 

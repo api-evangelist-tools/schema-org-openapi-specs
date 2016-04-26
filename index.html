@@ -50,13 +50,13 @@ title: 'Schema.org OpenAPI Specs'
 
                 {% if property.type == 'X-openapi-spec-json' %}
 
-                  {% assign openapi_spec_url = property.url %}
+                  {% assign openapi_spec_json_url = property.url %}
 
                 {% endif %}
 
                 {% if property.type == 'X-openapi-spec-yaml' %}
 
-                  {% assign openapi_spec_url = property.url %}
+                  {% assign openapi_spec_yaml_url = property.url %}
 
                 {% endif %}
 
@@ -72,12 +72,12 @@ title: 'Schema.org OpenAPI Specs'
                   </a>
                 </td>
                 <td align="center" width="10%">
-                  <a href="{{ openapi_spec_url }}" target="_blank" title="OpenAPI Spec JSON">
+                  <a href="{{ openapi_spec_json_url }}" target="_blank" title="OpenAPI Spec JSON">
                     <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-swagger-round.png" width="35" />
                   </a>
                 </td>
                 <td align="center" width="10%">
-                  <a href="{{ openapi_spec_url}}" target="_blank" title="OpenAPI Spec YAML">
+                  <a href="{{ openapi_spec_yaml_url }}" target="_blank" title="OpenAPI Spec YAML">
                     <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-yaml.png" width="32" />
                   </a>
                 </td>

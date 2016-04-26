@@ -21,69 +21,6 @@ layout: page
 {% assign contents = site.data.api-commons %}
 {% assign apicommons = contents %}
 
-{% assign filter_name = '' %}
-
-{% assign blog_url = '' %}
-{% assign blogrss_url = '' %}
-{% assign portal_url = '' %}
-{% assign gitub_url = '' %}
-{% assign twitter_url = '' %}
-{% assign website_url = '' %}
-
-{% assign definitions = apijson.definitions %}
-{{ definitions }}
-{% for common in apijson.x-common %}
-
-  {% if common.type == 'x-getting-started' %}
-    {% assign getting_started_url = common.url %}
-  {% endif %}
-  {% if common.type == 'x-authentication-overview' %}
-    {% assign authentication_url = common.url %}
-  {% endif %}
-  {% if common.type == 'x-faq' %}
-    {% assign faq_url = common.url %}
-  {% endif %}
-  {% if common.type == 'x-login' %}
-    {% assign login_url = common.url %}
-  {% endif %}
-  {% if common.type == 'x-selfservice-registration' %}
-    {% assign signup_url = common.url %}
-  {% endif %}
-
-  {% if common.type == 'x-documentation' %}
-    {% assign documentation_url = common.url %}
-  {% endif %}
-
-  {% if common.type == 'x-code-page' %}
-    {% assign code_page_url = common.url %}
-  {% endif %}
-
-  {% if common.type == 'x-road-map' %}
-    {% assign road_map_url = common.url %}
-  {% endif %}
-  {% if common.type == 'x-issues' %}
-    {% assign issue_url = common.url %}
-  {% endif %}
-  {% if common.type == 'x-change-log' %}
-    {% assign change_log_url = common.url %}
-  {% endif %}
-  {% if common.type == 'x-status' %}
-    {% assign status_dashboard_url = common.url %}
-  {% endif %}
-
-  {% if common.type == 'x-support' %}
-    {% assign support_url = common.url %}
-  {% endif %}
-
-  {% if common.type == 'x-api-plan' %}
-    {% assign api_plan_url = common.url %}
-  {% endif %}
-  {% if common.type == 'x-rate-limit' %}
-    {% assign rate_limit_url = common.url %}
-  {% endif %}
-
-{% endfor %}
-
   <tr>
     <td>
         <span style="font-size: 22px;"><strong>API Documentation</strong></span>
@@ -147,55 +84,29 @@ layout: page
 
                       {% endif %}
 
-                      {% if property.type == 'x-postman %}
-                        {% assign postman_url = property.url %}
-                      {% endif %}
-
-                      {% if property.type == 'x-api-blueprint' %}
-                        {% assign api_blueprint_url = property.url %}
-                      {% endif %}
-
-                      {% if property.type == 'x-api-actions' %}
-                        {% assign api_action_url = property.url %}
-                      {% endif %}
-
-                      {% if property.type == 'x-api-filters' %}
-
-                        {% assign api_filters_url = property.url %}
-                        {% assign api_filter_path = api_filters_url | replace: '_data/api-commons/','' %}
-                        {% assign api_filter_path = api_filter_path | replace: '.yaml','' %}
-                        {% assign api_filter_path = api_filter_path | replace: '.json','' %}
-                        {% assign api_filter_path = api_filter_path | replace: '/','.' %}
-                        {% assign api_filter_path = api_filter_path | replace: 'api-commons.','' %}
-
-                        {% for entry in apicommons %}
-                          {% assign thisname = entry[0] %}
-                          {% assign thisentry = entry[1] %}
-                          {% if thisname == api_filter_path %}
-                            {% assign api_filters = thisentry %}
-                          {% endif %}
-                        {% endfor %}
-
-                      {% endif %}
-
-                    {% endfor %}
-
-                    {% if filter_name != null and filter_name != empty %}
-                      <tr>
-                        <td align="center" colspan="2" style="font-size: 18px; font-weight: bold; padding: 10px;">
-                          {{ filter_name }}
-                        </td>
-                      </tr>
-                    {% endif %}
-
-                    <tr style="background-color: #D3D3D3;">
-                      <td align="left" style="font-size: 18px; font-weight: bold; padding: 10px;">
+                    <tr>
+                      <td align="left" style="font-size: 14px; padding: 10px;">
                         {{ api.name }}
                       </td>
-                      <td align="right" style="padding: 10px;">
-                        {% if openapi_spec_url != null and openapi_spec_url != empty %}
-                          <a href="{{ site.url }}{{ openapi_spec_url }}" target="_blank" title="View OpenAPI Spec" style="font-size: 16px; font-weight: normal;">OpenAPI Spec</a>
-                        {% endif %}
+                      <td align="center" style="padding: 10px; width: 50px;">
+                        <a href="#" target="_blank" onclick="showme('methods-for-{{ pathname }}-spec-json'); return false;" title="OpenAPI Spec JSON" style="font-size: 12px;">
+                          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-swagger-round.png" width="25" align="right" />
+                        </a>
+                      </td>
+                      <td align="center" style="padding: 10px; width: 50px;">
+                        <a href="#" target="_blank" onclick="showme('methods-for-{{ pathname }}-spec-json'); return false;" title="OpenAPI Spec YAML" style="font-size: 12px;">
+                          <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-yaml.png" width="25" align="right" />
+                        </a>
+                      </td>
+                    </tr>
+                    <tr id="methods-for-{{ pathname }}-spec-json" style="display: none;">
+                      <td colspan="2">
+                          {{ openapi_spec_json }}
+                      </td>
+                    </tr>
+                    <tr id="methods-for-{{ pathname }}-spec-yaml" style="display: none;">
+                      <td colspan="2">
+                          {{ openapi_spec_yaml }}
                       </td>
                     </tr>
 

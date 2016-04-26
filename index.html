@@ -53,41 +53,11 @@ layout: page
 
                   {% assign openapi_spec_url = property.url %}
 
-                  {% assign pathname = openapi_spec_url | replace: site.url,'' %}
-                  {% assign pathname = pathname | replace: '_data/api-commons/','' %}
-                  {% assign pathname = pathname | replace: '.yaml','' %}
-                  {% assign pathname = pathname | replace: '.json','' %}
-                  {% assign pathname = pathname | replace: '/','.' %}
-                  {% assign pathname = pathname | replace: 'api-commons.','' %}
-
-                  {% for entry in apicommons %}
-                    {% assign thisname = entry[0] %}
-                    {% assign thisentry = entry[1] %}
-                    {% if pathname contains thisname %}
-                      {% assign openapi_spec_json = thisentry %}
-                    {% endif %}
-                  {% endfor %}
-
                 {% endif %}
 
                 {% if property.type == 'X-openapi-spec-yaml' %}
 
                   {% assign openapi_spec_url = property.url %}
-
-                  {% assign pathname = openapi_spec_url | replace: site.url,'' %}
-                  {% assign pathname = pathname | replace: '_data/api-commons/','' %}
-                  {% assign pathname = pathname | replace: '.yaml','' %}
-                  {% assign pathname = pathname | replace: '.json','' %}
-                  {% assign pathname = pathname | replace: '/','.' %}
-                  {% assign pathname = pathname | replace: 'api-commons.','' %}
-
-                  {% for entry in apicommons %}
-                    {% assign thisname = entry[0] %}
-                    {% assign thisentry = entry[1] %}
-                    {% if pathname contains thisname %}
-                      {% assign openapi_spec_yaml = thisentry %}
-                    {% endif %}
-                  {% endfor %}
 
                 {% endif %}
 
@@ -98,28 +68,14 @@ layout: page
                   {{ api.name }}
                 </td>
                 <td align="center" style="width: 50px;">
-                  <a href="#" target="_blank" onclick="showme('methods-for-{{ pathname }}-spec-json'); return false;" title="OpenAPI Spec JSON" style="font-size: 12px;">
+                  <a href="{{ openapi_spec_url }}" target="_blank" title="OpenAPI Spec JSON" style="font-size: 12px;">
                     <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-swagger-round.png" width="25" align="right" />
                   </a>
                 </td>
                 <td align="center" style="width: 50px;">
-                  <a href="#" target="_blank" onclick="showme('methods-for-{{ pathname }}-spec-json'); return false;" title="OpenAPI Spec YAML" style="font-size: 12px;">
+                  <a href="{{ openapi_spec_url}}" target="_blank" title="OpenAPI Spec YAML" style="font-size: 12px;">
                     <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-yaml.png" width="25" align="right" />
                   </a>
-                </td>
-              </tr>
-              <tr id="methods-for-{{ pathname }}-spec-json" style="display; none;">
-                <td colspan="3">
-                    <code>
-                      {{ openapi_spec_json.openapi-spec | json }}
-                    </code>
-                </td>
-              </tr>
-              <tr id="methods-for-{{ pathname }}-spec-yaml" style="display: none;">
-                <td colspan="3">
-                    <code>
-                      {{ openapi_spec_yaml }}
-                    </code>
                 </td>
               </tr>
 

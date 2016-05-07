@@ -1,832 +1,215 @@
-- swagger: "2.0"
-  info:
-    title: Drug Strength API
-    description: A specific strength in which a medical drug is available in a specific
-      country.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: drug.strength.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /drug-strength/:
-      get:
-        summary: Get Drug Strength
-        description: Returns Drug Strength
-        operationId: getDrugStrength
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/DrugStrength'
-        tags:
-        - Drug Strength
-      post:
-        summary: Add Drug Strength
-        description: Add Drug Strength
-        operationId: addDrugStrength
-        parameters:
-        - name: activeingredient
-          in: formData
-          description: An active ingredient, typically chemical compounds and/or biologic
-            substances.
-          required: false
-          type: text
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: availablein
-          in: formData
-          description: The location in which the strength is available.
-          required: false
-          type: administrativearea
-        - name: availablestrength
-          in: formData
-          description: 'An available dosage strength for the drug. '
-          required: false
-          type: drug
-        - name: code
-          in: formData
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          required: false
-          type: medicalcode
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: guideline
-          in: formData
-          description: A medical guideline related to this entity.
-          required: false
-          type: medicalguideline
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: medicinesystem
-          in: formData
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          required: false
-          type: medicinesystem
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: recognizingauthority
-          in: formData
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          required: false
-          type: organization
-        - name: relevantspecialty
-          in: formData
-          description: If applicable, a medical specialty in which this entity is relevant.
-          required: false
-          type: medicalspecialty
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: strengthunit
-          in: formData
-          description: The units of an active ingredient\'s strength, e.g. mg.
-          required: false
-          type: text
-        - name: strengthvalue
-          in: formData
-          description: The value of an active ingredient\'s strength, e.g. 325.
-          required: false
-          type: number
-        - name: study
-          in: formData
-          description: A medical study or trial related to this entity.
-          required: false
-          type: medicalstudy
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/DrugStrength'
-        tags:
-        - Drug Strength
-    /drug-strength/{id}/:
-      get:
-        summary: Get Drug Strength
-        description: Returns a single Drug Strength
-        operationId: getDrugStrength
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/DrugStrength'
-        tags:
-        - Drug Strength
-      put:
-        summary: Update Drug Strength
-        description: Update a single Drug Strength
-        operationId: updateDrugStrengthItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: activeingredient
-          in: formData
-          description: An active ingredient, typically chemical compounds and/or biologic
-            substances.
-          required: false
-          type: text
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: availablein
-          in: formData
-          description: The location in which the strength is available.
-          required: false
-          type: administrativearea
-        - name: availablestrength
-          in: formData
-          description: 'An available dosage strength for the drug. '
-          required: false
-          type: drug
-        - name: code
-          in: formData
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          required: false
-          type: medicalcode
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: guideline
-          in: formData
-          description: A medical guideline related to this entity.
-          required: false
-          type: medicalguideline
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: medicinesystem
-          in: formData
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          required: false
-          type: medicinesystem
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: recognizingauthority
-          in: formData
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          required: false
-          type: organization
-        - name: relevantspecialty
-          in: formData
-          description: If applicable, a medical specialty in which this entity is relevant.
-          required: false
-          type: medicalspecialty
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: strengthunit
-          in: formData
-          description: The units of an active ingredient\'s strength, e.g. mg.
-          required: false
-          type: text
-        - name: strengthvalue
-          in: formData
-          description: The value of an active ingredient\'s strength, e.g. 325.
-          required: false
-          type: number
-        - name: study
-          in: formData
-          description: A medical study or trial related to this entity.
-          required: false
-          type: medicalstudy
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/DrugStrength'
-        tags:
-        - Drug Strength
-      delete:
-        summary: Drug Strength
-        description: Deletes a single Drug Strength
-        operationId: deleteDrugStrength
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/DrugStrength'
-        tags:
-        - Drug Strength
-  definitions:
-    DrugLegalStatus:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: applicablelocation
-          type: administrativearea
-        description:
-          description: The location in which the status applies.
-          type: administrativearea
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: legalstatus
-          type: dietarysupplement or drug
-        description:
-          description: 'The drug or supplement\''s legal status, including any controlled
-            substance schedules that apply. '
-          type: dietarysupplement or drug
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    DrugPregnancyCategory:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: pregnancycategory
-          type: drug
-        description:
-          description: 'Pregnancy category of this drug. '
-          type: drug
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: supersededby
-          type: enumeration or  class or  property
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: enumeration or  class or  property
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    DrugPrescriptionStatus:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: prescriptionstatus
-          type: drug
-        description:
-          description: 'Indicates whether this drug is available by prescription or
-            over-the-counter. '
-          type: drug
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: supersededby
-          type: enumeration or  class or  property
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: enumeration or  class or  property
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    DrugStrength:
-      properties:
-      - name:
-          description: activeingredient
-          type: text
-        description:
-          description: An active ingredient, typically chemical compounds and/or biologic
-            substances.
-          type: text
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: availablein
-          type: administrativearea
-        description:
-          description: The location in which the strength is available.
-          type: administrativearea
-      - name:
-          description: availablestrength
-          type: drug
-        description:
-          description: 'An available dosage strength for the drug. '
-          type: drug
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: strengthunit
-          type: text
-        description:
-          description: The units of an active ingredient\'s strength, e.g. mg.
-          type: text
-      - name:
-          description: strengthvalue
-          type: number
-        description:
-          description: The value of an active ingredient\'s strength, e.g. 325.
-          type: number
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Drug Strength API\",\n\t\t\"description\":
+    \"A specific strength in which a medical drug is available in a specific country.\",\n\t\t\"termsOfService\":
+    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
+    \"drug.strength.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\":
+    [\"application/json\"],\n\t\"paths\": {\n\t\t\"/drug-strength/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Drug Strength\",\n\t\t\t\t\"description\": \"Returns
+    Drug Strength\",\n\t\t\t\t\"operationId\": \"getDrugStrength\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/DrugStrength\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Drug Strength\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Drug
+    Strength\",\n\t\t\t\t\"description\": \"Add Drug Strength\",\n\t\t\t\t\"operationId\":
+    \"addDrugStrength\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"activeingredient\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An active ingredient, typically chemical
+    compounds and/or biologic substances.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
+    used for adding more specific types from external vocabularies in microdata syntax.
+    This is a relationship between something and a class that the thing is in. In RDFa
+    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
+    - for multiple types. Schema.org tools may have only weaker understanding of extra
+    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availablein\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    location in which the strength is available.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"availablestrength\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An available dosage strength for the
+    drug. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"drug\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"code\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
+    code for the entity, taken from a controlled vocabulary or ontology such as ICD-9,
+    DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"guideline\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    medical guideline related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
+    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
+    for which this thing is the main entity being described.            See background
+    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"medicinesystem\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\',
+    \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
+    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"relevantspecialty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"strengthunit\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    units of an active ingredient\\'s strength, e.g. mg.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"strengthvalue\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The value of an active ingredient\\'s strength, e.g. 325.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"study\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
+    study or trial related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/DrugStrength\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Drug Strength\"]\n\t\t\t}\n\t\t},\n\t\t\"/drug-strength/{id}/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Drug Strength\",\n\t\t\t\t\"description\": \"Returns
+    a single Drug Strength\",\n\t\t\t\t\"operationId\": \"getDrugStrength\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/DrugStrength\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Drug Strength\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update Drug
+    Strength\",\n\t\t\t\t\"description\": \"Update a single Drug Strength\",\n\t\t\t\t\"operationId\":
+    \"updateDrugStrengthItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"activeingredient\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An active ingredient, typically chemical compounds and/or biologic substances.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"availablein\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The location in which the strength is
+    available.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availablestrength\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An available dosage strength for the drug. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"drug\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"code\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken
+    from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT,
+    RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"guideline\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical guideline related to this
+    entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"medicinesystem\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The system of medicine that includes
+    this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\',
+    etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
+    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"relevantspecialty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"strengthunit\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    units of an active ingredient\\'s strength, e.g. mg.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"strengthvalue\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The value of an active ingredient\\'s strength, e.g. 325.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"study\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
+    study or trial related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/DrugStrength\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Drug Strength\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Drug
+    Strength\",\n\t\t\t\t\"description\": \"Deletes a single Drug Strength\",\n\t\t\t\t\"operationId\":
+    \"deleteDrugStrength\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/DrugStrength\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Drug Strength\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"DrugStrength\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"activeingredient\": {\n\t\t\t\t\t\"description\":
+    \"An active ingredient, typically chemical compounds and/or biologic substances.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
+    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"availablein\":
+    {\n\t\t\t\t\t\"description\": \"The location in which the strength is available.\",\n\t\t\t\t\t\"type\":
+    \"administrativearea\"\n\t\t\t\t},\n\t\t\t\t\"availablestrength\": {\n\t\t\t\t\t\"description\":
+    \"An available dosage strength for the drug. \",\n\t\t\t\t\t\"type\": \"drug\"\n\t\t\t\t},\n\t\t\t\t\"code\":
+    {\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken from a controlled
+    vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"type\":
+    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\":
+    \"A short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"guideline\":
+    {\n\t\t\t\t\t\"description\": \"A medical guideline related to this entity.\",\n\t\t\t\t\t\"type\":
+    \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\":
+    \"An image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"medicinesystem\":
+    {\n\t\t\t\t\t\"description\": \"The system of medicine that includes this MedicalEntity,
+    for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"type\":
+    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\":
+    \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
+    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t\"recognizingauthority\": {\n\t\t\t\t\t\"description\":
+    \"If applicable, the organization that officially recognizes this entity as part
+    of its endorsed system of medicine.\",\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t\"relevantspecialty\":
+    {\n\t\t\t\t\t\"description\": \"If applicable, a medical specialty in which this
+    entity is relevant.\",\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
+    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
+    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
+    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"strengthunit\":
+    {\n\t\t\t\t\t\"description\": \"The units of an active ingredient\\'s strength,
+    e.g. mg.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"strengthvalue\":
+    {\n\t\t\t\t\t\"description\": \"The value of an active ingredient\\'s strength,
+    e.g. 325.\",\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t\"study\": {\n\t\t\t\t\t\"description\":
+    \"A medical study or trial related to this entity.\",\n\t\t\t\t\t\"type\": \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t\"url\":
+    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

@@ -1,324 +1,150 @@
-- swagger: "2.0"
-  info:
-    title: Engine Specification API
-    description: Information about the engine of the vehicle. A vehicle can have multiple
-      engines represented by multiple engine specification entities.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: engine.specification.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /engine-specification/:
-      get:
-        summary: Get Engine Specification
-        description: Returns Engine Specification
-        operationId: getEngineSpecification
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/EngineSpecification'
-        tags:
-        - Engine Specification
-      post:
-        summary: Add Engine Specification
-        description: Add Engine Specification
-        operationId: addEngineSpecification
-        parameters:
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: fueltype
-          in: formData
-          description: The type of fuel suitable for the engine or engines of the vehicle.
-            If the vehicle has only one engine, this property can be attached directly
-            to the vehicle.
-          required: false
-          type: qualitativevalue or  text or  url
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        - name: vehicleengine
-          in: formData
-          description: 'Information about the engine or engines of the vehicle. '
-          required: false
-          type: vehicle
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/EngineSpecification'
-        tags:
-        - Engine Specification
-    /engine-specification/{id}/:
-      get:
-        summary: Get Engine Specification
-        description: Returns a single Engine Specification
-        operationId: getEngineSpecification
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/EngineSpecification'
-        tags:
-        - Engine Specification
-      put:
-        summary: Update Engine Specification
-        description: Update a single Engine Specification
-        operationId: updateEngineSpecificationItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: fueltype
-          in: formData
-          description: The type of fuel suitable for the engine or engines of the vehicle.
-            If the vehicle has only one engine, this property can be attached directly
-            to the vehicle.
-          required: false
-          type: qualitativevalue or  text or  url
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        - name: vehicleengine
-          in: formData
-          description: 'Information about the engine or engines of the vehicle. '
-          required: false
-          type: vehicle
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/EngineSpecification'
-        tags:
-        - Engine Specification
-      delete:
-        summary: Engine Specification
-        description: Deletes a single Engine Specification
-        operationId: deleteEngineSpecification
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/EngineSpecification'
-        tags:
-        - Engine Specification
-  definitions:
-    EngineSpecification:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: fueltype
-          type: qualitativevalue or  text or  url
-        description:
-          description: The type of fuel suitable for the engine or engines of the vehicle.
-            If the vehicle has only one engine, this property can be attached directly
-            to the vehicle.
-          type: qualitativevalue or  text or  url
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: vehicleengine
-          type: vehicle
-        description:
-          description: 'Information about the engine or engines of the vehicle. '
-          type: vehicle
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Engine Specification
+    API\",\n\t\t\"description\": \"Information about the engine of the vehicle. A vehicle
+    can have multiple engines represented by multiple engine specification entities.\",\n\t\t\"termsOfService\":
+    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
+    \"engine.specification.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\":
+    [\"application/json\"],\n\t\"paths\": {\n\t\t\"/engine-specification/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Engine Specification\",\n\t\t\t\t\"description\":
+    \"Returns Engine Specification\",\n\t\t\t\t\"operationId\": \"getEngineSpecification\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/EngineSpecification\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Engine Specification\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add
+    Engine Specification\",\n\t\t\t\t\"description\": \"Add Engine Specification\",\n\t\t\t\t\"operationId\":
+    \"addEngineSpecification\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
+    used for adding more specific types from external vocabularies in microdata syntax.
+    This is a relationship between something and a class that the thing is in. In RDFa
+    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
+    - for multiple types. Schema.org tools may have only weaker understanding of extra
+    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"fueltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The type of fuel suitable for the engine
+    or engines of the vehicle. If the vehicle has only one engine, this property can
+    be attached directly to the vehicle.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"qualitativevalue or  text or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"vehicleengine\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Information about the engine or engines of the vehicle. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"vehicle\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/EngineSpecification\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Engine Specification\"]\n\t\t\t}\n\t\t},\n\t\t\"/engine-specification/{id}/\":
+    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Engine Specification\",\n\t\t\t\t\"description\":
+    \"Returns a single Engine Specification\",\n\t\t\t\t\"operationId\": \"getEngineSpecification\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/EngineSpecification\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Engine Specification\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
+    Engine Specification\",\n\t\t\t\t\"description\": \"Update a single Engine Specification\",\n\t\t\t\t\"operationId\":
+    \"updateEngineSpecificationItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\":
+    \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\": \"Unique id for
+    item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"fueltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    type of fuel suitable for the engine or engines of the vehicle. If the vehicle has
+    only one engine, this property can be attached directly to the vehicle.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"qualitativevalue or  text or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"vehicleengine\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Information about the engine or engines of the vehicle. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"vehicle\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/EngineSpecification\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Engine Specification\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\":
+    \"Engine Specification\",\n\t\t\t\t\"description\": \"Deletes a single Engine Specification\",\n\t\t\t\t\"operationId\":
+    \"deleteEngineSpecification\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\":
+    \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\": \"Unique id for
+    item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/EngineSpecification\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Engine Specification\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"EngineSpecification\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
+    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"description\":
+    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"fueltype\": {\n\t\t\t\t\t\"description\": \"The
+    type of fuel suitable for the engine or engines of the vehicle. If the vehicle has
+    only one engine, this property can be attached directly to the vehicle.\",\n\t\t\t\t\t\"type\":
+    \"qualitativevalue or  text or  url\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\":
+    \"An image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"name\":
+    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
+    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\": \"URL
+    of a reference Web page that unambiguously indicates the item\\'s identity. E.g.
+    the URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"vehicleengine\": {\n\t\t\t\t\t\"description\":
+    \"Information about the engine or engines of the vehicle. \",\n\t\t\t\t\t\"type\":
+    \"vehicle\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

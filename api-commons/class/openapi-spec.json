@@ -299,126 +299,56 @@
 	},
 	"definitions": {
 		"Class": {
-			"properties": [{
-				"name": {
-					"description": "additionaltype",
-					"type": "url"
-				},
-				"description": {
+			"properties": {
+				"additionaltype": {
 					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "alternatename",
-					"type": "text"
 				},
-				"description": {
+				"alternatename": {
 					"description": "An alias for the item.",
-					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "description",
 					"type": "text"
 				},
 				"description": {
 					"description": "A short description of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "domainincludes",
-					"type": "property"
 				},
-				"description": {
+				"domainincludes": {
 					"description": "Relates a property to a class that is (one of) the type(s) the property is expected to be used on. ",
 					"type": "property"
-				}
-			},
-			{
-				"name": {
-					"description": "image",
-					"type": "url or  imageobject"
 				},
-				"description": {
+				"image": {
 					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
 					"type": "url or  imageobject"
-				}
-			},
-			{
-				"name": {
-					"description": "mainentityofpage",
-					"type": "url or  creativework"
 				},
-				"description": {
+				"mainentityofpage": {
 					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
 					"type": "url or  creativework"
-				}
-			},
-			{
-				"name": {
-					"description": "name",
-					"type": "text"
 				},
-				"description": {
+				"name": {
 					"description": "The name of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "potentialaction",
-					"type": "action"
 				},
-				"description": {
+				"potentialaction": {
 					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
-				}
-			},
-			{
-				"name": {
-					"description": "rangeincludes",
-					"type": "property"
 				},
-				"description": {
+				"rangeincludes": {
 					"description": "Relates a property to a class that constitutes (one of) the expected type(s) for values of the property. ",
 					"type": "property"
-				}
-			},
-			{
-				"name": {
-					"description": "sameas",
-					"type": "url"
 				},
-				"description": {
+				"sameas": {
 					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "supersededby",
-					"type": "class or  property or  enumeration"
 				},
-				"description": {
+				"supersededby": {
 					"description": "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
 					"type": "class or  property or  enumeration"
-				}
-			},
-			{
-				"name": {
-					"description": "url",
-					"type": "url"
 				},
-				"description": {
+				"url": {
 					"description": "URL of the item.",
 					"type": "url"
 				}
-			}]
+			}
 		}
 	}
 }

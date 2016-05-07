@@ -369,176 +369,76 @@
 	},
 	"definitions": {
 		"DrugLegalStatus": {
-			"properties": [{
-				"name": {
-					"description": "additionaltype",
-					"type": "url"
-				},
-				"description": {
+			"properties": {
+				"additionaltype": {
 					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "alternatename",
-					"type": "text"
 				},
-				"description": {
+				"alternatename": {
 					"description": "An alias for the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "applicablelocation",
-					"type": "administrativearea"
 				},
-				"description": {
+				"applicablelocation": {
 					"description": "The location in which the status applies.",
 					"type": "administrativearea"
-				}
-			},
-			{
-				"name": {
-					"description": "code",
-					"type": "medicalcode"
 				},
-				"description": {
+				"code": {
 					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
 					"type": "medicalcode"
-				}
-			},
-			{
-				"name": {
-					"description": "description",
-					"type": "text"
 				},
 				"description": {
 					"description": "A short description of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "guideline",
-					"type": "medicalguideline"
 				},
-				"description": {
+				"guideline": {
 					"description": "A medical guideline related to this entity.",
 					"type": "medicalguideline"
-				}
-			},
-			{
-				"name": {
-					"description": "image",
-					"type": "url or  imageobject"
 				},
-				"description": {
+				"image": {
 					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
 					"type": "url or  imageobject"
-				}
-			},
-			{
-				"name": {
-					"description": "legalstatus",
-					"type": "dietarysupplement or drug"
 				},
-				"description": {
+				"legalstatus": {
 					"description": "The drug or supplement\'s legal status, including any controlled substance schedules that apply. ",
 					"type": "dietarysupplement or drug"
-				}
-			},
-			{
-				"name": {
-					"description": "mainentityofpage",
-					"type": "url or  creativework"
 				},
-				"description": {
+				"mainentityofpage": {
 					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
 					"type": "url or  creativework"
-				}
-			},
-			{
-				"name": {
-					"description": "medicinesystem",
-					"type": "medicinesystem"
 				},
-				"description": {
+				"medicinesystem": {
 					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"type": "medicinesystem"
-				}
-			},
-			{
-				"name": {
-					"description": "name",
-					"type": "text"
 				},
-				"description": {
+				"name": {
 					"description": "The name of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "potentialaction",
-					"type": "action"
 				},
-				"description": {
+				"potentialaction": {
 					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
-				}
-			},
-			{
-				"name": {
-					"description": "recognizingauthority",
-					"type": "organization"
 				},
-				"description": {
+				"recognizingauthority": {
 					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
 					"type": "organization"
-				}
-			},
-			{
-				"name": {
-					"description": "relevantspecialty",
-					"type": "medicalspecialty"
 				},
-				"description": {
+				"relevantspecialty": {
 					"description": "If applicable, a medical specialty in which this entity is relevant.",
 					"type": "medicalspecialty"
-				}
-			},
-			{
-				"name": {
-					"description": "sameas",
-					"type": "url"
 				},
-				"description": {
+				"sameas": {
 					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "study",
-					"type": "medicalstudy"
 				},
-				"description": {
+				"study": {
 					"description": "A medical study or trial related to this entity.",
 					"type": "medicalstudy"
-				}
-			},
-			{
-				"name": {
-					"description": "url",
-					"type": "url"
 				},
-				"description": {
+				"url": {
 					"description": "URL of the item.",
 					"type": "url"
 				}
-			}]
+			}
 		}
 	}
 }

@@ -467,246 +467,104 @@
 	},
 	"definitions": {
 		"AnatomicalSystem": {
-			"properties": [{
-				"name": {
-					"description": "additionaltype",
-					"type": "url"
-				},
-				"description": {
+			"properties": {
+				"additionaltype": {
 					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "alternatename",
-					"type": "text"
 				},
-				"description": {
+				"alternatename": {
 					"description": "An alias for the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "associatedanatomy",
-					"type": "physicalactivity or medicalcondition"
 				},
-				"description": {
+				"associatedanatomy": {
 					"description": "The anatomy of the underlying organ system or structures associated with this entity. ",
 					"type": "physicalactivity or medicalcondition"
-				}
-			},
-			{
-				"name": {
-					"description": "associatedpathophysiology",
-					"type": "text"
 				},
-				"description": {
+				"associatedpathophysiology": {
 					"description": "If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "code",
-					"type": "medicalcode"
 				},
-				"description": {
+				"code": {
 					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
 					"type": "medicalcode"
-				}
-			},
-			{
-				"name": {
-					"description": "comprisedof",
-					"type": "anatomicalsystem or  anatomicalstructure"
 				},
-				"description": {
+				"comprisedof": {
 					"description": "The underlying anatomical structures, such as organs, that comprise the anatomical system.",
 					"type": "anatomicalsystem or  anatomicalstructure"
-				}
-			},
-			{
-				"name": {
-					"description": "description",
-					"type": "text"
 				},
 				"description": {
 					"description": "A short description of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "guideline",
-					"type": "medicalguideline"
 				},
-				"description": {
+				"guideline": {
 					"description": "A medical guideline related to this entity.",
 					"type": "medicalguideline"
-				}
-			},
-			{
-				"name": {
-					"description": "image",
-					"type": "url or  imageobject"
 				},
-				"description": {
+				"image": {
 					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
 					"type": "url or  imageobject"
-				}
-			},
-			{
-				"name": {
-					"description": "mainentityofpage",
-					"type": "url or  creativework"
 				},
-				"description": {
+				"mainentityofpage": {
 					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
 					"type": "url or  creativework"
-				}
-			},
-			{
-				"name": {
-					"description": "medicinesystem",
-					"type": "medicinesystem"
 				},
-				"description": {
+				"medicinesystem": {
 					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"type": "medicinesystem"
-				}
-			},
-			{
-				"name": {
-					"description": "name",
-					"type": "text"
 				},
-				"description": {
+				"name": {
 					"description": "The name of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "partofsystem",
-					"type": "anatomicalstructure"
 				},
-				"description": {
+				"partofsystem": {
 					"description": "The anatomical or organ system that this structure is part of. ",
 					"type": "anatomicalstructure"
-				}
-			},
-			{
-				"name": {
-					"description": "potentialaction",
-					"type": "action"
 				},
-				"description": {
+				"potentialaction": {
 					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
-				}
-			},
-			{
-				"name": {
-					"description": "recognizingauthority",
-					"type": "organization"
 				},
-				"description": {
+				"recognizingauthority": {
 					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
 					"type": "organization"
-				}
-			},
-			{
-				"name": {
-					"description": "regiondrained",
-					"type": "vein or lymphaticvessel"
 				},
-				"description": {
+				"regiondrained": {
 					"description": "The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ. ",
 					"type": "vein or lymphaticvessel"
-				}
-			},
-			{
-				"name": {
-					"description": "relatedanatomy",
-					"type": "superficialanatomy"
 				},
-				"description": {
+				"relatedanatomy": {
 					"description": "Anatomical systems or structures that relate to the superficial anatomy. ",
 					"type": "superficialanatomy"
-				}
-			},
-			{
-				"name": {
-					"description": "relatedcondition",
-					"type": "medicalcondition"
 				},
-				"description": {
+				"relatedcondition": {
 					"description": "A medical condition associated with this anatomy.",
 					"type": "medicalcondition"
-				}
-			},
-			{
-				"name": {
-					"description": "relatedstructure",
-					"type": "anatomicalstructure"
 				},
-				"description": {
+				"relatedstructure": {
 					"description": "Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system.",
 					"type": "anatomicalstructure"
-				}
-			},
-			{
-				"name": {
-					"description": "relatedtherapy",
-					"type": "medicaltherapy"
 				},
-				"description": {
+				"relatedtherapy": {
 					"description": "A medical therapy related to this anatomy.",
 					"type": "medicaltherapy"
-				}
-			},
-			{
-				"name": {
-					"description": "relevantspecialty",
-					"type": "medicalspecialty"
 				},
-				"description": {
+				"relevantspecialty": {
 					"description": "If applicable, a medical specialty in which this entity is relevant.",
 					"type": "medicalspecialty"
-				}
-			},
-			{
-				"name": {
-					"description": "sameas",
-					"type": "url"
 				},
-				"description": {
+				"sameas": {
 					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "study",
-					"type": "medicalstudy"
 				},
-				"description": {
+				"study": {
 					"description": "A medical study or trial related to this entity.",
 					"type": "medicalstudy"
-				}
-			},
-			{
-				"name": {
-					"description": "url",
-					"type": "url"
 				},
-				"description": {
+				"url": {
 					"description": "URL of the item.",
 					"type": "url"
 				}
-			}]
+			}
 		}
 	}
 }

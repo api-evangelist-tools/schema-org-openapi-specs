@@ -1,863 +1,145 @@
-- swagger: "2.0"
-  info:
-    title: Map Category Type API
-    description: An enumeration of several kinds of Map.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: map.category.type.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /map-category-type/:
-      get:
-        summary: Get Map Category Type
-        description: Returns Map Category Type
-        operationId: getMapCategoryType
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MapCategoryType'
-        tags:
-        - Map Category Type
-      post:
-        summary: Add Map Category Type
-        description: Add Map Category Type
-        operationId: addMapCategoryType
-        parameters:
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: maptype
-          in: formData
-          description: 'Indicates the kind of Map, from the MapCategoryType Enumeration. '
-          required: false
-          type: map
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: supersededby
-          in: formData
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          required: false
-          type: enumeration or  class or  property
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MapCategoryType'
-        tags:
-        - Map Category Type
-    /map-category-type/{id}/:
-      get:
-        summary: Get Map Category Type
-        description: Returns a single Map Category Type
-        operationId: getMapCategoryType
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MapCategoryType'
-        tags:
-        - Map Category Type
-      put:
-        summary: Update Map Category Type
-        description: Update a single Map Category Type
-        operationId: updateMapCategoryTypeItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: maptype
-          in: formData
-          description: 'Indicates the kind of Map, from the MapCategoryType Enumeration. '
-          required: false
-          type: map
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: supersededby
-          in: formData
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          required: false
-          type: enumeration or  class or  property
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MapCategoryType'
-        tags:
-        - Map Category Type
-      delete:
-        summary: Map Category Type
-        description: Deletes a single Map Category Type
-        operationId: deleteMapCategoryType
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MapCategoryType'
-        tags:
-        - Map Category Type
-  definitions:
-    Map:
-      properties:
-      - name:
-          description: about
-          type: thing
-        description:
-          description: The subject matter of the content.
-          type: thing
-      - name:
-          description: accessibilityapi
-          type: text
-        description:
-          description: Indicates that the resource is compatible with the referenced
-            accessibility API (WebSchemas wiki lists possible values).
-          type: text
-      - name:
-          description: accessibilitycontrol
-          type: text
-        description:
-          description: Identifies input methods that are sufficient to fully control
-            the described resource (WebSchemas wiki lists possible values).
-          type: text
-      - name:
-          description: accessibilityfeature
-          type: text
-        description:
-          description: Content features of the resource, such as accessible media, alternatives
-            and supported enhancements for accessibility (WebSchemas wiki lists possible
-            values).
-          type: text
-      - name:
-          description: accessibilityhazard
-          type: text
-        description:
-          description: A characteristic of the described resource that is physiologically
-            dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki
-            lists possible values).
-          type: text
-      - name:
-          description: accountableperson
-          type: person
-        description:
-          description: Specifies the Person that is legally accountable for the CreativeWork.
-          type: person
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: alternativeheadline
-          type: text
-        description:
-          description: A secondary title of the CreativeWork.
-          type: text
-      - name:
-          description: associatedmedia
-          type: mediaobject
-        description:
-          description: A media object that encodes this CreativeWork. This property
-            is a synonym for encoding.
-          type: mediaobject
-      - name:
-          description: audience
-          type: audience
-        description:
-          description: An intended audience, i.e. a group for whom something was created.
-            Supersedes serviceAudience.
-          type: audience
-      - name:
-          description: audio
-          type: audioobject
-        description:
-          description: An embedded audio object.
-          type: audioobject
-      - name:
-          description: author
-          type: person or  organization
-        description:
-          description: The author of this content. Please note that author is special
-            in that HTML 5 provides a special mechanism for indicating authorship via
-            the rel tag. That is equivalent to this and may be used interchangeably.
-          type: person or  organization
-      - name:
-          description: award
-          type: text
-        description:
-          description: An award won by or for this item. Supersedes awards.
-          type: text
-      - name:
-          description: character
-          type: person
-        description:
-          description: Fictional person connected with a creative work.
-          type: person
-      - name:
-          description: citation
-          type: creativework or  text
-        description:
-          description: A citation or reference to another creative work, such as another
-            publication, web page, scholarly article, etc.
-          type: creativework or  text
-      - name:
-          description: comment
-          type: comment
-        description:
-          description: Comments, typically from users.
-          type: comment
-      - name:
-          description: commentcount
-          type: integer
-        description:
-          description: The number of comments this CreativeWork (e.g. Article, Question
-            or Answer) has received. This is most applicable to works published in Web
-            sites with commenting system; additional comments may exist elsewhere.
-          type: integer
-      - name:
-          description: contentlocation
-          type: place
-        description:
-          description: The location depicted or described in the content. For example,
-            the location in a photograph or painting.
-          type: place
-      - name:
-          description: contentrating
-          type: text
-        description:
-          description: Official rating of a piece of content&#x2014;for example,\'MPAA
-            PG-13\'.
-          type: text
-      - name:
-          description: contributor
-          type: person or  organization
-        description:
-          description: A secondary contributor to the CreativeWork.
-          type: person or  organization
-      - name:
-          description: copyrightholder
-          type: person or  organization
-        description:
-          description: The party holding the legal copyright to the CreativeWork.
-          type: person or  organization
-      - name:
-          description: copyrightyear
-          type: number
-        description:
-          description: The year during which the claimed copyright for the CreativeWork
-            was first asserted.
-          type: number
-      - name:
-          description: creator
-          type: person or  organization
-        description:
-          description: The creator/author of this CreativeWork. This is the same as
-            the Author property for CreativeWork.
-          type: person or  organization
-      - name:
-          description: datecreated
-          type: date or  datetime
-        description:
-          description: The date on which the CreativeWork was created or the item was
-            added to a DataFeed.
-          type: date or  datetime
-      - name:
-          description: datemodified
-          type: date or  datetime
-        description:
-          description: The date on which the CreativeWork was most recently modified
-            or when the item\'s entry was modified within a DataFeed.
-          type: date or  datetime
-      - name:
-          description: datepublished
-          type: date
-        description:
-          description: Date of first broadcast/publication.
-          type: date
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: discussionurl
-          type: url
-        description:
-          description: A link to the page containing the comments of the CreativeWork.
-          type: url
-      - name:
-          description: editor
-          type: person
-        description:
-          description: Specifies the Person who edited the CreativeWork.
-          type: person
-      - name:
-          description: educationalalignment
-          type: alignmentobject
-        description:
-          description: An alignment to an established educational framework.
-          type: alignmentobject
-      - name:
-          description: educationaluse
-          type: text
-        description:
-          description: The purpose of a work in the context of education; for example,
-            \'assignment\', \'group work\'.
-          type: text
-      - name:
-          description: encoding
-          type: mediaobject
-        description:
-          description: A media object that encodes this CreativeWork. This property
-            is a synonym for associatedMedia. Supersedes encodings.
-          type: mediaobject
-      - name:
-          description: exampleofwork
-          type: creativework
-        description:
-          description: 'A creative work that this work is an example/instance/realization/derivation
-            of. Inverse property: workExample.'
-          type: creativework
-      - name:
-          description: fileformat
-          type: text
-        description:
-          description: Media type (aka MIME format, see IANA site) of the content e.g.
-            application/zip of a SoftwareApplication binary. In cases where a CreativeWork
-            has several media type representations, \'encoding\' can be used to indicate
-            each MediaObject alongside particular fileFormat information.
-          type: text
-      - name:
-          description: genre
-          type: text or  url
-        description:
-          description: Genre of the creative work or group.
-          type: text or  url
-      - name:
-          description: hasmap
-          type: place
-        description:
-          description: A URL to a map of the place.  Supersedes map.
-          type: place
-      - name:
-          description: haspart
-          type: creativework
-        description:
-          description: 'Indicates a CreativeWork that is (in some sense) a part of this
-            CreativeWork. Inverse property: isPartOf.'
-          type: creativework
-      - name:
-          description: headline
-          type: text
-        description:
-          description: Headline of the article.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: inlanguage
-          type: text or  language
-        description:
-          description: The language of the content or performance or used in an action.
-            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
-            language.
-          type: text or  language
-      - name:
-          description: interactionstatistic
-          type: interactioncounter
-        description:
-          description: The number of interactions for the CreativeWork using the WebSite
-            or SoftwareApplication. The most specific child type of InteractionCounter
-            should be used. Supersedes interactionCount.
-          type: interactioncounter
-      - name:
-          description: interactivitytype
-          type: text
-        description:
-          description: The predominant mode of learning supported by the learning resource.
-            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
-          type: text
-      - name:
-          description: isbasedonurl
-          type: url
-        description:
-          description: A resource that was used in the creation of this resource. This
-            term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
-          type: url
-      - name:
-          description: isfamilyfriendly
-          type: boolean
-        description:
-          description: Indicates whether this content is family friendly.
-          type: boolean
-      - name:
-          description: ispartof
-          type: creativework
-        description:
-          description: 'Indicates a CreativeWork that this CreativeWork is (in some
-            sense) part of. Inverse property: hasPart.'
-          type: creativework
-      - name:
-          description: keywords
-          type: text
-        description:
-          description: Keywords or tags used to describe this content. Multiple entries
-            in a keywords list are typically delimited by commas.
-          type: text
-      - name:
-          description: learningresourcetype
-          type: text
-        description:
-          description: The predominant type or kind characterizing the learning resource.
-            For example, \'presentation\', \'handout\'.
-          type: text
-      - name:
-          description: license
-          type: creativework or  url
-        description:
-          description: A license document that applies to this content, typically indicated
-            by URL.
-          type: creativework or  url
-      - name:
-          description: locationcreated
-          type: place
-        description:
-          description: The location where the CreativeWork was created, which may not
-            be the same as the location depicted in the CreativeWork.
-          type: place
-      - name:
-          description: mainentity
-          type: thing
-        description:
-          description: 'Indicates the primary entity described in some page or other
-            CreativeWork. Inverse property: mainEntityOfPage.'
-          type: thing
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: maptype
-          type: mapcategorytype
-        description:
-          description: Indicates the kind of Map, from the MapCategoryType Enumeration.
-          type: mapcategorytype
-      - name:
-          description: mentions
-          type: thing
-        description:
-          description: Indicates that the CreativeWork contains a reference to, but
-            is not necessarily about a concept.
-          type: thing
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: offers
-          type: offer
-        description:
-          description: An offer to provide this item&#x2014;for example, an offer to
-            sell a product, rent the DVD of a movie, perform a service, or give away
-            tickets to an event.
-          type: offer
-      - name:
-          description: position
-          type: text or  integer
-        description:
-          description: The position of an item in a series or sequence of items.
-          type: text or  integer
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: producer
-          type: person or  organization
-        description:
-          description: The person or organization who produced the work (e.g. music
-            album, movie, tv/radio series etc.).
-          type: person or  organization
-      - name:
-          description: provider
-          type: person or  organization
-        description:
-          description: The service provider, service operator, or service performer;
-            the goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the seller.
-            Supersedes carrier.
-          type: person or  organization
-      - name:
-          description: publication
-          type: publicationevent
-        description:
-          description: A publication event associated with the item.
-          type: publicationevent
-      - name:
-          description: publisher
-          type: person or  organization
-        description:
-          description: The publisher of the creative work.
-          type: person or  organization
-      - name:
-          description: publishingprinciples
-          type: url
-        description:
-          description: Link to page describing the editorial principles of the organization
-            primarily responsible for the creation of the CreativeWork.
-          type: url
-      - name:
-          description: recordedat
-          type: event
-        description:
-          description: 'The Event where the CreativeWork was recorded. The CreativeWork
-            may capture all or part of the event. Inverse property: recordedIn.'
-          type: event
-      - name:
-          description: releasedevent
-          type: publicationevent
-        description:
-          description: The place and time the release was issued, expressed as a PublicationEvent.
-          type: publicationevent
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: schemaversion
-          type: text or  url
-        description:
-          description: 'Indicates (by URL or string) a particular version of a schema
-            used in some CreativeWork. For example, a document could declare a schemaVersion
-            using a URL such as http://schema.org/version/2.0/ if precise indication
-            of schema version was required by some application. '
-          type: text or  url
-      - name:
-          description: sourceorganization
-          type: organization
-        description:
-          description: The Organization on whose behalf the creator was working.
-          type: organization
-      - name:
-          description: text
-          type: text
-        description:
-          description: The textual content of this CreativeWork.
-          type: text
-      - name:
-          description: thumbnailurl
-          type: url
-        description:
-          description: A thumbnail image relevant to the Thing.
-          type: url
-      - name:
-          description: timerequired
-          type: duration
-        description:
-          description: Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. \'P30M\',
-            \'P1H25M\'.
-          type: duration
-      - name:
-          description: translator
-          type: person or  organization
-        description:
-          description: Organization or person who adapts a creative work to different
-            languages, regional differences and technical requirements of a target market.
-          type: person or  organization
-      - name:
-          description: typicalagerange
-          type: text
-        description:
-          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: version
-          type: number
-        description:
-          description: The version of the CreativeWork embodied by a specified resource.
-          type: number
-      - name:
-          description: video
-          type: videoobject
-        description:
-          description: An embedded video object.
-          type: videoobject
-      - name:
-          description: workexample
-          type: creativework
-        description:
-          description: 'Example/instance/realization/derivation of the concept of this
-            creative work. eg. The paperback edition, first edition, or eBook. Inverse
-            property: exampleOfWork.'
-          type: creativework
-    MapCategoryType:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: maptype
-          type: map
-        description:
-          description: 'Indicates the kind of Map, from the MapCategoryType Enumeration. '
-          type: map
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: supersededby
-          type: enumeration or  class or  property
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: enumeration or  class or  property
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Map Category Type
+    API\",\n\t\t\"description\": \"An enumeration of several kinds of Map.\",\n\t\t\"termsOfService\":
+    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
+    \"map.category.type.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\":
+    [\"application/json\"],\n\t\"paths\": {\n\t\t\"/map-category-type/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Map Category Type\",\n\t\t\t\t\"description\": \"Returns
+    Map Category Type\",\n\t\t\t\t\"operationId\": \"getMapCategoryType\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/MapCategoryType\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Map Category Type\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add
+    Map Category Type\",\n\t\t\t\t\"description\": \"Add Map Category Type\",\n\t\t\t\t\"operationId\":
+    \"addMapCategoryType\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
+    used for adding more specific types from external vocabularies in microdata syntax.
+    This is a relationship between something and a class that the thing is in. In RDFa
+    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
+    - for multiple types. Schema.org tools may have only weaker understanding of extra
+    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
+    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
+    for which this thing is the main entity being described.            See background
+    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"maptype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
+    the kind of Map, from the MapCategoryType Enumeration. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"map\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"supersededby\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Relates a term (i.e. a property, class
+    or enumeration) to one that supersedes it.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"enumeration or  class or  property\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MapCategoryType\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Map Category Type\"]\n\t\t\t}\n\t\t},\n\t\t\"/map-category-type/{id}/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Map Category Type\",\n\t\t\t\t\"description\": \"Returns
+    a single Map Category Type\",\n\t\t\t\t\"operationId\": \"getMapCategoryType\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MapCategoryType\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Map Category Type\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
+    Map Category Type\",\n\t\t\t\t\"description\": \"Update a single Map Category Type\",\n\t\t\t\t\"operationId\":
+    \"updateMapCategoryTypeItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\":
+    \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\": \"Unique id for
+    item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"maptype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates the kind of Map, from the
+    MapCategoryType Enumeration. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"map\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"supersededby\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Relates a term (i.e. a property, class
+    or enumeration) to one that supersedes it.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"enumeration or  class or  property\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MapCategoryType\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Map Category Type\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Map
+    Category Type\",\n\t\t\t\t\"description\": \"Deletes a single Map Category Type\",\n\t\t\t\t\"operationId\":
+    \"deleteMapCategoryType\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MapCategoryType\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Map Category Type\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"MapCategoryType\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
+    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"description\":
+    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"maptype\":
+    {\n\t\t\t\t\t\"description\": \"Indicates the kind of Map, from the MapCategoryType
+    Enumeration. \",\n\t\t\t\t\t\"type\": \"map\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\":
+    \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
+    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\": \"URL
+    of a reference Web page that unambiguously indicates the item\\'s identity. E.g.
+    the URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"supersededby\": {\n\t\t\t\t\t\"description\": \"Relates
+    a term (i.e. a property, class or enumeration) to one that supersedes it.\",\n\t\t\t\t\t\"type\":
+    \"enumeration or  class or  property\"\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"description\":
+    \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

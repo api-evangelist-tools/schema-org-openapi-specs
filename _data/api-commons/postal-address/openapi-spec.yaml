@@ -1,851 +1,293 @@
-- swagger: "2.0"
-  info:
-    title: Postal Address API
-    description: The mailing address.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: postal.address.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /postal-address/:
-      get:
-        summary: Get Postal Address
-        description: Returns Postal Address
-        operationId: getPostalAddress
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/PostalAddress'
-        tags:
-        - Postal Address
-      post:
-        summary: Add Postal Address
-        description: Add Postal Address
-        operationId: addPostalAddress
-        parameters:
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: address
-          in: formData
-          description: 'Physical address of the item. '
-          required: false
-          type: geocoordinates or place or geoshape or person or organization
-        - name: addresscountry
-          in: formData
-          description: The country. For example, USA. You can also provide the two-letter
-            ISO 3166-1 alpha-2 country code.
-          required: false
-          type: country or  text
-        - name: addresslocality
-          in: formData
-          description: The locality. For example, Mountain View.
-          required: false
-          type: text
-        - name: addressregion
-          in: formData
-          description: The region. For example, CA.
-          required: false
-          type: text
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: areaserved
-          in: formData
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          required: false
-          type: place or  geoshape or  administrativearea or  text
-        - name: availablelanguage
-          in: formData
-          description: A language someone may use with the item.
-          required: false
-          type: language
-        - name: billingaddress
-          in: formData
-          description: 'The billing address for the order. '
-          required: false
-          type: order
-        - name: contactoption
-          in: formData
-          description: An option available on this contact point (e.g. a toll-free number
-            or support for hearing-impaired callers).
-          required: false
-          type: contactpointoption
-        - name: contacttype
-          in: formData
-          description: A person or organization can have different contact points, for
-            different purposes. For example, a sales contact point, a PR contact point
-            and so on. This property is used to specify the kind of contact point.
-          required: false
-          type: text
-        - name: deliveryaddress
-          in: formData
-          description: 'Destination address. '
-          required: false
-          type: parceldelivery
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: email
-          in: formData
-          description: Email address.
-          required: false
-          type: text
-        - name: faxnumber
-          in: formData
-          description: The fax number.
-          required: false
-          type: text
-        - name: gamelocation
-          in: formData
-          description: 'Real or fictional location of the game (or part of game). '
-          required: false
-          type: game or videogameseries
-        - name: hoursavailable
-          in: formData
-          description: The hours during which this service or contact is available.
-          required: false
-          type: openinghoursspecification
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: location
-          in: formData
-          description: 'The location of for example where the event is happening, an
-            organization is located, or where an action takes place. '
-          required: false
-          type: event or action or organization
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: url or  creativework
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: originaddress
-          in: formData
-          description: 'Shipper\''s address. '
-          required: false
-          type: parceldelivery
-        - name: postalcode
-          in: formData
-          description: The postal code. For example, 94043.
-          required: false
-          type: text
-        - name: postofficeboxnumber
-          in: formData
-          description: The post office box number for PO box addresses.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: productsupported
-          in: formData
-          description: The product or service this support contact point is related
-            to (such as product support for a particular product line). This can be
-            a specific product or product line (e.g. \"iPhone\") or a general category
-            of products or services (e.g. \"smartphones\").
-          required: false
-          type: text or  product
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: servicepostaladdress
-          in: formData
-          description: 'The address for accessing the service by mail. '
-          required: false
-          type: servicechannel
-        - name: streetaddress
-          in: formData
-          description: The street address. For example, 1600 Amphitheatre Pkwy.
-          required: false
-          type: text
-        - name: telephone
-          in: formData
-          description: The telephone number.
-          required: false
-          type: text
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/PostalAddress'
-        tags:
-        - Postal Address
-    /postal-address/{id}/:
-      get:
-        summary: Get Postal Address
-        description: Returns a single Postal Address
-        operationId: getPostalAddress
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/PostalAddress'
-        tags:
-        - Postal Address
-      put:
-        summary: Update Postal Address
-        description: Update a single Postal Address
-        operationId: updatePostalAddressItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: address
-          in: formData
-          description: 'Physical address of the item. '
-          required: false
-          type: geocoordinates or place or geoshape or person or organization
-        - name: addresscountry
-          in: formData
-          description: The country. For example, USA. You can also provide the two-letter
-            ISO 3166-1 alpha-2 country code.
-          required: false
-          type: country or  text
-        - name: addresslocality
-          in: formData
-          description: The locality. For example, Mountain View.
-          required: false
-          type: text
-        - name: addressregion
-          in: formData
-          description: The region. For example, CA.
-          required: false
-          type: text
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: areaserved
-          in: formData
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          required: false
-          type: place or  geoshape or  administrativearea or  text
-        - name: availablelanguage
-          in: formData
-          description: A language someone may use with the item.
-          required: false
-          type: language
-        - name: billingaddress
-          in: formData
-          description: 'The billing address for the order. '
-          required: false
-          type: order
-        - name: contactoption
-          in: formData
-          description: An option available on this contact point (e.g. a toll-free number
-            or support for hearing-impaired callers).
-          required: false
-          type: contactpointoption
-        - name: contacttype
-          in: formData
-          description: A person or organization can have different contact points, for
-            different purposes. For example, a sales contact point, a PR contact point
-            and so on. This property is used to specify the kind of contact point.
-          required: false
-          type: text
-        - name: deliveryaddress
-          in: formData
-          description: 'Destination address. '
-          required: false
-          type: parceldelivery
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: email
-          in: formData
-          description: Email address.
-          required: false
-          type: text
-        - name: faxnumber
-          in: formData
-          description: The fax number.
-          required: false
-          type: text
-        - name: gamelocation
-          in: formData
-          description: 'Real or fictional location of the game (or part of game). '
-          required: false
-          type: game or videogameseries
-        - name: hoursavailable
-          in: formData
-          description: The hours during which this service or contact is available.
-          required: false
-          type: openinghoursspecification
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: location
-          in: formData
-          description: 'The location of for example where the event is happening, an
-            organization is located, or where an action takes place. '
-          required: false
-          type: event or action or organization
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: url or  creativework
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: originaddress
-          in: formData
-          description: 'Shipper\''s address. '
-          required: false
-          type: parceldelivery
-        - name: postalcode
-          in: formData
-          description: The postal code. For example, 94043.
-          required: false
-          type: text
-        - name: postofficeboxnumber
-          in: formData
-          description: The post office box number for PO box addresses.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: productsupported
-          in: formData
-          description: The product or service this support contact point is related
-            to (such as product support for a particular product line). This can be
-            a specific product or product line (e.g. \"iPhone\") or a general category
-            of products or services (e.g. \"smartphones\").
-          required: false
-          type: text or  product
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: servicepostaladdress
-          in: formData
-          description: 'The address for accessing the service by mail. '
-          required: false
-          type: servicechannel
-        - name: streetaddress
-          in: formData
-          description: The street address. For example, 1600 Amphitheatre Pkwy.
-          required: false
-          type: text
-        - name: telephone
-          in: formData
-          description: The telephone number.
-          required: false
-          type: text
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/PostalAddress'
-        tags:
-        - Postal Address
-      delete:
-        summary: Postal Address
-        description: Deletes a single Postal Address
-        operationId: deletePostalAddress
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/PostalAddress'
-        tags:
-        - Postal Address
-  definitions:
-    Pond:
-      properties:
-      - name:
-          description: additionalproperty
-          type: propertyvalue
-        description:
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          type: propertyvalue
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: branchcode
-          type: text
-        description:
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          type: text
-      - name:
-          description: containedinplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: containsplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: geo
-          type: geocoordinates or  geoshape
-        description:
-          description: The geo coordinates of the place.
-          type: geocoordinates or  geoshape
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasmap
-          type: url or  map
-        description:
-          description: A URL to a map of the place. Supersedes map, maps.
-          type: url or  map
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: openinghoursspecification
-          type: openinghoursspecification
-        description:
-          description: The opening hours of a certain place.
-          type: openinghoursspecification
-      - name:
-          description: photo
-          type: photograph or  imageobject
-        description:
-          description: A photograph of this place. Supersedes photos.
-          type: photograph or  imageobject
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    PostalAddress:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: geocoordinates or place or geoshape or person or organization
-        description:
-          description: 'Physical address of the item. '
-          type: geocoordinates or place or geoshape or person or organization
-      - name:
-          description: addresscountry
-          type: country or  text
-        description:
-          description: The country. For example, USA. You can also provide the two-letter
-            ISO 3166-1 alpha-2 country code.
-          type: country or  text
-      - name:
-          description: addresslocality
-          type: text
-        description:
-          description: The locality. For example, Mountain View.
-          type: text
-      - name:
-          description: addressregion
-          type: text
-        description:
-          description: The region. For example, CA.
-          type: text
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: areaserved
-          type: place or  geoshape or  administrativearea or  text
-        description:
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          type: place or  geoshape or  administrativearea or  text
-      - name:
-          description: availablelanguage
-          type: language
-        description:
-          description: A language someone may use with the item.
-          type: language
-      - name:
-          description: billingaddress
-          type: order
-        description:
-          description: 'The billing address for the order. '
-          type: order
-      - name:
-          description: contactoption
-          type: contactpointoption
-        description:
-          description: An option available on this contact point (e.g. a toll-free number
-            or support for hearing-impaired callers).
-          type: contactpointoption
-      - name:
-          description: contacttype
-          type: text
-        description:
-          description: A person or organization can have different contact points, for
-            different purposes. For example, a sales contact point, a PR contact point
-            and so on. This property is used to specify the kind of contact point.
-          type: text
-      - name:
-          description: deliveryaddress
-          type: parceldelivery
-        description:
-          description: 'Destination address. '
-          type: parceldelivery
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: email
-          type: text
-        description:
-          description: Email address.
-          type: text
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: gamelocation
-          type: game or videogameseries
-        description:
-          description: 'Real or fictional location of the game (or part of game). '
-          type: game or videogameseries
-      - name:
-          description: hoursavailable
-          type: openinghoursspecification
-        description:
-          description: The hours during which this service or contact is available.
-          type: openinghoursspecification
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: location
-          type: event or action or organization
-        description:
-          description: 'The location of for example where the event is happening, an
-            organization is located, or where an action takes place. '
-          type: event or action or organization
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: originaddress
-          type: parceldelivery
-        description:
-          description: 'Shipper\''s address. '
-          type: parceldelivery
-      - name:
-          description: postalcode
-          type: text
-        description:
-          description: The postal code. For example, 94043.
-          type: text
-      - name:
-          description: postofficeboxnumber
-          type: text
-        description:
-          description: The post office box number for PO box addresses.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: productsupported
-          type: text or  product
-        description:
-          description: The product or service this support contact point is related
-            to (such as product support for a particular product line). This can be
-            a specific product or product line (e.g. \"iPhone\") or a general category
-            of products or services (e.g. \"smartphones\").
-          type: text or  product
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: servicepostaladdress
-          type: servicechannel
-        description:
-          description: 'The address for accessing the service by mail. '
-          type: servicechannel
-      - name:
-          description: streetaddress
-          type: text
-        description:
-          description: The street address. For example, 1600 Amphitheatre Pkwy.
-          type: text
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Postal Address API\",\n\t\t\"description\":
+    \"The mailing address.\",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
+    \"v1\"\n\t},\n\t\"host\": \"postal.address.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
+    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/postal-address/\":
+    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Postal Address\",\n\t\t\t\t\"description\":
+    \"Returns Postal Address\",\n\t\t\t\t\"operationId\": \"getPostalAddress\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/PostalAddress\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Postal Address\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Postal
+    Address\",\n\t\t\t\t\"description\": \"Add Postal Address\",\n\t\t\t\t\"operationId\":
+    \"addPostalAddress\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
+    used for adding more specific types from external vocabularies in microdata syntax.
+    This is a relationship between something and a class that the thing is in. In RDFa
+    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
+    - for multiple types. Schema.org tools may have only weaker understanding of extra
+    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"address\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Physical address of the item. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"geocoordinates or place or geoshape or person or organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"addresscountry\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The country. For example, USA. You can also provide the two-letter ISO 3166-1
+    alpha-2 country code.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"country
+    or  text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"addresslocality\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The locality. For example, Mountain
+    View.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"addressregion\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The region. For example, CA.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"areaserved\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    geographic area where a service or offered item is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"place or  geoshape or  administrativearea or  text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availablelanguage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A language someone may use with the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"language\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"billingaddress\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The billing address for the order. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"order\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"contactoption\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An option available on this contact point (e.g. a toll-free number or support
+    for hearing-impaired callers).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"contactpointoption\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"contacttype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A person or organization can have different
+    contact points, for different purposes. For example, a sales contact point, a PR
+    contact point and so on. This property is used to specify the kind of contact point.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"deliveryaddress\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Destination address. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"parceldelivery\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"email\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Email
+    address.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"faxnumber\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    fax number.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"gamelocation\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Real
+    or fictional location of the game (or part of game). \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"game or videogameseries\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"hoursavailable\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The hours during which this service or contact is available.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"location\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    location of for example where the event is happening, an organization is located,
+    or where an action takes place. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"event or action or organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"originaddress\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Shipper\\'s address. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"parceldelivery\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"postalcode\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The postal code. For example, 94043.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"postofficeboxnumber\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The post office box number for PO box addresses.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
+    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"productsupported\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The product or service this support contact point is related to (such as product
+    support for a particular product line). This can be a specific product or product
+    line (e.g. \\\"iPhone\\\") or a general category of products or services (e.g. \\\"smartphones\\\").\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text or  product\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"servicepostaladdress\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The address for accessing the service by mail. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"streetaddress\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The street address. For example, 1600
+    Amphitheatre Pkwy.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"telephone\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    telephone number.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/PostalAddress\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Postal Address\"]\n\t\t\t}\n\t\t},\n\t\t\"/postal-address/{id}/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Postal Address\",\n\t\t\t\t\"description\": \"Returns
+    a single Postal Address\",\n\t\t\t\t\"operationId\": \"getPostalAddress\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/PostalAddress\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Postal Address\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
+    Postal Address\",\n\t\t\t\t\"description\": \"Update a single Postal Address\",\n\t\t\t\t\"operationId\":
+    \"updatePostalAddressItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"address\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Physical
+    address of the item. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"geocoordinates
+    or place or geoshape or person or organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"addresscountry\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The country. For example, USA. You can also provide the two-letter ISO 3166-1
+    alpha-2 country code.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"country
+    or  text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"addresslocality\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The locality. For example, Mountain
+    View.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"addressregion\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The region. For example, CA.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"areaserved\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    geographic area where a service or offered item is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"place or  geoshape or  administrativearea or  text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availablelanguage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A language someone may use with the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"language\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"billingaddress\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The billing address for the order. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"order\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"contactoption\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An option available on this contact point (e.g. a toll-free number or support
+    for hearing-impaired callers).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"contactpointoption\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"contacttype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A person or organization can have different
+    contact points, for different purposes. For example, a sales contact point, a PR
+    contact point and so on. This property is used to specify the kind of contact point.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"deliveryaddress\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Destination address. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"parceldelivery\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"email\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Email
+    address.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"faxnumber\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    fax number.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"gamelocation\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Real
+    or fictional location of the game (or part of game). \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"game or videogameseries\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"hoursavailable\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The hours during which this service or contact is available.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"location\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    location of for example where the event is happening, an organization is located,
+    or where an action takes place. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"event or action or organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"originaddress\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Shipper\\'s address. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"parceldelivery\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"postalcode\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The postal code. For example, 94043.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"postofficeboxnumber\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The post office box number for PO box addresses.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
+    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"productsupported\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The product or service this support contact point is related to (such as product
+    support for a particular product line). This can be a specific product or product
+    line (e.g. \\\"iPhone\\\") or a general category of products or services (e.g. \\\"smartphones\\\").\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text or  product\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"servicepostaladdress\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The address for accessing the service by mail. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"streetaddress\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The street address. For example, 1600
+    Amphitheatre Pkwy.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"telephone\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    telephone number.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/PostalAddress\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Postal Address\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Postal
+    Address\",\n\t\t\t\t\"description\": \"Deletes a single Postal Address\",\n\t\t\t\t\"operationId\":
+    \"deletePostalAddress\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/PostalAddress\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Postal Address\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"PostalAddress\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"description\": \"Physical
+    address of the item. \",\n\t\t\t\t\t\"type\": \"geocoordinates or place or geoshape
+    or person or organization\"\n\t\t\t\t},\n\t\t\t\t\"addresscountry\": {\n\t\t\t\t\t\"description\":
+    \"The country. For example, USA. You can also provide the two-letter ISO 3166-1
+    alpha-2 country code.\",\n\t\t\t\t\t\"type\": \"country or  text\"\n\t\t\t\t},\n\t\t\t\t\"addresslocality\":
+    {\n\t\t\t\t\t\"description\": \"The locality. For example, Mountain View.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"addressregion\": {\n\t\t\t\t\t\"description\": \"The
+    region. For example, CA.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\":
+    {\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"areaserved\":
+    {\n\t\t\t\t\t\"description\": \"The geographic area where a service or offered item
+    is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"type\": \"place or  geoshape
+    or  administrativearea or  text\"\n\t\t\t\t},\n\t\t\t\t\"availablelanguage\": {\n\t\t\t\t\t\"description\":
+    \"A language someone may use with the item.\",\n\t\t\t\t\t\"type\": \"language\"\n\t\t\t\t},\n\t\t\t\t\"billingaddress\":
+    {\n\t\t\t\t\t\"description\": \"The billing address for the order. \",\n\t\t\t\t\t\"type\":
+    \"order\"\n\t\t\t\t},\n\t\t\t\t\"contactoption\": {\n\t\t\t\t\t\"description\":
+    \"An option available on this contact point (e.g. a toll-free number or support
+    for hearing-impaired callers).\",\n\t\t\t\t\t\"type\": \"contactpointoption\"\n\t\t\t\t},\n\t\t\t\t\"contacttype\":
+    {\n\t\t\t\t\t\"description\": \"A person or organization can have different contact
+    points, for different purposes. For example, a sales contact point, a PR contact
+    point and so on. This property is used to specify the kind of contact point.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"deliveryaddress\": {\n\t\t\t\t\t\"description\":
+    \"Destination address. \",\n\t\t\t\t\t\"type\": \"parceldelivery\"\n\t\t\t\t},\n\t\t\t\t\"description\":
+    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"email\": {\n\t\t\t\t\t\"description\": \"Email address.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"faxnumber\": {\n\t\t\t\t\t\"description\": \"The
+    fax number.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"gamelocation\":
+    {\n\t\t\t\t\t\"description\": \"Real or fictional location of the game (or part
+    of game). \",\n\t\t\t\t\t\"type\": \"game or videogameseries\"\n\t\t\t\t},\n\t\t\t\t\"hoursavailable\":
+    {\n\t\t\t\t\t\"description\": \"The hours during which this service or contact is
+    available.\",\n\t\t\t\t\t\"type\": \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t\"image\":
+    {\n\t\t\t\t\t\"description\": \"An image of the item. This can be a URL or a fully
+    described ImageObject.\",\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"location\":
+    {\n\t\t\t\t\t\"description\": \"The location of for example where the event is happening,
+    an organization is located, or where an action takes place. \",\n\t\t\t\t\t\"type\":
+    \"event or action or organization\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t\"name\":
+    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"originaddress\":
+    {\n\t\t\t\t\t\"description\": \"Shipper\\'s address. \",\n\t\t\t\t\t\"type\": \"parceldelivery\"\n\t\t\t\t},\n\t\t\t\t\"postalcode\":
+    {\n\t\t\t\t\t\"description\": \"The postal code. For example, 94043.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"postofficeboxnumber\": {\n\t\t\t\t\t\"description\":
+    \"The post office box number for PO box addresses.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
+    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t\"productsupported\": {\n\t\t\t\t\t\"description\":
+    \"The product or service this support contact point is related to (such as product
+    support for a particular product line). This can be a specific product or product
+    line (e.g. \\\"iPhone\\\") or a general category of products or services (e.g. \\\"smartphones\\\").\",\n\t\t\t\t\t\"type\":
+    \"text or  product\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\":
+    \"URL of a reference Web page that unambiguously indicates the item\\'s identity.
+    E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"servicepostaladdress\": {\n\t\t\t\t\t\"description\":
+    \"The address for accessing the service by mail. \",\n\t\t\t\t\t\"type\": \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t\"streetaddress\":
+    {\n\t\t\t\t\t\"description\": \"The street address. For example, 1600 Amphitheatre
+    Pkwy.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"telephone\": {\n\t\t\t\t\t\"description\":
+    \"The telephone number.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"url\":
+    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

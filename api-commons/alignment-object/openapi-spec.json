@@ -341,156 +341,68 @@
 	},
 	"definitions": {
 		"AlignmentObject": {
-			"properties": [{
-				"name": {
-					"description": "additionaltype",
-					"type": "url"
-				},
-				"description": {
+			"properties": {
+				"additionaltype": {
 					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "alignmenttype",
-					"type": "text"
 				},
-				"description": {
+				"alignmenttype": {
 					"description": "A category of alignment between the learning resource and the framework node. Recommended values include: \'assesses\', \'teaches\', \'requires\', \'textComplexity\', \'readingLevel\', \'educationalSubject\', and \'educationLevel\'.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "alternatename",
-					"type": "text"
 				},
-				"description": {
+				"alternatename": {
 					"description": "An alias for the item.",
-					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "description",
 					"type": "text"
 				},
 				"description": {
 					"description": "A short description of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "educationalalignment",
-					"type": "creativework"
 				},
-				"description": {
+				"educationalalignment": {
 					"description": "An alignment to an established educational framework. ",
 					"type": "creativework"
-				}
-			},
-			{
-				"name": {
-					"description": "educationalframework",
-					"type": "text"
 				},
-				"description": {
+				"educationalframework": {
 					"description": "The framework to which the resource being described is aligned.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "image",
-					"type": "url or  imageobject"
 				},
-				"description": {
+				"image": {
 					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
 					"type": "url or  imageobject"
-				}
-			},
-			{
-				"name": {
-					"description": "mainentityofpage",
-					"type": "creativework or  url"
 				},
-				"description": {
+				"mainentityofpage": {
 					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
 					"type": "creativework or  url"
-				}
-			},
-			{
-				"name": {
-					"description": "name",
-					"type": "text"
 				},
-				"description": {
+				"name": {
 					"description": "The name of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "potentialaction",
-					"type": "action"
 				},
-				"description": {
+				"potentialaction": {
 					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
-				}
-			},
-			{
-				"name": {
-					"description": "sameas",
-					"type": "url"
 				},
-				"description": {
+				"sameas": {
 					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "targetdescription",
-					"type": "text"
 				},
-				"description": {
+				"targetdescription": {
 					"description": "The description of a node in an established educational framework.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "targetname",
-					"type": "text"
 				},
-				"description": {
+				"targetname": {
 					"description": "The name of a node in an established educational framework.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "targeturl",
-					"type": "url"
 				},
-				"description": {
+				"targeturl": {
 					"description": "The URL of a node in an established educational framework.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "url",
-					"type": "url"
 				},
-				"description": {
+				"url": {
 					"description": "URL of the item.",
 					"type": "url"
 				}
-			}]
+			}
 		}
 	}
 }

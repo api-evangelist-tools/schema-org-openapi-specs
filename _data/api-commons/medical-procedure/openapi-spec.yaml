@@ -1,1632 +1,218 @@
-- swagger: "2.0"
-  info:
-    title: Medical Procedure API
-    description: A process of care used in either a diagnostic, therapeutic, or palliative
-      capacity that relies on invasive (surgical), non-invasive, or percutaneous techniques.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: medical.procedure.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /medical-procedure/:
-      get:
-        summary: Get Medical Procedure
-        description: Returns Medical Procedure
-        operationId: getMedicalProcedure
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MedicalProcedure'
-        tags:
-        - Medical Procedure
-      post:
-        summary: Add Medical Procedure
-        description: Add Medical Procedure
-        operationId: addMedicalProcedure
-        parameters:
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: availableservice
-          in: formData
-          description: 'A medical service available from this provider. '
-          required: false
-          type: hospital or medicalclinic or physician
-        - name: code
-          in: formData
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          required: false
-          type: medicalcode
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: followup
-          in: formData
-          description: Typical or recommended followup care after the procedure is performed.
-          required: false
-          type: text
-        - name: guideline
-          in: formData
-          description: A medical guideline related to this entity.
-          required: false
-          type: medicalguideline
-        - name: howperformed
-          in: formData
-          description: How the procedure is performed.
-          required: false
-          type: text
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: medicinesystem
-          in: formData
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          required: false
-          type: medicinesystem
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: preparation
-          in: formData
-          description: Typical preparation that a patient must undergo before having
-            the procedure performed.
-          required: false
-          type: text
-        - name: proceduretype
-          in: formData
-          description: The type of procedure, for example Surgical, Noninvasive, or
-            Percutaneous.
-          required: false
-          type: medicalproceduretype
-        - name: recognizingauthority
-          in: formData
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          required: false
-          type: organization
-        - name: relevantspecialty
-          in: formData
-          description: If applicable, a medical specialty in which this entity is relevant.
-          required: false
-          type: medicalspecialty
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: study
-          in: formData
-          description: A medical study or trial related to this entity.
-          required: false
-          type: medicalstudy
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MedicalProcedure'
-        tags:
-        - Medical Procedure
-    /medical-procedure/{id}/:
-      get:
-        summary: Get Medical Procedure
-        description: Returns a single Medical Procedure
-        operationId: getMedicalProcedure
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MedicalProcedure'
-        tags:
-        - Medical Procedure
-      put:
-        summary: Update Medical Procedure
-        description: Update a single Medical Procedure
-        operationId: updateMedicalProcedureItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: availableservice
-          in: formData
-          description: 'A medical service available from this provider. '
-          required: false
-          type: hospital or medicalclinic or physician
-        - name: code
-          in: formData
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          required: false
-          type: medicalcode
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: followup
-          in: formData
-          description: Typical or recommended followup care after the procedure is performed.
-          required: false
-          type: text
-        - name: guideline
-          in: formData
-          description: A medical guideline related to this entity.
-          required: false
-          type: medicalguideline
-        - name: howperformed
-          in: formData
-          description: How the procedure is performed.
-          required: false
-          type: text
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: medicinesystem
-          in: formData
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          required: false
-          type: medicinesystem
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: preparation
-          in: formData
-          description: Typical preparation that a patient must undergo before having
-            the procedure performed.
-          required: false
-          type: text
-        - name: proceduretype
-          in: formData
-          description: The type of procedure, for example Surgical, Noninvasive, or
-            Percutaneous.
-          required: false
-          type: medicalproceduretype
-        - name: recognizingauthority
-          in: formData
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          required: false
-          type: organization
-        - name: relevantspecialty
-          in: formData
-          description: If applicable, a medical specialty in which this entity is relevant.
-          required: false
-          type: medicalspecialty
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: study
-          in: formData
-          description: A medical study or trial related to this entity.
-          required: false
-          type: medicalstudy
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MedicalProcedure'
-        tags:
-        - Medical Procedure
-      delete:
-        summary: Medical Procedure
-        description: Deletes a single Medical Procedure
-        operationId: deleteMedicalProcedure
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MedicalProcedure'
-        tags:
-        - Medical Procedure
-  definitions:
-    MedicalGuidelineRecommendation:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: evidencelevel
-          type: medicalevidencelevel
-        description:
-          description: Strength of evidence of the data used to formulate the guideline
-            (enumerated).
-          type: medicalevidencelevel
-      - name:
-          description: evidenceorigin
-          type: text
-        description:
-          description: Source of the data used to formulate the guidance, e.g. RCT,
-            consensus opinion, etc.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: guidelinedate
-          type: date
-        description:
-          description: Date on which this guideline\'s recommendation was made.
-          type: date
-      - name:
-          description: guidelinesubject
-          type: medicalentity
-        description:
-          description: The medical conditions, treatments, etc. that are the subject
-            of the guideline.
-          type: medicalentity
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: recommendationstrength
-          type: text
-        description:
-          description: Strength of the guideline\'s recommendation (e.g. \'class I\').
-          type: text
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    MedicalImagingTechnique:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: imageobject or  url
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: imageobject or  url
-      - name:
-          description: imagingtechnique
-          type: imagingtest
-        description:
-          description: 'Imaging technique used. '
-          type: imagingtest
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: supersededby
-          type: class or  property or  enumeration
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: class or  property or  enumeration
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    MedicalIndication:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: indication
-          type: medicaltherapy or medicaldevice
-        description:
-          description: 'A factor that indicates use of this therapy for treatment and/or
-            prevention of a condition, symptom, etc. For therapies such as drugs, indications
-            can include both officially-approved indications as well as off-label uses.
-            These can be distinguished by using the ApprovedIndication subtype of MedicalIndication. '
-          type: medicaltherapy or medicaldevice
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    MedicalIntangible:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    MedicalObservationalStudy:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: imageobject or  url
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: imageobject or  url
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: outcome
-          type: text
-        description:
-          description: Expected or actual outcomes of the study.
-          type: text
-      - name:
-          description: population
-          type: text
-        description:
-          description: Any characteristics of the population used in the study, e.g.
-            \'males under 65\'.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: sponsor
-          type: organization
-        description:
-          description: Sponsor of the study.
-          type: organization
-      - name:
-          description: status
-          type: medicalstudystatus
-        description:
-          description: The status of the study (enumerated).
-          type: medicalstudystatus
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: studydesign
-          type: medicalobservationalstudydesign
-        description:
-          description: Specifics about the observational study design (enumerated).
-          type: medicalobservationalstudydesign
-      - name:
-          description: studylocation
-          type: administrativearea
-        description:
-          description: The location in which the study is taking/took place.
-          type: administrativearea
-      - name:
-          description: studysubject
-          type: medicalentity
-        description:
-          description: A subject of the study, i.e. one of the medical conditions, therapies,
-            devices, drugs, etc. investigated by the study.
-          type: medicalentity
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    MedicalObservationalStudyDesign:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: studydesign
-          type: medicalobservationalstudy
-        description:
-          description: 'Specifics about the observational study design (enumerated). '
-          type: medicalobservationalstudy
-      - name:
-          description: supersededby
-          type: enumeration or  class or  property
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: enumeration or  class or  property
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    MedicalOrganization:
-      properties:
-      - name:
-          description: additionalproperty
-          type: propertyvalue
-        description:
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          type: propertyvalue
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: alumni
-          type: person
-        description:
-          description: 'Alumni of an organization. Inverse property: alumniOf.'
-          type: person
-      - name:
-          description: areaserved
-          type: text or  place or  geoshape or  administrativearea
-        description:
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          type: text or  place or  geoshape or  administrativearea
-      - name:
-          description: award
-          type: text
-        description:
-          description: An award won by or for this item. Supersedes awards.
-          type: text
-      - name:
-          description: branchcode
-          type: text
-        description:
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          type: text
-      - name:
-          description: brand
-          type: brand or  organization
-        description:
-          description: The brand(s) associated with a product or service, or the brand(s)
-            maintained by an organization or business person.
-          type: brand or  organization
-      - name:
-          description: contactpoint
-          type: contactpoint
-        description:
-          description: A contact point for a person or organization. Supersedes contactPoints.
-          type: contactpoint
-      - name:
-          description: containedinplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: containsplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: currenciesaccepted
-          type: text
-        description:
-          description: The currency accepted (in ISO 4217 currency format).
-          type: text
-      - name:
-          description: department
-          type: organization
-        description:
-          description: 'A relationship between an organization and a department of that
-            organization, also described as an organization (allowing different urls,
-            logos, opening hours). For example: a store with a pharmacy, or a bakery
-            with a cafe.'
-          type: organization
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: dissolutiondate
-          type: date
-        description:
-          description: The date that this organization was dissolved.
-          type: date
-      - name:
-          description: duns
-          type: text
-        description:
-          description: The Dun & Bradstreet DUNS number for identifying an organization
-            or business person.
-          type: text
-      - name:
-          description: email
-          type: text
-        description:
-          description: Email address.
-          type: text
-      - name:
-          description: employee
-          type: person
-        description:
-          description: Someone working for this organization. Supersedes employees.
-          type: person
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: founder
-          type: person
-        description:
-          description: A person who founded this organization. Supersedes founders.
-          type: person
-      - name:
-          description: foundingdate
-          type: date
-        description:
-          description: The date that this organization was founded.
-          type: date
-      - name:
-          description: foundinglocation
-          type: place
-        description:
-          description: The place where the Organization was founded.
-          type: place
-      - name:
-          description: geo
-          type: geocoordinates or  geoshape
-        description:
-          description: The geo coordinates of the place.
-          type: geocoordinates or  geoshape
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasmap
-          type: url or  map
-        description:
-          description: A URL to a map of the place. Supersedes map, maps.
-          type: url or  map
-      - name:
-          description: hasoffercatalog
-          type: offercatalog
-        description:
-          description: Indicates an OfferCatalog listing for this Organization, Person,
-            or Service.
-          type: offercatalog
-      - name:
-          description: haspos
-          type: place
-        description:
-          description: Points-of-Sales operated by the organization or person.
-          type: place
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: legalname
-          type: text
-        description:
-          description: The official name of the organization, e.g. the registered company
-            name.
-          type: text
-      - name:
-          description: location
-          type: text or  place or  postaladdress
-        description:
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          type: text or  place or  postaladdress
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: makesoffer
-          type: offer
-        description:
-          description: 'A pointer to products or services offered by the organization
-            or person. Inverse property: offeredBy.'
-          type: offer
-      - name:
-          description: member
-          type: person or  organization
-        description:
-          description: 'A member of an Organization or a ProgramMembership. Organizations
-            can be members of organizations; ProgramMembership is typically for individuals.
-            Supersedes musicGroupMember, members. Inverse property: memberOf.'
-          type: person or  organization
-      - name:
-          description: memberof
-          type: programmembership or  organization
-        description:
-          description: 'An Organization (or ProgramMembership) to which this Person
-            or Organization belongs. Inverse property: member.'
-          type: programmembership or  organization
-      - name:
-          description: naics
-          type: text
-        description:
-          description: The North American Industry Classification System (NAICS) code
-            for a particular organization or business person.
-          type: text
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: numberofemployees
-          type: quantitativevalue
-        description:
-          description: The number of employees in an organization e.g. business.
-          type: quantitativevalue
-      - name:
-          description: openinghours
-          type: text
-        description:
-          description: 'The opening hours for a business. Opening hours can be specified
-            as a weekly time range, starting with days, then times per day. Multiple
-            days can be listed with commas \'',\'' separating each day. Day or time
-            ranges are specified using a hyphen \''-\''.- Days are specified using the
-            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
-            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
-            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
-            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
-            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
-            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
-          type: text
-      - name:
-          description: openinghoursspecification
-          type: openinghoursspecification
-        description:
-          description: The opening hours of a certain place.
-          type: openinghoursspecification
-      - name:
-          description: owns
-          type: product or  ownershipinfo
-        description:
-          description: Products owned by the organization or person.
-          type: product or  ownershipinfo
-      - name:
-          description: parentorganization
-          type: organization
-        description:
-          description: 'The larger organization that this organization is a branch of,
-            if any. Supersedes branchOf. Inverse property: subOrganization.'
-          type: organization
-      - name:
-          description: paymentaccepted
-          type: text
-        description:
-          description: Cash, credit card, etc.
-          type: text
-      - name:
-          description: photo
-          type: photograph or  imageobject
-        description:
-          description: A photograph of this place. Supersedes photos.
-          type: photograph or  imageobject
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: pricerange
-          type: text
-        description:
-          description: The price range of the business, for example $$$.
-          type: text
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: seeks
-          type: demand
-        description:
-          description: A pointer to products or services sought by the organization
-            or person (demand).
-          type: demand
-      - name:
-          description: suborganization
-          type: organization
-        description:
-          description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific \''department\''
-            property. Inverse property: parentOrganization.'
-          type: organization
-      - name:
-          description: taxid
-          type: text
-        description:
-          description: The Tax / Fiscal ID of the organization or person, e.g. the TIN
-            in the US or the CIF/NIF in Spain.
-          type: text
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: vatid
-          type: text
-        description:
-          description: The Value-added Tax ID of the organization or person.
-          type: text
-    MedicalProcedure:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: availableservice
-          type: hospital or medicalclinic or physician
-        description:
-          description: 'A medical service available from this provider. '
-          type: hospital or medicalclinic or physician
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: followup
-          type: text
-        description:
-          description: Typical or recommended followup care after the procedure is performed.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: howperformed
-          type: text
-        description:
-          description: How the procedure is performed.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: preparation
-          type: text
-        description:
-          description: Typical preparation that a patient must undergo before having
-            the procedure performed.
-          type: text
-      - name:
-          description: proceduretype
-          type: medicalproceduretype
-        description:
-          description: The type of procedure, for example Surgical, Noninvasive, or
-            Percutaneous.
-          type: medicalproceduretype
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Medical Procedure
+    API\",\n\t\t\"description\": \"A process of care used in either a diagnostic, therapeutic,
+    or palliative capacity that relies on invasive (surgical), non-invasive, or percutaneous
+    techniques.\",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
+    \"v1\"\n\t},\n\t\"host\": \"medical.procedure.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
+    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/medical-procedure/\":
+    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Medical Procedure\",\n\t\t\t\t\"description\":
+    \"Returns Medical Procedure\",\n\t\t\t\t\"operationId\": \"getMedicalProcedure\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/MedicalProcedure\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Medical Procedure\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add
+    Medical Procedure\",\n\t\t\t\t\"description\": \"Add Medical Procedure\",\n\t\t\t\t\"operationId\":
+    \"addMedicalProcedure\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
+    used for adding more specific types from external vocabularies in microdata syntax.
+    This is a relationship between something and a class that the thing is in. In RDFa
+    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
+    - for multiple types. Schema.org tools may have only weaker understanding of extra
+    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availableservice\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A medical service available from this provider. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"hospital or medicalclinic or physician\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"code\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
+    code for the entity, taken from a controlled vocabulary or ontology such as ICD-9,
+    DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"followup\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Typical
+    or recommended followup care after the procedure is performed.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"guideline\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    medical guideline related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"howperformed\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"How the procedure is performed.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"medicinesystem\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The system of medicine that includes
+    this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\',
+    etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"preparation\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Typical preparation that a patient must
+    undergo before having the procedure performed.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"proceduretype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The type of procedure, for example Surgical,
+    Noninvasive, or Percutaneous.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalproceduretype\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
+    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"relevantspecialty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"study\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
+    study or trial related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MedicalProcedure\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Medical Procedure\"]\n\t\t\t}\n\t\t},\n\t\t\"/medical-procedure/{id}/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Medical Procedure\",\n\t\t\t\t\"description\": \"Returns
+    a single Medical Procedure\",\n\t\t\t\t\"operationId\": \"getMedicalProcedure\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MedicalProcedure\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Medical Procedure\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
+    Medical Procedure\",\n\t\t\t\t\"description\": \"Update a single Medical Procedure\",\n\t\t\t\t\"operationId\":
+    \"updateMedicalProcedureItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\":
+    \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\": \"Unique id for
+    item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"availableservice\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical service available from this
+    provider. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"hospital or
+    medicalclinic or physician\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"code\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken
+    from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT,
+    RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"followup\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Typical or recommended followup care
+    after the procedure is performed.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"guideline\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical guideline related to this
+    entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"howperformed\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"How
+    the procedure is performed.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
+    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
+    for which this thing is the main entity being described.            See background
+    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"medicinesystem\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\',
+    \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"preparation\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Typical preparation that a patient must
+    undergo before having the procedure performed.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"proceduretype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The type of procedure, for example Surgical,
+    Noninvasive, or Percutaneous.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalproceduretype\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
+    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"relevantspecialty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"study\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
+    study or trial related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MedicalProcedure\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Medical Procedure\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Medical
+    Procedure\",\n\t\t\t\t\"description\": \"Deletes a single Medical Procedure\",\n\t\t\t\t\"operationId\":
+    \"deleteMedicalProcedure\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MedicalProcedure\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Medical Procedure\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"MedicalProcedure\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
+    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"availableservice\":
+    {\n\t\t\t\t\t\"description\": \"A medical service available from this provider.
+    \",\n\t\t\t\t\t\"type\": \"hospital or medicalclinic or physician\"\n\t\t\t\t},\n\t\t\t\t\"code\":
+    {\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken from a controlled
+    vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"type\":
+    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\":
+    \"A short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"followup\":
+    {\n\t\t\t\t\t\"description\": \"Typical or recommended followup care after the procedure
+    is performed.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"guideline\":
+    {\n\t\t\t\t\t\"description\": \"A medical guideline related to this entity.\",\n\t\t\t\t\t\"type\":
+    \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t\"howperformed\": {\n\t\t\t\t\t\"description\":
+    \"How the procedure is performed.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"image\":
+    {\n\t\t\t\t\t\"description\": \"An image of the item. This can be a URL or a fully
+    described ImageObject.\",\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork) for which
+    this thing is the main entity being described.            See background notes for
+    details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t\"medicinesystem\": {\n\t\t\t\t\t\"description\":
+    \"The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\',
+    \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"type\": \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t\"name\":
+    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
+    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t\"preparation\": {\n\t\t\t\t\t\"description\": \"Typical
+    preparation that a patient must undergo before having the procedure performed.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"proceduretype\": {\n\t\t\t\t\t\"description\": \"The
+    type of procedure, for example Surgical, Noninvasive, or Percutaneous.\",\n\t\t\t\t\t\"type\":
+    \"medicalproceduretype\"\n\t\t\t\t},\n\t\t\t\t\"recognizingauthority\": {\n\t\t\t\t\t\"description\":
+    \"If applicable, the organization that officially recognizes this entity as part
+    of its endorsed system of medicine.\",\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t\"relevantspecialty\":
+    {\n\t\t\t\t\t\"description\": \"If applicable, a medical specialty in which this
+    entity is relevant.\",\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
+    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
+    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
+    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"study\":
+    {\n\t\t\t\t\t\"description\": \"A medical study or trial related to this entity.\",\n\t\t\t\t\t\"type\":
+    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"description\": \"URL
+    of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

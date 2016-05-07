@@ -285,116 +285,52 @@
 	},
 	"definitions": {
 		"EngineSpecification": {
-			"properties": [{
-				"name": {
-					"description": "additionaltype",
-					"type": "url"
-				},
-				"description": {
+			"properties": {
+				"additionaltype": {
 					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "alternatename",
-					"type": "text"
 				},
-				"description": {
+				"alternatename": {
 					"description": "An alias for the item.",
-					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "description",
 					"type": "text"
 				},
 				"description": {
 					"description": "A short description of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "fueltype",
-					"type": "qualitativevalue or  text or  url"
 				},
-				"description": {
+				"fueltype": {
 					"description": "The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.",
 					"type": "qualitativevalue or  text or  url"
-				}
-			},
-			{
-				"name": {
-					"description": "image",
-					"type": "url or  imageobject"
 				},
-				"description": {
+				"image": {
 					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
 					"type": "url or  imageobject"
-				}
-			},
-			{
-				"name": {
-					"description": "mainentityofpage",
-					"type": "creativework or  url"
 				},
-				"description": {
+				"mainentityofpage": {
 					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
 					"type": "creativework or  url"
-				}
-			},
-			{
-				"name": {
-					"description": "name",
-					"type": "text"
 				},
-				"description": {
+				"name": {
 					"description": "The name of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "potentialaction",
-					"type": "action"
 				},
-				"description": {
+				"potentialaction": {
 					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
-				}
-			},
-			{
-				"name": {
-					"description": "sameas",
-					"type": "url"
 				},
-				"description": {
+				"sameas": {
 					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "url",
-					"type": "url"
 				},
-				"description": {
+				"url": {
 					"description": "URL of the item.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "vehicleengine",
-					"type": "vehicle"
 				},
-				"description": {
+				"vehicleengine": {
 					"description": "Information about the engine or engines of the vehicle. ",
 					"type": "vehicle"
 				}
-			}]
+			}
 		}
 	}
 }

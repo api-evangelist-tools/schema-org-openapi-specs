@@ -1,1885 +1,250 @@
-- swagger: "2.0"
-  info:
-    title: Cable Or Satellite Service API
-    description: A service which provides access to media programming like TV or radio.
-      Access may be via cable or satellite.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: cable.or.satellite.service.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /cable-or-satellite-service/:
-      get:
-        summary: Get Cable Or Satellite Service
-        description: Returns Cable Or Satellite Service
-        operationId: getCableOrSatelliteService
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/CableOrSatelliteService'
-        tags:
-        - Cable Or Satellite Service
-      post:
-        summary: Add Cable Or Satellite Service
-        description: Add Cable Or Satellite Service
-        operationId: addCableOrSatelliteService
-        parameters:
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: aggregaterating
-          in: formData
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          required: false
-          type: aggregaterating
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: areaserved
-          in: formData
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          required: false
-          type: text or  place or  geoshape or  administrativearea
-        - name: availablechannel
-          in: formData
-          description: A means of accessing the service (e.g. a phone bank, a web site,
-            a location, etc.).
-          required: false
-          type: servicechannel
-        - name: award
-          in: formData
-          description: An award won by or for this item. Supersedes awards.
-          required: false
-          type: text
-        - name: category
-          in: formData
-          description: A category for the item. Greater signs or slashes can be used
-            to informally indicate a category hierarchy.
-          required: false
-          type: thing or  text or  physicalactivitycategory
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: hasoffercatalog
-          in: formData
-          description: Indicates an OfferCatalog listing for this Organization, Person,
-            or Service.
-          required: false
-          type: offercatalog
-        - name: hoursavailable
-          in: formData
-          description: The hours during which this service or contact is available.
-          required: false
-          type: openinghoursspecification
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: inbroadcastlineup
-          in: formData
-          description: 'The CableOrSatelliteService offering the channel. '
-          required: false
-          type: broadcastchannel
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: offers
-          in: formData
-          description: An offer to provide this item&#x2014;for example, an offer to
-            sell a product, rent the DVD of a movie, perform a service, or give away
-            tickets to an event.
-          required: false
-          type: offer
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: provider
-          in: formData
-          description: The service provider, service operator, or service performer;
-            the goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the seller.
-            Supersedes carrier.
-          required: false
-          type: person or  organization
-        - name: providermobility
-          in: formData
-          description: Indicates the mobility of a provided service (e.g. \'static\',
-            \'dynamic\').
-          required: false
-          type: text
-        - name: review
-          in: formData
-          description: A review of the item. Supersedes reviews.
-          required: false
-          type: review
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: serviceoutput
-          in: formData
-          description: The tangible thing generated by the service, e.g. a passport,
-            permit, etc. Supersedes produces.
-          required: false
-          type: thing
-        - name: servicetype
-          in: formData
-          description: The type of service being offered, e.g. veterans\' benefits,
-            emergency relief, etc.
-          required: false
-          type: text
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/CableOrSatelliteService'
-        tags:
-        - Cable Or Satellite Service
-    /cable-or-satellite-service/{id}/:
-      get:
-        summary: Get Cable Or Satellite Service
-        description: Returns a single Cable Or Satellite Service
-        operationId: getCableOrSatelliteService
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/CableOrSatelliteService'
-        tags:
-        - Cable Or Satellite Service
-      put:
-        summary: Update Cable Or Satellite Service
-        description: Update a single Cable Or Satellite Service
-        operationId: updateCableOrSatelliteServiceItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: aggregaterating
-          in: formData
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          required: false
-          type: aggregaterating
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: areaserved
-          in: formData
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          required: false
-          type: text or  place or  geoshape or  administrativearea
-        - name: availablechannel
-          in: formData
-          description: A means of accessing the service (e.g. a phone bank, a web site,
-            a location, etc.).
-          required: false
-          type: servicechannel
-        - name: award
-          in: formData
-          description: An award won by or for this item. Supersedes awards.
-          required: false
-          type: text
-        - name: category
-          in: formData
-          description: A category for the item. Greater signs or slashes can be used
-            to informally indicate a category hierarchy.
-          required: false
-          type: thing or  text or  physicalactivitycategory
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: hasoffercatalog
-          in: formData
-          description: Indicates an OfferCatalog listing for this Organization, Person,
-            or Service.
-          required: false
-          type: offercatalog
-        - name: hoursavailable
-          in: formData
-          description: The hours during which this service or contact is available.
-          required: false
-          type: openinghoursspecification
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: inbroadcastlineup
-          in: formData
-          description: 'The CableOrSatelliteService offering the channel. '
-          required: false
-          type: broadcastchannel
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: offers
-          in: formData
-          description: An offer to provide this item&#x2014;for example, an offer to
-            sell a product, rent the DVD of a movie, perform a service, or give away
-            tickets to an event.
-          required: false
-          type: offer
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: provider
-          in: formData
-          description: The service provider, service operator, or service performer;
-            the goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the seller.
-            Supersedes carrier.
-          required: false
-          type: person or  organization
-        - name: providermobility
-          in: formData
-          description: Indicates the mobility of a provided service (e.g. \'static\',
-            \'dynamic\').
-          required: false
-          type: text
-        - name: review
-          in: formData
-          description: A review of the item. Supersedes reviews.
-          required: false
-          type: review
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: serviceoutput
-          in: formData
-          description: The tangible thing generated by the service, e.g. a passport,
-            permit, etc. Supersedes produces.
-          required: false
-          type: thing
-        - name: servicetype
-          in: formData
-          description: The type of service being offered, e.g. veterans\' benefits,
-            emergency relief, etc.
-          required: false
-          type: text
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/CableOrSatelliteService'
-        tags:
-        - Cable Or Satellite Service
-      delete:
-        summary: Cable Or Satellite Service
-        description: Deletes a single Cable Or Satellite Service
-        operationId: deleteCableOrSatelliteService
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/CableOrSatelliteService'
-        tags:
-        - Cable Or Satellite Service
-  definitions:
-    BusinessAudience:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: audiencetype
-          type: text
-        description:
-          description: The target group associated with a given audience (e.g. veterans,
-            car owners, musicians, etc.).
-          type: text
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: geographicarea
-          type: administrativearea
-        description:
-          description: The geographic area associated with the audience.
-          type: administrativearea
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: numberofemployees
-          type: quantitativevalue
-        description:
-          description: The number of employees in an organization e.g. business.
-          type: quantitativevalue
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: yearlyrevenue
-          type: quantitativevalue
-        description:
-          description: The size of the business in annual revenue.
-          type: quantitativevalue
-      - name:
-          description: yearsinoperation
-          type: quantitativevalue
-        description:
-          description: The age of the business.
-          type: quantitativevalue
-    BusinessEntityType:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: eligiblecustomertype
-          type: demand or offer
-        description:
-          description: 'The type(s) of customers for which the given offer is valid. '
-          type: demand or offer
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: supersededby
-          type: class or  property or  enumeration
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: class or  property or  enumeration
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    BusinessEvent:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: attendee
-          type: person or  organization
-        description:
-          description: A person or organization attending the event. Supersedes attendees.
-          type: person or  organization
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: doortime
-          type: datetime
-        description:
-          description: The time admission will commence.
-          type: datetime
-      - name:
-          description: duration
-          type: duration
-        description:
-          description: The duration of the item (movie, audio recording, event, etc.)
-            in ISO 8601 date format.
-          type: duration
-      - name:
-          description: enddate
-          type: date
-        description:
-          description: The end date and time of the item (in ISO 8601 date format).
-          type: date
-      - name:
-          description: eventstatus
-          type: eventstatustype
-        description:
-          description: An eventStatus of an event represents its status; particularly
-            useful when an event is cancelled or rescheduled.
-          type: eventstatustype
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: inlanguage
-          type: text or  language
-        description:
-          description: The language of the content or performance or used in an action.
-            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
-            language.
-          type: text or  language
-      - name:
-          description: location
-          type: text or  place or  postaladdress
-        description:
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          type: text or  place or  postaladdress
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: offers
-          type: offer
-        description:
-          description: An offer to provide this item&#x2014;for example, an offer to
-            sell a product, rent the DVD of a movie, perform a service, or give away
-            tickets to an event.
-          type: offer
-      - name:
-          description: organizer
-          type: person or  organization
-        description:
-          description: An organizer of an Event.
-          type: person or  organization
-      - name:
-          description: performer
-          type: person or  organization
-        description:
-          description: A performer at the event&#x2014;for example, a presenter, musician,
-            musical group or actor. Supersedes performers.
-          type: person or  organization
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: previousstartdate
-          type: date
-        description:
-          description: Used in conjunction with eventStatus for rescheduled or cancelled
-            events. This property contains the previously scheduled start date. For
-            rescheduled events, the startDate property should be used for the newly
-            scheduled start date. In the (rare) case of an event that has been postponed
-            and rescheduled multiple times, this field may be repeated.
-          type: date
-      - name:
-          description: recordedin
-          type: creativework
-        description:
-          description: 'The CreativeWork that captured all or part of this Event. Inverse
-            property: recordedAt.'
-          type: creativework
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: startdate
-          type: date
-        description:
-          description: The start date and time of the item (in ISO 8601 date format).
-          type: date
-      - name:
-          description: subevent
-          type: event
-        description:
-          description: An Event that is part of this event. For example, a conference
-            event includes many presentations, each of which is a subEvent of the conference.
-            Supersedes subEvents.
-          type: event
-      - name:
-          description: superevent
-          type: event
-        description:
-          description: An event that this event is a part of. For example, a collection
-            of individual music performances might each have a music festival as their
-            superEvent.
-          type: event
-      - name:
-          description: typicalagerange
-          type: text
-        description:
-          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: workfeatured
-          type: creativework
-        description:
-          description: A work featured in some event, e.g. exhibited in an ExhibitionEvent.       Specific
-            subproperties are available for workPerformed (e.g. a play), or a workPresented
-            (a Movie at a ScreeningEvent).
-          type: creativework
-      - name:
-          description: workperformed
-          type: creativework
-        description:
-          description: A work performed in some event, for example a play performed
-            in a TheaterEvent.
-          type: creativework
-    BusinessFunction:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: businessfunction
-          type: demand or offer or typeandquantitynode
-        description:
-          description: 'The business function (e.g. sell, lease, repair, dispose) of
-            the offer or component of a bundle (TypeAndQuantityNode). The default is
-            http://purl.org/goodrelations/v1#Sell. '
-          type: demand or offer or typeandquantitynode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: supersededby
-          type: enumeration or  class or  property
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: enumeration or  class or  property
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    BusReservation:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: bookingtime
-          type: datetime
-        description:
-          description: The date and time the reservation was booked.
-          type: datetime
-      - name:
-          description: broker
-          type: person or  organization
-        description:
-          description: An entity that arranges for an exchange between a buyer and a
-            seller.  In most cases a broker never acquires or releases ownership of
-            a product or service involved in an exchange.  If it is not clear whether
-            an entity is a broker, seller, or buyer, the latter two terms are preferred.
-            Supersedes bookingAgent.
-          type: person or  organization
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: modifiedtime
-          type: datetime
-        description:
-          description: The date and time the reservation was modified.
-          type: datetime
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: pricecurrency
-          type: text
-        description:
-          description: The currency (in 3-letter ISO 4217 format) of the price or a
-            price component, when attached to PriceSpecification and its subtypes.
-          type: text
-      - name:
-          description: programmembershipused
-          type: programmembership
-        description:
-          description: Any membership in a frequent flyer, hotel loyalty program, etc.
-            being applied to the reservation.
-          type: programmembership
-      - name:
-          description: provider
-          type: person or  organization
-        description:
-          description: The service provider, service operator, or service performer;
-            the goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the seller.
-            Supersedes carrier.
-          type: person or  organization
-      - name:
-          description: reservationfor
-          type: thing
-        description:
-          description: The thing -- flight, event, restaurant,etc. being reserved.
-          type: thing
-      - name:
-          description: reservationid
-          type: text
-        description:
-          description: A unique identifier for the reservation.
-          type: text
-      - name:
-          description: reservationstatus
-          type: reservationstatustype
-        description:
-          description: The current status of the reservation.
-          type: reservationstatustype
-      - name:
-          description: reservedticket
-          type: ticket
-        description:
-          description: A ticket associated with the reservation.
-          type: ticket
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: totalprice
-          type: text or  pricespecification or  number
-        description:
-          description: The total price for the reservation or ticket, including applicable
-            taxes, shipping, etc.
-          type: text or  pricespecification or  number
-      - name:
-          description: undername
-          type: person or  organization
-        description:
-          description: The person or organization the reservation or ticket is for.
-          type: person or  organization
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    BusStation:
-      properties:
-      - name:
-          description: additionalproperty
-          type: propertyvalue
-        description:
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          type: propertyvalue
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: arrivalbusstop
-          type: bustrip
-        description:
-          description: 'The stop or station from which the bus arrives. '
-          type: bustrip
-      - name:
-          description: branchcode
-          type: text
-        description:
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          type: text
-      - name:
-          description: containedinplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: containsplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: departurebusstop
-          type: bustrip
-        description:
-          description: 'The stop or station from which the bus departs. '
-          type: bustrip
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: geo
-          type: geocoordinates or  geoshape
-        description:
-          description: The geo coordinates of the place.
-          type: geocoordinates or  geoshape
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasmap
-          type: url or  map
-        description:
-          description: A URL to a map of the place. Supersedes map, maps.
-          type: url or  map
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: openinghours
-          type: text
-        description:
-          description: 'The opening hours for a business. Opening hours can be specified
-            as a weekly time range, starting with days, then times per day. Multiple
-            days can be listed with commas \'',\'' separating each day. Day or time
-            ranges are specified using a hyphen \''-\''.- Days are specified using the
-            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
-            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
-            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
-            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
-            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
-            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
-          type: text
-      - name:
-          description: openinghoursspecification
-          type: openinghoursspecification
-        description:
-          description: The opening hours of a certain place.
-          type: openinghoursspecification
-      - name:
-          description: photo
-          type: photograph or  imageobject
-        description:
-          description: A photograph of this place. Supersedes photos.
-          type: photograph or  imageobject
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    BusStop:
-      properties:
-      - name:
-          description: additionalproperty
-          type: propertyvalue
-        description:
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          type: propertyvalue
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: arrivalbusstop
-          type: bustrip
-        description:
-          description: 'The stop or station from which the bus arrives. '
-          type: bustrip
-      - name:
-          description: branchcode
-          type: text
-        description:
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          type: text
-      - name:
-          description: containedinplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: containsplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: departurebusstop
-          type: bustrip
-        description:
-          description: 'The stop or station from which the bus departs. '
-          type: bustrip
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: geo
-          type: geocoordinates or  geoshape
-        description:
-          description: The geo coordinates of the place.
-          type: geocoordinates or  geoshape
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasmap
-          type: url or  map
-        description:
-          description: A URL to a map of the place. Supersedes map, maps.
-          type: url or  map
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: openinghours
-          type: text
-        description:
-          description: 'The opening hours for a business. Opening hours can be specified
-            as a weekly time range, starting with days, then times per day. Multiple
-            days can be listed with commas \'',\'' separating each day. Day or time
-            ranges are specified using a hyphen \''-\''.- Days are specified using the
-            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
-            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
-            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
-            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
-            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
-            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
-          type: text
-      - name:
-          description: openinghoursspecification
-          type: openinghoursspecification
-        description:
-          description: The opening hours of a certain place.
-          type: openinghoursspecification
-      - name:
-          description: photo
-          type: photograph or  imageobject
-        description:
-          description: A photograph of this place. Supersedes photos.
-          type: photograph or  imageobject
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    BusTrip:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: arrivalbusstop
-          type: busstation or  busstop
-        description:
-          description: The stop or station from which the bus arrives.
-          type: busstation or  busstop
-      - name:
-          description: arrivaltime
-          type: datetime
-        description:
-          description: The expected arrival time.
-          type: datetime
-      - name:
-          description: busname
-          type: text
-        description:
-          description: The name of the bus (e.g. Bolt Express).
-          type: text
-      - name:
-          description: busnumber
-          type: text
-        description:
-          description: The unique identifier for the bus.
-          type: text
-      - name:
-          description: departurebusstop
-          type: busstation or  busstop
-        description:
-          description: The stop or station from which the bus departs.
-          type: busstation or  busstop
-      - name:
-          description: departuretime
-          type: datetime
-        description:
-          description: The expected departure time.
-          type: datetime
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: provider
-          type: organization or  person
-        description:
-          description: The service provider, service operator, or service performer;
-            the goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the seller.
-            Supersedes carrier.
-          type: organization or  person
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    BuyAction:
-      properties:
-      - name:
-          description: actionstatus
-          type: actionstatustype
-        description:
-          description: Indicates the current disposition of the Action.
-          type: actionstatustype
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: agent
-          type: organization or  person
-        description:
-          description: The direct performer or driver of the action (animate or inanimate).
-            e.g. *John* wrote a book.
-          type: organization or  person
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: endtime
-          type: datetime
-        description:
-          description: The endTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to end. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from January to *December*.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          type: datetime
-      - name:
-          description: error
-          type: thing
-        description:
-          description: For failed actions, more information on the cause of the failure.
-          type: thing
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: instrument
-          type: thing
-        description:
-          description: The object that helped the agent perform the action. e.g. John
-            wrote a book with *a pen*.
-          type: thing
-      - name:
-          description: location
-          type: text or  place or  postaladdress
-        description:
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          type: text or  place or  postaladdress
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: object
-          type: thing
-        description:
-          description: The object upon the action is carried out, whose state is kept
-            intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn\'t). e.g. John
-            read *a book*.
-          type: thing
-      - name:
-          description: participant
-          type: organization or  person
-        description:
-          description: Other co-agents that participated in the action indirectly. e.g.
-            John wrote a book with *Steve*.
-          type: organization or  person
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: price
-          type: text or  number
-        description:
-          description: 'The offer price of a product, or of a price component when attached
-            to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency
-            property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous
-            symbols such as \''$\'' in the value.      Use \''.\'' (Unicode \''FULL
-            STOP\'' (U+002E)) rather than \'',\'' to indicate a decimal point. Avoid
-            using these symbols as a readability separator.      Note that both RDFa
-            and Microdata syntax allow the use of a \"content=\" attribute for publishing
-            simple machine-readable values      alongside more human-friendly formatting.      Use
-            values from 0123456789 (Unicode \''DIGIT ZERO\'' (U+0030) to \''DIGIT NINE\''
-            (U+0039)) rather than superficially similiar Unicode symbols.      '
-          type: text or  number
-      - name:
-          description: pricespecification
-          type: pricespecification
-        description:
-          description: One or more detailed price specifications, indicating the unit
-            price and delivery or payment charges.
-          type: pricespecification
-      - name:
-          description: result
-          type: thing
-        description:
-          description: The result produced in the action. e.g. John wrote *a book*.
-          type: thing
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: seller
-          type: organization or  person
-        description:
-          description: An entity which offers (sells / leases / lends / loans) the services
-            / goods.  A seller may also be a provider. Supersedes vendor, merchant.
-          type: organization or  person
-      - name:
-          description: starttime
-          type: datetime
-        description:
-          description: The startTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to start. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from *January* to December.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          type: datetime
-      - name:
-          description: target
-          type: entrypoint
-        description:
-          description: Indicates a target EntryPoint for an Action.
-          type: entrypoint
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    CableOrSatelliteService:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: areaserved
-          type: text or  place or  geoshape or  administrativearea
-        description:
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          type: text or  place or  geoshape or  administrativearea
-      - name:
-          description: availablechannel
-          type: servicechannel
-        description:
-          description: A means of accessing the service (e.g. a phone bank, a web site,
-            a location, etc.).
-          type: servicechannel
-      - name:
-          description: award
-          type: text
-        description:
-          description: An award won by or for this item. Supersedes awards.
-          type: text
-      - name:
-          description: category
-          type: thing or  text or  physicalactivitycategory
-        description:
-          description: A category for the item. Greater signs or slashes can be used
-            to informally indicate a category hierarchy.
-          type: thing or  text or  physicalactivitycategory
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: hasoffercatalog
-          type: offercatalog
-        description:
-          description: Indicates an OfferCatalog listing for this Organization, Person,
-            or Service.
-          type: offercatalog
-      - name:
-          description: hoursavailable
-          type: openinghoursspecification
-        description:
-          description: The hours during which this service or contact is available.
-          type: openinghoursspecification
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: inbroadcastlineup
-          type: broadcastchannel
-        description:
-          description: 'The CableOrSatelliteService offering the channel. '
-          type: broadcastchannel
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: offers
-          type: offer
-        description:
-          description: An offer to provide this item&#x2014;for example, an offer to
-            sell a product, rent the DVD of a movie, perform a service, or give away
-            tickets to an event.
-          type: offer
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: provider
-          type: person or  organization
-        description:
-          description: The service provider, service operator, or service performer;
-            the goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the seller.
-            Supersedes carrier.
-          type: person or  organization
-      - name:
-          description: providermobility
-          type: text
-        description:
-          description: Indicates the mobility of a provided service (e.g. \'static\',
-            \'dynamic\').
-          type: text
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: serviceoutput
-          type: thing
-        description:
-          description: The tangible thing generated by the service, e.g. a passport,
-            permit, etc. Supersedes produces.
-          type: thing
-      - name:
-          description: servicetype
-          type: text
-        description:
-          description: The type of service being offered, e.g. veterans\' benefits,
-            emergency relief, etc.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Cable Or Satellite
+    Service API\",\n\t\t\"description\": \"A service which provides access to media
+    programming like TV or radio. Access may be via cable or satellite.\",\n\t\t\"termsOfService\":
+    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
+    \"cable.or.satellite.service.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
+    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/cable-or-satellite-service/\":
+    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Cable Or Satellite Service\",\n\t\t\t\t\"description\":
+    \"Returns Cable Or Satellite Service\",\n\t\t\t\t\"operationId\": \"getCableOrSatelliteService\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/CableOrSatelliteService\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Cable Or Satellite Service\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\":
+    \"Add Cable Or Satellite Service\",\n\t\t\t\t\"description\": \"Add Cable Or Satellite
+    Service\",\n\t\t\t\t\"operationId\": \"addCableOrSatelliteService\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"aggregaterating\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The overall rating, based on a collection of reviews or ratings, of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"areaserved\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The geographic area where a service
+    or offered item is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text or  place or  geoshape or  administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availablechannel\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"award\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An award
+    won by or for this item. Supersedes awards.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"category\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A category for the item. Greater signs
+    or slashes can be used to informally indicate a category hierarchy.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing or  text or  physicalactivitycategory\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"hasoffercatalog\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates an OfferCatalog listing for
+    this Organization, Person, or Service.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"offercatalog\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"hoursavailable\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The hours during which this service
+    or contact is available.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
+    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"inbroadcastlineup\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The CableOrSatelliteService offering
+    the channel. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"broadcastchannel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"offers\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An offer
+    to provide this item&#x2014;for example, an offer to sell a product, rent the DVD
+    of a movie, perform a service, or give away tickets to an event.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"offer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"provider\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The service provider, service operator,
+    or service performer; the goods producer. Another party (a seller) may offer those
+    services or goods on behalf of the provider. A provider may also serve as the seller.
+    Supersedes carrier.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"person
+    or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"providermobility\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates the mobility of a provided
+    service (e.g. \\'static\\', \\'dynamic\\').\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"review\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A review of the item. Supersedes reviews.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"review\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"serviceoutput\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The tangible thing generated by the service, e.g. a passport, permit, etc. Supersedes
+    produces.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"servicetype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    type of service being offered, e.g. veterans\\' benefits, emergency relief, etc.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/CableOrSatelliteService\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Cable Or Satellite Service\"]\n\t\t\t}\n\t\t},\n\t\t\"/cable-or-satellite-service/{id}/\":
+    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Cable Or Satellite Service\",\n\t\t\t\t\"description\":
+    \"Returns a single Cable Or Satellite Service\",\n\t\t\t\t\"operationId\": \"getCableOrSatelliteService\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/CableOrSatelliteService\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Cable Or Satellite Service\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\":
+    \"Update Cable Or Satellite Service\",\n\t\t\t\t\"description\": \"Update a single
+    Cable Or Satellite Service\",\n\t\t\t\t\"operationId\": \"updateCableOrSatelliteServiceItem\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"aggregaterating\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The overall rating, based on a collection of reviews or ratings, of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"areaserved\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The geographic area where a service
+    or offered item is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text or  place or  geoshape or  administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availablechannel\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"award\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An award
+    won by or for this item. Supersedes awards.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"category\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A category for the item. Greater signs
+    or slashes can be used to informally indicate a category hierarchy.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing or  text or  physicalactivitycategory\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"hasoffercatalog\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates an OfferCatalog listing for
+    this Organization, Person, or Service.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"offercatalog\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"hoursavailable\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The hours during which this service
+    or contact is available.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
+    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"inbroadcastlineup\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The CableOrSatelliteService offering
+    the channel. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"broadcastchannel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"offers\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An offer
+    to provide this item&#x2014;for example, an offer to sell a product, rent the DVD
+    of a movie, perform a service, or give away tickets to an event.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"offer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"provider\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The service provider, service operator,
+    or service performer; the goods producer. Another party (a seller) may offer those
+    services or goods on behalf of the provider. A provider may also serve as the seller.
+    Supersedes carrier.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"person
+    or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"providermobility\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates the mobility of a provided
+    service (e.g. \\'static\\', \\'dynamic\\').\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"review\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A review of the item. Supersedes reviews.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"review\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"serviceoutput\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The tangible thing generated by the service, e.g. a passport, permit, etc. Supersedes
+    produces.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"servicetype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    type of service being offered, e.g. veterans\\' benefits, emergency relief, etc.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/CableOrSatelliteService\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Cable Or Satellite Service\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\":
+    \"Cable Or Satellite Service\",\n\t\t\t\t\"description\": \"Deletes a single Cable
+    Or Satellite Service\",\n\t\t\t\t\"operationId\": \"deleteCableOrSatelliteService\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/CableOrSatelliteService\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Cable Or Satellite Service\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"CableOrSatelliteService\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"aggregaterating\": {\n\t\t\t\t\t\"description\":
+    \"The overall rating, based on a collection of reviews or ratings, of the item.\",\n\t\t\t\t\t\"type\":
+    \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"areaserved\":
+    {\n\t\t\t\t\t\"description\": \"The geographic area where a service or offered item
+    is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"type\": \"text or  place or
+    \ geoshape or  administrativearea\"\n\t\t\t\t},\n\t\t\t\t\"availablechannel\": {\n\t\t\t\t\t\"description\":
+    \"A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).\",\n\t\t\t\t\t\"type\":
+    \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t\"award\": {\n\t\t\t\t\t\"description\":
+    \"An award won by or for this item. Supersedes awards.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"category\":
+    {\n\t\t\t\t\t\"description\": \"A category for the item. Greater signs or slashes
+    can be used to informally indicate a category hierarchy.\",\n\t\t\t\t\t\"type\":
+    \"thing or  text or  physicalactivitycategory\"\n\t\t\t\t},\n\t\t\t\t\"description\":
+    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"hasoffercatalog\": {\n\t\t\t\t\t\"description\":
+    \"Indicates an OfferCatalog listing for this Organization, Person, or Service.\",\n\t\t\t\t\t\"type\":
+    \"offercatalog\"\n\t\t\t\t},\n\t\t\t\t\"hoursavailable\": {\n\t\t\t\t\t\"description\":
+    \"The hours during which this service or contact is available.\",\n\t\t\t\t\t\"type\":
+    \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\":
+    \"An image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"inbroadcastlineup\": {\n\t\t\t\t\t\"description\":
+    \"The CableOrSatelliteService offering the channel. \",\n\t\t\t\t\t\"type\": \"broadcastchannel\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork) for which
+    this thing is the main entity being described.            See background notes for
+    details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"offers\": {\n\t\t\t\t\t\"description\":
+    \"An offer to provide this item&#x2014;for example, an offer to sell a product,
+    rent the DVD of a movie, perform a service, or give away tickets to an event.\",\n\t\t\t\t\t\"type\":
+    \"offer\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t\"provider\":
+    {\n\t\t\t\t\t\"description\": \"The service provider, service operator, or service
+    performer; the goods producer. Another party (a seller) may offer those services
+    or goods on behalf of the provider. A provider may also serve as the seller. Supersedes
+    carrier.\",\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t\"providermobility\":
+    {\n\t\t\t\t\t\"description\": \"Indicates the mobility of a provided service (e.g.
+    \\'static\\', \\'dynamic\\').\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"review\":
+    {\n\t\t\t\t\t\"description\": \"A review of the item. Supersedes reviews.\",\n\t\t\t\t\t\"type\":
+    \"review\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\": \"URL
+    of a reference Web page that unambiguously indicates the item\\'s identity. E.g.
+    the URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"serviceoutput\": {\n\t\t\t\t\t\"description\": \"The
+    tangible thing generated by the service, e.g. a passport, permit, etc. Supersedes
+    produces.\",\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t\"servicetype\":
+    {\n\t\t\t\t\t\"description\": \"The type of service being offered, e.g. veterans\\'
+    benefits, emergency relief, etc.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"url\":
+    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

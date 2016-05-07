@@ -1,993 +1,237 @@
-- swagger: "2.0"
-  info:
-    title: Medical Observational Study API
-    description: An observational study is a type of medical study that attempts to
-      infer the possible effect of a treatment through observation of a cohort of subjects
-      over a period of time. In an observational study, the assignment of subjects into
-      treatment groups versus control groups is outside the control of the investigator.
-      This is in contrast with controlled studies, such as the randomized controlled
-      trials represented by MedicalTrial, where each subject is randomly assigned to
-      a treatment group or a control group before the start of the treatment.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: medical.observational.study.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /medical-observational-study/:
-      get:
-        summary: Get Medical Observational Study
-        description: Returns Medical Observational Study
-        operationId: getMedicalObservationalStudy
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MedicalObservationalStudy'
-        tags:
-        - Medical Observational Study
-      post:
-        summary: Add Medical Observational Study
-        description: Add Medical Observational Study
-        operationId: addMedicalObservationalStudy
-        parameters:
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: code
-          in: formData
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          required: false
-          type: medicalcode
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: guideline
-          in: formData
-          description: A medical guideline related to this entity.
-          required: false
-          type: medicalguideline
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: imageobject or  url
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: medicinesystem
-          in: formData
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          required: false
-          type: medicinesystem
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: outcome
-          in: formData
-          description: Expected or actual outcomes of the study.
-          required: false
-          type: text
-        - name: population
-          in: formData
-          description: Any characteristics of the population used in the study, e.g.
-            \'males under 65\'.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: recognizingauthority
-          in: formData
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          required: false
-          type: organization
-        - name: relevantspecialty
-          in: formData
-          description: If applicable, a medical specialty in which this entity is relevant.
-          required: false
-          type: medicalspecialty
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: sponsor
-          in: formData
-          description: Sponsor of the study.
-          required: false
-          type: organization
-        - name: status
-          in: formData
-          description: The status of the study (enumerated).
-          required: false
-          type: medicalstudystatus
-        - name: study
-          in: formData
-          description: A medical study or trial related to this entity.
-          required: false
-          type: medicalstudy
-        - name: studydesign
-          in: formData
-          description: Specifics about the observational study design (enumerated).
-          required: false
-          type: medicalobservationalstudydesign
-        - name: studylocation
-          in: formData
-          description: The location in which the study is taking/took place.
-          required: false
-          type: administrativearea
-        - name: studysubject
-          in: formData
-          description: A subject of the study, i.e. one of the medical conditions, therapies,
-            devices, drugs, etc. investigated by the study.
-          required: false
-          type: medicalentity
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MedicalObservationalStudy'
-        tags:
-        - Medical Observational Study
-    /medical-observational-study/{id}/:
-      get:
-        summary: Get Medical Observational Study
-        description: Returns a single Medical Observational Study
-        operationId: getMedicalObservationalStudy
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MedicalObservationalStudy'
-        tags:
-        - Medical Observational Study
-      put:
-        summary: Update Medical Observational Study
-        description: Update a single Medical Observational Study
-        operationId: updateMedicalObservationalStudyItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: code
-          in: formData
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          required: false
-          type: medicalcode
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: guideline
-          in: formData
-          description: A medical guideline related to this entity.
-          required: false
-          type: medicalguideline
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: imageobject or  url
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: medicinesystem
-          in: formData
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          required: false
-          type: medicinesystem
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: outcome
-          in: formData
-          description: Expected or actual outcomes of the study.
-          required: false
-          type: text
-        - name: population
-          in: formData
-          description: Any characteristics of the population used in the study, e.g.
-            \'males under 65\'.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: recognizingauthority
-          in: formData
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          required: false
-          type: organization
-        - name: relevantspecialty
-          in: formData
-          description: If applicable, a medical specialty in which this entity is relevant.
-          required: false
-          type: medicalspecialty
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: sponsor
-          in: formData
-          description: Sponsor of the study.
-          required: false
-          type: organization
-        - name: status
-          in: formData
-          description: The status of the study (enumerated).
-          required: false
-          type: medicalstudystatus
-        - name: study
-          in: formData
-          description: A medical study or trial related to this entity.
-          required: false
-          type: medicalstudy
-        - name: studydesign
-          in: formData
-          description: Specifics about the observational study design (enumerated).
-          required: false
-          type: medicalobservationalstudydesign
-        - name: studylocation
-          in: formData
-          description: The location in which the study is taking/took place.
-          required: false
-          type: administrativearea
-        - name: studysubject
-          in: formData
-          description: A subject of the study, i.e. one of the medical conditions, therapies,
-            devices, drugs, etc. investigated by the study.
-          required: false
-          type: medicalentity
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MedicalObservationalStudy'
-        tags:
-        - Medical Observational Study
-      delete:
-        summary: Medical Observational Study
-        description: Deletes a single Medical Observational Study
-        operationId: deleteMedicalObservationalStudy
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/MedicalObservationalStudy'
-        tags:
-        - Medical Observational Study
-  definitions:
-    MedicalGuidelineRecommendation:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: evidencelevel
-          type: medicalevidencelevel
-        description:
-          description: Strength of evidence of the data used to formulate the guideline
-            (enumerated).
-          type: medicalevidencelevel
-      - name:
-          description: evidenceorigin
-          type: text
-        description:
-          description: Source of the data used to formulate the guidance, e.g. RCT,
-            consensus opinion, etc.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: guidelinedate
-          type: date
-        description:
-          description: Date on which this guideline\'s recommendation was made.
-          type: date
-      - name:
-          description: guidelinesubject
-          type: medicalentity
-        description:
-          description: The medical conditions, treatments, etc. that are the subject
-            of the guideline.
-          type: medicalentity
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: recommendationstrength
-          type: text
-        description:
-          description: Strength of the guideline\'s recommendation (e.g. \'class I\').
-          type: text
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    MedicalImagingTechnique:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: imageobject or  url
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: imageobject or  url
-      - name:
-          description: imagingtechnique
-          type: imagingtest
-        description:
-          description: 'Imaging technique used. '
-          type: imagingtest
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: supersededby
-          type: class or  property or  enumeration
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: class or  property or  enumeration
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    MedicalIndication:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: indication
-          type: medicaltherapy or medicaldevice
-        description:
-          description: 'A factor that indicates use of this therapy for treatment and/or
-            prevention of a condition, symptom, etc. For therapies such as drugs, indications
-            can include both officially-approved indications as well as off-label uses.
-            These can be distinguished by using the ApprovedIndication subtype of MedicalIndication. '
-          type: medicaltherapy or medicaldevice
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    MedicalIntangible:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    MedicalObservationalStudy:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: imageobject or  url
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: imageobject or  url
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: outcome
-          type: text
-        description:
-          description: Expected or actual outcomes of the study.
-          type: text
-      - name:
-          description: population
-          type: text
-        description:
-          description: Any characteristics of the population used in the study, e.g.
-            \'males under 65\'.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: sponsor
-          type: organization
-        description:
-          description: Sponsor of the study.
-          type: organization
-      - name:
-          description: status
-          type: medicalstudystatus
-        description:
-          description: The status of the study (enumerated).
-          type: medicalstudystatus
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: studydesign
-          type: medicalobservationalstudydesign
-        description:
-          description: Specifics about the observational study design (enumerated).
-          type: medicalobservationalstudydesign
-      - name:
-          description: studylocation
-          type: administrativearea
-        description:
-          description: The location in which the study is taking/took place.
-          type: administrativearea
-      - name:
-          description: studysubject
-          type: medicalentity
-        description:
-          description: A subject of the study, i.e. one of the medical conditions, therapies,
-            devices, drugs, etc. investigated by the study.
-          type: medicalentity
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Medical Observational
+    Study API\",\n\t\t\"description\": \"An observational study is a type of medical
+    study that attempts to infer the possible effect of a treatment through observation
+    of a cohort of subjects over a period of time. In an observational study, the assignment
+    of subjects into treatment groups versus control groups is outside the control of
+    the investigator. This is in contrast with controlled studies, such as the randomized
+    controlled trials represented by MedicalTrial, where each subject is randomly assigned
+    to a treatment group or a control group before the start of the treatment.\",\n\t\t\"termsOfService\":
+    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
+    \"medical.observational.study.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
+    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/medical-observational-study/\":
+    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Medical Observational Study\",\n\t\t\t\t\"description\":
+    \"Returns Medical Observational Study\",\n\t\t\t\t\"operationId\": \"getMedicalObservationalStudy\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/MedicalObservationalStudy\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Medical Observational Study\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\":
+    \"Add Medical Observational Study\",\n\t\t\t\t\"description\": \"Add Medical Observational
+    Study\",\n\t\t\t\t\"operationId\": \"addMedicalObservationalStudy\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"code\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken
+    from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT,
+    RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"guideline\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical guideline related to this
+    entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"imageobject or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"medicinesystem\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The system of medicine that includes
+    this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\',
+    etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"outcome\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Expected
+    or actual outcomes of the study.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"population\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Any characteristics of the population
+    used in the study, e.g. \\'males under 65\\'.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
+    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"recognizingauthority\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"If applicable, the organization that officially recognizes this entity as part
+    of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"relevantspecialty\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, a medical specialty in
+    which this entity is relevant.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sponsor\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Sponsor of the study.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"status\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The status
+    of the study (enumerated).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalstudystatus\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"study\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical study or trial related to
+    this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"studydesign\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Specifics
+    about the observational study design (enumerated).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalobservationalstudydesign\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"studylocation\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The location in which the study is taking/took place.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"studysubject\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    subject of the study, i.e. one of the medical conditions, therapies, devices, drugs,
+    etc. investigated by the study.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalentity\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MedicalObservationalStudy\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Medical Observational Study\"]\n\t\t\t}\n\t\t},\n\t\t\"/medical-observational-study/{id}/\":
+    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Medical Observational Study\",\n\t\t\t\t\"description\":
+    \"Returns a single Medical Observational Study\",\n\t\t\t\t\"operationId\": \"getMedicalObservationalStudy\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MedicalObservationalStudy\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Medical Observational Study\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\":
+    \"Update Medical Observational Study\",\n\t\t\t\t\"description\": \"Update a single
+    Medical Observational Study\",\n\t\t\t\t\"operationId\": \"updateMedicalObservationalStudyItem\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"code\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken
+    from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT,
+    RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"guideline\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical guideline related to this
+    entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"imageobject or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"medicinesystem\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The system of medicine that includes
+    this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\',
+    etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"outcome\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Expected
+    or actual outcomes of the study.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"population\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Any characteristics of the population
+    used in the study, e.g. \\'males under 65\\'.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
+    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"recognizingauthority\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"If applicable, the organization that officially recognizes this entity as part
+    of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"relevantspecialty\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, a medical specialty in
+    which this entity is relevant.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sponsor\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Sponsor of the study.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"status\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The status
+    of the study (enumerated).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalstudystatus\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"study\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical study or trial related to
+    this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"studydesign\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Specifics
+    about the observational study design (enumerated).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalobservationalstudydesign\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"studylocation\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The location in which the study is taking/took place.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"studysubject\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    subject of the study, i.e. one of the medical conditions, therapies, devices, drugs,
+    etc. investigated by the study.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalentity\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MedicalObservationalStudy\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Medical Observational Study\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\":
+    \"Medical Observational Study\",\n\t\t\t\t\"description\": \"Deletes a single Medical
+    Observational Study\",\n\t\t\t\t\"operationId\": \"deleteMedicalObservationalStudy\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/MedicalObservationalStudy\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Medical Observational Study\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"MedicalObservationalStudy\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
+    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"code\":
+    {\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken from a controlled
+    vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"type\":
+    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\":
+    \"A short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"guideline\":
+    {\n\t\t\t\t\t\"description\": \"A medical guideline related to this entity.\",\n\t\t\t\t\t\"type\":
+    \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\":
+    \"An image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
+    \"imageobject or  url\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"medicinesystem\":
+    {\n\t\t\t\t\t\"description\": \"The system of medicine that includes this MedicalEntity,
+    for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"type\":
+    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\":
+    \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"outcome\":
+    {\n\t\t\t\t\t\"description\": \"Expected or actual outcomes of the study.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"population\": {\n\t\t\t\t\t\"description\": \"Any
+    characteristics of the population used in the study, e.g. \\'males under 65\\'.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t\"recognizingauthority\":
+    {\n\t\t\t\t\t\"description\": \"If applicable, the organization that officially
+    recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"type\":
+    \"organization\"\n\t\t\t\t},\n\t\t\t\t\"relevantspecialty\": {\n\t\t\t\t\t\"description\":
+    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"type\":
+    \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\":
+    \"URL of a reference Web page that unambiguously indicates the item\\'s identity.
+    E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"sponsor\": {\n\t\t\t\t\t\"description\": \"Sponsor
+    of the study.\",\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t\"status\":
+    {\n\t\t\t\t\t\"description\": \"The status of the study (enumerated).\",\n\t\t\t\t\t\"type\":
+    \"medicalstudystatus\"\n\t\t\t\t},\n\t\t\t\t\"study\": {\n\t\t\t\t\t\"description\":
+    \"A medical study or trial related to this entity.\",\n\t\t\t\t\t\"type\": \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t\"studydesign\":
+    {\n\t\t\t\t\t\"description\": \"Specifics about the observational study design (enumerated).\",\n\t\t\t\t\t\"type\":
+    \"medicalobservationalstudydesign\"\n\t\t\t\t},\n\t\t\t\t\"studylocation\": {\n\t\t\t\t\t\"description\":
+    \"The location in which the study is taking/took place.\",\n\t\t\t\t\t\"type\":
+    \"administrativearea\"\n\t\t\t\t},\n\t\t\t\t\"studysubject\": {\n\t\t\t\t\t\"description\":
+    \"A subject of the study, i.e. one of the medical conditions, therapies, devices,
+    drugs, etc. investigated by the study.\",\n\t\t\t\t\t\"type\": \"medicalentity\"\n\t\t\t\t},\n\t\t\t\t\"url\":
+    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

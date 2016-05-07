@@ -1,3240 +1,568 @@
-- swagger: "2.0"
-  info:
-    title: Offer API
-    description: An offer to transfer some rights to an item or to provide a service&#x2014;for
-      example, an offer to sell tickets to an event, to rent the DVD of a movie, to
-      stream a TV show over the internet, to repair a motorcycle, or to loan a book.
-      For GTIN-related fields, see Check Digit calculator and validation guide from
-      GS1.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: offer.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /offer/:
-      get:
-        summary: Get Offer
-        description: Returns Offer
-        operationId: getOffer
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Offer'
-        tags:
-        - Offer
-      post:
-        summary: Add Offer
-        description: Add Offer
-        operationId: addOffer
-        parameters:
-        - name: acceptedoffer
-          in: formData
-          description: 'The offer(s) -- e.g., product, quantity and price combinations
-            -- included in the order. '
-          required: false
-          type: order
-        - name: acceptedpaymentmethod
-          in: formData
-          description: The payment method(s) accepted by seller for this offer.
-          required: false
-          type: paymentmethod
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: addon
-          in: formData
-          description: An additional offer that can only be obtained in combination
-            with the first base offer (e.g. supplements and extensions that are available
-            for a surcharge).
-          required: false
-          type: offer
-        - name: advancebookingrequirement
-          in: formData
-          description: The amount of time that is required between accepting the offer
-            and the actual usage of the resource or service.
-          required: false
-          type: quantitativevalue
-        - name: aggregaterating
-          in: formData
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          required: false
-          type: aggregaterating
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: areaserved
-          in: formData
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          required: false
-          type: text or  place or  geoshape or  administrativearea
-        - name: availability
-          in: formData
-          description: The availability of this item&#x2014;for example In stock, Out
-            of stock, Pre-order, etc.
-          required: false
-          type: itemavailability
-        - name: availabilityends
-          in: formData
-          description: The end of the availability of the product or service included
-            in the offer.
-          required: false
-          type: datetime
-        - name: availabilitystarts
-          in: formData
-          description: The beginning of the availability of the product or service included
-            in the offer.
-          required: false
-          type: datetime
-        - name: availableatorfrom
-          in: formData
-          description: The place(s) from which the offer can be obtained (e.g. store
-            locations).
-          required: false
-          type: place
-        - name: availabledeliverymethod
-          in: formData
-          description: The delivery method(s) available for this offer.
-          required: false
-          type: deliverymethod
-        - name: businessfunction
-          in: formData
-          description: The business function (e.g. sell, lease, repair, dispose) of
-            the offer or component of a bundle (TypeAndQuantityNode). The default is
-            http://purl.org/goodrelations/v1#Sell.
-          required: false
-          type: businessfunction
-        - name: category
-          in: formData
-          description: A category for the item. Greater signs or slashes can be used
-            to informally indicate a category hierarchy.
-          required: false
-          type: thing or  text or  physicalactivitycategory
-        - name: deliveryleadtime
-          in: formData
-          description: The typical delay between the receipt of the order and the goods
-            leaving the warehouse.
-          required: false
-          type: quantitativevalue
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: eligiblecustomertype
-          in: formData
-          description: The type(s) of customers for which the given offer is valid.
-          required: false
-          type: businessentitytype
-        - name: eligibleduration
-          in: formData
-          description: The duration for which the given offer is valid.
-          required: false
-          type: quantitativevalue
-        - name: eligiblequantity
-          in: formData
-          description: The interval and unit of measurement of ordering quantities for
-            which the offer or price specification is valid. This allows e.g. specifying
-            that a certain freight charge is valid only for a certain quantity.
-          required: false
-          type: quantitativevalue
-        - name: eligibleregion
-          in: formData
-          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
-            place, or the GeoShape for the geo-political region(s) for which the offer
-            or delivery charge specification is valid.       See also ineligibleRegion.    '
-          required: false
-          type: text or  place or  geoshape
-        - name: eligibletransactionvolume
-          in: formData
-          description: The transaction volume, in a monetary unit, for which the offer
-            or price specification is valid, e.g. for indicating a minimal purchasing
-            volume, to express free shipping above a certain order volume, or to limit
-            the acceptance of credit cards to purchases to a certain minimal amount.
-          required: false
-          type: pricespecification
-        - name: expectsacceptanceof
-          in: formData
-          description: 'An Offer which must be accepted before the user can perform
-            the Action. For example, the user may need to buy a movie before being able
-            to watch it. '
-          required: false
-          type: consumeaction
-        - name: gtin12
-          in: formData
-          description: The GTIN-12 code of the product, or the product to which the
-            offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed
-            of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify
-            trade items. See GS1 GTIN Summary for more details.
-          required: false
-          type: text
-        - name: gtin13
-          in: formData
-          description: The GTIN-13 code of the product, or the product to which the
-            offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13.
-            Former 12-digit UPC codes can be converted into a GTIN-13 code by simply
-            adding a preceeding zero. See GS1 GTIN Summary for more details.
-          required: false
-          type: text
-        - name: gtin14
-          in: formData
-          description: The GTIN-14 code of the product, or the product to which the
-            offer refers. See GS1 GTIN Summary for more details.
-          required: false
-          type: text
-        - name: gtin8
-          in: formData
-          description: The GTIN-8 code of the product, or the product to which the offer
-            refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See GS1 GTIN
-            Summary for more details.
-          required: false
-          type: text
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: includesobject
-          in: formData
-          description: This links to a node or nodes indicating the exact quantity of
-            the products included in the offer.
-          required: false
-          type: typeandquantitynode
-        - name: ineligibleregion
-          in: formData
-          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
-            place, or the GeoShape for the geo-political region(s) for which the offer
-            or delivery charge specification is not valid, e.g. a region where the transaction
-            is not allowed.       See also eligibleRegion.      '
-          required: false
-          type: text or  place or  geoshape
-        - name: inventorylevel
-          in: formData
-          description: The current approximate inventory level for the item or items.
-          required: false
-          type: quantitativevalue
-        - name: itemcondition
-          in: formData
-          description: A predefined value from OfferItemCondition or a textual description
-            of the condition of the product or service, or the products or services
-            included in the offer.
-          required: false
-          type: offeritemcondition
-        - name: itemoffered
-          in: formData
-          description: The item being offered.
-          required: false
-          type: product or  service
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: url or  creativework
-        - name: makesoffer
-          in: formData
-          description: 'A pointer to products or services offered by the organization
-            or person.  inverse property: offeredBy.'
-          required: false
-          type: organization or person
-        - name: mpn
-          in: formData
-          description: The Manufacturer Part Number (MPN) of the product, or the product
-            to which the offer refers.
-          required: false
-          type: text
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: offeredby
-          in: formData
-          description: 'A pointer to the organization or person making the offer. Inverse
-            property: makesOffer.'
-          required: false
-          type: organization or  person
-        - name: offers
-          in: formData
-          description: 'An offer to provide this item&#x2014;for example, an offer to
-            sell a product, rent the DVD of a movie, perform a service, or give away
-            tickets to an event. '
-          required: false
-          type: product or aggregateoffer or event or service or creativework
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: price
-          in: formData
-          description: 'The offer price of a product, or of a price component when attached
-            to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency
-            property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous
-            symbols such as \''$\'' in the value.      Use \''.\'' (Unicode \''FULL
-            STOP\'' (U+002E)) rather than \'',\'' to indicate a decimal point. Avoid
-            using these symbols as a readability separator.      Note that both RDFa
-            and Microdata syntax allow the use of a \"content=\" attribute for publishing
-            simple machine-readable values      alongside more human-friendly formatting.      Use
-            values from 0123456789 (Unicode \''DIGIT ZERO\'' (U+0030) to \''DIGIT NINE\''
-            (U+0039)) rather than superficially similiar Unicode symbols.      '
-          required: false
-          type: text or  number
-        - name: pricecurrency
-          in: formData
-          description: The currency (in 3-letter ISO 4217 format) of the price or a
-            price component, when attached to PriceSpecification and its subtypes.
-          required: false
-          type: text
-        - name: pricespecification
-          in: formData
-          description: One or more detailed price specifications, indicating the unit
-            price and delivery or payment charges.
-          required: false
-          type: pricespecification
-        - name: pricevaliduntil
-          in: formData
-          description: The date after which the price is no longer available.
-          required: false
-          type: date
-        - name: review
-          in: formData
-          description: A review of the item. Supersedes reviews.
-          required: false
-          type: review
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: seller
-          in: formData
-          description: An entity which offers (sells / leases / lends / loans) the services
-            / goods.  A seller may also be a provider. Supersedes vendor, merchant.
-          required: false
-          type: organization or  person
-        - name: serialnumber
-          in: formData
-          description: The serial number or any alphanumeric identifier of a particular
-            product. When attached to an offer, it is a shortcut for the serial number
-            of the product included in the offer.
-          required: false
-          type: text
-        - name: sku
-          in: formData
-          description: The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier
-            for a product or service, or the product to which the offer refers.
-          required: false
-          type: text
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        - name: validfrom
-          in: formData
-          description: The date when the item becomes valid.
-          required: false
-          type: datetime
-        - name: validthrough
-          in: formData
-          description: The end of the validity of offer, price specification, or opening
-            hours data.
-          required: false
-          type: datetime
-        - name: warranty
-          in: formData
-          description: The warranty promise(s) included in the offer. Supersedes warrantyPromise.
-          required: false
-          type: warrantypromise
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Offer'
-        tags:
-        - Offer
-    /offer/{id}/:
-      get:
-        summary: Get Offer
-        description: Returns a single Offer
-        operationId: getOffer
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Offer'
-        tags:
-        - Offer
-      put:
-        summary: Update Offer
-        description: Update a single Offer
-        operationId: updateOfferItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: acceptedoffer
-          in: formData
-          description: 'The offer(s) -- e.g., product, quantity and price combinations
-            -- included in the order. '
-          required: false
-          type: order
-        - name: acceptedpaymentmethod
-          in: formData
-          description: The payment method(s) accepted by seller for this offer.
-          required: false
-          type: paymentmethod
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: addon
-          in: formData
-          description: An additional offer that can only be obtained in combination
-            with the first base offer (e.g. supplements and extensions that are available
-            for a surcharge).
-          required: false
-          type: offer
-        - name: advancebookingrequirement
-          in: formData
-          description: The amount of time that is required between accepting the offer
-            and the actual usage of the resource or service.
-          required: false
-          type: quantitativevalue
-        - name: aggregaterating
-          in: formData
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          required: false
-          type: aggregaterating
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: areaserved
-          in: formData
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          required: false
-          type: text or  place or  geoshape or  administrativearea
-        - name: availability
-          in: formData
-          description: The availability of this item&#x2014;for example In stock, Out
-            of stock, Pre-order, etc.
-          required: false
-          type: itemavailability
-        - name: availabilityends
-          in: formData
-          description: The end of the availability of the product or service included
-            in the offer.
-          required: false
-          type: datetime
-        - name: availabilitystarts
-          in: formData
-          description: The beginning of the availability of the product or service included
-            in the offer.
-          required: false
-          type: datetime
-        - name: availableatorfrom
-          in: formData
-          description: The place(s) from which the offer can be obtained (e.g. store
-            locations).
-          required: false
-          type: place
-        - name: availabledeliverymethod
-          in: formData
-          description: The delivery method(s) available for this offer.
-          required: false
-          type: deliverymethod
-        - name: businessfunction
-          in: formData
-          description: The business function (e.g. sell, lease, repair, dispose) of
-            the offer or component of a bundle (TypeAndQuantityNode). The default is
-            http://purl.org/goodrelations/v1#Sell.
-          required: false
-          type: businessfunction
-        - name: category
-          in: formData
-          description: A category for the item. Greater signs or slashes can be used
-            to informally indicate a category hierarchy.
-          required: false
-          type: thing or  text or  physicalactivitycategory
-        - name: deliveryleadtime
-          in: formData
-          description: The typical delay between the receipt of the order and the goods
-            leaving the warehouse.
-          required: false
-          type: quantitativevalue
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: eligiblecustomertype
-          in: formData
-          description: The type(s) of customers for which the given offer is valid.
-          required: false
-          type: businessentitytype
-        - name: eligibleduration
-          in: formData
-          description: The duration for which the given offer is valid.
-          required: false
-          type: quantitativevalue
-        - name: eligiblequantity
-          in: formData
-          description: The interval and unit of measurement of ordering quantities for
-            which the offer or price specification is valid. This allows e.g. specifying
-            that a certain freight charge is valid only for a certain quantity.
-          required: false
-          type: quantitativevalue
-        - name: eligibleregion
-          in: formData
-          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
-            place, or the GeoShape for the geo-political region(s) for which the offer
-            or delivery charge specification is valid.       See also ineligibleRegion.    '
-          required: false
-          type: text or  place or  geoshape
-        - name: eligibletransactionvolume
-          in: formData
-          description: The transaction volume, in a monetary unit, for which the offer
-            or price specification is valid, e.g. for indicating a minimal purchasing
-            volume, to express free shipping above a certain order volume, or to limit
-            the acceptance of credit cards to purchases to a certain minimal amount.
-          required: false
-          type: pricespecification
-        - name: expectsacceptanceof
-          in: formData
-          description: 'An Offer which must be accepted before the user can perform
-            the Action. For example, the user may need to buy a movie before being able
-            to watch it. '
-          required: false
-          type: consumeaction
-        - name: gtin12
-          in: formData
-          description: The GTIN-12 code of the product, or the product to which the
-            offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed
-            of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify
-            trade items. See GS1 GTIN Summary for more details.
-          required: false
-          type: text
-        - name: gtin13
-          in: formData
-          description: The GTIN-13 code of the product, or the product to which the
-            offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13.
-            Former 12-digit UPC codes can be converted into a GTIN-13 code by simply
-            adding a preceeding zero. See GS1 GTIN Summary for more details.
-          required: false
-          type: text
-        - name: gtin14
-          in: formData
-          description: The GTIN-14 code of the product, or the product to which the
-            offer refers. See GS1 GTIN Summary for more details.
-          required: false
-          type: text
-        - name: gtin8
-          in: formData
-          description: The GTIN-8 code of the product, or the product to which the offer
-            refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See GS1 GTIN
-            Summary for more details.
-          required: false
-          type: text
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: includesobject
-          in: formData
-          description: This links to a node or nodes indicating the exact quantity of
-            the products included in the offer.
-          required: false
-          type: typeandquantitynode
-        - name: ineligibleregion
-          in: formData
-          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
-            place, or the GeoShape for the geo-political region(s) for which the offer
-            or delivery charge specification is not valid, e.g. a region where the transaction
-            is not allowed.       See also eligibleRegion.      '
-          required: false
-          type: text or  place or  geoshape
-        - name: inventorylevel
-          in: formData
-          description: The current approximate inventory level for the item or items.
-          required: false
-          type: quantitativevalue
-        - name: itemcondition
-          in: formData
-          description: A predefined value from OfferItemCondition or a textual description
-            of the condition of the product or service, or the products or services
-            included in the offer.
-          required: false
-          type: offeritemcondition
-        - name: itemoffered
-          in: formData
-          description: The item being offered.
-          required: false
-          type: product or  service
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: url or  creativework
-        - name: makesoffer
-          in: formData
-          description: 'A pointer to products or services offered by the organization
-            or person.  inverse property: offeredBy.'
-          required: false
-          type: organization or person
-        - name: mpn
-          in: formData
-          description: The Manufacturer Part Number (MPN) of the product, or the product
-            to which the offer refers.
-          required: false
-          type: text
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: offeredby
-          in: formData
-          description: 'A pointer to the organization or person making the offer. Inverse
-            property: makesOffer.'
-          required: false
-          type: organization or  person
-        - name: offers
-          in: formData
-          description: 'An offer to provide this item&#x2014;for example, an offer to
-            sell a product, rent the DVD of a movie, perform a service, or give away
-            tickets to an event. '
-          required: false
-          type: product or aggregateoffer or event or service or creativework
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: price
-          in: formData
-          description: 'The offer price of a product, or of a price component when attached
-            to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency
-            property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous
-            symbols such as \''$\'' in the value.      Use \''.\'' (Unicode \''FULL
-            STOP\'' (U+002E)) rather than \'',\'' to indicate a decimal point. Avoid
-            using these symbols as a readability separator.      Note that both RDFa
-            and Microdata syntax allow the use of a \"content=\" attribute for publishing
-            simple machine-readable values      alongside more human-friendly formatting.      Use
-            values from 0123456789 (Unicode \''DIGIT ZERO\'' (U+0030) to \''DIGIT NINE\''
-            (U+0039)) rather than superficially similiar Unicode symbols.      '
-          required: false
-          type: text or  number
-        - name: pricecurrency
-          in: formData
-          description: The currency (in 3-letter ISO 4217 format) of the price or a
-            price component, when attached to PriceSpecification and its subtypes.
-          required: false
-          type: text
-        - name: pricespecification
-          in: formData
-          description: One or more detailed price specifications, indicating the unit
-            price and delivery or payment charges.
-          required: false
-          type: pricespecification
-        - name: pricevaliduntil
-          in: formData
-          description: The date after which the price is no longer available.
-          required: false
-          type: date
-        - name: review
-          in: formData
-          description: A review of the item. Supersedes reviews.
-          required: false
-          type: review
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: seller
-          in: formData
-          description: An entity which offers (sells / leases / lends / loans) the services
-            / goods.  A seller may also be a provider. Supersedes vendor, merchant.
-          required: false
-          type: organization or  person
-        - name: serialnumber
-          in: formData
-          description: The serial number or any alphanumeric identifier of a particular
-            product. When attached to an offer, it is a shortcut for the serial number
-            of the product included in the offer.
-          required: false
-          type: text
-        - name: sku
-          in: formData
-          description: The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier
-            for a product or service, or the product to which the offer refers.
-          required: false
-          type: text
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        - name: validfrom
-          in: formData
-          description: The date when the item becomes valid.
-          required: false
-          type: datetime
-        - name: validthrough
-          in: formData
-          description: The end of the validity of offer, price specification, or opening
-            hours data.
-          required: false
-          type: datetime
-        - name: warranty
-          in: formData
-          description: The warranty promise(s) included in the offer. Supersedes warrantyPromise.
-          required: false
-          type: warrantypromise
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Offer'
-        tags:
-        - Offer
-      delete:
-        summary: Offer
-        description: Deletes a single Offer
-        operationId: deleteOffer
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Offer'
-        tags:
-        - Offer
-  definitions:
-    NewsArticle:
-      properties:
-      - name:
-          description: about
-          type: thing
-        description:
-          description: The subject matter of the content.
-          type: thing
-      - name:
-          description: accessibilityapi
-          type: text
-        description:
-          description: Indicates that the resource is compatible with the referenced
-            accessibility API (WebSchemas wiki lists possible values).
-          type: text
-      - name:
-          description: accessibilitycontrol
-          type: text
-        description:
-          description: Identifies input methods that are sufficient to fully control
-            the described resource (WebSchemas wiki lists possible values).
-          type: text
-      - name:
-          description: accessibilityfeature
-          type: text
-        description:
-          description: Content features of the resource, such as accessible media, alternatives
-            and supported enhancements for accessibility (WebSchemas wiki lists possible
-            values).
-          type: text
-      - name:
-          description: accessibilityhazard
-          type: text
-        description:
-          description: A characteristic of the described resource that is physiologically
-            dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki
-            lists possible values).
-          type: text
-      - name:
-          description: accountableperson
-          type: person
-        description:
-          description: Specifies the Person that is legally accountable for the CreativeWork.
-          type: person
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: alternativeheadline
-          type: text
-        description:
-          description: A secondary title of the CreativeWork.
-          type: text
-      - name:
-          description: articlebody
-          type: text
-        description:
-          description: The actual body of the article.
-          type: text
-      - name:
-          description: articlesection
-          type: text
-        description:
-          description: Articles may belong to one or more \'sections\' in a magazine
-            or newspaper, such as Sports, Lifestyle, etc.
-          type: text
-      - name:
-          description: associatedarticle
-          type: mediaobject
-        description:
-          description: 'A NewsArticle associated with the Media Object. '
-          type: mediaobject
-      - name:
-          description: associatedmedia
-          type: mediaobject
-        description:
-          description: A media object that encodes this CreativeWork. This property
-            is a synonym for encoding.
-          type: mediaobject
-      - name:
-          description: audience
-          type: audience
-        description:
-          description: An intended audience, i.e. a group for whom something was created.
-            Supersedes serviceAudience.
-          type: audience
-      - name:
-          description: audio
-          type: audioobject
-        description:
-          description: An embedded audio object.
-          type: audioobject
-      - name:
-          description: author
-          type: organization or  person
-        description:
-          description: The author of this content. Please note that author is special
-            in that HTML 5 provides a special mechanism for indicating authorship via
-            the rel tag. That is equivalent to this and may be used interchangeably.
-          type: organization or  person
-      - name:
-          description: award
-          type: text
-        description:
-          description: An award won by or for this item. Supersedes awards.
-          type: text
-      - name:
-          description: character
-          type: person
-        description:
-          description: Fictional person connected with a creative work.
-          type: person
-      - name:
-          description: citation
-          type: text or  creativework
-        description:
-          description: A citation or reference to another creative work, such as another
-            publication, web page, scholarly article, etc.
-          type: text or  creativework
-      - name:
-          description: comment
-          type: comment
-        description:
-          description: Comments, typically from users.
-          type: comment
-      - name:
-          description: commentcount
-          type: integer
-        description:
-          description: The number of comments this CreativeWork (e.g. Article, Question
-            or Answer) has received. This is most applicable to works published in Web
-            sites with commenting system; additional comments may exist elsewhere.
-          type: integer
-      - name:
-          description: contentlocation
-          type: place
-        description:
-          description: The location depicted or described in the content. For example,
-            the location in a photograph or painting.
-          type: place
-      - name:
-          description: contentrating
-          type: text
-        description:
-          description: Official rating of a piece of content&#x2014;for example,\'MPAA
-            PG-13\'.
-          type: text
-      - name:
-          description: contributor
-          type: organization or  person
-        description:
-          description: A secondary contributor to the CreativeWork.
-          type: organization or  person
-      - name:
-          description: copyrightholder
-          type: organization or  person
-        description:
-          description: The party holding the legal copyright to the CreativeWork.
-          type: organization or  person
-      - name:
-          description: copyrightyear
-          type: number
-        description:
-          description: The year during which the claimed copyright for the CreativeWork
-            was first asserted.
-          type: number
-      - name:
-          description: creator
-          type: organization or  person
-        description:
-          description: The creator/author of this CreativeWork. This is the same as
-            the Author property for CreativeWork.
-          type: organization or  person
-      - name:
-          description: datecreated
-          type: datetime or  date
-        description:
-          description: The date on which the CreativeWork was created or the item was
-            added to a DataFeed.
-          type: datetime or  date
-      - name:
-          description: dateline
-          type: text
-        description:
-          description: The location where the NewsArticle was produced.
-          type: text
-      - name:
-          description: datemodified
-          type: datetime or  date
-        description:
-          description: The date on which the CreativeWork was most recently modified
-            or when the item\'s entry was modified within a DataFeed.
-          type: datetime or  date
-      - name:
-          description: datepublished
-          type: date
-        description:
-          description: Date of first broadcast/publication.
-          type: date
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: discussionurl
-          type: url
-        description:
-          description: A link to the page containing the comments of the CreativeWork.
-          type: url
-      - name:
-          description: editor
-          type: person
-        description:
-          description: Specifies the Person who edited the CreativeWork.
-          type: person
-      - name:
-          description: educationalalignment
-          type: alignmentobject
-        description:
-          description: An alignment to an established educational framework.
-          type: alignmentobject
-      - name:
-          description: educationaluse
-          type: text
-        description:
-          description: The purpose of a work in the context of education; for example,
-            \'assignment\', \'group work\'.
-          type: text
-      - name:
-          description: encoding
-          type: mediaobject
-        description:
-          description: A media object that encodes this CreativeWork. This property
-            is a synonym for associatedMedia. Supersedes encodings.
-          type: mediaobject
-      - name:
-          description: exampleofwork
-          type: creativework
-        description:
-          description: 'A creative work that this work is an example/instance/realization/derivation
-            of. Inverse property: workExample.'
-          type: creativework
-      - name:
-          description: fileformat
-          type: text
-        description:
-          description: Media type (aka MIME format, see IANA site) of the content e.g.
-            application/zip of a SoftwareApplication binary. In cases where a CreativeWork
-            has several media type representations, \'encoding\' can be used to indicate
-            each MediaObject alongside particular fileFormat information.
-          type: text
-      - name:
-          description: genre
-          type: text or  url
-        description:
-          description: Genre of the creative work or group.
-          type: text or  url
-      - name:
-          description: haspart
-          type: creativework
-        description:
-          description: 'Indicates a CreativeWork that is (in some sense) a part of this
-            CreativeWork. Inverse property: isPartOf.'
-          type: creativework
-      - name:
-          description: headline
-          type: text
-        description:
-          description: Headline of the article.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: inlanguage
-          type: text or  language
-        description:
-          description: The language of the content or performance or used in an action.
-            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
-            language.
-          type: text or  language
-      - name:
-          description: interactionstatistic
-          type: interactioncounter
-        description:
-          description: The number of interactions for the CreativeWork using the WebSite
-            or SoftwareApplication. The most specific child type of InteractionCounter
-            should be used. Supersedes interactionCount.
-          type: interactioncounter
-      - name:
-          description: interactivitytype
-          type: text
-        description:
-          description: The predominant mode of learning supported by the learning resource.
-            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
-          type: text
-      - name:
-          description: isbasedonurl
-          type: url
-        description:
-          description: A resource that was used in the creation of this resource. This
-            term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
-          type: url
-      - name:
-          description: isfamilyfriendly
-          type: boolean
-        description:
-          description: Indicates whether this content is family friendly.
-          type: boolean
-      - name:
-          description: ispartof
-          type: creativework
-        description:
-          description: 'Indicates a CreativeWork that this CreativeWork is (in some
-            sense) part of. Inverse property: hasPart.'
-          type: creativework
-      - name:
-          description: keywords
-          type: text
-        description:
-          description: Keywords or tags used to describe this content. Multiple entries
-            in a keywords list are typically delimited by commas.
-          type: text
-      - name:
-          description: learningresourcetype
-          type: text
-        description:
-          description: The predominant type or kind characterizing the learning resource.
-            For example, \'presentation\', \'handout\'.
-          type: text
-      - name:
-          description: license
-          type: url or  creativework
-        description:
-          description: A license document that applies to this content, typically indicated
-            by URL.
-          type: url or  creativework
-      - name:
-          description: locationcreated
-          type: place
-        description:
-          description: The location where the CreativeWork was created, which may not
-            be the same as the location depicted in the CreativeWork.
-          type: place
-      - name:
-          description: mainentity
-          type: thing
-        description:
-          description: 'Indicates the primary entity described in some page or other
-            CreativeWork. Inverse property: mainEntityOfPage.'
-          type: thing
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: mentions
-          type: thing
-        description:
-          description: Indicates that the CreativeWork contains a reference to, but
-            is not necessarily about a concept.
-          type: thing
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: offers
-          type: offer
-        description:
-          description: An offer to provide this item&#x2014;for example, an offer to
-            sell a product, rent the DVD of a movie, perform a service, or give away
-            tickets to an event.
-          type: offer
-      - name:
-          description: pageend
-          type: text or  integer
-        description:
-          description: The page on which the work ends; for example \"138\" or \"xvi\".
-          type: text or  integer
-      - name:
-          description: pagestart
-          type: text or  integer
-        description:
-          description: The page on which the work starts; for example \"135\" or \"xiii\".
-          type: text or  integer
-      - name:
-          description: pagination
-          type: text
-        description:
-          description: Any description of pages that is not separated into pageStart
-            and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".
-          type: text
-      - name:
-          description: position
-          type: text or  integer
-        description:
-          description: The position of an item in a series or sequence of items.
-          type: text or  integer
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: printcolumn
-          type: text
-        description:
-          description: The number of the column in which the NewsArticle appears in
-            the print edition.
-          type: text
-      - name:
-          description: printedition
-          type: text
-        description:
-          description: The edition of the print product in which the NewsArticle appears.
-          type: text
-      - name:
-          description: printpage
-          type: text
-        description:
-          description: If this NewsArticle appears in print, this field indicates the
-            name of the page on which the article is found. Please note that this field
-            is intended for the exact page name (e.g. A5, B18).
-          type: text
-      - name:
-          description: printsection
-          type: text
-        description:
-          description: If this NewsArticle appears in print, this field indicates the
-            print section in which the article appeared.
-          type: text
-      - name:
-          description: producer
-          type: organization or  person
-        description:
-          description: The person or organization who produced the work (e.g. music
-            album, movie, tv/radio series etc.).
-          type: organization or  person
-      - name:
-          description: provider
-          type: organization or  person
-        description:
-          description: The service provider, service operator, or service performer;
-            the goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the seller.
-            Supersedes carrier.
-          type: organization or  person
-      - name:
-          description: publication
-          type: publicationevent
-        description:
-          description: A publication event associated with the item.
-          type: publicationevent
-      - name:
-          description: publisher
-          type: organization or  person
-        description:
-          description: The publisher of the creative work.
-          type: organization or  person
-      - name:
-          description: publishingprinciples
-          type: url
-        description:
-          description: Link to page describing the editorial principles of the organization
-            primarily responsible for the creation of the CreativeWork.
-          type: url
-      - name:
-          description: recordedat
-          type: event
-        description:
-          description: 'The Event where the CreativeWork was recorded. The CreativeWork
-            may capture all or part of the event. Inverse property: recordedIn.'
-          type: event
-      - name:
-          description: releasedevent
-          type: publicationevent
-        description:
-          description: The place and time the release was issued, expressed as a PublicationEvent.
-          type: publicationevent
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: schemaversion
-          type: text or  url
-        description:
-          description: 'Indicates (by URL or string) a particular version of a schema
-            used in some CreativeWork. For example, a document could declare a schemaVersion
-            using a URL such as http://schema.org/version/2.0/ if precise indication
-            of schema version was required by some application. '
-          type: text or  url
-      - name:
-          description: sourceorganization
-          type: organization
-        description:
-          description: The Organization on whose behalf the creator was working.
-          type: organization
-      - name:
-          description: text
-          type: text
-        description:
-          description: The textual content of this CreativeWork.
-          type: text
-      - name:
-          description: thumbnailurl
-          type: url
-        description:
-          description: A thumbnail image relevant to the Thing.
-          type: url
-      - name:
-          description: timerequired
-          type: duration
-        description:
-          description: Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. \'P30M\',
-            \'P1H25M\'.
-          type: duration
-      - name:
-          description: translator
-          type: organization or  person
-        description:
-          description: Organization or person who adapts a creative work to different
-            languages, regional differences and technical requirements of a target market.
-          type: organization or  person
-      - name:
-          description: typicalagerange
-          type: text
-        description:
-          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: version
-          type: number
-        description:
-          description: The version of the CreativeWork embodied by a specified resource.
-          type: number
-      - name:
-          description: video
-          type: videoobject
-        description:
-          description: An embedded video object.
-          type: videoobject
-      - name:
-          description: wordcount
-          type: integer
-        description:
-          description: The number of words in the text of the Article.
-          type: integer
-      - name:
-          description: workexample
-          type: creativework
-        description:
-          description: 'Example/instance/realization/derivation of the concept of this
-            creative work. eg. The paperback edition, first edition, or eBook. Inverse
-            property: exampleOfWork.'
-          type: creativework
-    NGO:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: alumni
-          type: person
-        description:
-          description: 'Alumni of an organization. Inverse property: alumniOf.'
-          type: person
-      - name:
-          description: areaserved
-          type: text or  place or  geoshape or  administrativearea
-        description:
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          type: text or  place or  geoshape or  administrativearea
-      - name:
-          description: award
-          type: text
-        description:
-          description: An award won by or for this item. Supersedes awards.
-          type: text
-      - name:
-          description: brand
-          type: brand or  organization
-        description:
-          description: The brand(s) associated with a product or service, or the brand(s)
-            maintained by an organization or business person.
-          type: brand or  organization
-      - name:
-          description: contactpoint
-          type: contactpoint
-        description:
-          description: A contact point for a person or organization. Supersedes contactPoints.
-          type: contactpoint
-      - name:
-          description: department
-          type: organization
-        description:
-          description: 'A relationship between an organization and a department of that
-            organization, also described as an organization (allowing different urls,
-            logos, opening hours). For example: a store with a pharmacy, or a bakery
-            with a cafe.'
-          type: organization
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: dissolutiondate
-          type: date
-        description:
-          description: The date that this organization was dissolved.
-          type: date
-      - name:
-          description: duns
-          type: text
-        description:
-          description: The Dun & Bradstreet DUNS number for identifying an organization
-            or business person.
-          type: text
-      - name:
-          description: email
-          type: text
-        description:
-          description: Email address.
-          type: text
-      - name:
-          description: employee
-          type: person
-        description:
-          description: Someone working for this organization. Supersedes employees.
-          type: person
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: founder
-          type: person
-        description:
-          description: A person who founded this organization. Supersedes founders.
-          type: person
-      - name:
-          description: foundingdate
-          type: date
-        description:
-          description: The date that this organization was founded.
-          type: date
-      - name:
-          description: foundinglocation
-          type: place
-        description:
-          description: The place where the Organization was founded.
-          type: place
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasoffercatalog
-          type: offercatalog
-        description:
-          description: Indicates an OfferCatalog listing for this Organization, Person,
-            or Service.
-          type: offercatalog
-      - name:
-          description: haspos
-          type: place
-        description:
-          description: Points-of-Sales operated by the organization or person.
-          type: place
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: legalname
-          type: text
-        description:
-          description: The official name of the organization, e.g. the registered company
-            name.
-          type: text
-      - name:
-          description: location
-          type: text or  place or  postaladdress
-        description:
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          type: text or  place or  postaladdress
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: makesoffer
-          type: offer
-        description:
-          description: 'A pointer to products or services offered by the organization
-            or person. Inverse property: offeredBy.'
-          type: offer
-      - name:
-          description: member
-          type: person or  organization
-        description:
-          description: 'A member of an Organization or a ProgramMembership. Organizations
-            can be members of organizations; ProgramMembership is typically for individuals.
-            Supersedes musicGroupMember, members. Inverse property: memberOf.'
-          type: person or  organization
-      - name:
-          description: memberof
-          type: programmembership or  organization
-        description:
-          description: 'An Organization (or ProgramMembership) to which this Person
-            or Organization belongs. Inverse property: member.'
-          type: programmembership or  organization
-      - name:
-          description: naics
-          type: text
-        description:
-          description: The North American Industry Classification System (NAICS) code
-            for a particular organization or business person.
-          type: text
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: numberofemployees
-          type: quantitativevalue
-        description:
-          description: The number of employees in an organization e.g. business.
-          type: quantitativevalue
-      - name:
-          description: owns
-          type: product or  ownershipinfo
-        description:
-          description: Products owned by the organization or person.
-          type: product or  ownershipinfo
-      - name:
-          description: parentorganization
-          type: organization
-        description:
-          description: 'The larger organization that this organization is a branch of,
-            if any. Supersedes branchOf. Inverse property: subOrganization.'
-          type: organization
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: seeks
-          type: demand
-        description:
-          description: A pointer to products or services sought by the organization
-            or person (demand).
-          type: demand
-      - name:
-          description: suborganization
-          type: organization
-        description:
-          description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific \''department\''
-            property. Inverse property: parentOrganization.'
-          type: organization
-      - name:
-          description: taxid
-          type: text
-        description:
-          description: The Tax / Fiscal ID of the organization or person, e.g. the TIN
-            in the US or the CIF/NIF in Spain.
-          type: text
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: vatid
-          type: text
-        description:
-          description: The Value-added Tax ID of the organization or person.
-          type: text
-    NightClub:
-      properties:
-      - name:
-          description: additionalproperty
-          type: propertyvalue
-        description:
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          type: propertyvalue
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: alumni
-          type: person
-        description:
-          description: 'Alumni of an organization. Inverse property: alumniOf.'
-          type: person
-      - name:
-          description: areaserved
-          type: text or  place or  geoshape or  administrativearea
-        description:
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          type: text or  place or  geoshape or  administrativearea
-      - name:
-          description: award
-          type: text
-        description:
-          description: An award won by or for this item. Supersedes awards.
-          type: text
-      - name:
-          description: branchcode
-          type: text
-        description:
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          type: text
-      - name:
-          description: brand
-          type: brand or  organization
-        description:
-          description: The brand(s) associated with a product or service, or the brand(s)
-            maintained by an organization or business person.
-          type: brand or  organization
-      - name:
-          description: contactpoint
-          type: contactpoint
-        description:
-          description: A contact point for a person or organization. Supersedes contactPoints.
-          type: contactpoint
-      - name:
-          description: containedinplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: containsplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: currenciesaccepted
-          type: text
-        description:
-          description: The currency accepted (in ISO 4217 currency format).
-          type: text
-      - name:
-          description: department
-          type: organization
-        description:
-          description: 'A relationship between an organization and a department of that
-            organization, also described as an organization (allowing different urls,
-            logos, opening hours). For example: a store with a pharmacy, or a bakery
-            with a cafe.'
-          type: organization
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: dissolutiondate
-          type: date
-        description:
-          description: The date that this organization was dissolved.
-          type: date
-      - name:
-          description: duns
-          type: text
-        description:
-          description: The Dun & Bradstreet DUNS number for identifying an organization
-            or business person.
-          type: text
-      - name:
-          description: email
-          type: text
-        description:
-          description: Email address.
-          type: text
-      - name:
-          description: employee
-          type: person
-        description:
-          description: Someone working for this organization. Supersedes employees.
-          type: person
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: founder
-          type: person
-        description:
-          description: A person who founded this organization. Supersedes founders.
-          type: person
-      - name:
-          description: foundingdate
-          type: date
-        description:
-          description: The date that this organization was founded.
-          type: date
-      - name:
-          description: foundinglocation
-          type: place
-        description:
-          description: The place where the Organization was founded.
-          type: place
-      - name:
-          description: geo
-          type: geocoordinates or  geoshape
-        description:
-          description: The geo coordinates of the place.
-          type: geocoordinates or  geoshape
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasmap
-          type: url or  map
-        description:
-          description: A URL to a map of the place. Supersedes map, maps.
-          type: url or  map
-      - name:
-          description: hasoffercatalog
-          type: offercatalog
-        description:
-          description: Indicates an OfferCatalog listing for this Organization, Person,
-            or Service.
-          type: offercatalog
-      - name:
-          description: haspos
-          type: place
-        description:
-          description: Points-of-Sales operated by the organization or person.
-          type: place
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: legalname
-          type: text
-        description:
-          description: The official name of the organization, e.g. the registered company
-            name.
-          type: text
-      - name:
-          description: location
-          type: text or  place or  postaladdress
-        description:
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          type: text or  place or  postaladdress
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: makesoffer
-          type: offer
-        description:
-          description: 'A pointer to products or services offered by the organization
-            or person. Inverse property: offeredBy.'
-          type: offer
-      - name:
-          description: member
-          type: organization or  person
-        description:
-          description: 'A member of an Organization or a ProgramMembership. Organizations
-            can be members of organizations; ProgramMembership is typically for individuals.
-            Supersedes musicGroupMember, members. Inverse property: memberOf.'
-          type: organization or  person
-      - name:
-          description: memberof
-          type: programmembership or  organization
-        description:
-          description: 'An Organization (or ProgramMembership) to which this Person
-            or Organization belongs. Inverse property: member.'
-          type: programmembership or  organization
-      - name:
-          description: naics
-          type: text
-        description:
-          description: The North American Industry Classification System (NAICS) code
-            for a particular organization or business person.
-          type: text
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: numberofemployees
-          type: quantitativevalue
-        description:
-          description: The number of employees in an organization e.g. business.
-          type: quantitativevalue
-      - name:
-          description: openinghours
-          type: text
-        description:
-          description: 'The opening hours for a business. Opening hours can be specified
-            as a weekly time range, starting with days, then times per day. Multiple
-            days can be listed with commas \'',\'' separating each day. Day or time
-            ranges are specified using a hyphen \''-\''.- Days are specified using the
-            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
-            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
-            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
-            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
-            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
-            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
-          type: text
-      - name:
-          description: openinghoursspecification
-          type: openinghoursspecification
-        description:
-          description: The opening hours of a certain place.
-          type: openinghoursspecification
-      - name:
-          description: owns
-          type: product or  ownershipinfo
-        description:
-          description: Products owned by the organization or person.
-          type: product or  ownershipinfo
-      - name:
-          description: parentorganization
-          type: organization
-        description:
-          description: 'The larger organization that this organization is a branch of,
-            if any. Supersedes branchOf. Inverse property: subOrganization.'
-          type: organization
-      - name:
-          description: paymentaccepted
-          type: text
-        description:
-          description: Cash, credit card, etc.
-          type: text
-      - name:
-          description: photo
-          type: photograph or  imageobject
-        description:
-          description: A photograph of this place. Supersedes photos.
-          type: photograph or  imageobject
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: pricerange
-          type: text
-        description:
-          description: The price range of the business, for example $$$.
-          type: text
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: seeks
-          type: demand
-        description:
-          description: A pointer to products or services sought by the organization
-            or person (demand).
-          type: demand
-      - name:
-          description: suborganization
-          type: organization
-        description:
-          description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific \''department\''
-            property. Inverse property: parentOrganization.'
-          type: organization
-      - name:
-          description: taxid
-          type: text
-        description:
-          description: The Tax / Fiscal ID of the organization or person, e.g. the TIN
-            in the US or the CIF/NIF in Spain.
-          type: text
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: vatid
-          type: text
-        description:
-          description: The Value-added Tax ID of the organization or person.
-          type: text
-    Notary:
-      properties:
-      - name:
-          description: additionalproperty
-          type: propertyvalue
-        description:
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          type: propertyvalue
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: alumni
-          type: person
-        description:
-          description: 'Alumni of an organization. Inverse property: alumniOf.'
-          type: person
-      - name:
-          description: areaserved
-          type: text or  place or  geoshape or  administrativearea
-        description:
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          type: text or  place or  geoshape or  administrativearea
-      - name:
-          description: award
-          type: text
-        description:
-          description: An award won by or for this item. Supersedes awards.
-          type: text
-      - name:
-          description: branchcode
-          type: text
-        description:
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          type: text
-      - name:
-          description: brand
-          type: brand or  organization
-        description:
-          description: The brand(s) associated with a product or service, or the brand(s)
-            maintained by an organization or business person.
-          type: brand or  organization
-      - name:
-          description: contactpoint
-          type: contactpoint
-        description:
-          description: A contact point for a person or organization. Supersedes contactPoints.
-          type: contactpoint
-      - name:
-          description: containedinplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: containsplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: currenciesaccepted
-          type: text
-        description:
-          description: The currency accepted (in ISO 4217 currency format).
-          type: text
-      - name:
-          description: department
-          type: organization
-        description:
-          description: 'A relationship between an organization and a department of that
-            organization, also described as an organization (allowing different urls,
-            logos, opening hours). For example: a store with a pharmacy, or a bakery
-            with a cafe.'
-          type: organization
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: dissolutiondate
-          type: date
-        description:
-          description: The date that this organization was dissolved.
-          type: date
-      - name:
-          description: duns
-          type: text
-        description:
-          description: The Dun & Bradstreet DUNS number for identifying an organization
-            or business person.
-          type: text
-      - name:
-          description: email
-          type: text
-        description:
-          description: Email address.
-          type: text
-      - name:
-          description: employee
-          type: person
-        description:
-          description: Someone working for this organization. Supersedes employees.
-          type: person
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: founder
-          type: person
-        description:
-          description: A person who founded this organization. Supersedes founders.
-          type: person
-      - name:
-          description: foundingdate
-          type: date
-        description:
-          description: The date that this organization was founded.
-          type: date
-      - name:
-          description: foundinglocation
-          type: place
-        description:
-          description: The place where the Organization was founded.
-          type: place
-      - name:
-          description: geo
-          type: geocoordinates or  geoshape
-        description:
-          description: The geo coordinates of the place.
-          type: geocoordinates or  geoshape
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasmap
-          type: url or  map
-        description:
-          description: A URL to a map of the place. Supersedes map, maps.
-          type: url or  map
-      - name:
-          description: hasoffercatalog
-          type: offercatalog
-        description:
-          description: Indicates an OfferCatalog listing for this Organization, Person,
-            or Service.
-          type: offercatalog
-      - name:
-          description: haspos
-          type: place
-        description:
-          description: Points-of-Sales operated by the organization or person.
-          type: place
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: legalname
-          type: text
-        description:
-          description: The official name of the organization, e.g. the registered company
-            name.
-          type: text
-      - name:
-          description: location
-          type: text or  place or  postaladdress
-        description:
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          type: text or  place or  postaladdress
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: makesoffer
-          type: offer
-        description:
-          description: 'A pointer to products or services offered by the organization
-            or person. Inverse property: offeredBy.'
-          type: offer
-      - name:
-          description: member
-          type: person or  organization
-        description:
-          description: 'A member of an Organization or a ProgramMembership. Organizations
-            can be members of organizations; ProgramMembership is typically for individuals.
-            Supersedes musicGroupMember, members. Inverse property: memberOf.'
-          type: person or  organization
-      - name:
-          description: memberof
-          type: programmembership or  organization
-        description:
-          description: 'An Organization (or ProgramMembership) to which this Person
-            or Organization belongs. Inverse property: member.'
-          type: programmembership or  organization
-      - name:
-          description: naics
-          type: text
-        description:
-          description: The North American Industry Classification System (NAICS) code
-            for a particular organization or business person.
-          type: text
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: numberofemployees
-          type: quantitativevalue
-        description:
-          description: The number of employees in an organization e.g. business.
-          type: quantitativevalue
-      - name:
-          description: openinghours
-          type: text
-        description:
-          description: 'The opening hours for a business. Opening hours can be specified
-            as a weekly time range, starting with days, then times per day. Multiple
-            days can be listed with commas \'',\'' separating each day. Day or time
-            ranges are specified using a hyphen \''-\''.- Days are specified using the
-            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
-            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
-            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
-            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
-            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
-            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
-          type: text
-      - name:
-          description: openinghoursspecification
-          type: openinghoursspecification
-        description:
-          description: The opening hours of a certain place.
-          type: openinghoursspecification
-      - name:
-          description: owns
-          type: product or  ownershipinfo
-        description:
-          description: Products owned by the organization or person.
-          type: product or  ownershipinfo
-      - name:
-          description: parentorganization
-          type: organization
-        description:
-          description: 'The larger organization that this organization is a branch of,
-            if any. Supersedes branchOf. Inverse property: subOrganization.'
-          type: organization
-      - name:
-          description: paymentaccepted
-          type: text
-        description:
-          description: Cash, credit card, etc.
-          type: text
-      - name:
-          description: photo
-          type: photograph or  imageobject
-        description:
-          description: A photograph of this place. Supersedes photos.
-          type: photograph or  imageobject
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: pricerange
-          type: text
-        description:
-          description: The price range of the business, for example $$$.
-          type: text
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: seeks
-          type: demand
-        description:
-          description: A pointer to products or services sought by the organization
-            or person (demand).
-          type: demand
-      - name:
-          description: suborganization
-          type: organization
-        description:
-          description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific \''department\''
-            property. Inverse property: parentOrganization.'
-          type: organization
-      - name:
-          description: taxid
-          type: text
-        description:
-          description: The Tax / Fiscal ID of the organization or person, e.g. the TIN
-            in the US or the CIF/NIF in Spain.
-          type: text
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: vatid
-          type: text
-        description:
-          description: The Value-added Tax ID of the organization or person.
-          type: text
-    NutritionInformation:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: calories
-          type: energy
-        description:
-          description: The number of calories.
-          type: energy
-      - name:
-          description: carbohydratecontent
-          type: mass
-        description:
-          description: The number of grams of carbohydrates.
-          type: mass
-      - name:
-          description: cholesterolcontent
-          type: mass
-        description:
-          description: The number of milligrams of cholesterol.
-          type: mass
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: fatcontent
-          type: mass
-        description:
-          description: The number of grams of fat.
-          type: mass
-      - name:
-          description: fibercontent
-          type: mass
-        description:
-          description: The number of grams of fiber.
-          type: mass
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: nutrition
-          type: recipe
-        description:
-          description: 'Nutrition information about the recipe. '
-          type: recipe
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: proteincontent
-          type: mass
-        description:
-          description: The number of grams of protein.
-          type: mass
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: saturatedfatcontent
-          type: mass
-        description:
-          description: The number of grams of saturated fat.
-          type: mass
-      - name:
-          description: servingsize
-          type: text
-        description:
-          description: The serving size, in terms of the number of volume or mass.
-          type: text
-      - name:
-          description: sodiumcontent
-          type: mass
-        description:
-          description: The number of milligrams of sodium.
-          type: mass
-      - name:
-          description: sugarcontent
-          type: mass
-        description:
-          description: The number of grams of sugar.
-          type: mass
-      - name:
-          description: transfatcontent
-          type: mass
-        description:
-          description: The number of grams of trans fat.
-          type: mass
-      - name:
-          description: unsaturatedfatcontent
-          type: mass
-        description:
-          description: The number of grams of unsaturated fat.
-          type: mass
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    OceanBodyOfWater:
-      properties:
-      - name:
-          description: additionalproperty
-          type: propertyvalue
-        description:
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          type: propertyvalue
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: branchcode
-          type: text
-        description:
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          type: text
-      - name:
-          description: containedinplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: containsplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: geo
-          type: geocoordinates or  geoshape
-        description:
-          description: The geo coordinates of the place.
-          type: geocoordinates or  geoshape
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasmap
-          type: url or  map
-        description:
-          description: A URL to a map of the place. Supersedes map, maps.
-          type: url or  map
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: openinghoursspecification
-          type: openinghoursspecification
-        description:
-          description: The opening hours of a certain place.
-          type: openinghoursspecification
-      - name:
-          description: photo
-          type: photograph or  imageobject
-        description:
-          description: A photograph of this place. Supersedes photos.
-          type: photograph or  imageobject
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    Offer:
-      properties:
-      - name:
-          description: acceptedoffer
-          type: order
-        description:
-          description: 'The offer(s) -- e.g., product, quantity and price combinations
-            -- included in the order. '
-          type: order
-      - name:
-          description: acceptedpaymentmethod
-          type: paymentmethod
-        description:
-          description: The payment method(s) accepted by seller for this offer.
-          type: paymentmethod
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: addon
-          type: offer
-        description:
-          description: An additional offer that can only be obtained in combination
-            with the first base offer (e.g. supplements and extensions that are available
-            for a surcharge).
-          type: offer
-      - name:
-          description: advancebookingrequirement
-          type: quantitativevalue
-        description:
-          description: The amount of time that is required between accepting the offer
-            and the actual usage of the resource or service.
-          type: quantitativevalue
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: areaserved
-          type: text or  place or  geoshape or  administrativearea
-        description:
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          type: text or  place or  geoshape or  administrativearea
-      - name:
-          description: availability
-          type: itemavailability
-        description:
-          description: The availability of this item&#x2014;for example In stock, Out
-            of stock, Pre-order, etc.
-          type: itemavailability
-      - name:
-          description: availabilityends
-          type: datetime
-        description:
-          description: The end of the availability of the product or service included
-            in the offer.
-          type: datetime
-      - name:
-          description: availabilitystarts
-          type: datetime
-        description:
-          description: The beginning of the availability of the product or service included
-            in the offer.
-          type: datetime
-      - name:
-          description: availableatorfrom
-          type: place
-        description:
-          description: The place(s) from which the offer can be obtained (e.g. store
-            locations).
-          type: place
-      - name:
-          description: availabledeliverymethod
-          type: deliverymethod
-        description:
-          description: The delivery method(s) available for this offer.
-          type: deliverymethod
-      - name:
-          description: businessfunction
-          type: businessfunction
-        description:
-          description: The business function (e.g. sell, lease, repair, dispose) of
-            the offer or component of a bundle (TypeAndQuantityNode). The default is
-            http://purl.org/goodrelations/v1#Sell.
-          type: businessfunction
-      - name:
-          description: category
-          type: thing or  text or  physicalactivitycategory
-        description:
-          description: A category for the item. Greater signs or slashes can be used
-            to informally indicate a category hierarchy.
-          type: thing or  text or  physicalactivitycategory
-      - name:
-          description: deliveryleadtime
-          type: quantitativevalue
-        description:
-          description: The typical delay between the receipt of the order and the goods
-            leaving the warehouse.
-          type: quantitativevalue
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: eligiblecustomertype
-          type: businessentitytype
-        description:
-          description: The type(s) of customers for which the given offer is valid.
-          type: businessentitytype
-      - name:
-          description: eligibleduration
-          type: quantitativevalue
-        description:
-          description: The duration for which the given offer is valid.
-          type: quantitativevalue
-      - name:
-          description: eligiblequantity
-          type: quantitativevalue
-        description:
-          description: The interval and unit of measurement of ordering quantities for
-            which the offer or price specification is valid. This allows e.g. specifying
-            that a certain freight charge is valid only for a certain quantity.
-          type: quantitativevalue
-      - name:
-          description: eligibleregion
-          type: text or  place or  geoshape
-        description:
-          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
-            place, or the GeoShape for the geo-political region(s) for which the offer
-            or delivery charge specification is valid.       See also ineligibleRegion.    '
-          type: text or  place or  geoshape
-      - name:
-          description: eligibletransactionvolume
-          type: pricespecification
-        description:
-          description: The transaction volume, in a monetary unit, for which the offer
-            or price specification is valid, e.g. for indicating a minimal purchasing
-            volume, to express free shipping above a certain order volume, or to limit
-            the acceptance of credit cards to purchases to a certain minimal amount.
-          type: pricespecification
-      - name:
-          description: expectsacceptanceof
-          type: consumeaction
-        description:
-          description: 'An Offer which must be accepted before the user can perform
-            the Action. For example, the user may need to buy a movie before being able
-            to watch it. '
-          type: consumeaction
-      - name:
-          description: gtin12
-          type: text
-        description:
-          description: The GTIN-12 code of the product, or the product to which the
-            offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed
-            of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify
-            trade items. See GS1 GTIN Summary for more details.
-          type: text
-      - name:
-          description: gtin13
-          type: text
-        description:
-          description: The GTIN-13 code of the product, or the product to which the
-            offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13.
-            Former 12-digit UPC codes can be converted into a GTIN-13 code by simply
-            adding a preceeding zero. See GS1 GTIN Summary for more details.
-          type: text
-      - name:
-          description: gtin14
-          type: text
-        description:
-          description: The GTIN-14 code of the product, or the product to which the
-            offer refers. See GS1 GTIN Summary for more details.
-          type: text
-      - name:
-          description: gtin8
-          type: text
-        description:
-          description: The GTIN-8 code of the product, or the product to which the offer
-            refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See GS1 GTIN
-            Summary for more details.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: includesobject
-          type: typeandquantitynode
-        description:
-          description: This links to a node or nodes indicating the exact quantity of
-            the products included in the offer.
-          type: typeandquantitynode
-      - name:
-          description: ineligibleregion
-          type: text or  place or  geoshape
-        description:
-          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
-            place, or the GeoShape for the geo-political region(s) for which the offer
-            or delivery charge specification is not valid, e.g. a region where the transaction
-            is not allowed.       See also eligibleRegion.      '
-          type: text or  place or  geoshape
-      - name:
-          description: inventorylevel
-          type: quantitativevalue
-        description:
-          description: The current approximate inventory level for the item or items.
-          type: quantitativevalue
-      - name:
-          description: itemcondition
-          type: offeritemcondition
-        description:
-          description: A predefined value from OfferItemCondition or a textual description
-            of the condition of the product or service, or the products or services
-            included in the offer.
-          type: offeritemcondition
-      - name:
-          description: itemoffered
-          type: product or  service
-        description:
-          description: The item being offered.
-          type: product or  service
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: makesoffer
-          type: organization or person
-        description:
-          description: 'A pointer to products or services offered by the organization
-            or person.  inverse property: offeredBy.'
-          type: organization or person
-      - name:
-          description: mpn
-          type: text
-        description:
-          description: The Manufacturer Part Number (MPN) of the product, or the product
-            to which the offer refers.
-          type: text
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: offeredby
-          type: organization or  person
-        description:
-          description: 'A pointer to the organization or person making the offer. Inverse
-            property: makesOffer.'
-          type: organization or  person
-      - name:
-          description: offers
-          type: product or aggregateoffer or event or service or creativework
-        description:
-          description: 'An offer to provide this item&#x2014;for example, an offer to
-            sell a product, rent the DVD of a movie, perform a service, or give away
-            tickets to an event. '
-          type: product or aggregateoffer or event or service or creativework
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: price
-          type: text or  number
-        description:
-          description: 'The offer price of a product, or of a price component when attached
-            to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency
-            property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous
-            symbols such as \''$\'' in the value.      Use \''.\'' (Unicode \''FULL
-            STOP\'' (U+002E)) rather than \'',\'' to indicate a decimal point. Avoid
-            using these symbols as a readability separator.      Note that both RDFa
-            and Microdata syntax allow the use of a \"content=\" attribute for publishing
-            simple machine-readable values      alongside more human-friendly formatting.      Use
-            values from 0123456789 (Unicode \''DIGIT ZERO\'' (U+0030) to \''DIGIT NINE\''
-            (U+0039)) rather than superficially similiar Unicode symbols.      '
-          type: text or  number
-      - name:
-          description: pricecurrency
-          type: text
-        description:
-          description: The currency (in 3-letter ISO 4217 format) of the price or a
-            price component, when attached to PriceSpecification and its subtypes.
-          type: text
-      - name:
-          description: pricespecification
-          type: pricespecification
-        description:
-          description: One or more detailed price specifications, indicating the unit
-            price and delivery or payment charges.
-          type: pricespecification
-      - name:
-          description: pricevaliduntil
-          type: date
-        description:
-          description: The date after which the price is no longer available.
-          type: date
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: seller
-          type: organization or  person
-        description:
-          description: An entity which offers (sells / leases / lends / loans) the services
-            / goods.  A seller may also be a provider. Supersedes vendor, merchant.
-          type: organization or  person
-      - name:
-          description: serialnumber
-          type: text
-        description:
-          description: The serial number or any alphanumeric identifier of a particular
-            product. When attached to an offer, it is a shortcut for the serial number
-            of the product included in the offer.
-          type: text
-      - name:
-          description: sku
-          type: text
-        description:
-          description: The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier
-            for a product or service, or the product to which the offer refers.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: validfrom
-          type: datetime
-        description:
-          description: The date when the item becomes valid.
-          type: datetime
-      - name:
-          description: validthrough
-          type: datetime
-        description:
-          description: The end of the validity of offer, price specification, or opening
-            hours data.
-          type: datetime
-      - name:
-          description: warranty
-          type: warrantypromise
-        description:
-          description: The warranty promise(s) included in the offer. Supersedes warrantyPromise.
-          type: warrantypromise
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Offer API\",\n\t\t\"description\":
+    \"An offer to transfer some rights to an item or to provide a service&#x2014;for
+    example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream
+    a TV show over the internet, to repair a motorcycle, or to loan a book. For GTIN-related
+    fields, see Check Digit calculator and validation guide from GS1.\",\n\t\t\"termsOfService\":
+    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
+    \"offer.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\":
+    [\"application/json\"],\n\t\"paths\": {\n\t\t\"/offer/\": {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\":
+    \"Get Offer\",\n\t\t\t\t\"description\": \"Returns Offer\",\n\t\t\t\t\"operationId\":
+    \"getOffer\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\":
+    \"query\",\n\t\t\t\t\t\"description\": \"Keyword search for item\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/Offer\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Offer\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Offer\",\n\t\t\t\t\"description\":
+    \"Add Offer\",\n\t\t\t\t\"operationId\": \"addOffer\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"acceptedoffer\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The offer(s) -- e.g., product, quantity and price combinations -- included in
+    the order. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"order\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"acceptedpaymentmethod\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The payment method(s) accepted by seller for this offer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"paymentmethod\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"addon\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An additional
+    offer that can only be obtained in combination with the first base offer (e.g. supplements
+    and extensions that are available for a surcharge).\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"offer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"advancebookingrequirement\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The amount of time that is required between accepting the offer and the actual
+    usage of the resource or service.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"aggregaterating\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The overall rating, based on a collection
+    of reviews or ratings, of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"areaserved\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    geographic area where a service or offered item is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text or  place or  geoshape or  administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availability\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    availability of this item&#x2014;for example In stock, Out of stock, Pre-order,
+    etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"itemavailability\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availabilityends\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The end of the availability of the product or service included in the offer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availabilitystarts\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The beginning of the availability of the product or service included in the offer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availableatorfrom\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The place(s) from which the offer can be obtained (e.g. store locations).\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availabledeliverymethod\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The delivery method(s) available for this offer.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"deliverymethod\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"businessfunction\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The business function (e.g. sell, lease,
+    repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The
+    default is http://purl.org/goodrelations/v1#Sell.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"businessfunction\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"category\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A category for the item. Greater signs
+    or slashes can be used to informally indicate a category hierarchy.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing or  text or  physicalactivitycategory\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"deliveryleadtime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The typical delay between the receipt of the order and the goods leaving the warehouse.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"eligiblecustomertype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The type(s) of customers for which the
+    given offer is valid.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"businessentitytype\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"eligibleduration\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The duration for which the given offer is valid.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"eligiblequantity\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The interval and unit of measurement
+    of ordering quantities for which the offer or price specification is valid. This
+    allows e.g. specifying that a certain freight charge is valid only for a certain
+    quantity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"eligibleregion\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape
+    for the geo-political region(s) for which the offer or delivery charge specification
+    is valid.       See also ineligibleRegion.    \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text or  place or  geoshape\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"eligibletransactionvolume\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The transaction volume, in a monetary
+    unit, for which the offer or price specification is valid, e.g. for indicating a
+    minimal purchasing volume, to express free shipping above a certain order volume,
+    or to limit the acceptance of credit cards to purchases to a certain minimal amount.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"pricespecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"expectsacceptanceof\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An Offer which must be accepted before the user can perform the Action. For example,
+    the user may need to buy a movie before being able to watch it. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"consumeaction\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"gtin12\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The GTIN-12
+    code of the product, or the product to which the offer refers. The GTIN-12 is the
+    12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference,
+    and Check Digit used to identify trade items. See GS1 GTIN Summary for more details.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"gtin13\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The GTIN-13
+    code of the product, or the product to which the offer refers. This is equivalent
+    to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted
+    into a GTIN-13 code by simply adding a preceeding zero. See GS1 GTIN Summary for
+    more details.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"gtin14\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The GTIN-14
+    code of the product, or the product to which the offer refers. See GS1 GTIN Summary
+    for more details.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"gtin8\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The GTIN-8
+    code of the product, or the product to which the offer refers. This code is also
+    known as EAN/UCC-8 or 8-digit EAN. See GS1 GTIN Summary for more details.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"includesobject\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"This links to a node or nodes indicating the exact quantity of the products included
+    in the offer.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"typeandquantitynode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"ineligibleregion\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape
+    for the geo-political region(s) for which the offer or delivery charge specification
+    is not valid, e.g. a region where the transaction is not allowed.       See also
+    eligibleRegion.      \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text
+    or  place or  geoshape\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"inventorylevel\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The current approximate inventory level
+    for the item or items.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"itemcondition\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A predefined value from OfferItemCondition or a textual description of the condition
+    of the product or service, or the products or services included in the offer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"offeritemcondition\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"itemoffered\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    item being offered.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"product
+    or  service\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
+    for which this thing is the main entity being described.            See background
+    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"makesoffer\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    pointer to products or services offered by the organization or person.  inverse
+    property: offeredBy.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"organization
+    or person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mpn\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The Manufacturer Part Number (MPN) of
+    the product, or the product to which the offer refers.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"offeredby\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    pointer to the organization or person making the offer. Inverse property: makesOffer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"offers\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An offer
+    to provide this item&#x2014;for example, an offer to sell a product, rent the DVD
+    of a movie, perform a service, or give away tickets to an event. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"product or aggregateoffer or event or service or creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"price\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The offer price of a product, or of
+    a price component when attached to PriceSpecification and its subtypes.      Usage
+    guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. \\\"USD\\\")
+    instead of      including ambiguous symbols such as \\'$\\' in the value.      Use
+    \\'.\\' (Unicode \\'FULL STOP\\' (U+002E)) rather than \\',\\' to indicate a decimal
+    point. Avoid using these symbols as a readability separator.      Note that both
+    RDFa and Microdata syntax allow the use of a \\\"content=\\\" attribute for publishing
+    simple machine-readable values      alongside more human-friendly formatting.      Use
+    values from 0123456789 (Unicode \\'DIGIT ZERO\\' (U+0030) to \\'DIGIT NINE\\' (U+0039))
+    rather than superficially similiar Unicode symbols.      \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"pricecurrency\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The currency (in 3-letter ISO 4217 format) of the price or a price component,
+    when attached to PriceSpecification and its subtypes.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"pricespecification\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"One or more detailed price specifications, indicating the unit price and delivery
+    or payment charges.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"pricespecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"pricevaliduntil\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The date after which the price is no longer available.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"date\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"review\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A review
+    of the item. Supersedes reviews.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"review\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"seller\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An entity which offers (sells / leases
+    / lends / loans) the services / goods.  A seller may also be a provider. Supersedes
+    vendor, merchant.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"organization
+    or  person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"serialnumber\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The serial number or any alphanumeric
+    identifier of a particular product. When attached to an offer, it is a shortcut
+    for the serial number of the product included in the offer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sku\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The Stock
+    Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service,
+    or the product to which the offer refers.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"validfrom\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    date when the item becomes valid.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"validthrough\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The end of the validity of offer, price
+    specification, or opening hours data.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"warranty\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The warranty promise(s) included in
+    the offer. Supersedes warrantyPromise.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"warrantypromise\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/Offer\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Offer\"]\n\t\t\t}\n\t\t},\n\t\t\"/offer/{id}/\": {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\":
+    \"Get Offer\",\n\t\t\t\t\"description\": \"Returns a single Offer\",\n\t\t\t\t\"operationId\":
+    \"getOffer\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/Offer\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Offer\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update Offer\",\n\t\t\t\t\"description\":
+    \"Update a single Offer\",\n\t\t\t\t\"operationId\": \"updateOfferItem\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"acceptedoffer\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The offer(s) -- e.g., product, quantity and price combinations -- included in
+    the order. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"order\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"acceptedpaymentmethod\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The payment method(s) accepted by seller for this offer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"paymentmethod\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"addon\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An additional
+    offer that can only be obtained in combination with the first base offer (e.g. supplements
+    and extensions that are available for a surcharge).\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"offer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"advancebookingrequirement\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The amount of time that is required between accepting the offer and the actual
+    usage of the resource or service.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"aggregaterating\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The overall rating, based on a collection
+    of reviews or ratings, of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"areaserved\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    geographic area where a service or offered item is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text or  place or  geoshape or  administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availability\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    availability of this item&#x2014;for example In stock, Out of stock, Pre-order,
+    etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"itemavailability\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availabilityends\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The end of the availability of the product or service included in the offer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availabilitystarts\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The beginning of the availability of the product or service included in the offer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availableatorfrom\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The place(s) from which the offer can be obtained (e.g. store locations).\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"availabledeliverymethod\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The delivery method(s) available for this offer.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"deliverymethod\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"businessfunction\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The business function (e.g. sell, lease,
+    repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The
+    default is http://purl.org/goodrelations/v1#Sell.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"businessfunction\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"category\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A category for the item. Greater signs
+    or slashes can be used to informally indicate a category hierarchy.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing or  text or  physicalactivitycategory\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"deliveryleadtime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The typical delay between the receipt of the order and the goods leaving the warehouse.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"eligiblecustomertype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The type(s) of customers for which the
+    given offer is valid.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"businessentitytype\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"eligibleduration\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The duration for which the given offer is valid.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"eligiblequantity\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The interval and unit of measurement
+    of ordering quantities for which the offer or price specification is valid. This
+    allows e.g. specifying that a certain freight charge is valid only for a certain
+    quantity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"eligibleregion\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape
+    for the geo-political region(s) for which the offer or delivery charge specification
+    is valid.       See also ineligibleRegion.    \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text or  place or  geoshape\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"eligibletransactionvolume\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The transaction volume, in a monetary
+    unit, for which the offer or price specification is valid, e.g. for indicating a
+    minimal purchasing volume, to express free shipping above a certain order volume,
+    or to limit the acceptance of credit cards to purchases to a certain minimal amount.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"pricespecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"expectsacceptanceof\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An Offer which must be accepted before the user can perform the Action. For example,
+    the user may need to buy a movie before being able to watch it. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"consumeaction\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"gtin12\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The GTIN-12
+    code of the product, or the product to which the offer refers. The GTIN-12 is the
+    12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference,
+    and Check Digit used to identify trade items. See GS1 GTIN Summary for more details.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"gtin13\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The GTIN-13
+    code of the product, or the product to which the offer refers. This is equivalent
+    to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted
+    into a GTIN-13 code by simply adding a preceeding zero. See GS1 GTIN Summary for
+    more details.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"gtin14\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The GTIN-14
+    code of the product, or the product to which the offer refers. See GS1 GTIN Summary
+    for more details.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"gtin8\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The GTIN-8
+    code of the product, or the product to which the offer refers. This code is also
+    known as EAN/UCC-8 or 8-digit EAN. See GS1 GTIN Summary for more details.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"includesobject\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"This links to a node or nodes indicating the exact quantity of the products included
+    in the offer.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"typeandquantitynode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"ineligibleregion\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape
+    for the geo-political region(s) for which the offer or delivery charge specification
+    is not valid, e.g. a region where the transaction is not allowed.       See also
+    eligibleRegion.      \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text
+    or  place or  geoshape\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"inventorylevel\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The current approximate inventory level
+    for the item or items.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"itemcondition\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A predefined value from OfferItemCondition or a textual description of the condition
+    of the product or service, or the products or services included in the offer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"offeritemcondition\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"itemoffered\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    item being offered.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"product
+    or  service\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
+    for which this thing is the main entity being described.            See background
+    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"makesoffer\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    pointer to products or services offered by the organization or person.  inverse
+    property: offeredBy.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"organization
+    or person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mpn\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The Manufacturer Part Number (MPN) of
+    the product, or the product to which the offer refers.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"offeredby\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    pointer to the organization or person making the offer. Inverse property: makesOffer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"offers\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An offer
+    to provide this item&#x2014;for example, an offer to sell a product, rent the DVD
+    of a movie, perform a service, or give away tickets to an event. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"product or aggregateoffer or event or service or creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"price\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The offer price of a product, or of
+    a price component when attached to PriceSpecification and its subtypes.      Usage
+    guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. \\\"USD\\\")
+    instead of      including ambiguous symbols such as \\'$\\' in the value.      Use
+    \\'.\\' (Unicode \\'FULL STOP\\' (U+002E)) rather than \\',\\' to indicate a decimal
+    point. Avoid using these symbols as a readability separator.      Note that both
+    RDFa and Microdata syntax allow the use of a \\\"content=\\\" attribute for publishing
+    simple machine-readable values      alongside more human-friendly formatting.      Use
+    values from 0123456789 (Unicode \\'DIGIT ZERO\\' (U+0030) to \\'DIGIT NINE\\' (U+0039))
+    rather than superficially similiar Unicode symbols.      \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"pricecurrency\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The currency (in 3-letter ISO 4217 format) of the price or a price component,
+    when attached to PriceSpecification and its subtypes.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"pricespecification\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"One or more detailed price specifications, indicating the unit price and delivery
+    or payment charges.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"pricespecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"pricevaliduntil\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The date after which the price is no longer available.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"date\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"review\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A review
+    of the item. Supersedes reviews.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"review\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"seller\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An entity which offers (sells / leases
+    / lends / loans) the services / goods.  A seller may also be a provider. Supersedes
+    vendor, merchant.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"organization
+    or  person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"serialnumber\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The serial number or any alphanumeric
+    identifier of a particular product. When attached to an offer, it is a shortcut
+    for the serial number of the product included in the offer.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sku\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The Stock
+    Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service,
+    or the product to which the offer refers.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"validfrom\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    date when the item becomes valid.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"validthrough\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The end of the validity of offer, price
+    specification, or opening hours data.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"warranty\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The warranty promise(s) included in
+    the offer. Supersedes warrantyPromise.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"warrantypromise\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/Offer\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Offer\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Offer\",\n\t\t\t\t\"description\":
+    \"Deletes a single Offer\",\n\t\t\t\t\"operationId\": \"deleteOffer\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/Offer\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Offer\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"Offer\": {\n\t\t\t\"properties\":
+    {\n\t\t\t\t\"acceptedoffer\": {\n\t\t\t\t\t\"description\": \"The offer(s) -- e.g.,
+    product, quantity and price combinations -- included in the order. \",\n\t\t\t\t\t\"type\":
+    \"order\"\n\t\t\t\t},\n\t\t\t\t\"acceptedpaymentmethod\": {\n\t\t\t\t\t\"description\":
+    \"The payment method(s) accepted by seller for this offer.\",\n\t\t\t\t\t\"type\":
+    \"paymentmethod\"\n\t\t\t\t},\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"addon\": {\n\t\t\t\t\t\"description\": \"An additional
+    offer that can only be obtained in combination with the first base offer (e.g. supplements
+    and extensions that are available for a surcharge).\",\n\t\t\t\t\t\"type\": \"offer\"\n\t\t\t\t},\n\t\t\t\t\"advancebookingrequirement\":
+    {\n\t\t\t\t\t\"description\": \"The amount of time that is required between accepting
+    the offer and the actual usage of the resource or service.\",\n\t\t\t\t\t\"type\":
+    \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t\"aggregaterating\": {\n\t\t\t\t\t\"description\":
+    \"The overall rating, based on a collection of reviews or ratings, of the item.\",\n\t\t\t\t\t\"type\":
+    \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"areaserved\":
+    {\n\t\t\t\t\t\"description\": \"The geographic area where a service or offered item
+    is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"type\": \"text or  place or
+    \ geoshape or  administrativearea\"\n\t\t\t\t},\n\t\t\t\t\"availability\": {\n\t\t\t\t\t\"description\":
+    \"The availability of this item&#x2014;for example In stock, Out of stock, Pre-order,
+    etc.\",\n\t\t\t\t\t\"type\": \"itemavailability\"\n\t\t\t\t},\n\t\t\t\t\"availabilityends\":
+    {\n\t\t\t\t\t\"description\": \"The end of the availability of the product or service
+    included in the offer.\",\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"availabilitystarts\":
+    {\n\t\t\t\t\t\"description\": \"The beginning of the availability of the product
+    or service included in the offer.\",\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"availableatorfrom\":
+    {\n\t\t\t\t\t\"description\": \"The place(s) from which the offer can be obtained
+    (e.g. store locations).\",\n\t\t\t\t\t\"type\": \"place\"\n\t\t\t\t},\n\t\t\t\t\"availabledeliverymethod\":
+    {\n\t\t\t\t\t\"description\": \"The delivery method(s) available for this offer.\",\n\t\t\t\t\t\"type\":
+    \"deliverymethod\"\n\t\t\t\t},\n\t\t\t\t\"businessfunction\": {\n\t\t\t\t\t\"description\":
+    \"The business function (e.g. sell, lease, repair, dispose) of the offer or component
+    of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.\",\n\t\t\t\t\t\"type\":
+    \"businessfunction\"\n\t\t\t\t},\n\t\t\t\t\"category\": {\n\t\t\t\t\t\"description\":
+    \"A category for the item. Greater signs or slashes can be used to informally indicate
+    a category hierarchy.\",\n\t\t\t\t\t\"type\": \"thing or  text or  physicalactivitycategory\"\n\t\t\t\t},\n\t\t\t\t\"deliveryleadtime\":
+    {\n\t\t\t\t\t\"description\": \"The typical delay between the receipt of the order
+    and the goods leaving the warehouse.\",\n\t\t\t\t\t\"type\": \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t\"description\":
+    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"eligiblecustomertype\": {\n\t\t\t\t\t\"description\":
+    \"The type(s) of customers for which the given offer is valid.\",\n\t\t\t\t\t\"type\":
+    \"businessentitytype\"\n\t\t\t\t},\n\t\t\t\t\"eligibleduration\": {\n\t\t\t\t\t\"description\":
+    \"The duration for which the given offer is valid.\",\n\t\t\t\t\t\"type\": \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t\"eligiblequantity\":
+    {\n\t\t\t\t\t\"description\": \"The interval and unit of measurement of ordering
+    quantities for which the offer or price specification is valid. This allows e.g.
+    specifying that a certain freight charge is valid only for a certain quantity.\",\n\t\t\t\t\t\"type\":
+    \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t\"eligibleregion\": {\n\t\t\t\t\t\"description\":
+    \"The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape
+    for the geo-political region(s) for which the offer or delivery charge specification
+    is valid.       See also ineligibleRegion.    \",\n\t\t\t\t\t\"type\": \"text or
+    \ place or  geoshape\"\n\t\t\t\t},\n\t\t\t\t\"eligibletransactionvolume\": {\n\t\t\t\t\t\"description\":
+    \"The transaction volume, in a monetary unit, for which the offer or price specification
+    is valid, e.g. for indicating a minimal purchasing volume, to express free shipping
+    above a certain order volume, or to limit the acceptance of credit cards to purchases
+    to a certain minimal amount.\",\n\t\t\t\t\t\"type\": \"pricespecification\"\n\t\t\t\t},\n\t\t\t\t\"expectsacceptanceof\":
+    {\n\t\t\t\t\t\"description\": \"An Offer which must be accepted before the user
+    can perform the Action. For example, the user may need to buy a movie before being
+    able to watch it. \",\n\t\t\t\t\t\"type\": \"consumeaction\"\n\t\t\t\t},\n\t\t\t\t\"gtin12\":
+    {\n\t\t\t\t\t\"description\": \"The GTIN-12 code of the product, or the product
+    to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed
+    of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade
+    items. See GS1 GTIN Summary for more details.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"gtin13\":
+    {\n\t\t\t\t\t\"description\": \"The GTIN-13 code of the product, or the product
+    to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13.
+    Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding
+    a preceeding zero. See GS1 GTIN Summary for more details.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"gtin14\": {\n\t\t\t\t\t\"description\": \"The GTIN-14
+    code of the product, or the product to which the offer refers. See GS1 GTIN Summary
+    for more details.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"gtin8\":
+    {\n\t\t\t\t\t\"description\": \"The GTIN-8 code of the product, or the product to
+    which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See
+    GS1 GTIN Summary for more details.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"image\":
+    {\n\t\t\t\t\t\"description\": \"An image of the item. This can be a URL or a fully
+    described ImageObject.\",\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"includesobject\":
+    {\n\t\t\t\t\t\"description\": \"This links to a node or nodes indicating the exact
+    quantity of the products included in the offer.\",\n\t\t\t\t\t\"type\": \"typeandquantitynode\"\n\t\t\t\t},\n\t\t\t\t\"ineligibleregion\":
+    {\n\t\t\t\t\t\"description\": \"The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2
+    code, the place, or the GeoShape for the geo-political region(s) for which the offer
+    or delivery charge specification is not valid, e.g. a region where the transaction
+    is not allowed.       See also eligibleRegion.      \",\n\t\t\t\t\t\"type\": \"text
+    or  place or  geoshape\"\n\t\t\t\t},\n\t\t\t\t\"inventorylevel\": {\n\t\t\t\t\t\"description\":
+    \"The current approximate inventory level for the item or items.\",\n\t\t\t\t\t\"type\":
+    \"quantitativevalue\"\n\t\t\t\t},\n\t\t\t\t\"itemcondition\": {\n\t\t\t\t\t\"description\":
+    \"A predefined value from OfferItemCondition or a textual description of the condition
+    of the product or service, or the products or services included in the offer.\",\n\t\t\t\t\t\"type\":
+    \"offeritemcondition\"\n\t\t\t\t},\n\t\t\t\t\"itemoffered\": {\n\t\t\t\t\t\"description\":
+    \"The item being offered.\",\n\t\t\t\t\t\"type\": \"product or  service\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork) for which
+    this thing is the main entity being described.            See background notes for
+    details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t\"makesoffer\":
+    {\n\t\t\t\t\t\"description\": \"A pointer to products or services offered by the
+    organization or person.  inverse property: offeredBy.\",\n\t\t\t\t\t\"type\": \"organization
+    or person\"\n\t\t\t\t},\n\t\t\t\t\"mpn\": {\n\t\t\t\t\t\"description\": \"The Manufacturer
+    Part Number (MPN) of the product, or the product to which the offer refers.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"offeredby\":
+    {\n\t\t\t\t\t\"description\": \"A pointer to the organization or person making the
+    offer. Inverse property: makesOffer.\",\n\t\t\t\t\t\"type\": \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t\"offers\":
+    {\n\t\t\t\t\t\"description\": \"An offer to provide this item&#x2014;for example,
+    an offer to sell a product, rent the DVD of a movie, perform a service, or give
+    away tickets to an event. \",\n\t\t\t\t\t\"type\": \"product or aggregateoffer or
+    event or service or creativework\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t\"price\":
+    {\n\t\t\t\t\t\"description\": \"The offer price of a product, or of a price component
+    when attached to PriceSpecification and its subtypes.      Usage guidelines:Use
+    the priceCurrency property (with ISO 4217 codes e.g. \\\"USD\\\") instead of      including
+    ambiguous symbols such as \\'$\\' in the value.      Use \\'.\\' (Unicode \\'FULL
+    STOP\\' (U+002E)) rather than \\',\\' to indicate a decimal point. Avoid using these
+    symbols as a readability separator.      Note that both RDFa and Microdata syntax
+    allow the use of a \\\"content=\\\" attribute for publishing simple machine-readable
+    values      alongside more human-friendly formatting.      Use values from 0123456789
+    (Unicode \\'DIGIT ZERO\\' (U+0030) to \\'DIGIT NINE\\' (U+0039)) rather than superficially
+    similiar Unicode symbols.      \",\n\t\t\t\t\t\"type\": \"text or  number\"\n\t\t\t\t},\n\t\t\t\t\"pricecurrency\":
+    {\n\t\t\t\t\t\"description\": \"The currency (in 3-letter ISO 4217 format) of the
+    price or a price component, when attached to PriceSpecification and its subtypes.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"pricespecification\": {\n\t\t\t\t\t\"description\":
+    \"One or more detailed price specifications, indicating the unit price and delivery
+    or payment charges.\",\n\t\t\t\t\t\"type\": \"pricespecification\"\n\t\t\t\t},\n\t\t\t\t\"pricevaliduntil\":
+    {\n\t\t\t\t\t\"description\": \"The date after which the price is no longer available.\",\n\t\t\t\t\t\"type\":
+    \"date\"\n\t\t\t\t},\n\t\t\t\t\"review\": {\n\t\t\t\t\t\"description\": \"A review
+    of the item. Supersedes reviews.\",\n\t\t\t\t\t\"type\": \"review\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
+    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
+    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
+    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"seller\":
+    {\n\t\t\t\t\t\"description\": \"An entity which offers (sells / leases / lends /
+    loans) the services / goods.  A seller may also be a provider. Supersedes vendor,
+    merchant.\",\n\t\t\t\t\t\"type\": \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t\"serialnumber\":
+    {\n\t\t\t\t\t\"description\": \"The serial number or any alphanumeric identifier
+    of a particular product. When attached to an offer, it is a shortcut for the serial
+    number of the product included in the offer.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"sku\":
+    {\n\t\t\t\t\t\"description\": \"The Stock Keeping Unit (SKU), i.e. a merchant-specific
+    identifier for a product or service, or the product to which the offer refers.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"validfrom\": {\n\t\t\t\t\t\"description\":
+    \"The date when the item becomes valid.\",\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"validthrough\":
+    {\n\t\t\t\t\t\"description\": \"The end of the validity of offer, price specification,
+    or opening hours data.\",\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"warranty\":
+    {\n\t\t\t\t\t\"description\": \"The warranty promise(s) included in the offer. Supersedes
+    warrantyPromise.\",\n\t\t\t\t\t\"type\": \"warrantypromise\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

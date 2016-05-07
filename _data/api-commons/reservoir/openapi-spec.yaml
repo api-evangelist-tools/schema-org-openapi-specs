@@ -1,1004 +1,283 @@
-- swagger: "2.0"
-  info:
-    title: Reservoir API
-    description: A reservoir of water, typically an artificially created lake, like
-      the Lake Kariba reservoir.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: reservoir.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /reservoir/:
-      get:
-        summary: Get Reservoir
-        description: Returns Reservoir
-        operationId: getReservoir
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Reservoir'
-        tags:
-        - Reservoir
-      post:
-        summary: Add Reservoir
-        description: Add Reservoir
-        operationId: addReservoir
-        parameters:
-        - name: additionalproperty
-          in: formData
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          required: false
-          type: propertyvalue
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: address
-          in: formData
-          description: Physical address of the item.
-          required: false
-          type: text or  postaladdress
-        - name: aggregaterating
-          in: formData
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          required: false
-          type: aggregaterating
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: branchcode
-          in: formData
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          required: false
-          type: text
-        - name: containedinplace
-          in: formData
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          required: false
-          type: place
-        - name: containsplace
-          in: formData
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          required: false
-          type: place
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: event
-          in: formData
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          required: false
-          type: event
-        - name: faxnumber
-          in: formData
-          description: The fax number.
-          required: false
-          type: text
-        - name: geo
-          in: formData
-          description: The geo coordinates of the place.
-          required: false
-          type: geocoordinates or  geoshape
-        - name: globallocationnumber
-          in: formData
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          required: false
-          type: text
-        - name: hasmap
-          in: formData
-          description: A URL to a map of the place. Supersedes map, maps.
-          required: false
-          type: url or  map
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: isicv4
-          in: formData
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          required: false
-          type: text
-        - name: logo
-          in: formData
-          description: An associated logo.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: openinghoursspecification
-          in: formData
-          description: The opening hours of a certain place.
-          required: false
-          type: openinghoursspecification
-        - name: photo
-          in: formData
-          description: A photograph of this place. Supersedes photos.
-          required: false
-          type: photograph or  imageobject
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: review
-          in: formData
-          description: A review of the item. Supersedes reviews.
-          required: false
-          type: review
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: telephone
-          in: formData
-          description: The telephone number.
-          required: false
-          type: text
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Reservoir'
-        tags:
-        - Reservoir
-    /reservoir/{id}/:
-      get:
-        summary: Get Reservoir
-        description: Returns a single Reservoir
-        operationId: getReservoir
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Reservoir'
-        tags:
-        - Reservoir
-      put:
-        summary: Update Reservoir
-        description: Update a single Reservoir
-        operationId: updateReservoirItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: additionalproperty
-          in: formData
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          required: false
-          type: propertyvalue
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: address
-          in: formData
-          description: Physical address of the item.
-          required: false
-          type: text or  postaladdress
-        - name: aggregaterating
-          in: formData
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          required: false
-          type: aggregaterating
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: branchcode
-          in: formData
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          required: false
-          type: text
-        - name: containedinplace
-          in: formData
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          required: false
-          type: place
-        - name: containsplace
-          in: formData
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          required: false
-          type: place
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: event
-          in: formData
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          required: false
-          type: event
-        - name: faxnumber
-          in: formData
-          description: The fax number.
-          required: false
-          type: text
-        - name: geo
-          in: formData
-          description: The geo coordinates of the place.
-          required: false
-          type: geocoordinates or  geoshape
-        - name: globallocationnumber
-          in: formData
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          required: false
-          type: text
-        - name: hasmap
-          in: formData
-          description: A URL to a map of the place. Supersedes map, maps.
-          required: false
-          type: url or  map
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: isicv4
-          in: formData
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          required: false
-          type: text
-        - name: logo
-          in: formData
-          description: An associated logo.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: openinghoursspecification
-          in: formData
-          description: The opening hours of a certain place.
-          required: false
-          type: openinghoursspecification
-        - name: photo
-          in: formData
-          description: A photograph of this place. Supersedes photos.
-          required: false
-          type: photograph or  imageobject
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: review
-          in: formData
-          description: A review of the item. Supersedes reviews.
-          required: false
-          type: review
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: telephone
-          in: formData
-          description: The telephone number.
-          required: false
-          type: text
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Reservoir'
-        tags:
-        - Reservoir
-      delete:
-        summary: Reservoir
-        description: Deletes a single Reservoir
-        operationId: deleteReservoir
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Reservoir'
-        tags:
-        - Reservoir
-  definitions:
-    ReservationPackage:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: bookingtime
-          type: datetime
-        description:
-          description: The date and time the reservation was booked.
-          type: datetime
-      - name:
-          description: broker
-          type: person or  organization
-        description:
-          description: An entity that arranges for an exchange between a buyer and a
-            seller.  In most cases a broker never acquires or releases ownership of
-            a product or service involved in an exchange.  If it is not clear whether
-            an entity is a broker, seller, or buyer, the latter two terms are preferred.
-            Supersedes bookingAgent.
-          type: person or  organization
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: modifiedtime
-          type: datetime
-        description:
-          description: The date and time the reservation was modified.
-          type: datetime
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: pricecurrency
-          type: text
-        description:
-          description: The currency (in 3-letter ISO 4217 format) of the price or a
-            price component, when attached to PriceSpecification and its subtypes.
-          type: text
-      - name:
-          description: programmembershipused
-          type: programmembership
-        description:
-          description: Any membership in a frequent flyer, hotel loyalty program, etc.
-            being applied to the reservation.
-          type: programmembership
-      - name:
-          description: provider
-          type: person or  organization
-        description:
-          description: The service provider, service operator, or service performer;
-            the goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the seller.
-            Supersedes carrier.
-          type: person or  organization
-      - name:
-          description: reservationfor
-          type: thing
-        description:
-          description: The thing -- flight, event, restaurant,etc. being reserved.
-          type: thing
-      - name:
-          description: reservationid
-          type: text
-        description:
-          description: A unique identifier for the reservation.
-          type: text
-      - name:
-          description: reservationstatus
-          type: reservationstatustype
-        description:
-          description: The current status of the reservation.
-          type: reservationstatustype
-      - name:
-          description: reservedticket
-          type: ticket
-        description:
-          description: A ticket associated with the reservation.
-          type: ticket
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: subreservation
-          type: reservation
-        description:
-          description: The individual reservations included in the package. Typically
-            a repeated property.
-          type: reservation
-      - name:
-          description: totalprice
-          type: pricespecification or  number or  text
-        description:
-          description: The total price for the reservation or ticket, including applicable
-            taxes, shipping, etc.
-          type: pricespecification or  number or  text
-      - name:
-          description: undername
-          type: person or  organization
-        description:
-          description: The person or organization the reservation or ticket is for.
-          type: person or  organization
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    ReservationStatusType:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: reservationstatus
-          type: reservation
-        description:
-          description: 'The current status of the reservation. '
-          type: reservation
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: supersededby
-          type: class or  property or  enumeration
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: class or  property or  enumeration
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    ReserveAction:
-      properties:
-      - name:
-          description: actionstatus
-          type: actionstatustype
-        description:
-          description: Indicates the current disposition of the Action.
-          type: actionstatustype
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: agent
-          type: organization or  person
-        description:
-          description: The direct performer or driver of the action (animate or inanimate).
-            e.g. *John* wrote a book.
-          type: organization or  person
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: endtime
-          type: datetime
-        description:
-          description: The endTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to end. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from January to *December*.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          type: datetime
-      - name:
-          description: error
-          type: thing
-        description:
-          description: For failed actions, more information on the cause of the failure.
-          type: thing
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: instrument
-          type: thing
-        description:
-          description: The object that helped the agent perform the action. e.g. John
-            wrote a book with *a pen*.
-          type: thing
-      - name:
-          description: location
-          type: place or  postaladdress or  text
-        description:
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          type: place or  postaladdress or  text
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: object
-          type: thing
-        description:
-          description: The object upon the action is carried out, whose state is kept
-            intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn\'t). e.g. John
-            read *a book*.
-          type: thing
-      - name:
-          description: participant
-          type: organization or  person
-        description:
-          description: Other co-agents that participated in the action indirectly. e.g.
-            John wrote a book with *Steve*.
-          type: organization or  person
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: result
-          type: thing
-        description:
-          description: The result produced in the action. e.g. John wrote *a book*.
-          type: thing
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: scheduledtime
-          type: datetime
-        description:
-          description: The time the object is scheduled to.
-          type: datetime
-      - name:
-          description: starttime
-          type: datetime
-        description:
-          description: The startTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to start. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from *January* to December.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          type: datetime
-      - name:
-          description: target
-          type: entrypoint
-        description:
-          description: Indicates a target EntryPoint for an Action.
-          type: entrypoint
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    Reservoir:
-      properties:
-      - name:
-          description: additionalproperty
-          type: propertyvalue
-        description:
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          type: propertyvalue
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: branchcode
-          type: text
-        description:
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          type: text
-      - name:
-          description: containedinplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: containsplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: geo
-          type: geocoordinates or  geoshape
-        description:
-          description: The geo coordinates of the place.
-          type: geocoordinates or  geoshape
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasmap
-          type: url or  map
-        description:
-          description: A URL to a map of the place. Supersedes map, maps.
-          type: url or  map
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: openinghoursspecification
-          type: openinghoursspecification
-        description:
-          description: The opening hours of a certain place.
-          type: openinghoursspecification
-      - name:
-          description: photo
-          type: photograph or  imageobject
-        description:
-          description: A photograph of this place. Supersedes photos.
-          type: photograph or  imageobject
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Reservoir API\",\n\t\t\"description\":
+    \"A reservoir of water, typically an artificially created lake, like the Lake Kariba
+    reservoir.\",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
+    \"v1\"\n\t},\n\t\"host\": \"reservoir.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
+    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/reservoir/\":
+    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Reservoir\",\n\t\t\t\t\"description\":
+    \"Returns Reservoir\",\n\t\t\t\t\"operationId\": \"getReservoir\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/Reservoir\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Reservoir\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Reservoir\",\n\t\t\t\t\"description\":
+    \"Add Reservoir\",\n\t\t\t\t\"operationId\": \"addReservoir\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"additionalproperty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A property-value pair representing an additional characteristics of the entitity,
+    e.g. a product feature or another characteristic for which there is no matching
+    property in schema.org. Note: Publishers should be aware that applications designed
+    to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color,
+    http://schema.org/gtin13, ...) will typically expect such data to be provided using
+    those properties, rather than using the generic property/value mechanism.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"propertyvalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"address\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Physical
+    address of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text
+    or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"aggregaterating\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The overall rating, based on a collection
+    of reviews or ratings, of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"branchcode\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short textual code (also called \\\"store code\\\") that uniquely identifies a place
+    of business. The code is typically assigned by the parentOrganization and used in
+    structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
+    the code \\\"3047\\\" is a branchCode for a particular branch.      \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"containedinplace\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The basic containment relation between a place and one that contains it. Supersedes
+    containedIn. Inverse property: containsPlace.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"containsplace\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The basic containment relation between
+    a place and another that it contains. Inverse property: containsPlace.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"event\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Upcoming or past event associated with
+    this place, organization, or action. Supersedes events.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"event\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"faxnumber\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    fax number.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"geo\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The geo
+    coordinates of the place.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"geocoordinates or  geoshape\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"globallocationnumber\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The Global Location Number (GLN, sometimes
+    also referred to as International Location Number or ILN) of the respective organization,
+    person, or place. The GLN is a 13-digit number used to identify parties and physical
+    locations.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"hasmap\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A URL
+    to a map of the place. Supersedes map, maps.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  map\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
+    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"isicv4\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The International Standard of Industrial
+    Classification of All Economic Activities (ISIC), Revision 4 code for a particular
+    organization, business person, or place.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"logo\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An associated logo.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"openinghoursspecification\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The opening hours of a certain place.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"photo\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A photograph of this place. Supersedes
+    photos.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"photograph or
+    \ imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
+    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"review\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A review
+    of the item. Supersedes reviews.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"review\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"telephone\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The telephone number.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/Reservoir\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Reservoir\"]\n\t\t\t}\n\t\t},\n\t\t\"/reservoir/{id}/\": {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\":
+    \"Get Reservoir\",\n\t\t\t\t\"description\": \"Returns a single Reservoir\",\n\t\t\t\t\"operationId\":
+    \"getReservoir\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/Reservoir\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Reservoir\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update Reservoir\",\n\t\t\t\t\"description\":
+    \"Update a single Reservoir\",\n\t\t\t\t\"operationId\": \"updateReservoirItem\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionalproperty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A property-value pair representing an additional characteristics of the entitity,
+    e.g. a product feature or another characteristic for which there is no matching
+    property in schema.org. Note: Publishers should be aware that applications designed
+    to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color,
+    http://schema.org/gtin13, ...) will typically expect such data to be provided using
+    those properties, rather than using the generic property/value mechanism.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"propertyvalue\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"address\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Physical
+    address of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text
+    or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"aggregaterating\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The overall rating, based on a collection
+    of reviews or ratings, of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"branchcode\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short textual code (also called \\\"store code\\\") that uniquely identifies a place
+    of business. The code is typically assigned by the parentOrganization and used in
+    structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
+    the code \\\"3047\\\" is a branchCode for a particular branch.      \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"containedinplace\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The basic containment relation between a place and one that contains it. Supersedes
+    containedIn. Inverse property: containsPlace.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"containsplace\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The basic containment relation between
+    a place and another that it contains. Inverse property: containsPlace.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"event\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Upcoming or past event associated with
+    this place, organization, or action. Supersedes events.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"event\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"faxnumber\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    fax number.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"geo\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The geo
+    coordinates of the place.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"geocoordinates or  geoshape\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"globallocationnumber\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The Global Location Number (GLN, sometimes
+    also referred to as International Location Number or ILN) of the respective organization,
+    person, or place. The GLN is a 13-digit number used to identify parties and physical
+    locations.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"hasmap\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A URL
+    to a map of the place. Supersedes map, maps.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  map\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
+    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"isicv4\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The International Standard of Industrial
+    Classification of All Economic Activities (ISIC), Revision 4 code for a particular
+    organization, business person, or place.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"logo\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An associated logo.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"openinghoursspecification\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The opening hours of a certain place.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"photo\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A photograph of this place. Supersedes
+    photos.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"photograph or
+    \ imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
+    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"review\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A review
+    of the item. Supersedes reviews.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"review\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"telephone\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The telephone number.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/Reservoir\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Reservoir\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Reservoir\",\n\t\t\t\t\"description\":
+    \"Deletes a single Reservoir\",\n\t\t\t\t\"operationId\": \"deleteReservoir\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/Reservoir\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Reservoir\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"Reservoir\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionalproperty\": {\n\t\t\t\t\t\"description\":
+    \"A property-value pair representing an additional characteristics of the entitity,
+    e.g. a product feature or another characteristic for which there is no matching
+    property in schema.org. Note: Publishers should be aware that applications designed
+    to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color,
+    http://schema.org/gtin13, ...) will typically expect such data to be provided using
+    those properties, rather than using the generic property/value mechanism.\",\n\t\t\t\t\t\"type\":
+    \"propertyvalue\"\n\t\t\t\t},\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"description\": \"Physical
+    address of the item.\",\n\t\t\t\t\t\"type\": \"text or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t\"aggregaterating\":
+    {\n\t\t\t\t\t\"description\": \"The overall rating, based on a collection of reviews
+    or ratings, of the item.\",\n\t\t\t\t\t\"type\": \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\":
+    {\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"branchcode\":
+    {\n\t\t\t\t\t\"description\": \"A short textual code (also called \\\"store code\\\")
+    that uniquely identifies a place of business. The code is typically assigned by
+    the parentOrganization and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
+    the code \\\"3047\\\" is a branchCode for a particular branch.      \",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"containedinplace\": {\n\t\t\t\t\t\"description\":
+    \"The basic containment relation between a place and one that contains it. Supersedes
+    containedIn. Inverse property: containsPlace.\",\n\t\t\t\t\t\"type\": \"place\"\n\t\t\t\t},\n\t\t\t\t\"containsplace\":
+    {\n\t\t\t\t\t\"description\": \"The basic containment relation between a place and
+    another that it contains. Inverse property: containsPlace.\",\n\t\t\t\t\t\"type\":
+    \"place\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"event\":
+    {\n\t\t\t\t\t\"description\": \"Upcoming or past event associated with this place,
+    organization, or action. Supersedes events.\",\n\t\t\t\t\t\"type\": \"event\"\n\t\t\t\t},\n\t\t\t\t\"faxnumber\":
+    {\n\t\t\t\t\t\"description\": \"The fax number.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"geo\":
+    {\n\t\t\t\t\t\"description\": \"The geo coordinates of the place.\",\n\t\t\t\t\t\"type\":
+    \"geocoordinates or  geoshape\"\n\t\t\t\t},\n\t\t\t\t\"globallocationnumber\": {\n\t\t\t\t\t\"description\":
+    \"The Global Location Number (GLN, sometimes also referred to as International Location
+    Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit
+    number used to identify parties and physical locations.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"hasmap\": {\n\t\t\t\t\t\"description\": \"A URL
+    to a map of the place. Supersedes map, maps.\",\n\t\t\t\t\t\"type\": \"url or  map\"\n\t\t\t\t},\n\t\t\t\t\"image\":
+    {\n\t\t\t\t\t\"description\": \"An image of the item. This can be a URL or a fully
+    described ImageObject.\",\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"isicv4\":
+    {\n\t\t\t\t\t\"description\": \"The International Standard of Industrial Classification
+    of All Economic Activities (ISIC), Revision 4 code for a particular organization,
+    business person, or place.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"logo\":
+    {\n\t\t\t\t\t\"description\": \"An associated logo.\",\n\t\t\t\t\t\"type\": \"url
+    or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"name\":
+    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"openinghoursspecification\":
+    {\n\t\t\t\t\t\"description\": \"The opening hours of a certain place.\",\n\t\t\t\t\t\"type\":
+    \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t\"photo\": {\n\t\t\t\t\t\"description\":
+    \"A photograph of this place. Supersedes photos.\",\n\t\t\t\t\t\"type\": \"photograph
+    or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t\"review\":
+    {\n\t\t\t\t\t\"description\": \"A review of the item. Supersedes reviews.\",\n\t\t\t\t\t\"type\":
+    \"review\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\": \"URL
+    of a reference Web page that unambiguously indicates the item\\'s identity. E.g.
+    the URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"telephone\": {\n\t\t\t\t\t\"description\": \"The
+    telephone number.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"url\":
+    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

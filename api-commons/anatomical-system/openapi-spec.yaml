@@ -1,562 +1,261 @@
-- swagger: "2.0"
-  info:
-    title: Anatomical System API
-    description: An anatomical system is a group of anatomical structures that work
-      together to perform a certain task. Anatomical systems, such as organ systems,
-      are one organizing principle of anatomy, and can includes circulatory, digestive,
-      endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive,
-      respiratory, skeletal, urinary, vestibular, and other systems.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: anatomical.system.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /anatomical-system/:
-      get:
-        summary: Get Anatomical System
-        description: Returns Anatomical System
-        operationId: getAnatomicalSystem
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/AnatomicalSystem'
-        tags:
-        - Anatomical System
-      post:
-        summary: Add Anatomical System
-        description: Add Anatomical System
-        operationId: addAnatomicalSystem
-        parameters:
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: associatedanatomy
-          in: formData
-          description: 'The anatomy of the underlying organ system or structures associated
-            with this entity. '
-          required: false
-          type: physicalactivity or medicalcondition
-        - name: associatedpathophysiology
-          in: formData
-          description: If applicable, a description of the pathophysiology associated
-            with the anatomical system, including potential abnormal changes in the
-            mechanical, physical, and biochemical functions of the system.
-          required: false
-          type: text
-        - name: code
-          in: formData
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          required: false
-          type: medicalcode
-        - name: comprisedof
-          in: formData
-          description: The underlying anatomical structures, such as organs, that comprise
-            the anatomical system.
-          required: false
-          type: anatomicalsystem or  anatomicalstructure
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: guideline
-          in: formData
-          description: A medical guideline related to this entity.
-          required: false
-          type: medicalguideline
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: url or  creativework
-        - name: medicinesystem
-          in: formData
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          required: false
-          type: medicinesystem
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: partofsystem
-          in: formData
-          description: 'The anatomical or organ system that this structure is part of. '
-          required: false
-          type: anatomicalstructure
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: recognizingauthority
-          in: formData
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          required: false
-          type: organization
-        - name: regiondrained
-          in: formData
-          description: 'The anatomical or organ system drained by this vessel; generally
-            refers to a specific part of an organ. '
-          required: false
-          type: vein or lymphaticvessel
-        - name: relatedanatomy
-          in: formData
-          description: 'Anatomical systems or structures that relate to the superficial
-            anatomy. '
-          required: false
-          type: superficialanatomy
-        - name: relatedcondition
-          in: formData
-          description: A medical condition associated with this anatomy.
-          required: false
-          type: medicalcondition
-        - name: relatedstructure
-          in: formData
-          description: Related anatomical structure(s) that are not part of the system
-            but relate or connect to it, such as vascular bundles associated with an
-            organ system.
-          required: false
-          type: anatomicalstructure
-        - name: relatedtherapy
-          in: formData
-          description: A medical therapy related to this anatomy.
-          required: false
-          type: medicaltherapy
-        - name: relevantspecialty
-          in: formData
-          description: If applicable, a medical specialty in which this entity is relevant.
-          required: false
-          type: medicalspecialty
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: study
-          in: formData
-          description: A medical study or trial related to this entity.
-          required: false
-          type: medicalstudy
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/AnatomicalSystem'
-        tags:
-        - Anatomical System
-    /anatomical-system/{id}/:
-      get:
-        summary: Get Anatomical System
-        description: Returns a single Anatomical System
-        operationId: getAnatomicalSystem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/AnatomicalSystem'
-        tags:
-        - Anatomical System
-      put:
-        summary: Update Anatomical System
-        description: Update a single Anatomical System
-        operationId: updateAnatomicalSystemItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: associatedanatomy
-          in: formData
-          description: 'The anatomy of the underlying organ system or structures associated
-            with this entity. '
-          required: false
-          type: physicalactivity or medicalcondition
-        - name: associatedpathophysiology
-          in: formData
-          description: If applicable, a description of the pathophysiology associated
-            with the anatomical system, including potential abnormal changes in the
-            mechanical, physical, and biochemical functions of the system.
-          required: false
-          type: text
-        - name: code
-          in: formData
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          required: false
-          type: medicalcode
-        - name: comprisedof
-          in: formData
-          description: The underlying anatomical structures, such as organs, that comprise
-            the anatomical system.
-          required: false
-          type: anatomicalsystem or  anatomicalstructure
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: guideline
-          in: formData
-          description: A medical guideline related to this entity.
-          required: false
-          type: medicalguideline
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: url or  creativework
-        - name: medicinesystem
-          in: formData
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          required: false
-          type: medicinesystem
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: partofsystem
-          in: formData
-          description: 'The anatomical or organ system that this structure is part of. '
-          required: false
-          type: anatomicalstructure
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: recognizingauthority
-          in: formData
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          required: false
-          type: organization
-        - name: regiondrained
-          in: formData
-          description: 'The anatomical or organ system drained by this vessel; generally
-            refers to a specific part of an organ. '
-          required: false
-          type: vein or lymphaticvessel
-        - name: relatedanatomy
-          in: formData
-          description: 'Anatomical systems or structures that relate to the superficial
-            anatomy. '
-          required: false
-          type: superficialanatomy
-        - name: relatedcondition
-          in: formData
-          description: A medical condition associated with this anatomy.
-          required: false
-          type: medicalcondition
-        - name: relatedstructure
-          in: formData
-          description: Related anatomical structure(s) that are not part of the system
-            but relate or connect to it, such as vascular bundles associated with an
-            organ system.
-          required: false
-          type: anatomicalstructure
-        - name: relatedtherapy
-          in: formData
-          description: A medical therapy related to this anatomy.
-          required: false
-          type: medicaltherapy
-        - name: relevantspecialty
-          in: formData
-          description: If applicable, a medical specialty in which this entity is relevant.
-          required: false
-          type: medicalspecialty
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: study
-          in: formData
-          description: A medical study or trial related to this entity.
-          required: false
-          type: medicalstudy
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/AnatomicalSystem'
-        tags:
-        - Anatomical System
-      delete:
-        summary: Anatomical System
-        description: Deletes a single Anatomical System
-        operationId: deleteAnatomicalSystem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/AnatomicalSystem'
-        tags:
-        - Anatomical System
-  definitions:
-    AnatomicalSystem:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: associatedanatomy
-          type: physicalactivity or medicalcondition
-        description:
-          description: 'The anatomy of the underlying organ system or structures associated
-            with this entity. '
-          type: physicalactivity or medicalcondition
-      - name:
-          description: associatedpathophysiology
-          type: text
-        description:
-          description: If applicable, a description of the pathophysiology associated
-            with the anatomical system, including potential abnormal changes in the
-            mechanical, physical, and biochemical functions of the system.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: comprisedof
-          type: anatomicalsystem or  anatomicalstructure
-        description:
-          description: The underlying anatomical structures, such as organs, that comprise
-            the anatomical system.
-          type: anatomicalsystem or  anatomicalstructure
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: partofsystem
-          type: anatomicalstructure
-        description:
-          description: 'The anatomical or organ system that this structure is part of. '
-          type: anatomicalstructure
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: regiondrained
-          type: vein or lymphaticvessel
-        description:
-          description: 'The anatomical or organ system drained by this vessel; generally
-            refers to a specific part of an organ. '
-          type: vein or lymphaticvessel
-      - name:
-          description: relatedanatomy
-          type: superficialanatomy
-        description:
-          description: 'Anatomical systems or structures that relate to the superficial
-            anatomy. '
-          type: superficialanatomy
-      - name:
-          description: relatedcondition
-          type: medicalcondition
-        description:
-          description: A medical condition associated with this anatomy.
-          type: medicalcondition
-      - name:
-          description: relatedstructure
-          type: anatomicalstructure
-        description:
-          description: Related anatomical structure(s) that are not part of the system
-            but relate or connect to it, such as vascular bundles associated with an
-            organ system.
-          type: anatomicalstructure
-      - name:
-          description: relatedtherapy
-          type: medicaltherapy
-        description:
-          description: A medical therapy related to this anatomy.
-          type: medicaltherapy
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Anatomical System
+    API\",\n\t\t\"description\": \"An anatomical system is a group of anatomical structures
+    that work together to perform a certain task. Anatomical systems, such as organ
+    systems, are one organizing principle of anatomy, and can includes circulatory,
+    digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive,
+    respiratory, skeletal, urinary, vestibular, and other systems.\",\n\t\t\"termsOfService\":
+    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
+    \"anatomical.system.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\":
+    [\"application/json\"],\n\t\"paths\": {\n\t\t\"/anatomical-system/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Anatomical System\",\n\t\t\t\t\"description\": \"Returns
+    Anatomical System\",\n\t\t\t\t\"operationId\": \"getAnatomicalSystem\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/AnatomicalSystem\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Anatomical System\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add
+    Anatomical System\",\n\t\t\t\t\"description\": \"Add Anatomical System\",\n\t\t\t\t\"operationId\":
+    \"addAnatomicalSystem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
+    used for adding more specific types from external vocabularies in microdata syntax.
+    This is a relationship between something and a class that the thing is in. In RDFa
+    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
+    - for multiple types. Schema.org tools may have only weaker understanding of extra
+    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"associatedanatomy\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The anatomy of the underlying organ system or structures associated with this
+    entity. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"physicalactivity
+    or medicalcondition\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"associatedpathophysiology\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, a description of the
+    pathophysiology associated with the anatomical system, including potential abnormal
+    changes in the mechanical, physical, and biochemical functions of the system.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"code\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
+    code for the entity, taken from a controlled vocabulary or ontology such as ICD-9,
+    DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"comprisedof\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The underlying anatomical structures,
+    such as organs, that comprise the anatomical system.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"anatomicalsystem or  anatomicalstructure\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"guideline\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical guideline related to this
+    entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"medicinesystem\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\',
+    \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"partofsystem\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    anatomical or organ system that this structure is part of. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"anatomicalstructure\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
+    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"regiondrained\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The anatomical or organ system drained by this vessel; generally refers to a specific
+    part of an organ. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"vein
+    or lymphaticvessel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"relatedanatomy\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Anatomical systems or structures that
+    relate to the superficial anatomy. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"superficialanatomy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"relatedcondition\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical condition associated with
+    this anatomy.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalcondition\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"relatedstructure\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Related anatomical structure(s) that are not part of the system but relate or
+    connect to it, such as vascular bundles associated with an organ system.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"anatomicalstructure\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"relatedtherapy\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A medical therapy related to this anatomy.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicaltherapy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"relevantspecialty\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, a medical specialty in
+    which this entity is relevant.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"study\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical study or trial related to
+    this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/AnatomicalSystem\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Anatomical System\"]\n\t\t\t}\n\t\t},\n\t\t\"/anatomical-system/{id}/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Anatomical System\",\n\t\t\t\t\"description\": \"Returns
+    a single Anatomical System\",\n\t\t\t\t\"operationId\": \"getAnatomicalSystem\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/AnatomicalSystem\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Anatomical System\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
+    Anatomical System\",\n\t\t\t\t\"description\": \"Update a single Anatomical System\",\n\t\t\t\t\"operationId\":
+    \"updateAnatomicalSystemItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\":
+    \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\": \"Unique id for
+    item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"associatedanatomy\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The anatomy of the underlying organ
+    system or structures associated with this entity. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"physicalactivity or medicalcondition\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"associatedpathophysiology\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"If applicable, a description of the pathophysiology associated with the anatomical
+    system, including potential abnormal changes in the mechanical, physical, and biochemical
+    functions of the system.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"code\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken
+    from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT,
+    RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"comprisedof\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    underlying anatomical structures, such as organs, that comprise the anatomical system.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"anatomicalsystem or  anatomicalstructure\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"guideline\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical guideline related to this
+    entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"medicinesystem\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\',
+    \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"partofsystem\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    anatomical or organ system that this structure is part of. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"anatomicalstructure\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
+    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"regiondrained\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The anatomical or organ system drained by this vessel; generally refers to a specific
+    part of an organ. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"vein
+    or lymphaticvessel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"relatedanatomy\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Anatomical systems or structures that
+    relate to the superficial anatomy. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"superficialanatomy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"relatedcondition\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical condition associated with
+    this anatomy.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalcondition\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"relatedstructure\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Related anatomical structure(s) that are not part of the system but relate or
+    connect to it, such as vascular bundles associated with an organ system.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"anatomicalstructure\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"relatedtherapy\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"A medical therapy related to this anatomy.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicaltherapy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"relevantspecialty\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, a medical specialty in
+    which this entity is relevant.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
+    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
+    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"study\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A medical study or trial related to
+    this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/AnatomicalSystem\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Anatomical System\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Anatomical
+    System\",\n\t\t\t\t\"description\": \"Deletes a single Anatomical System\",\n\t\t\t\t\"operationId\":
+    \"deleteAnatomicalSystem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/AnatomicalSystem\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Anatomical System\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"AnatomicalSystem\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
+    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"associatedanatomy\":
+    {\n\t\t\t\t\t\"description\": \"The anatomy of the underlying organ system or structures
+    associated with this entity. \",\n\t\t\t\t\t\"type\": \"physicalactivity or medicalcondition\"\n\t\t\t\t},\n\t\t\t\t\"associatedpathophysiology\":
+    {\n\t\t\t\t\t\"description\": \"If applicable, a description of the pathophysiology
+    associated with the anatomical system, including potential abnormal changes in the
+    mechanical, physical, and biochemical functions of the system.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"code\": {\n\t\t\t\t\t\"description\": \"A medical
+    code for the entity, taken from a controlled vocabulary or ontology such as ICD-9,
+    DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"type\": \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t\"comprisedof\":
+    {\n\t\t\t\t\t\"description\": \"The underlying anatomical structures, such as organs,
+    that comprise the anatomical system.\",\n\t\t\t\t\t\"type\": \"anatomicalsystem
+    or  anatomicalstructure\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\":
+    \"A short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"guideline\":
+    {\n\t\t\t\t\t\"description\": \"A medical guideline related to this entity.\",\n\t\t\t\t\t\"type\":
+    \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\":
+    \"An image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t\"medicinesystem\":
+    {\n\t\t\t\t\t\"description\": \"The system of medicine that includes this MedicalEntity,
+    for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"type\":
+    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\":
+    \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"partofsystem\":
+    {\n\t\t\t\t\t\"description\": \"The anatomical or organ system that this structure
+    is part of. \",\n\t\t\t\t\t\"type\": \"anatomicalstructure\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
+    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t\"recognizingauthority\": {\n\t\t\t\t\t\"description\":
+    \"If applicable, the organization that officially recognizes this entity as part
+    of its endorsed system of medicine.\",\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t\"regiondrained\":
+    {\n\t\t\t\t\t\"description\": \"The anatomical or organ system drained by this vessel;
+    generally refers to a specific part of an organ. \",\n\t\t\t\t\t\"type\": \"vein
+    or lymphaticvessel\"\n\t\t\t\t},\n\t\t\t\t\"relatedanatomy\": {\n\t\t\t\t\t\"description\":
+    \"Anatomical systems or structures that relate to the superficial anatomy. \",\n\t\t\t\t\t\"type\":
+    \"superficialanatomy\"\n\t\t\t\t},\n\t\t\t\t\"relatedcondition\": {\n\t\t\t\t\t\"description\":
+    \"A medical condition associated with this anatomy.\",\n\t\t\t\t\t\"type\": \"medicalcondition\"\n\t\t\t\t},\n\t\t\t\t\"relatedstructure\":
+    {\n\t\t\t\t\t\"description\": \"Related anatomical structure(s) that are not part
+    of the system but relate or connect to it, such as vascular bundles associated with
+    an organ system.\",\n\t\t\t\t\t\"type\": \"anatomicalstructure\"\n\t\t\t\t},\n\t\t\t\t\"relatedtherapy\":
+    {\n\t\t\t\t\t\"description\": \"A medical therapy related to this anatomy.\",\n\t\t\t\t\t\"type\":
+    \"medicaltherapy\"\n\t\t\t\t},\n\t\t\t\t\"relevantspecialty\": {\n\t\t\t\t\t\"description\":
+    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"type\":
+    \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\":
+    \"URL of a reference Web page that unambiguously indicates the item\\'s identity.
+    E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"study\": {\n\t\t\t\t\t\"description\": \"A medical
+    study or trial related to this entity.\",\n\t\t\t\t\t\"type\": \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t\"url\":
+    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

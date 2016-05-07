@@ -803,486 +803,200 @@
 	},
 	"definitions": {
 		"Airline": {
-			"properties": [{
-				"name": {
-					"description": "additionaltype",
-					"type": "url"
-				},
-				"description": {
+			"properties": {
+				"additionaltype": {
 					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "address",
-					"type": "text or  postaladdress"
 				},
-				"description": {
+				"address": {
 					"description": "Physical address of the item.",
 					"type": "text or  postaladdress"
-				}
-			},
-			{
-				"name": {
-					"description": "aggregaterating",
-					"type": "aggregaterating"
 				},
-				"description": {
+				"aggregaterating": {
 					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
 					"type": "aggregaterating"
-				}
-			},
-			{
-				"name": {
-					"description": "alternatename",
-					"type": "text"
 				},
-				"description": {
+				"alternatename": {
 					"description": "An alias for the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "alumni",
-					"type": "person"
 				},
-				"description": {
+				"alumni": {
 					"description": "Alumni of an organization. Inverse property: alumniOf.",
 					"type": "person"
-				}
-			},
-			{
-				"name": {
-					"description": "areaserved",
-					"type": "text or  place or  geoshape or  administrativearea"
 				},
-				"description": {
+				"areaserved": {
 					"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
 					"type": "text or  place or  geoshape or  administrativearea"
-				}
-			},
-			{
-				"name": {
-					"description": "award",
-					"type": "text"
 				},
-				"description": {
+				"award": {
 					"description": "An award won by or for this item. Supersedes awards.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "boardingpolicy",
-					"type": "boardingpolicytype"
 				},
-				"description": {
+				"boardingpolicy": {
 					"description": "The type of boarding policy used by the airline (e.g. zone-based or group-based).",
 					"type": "boardingpolicytype"
-				}
-			},
-			{
-				"name": {
-					"description": "brand",
-					"type": "brand or  organization"
 				},
-				"description": {
+				"brand": {
 					"description": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.",
 					"type": "brand or  organization"
-				}
-			},
-			{
-				"name": {
-					"description": "contactpoint",
-					"type": "contactpoint"
 				},
-				"description": {
+				"contactpoint": {
 					"description": "A contact point for a person or organization. Supersedes contactPoints.",
 					"type": "contactpoint"
-				}
-			},
-			{
-				"name": {
-					"description": "department",
-					"type": "organization"
 				},
-				"description": {
+				"department": {
 					"description": "A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
 					"type": "organization"
-				}
-			},
-			{
-				"name": {
-					"description": "description",
-					"type": "text"
 				},
 				"description": {
 					"description": "A short description of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "dissolutiondate",
-					"type": "date"
 				},
-				"description": {
+				"dissolutiondate": {
 					"description": "The date that this organization was dissolved.",
 					"type": "date"
-				}
-			},
-			{
-				"name": {
-					"description": "duns",
-					"type": "text"
 				},
-				"description": {
+				"duns": {
 					"description": "The Dun & Bradstreet DUNS number for identifying an organization or business person.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "email",
-					"type": "text"
 				},
-				"description": {
+				"email": {
 					"description": "Email address.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "employee",
-					"type": "person"
 				},
-				"description": {
+				"employee": {
 					"description": "Someone working for this organization. Supersedes employees.",
 					"type": "person"
-				}
-			},
-			{
-				"name": {
-					"description": "event",
-					"type": "event"
 				},
-				"description": {
+				"event": {
 					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
 					"type": "event"
-				}
-			},
-			{
-				"name": {
-					"description": "faxnumber",
-					"type": "text"
 				},
-				"description": {
+				"faxnumber": {
 					"description": "The fax number.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "founder",
-					"type": "person"
 				},
-				"description": {
+				"founder": {
 					"description": "A person who founded this organization. Supersedes founders.",
 					"type": "person"
-				}
-			},
-			{
-				"name": {
-					"description": "foundingdate",
-					"type": "date"
 				},
-				"description": {
+				"foundingdate": {
 					"description": "The date that this organization was founded.",
 					"type": "date"
-				}
-			},
-			{
-				"name": {
-					"description": "foundinglocation",
-					"type": "place"
 				},
-				"description": {
+				"foundinglocation": {
 					"description": "The place where the Organization was founded.",
 					"type": "place"
-				}
-			},
-			{
-				"name": {
-					"description": "globallocationnumber",
-					"type": "text"
 				},
-				"description": {
+				"globallocationnumber": {
 					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "hasoffercatalog",
-					"type": "offercatalog"
 				},
-				"description": {
+				"hasoffercatalog": {
 					"description": "Indicates an OfferCatalog listing for this Organization, Person, or Service.",
 					"type": "offercatalog"
-				}
-			},
-			{
-				"name": {
-					"description": "haspos",
-					"type": "place"
 				},
-				"description": {
+				"haspos": {
 					"description": "Points-of-Sales operated by the organization or person.",
 					"type": "place"
-				}
-			},
-			{
-				"name": {
-					"description": "iatacode",
-					"type": "text"
 				},
-				"description": {
+				"iatacode": {
 					"description": "IATA identifier for an airline or airport.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "image",
-					"type": "url or  imageobject"
 				},
-				"description": {
+				"image": {
 					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
 					"type": "url or  imageobject"
-				}
-			},
-			{
-				"name": {
-					"description": "isicv4",
-					"type": "text"
 				},
-				"description": {
+				"isicv4": {
 					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "legalname",
-					"type": "text"
 				},
-				"description": {
+				"legalname": {
 					"description": "The official name of the organization, e.g. the registered company name.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "location",
-					"type": "text or  place or  postaladdress"
 				},
-				"description": {
+				"location": {
 					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
 					"type": "text or  place or  postaladdress"
-				}
-			},
-			{
-				"name": {
-					"description": "logo",
-					"type": "url or  imageobject"
 				},
-				"description": {
+				"logo": {
 					"description": "An associated logo.",
 					"type": "url or  imageobject"
-				}
-			},
-			{
-				"name": {
-					"description": "mainentityofpage",
-					"type": "creativework or  url"
 				},
-				"description": {
+				"mainentityofpage": {
 					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
 					"type": "creativework or  url"
-				}
-			},
-			{
-				"name": {
-					"description": "makesoffer",
-					"type": "offer"
 				},
-				"description": {
+				"makesoffer": {
 					"description": "A pointer to products or services offered by the organization or person. Inverse property: offeredBy.",
 					"type": "offer"
-				}
-			},
-			{
-				"name": {
-					"description": "member",
-					"type": "person or  organization"
 				},
-				"description": {
+				"member": {
 					"description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.",
 					"type": "person or  organization"
-				}
-			},
-			{
-				"name": {
-					"description": "memberof",
-					"type": "programmembership or  organization"
 				},
-				"description": {
+				"memberof": {
 					"description": "An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member.",
 					"type": "programmembership or  organization"
-				}
-			},
-			{
-				"name": {
-					"description": "naics",
-					"type": "text"
 				},
-				"description": {
+				"naics": {
 					"description": "The North American Industry Classification System (NAICS) code for a particular organization or business person.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "name",
-					"type": "text"
 				},
-				"description": {
+				"name": {
 					"description": "The name of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "numberofemployees",
-					"type": "quantitativevalue"
 				},
-				"description": {
+				"numberofemployees": {
 					"description": "The number of employees in an organization e.g. business.",
 					"type": "quantitativevalue"
-				}
-			},
-			{
-				"name": {
-					"description": "owns",
-					"type": "product or  ownershipinfo"
 				},
-				"description": {
+				"owns": {
 					"description": "Products owned by the organization or person.",
 					"type": "product or  ownershipinfo"
-				}
-			},
-			{
-				"name": {
-					"description": "parentorganization",
-					"type": "organization"
 				},
-				"description": {
+				"parentorganization": {
 					"description": "The larger organization that this organization is a branch of, if any. Supersedes branchOf. Inverse property: subOrganization.",
 					"type": "organization"
-				}
-			},
-			{
-				"name": {
-					"description": "potentialaction",
-					"type": "action"
 				},
-				"description": {
+				"potentialaction": {
 					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
-				}
-			},
-			{
-				"name": {
-					"description": "review",
-					"type": "review"
 				},
-				"description": {
+				"review": {
 					"description": "A review of the item. Supersedes reviews.",
 					"type": "review"
-				}
-			},
-			{
-				"name": {
-					"description": "sameas",
-					"type": "url"
 				},
-				"description": {
+				"sameas": {
 					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "seeks",
-					"type": "demand"
 				},
-				"description": {
+				"seeks": {
 					"description": "A pointer to products or services sought by the organization or person (demand).",
 					"type": "demand"
-				}
-			},
-			{
-				"name": {
-					"description": "suborganization",
-					"type": "organization"
 				},
-				"description": {
+				"suborganization": {
 					"description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific \'department\' property. Inverse property: parentOrganization.",
 					"type": "organization"
-				}
-			},
-			{
-				"name": {
-					"description": "taxid",
-					"type": "text"
 				},
-				"description": {
+				"taxid": {
 					"description": "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "telephone",
-					"type": "text"
 				},
-				"description": {
+				"telephone": {
 					"description": "The telephone number.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "url",
-					"type": "url"
 				},
-				"description": {
+				"url": {
 					"description": "URL of the item.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "vatid",
-					"type": "text"
 				},
-				"description": {
+				"vatid": {
 					"description": "The Value-added Tax ID of the organization or person.",
 					"type": "text"
 				}
-			}]
+			}
 		}
 	}
 }

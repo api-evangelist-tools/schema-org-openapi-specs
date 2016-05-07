@@ -1,1720 +1,246 @@
-- swagger: "2.0"
-  info:
-    title: Bookmark Action API
-    description: An agent bookmarks/flags/labels/tags/marks an object.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: bookmark.action.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /bookmark-action/:
-      get:
-        summary: Get Bookmark Action
-        description: Returns Bookmark Action
-        operationId: getBookmarkAction
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/BookmarkAction'
-        tags:
-        - Bookmark Action
-      post:
-        summary: Add Bookmark Action
-        description: Add Bookmark Action
-        operationId: addBookmarkAction
-        parameters:
-        - name: actionstatus
-          in: formData
-          description: Indicates the current disposition of the Action.
-          required: false
-          type: actionstatustype
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: agent
-          in: formData
-          description: The direct performer or driver of the action (animate or inanimate).
-            e.g. *John* wrote a book.
-          required: false
-          type: person or  organization
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: endtime
-          in: formData
-          description: The endTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to end. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from January to *December*.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          required: false
-          type: datetime
-        - name: error
-          in: formData
-          description: For failed actions, more information on the cause of the failure.
-          required: false
-          type: thing
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: instrument
-          in: formData
-          description: The object that helped the agent perform the action. e.g. John
-            wrote a book with *a pen*.
-          required: false
-          type: thing
-        - name: location
-          in: formData
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          required: false
-          type: text or  place or  postaladdress
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: object
-          in: formData
-          description: The object upon the action is carried out, whose state is kept
-            intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn\'t). e.g. John
-            read *a book*.
-          required: false
-          type: thing
-        - name: participant
-          in: formData
-          description: Other co-agents that participated in the action indirectly. e.g.
-            John wrote a book with *Steve*.
-          required: false
-          type: person or  organization
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: result
-          in: formData
-          description: The result produced in the action. e.g. John wrote *a book*.
-          required: false
-          type: thing
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: starttime
-          in: formData
-          description: The startTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to start. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from *January* to December.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          required: false
-          type: datetime
-        - name: target
-          in: formData
-          description: Indicates a target EntryPoint for an Action.
-          required: false
-          type: entrypoint
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/BookmarkAction'
-        tags:
-        - Bookmark Action
-    /bookmark-action/{id}/:
-      get:
-        summary: Get Bookmark Action
-        description: Returns a single Bookmark Action
-        operationId: getBookmarkAction
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/BookmarkAction'
-        tags:
-        - Bookmark Action
-      put:
-        summary: Update Bookmark Action
-        description: Update a single Bookmark Action
-        operationId: updateBookmarkActionItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: actionstatus
-          in: formData
-          description: Indicates the current disposition of the Action.
-          required: false
-          type: actionstatustype
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: agent
-          in: formData
-          description: The direct performer or driver of the action (animate or inanimate).
-            e.g. *John* wrote a book.
-          required: false
-          type: person or  organization
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: endtime
-          in: formData
-          description: The endTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to end. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from January to *December*.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          required: false
-          type: datetime
-        - name: error
-          in: formData
-          description: For failed actions, more information on the cause of the failure.
-          required: false
-          type: thing
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: instrument
-          in: formData
-          description: The object that helped the agent perform the action. e.g. John
-            wrote a book with *a pen*.
-          required: false
-          type: thing
-        - name: location
-          in: formData
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          required: false
-          type: text or  place or  postaladdress
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: object
-          in: formData
-          description: The object upon the action is carried out, whose state is kept
-            intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn\'t). e.g. John
-            read *a book*.
-          required: false
-          type: thing
-        - name: participant
-          in: formData
-          description: Other co-agents that participated in the action indirectly. e.g.
-            John wrote a book with *Steve*.
-          required: false
-          type: person or  organization
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: result
-          in: formData
-          description: The result produced in the action. e.g. John wrote *a book*.
-          required: false
-          type: thing
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: starttime
-          in: formData
-          description: The startTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to start. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from *January* to December.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          required: false
-          type: datetime
-        - name: target
-          in: formData
-          description: Indicates a target EntryPoint for an Action.
-          required: false
-          type: entrypoint
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/BookmarkAction'
-        tags:
-        - Bookmark Action
-      delete:
-        summary: Bookmark Action
-        description: Deletes a single Bookmark Action
-        operationId: deleteBookmarkAction
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/BookmarkAction'
-        tags:
-        - Bookmark Action
-  definitions:
-    BloodTest:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: affectedby
-          type: drug
-        description:
-          description: Drugs that affect the test\'s results.
-          type: drug
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: normalrange
-          type: text
-        description:
-          description: Range of acceptable values for a typical patient, when applicable.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: signdetected
-          type: medicalsign
-        description:
-          description: A sign detected by the test.
-          type: medicalsign
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: usedtodiagnose
-          type: medicalcondition
-        description:
-          description: A condition the test is used to diagnose.
-          type: medicalcondition
-      - name:
-          description: usesdevice
-          type: medicaldevice
-        description:
-          description: Device used to perform the test.
-          type: medicaldevice
-    BoardingPolicyType:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: boardingpolicy
-          type: airline or flight
-        description:
-          description: 'The type of boarding policy used by the airline (e.g. zone-based
-            or group-based). '
-          type: airline or flight
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: supersededby
-          type: class or  property or  enumeration
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: class or  property or  enumeration
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    BodyOfWater:
-      properties:
-      - name:
-          description: additionalproperty
-          type: propertyvalue
-        description:
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          type: propertyvalue
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: branchcode
-          type: text
-        description:
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          type: text
-      - name:
-          description: containedinplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: containsplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: geo
-          type: geocoordinates or  geoshape
-        description:
-          description: The geo coordinates of the place.
-          type: geocoordinates or  geoshape
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasmap
-          type: url or  map
-        description:
-          description: A URL to a map of the place. Supersedes map, maps.
-          type: url or  map
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: openinghoursspecification
-          type: openinghoursspecification
-        description:
-          description: The opening hours of a certain place.
-          type: openinghoursspecification
-      - name:
-          description: photo
-          type: photograph or  imageobject
-        description:
-          description: A photograph of this place. Supersedes photos.
-          type: photograph or  imageobject
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    Bone:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: associatedpathophysiology
-          type: text
-        description:
-          description: If applicable, a description of the pathophysiology associated
-            with the anatomical system, including potential abnormal changes in the
-            mechanical, physical, and biochemical functions of the system.
-          type: text
-      - name:
-          description: bodylocation
-          type: text
-        description:
-          description: Location in the body of the anatomical structure.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: connectedto
-          type: anatomicalstructure
-        description:
-          description: Other anatomical structures to which this structure is connected.
-          type: anatomicalstructure
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: diagram
-          type: imageobject
-        description:
-          description: An image containing a diagram that illustrates the structure
-            and/or its component substructures and/or connections with other structures.
-          type: imageobject
-      - name:
-          description: function
-          type: text
-        description:
-          description: Function of the anatomical structure.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: partofsystem
-          type: anatomicalsystem
-        description:
-          description: The anatomical or organ system that this structure is part of.
-          type: anatomicalsystem
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relatedcondition
-          type: medicalcondition
-        description:
-          description: A medical condition associated with this anatomy.
-          type: medicalcondition
-      - name:
-          description: relatedtherapy
-          type: medicaltherapy
-        description:
-          description: A medical therapy related to this anatomy.
-          type: medicaltherapy
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: substructure
-          type: anatomicalstructure
-        description:
-          description: Component (sub-)structure(s) that comprise this anatomical structure.
-          type: anatomicalstructure
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    Book:
-      properties:
-      - name:
-          description: about
-          type: thing
-        description:
-          description: The subject matter of the content.
-          type: thing
-      - name:
-          description: accessibilityapi
-          type: text
-        description:
-          description: Indicates that the resource is compatible with the referenced
-            accessibility API (WebSchemas wiki lists possible values).
-          type: text
-      - name:
-          description: accessibilitycontrol
-          type: text
-        description:
-          description: Identifies input methods that are sufficient to fully control
-            the described resource (WebSchemas wiki lists possible values).
-          type: text
-      - name:
-          description: accessibilityfeature
-          type: text
-        description:
-          description: Content features of the resource, such as accessible media, alternatives
-            and supported enhancements for accessibility (WebSchemas wiki lists possible
-            values).
-          type: text
-      - name:
-          description: accessibilityhazard
-          type: text
-        description:
-          description: A characteristic of the described resource that is physiologically
-            dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki
-            lists possible values).
-          type: text
-      - name:
-          description: accountableperson
-          type: person
-        description:
-          description: Specifies the Person that is legally accountable for the CreativeWork.
-          type: person
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: alternativeheadline
-          type: text
-        description:
-          description: A secondary title of the CreativeWork.
-          type: text
-      - name:
-          description: associatedmedia
-          type: mediaobject
-        description:
-          description: A media object that encodes this CreativeWork. This property
-            is a synonym for encoding.
-          type: mediaobject
-      - name:
-          description: audience
-          type: audience
-        description:
-          description: An intended audience, i.e. a group for whom something was created.
-            Supersedes serviceAudience.
-          type: audience
-      - name:
-          description: audio
-          type: audioobject
-        description:
-          description: An embedded audio object.
-          type: audioobject
-      - name:
-          description: author
-          type: person or  organization
-        description:
-          description: The author of this content. Please note that author is special
-            in that HTML 5 provides a special mechanism for indicating authorship via
-            the rel tag. That is equivalent to this and may be used interchangeably.
-          type: person or  organization
-      - name:
-          description: award
-          type: text
-        description:
-          description: An award won by or for this item. Supersedes awards.
-          type: text
-      - name:
-          description: bookedition
-          type: text
-        description:
-          description: The edition of the book.
-          type: text
-      - name:
-          description: bookformat
-          type: bookformattype
-        description:
-          description: The format of the book.
-          type: bookformattype
-      - name:
-          description: character
-          type: person
-        description:
-          description: Fictional person connected with a creative work.
-          type: person
-      - name:
-          description: citation
-          type: creativework or  text
-        description:
-          description: A citation or reference to another creative work, such as another
-            publication, web page, scholarly article, etc.
-          type: creativework or  text
-      - name:
-          description: comment
-          type: comment
-        description:
-          description: Comments, typically from users.
-          type: comment
-      - name:
-          description: commentcount
-          type: integer
-        description:
-          description: The number of comments this CreativeWork (e.g. Article, Question
-            or Answer) has received. This is most applicable to works published in Web
-            sites with commenting system; additional comments may exist elsewhere.
-          type: integer
-      - name:
-          description: contentlocation
-          type: place
-        description:
-          description: The location depicted or described in the content. For example,
-            the location in a photograph or painting.
-          type: place
-      - name:
-          description: contentrating
-          type: text
-        description:
-          description: Official rating of a piece of content&#x2014;for example,\'MPAA
-            PG-13\'.
-          type: text
-      - name:
-          description: contributor
-          type: person or  organization
-        description:
-          description: A secondary contributor to the CreativeWork.
-          type: person or  organization
-      - name:
-          description: copyrightholder
-          type: person or  organization
-        description:
-          description: The party holding the legal copyright to the CreativeWork.
-          type: person or  organization
-      - name:
-          description: copyrightyear
-          type: number
-        description:
-          description: The year during which the claimed copyright for the CreativeWork
-            was first asserted.
-          type: number
-      - name:
-          description: creator
-          type: person or  organization
-        description:
-          description: The creator/author of this CreativeWork. This is the same as
-            the Author property for CreativeWork.
-          type: person or  organization
-      - name:
-          description: datecreated
-          type: date or  datetime
-        description:
-          description: The date on which the CreativeWork was created or the item was
-            added to a DataFeed.
-          type: date or  datetime
-      - name:
-          description: datemodified
-          type: date or  datetime
-        description:
-          description: The date on which the CreativeWork was most recently modified
-            or when the item\'s entry was modified within a DataFeed.
-          type: date or  datetime
-      - name:
-          description: datepublished
-          type: date
-        description:
-          description: Date of first broadcast/publication.
-          type: date
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: discussionurl
-          type: url
-        description:
-          description: A link to the page containing the comments of the CreativeWork.
-          type: url
-      - name:
-          description: editor
-          type: person
-        description:
-          description: Specifies the Person who edited the CreativeWork.
-          type: person
-      - name:
-          description: educationalalignment
-          type: alignmentobject
-        description:
-          description: An alignment to an established educational framework.
-          type: alignmentobject
-      - name:
-          description: educationaluse
-          type: text
-        description:
-          description: The purpose of a work in the context of education; for example,
-            \'assignment\', \'group work\'.
-          type: text
-      - name:
-          description: encoding
-          type: mediaobject
-        description:
-          description: A media object that encodes this CreativeWork. This property
-            is a synonym for associatedMedia. Supersedes encodings.
-          type: mediaobject
-      - name:
-          description: exampleofwork
-          type: creativework
-        description:
-          description: 'A creative work that this work is an example/instance/realization/derivation
-            of. Inverse property: workExample.'
-          type: creativework
-      - name:
-          description: fileformat
-          type: text
-        description:
-          description: Media type (aka MIME format, see IANA site) of the content e.g.
-            application/zip of a SoftwareApplication binary. In cases where a CreativeWork
-            has several media type representations, \'encoding\' can be used to indicate
-            each MediaObject alongside particular fileFormat information.
-          type: text
-      - name:
-          description: genre
-          type: text or  url
-        description:
-          description: Genre of the creative work or group.
-          type: text or  url
-      - name:
-          description: haspart
-          type: creativework
-        description:
-          description: 'Indicates a CreativeWork that is (in some sense) a part of this
-            CreativeWork. Inverse property: isPartOf.'
-          type: creativework
-      - name:
-          description: headline
-          type: text
-        description:
-          description: Headline of the article.
-          type: text
-      - name:
-          description: illustrator
-          type: person
-        description:
-          description: The illustrator of the book.
-          type: person
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: inlanguage
-          type: text or  language
-        description:
-          description: The language of the content or performance or used in an action.
-            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
-            language.
-          type: text or  language
-      - name:
-          description: interactionstatistic
-          type: interactioncounter
-        description:
-          description: The number of interactions for the CreativeWork using the WebSite
-            or SoftwareApplication. The most specific child type of InteractionCounter
-            should be used. Supersedes interactionCount.
-          type: interactioncounter
-      - name:
-          description: interactivitytype
-          type: text
-        description:
-          description: The predominant mode of learning supported by the learning resource.
-            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
-          type: text
-      - name:
-          description: isbasedonurl
-          type: url
-        description:
-          description: A resource that was used in the creation of this resource. This
-            term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
-          type: url
-      - name:
-          description: isbn
-          type: text
-        description:
-          description: The ISBN of the book.
-          type: text
-      - name:
-          description: isfamilyfriendly
-          type: boolean
-        description:
-          description: Indicates whether this content is family friendly.
-          type: boolean
-      - name:
-          description: ispartof
-          type: creativework
-        description:
-          description: 'Indicates a CreativeWork that this CreativeWork is (in some
-            sense) part of. Inverse property: hasPart.'
-          type: creativework
-      - name:
-          description: keywords
-          type: text
-        description:
-          description: Keywords or tags used to describe this content. Multiple entries
-            in a keywords list are typically delimited by commas.
-          type: text
-      - name:
-          description: learningresourcetype
-          type: text
-        description:
-          description: The predominant type or kind characterizing the learning resource.
-            For example, \'presentation\', \'handout\'.
-          type: text
-      - name:
-          description: license
-          type: creativework or  url
-        description:
-          description: A license document that applies to this content, typically indicated
-            by URL.
-          type: creativework or  url
-      - name:
-          description: locationcreated
-          type: place
-        description:
-          description: The location where the CreativeWork was created, which may not
-            be the same as the location depicted in the CreativeWork.
-          type: place
-      - name:
-          description: mainentity
-          type: thing
-        description:
-          description: 'Indicates the primary entity described in some page or other
-            CreativeWork. Inverse property: mainEntityOfPage.'
-          type: thing
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: mentions
-          type: thing
-        description:
-          description: Indicates that the CreativeWork contains a reference to, but
-            is not necessarily about a concept.
-          type: thing
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: numberofpages
-          type: integer
-        description:
-          description: The number of pages in the book.
-          type: integer
-      - name:
-          description: offers
-          type: offer
-        description:
-          description: An offer to provide this item&#x2014;for example, an offer to
-            sell a product, rent the DVD of a movie, perform a service, or give away
-            tickets to an event.
-          type: offer
-      - name:
-          description: position
-          type: text or  integer
-        description:
-          description: The position of an item in a series or sequence of items.
-          type: text or  integer
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: producer
-          type: person or  organization
-        description:
-          description: The person or organization who produced the work (e.g. music
-            album, movie, tv/radio series etc.).
-          type: person or  organization
-      - name:
-          description: provider
-          type: person or  organization
-        description:
-          description: The service provider, service operator, or service performer;
-            the goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the seller.
-            Supersedes carrier.
-          type: person or  organization
-      - name:
-          description: publication
-          type: publicationevent
-        description:
-          description: A publication event associated with the item.
-          type: publicationevent
-      - name:
-          description: publisher
-          type: person or  organization
-        description:
-          description: The publisher of the creative work.
-          type: person or  organization
-      - name:
-          description: publishingprinciples
-          type: url
-        description:
-          description: Link to page describing the editorial principles of the organization
-            primarily responsible for the creation of the CreativeWork.
-          type: url
-      - name:
-          description: recordedat
-          type: event
-        description:
-          description: 'The Event where the CreativeWork was recorded. The CreativeWork
-            may capture all or part of the event. Inverse property: recordedIn.'
-          type: event
-      - name:
-          description: releasedevent
-          type: publicationevent
-        description:
-          description: The place and time the release was issued, expressed as a PublicationEvent.
-          type: publicationevent
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: schemaversion
-          type: text or  url
-        description:
-          description: 'Indicates (by URL or string) a particular version of a schema
-            used in some CreativeWork. For example, a document could declare a schemaVersion
-            using a URL such as http://schema.org/version/2.0/ if precise indication
-            of schema version was required by some application. '
-          type: text or  url
-      - name:
-          description: sourceorganization
-          type: organization
-        description:
-          description: The Organization on whose behalf the creator was working.
-          type: organization
-      - name:
-          description: text
-          type: text
-        description:
-          description: The textual content of this CreativeWork.
-          type: text
-      - name:
-          description: thumbnailurl
-          type: url
-        description:
-          description: A thumbnail image relevant to the Thing.
-          type: url
-      - name:
-          description: timerequired
-          type: duration
-        description:
-          description: Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. \'P30M\',
-            \'P1H25M\'.
-          type: duration
-      - name:
-          description: translator
-          type: person or  organization
-        description:
-          description: Organization or person who adapts a creative work to different
-            languages, regional differences and technical requirements of a target market.
-          type: person or  organization
-      - name:
-          description: typicalagerange
-          type: text
-        description:
-          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: version
-          type: number
-        description:
-          description: The version of the CreativeWork embodied by a specified resource.
-          type: number
-      - name:
-          description: video
-          type: videoobject
-        description:
-          description: An embedded video object.
-          type: videoobject
-      - name:
-          description: workexample
-          type: creativework
-        description:
-          description: 'Example/instance/realization/derivation of the concept of this
-            creative work. eg. The paperback edition, first edition, or eBook. Inverse
-            property: exampleOfWork.'
-          type: creativework
-    BookFormatType:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: bookformat
-          type: book
-        description:
-          description: 'The format of the book. '
-          type: book
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: supersededby
-          type: enumeration or  class or  property
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: enumeration or  class or  property
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    BookmarkAction:
-      properties:
-      - name:
-          description: actionstatus
-          type: actionstatustype
-        description:
-          description: Indicates the current disposition of the Action.
-          type: actionstatustype
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: agent
-          type: person or  organization
-        description:
-          description: The direct performer or driver of the action (animate or inanimate).
-            e.g. *John* wrote a book.
-          type: person or  organization
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: endtime
-          type: datetime
-        description:
-          description: The endTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to end. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from January to *December*.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          type: datetime
-      - name:
-          description: error
-          type: thing
-        description:
-          description: For failed actions, more information on the cause of the failure.
-          type: thing
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: instrument
-          type: thing
-        description:
-          description: The object that helped the agent perform the action. e.g. John
-            wrote a book with *a pen*.
-          type: thing
-      - name:
-          description: location
-          type: text or  place or  postaladdress
-        description:
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          type: text or  place or  postaladdress
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: object
-          type: thing
-        description:
-          description: The object upon the action is carried out, whose state is kept
-            intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn\'t). e.g. John
-            read *a book*.
-          type: thing
-      - name:
-          description: participant
-          type: person or  organization
-        description:
-          description: Other co-agents that participated in the action indirectly. e.g.
-            John wrote a book with *Steve*.
-          type: person or  organization
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: result
-          type: thing
-        description:
-          description: The result produced in the action. e.g. John wrote *a book*.
-          type: thing
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: starttime
-          type: datetime
-        description:
-          description: The startTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to start. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from *January* to December.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          type: datetime
-      - name:
-          description: target
-          type: entrypoint
-        description:
-          description: Indicates a target EntryPoint for an Action.
-          type: entrypoint
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Bookmark Action API\",\n\t\t\"description\":
+    \"An agent bookmarks/flags/labels/tags/marks an object.\",\n\t\t\"termsOfService\":
+    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
+    \"bookmark.action.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\":
+    [\"application/json\"],\n\t\"paths\": {\n\t\t\"/bookmark-action/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Bookmark Action\",\n\t\t\t\t\"description\": \"Returns
+    Bookmark Action\",\n\t\t\t\t\"operationId\": \"getBookmarkAction\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/BookmarkAction\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Bookmark Action\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Bookmark
+    Action\",\n\t\t\t\t\"description\": \"Add Bookmark Action\",\n\t\t\t\t\"operationId\":
+    \"addBookmarkAction\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"actionstatus\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates the current disposition of
+    the Action.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"actionstatustype\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"agent\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The direct
+    performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"endtime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to end. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from January to *December*.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"error\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"For failed
+    actions, more information on the cause of the failure.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"instrument\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    object that helped the agent perform the action. e.g. John wrote a book with *a
+    pen*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"location\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    location of for example where the event is happening, an organization is located,
+    or where an action takes place.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text or  place or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"object\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The object
+    upon the action is carried out, whose state is kept intact or changed. Also known
+    as the semantic roles patient, affected or undergoer (which change their state)
+    or theme (which doesn\\'t). e.g. John read *a book*.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"participant\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Other
+    co-agents that participated in the action indirectly. e.g. John wrote a book with
+    *Steve*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"result\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The result produced in the action. e.g.
+    John wrote *a book*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"starttime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to start. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from *January* to December.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"target\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
+    a target EntryPoint for an Action.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"entrypoint\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/BookmarkAction\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Bookmark Action\"]\n\t\t\t}\n\t\t},\n\t\t\"/bookmark-action/{id}/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Bookmark Action\",\n\t\t\t\t\"description\": \"Returns
+    a single Bookmark Action\",\n\t\t\t\t\"operationId\": \"getBookmarkAction\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/BookmarkAction\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Bookmark Action\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
+    Bookmark Action\",\n\t\t\t\t\"description\": \"Update a single Bookmark Action\",\n\t\t\t\t\"operationId\":
+    \"updateBookmarkActionItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"actionstatus\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
+    the current disposition of the Action.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"actionstatustype\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
+    used for adding more specific types from external vocabularies in microdata syntax.
+    This is a relationship between something and a class that the thing is in. In RDFa
+    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
+    - for multiple types. Schema.org tools may have only weaker understanding of extra
+    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"agent\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The direct performer or driver of the
+    action (animate or inanimate). e.g. *John* wrote a book.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"endtime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to end. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from January to *December*.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"error\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"For failed
+    actions, more information on the cause of the failure.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"instrument\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    object that helped the agent perform the action. e.g. John wrote a book with *a
+    pen*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"location\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    location of for example where the event is happening, an organization is located,
+    or where an action takes place.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text or  place or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"object\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The object
+    upon the action is carried out, whose state is kept intact or changed. Also known
+    as the semantic roles patient, affected or undergoer (which change their state)
+    or theme (which doesn\\'t). e.g. John read *a book*.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"participant\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Other
+    co-agents that participated in the action indirectly. e.g. John wrote a book with
+    *Steve*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"result\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The result produced in the action. e.g.
+    John wrote *a book*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"starttime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to start. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from *January* to December.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"target\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
+    a target EntryPoint for an Action.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"entrypoint\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/BookmarkAction\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Bookmark Action\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Bookmark
+    Action\",\n\t\t\t\t\"description\": \"Deletes a single Bookmark Action\",\n\t\t\t\t\"operationId\":
+    \"deleteBookmarkAction\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/BookmarkAction\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Bookmark Action\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"BookmarkAction\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"actionstatus\": {\n\t\t\t\t\t\"description\":
+    \"Indicates the current disposition of the Action.\",\n\t\t\t\t\t\"type\": \"actionstatustype\"\n\t\t\t\t},\n\t\t\t\t\"additionaltype\":
+    {\n\t\t\t\t\t\"description\": \"An additional type for the item, typically used
+    for adding more specific types from external vocabularies in microdata syntax. This
+    is a relationship between something and a class that the thing is in. In RDFa syntax,
+    it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple
+    types. Schema.org tools may have only weaker understanding of extra types, in particular
+    those defined externally.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"agent\":
+    {\n\t\t\t\t\t\"description\": \"The direct performer or driver of the action (animate
+    or inanimate). e.g. *John* wrote a book.\",\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\":
+    {\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"description\":
+    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"endtime\": {\n\t\t\t\t\t\"description\": \"The endTime
+    of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to end. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from January to *December*.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"type\":
+    \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"error\": {\n\t\t\t\t\t\"description\": \"For
+    failed actions, more information on the cause of the failure.\",\n\t\t\t\t\t\"type\":
+    \"thing\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"instrument\": {\n\t\t\t\t\t\"description\":
+    \"The object that helped the agent perform the action. e.g. John wrote a book with
+    *a pen*.\",\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t\"location\": {\n\t\t\t\t\t\"description\":
+    \"The location of for example where the event is happening, an organization is located,
+    or where an action takes place.\",\n\t\t\t\t\t\"type\": \"text or  place or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork) for which
+    this thing is the main entity being described.            See background notes for
+    details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"object\": {\n\t\t\t\t\t\"description\":
+    \"The object upon the action is carried out, whose state is kept intact or changed.
+    Also known as the semantic roles patient, affected or undergoer (which change their
+    state) or theme (which doesn\\'t). e.g. John read *a book*.\",\n\t\t\t\t\t\"type\":
+    \"thing\"\n\t\t\t\t},\n\t\t\t\t\"participant\": {\n\t\t\t\t\t\"description\": \"Other
+    co-agents that participated in the action indirectly. e.g. John wrote a book with
+    *Steve*.\",\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
+    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t\"result\": {\n\t\t\t\t\t\"description\": \"The
+    result produced in the action. e.g. John wrote *a book*.\",\n\t\t\t\t\t\"type\":
+    \"thing\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"starttime\": {\n\t\t\t\t\t\"description\": \"The
+    startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to start. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from *January* to December.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"type\":
+    \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"target\": {\n\t\t\t\t\t\"description\": \"Indicates
+    a target EntryPoint for an Action.\",\n\t\t\t\t\t\"type\": \"entrypoint\"\n\t\t\t\t},\n\t\t\t\t\"url\":
+    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

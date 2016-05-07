@@ -1,594 +1,297 @@
-- swagger: "2.0"
-  info:
-    title: Donate Action API
-    description: The act of providing goods, services, or money without compensation,
-      often for philanthropic reasons.
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: donate.action.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /donate-action/:
-      get:
-        summary: Get Donate Action
-        description: Returns Donate Action
-        operationId: getDonateAction
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/DonateAction'
-        tags:
-        - Donate Action
-      post:
-        summary: Add Donate Action
-        description: Add Donate Action
-        operationId: addDonateAction
-        parameters:
-        - name: actionstatus
-          in: formData
-          description: Indicates the current disposition of the Action.
-          required: false
-          type: actionstatustype
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: agent
-          in: formData
-          description: The direct performer or driver of the action (animate or inanimate).
-            e.g. *John* wrote a book.
-          required: false
-          type: person or  organization
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: endtime
-          in: formData
-          description: The endTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to end. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from January to *December*.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          required: false
-          type: datetime
-        - name: error
-          in: formData
-          description: For failed actions, more information on the cause of the failure.
-          required: false
-          type: thing
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: instrument
-          in: formData
-          description: The object that helped the agent perform the action. e.g. John
-            wrote a book with *a pen*.
-          required: false
-          type: thing
-        - name: location
-          in: formData
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          required: false
-          type: text or  place or  postaladdress
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: object
-          in: formData
-          description: The object upon the action is carried out, whose state is kept
-            intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn\'t). e.g. John
-            read *a book*.
-          required: false
-          type: thing
-        - name: participant
-          in: formData
-          description: Other co-agents that participated in the action indirectly. e.g.
-            John wrote a book with *Steve*.
-          required: false
-          type: person or  organization
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: price
-          in: formData
-          description: 'The offer price of a product, or of a price component when attached
-            to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency
-            property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous
-            symbols such as \''$\'' in the value.      Use \''.\'' (Unicode \''FULL
-            STOP\'' (U+002E)) rather than \'',\'' to indicate a decimal point. Avoid
-            using these symbols as a readability separator.      Note that both RDFa
-            and Microdata syntax allow the use of a \"content=\" attribute for publishing
-            simple machine-readable values      alongside more human-friendly formatting.      Use
-            values from 0123456789 (Unicode \''DIGIT ZERO\'' (U+0030) to \''DIGIT NINE\''
-            (U+0039)) rather than superficially similiar Unicode symbols.      '
-          required: false
-          type: text or  number
-        - name: pricespecification
-          in: formData
-          description: One or more detailed price specifications, indicating the unit
-            price and delivery or payment charges.
-          required: false
-          type: pricespecification
-        - name: recipient
-          in: formData
-          description: A sub property of participant. The participant who is at the
-            receiving end of the action.
-          required: false
-          type: person or  audience or  organization
-        - name: result
-          in: formData
-          description: The result produced in the action. e.g. John wrote *a book*.
-          required: false
-          type: thing
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: starttime
-          in: formData
-          description: The startTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to start. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from *January* to December.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          required: false
-          type: datetime
-        - name: target
-          in: formData
-          description: Indicates a target EntryPoint for an Action.
-          required: false
-          type: entrypoint
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/DonateAction'
-        tags:
-        - Donate Action
-    /donate-action/{id}/:
-      get:
-        summary: Get Donate Action
-        description: Returns a single Donate Action
-        operationId: getDonateAction
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/DonateAction'
-        tags:
-        - Donate Action
-      put:
-        summary: Update Donate Action
-        description: Update a single Donate Action
-        operationId: updateDonateActionItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: actionstatus
-          in: formData
-          description: Indicates the current disposition of the Action.
-          required: false
-          type: actionstatustype
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: agent
-          in: formData
-          description: The direct performer or driver of the action (animate or inanimate).
-            e.g. *John* wrote a book.
-          required: false
-          type: person or  organization
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: endtime
-          in: formData
-          description: The endTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to end. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from January to *December*.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          required: false
-          type: datetime
-        - name: error
-          in: formData
-          description: For failed actions, more information on the cause of the failure.
-          required: false
-          type: thing
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: instrument
-          in: formData
-          description: The object that helped the agent perform the action. e.g. John
-            wrote a book with *a pen*.
-          required: false
-          type: thing
-        - name: location
-          in: formData
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          required: false
-          type: text or  place or  postaladdress
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: object
-          in: formData
-          description: The object upon the action is carried out, whose state is kept
-            intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn\'t). e.g. John
-            read *a book*.
-          required: false
-          type: thing
-        - name: participant
-          in: formData
-          description: Other co-agents that participated in the action indirectly. e.g.
-            John wrote a book with *Steve*.
-          required: false
-          type: person or  organization
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: price
-          in: formData
-          description: 'The offer price of a product, or of a price component when attached
-            to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency
-            property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous
-            symbols such as \''$\'' in the value.      Use \''.\'' (Unicode \''FULL
-            STOP\'' (U+002E)) rather than \'',\'' to indicate a decimal point. Avoid
-            using these symbols as a readability separator.      Note that both RDFa
-            and Microdata syntax allow the use of a \"content=\" attribute for publishing
-            simple machine-readable values      alongside more human-friendly formatting.      Use
-            values from 0123456789 (Unicode \''DIGIT ZERO\'' (U+0030) to \''DIGIT NINE\''
-            (U+0039)) rather than superficially similiar Unicode symbols.      '
-          required: false
-          type: text or  number
-        - name: pricespecification
-          in: formData
-          description: One or more detailed price specifications, indicating the unit
-            price and delivery or payment charges.
-          required: false
-          type: pricespecification
-        - name: recipient
-          in: formData
-          description: A sub property of participant. The participant who is at the
-            receiving end of the action.
-          required: false
-          type: person or  audience or  organization
-        - name: result
-          in: formData
-          description: The result produced in the action. e.g. John wrote *a book*.
-          required: false
-          type: thing
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: starttime
-          in: formData
-          description: The startTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to start. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from *January* to December.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          required: false
-          type: datetime
-        - name: target
-          in: formData
-          description: Indicates a target EntryPoint for an Action.
-          required: false
-          type: entrypoint
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/DonateAction'
-        tags:
-        - Donate Action
-      delete:
-        summary: Donate Action
-        description: Deletes a single Donate Action
-        operationId: deleteDonateAction
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/DonateAction'
-        tags:
-        - Donate Action
-  definitions:
-    DonateAction:
-      properties:
-      - name:
-          description: actionstatus
-          type: actionstatustype
-        description:
-          description: Indicates the current disposition of the Action.
-          type: actionstatustype
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: agent
-          type: person or  organization
-        description:
-          description: The direct performer or driver of the action (animate or inanimate).
-            e.g. *John* wrote a book.
-          type: person or  organization
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: endtime
-          type: datetime
-        description:
-          description: The endTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to end. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from January to *December*.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          type: datetime
-      - name:
-          description: error
-          type: thing
-        description:
-          description: For failed actions, more information on the cause of the failure.
-          type: thing
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: instrument
-          type: thing
-        description:
-          description: The object that helped the agent perform the action. e.g. John
-            wrote a book with *a pen*.
-          type: thing
-      - name:
-          description: location
-          type: text or  place or  postaladdress
-        description:
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          type: text or  place or  postaladdress
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: object
-          type: thing
-        description:
-          description: The object upon the action is carried out, whose state is kept
-            intact or changed. Also known as the semantic roles patient, affected or
-            undergoer (which change their state) or theme (which doesn\'t). e.g. John
-            read *a book*.
-          type: thing
-      - name:
-          description: participant
-          type: person or  organization
-        description:
-          description: Other co-agents that participated in the action indirectly. e.g.
-            John wrote a book with *Steve*.
-          type: person or  organization
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: price
-          type: text or  number
-        description:
-          description: 'The offer price of a product, or of a price component when attached
-            to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency
-            property (with ISO 4217 codes e.g. \"USD\") instead of      including ambiguous
-            symbols such as \''$\'' in the value.      Use \''.\'' (Unicode \''FULL
-            STOP\'' (U+002E)) rather than \'',\'' to indicate a decimal point. Avoid
-            using these symbols as a readability separator.      Note that both RDFa
-            and Microdata syntax allow the use of a \"content=\" attribute for publishing
-            simple machine-readable values      alongside more human-friendly formatting.      Use
-            values from 0123456789 (Unicode \''DIGIT ZERO\'' (U+0030) to \''DIGIT NINE\''
-            (U+0039)) rather than superficially similiar Unicode symbols.      '
-          type: text or  number
-      - name:
-          description: pricespecification
-          type: pricespecification
-        description:
-          description: One or more detailed price specifications, indicating the unit
-            price and delivery or payment charges.
-          type: pricespecification
-      - name:
-          description: recipient
-          type: person or  audience or  organization
-        description:
-          description: A sub property of participant. The participant who is at the
-            receiving end of the action.
-          type: person or  audience or  organization
-      - name:
-          description: result
-          type: thing
-        description:
-          description: The result produced in the action. e.g. John wrote *a book*.
-          type: thing
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: starttime
-          type: datetime
-        description:
-          description: The startTime of something. For a reserved event or service (e.g.
-            FoodEstablishmentReservation), the time that it is expected to start. For
-            actions that span a period of time, when the action was performed. e.g.
-            John wrote a book from *January* to December.Note that Event uses startDate/endDate
-            instead of startTime/endTime, even when describing dates with times. This
-            situation may be clarified in future revisions.
-          type: datetime
-      - name:
-          description: target
-          type: entrypoint
-        description:
-          description: Indicates a target EntryPoint for an Action.
-          type: entrypoint
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Donate Action API\",\n\t\t\"description\":
+    \"The act of providing goods, services, or money without compensation, often for
+    philanthropic reasons.\",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
+    \"v1\"\n\t},\n\t\"host\": \"donate.action.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
+    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/donate-action/\":
+    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Donate Action\",\n\t\t\t\t\"description\":
+    \"Returns Donate Action\",\n\t\t\t\t\"operationId\": \"getDonateAction\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
+    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/DonateAction\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Donate Action\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Donate
+    Action\",\n\t\t\t\t\"description\": \"Add Donate Action\",\n\t\t\t\t\"operationId\":
+    \"addDonateAction\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"actionstatus\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates the current disposition of
+    the Action.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"actionstatustype\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between something
+    and a class that the thing is in. In RDFa syntax, it is better to use the native
+    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
+    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"agent\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The direct
+    performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"endtime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to end. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from January to *December*.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"error\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"For failed
+    actions, more information on the cause of the failure.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"instrument\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    object that helped the agent perform the action. e.g. John wrote a book with *a
+    pen*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"location\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    location of for example where the event is happening, an organization is located,
+    or where an action takes place.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text or  place or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"object\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The object
+    upon the action is carried out, whose state is kept intact or changed. Also known
+    as the semantic roles patient, affected or undergoer (which change their state)
+    or theme (which doesn\\'t). e.g. John read *a book*.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"participant\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Other
+    co-agents that participated in the action indirectly. e.g. John wrote a book with
+    *Steve*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"price\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The offer price of a product, or of
+    a price component when attached to PriceSpecification and its subtypes.      Usage
+    guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. \\\"USD\\\")
+    instead of      including ambiguous symbols such as \\'$\\' in the value.      Use
+    \\'.\\' (Unicode \\'FULL STOP\\' (U+002E)) rather than \\',\\' to indicate a decimal
+    point. Avoid using these symbols as a readability separator.      Note that both
+    RDFa and Microdata syntax allow the use of a \\\"content=\\\" attribute for publishing
+    simple machine-readable values      alongside more human-friendly formatting.      Use
+    values from 0123456789 (Unicode \\'DIGIT ZERO\\' (U+0030) to \\'DIGIT NINE\\' (U+0039))
+    rather than superficially similiar Unicode symbols.      \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"pricespecification\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"One or more detailed price specifications, indicating the unit price and delivery
+    or payment charges.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"pricespecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"recipient\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    sub property of participant. The participant who is at the receiving end of the
+    action.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"person or  audience
+    or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"result\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The result produced in the action. e.g.
+    John wrote *a book*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"starttime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to start. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from *January* to December.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"target\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
+    a target EntryPoint for an Action.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"entrypoint\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/DonateAction\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Donate Action\"]\n\t\t\t}\n\t\t},\n\t\t\"/donate-action/{id}/\": {\n\t\t\t\"get\":
+    {\n\t\t\t\t\"summary\": \"Get Donate Action\",\n\t\t\t\t\"description\": \"Returns
+    a single Donate Action\",\n\t\t\t\t\"operationId\": \"getDonateAction\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/DonateAction\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Donate Action\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update Donate
+    Action\",\n\t\t\t\t\"description\": \"Update a single Donate Action\",\n\t\t\t\t\"operationId\":
+    \"updateDonateActionItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"actionstatus\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
+    the current disposition of the Action.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"actionstatustype\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
+    used for adding more specific types from external vocabularies in microdata syntax.
+    This is a relationship between something and a class that the thing is in. In RDFa
+    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
+    - for multiple types. Schema.org tools may have only weaker understanding of extra
+    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"agent\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The direct performer or driver of the
+    action (animate or inanimate). e.g. *John* wrote a book.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"endtime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to end. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from January to *December*.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"error\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"For failed
+    actions, more information on the cause of the failure.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"instrument\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    object that helped the agent perform the action. e.g. John wrote a book with *a
+    pen*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"location\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    location of for example where the event is happening, an organization is located,
+    or where an action takes place.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"text or  place or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"object\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The object
+    upon the action is carried out, whose state is kept intact or changed. Also known
+    as the semantic roles patient, affected or undergoer (which change their state)
+    or theme (which doesn\\'t). e.g. John read *a book*.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"participant\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Other
+    co-agents that participated in the action indirectly. e.g. John wrote a book with
+    *Steve*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"price\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The offer price of a product, or of
+    a price component when attached to PriceSpecification and its subtypes.      Usage
+    guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. \\\"USD\\\")
+    instead of      including ambiguous symbols such as \\'$\\' in the value.      Use
+    \\'.\\' (Unicode \\'FULL STOP\\' (U+002E)) rather than \\',\\' to indicate a decimal
+    point. Avoid using these symbols as a readability separator.      Note that both
+    RDFa and Microdata syntax allow the use of a \\\"content=\\\" attribute for publishing
+    simple machine-readable values      alongside more human-friendly formatting.      Use
+    values from 0123456789 (Unicode \\'DIGIT ZERO\\' (U+0030) to \\'DIGIT NINE\\' (U+0039))
+    rather than superficially similiar Unicode symbols.      \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"pricespecification\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"One or more detailed price specifications, indicating the unit price and delivery
+    or payment charges.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"pricespecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"recipient\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
+    sub property of participant. The participant who is at the receiving end of the
+    action.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"person or  audience
+    or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"result\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The result produced in the action. e.g.
+    John wrote *a book*.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"starttime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to start. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from *January* to December.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"target\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
+    a target EntryPoint for an Action.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"entrypoint\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/DonateAction\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Donate Action\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Donate
+    Action\",\n\t\t\t\t\"description\": \"Deletes a single Donate Action\",\n\t\t\t\t\"operationId\":
+    \"deleteDonateAction\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/DonateAction\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Donate Action\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"DonateAction\":
+    {\n\t\t\t\"properties\": {\n\t\t\t\t\"actionstatus\": {\n\t\t\t\t\t\"description\":
+    \"Indicates the current disposition of the Action.\",\n\t\t\t\t\t\"type\": \"actionstatustype\"\n\t\t\t\t},\n\t\t\t\t\"additionaltype\":
+    {\n\t\t\t\t\t\"description\": \"An additional type for the item, typically used
+    for adding more specific types from external vocabularies in microdata syntax. This
+    is a relationship between something and a class that the thing is in. In RDFa syntax,
+    it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple
+    types. Schema.org tools may have only weaker understanding of extra types, in particular
+    those defined externally.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"agent\":
+    {\n\t\t\t\t\t\"description\": \"The direct performer or driver of the action (animate
+    or inanimate). e.g. *John* wrote a book.\",\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\":
+    {\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"description\":
+    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
+    \"text\"\n\t\t\t\t},\n\t\t\t\t\"endtime\": {\n\t\t\t\t\t\"description\": \"The endTime
+    of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to end. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from January to *December*.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"type\":
+    \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"error\": {\n\t\t\t\t\t\"description\": \"For
+    failed actions, more information on the cause of the failure.\",\n\t\t\t\t\t\"type\":
+    \"thing\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"instrument\": {\n\t\t\t\t\t\"description\":
+    \"The object that helped the agent perform the action. e.g. John wrote a book with
+    *a pen*.\",\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t\"location\": {\n\t\t\t\t\t\"description\":
+    \"The location of for example where the event is happening, an organization is located,
+    or where an action takes place.\",\n\t\t\t\t\t\"type\": \"text or  place or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork) for which
+    this thing is the main entity being described.            See background notes for
+    details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework
+    or  url\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"object\": {\n\t\t\t\t\t\"description\":
+    \"The object upon the action is carried out, whose state is kept intact or changed.
+    Also known as the semantic roles patient, affected or undergoer (which change their
+    state) or theme (which doesn\\'t). e.g. John read *a book*.\",\n\t\t\t\t\t\"type\":
+    \"thing\"\n\t\t\t\t},\n\t\t\t\t\"participant\": {\n\t\t\t\t\t\"description\": \"Other
+    co-agents that participated in the action indirectly. e.g. John wrote a book with
+    *Steve*.\",\n\t\t\t\t\t\"type\": \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
+    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t\"price\": {\n\t\t\t\t\t\"description\": \"The offer
+    price of a product, or of a price component when attached to PriceSpecification
+    and its subtypes.      Usage guidelines:Use the priceCurrency property (with ISO
+    4217 codes e.g. \\\"USD\\\") instead of      including ambiguous symbols such as
+    \\'$\\' in the value.      Use \\'.\\' (Unicode \\'FULL STOP\\' (U+002E)) rather
+    than \\',\\' to indicate a decimal point. Avoid using these symbols as a readability
+    separator.      Note that both RDFa and Microdata syntax allow the use of a \\\"content=\\\"
+    attribute for publishing simple machine-readable values      alongside more human-friendly
+    formatting.      Use values from 0123456789 (Unicode \\'DIGIT ZERO\\' (U+0030) to
+    \\'DIGIT NINE\\' (U+0039)) rather than superficially similiar Unicode symbols.      \",\n\t\t\t\t\t\"type\":
+    \"text or  number\"\n\t\t\t\t},\n\t\t\t\t\"pricespecification\": {\n\t\t\t\t\t\"description\":
+    \"One or more detailed price specifications, indicating the unit price and delivery
+    or payment charges.\",\n\t\t\t\t\t\"type\": \"pricespecification\"\n\t\t\t\t},\n\t\t\t\t\"recipient\":
+    {\n\t\t\t\t\t\"description\": \"A sub property of participant. The participant who
+    is at the receiving end of the action.\",\n\t\t\t\t\t\"type\": \"person or  audience
+    or  organization\"\n\t\t\t\t},\n\t\t\t\t\"result\": {\n\t\t\t\t\t\"description\":
+    \"The result produced in the action. e.g. John wrote *a book*.\",\n\t\t\t\t\t\"type\":
+    \"thing\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"starttime\": {\n\t\t\t\t\t\"description\": \"The
+    startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to start. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from *January* to December.Note
+    that Event uses startDate/endDate instead of startTime/endTime, even when describing
+    dates with times. This situation may be clarified in future revisions.\",\n\t\t\t\t\t\"type\":
+    \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"target\": {\n\t\t\t\t\t\"description\": \"Indicates
+    a target EntryPoint for an Action.\",\n\t\t\t\t\t\"type\": \"entrypoint\"\n\t\t\t\t},\n\t\t\t\t\"url\":
+    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

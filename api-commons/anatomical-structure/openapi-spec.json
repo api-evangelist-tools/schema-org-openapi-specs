@@ -649,376 +649,156 @@
 	},
 	"definitions": {
 		"AnatomicalStructure": {
-			"properties": [{
-				"name": {
-					"description": "additionaltype",
-					"type": "url"
-				},
-				"description": {
+			"properties": {
+				"additionaltype": {
 					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "alternatename",
-					"type": "text"
 				},
-				"description": {
+				"alternatename": {
 					"description": "An alias for the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "arterialbranch",
-					"type": "artery"
 				},
-				"description": {
+				"arterialbranch": {
 					"description": "The branches that comprise the arterial structure. ",
 					"type": "artery"
-				}
-			},
-			{
-				"name": {
-					"description": "associatedanatomy",
-					"type": "medicalcondition or physicalactivity"
 				},
-				"description": {
+				"associatedanatomy": {
 					"description": "The anatomy of the underlying organ system or structures associated with this entity. ",
 					"type": "medicalcondition or physicalactivity"
-				}
-			},
-			{
-				"name": {
-					"description": "associatedpathophysiology",
-					"type": "text"
 				},
-				"description": {
+				"associatedpathophysiology": {
 					"description": "If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "bodylocation",
-					"type": "text"
 				},
-				"description": {
+				"bodylocation": {
 					"description": "Location in the body of the anatomical structure.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "branch",
-					"type": "nerve"
 				},
-				"description": {
+				"branch": {
 					"description": "The branches that delineate from the nerve bundle. ",
 					"type": "nerve"
-				}
-			},
-			{
-				"name": {
-					"description": "code",
-					"type": "medicalcode"
 				},
-				"description": {
+				"code": {
 					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
 					"type": "medicalcode"
-				}
-			},
-			{
-				"name": {
-					"description": "comprisedof",
-					"type": "anatomicalsystem"
 				},
-				"description": {
+				"comprisedof": {
 					"description": "The underlying anatomical structures, such as organs, that comprise the anatomical system. ",
 					"type": "anatomicalsystem"
-				}
-			},
-			{
-				"name": {
-					"description": "connectedto",
-					"type": "anatomicalstructure"
 				},
-				"description": {
+				"connectedto": {
 					"description": "Other anatomical structures to which this structure is connected.",
 					"type": "anatomicalstructure"
-				}
-			},
-			{
-				"name": {
-					"description": "description",
-					"type": "text"
 				},
 				"description": {
 					"description": "A short description of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "diagram",
-					"type": "imageobject"
 				},
-				"description": {
+				"diagram": {
 					"description": "An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.",
 					"type": "imageobject"
-				}
-			},
-			{
-				"name": {
-					"description": "function",
-					"type": "text"
 				},
-				"description": {
+				"function": {
 					"description": "Function of the anatomical structure.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "guideline",
-					"type": "medicalguideline"
 				},
-				"description": {
+				"guideline": {
 					"description": "A medical guideline related to this entity.",
 					"type": "medicalguideline"
-				}
-			},
-			{
-				"name": {
-					"description": "image",
-					"type": "url or  imageobject"
 				},
-				"description": {
+				"image": {
 					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
 					"type": "url or  imageobject"
-				}
-			},
-			{
-				"name": {
-					"description": "insertion",
-					"type": "muscle"
 				},
-				"description": {
+				"insertion": {
 					"description": "The place of attachment of a muscle, or what the muscle moves. ",
 					"type": "muscle"
-				}
-			},
-			{
-				"name": {
-					"description": "mainentityofpage",
-					"type": "creativework or  url"
 				},
-				"description": {
+				"mainentityofpage": {
 					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
 					"type": "creativework or  url"
-				}
-			},
-			{
-				"name": {
-					"description": "medicinesystem",
-					"type": "medicinesystem"
 				},
-				"description": {
+				"medicinesystem": {
 					"description": "The system of medicine that includes this MedicalEntity, for example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.",
 					"type": "medicinesystem"
-				}
-			},
-			{
-				"name": {
-					"description": "name",
-					"type": "text"
 				},
-				"description": {
+				"name": {
 					"description": "The name of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "origin",
-					"type": "muscle"
 				},
-				"description": {
+				"origin": {
 					"description": "The place or point where a muscle arises. ",
 					"type": "muscle"
-				}
-			},
-			{
-				"name": {
-					"description": "partofsystem",
-					"type": "anatomicalsystem"
 				},
-				"description": {
+				"partofsystem": {
 					"description": "The anatomical or organ system that this structure is part of.",
 					"type": "anatomicalsystem"
-				}
-			},
-			{
-				"name": {
-					"description": "potentialaction",
-					"type": "action"
 				},
-				"description": {
+				"potentialaction": {
 					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
-				}
-			},
-			{
-				"name": {
-					"description": "recognizingauthority",
-					"type": "organization"
 				},
-				"description": {
+				"recognizingauthority": {
 					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
 					"type": "organization"
-				}
-			},
-			{
-				"name": {
-					"description": "regiondrained",
-					"type": "vein or lymphaticvessel"
 				},
-				"description": {
+				"regiondrained": {
 					"description": "The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ. ",
 					"type": "vein or lymphaticvessel"
-				}
-			},
-			{
-				"name": {
-					"description": "relatedanatomy",
-					"type": "superficialanatomy"
 				},
-				"description": {
+				"relatedanatomy": {
 					"description": "Anatomical systems or structures that relate to the superficial anatomy. ",
 					"type": "superficialanatomy"
-				}
-			},
-			{
-				"name": {
-					"description": "relatedcondition",
-					"type": "medicalcondition"
 				},
-				"description": {
+				"relatedcondition": {
 					"description": "A medical condition associated with this anatomy.",
 					"type": "medicalcondition"
-				}
-			},
-			{
-				"name": {
-					"description": "relatedstructure",
-					"type": "anatomicalsystem"
 				},
-				"description": {
+				"relatedstructure": {
 					"description": "Related anatomical structure(s) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system. ",
 					"type": "anatomicalsystem"
-				}
-			},
-			{
-				"name": {
-					"description": "relatedtherapy",
-					"type": "medicaltherapy"
 				},
-				"description": {
+				"relatedtherapy": {
 					"description": "A medical therapy related to this anatomy.",
 					"type": "medicaltherapy"
-				}
-			},
-			{
-				"name": {
-					"description": "relevantspecialty",
-					"type": "medicalspecialty"
 				},
-				"description": {
+				"relevantspecialty": {
 					"description": "If applicable, a medical specialty in which this entity is relevant.",
 					"type": "medicalspecialty"
-				}
-			},
-			{
-				"name": {
-					"description": "sameas",
-					"type": "url"
 				},
-				"description": {
+				"sameas": {
 					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "sensoryunit",
-					"type": "nerve"
 				},
-				"description": {
+				"sensoryunit": {
 					"description": "The neurological pathway extension that inputs and sends information to the brain or spinal cord. ",
 					"type": "nerve"
-				}
-			},
-			{
-				"name": {
-					"description": "source",
-					"type": "artery"
 				},
-				"description": {
+				"source": {
 					"description": "The anatomical or organ system that the artery originates from. ",
 					"type": "artery"
-				}
-			},
-			{
-				"name": {
-					"description": "study",
-					"type": "medicalstudy"
 				},
-				"description": {
+				"study": {
 					"description": "A medical study or trial related to this entity.",
 					"type": "medicalstudy"
-				}
-			},
-			{
-				"name": {
-					"description": "substructure",
-					"type": "anatomicalstructure"
 				},
-				"description": {
+				"substructure": {
 					"description": "Component (sub-)structure(s) that comprise this anatomical structure.",
 					"type": "anatomicalstructure"
-				}
-			},
-			{
-				"name": {
-					"description": "supplyto",
-					"type": "artery"
 				},
-				"description": {
+				"supplyto": {
 					"description": "The area to which the artery supplies blood. ",
 					"type": "artery"
-				}
-			},
-			{
-				"name": {
-					"description": "tributary",
-					"type": "vein"
 				},
-				"description": {
+				"tributary": {
 					"description": "The anatomical or organ system that the vein flows into; a larger structure that the vein connects to. ",
 					"type": "vein"
-				}
-			},
-			{
-				"name": {
-					"description": "url",
-					"type": "url"
 				},
-				"description": {
+				"url": {
 					"description": "URL of the item.",
 					"type": "url"
 				}
-			}]
+			}
 		}
 	}
 }

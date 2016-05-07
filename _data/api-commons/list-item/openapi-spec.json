@@ -327,146 +327,64 @@
 	},
 	"definitions": {
 		"ListItem": {
-			"properties": [{
-				"name": {
-					"description": "additionaltype",
-					"type": "url"
-				},
-				"description": {
+			"properties": {
+				"additionaltype": {
 					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "alternatename",
-					"type": "text"
 				},
-				"description": {
+				"alternatename": {
 					"description": "An alias for the item.",
-					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "description",
 					"type": "text"
 				},
 				"description": {
 					"description": "A short description of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "image",
-					"type": "imageobject or  url"
 				},
-				"description": {
+				"image": {
 					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
 					"type": "imageobject or  url"
-				}
-			},
-			{
-				"name": {
-					"description": "item",
-					"type": "thing"
 				},
-				"description": {
+				"item": {
 					"description": "An entity represented by an entry in a list or data feed (e.g. an \'artist\' in a list of \'artists\')u2019.",
 					"type": "thing"
-				}
-			},
-			{
-				"name": {
-					"description": "itemlistelement",
-					"type": "itemlist"
 				},
-				"description": {
+				"itemlistelement": {
 					"description": "For itemListElement values, you can use simple strings (e.g. \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.        Note: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a \'position\' property in such cases. ",
 					"type": "itemlist"
-				}
-			},
-			{
-				"name": {
-					"description": "mainentityofpage",
-					"type": "creativework or  url"
 				},
-				"description": {
+				"mainentityofpage": {
 					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
 					"type": "creativework or  url"
-				}
-			},
-			{
-				"name": {
-					"description": "name",
-					"type": "text"
 				},
-				"description": {
+				"name": {
 					"description": "The name of the item.",
 					"type": "text"
-				}
-			},
-			{
-				"name": {
-					"description": "nextitem",
-					"type": "listitem"
 				},
-				"description": {
+				"nextitem": {
 					"description": "A link to the ListItem that follows the current one.",
 					"type": "listitem"
-				}
-			},
-			{
-				"name": {
-					"description": "position",
-					"type": "integer or  text"
 				},
-				"description": {
+				"position": {
 					"description": "The position of an item in a series or sequence of items.",
 					"type": "integer or  text"
-				}
-			},
-			{
-				"name": {
-					"description": "potentialaction",
-					"type": "action"
 				},
-				"description": {
+				"potentialaction": {
 					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \'object\' role.",
 					"type": "action"
-				}
-			},
-			{
-				"name": {
-					"description": "previousitem",
-					"type": "listitem"
 				},
-				"description": {
+				"previousitem": {
 					"description": "A link to the ListItem that preceeds the current one.",
 					"type": "listitem"
-				}
-			},
-			{
-				"name": {
-					"description": "sameas",
-					"type": "url"
 				},
-				"description": {
+				"sameas": {
 					"description": "URL of a reference Web page that unambiguously indicates the item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page, or official website.",
 					"type": "url"
-				}
-			},
-			{
-				"name": {
-					"description": "url",
-					"type": "url"
 				},
-				"description": {
+				"url": {
 					"description": "URL of the item.",
 					"type": "url"
 				}
-			}]
+			}
 		}
 	}
 }

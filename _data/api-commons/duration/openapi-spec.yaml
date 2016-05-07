@@ -1,1365 +1,203 @@
-- swagger: "2.0"
-  info:
-    title: Duration API
-    description: 'Quantity: Duration (use ISO 8601 duration format).'
-    termsOfService: http://apievangelist.com/terms-of-service.html
-    version: v1
-  host: duration.example.com
-  basePath: /
-  schemes:
-  - http
-  produces:
-  - application/json
-  paths:
-    /duration/:
-      get:
-        summary: Get Duration
-        description: Returns Duration
-        operationId: getDuration
-        parameters:
-        - name: q
-          in: query
-          description: Keyword search for item
-          required: false
-          type: string
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Duration'
-        tags:
-        - Duration
-      post:
-        summary: Add Duration
-        description: Add Duration
-        operationId: addDuration
-        parameters:
-        - name: activityduration
-          in: formData
-          description: 'Length of time to engage in the activity. '
-          required: false
-          type: exerciseplan
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: billingperiod
-          in: formData
-          description: 'The time interval used to compute the invoice. '
-          required: false
-          type: invoice
-        - name: cooktime
-          in: formData
-          description: 'The time it takes to actually cook the dish, in ISO 8601 duration
-            format. '
-          required: false
-          type: recipe
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: duration
-          in: formData
-          description: 'The duration of the item (movie, audio recording, event, etc.)
-            in ISO 8601 date format. '
-          required: false
-          type: movie or musicrelease or event or musicrecording or mediaobject
-        - name: estimatedflightduration
-          in: formData
-          description: 'The estimated time the flight will take. '
-          required: false
-          type: flight
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: preptime
-          in: formData
-          description: 'The length of time it takes to prepare the recipe, in ISO 8601
-            duration format. '
-          required: false
-          type: recipe
-        - name: processingtime
-          in: formData
-          description: 'Estimated processing time for the service using this channel. '
-          required: false
-          type: servicechannel
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: timerequired
-          in: formData
-          description: 'Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. \''P30M\'',
-            \''P1H25M\''. '
-          required: false
-          type: creativework
-        - name: totaltime
-          in: formData
-          description: 'The total time it takes to prepare and cook the recipe, in ISO
-            8601 duration format. '
-          required: false
-          type: recipe
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        - name: validfor
-          in: formData
-          description: 'The time validity of the permit. '
-          required: false
-          type: permit
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Duration'
-        tags:
-        - Duration
-    /duration/{id}/:
-      get:
-        summary: Get Duration
-        description: Returns a single Duration
-        operationId: getDuration
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Duration'
-        tags:
-        - Duration
-      put:
-        summary: Update Duration
-        description: Update a single Duration
-        operationId: updateDurationItem
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        - name: activityduration
-          in: formData
-          description: 'Length of time to engage in the activity. '
-          required: false
-          type: exerciseplan
-        - name: additionaltype
-          in: formData
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          required: false
-          type: url
-        - name: alternatename
-          in: formData
-          description: An alias for the item.
-          required: false
-          type: text
-        - name: billingperiod
-          in: formData
-          description: 'The time interval used to compute the invoice. '
-          required: false
-          type: invoice
-        - name: cooktime
-          in: formData
-          description: 'The time it takes to actually cook the dish, in ISO 8601 duration
-            format. '
-          required: false
-          type: recipe
-        - name: description
-          in: formData
-          description: A short description of the item.
-          required: false
-          type: text
-        - name: duration
-          in: formData
-          description: 'The duration of the item (movie, audio recording, event, etc.)
-            in ISO 8601 date format. '
-          required: false
-          type: movie or musicrelease or event or musicrecording or mediaobject
-        - name: estimatedflightduration
-          in: formData
-          description: 'The estimated time the flight will take. '
-          required: false
-          type: flight
-        - name: image
-          in: formData
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          required: false
-          type: url or  imageobject
-        - name: mainentityofpage
-          in: formData
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          required: false
-          type: creativework or  url
-        - name: name
-          in: formData
-          description: The name of the item.
-          required: false
-          type: text
-        - name: potentialaction
-          in: formData
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          required: false
-          type: action
-        - name: preptime
-          in: formData
-          description: 'The length of time it takes to prepare the recipe, in ISO 8601
-            duration format. '
-          required: false
-          type: recipe
-        - name: processingtime
-          in: formData
-          description: 'Estimated processing time for the service using this channel. '
-          required: false
-          type: servicechannel
-        - name: sameas
-          in: formData
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          required: false
-          type: url
-        - name: timerequired
-          in: formData
-          description: 'Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. \''P30M\'',
-            \''P1H25M\''. '
-          required: false
-          type: creativework
-        - name: totaltime
-          in: formData
-          description: 'The total time it takes to prepare and cook the recipe, in ISO
-            8601 duration format. '
-          required: false
-          type: recipe
-        - name: url
-          in: formData
-          description: URL of the item.
-          required: false
-          type: url
-        - name: validfor
-          in: formData
-          description: 'The time validity of the permit. '
-          required: false
-          type: permit
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Duration'
-        tags:
-        - Duration
-      delete:
-        summary: Duration
-        description: Deletes a single Duration
-        operationId: deleteDuration
-        parameters:
-        - name: id
-          in: path
-          description: Unique id for item
-          required: true
-          type: integer
-        responses:
-          200:
-            description: A successful response.
-            schema:
-              type: array
-              items:
-                $ref: '#/definitions/Duration'
-        tags:
-        - Duration
-  definitions:
-    DrugLegalStatus:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: applicablelocation
-          type: administrativearea
-        description:
-          description: The location in which the status applies.
-          type: administrativearea
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: legalstatus
-          type: dietarysupplement or drug
-        description:
-          description: 'The drug or supplement\''s legal status, including any controlled
-            substance schedules that apply. '
-          type: dietarysupplement or drug
-      - name:
-          description: mainentityofpage
-          type: url or  creativework
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: url or  creativework
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    DrugPregnancyCategory:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: pregnancycategory
-          type: drug
-        description:
-          description: 'Pregnancy category of this drug. '
-          type: drug
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: supersededby
-          type: enumeration or  class or  property
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: enumeration or  class or  property
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    DrugPrescriptionStatus:
-      properties:
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: prescriptionstatus
-          type: drug
-        description:
-          description: 'Indicates whether this drug is available by prescription or
-            over-the-counter. '
-          type: drug
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: supersededby
-          type: enumeration or  class or  property
-        description:
-          description: Relates a term (i.e. a property, class or enumeration) to one
-            that supersedes it.
-          type: enumeration or  class or  property
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    DrugStrength:
-      properties:
-      - name:
-          description: activeingredient
-          type: text
-        description:
-          description: An active ingredient, typically chemical compounds and/or biologic
-            substances.
-          type: text
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: availablein
-          type: administrativearea
-        description:
-          description: The location in which the strength is available.
-          type: administrativearea
-      - name:
-          description: availablestrength
-          type: drug
-        description:
-          description: 'An available dosage strength for the drug. '
-          type: drug
-      - name:
-          description: code
-          type: medicalcode
-        description:
-          description: A medical code for the entity, taken from a controlled vocabulary
-            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
-          type: medicalcode
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: guideline
-          type: medicalguideline
-        description:
-          description: A medical guideline related to this entity.
-          type: medicalguideline
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: medicinesystem
-          type: medicinesystem
-        description:
-          description: The system of medicine that includes this MedicalEntity, for
-            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
-          type: medicinesystem
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: recognizingauthority
-          type: organization
-        description:
-          description: If applicable, the organization that officially recognizes this
-            entity as part of its endorsed system of medicine.
-          type: organization
-      - name:
-          description: relevantspecialty
-          type: medicalspecialty
-        description:
-          description: If applicable, a medical specialty in which this entity is relevant.
-          type: medicalspecialty
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: strengthunit
-          type: text
-        description:
-          description: The units of an active ingredient\'s strength, e.g. mg.
-          type: text
-      - name:
-          description: strengthvalue
-          type: number
-        description:
-          description: The value of an active ingredient\'s strength, e.g. 325.
-          type: number
-      - name:
-          description: study
-          type: medicalstudy
-        description:
-          description: A medical study or trial related to this entity.
-          type: medicalstudy
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-    DryCleaningOrLaundry:
-      properties:
-      - name:
-          description: additionalproperty
-          type: propertyvalue
-        description:
-          description: 'A property-value pair representing an additional characteristics
-            of the entitity, e.g. a product feature or another characteristic for which
-            there is no matching property in schema.org. Note: Publishers should be
-            aware that applications designed to use specific schema.org properties (e.g.
-            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
-            ...) will typically expect such data to be provided using those properties,
-            rather than using the generic property/value mechanism.'
-          type: propertyvalue
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: address
-          type: text or  postaladdress
-        description:
-          description: Physical address of the item.
-          type: text or  postaladdress
-      - name:
-          description: aggregaterating
-          type: aggregaterating
-        description:
-          description: The overall rating, based on a collection of reviews or ratings,
-            of the item.
-          type: aggregaterating
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: alumni
-          type: person
-        description:
-          description: 'Alumni of an organization. Inverse property: alumniOf.'
-          type: person
-      - name:
-          description: areaserved
-          type: text or  place or  geoshape or  administrativearea
-        description:
-          description: The geographic area where a service or offered item is provided.
-            Supersedes serviceArea.
-          type: text or  place or  geoshape or  administrativearea
-      - name:
-          description: award
-          type: text
-        description:
-          description: An award won by or for this item. Supersedes awards.
-          type: text
-      - name:
-          description: branchcode
-          type: text
-        description:
-          description: 'A short textual code (also called \"store code\") that uniquely
-            identifies a place of business. The code is typically assigned by the parentOrganization
-            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
-            the code \"3047\" is a branchCode for a particular branch.      '
-          type: text
-      - name:
-          description: brand
-          type: brand or  organization
-        description:
-          description: The brand(s) associated with a product or service, or the brand(s)
-            maintained by an organization or business person.
-          type: brand or  organization
-      - name:
-          description: contactpoint
-          type: contactpoint
-        description:
-          description: A contact point for a person or organization. Supersedes contactPoints.
-          type: contactpoint
-      - name:
-          description: containedinplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and one that
-            contains it. Supersedes containedIn. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: containsplace
-          type: place
-        description:
-          description: 'The basic containment relation between a place and another that
-            it contains. Inverse property: containsPlace.'
-          type: place
-      - name:
-          description: currenciesaccepted
-          type: text
-        description:
-          description: The currency accepted (in ISO 4217 currency format).
-          type: text
-      - name:
-          description: department
-          type: organization
-        description:
-          description: 'A relationship between an organization and a department of that
-            organization, also described as an organization (allowing different urls,
-            logos, opening hours). For example: a store with a pharmacy, or a bakery
-            with a cafe.'
-          type: organization
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: dissolutiondate
-          type: date
-        description:
-          description: The date that this organization was dissolved.
-          type: date
-      - name:
-          description: duns
-          type: text
-        description:
-          description: The Dun & Bradstreet DUNS number for identifying an organization
-            or business person.
-          type: text
-      - name:
-          description: email
-          type: text
-        description:
-          description: Email address.
-          type: text
-      - name:
-          description: employee
-          type: person
-        description:
-          description: Someone working for this organization. Supersedes employees.
-          type: person
-      - name:
-          description: event
-          type: event
-        description:
-          description: Upcoming or past event associated with this place, organization,
-            or action. Supersedes events.
-          type: event
-      - name:
-          description: faxnumber
-          type: text
-        description:
-          description: The fax number.
-          type: text
-      - name:
-          description: founder
-          type: person
-        description:
-          description: A person who founded this organization. Supersedes founders.
-          type: person
-      - name:
-          description: foundingdate
-          type: date
-        description:
-          description: The date that this organization was founded.
-          type: date
-      - name:
-          description: foundinglocation
-          type: place
-        description:
-          description: The place where the Organization was founded.
-          type: place
-      - name:
-          description: geo
-          type: geocoordinates or  geoshape
-        description:
-          description: The geo coordinates of the place.
-          type: geocoordinates or  geoshape
-      - name:
-          description: globallocationnumber
-          type: text
-        description:
-          description: The Global Location Number (GLN, sometimes also referred to as
-            International Location Number or ILN) of the respective organization, person,
-            or place. The GLN is a 13-digit number used to identify parties and physical
-            locations.
-          type: text
-      - name:
-          description: hasmap
-          type: url or  map
-        description:
-          description: A URL to a map of the place. Supersedes map, maps.
-          type: url or  map
-      - name:
-          description: hasoffercatalog
-          type: offercatalog
-        description:
-          description: Indicates an OfferCatalog listing for this Organization, Person,
-            or Service.
-          type: offercatalog
-      - name:
-          description: haspos
-          type: place
-        description:
-          description: Points-of-Sales operated by the organization or person.
-          type: place
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: isicv4
-          type: text
-        description:
-          description: The International Standard of Industrial Classification of All
-            Economic Activities (ISIC), Revision 4 code for a particular organization,
-            business person, or place.
-          type: text
-      - name:
-          description: legalname
-          type: text
-        description:
-          description: The official name of the organization, e.g. the registered company
-            name.
-          type: text
-      - name:
-          description: location
-          type: text or  place or  postaladdress
-        description:
-          description: The location of for example where the event is happening, an
-            organization is located, or where an action takes place.
-          type: text or  place or  postaladdress
-      - name:
-          description: logo
-          type: url or  imageobject
-        description:
-          description: An associated logo.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: makesoffer
-          type: offer
-        description:
-          description: 'A pointer to products or services offered by the organization
-            or person. Inverse property: offeredBy.'
-          type: offer
-      - name:
-          description: member
-          type: person or  organization
-        description:
-          description: 'A member of an Organization or a ProgramMembership. Organizations
-            can be members of organizations; ProgramMembership is typically for individuals.
-            Supersedes musicGroupMember, members. Inverse property: memberOf.'
-          type: person or  organization
-      - name:
-          description: memberof
-          type: programmembership or  organization
-        description:
-          description: 'An Organization (or ProgramMembership) to which this Person
-            or Organization belongs. Inverse property: member.'
-          type: programmembership or  organization
-      - name:
-          description: naics
-          type: text
-        description:
-          description: The North American Industry Classification System (NAICS) code
-            for a particular organization or business person.
-          type: text
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: numberofemployees
-          type: quantitativevalue
-        description:
-          description: The number of employees in an organization e.g. business.
-          type: quantitativevalue
-      - name:
-          description: openinghours
-          type: text
-        description:
-          description: 'The opening hours for a business. Opening hours can be specified
-            as a weekly time range, starting with days, then times per day. Multiple
-            days can be listed with commas \'',\'' separating each day. Day or time
-            ranges are specified using a hyphen \''-\''.- Days are specified using the
-            following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are
-            specified using 24:00 time. For example, 3pm is specified as 15:00. - Here
-            is an example: &lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Tu,Th
-            16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;. - If a business
-            is open 7 days a week, then it can be specified as &lt;time itemprop=&quot;openingHours&quot;
-            datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;.'
-          type: text
-      - name:
-          description: openinghoursspecification
-          type: openinghoursspecification
-        description:
-          description: The opening hours of a certain place.
-          type: openinghoursspecification
-      - name:
-          description: owns
-          type: product or  ownershipinfo
-        description:
-          description: Products owned by the organization or person.
-          type: product or  ownershipinfo
-      - name:
-          description: parentorganization
-          type: organization
-        description:
-          description: 'The larger organization that this organization is a branch of,
-            if any. Supersedes branchOf. Inverse property: subOrganization.'
-          type: organization
-      - name:
-          description: paymentaccepted
-          type: text
-        description:
-          description: Cash, credit card, etc.
-          type: text
-      - name:
-          description: photo
-          type: photograph or  imageobject
-        description:
-          description: A photograph of this place. Supersedes photos.
-          type: photograph or  imageobject
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: pricerange
-          type: text
-        description:
-          description: The price range of the business, for example $$$.
-          type: text
-      - name:
-          description: review
-          type: review
-        description:
-          description: A review of the item. Supersedes reviews.
-          type: review
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: seeks
-          type: demand
-        description:
-          description: A pointer to products or services sought by the organization
-            or person (demand).
-          type: demand
-      - name:
-          description: suborganization
-          type: organization
-        description:
-          description: 'A relationship between two organizations where the first includes
-            the second, e.g., as a subsidiary. See also: the more specific \''department\''
-            property. Inverse property: parentOrganization.'
-          type: organization
-      - name:
-          description: taxid
-          type: text
-        description:
-          description: The Tax / Fiscal ID of the organization or person, e.g. the TIN
-            in the US or the CIF/NIF in Spain.
-          type: text
-      - name:
-          description: telephone
-          type: text
-        description:
-          description: The telephone number.
-          type: text
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: vatid
-          type: text
-        description:
-          description: The Value-added Tax ID of the organization or person.
-          type: text
-    Duration:
-      properties:
-      - name:
-          description: activityduration
-          type: exerciseplan
-        description:
-          description: 'Length of time to engage in the activity. '
-          type: exerciseplan
-      - name:
-          description: additionaltype
-          type: url
-        description:
-          description: An additional type for the item, typically used for adding more
-            specific types from external vocabularies in microdata syntax. This is a
-            relationship between something and a class that the thing is in. In RDFa
-            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
-            - for multiple types. Schema.org tools may have only weaker understanding
-            of extra types, in particular those defined externally.
-          type: url
-      - name:
-          description: alternatename
-          type: text
-        description:
-          description: An alias for the item.
-          type: text
-      - name:
-          description: billingperiod
-          type: invoice
-        description:
-          description: 'The time interval used to compute the invoice. '
-          type: invoice
-      - name:
-          description: cooktime
-          type: recipe
-        description:
-          description: 'The time it takes to actually cook the dish, in ISO 8601 duration
-            format. '
-          type: recipe
-      - name:
-          description: description
-          type: text
-        description:
-          description: A short description of the item.
-          type: text
-      - name:
-          description: duration
-          type: movie or musicrelease or event or musicrecording or mediaobject
-        description:
-          description: 'The duration of the item (movie, audio recording, event, etc.)
-            in ISO 8601 date format. '
-          type: movie or musicrelease or event or musicrecording or mediaobject
-      - name:
-          description: estimatedflightduration
-          type: flight
-        description:
-          description: 'The estimated time the flight will take. '
-          type: flight
-      - name:
-          description: image
-          type: url or  imageobject
-        description:
-          description: An image of the item. This can be a URL or a fully described
-            ImageObject.
-          type: url or  imageobject
-      - name:
-          description: mainentityofpage
-          type: creativework or  url
-        description:
-          description: 'Indicates a page (or other CreativeWork) for which this thing
-            is the main entity being described.            See background notes for
-            details.       Inverse property: mainEntity.'
-          type: creativework or  url
-      - name:
-          description: name
-          type: text
-        description:
-          description: The name of the item.
-          type: text
-      - name:
-          description: potentialaction
-          type: action
-        description:
-          description: Indicates a potential Action, which describes an idealized action
-            in which this thing would play an \'object\' role.
-          type: action
-      - name:
-          description: preptime
-          type: recipe
-        description:
-          description: 'The length of time it takes to prepare the recipe, in ISO 8601
-            duration format. '
-          type: recipe
-      - name:
-          description: processingtime
-          type: servicechannel
-        description:
-          description: 'Estimated processing time for the service using this channel. '
-          type: servicechannel
-      - name:
-          description: sameas
-          type: url
-        description:
-          description: URL of a reference Web page that unambiguously indicates the
-            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
-            or official website.
-          type: url
-      - name:
-          description: timerequired
-          type: creativework
-        description:
-          description: 'Approximate or typical time it takes to work with or through
-            this learning resource for the typical intended target audience, e.g. \''P30M\'',
-            \''P1H25M\''. '
-          type: creativework
-      - name:
-          description: totaltime
-          type: recipe
-        description:
-          description: 'The total time it takes to prepare and cook the recipe, in ISO
-            8601 duration format. '
-          type: recipe
-      - name:
-          description: url
-          type: url
-        description:
-          description: URL of the item.
-          type: url
-      - name:
-          description: validfor
-          type: permit
-        description:
-          description: 'The time validity of the permit. '
-          type: permit
+- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Duration API\",\n\t\t\"description\":
+    \"Quantity: Duration (use ISO 8601 duration format).\",\n\t\t\"termsOfService\":
+    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
+    \"duration.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\":
+    [\"application/json\"],\n\t\"paths\": {\n\t\t\"/duration/\": {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\":
+    \"Get Duration\",\n\t\t\t\t\"description\": \"Returns Duration\",\n\t\t\t\t\"operationId\":
+    \"getDuration\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\":
+    \"query\",\n\t\t\t\t\t\"description\": \"Keyword search for item\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/Duration\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Duration\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Duration\",\n\t\t\t\t\"description\":
+    \"Add Duration\",\n\t\t\t\t\"operationId\": \"addDuration\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"activityduration\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Length of time to engage in the activity. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"exerciseplan\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
+    used for adding more specific types from external vocabularies in microdata syntax.
+    This is a relationship between something and a class that the thing is in. In RDFa
+    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
+    - for multiple types. Schema.org tools may have only weaker understanding of extra
+    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"billingperiod\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The time interval used to compute the invoice. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"invoice\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"cooktime\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The time it takes to actually cook the
+    dish, in ISO 8601 duration format. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"recipe\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"duration\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.
+    \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"movie or musicrelease
+    or event or musicrecording or mediaobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"estimatedflightduration\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The estimated time the flight will take. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"flight\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
+    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
+    for which this thing is the main entity being described.            See background
+    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"preptime\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The length of time it takes to prepare
+    the recipe, in ISO 8601 duration format. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"recipe\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"processingtime\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Estimated processing time for the service
+    using this channel. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"timerequired\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Approximate
+    or typical time it takes to work with or through this learning resource for the
+    typical intended target audience, e.g. \\'P30M\\', \\'P1H25M\\'. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"totaltime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    total time it takes to prepare and cook the recipe, in ISO 8601 duration format.
+    \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"recipe\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"validfor\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    time validity of the permit. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"permit\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/Duration\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Duration\"]\n\t\t\t}\n\t\t},\n\t\t\"/duration/{id}/\": {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\":
+    \"Get Duration\",\n\t\t\t\t\"description\": \"Returns a single Duration\",\n\t\t\t\t\"operationId\":
+    \"getDuration\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
+    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
+    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
+    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/Duration\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Duration\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update Duration\",\n\t\t\t\t\"description\":
+    \"Update a single Duration\",\n\t\t\t\t\"operationId\": \"updateDurationItem\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"activityduration\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Length of time to engage in the activity. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"exerciseplan\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
+    used for adding more specific types from external vocabularies in microdata syntax.
+    This is a relationship between something and a class that the thing is in. In RDFa
+    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
+    - for multiple types. Schema.org tools may have only weaker understanding of extra
+    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"billingperiod\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The time interval used to compute the invoice. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"invoice\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"cooktime\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The time it takes to actually cook the
+    dish, in ISO 8601 duration format. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"recipe\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"duration\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.
+    \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"movie or musicrelease
+    or event or musicrecording or mediaobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"estimatedflightduration\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"The estimated time the flight will take. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"flight\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
+    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
+    for which this thing is the main entity being described.            See background
+    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
+    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
+    \"Indicates a potential Action, which describes an idealized action in which this
+    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"preptime\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"The length of time it takes to prepare
+    the recipe, in ISO 8601 duration format. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"recipe\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"processingtime\",\n\t\t\t\t\t\"in\":
+    \"formData\",\n\t\t\t\t\t\"description\": \"Estimated processing time for the service
+    using this channel. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
+    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
+    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"timerequired\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Approximate
+    or typical time it takes to work with or through this learning resource for the
+    typical intended target audience, e.g. \\'P30M\\', \\'P1H25M\\'. \",\n\t\t\t\t\t\"required\":
+    false,\n\t\t\t\t\t\"type\": \"creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"totaltime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    total time it takes to prepare and cook the recipe, in ISO 8601 duration format.
+    \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"recipe\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
+    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
+    \"validfor\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
+    time validity of the permit. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
+    \"permit\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
+    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
+    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/Duration\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Duration\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Duration\",\n\t\t\t\t\"description\":
+    \"Deletes a single Duration\",\n\t\t\t\t\"operationId\": \"deleteDuration\",\n\t\t\t\t\"parameters\":
+    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
+    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
+    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
+    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
+    \"#/definitions/Duration\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
+    [\"Duration\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"Duration\": {\n\t\t\t\"properties\":
+    {\n\t\t\t\t\"activityduration\": {\n\t\t\t\t\t\"description\": \"Length of time
+    to engage in the activity. \",\n\t\t\t\t\t\"type\": \"exerciseplan\"\n\t\t\t\t},\n\t\t\t\t\"additionaltype\":
+    {\n\t\t\t\t\t\"description\": \"An additional type for the item, typically used
+    for adding more specific types from external vocabularies in microdata syntax. This
+    is a relationship between something and a class that the thing is in. In RDFa syntax,
+    it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple
+    types. Schema.org tools may have only weaker understanding of extra types, in particular
+    those defined externally.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\":
+    {\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"billingperiod\":
+    {\n\t\t\t\t\t\"description\": \"The time interval used to compute the invoice. \",\n\t\t\t\t\t\"type\":
+    \"invoice\"\n\t\t\t\t},\n\t\t\t\t\"cooktime\": {\n\t\t\t\t\t\"description\": \"The
+    time it takes to actually cook the dish, in ISO 8601 duration format. \",\n\t\t\t\t\t\"type\":
+    \"recipe\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\": \"A
+    short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"duration\":
+    {\n\t\t\t\t\t\"description\": \"The duration of the item (movie, audio recording,
+    event, etc.) in ISO 8601 date format. \",\n\t\t\t\t\t\"type\": \"movie or musicrelease
+    or event or musicrecording or mediaobject\"\n\t\t\t\t},\n\t\t\t\t\"estimatedflightduration\":
+    {\n\t\t\t\t\t\"description\": \"The estimated time the flight will take. \",\n\t\t\t\t\t\"type\":
+    \"flight\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\": \"An image
+    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
+    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
+    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described.            See background notes for details.       Inverse property:
+    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"name\":
+    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
+    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
+    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
+    \"action\"\n\t\t\t\t},\n\t\t\t\t\"preptime\": {\n\t\t\t\t\t\"description\": \"The
+    length of time it takes to prepare the recipe, in ISO 8601 duration format. \",\n\t\t\t\t\t\"type\":
+    \"recipe\"\n\t\t\t\t},\n\t\t\t\t\"processingtime\": {\n\t\t\t\t\t\"description\":
+    \"Estimated processing time for the service using this channel. \",\n\t\t\t\t\t\"type\":
+    \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\":
+    \"URL of a reference Web page that unambiguously indicates the item\\'s identity.
+    E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
+    \"url\"\n\t\t\t\t},\n\t\t\t\t\"timerequired\": {\n\t\t\t\t\t\"description\": \"Approximate
+    or typical time it takes to work with or through this learning resource for the
+    typical intended target audience, e.g. \\'P30M\\', \\'P1H25M\\'. \",\n\t\t\t\t\t\"type\":
+    \"creativework\"\n\t\t\t\t},\n\t\t\t\t\"totaltime\": {\n\t\t\t\t\t\"description\":
+    \"The total time it takes to prepare and cook the recipe, in ISO 8601 duration format.
+    \",\n\t\t\t\t\t\"type\": \"recipe\"\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"description\":
+    \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"validfor\":
+    {\n\t\t\t\t\t\"description\": \"The time validity of the permit. \",\n\t\t\t\t\t\"type\":
+    \"permit\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"

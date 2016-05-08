@@ -1,267 +1,516 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Job Posting API\",\n\t\t\"description\":
-    \"A listing that describes a job opening in a certain organization.\",\n\t\t\"termsOfService\":
-    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
-    \"job.posting.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\":
-    [\"application/json\"],\n\t\"paths\": {\n\t\t\"/job-posting/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Job Posting\",\n\t\t\t\t\"description\": \"Returns
-    Job Posting\",\n\t\t\t\t\"operationId\": \"getJobPosting\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/JobPosting\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Job Posting\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Job Posting\",\n\t\t\t\t\"description\":
-    \"Add Job Posting\",\n\t\t\t\t\"operationId\": \"addJobPosting\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"basesalary\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The base salary of the job or of an
-    employee in an EmployeeRole.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"pricespecification or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"dateposted\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Publication date for the job posting.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"date\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"educationrequirements\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Educational background needed for the
-    position.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"employmenttype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Type of employment (e.g. full-time, part-time, contract, temporary, seasonal,
-    internship).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"experiencerequirements\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Description of skills and experience needed for the position.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"hiringorganization\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Organization offering the job position.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"incentivecompensation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Description of bonus and commission
-    compensation aspects of the job. Supersedes incentives.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"industry\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    industry associated with the job position.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"jobbenefits\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Description of benefits associated with
-    the job. Supersedes benefits.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"joblocation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A (typically single) geographic location
-    associated with the job position.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
-    for which this thing is the main entity being described.            See background
-    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"occupationalcategory\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Category or categories describing the job. Use BLS O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html.
-    Ideally includes textual label and formal code, with the property repeated for each
-    applicable value.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"qualifications\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Specific qualifications required for
-    this role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"responsibilities\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Responsibilities associated with this role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"salarycurrency\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The currency (coded using ISO 4217,
-    http://en.wikipedia.org/wiki/ISO_4217 ) used for the main salary information in
-    this job posting or for this employee.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
-    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
-    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"skills\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Skills required to fulfill this role.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"specialcommitments\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Any special commitments associated with this job posting. Valid entries include
-    VeteranCommit, MilitarySpouseCommit, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"title\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The title of the job.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"workhours\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/JobPosting\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Job Posting\"]\n\t\t\t}\n\t\t},\n\t\t\"/job-posting/{id}/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Job Posting\",\n\t\t\t\t\"description\": \"Returns
-    a single Job Posting\",\n\t\t\t\t\"operationId\": \"getJobPosting\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/JobPosting\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Job Posting\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update Job
-    Posting\",\n\t\t\t\t\"description\": \"Update a single Job Posting\",\n\t\t\t\t\"operationId\":
-    \"updateJobPostingItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"basesalary\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The base salary of the job or of an
-    employee in an EmployeeRole.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"pricespecification or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"dateposted\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Publication date for the job posting.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"date\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"educationrequirements\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Educational background needed for the
-    position.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"employmenttype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Type of employment (e.g. full-time, part-time, contract, temporary, seasonal,
-    internship).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"experiencerequirements\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Description of skills and experience needed for the position.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"hiringorganization\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Organization offering the job position.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"incentivecompensation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Description of bonus and commission
-    compensation aspects of the job. Supersedes incentives.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"industry\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    industry associated with the job position.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"jobbenefits\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Description of benefits associated with
-    the job. Supersedes benefits.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"joblocation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A (typically single) geographic location
-    associated with the job position.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
-    for which this thing is the main entity being described.            See background
-    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"occupationalcategory\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Category or categories describing the job. Use BLS O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html.
-    Ideally includes textual label and formal code, with the property repeated for each
-    applicable value.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"qualifications\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Specific qualifications required for
-    this role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"responsibilities\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Responsibilities associated with this role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"salarycurrency\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The currency (coded using ISO 4217,
-    http://en.wikipedia.org/wiki/ISO_4217 ) used for the main salary information in
-    this job posting or for this employee.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
-    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
-    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"skills\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Skills required to fulfill this role.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"specialcommitments\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Any special commitments associated with this job posting. Valid entries include
-    VeteranCommit, MilitarySpouseCommit, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"title\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The title of the job.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"workhours\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/JobPosting\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Job Posting\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Job Posting\",\n\t\t\t\t\"description\":
-    \"Deletes a single Job Posting\",\n\t\t\t\t\"operationId\": \"deleteJobPosting\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/JobPosting\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Job Posting\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"JobPosting\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
-    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"basesalary\":
-    {\n\t\t\t\t\t\"description\": \"The base salary of the job or of an employee in
-    an EmployeeRole.\",\n\t\t\t\t\t\"type\": \"pricespecification or  number\"\n\t\t\t\t},\n\t\t\t\t\"dateposted\":
-    {\n\t\t\t\t\t\"description\": \"Publication date for the job posting.\",\n\t\t\t\t\t\"type\":
-    \"date\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"educationrequirements\":
-    {\n\t\t\t\t\t\"description\": \"Educational background needed for the position.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"employmenttype\": {\n\t\t\t\t\t\"description\":
-    \"Type of employment (e.g. full-time, part-time, contract, temporary, seasonal,
-    internship).\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"experiencerequirements\":
-    {\n\t\t\t\t\t\"description\": \"Description of skills and experience needed for
-    the position.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"hiringorganization\":
-    {\n\t\t\t\t\t\"description\": \"Organization offering the job position.\",\n\t\t\t\t\t\"type\":
-    \"organization\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\": \"An
-    image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"incentivecompensation\": {\n\t\t\t\t\t\"description\":
-    \"Description of bonus and commission compensation aspects of the job. Supersedes
-    incentives.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"industry\":
-    {\n\t\t\t\t\t\"description\": \"The industry associated with the job position.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"jobbenefits\": {\n\t\t\t\t\t\"description\": \"Description
-    of benefits associated with the job. Supersedes benefits.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"joblocation\": {\n\t\t\t\t\t\"description\": \"A
-    (typically single) geographic location associated with the job position.\",\n\t\t\t\t\t\"type\":
-    \"place\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"name\":
-    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"occupationalcategory\":
-    {\n\t\t\t\t\t\"description\": \"Category or categories describing the job. Use BLS
-    O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual
-    label and formal code, with the property repeated for each applicable value.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t\"qualifications\":
-    {\n\t\t\t\t\t\"description\": \"Specific qualifications required for this role.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"responsibilities\": {\n\t\t\t\t\t\"description\":
-    \"Responsibilities associated with this role.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"salarycurrency\":
-    {\n\t\t\t\t\t\"description\": \"The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217
-    ) used for the main salary information in this job posting or for this employee.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"skills\": {\n\t\t\t\t\t\"description\": \"Skills
-    required to fulfill this role.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"specialcommitments\":
-    {\n\t\t\t\t\t\"description\": \"Any special commitments associated with this job
-    posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"title\": {\n\t\t\t\t\t\"description\": \"The title
-    of the job.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"description\":
-    \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"workhours\":
-    {\n\t\t\t\t\t\"description\": \"The typical working hours for this job (e.g. 1st
-    shift, night shift, 8am-5pm).\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Job Posting API
+    description: A listing that describes a job opening in a certain organization.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: job.posting.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /job-posting/:
+      get:
+        summary: Get Job Posting
+        description: Returns Job Posting
+        operationId: getJobPosting
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/JobPosting'
+        tags:
+        - Job Posting
+      post:
+        summary: Add Job Posting
+        description: Add Job Posting
+        operationId: addJobPosting
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: basesalary
+          in: formData
+          description: The base salary of the job or of an employee in an EmployeeRole.
+          required: false
+          type: pricespecification or  number
+        - name: dateposted
+          in: formData
+          description: Publication date for the job posting.
+          required: false
+          type: date
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: educationrequirements
+          in: formData
+          description: Educational background needed for the position.
+          required: false
+          type: text
+        - name: employmenttype
+          in: formData
+          description: Type of employment (e.g. full-time, part-time, contract, temporary,
+            seasonal, internship).
+          required: false
+          type: text
+        - name: experiencerequirements
+          in: formData
+          description: Description of skills and experience needed for the position.
+          required: false
+          type: text
+        - name: hiringorganization
+          in: formData
+          description: Organization offering the job position.
+          required: false
+          type: organization
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: incentivecompensation
+          in: formData
+          description: Description of bonus and commission compensation aspects of the
+            job. Supersedes incentives.
+          required: false
+          type: text
+        - name: industry
+          in: formData
+          description: The industry associated with the job position.
+          required: false
+          type: text
+        - name: jobbenefits
+          in: formData
+          description: Description of benefits associated with the job. Supersedes benefits.
+          required: false
+          type: text
+        - name: joblocation
+          in: formData
+          description: A (typically single) geographic location associated with the
+            job position.
+          required: false
+          type: place
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: occupationalcategory
+          in: formData
+          description: 'Category or categories describing the job. Use BLS O*NET-SOC
+            taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual
+            label and formal code, with the property repeated for each applicable value.'
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: qualifications
+          in: formData
+          description: Specific qualifications required for this role.
+          required: false
+          type: text
+        - name: responsibilities
+          in: formData
+          description: Responsibilities associated with this role.
+          required: false
+          type: text
+        - name: salarycurrency
+          in: formData
+          description: The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217
+            ) used for the main salary information in this job posting or for this employee.
+          required: false
+          type: text
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: skills
+          in: formData
+          description: Skills required to fulfill this role.
+          required: false
+          type: text
+        - name: specialcommitments
+          in: formData
+          description: Any special commitments associated with this job posting. Valid
+            entries include VeteranCommit, MilitarySpouseCommit, etc.
+          required: false
+          type: text
+        - name: title
+          in: formData
+          description: The title of the job.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: workhours
+          in: formData
+          description: The typical working hours for this job (e.g. 1st shift, night
+            shift, 8am-5pm).
+          required: false
+          type: text
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/JobPosting'
+        tags:
+        - Job Posting
+    /job-posting/{id}/:
+      get:
+        summary: Get Job Posting
+        description: Returns a single Job Posting
+        operationId: getJobPosting
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/JobPosting'
+        tags:
+        - Job Posting
+      put:
+        summary: Update Job Posting
+        description: Update a single Job Posting
+        operationId: updateJobPostingItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: basesalary
+          in: formData
+          description: The base salary of the job or of an employee in an EmployeeRole.
+          required: false
+          type: pricespecification or  number
+        - name: dateposted
+          in: formData
+          description: Publication date for the job posting.
+          required: false
+          type: date
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: educationrequirements
+          in: formData
+          description: Educational background needed for the position.
+          required: false
+          type: text
+        - name: employmenttype
+          in: formData
+          description: Type of employment (e.g. full-time, part-time, contract, temporary,
+            seasonal, internship).
+          required: false
+          type: text
+        - name: experiencerequirements
+          in: formData
+          description: Description of skills and experience needed for the position.
+          required: false
+          type: text
+        - name: hiringorganization
+          in: formData
+          description: Organization offering the job position.
+          required: false
+          type: organization
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: incentivecompensation
+          in: formData
+          description: Description of bonus and commission compensation aspects of the
+            job. Supersedes incentives.
+          required: false
+          type: text
+        - name: industry
+          in: formData
+          description: The industry associated with the job position.
+          required: false
+          type: text
+        - name: jobbenefits
+          in: formData
+          description: Description of benefits associated with the job. Supersedes benefits.
+          required: false
+          type: text
+        - name: joblocation
+          in: formData
+          description: A (typically single) geographic location associated with the
+            job position.
+          required: false
+          type: place
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: occupationalcategory
+          in: formData
+          description: 'Category or categories describing the job. Use BLS O*NET-SOC
+            taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual
+            label and formal code, with the property repeated for each applicable value.'
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: qualifications
+          in: formData
+          description: Specific qualifications required for this role.
+          required: false
+          type: text
+        - name: responsibilities
+          in: formData
+          description: Responsibilities associated with this role.
+          required: false
+          type: text
+        - name: salarycurrency
+          in: formData
+          description: The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217
+            ) used for the main salary information in this job posting or for this employee.
+          required: false
+          type: text
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: skills
+          in: formData
+          description: Skills required to fulfill this role.
+          required: false
+          type: text
+        - name: specialcommitments
+          in: formData
+          description: Any special commitments associated with this job posting. Valid
+            entries include VeteranCommit, MilitarySpouseCommit, etc.
+          required: false
+          type: text
+        - name: title
+          in: formData
+          description: The title of the job.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: workhours
+          in: formData
+          description: The typical working hours for this job (e.g. 1st shift, night
+            shift, 8am-5pm).
+          required: false
+          type: text
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/JobPosting'
+        tags:
+        - Job Posting
+      delete:
+        summary: Job Posting
+        description: Deletes a single Job Posting
+        operationId: deleteJobPosting
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/JobPosting'
+        tags:
+        - Job Posting
+  definitions:
+    JobPosting:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        basesalary:
+          description: The base salary of the job or of an employee in an EmployeeRole.
+          type: pricespecification or  number
+        dateposted:
+          description: Publication date for the job posting.
+          type: date
+        description:
+          description: A short description of the item.
+          type: text
+        educationrequirements:
+          description: Educational background needed for the position.
+          type: text
+        employmenttype:
+          description: Type of employment (e.g. full-time, part-time, contract, temporary,
+            seasonal, internship).
+          type: text
+        experiencerequirements:
+          description: Description of skills and experience needed for the position.
+          type: text
+        hiringorganization:
+          description: Organization offering the job position.
+          type: organization
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        incentivecompensation:
+          description: Description of bonus and commission compensation aspects of the
+            job. Supersedes incentives.
+          type: text
+        industry:
+          description: The industry associated with the job position.
+          type: text
+        jobbenefits:
+          description: Description of benefits associated with the job. Supersedes benefits.
+          type: text
+        joblocation:
+          description: A (typically single) geographic location associated with the
+            job position.
+          type: place
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        name:
+          description: The name of the item.
+          type: text
+        occupationalcategory:
+          description: 'Category or categories describing the job. Use BLS O*NET-SOC
+            taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual
+            label and formal code, with the property repeated for each applicable value.'
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        qualifications:
+          description: Specific qualifications required for this role.
+          type: text
+        responsibilities:
+          description: Responsibilities associated with this role.
+          type: text
+        salarycurrency:
+          description: The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217
+            ) used for the main salary information in this job posting or for this employee.
+          type: text
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        skills:
+          description: Skills required to fulfill this role.
+          type: text
+        specialcommitments:
+          description: Any special commitments associated with this job posting. Valid
+            entries include VeteranCommit, MilitarySpouseCommit, etc.
+          type: text
+        title:
+          description: The title of the job.
+          type: text
+        url:
+          description: URL of the item.
+          type: url
+        workhours:
+          description: The typical working hours for this job (e.g. 1st shift, night
+            shift, 8am-5pm).
+          type: text

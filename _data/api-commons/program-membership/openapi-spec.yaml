@@ -1,183 +1,352 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Program Membership
-    API\",\n\t\t\"description\": \"Used to describe membership in a loyalty programs
-    (e.g. \\\"StarAliance\\\"), traveler clubs (e.g. \\\"AAA\\\"), purchase clubs (\\\"Safeway
-    Club\\\"), etc.\",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
-    \"v1\"\n\t},\n\t\"host\": \"program.membership.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
-    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/program-membership/\":
-    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Program Membership\",\n\t\t\t\t\"description\":
-    \"Returns Program Membership\",\n\t\t\t\t\"operationId\": \"getProgramMembership\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/ProgramMembership\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Program Membership\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add
-    Program Membership\",\n\t\t\t\t\"description\": \"Add Program Membership\",\n\t\t\t\t\"operationId\":
-    \"addProgramMembership\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
-    used for adding more specific types from external vocabularies in microdata syntax.
-    This is a relationship between something and a class that the thing is in. In RDFa
-    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
-    - for multiple types. Schema.org tools may have only weaker understanding of extra
-    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"hostingorganization\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The organization (airline, travelers\\'
-    club, etc.) the membership is made with.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
-    for which this thing is the main entity being described.            See background
-    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"member\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A member
-    of an Organization or a ProgramMembership. Organizations can be members of organizations;
-    ProgramMembership is typically for individuals. Supersedes musicGroupMember, members.
-    Inverse property: memberOf.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"memberof\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An Organization (or ProgramMembership)
-    to which this Person or Organization belongs.  inverse property: member.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"person or organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"membershipnumber\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A unique identifier for the membership.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"programmembershipused\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Any membership in a frequent flyer,
-    hotel loyalty program, etc. being applied to the reservation. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"reservation\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"programname\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    program providing the membership.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
-    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
-    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ProgramMembership\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Program Membership\"]\n\t\t\t}\n\t\t},\n\t\t\"/program-membership/{id}/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Program Membership\",\n\t\t\t\t\"description\": \"Returns
-    a single Program Membership\",\n\t\t\t\t\"operationId\": \"getProgramMembership\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ProgramMembership\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Program Membership\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
-    Program Membership\",\n\t\t\t\t\"description\": \"Update a single Program Membership\",\n\t\t\t\t\"operationId\":
-    \"updateProgramMembershipItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\":
-    \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\": \"Unique id for
-    item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"hostingorganization\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The organization (airline, travelers\\' club, etc.) the membership is made with.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"member\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A member
-    of an Organization or a ProgramMembership. Organizations can be members of organizations;
-    ProgramMembership is typically for individuals. Supersedes musicGroupMember, members.
-    Inverse property: memberOf.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"memberof\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An Organization (or ProgramMembership)
-    to which this Person or Organization belongs.  inverse property: member.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"person or organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"membershipnumber\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A unique identifier for the membership.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"programmembershipused\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Any membership in a frequent flyer,
-    hotel loyalty program, etc. being applied to the reservation. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"reservation\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"programname\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    program providing the membership.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
-    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
-    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ProgramMembership\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Program Membership\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Program
-    Membership\",\n\t\t\t\t\"description\": \"Deletes a single Program Membership\",\n\t\t\t\t\"operationId\":
-    \"deleteProgramMembership\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ProgramMembership\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Program Membership\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"ProgramMembership\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
-    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"description\":
-    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"hostingorganization\": {\n\t\t\t\t\t\"description\":
-    \"The organization (airline, travelers\\' club, etc.) the membership is made with.\",\n\t\t\t\t\t\"type\":
-    \"organization\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\": \"An
-    image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t\"member\":
-    {\n\t\t\t\t\t\"description\": \"A member of an Organization or a ProgramMembership.
-    Organizations can be members of organizations; ProgramMembership is typically for
-    individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.\",\n\t\t\t\t\t\"type\":
-    \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t\"memberof\": {\n\t\t\t\t\t\"description\":
-    \"An Organization (or ProgramMembership) to which this Person or Organization belongs.
-    \ inverse property: member.\",\n\t\t\t\t\t\"type\": \"person or organization\"\n\t\t\t\t},\n\t\t\t\t\"membershipnumber\":
-    {\n\t\t\t\t\t\"description\": \"A unique identifier for the membership.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
-    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t\"programmembershipused\": {\n\t\t\t\t\t\"description\":
-    \"Any membership in a frequent flyer, hotel loyalty program, etc. being applied
-    to the reservation. \",\n\t\t\t\t\t\"type\": \"reservation\"\n\t\t\t\t},\n\t\t\t\t\"programname\":
-    {\n\t\t\t\t\t\"description\": \"The program providing the membership.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Program Membership API
+    description: Used to describe membership in a loyalty programs (e.g. \"StarAliance\"),
+      traveler clubs (e.g. \"AAA\"), purchase clubs (\"Safeway Club\"), etc.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: program.membership.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /program-membership/:
+      get:
+        summary: Get Program Membership
+        description: Returns Program Membership
+        operationId: getProgramMembership
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ProgramMembership'
+        tags:
+        - Program Membership
+      post:
+        summary: Add Program Membership
+        description: Add Program Membership
+        operationId: addProgramMembership
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: hostingorganization
+          in: formData
+          description: The organization (airline, travelers\' club, etc.) the membership
+            is made with.
+          required: false
+          type: organization
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: member
+          in: formData
+          description: 'A member of an Organization or a ProgramMembership. Organizations
+            can be members of organizations; ProgramMembership is typically for individuals.
+            Supersedes musicGroupMember, members. Inverse property: memberOf.'
+          required: false
+          type: person or  organization
+        - name: memberof
+          in: formData
+          description: 'An Organization (or ProgramMembership) to which this Person
+            or Organization belongs.  inverse property: member.'
+          required: false
+          type: person or organization
+        - name: membershipnumber
+          in: formData
+          description: A unique identifier for the membership.
+          required: false
+          type: text
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: programmembershipused
+          in: formData
+          description: 'Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation. '
+          required: false
+          type: reservation
+        - name: programname
+          in: formData
+          description: The program providing the membership.
+          required: false
+          type: text
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ProgramMembership'
+        tags:
+        - Program Membership
+    /program-membership/{id}/:
+      get:
+        summary: Get Program Membership
+        description: Returns a single Program Membership
+        operationId: getProgramMembership
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ProgramMembership'
+        tags:
+        - Program Membership
+      put:
+        summary: Update Program Membership
+        description: Update a single Program Membership
+        operationId: updateProgramMembershipItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: hostingorganization
+          in: formData
+          description: The organization (airline, travelers\' club, etc.) the membership
+            is made with.
+          required: false
+          type: organization
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: member
+          in: formData
+          description: 'A member of an Organization or a ProgramMembership. Organizations
+            can be members of organizations; ProgramMembership is typically for individuals.
+            Supersedes musicGroupMember, members. Inverse property: memberOf.'
+          required: false
+          type: person or  organization
+        - name: memberof
+          in: formData
+          description: 'An Organization (or ProgramMembership) to which this Person
+            or Organization belongs.  inverse property: member.'
+          required: false
+          type: person or organization
+        - name: membershipnumber
+          in: formData
+          description: A unique identifier for the membership.
+          required: false
+          type: text
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: programmembershipused
+          in: formData
+          description: 'Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation. '
+          required: false
+          type: reservation
+        - name: programname
+          in: formData
+          description: The program providing the membership.
+          required: false
+          type: text
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ProgramMembership'
+        tags:
+        - Program Membership
+      delete:
+        summary: Program Membership
+        description: Deletes a single Program Membership
+        operationId: deleteProgramMembership
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ProgramMembership'
+        tags:
+        - Program Membership
+  definitions:
+    ProgramMembership:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+        hostingorganization:
+          description: The organization (airline, travelers\' club, etc.) the membership
+            is made with.
+          type: organization
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        member:
+          description: 'A member of an Organization or a ProgramMembership. Organizations
+            can be members of organizations; ProgramMembership is typically for individuals.
+            Supersedes musicGroupMember, members. Inverse property: memberOf.'
+          type: person or  organization
+        memberof:
+          description: 'An Organization (or ProgramMembership) to which this Person
+            or Organization belongs.  inverse property: member.'
+          type: person or organization
+        membershipnumber:
+          description: A unique identifier for the membership.
+          type: text
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        programmembershipused:
+          description: 'Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation. '
+          type: reservation
+        programname:
+          description: The program providing the membership.
+          type: text
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        url:
+          description: URL of the item.
+          type: url

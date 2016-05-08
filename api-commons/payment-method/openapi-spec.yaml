@@ -1,167 +1,326 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Payment Method API\",\n\t\t\"description\":
-    \"A payment method is a standardized procedure for transferring the monetary amount
-    for a purchase. Payment methods are characterized by the legal and technical structures
-    used, and by the organization or group carrying out the transaction. Commonly used
-    values: http://purl.org/goodrelations/v1#ByBankTransferInAdvance http://purl.org/goodrelations/v1#ByInvoice
-    http://purl.org/goodrelations/v1#Cash http://purl.org/goodrelations/v1#CheckInAdvance
-    http://purl.org/goodrelations/v1#COD http://purl.org/goodrelations/v1#DirectDebit
-    http://purl.org/goodrelations/v1#GoogleCheckout http://purl.org/goodrelations/v1#PayPal
-    http://purl.org/goodrelations/v1#PaySwarm \",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
-    \"v1\"\n\t},\n\t\"host\": \"payment.method.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
-    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/payment-method/\":
-    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Payment Method\",\n\t\t\t\t\"description\":
-    \"Returns Payment Method\",\n\t\t\t\t\"operationId\": \"getPaymentMethod\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/PaymentMethod\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Payment Method\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Payment
-    Method\",\n\t\t\t\t\"description\": \"Add Payment Method\",\n\t\t\t\t\"operationId\":
-    \"addPaymentMethod\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"acceptedpaymentmethod\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The payment method(s) accepted by seller
-    for this offer. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"demand
-    or offer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
-    used for adding more specific types from external vocabularies in microdata syntax.
-    This is a relationship between something and a class that the thing is in. In RDFa
-    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
-    - for multiple types. Schema.org tools may have only weaker understanding of extra
-    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"appliestopaymentmethod\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The payment method(s) to which the payment charge specification applies. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"paymentchargespecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"imageobject or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
-    for which this thing is the main entity being described.            See background
-    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"paymentmethod\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The name of the credit card or other method of payment for the order. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"order or invoice\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
-    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
-    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"supersededby\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Relates a term (i.e. a property, class
-    or enumeration) to one that supersedes it.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"class or  property or  enumeration\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/PaymentMethod\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Payment Method\"]\n\t\t\t}\n\t\t},\n\t\t\"/payment-method/{id}/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Payment Method\",\n\t\t\t\t\"description\": \"Returns
-    a single Payment Method\",\n\t\t\t\t\"operationId\": \"getPaymentMethod\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/PaymentMethod\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Payment Method\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
-    Payment Method\",\n\t\t\t\t\"description\": \"Update a single Payment Method\",\n\t\t\t\t\"operationId\":
-    \"updatePaymentMethodItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"acceptedpaymentmethod\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The payment method(s) accepted by seller for this offer. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"demand or offer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"appliestopaymentmethod\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The payment method(s) to which the payment
-    charge specification applies. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"paymentchargespecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"imageobject or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
-    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"paymentmethod\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The name of the credit card or other method of payment for the order. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"order or invoice\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
-    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
-    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"supersededby\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Relates a term (i.e. a property, class
-    or enumeration) to one that supersedes it.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"class or  property or  enumeration\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/PaymentMethod\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Payment Method\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Payment
-    Method\",\n\t\t\t\t\"description\": \"Deletes a single Payment Method\",\n\t\t\t\t\"operationId\":
-    \"deletePaymentMethod\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/PaymentMethod\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Payment Method\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"PaymentMethod\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"acceptedpaymentmethod\": {\n\t\t\t\t\t\"description\":
-    \"The payment method(s) accepted by seller for this offer. \",\n\t\t\t\t\t\"type\":
-    \"demand or offer\"\n\t\t\t\t},\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
-    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"appliestopaymentmethod\":
-    {\n\t\t\t\t\t\"description\": \"The payment method(s) to which the payment charge
-    specification applies. \",\n\t\t\t\t\t\"type\": \"paymentchargespecification\"\n\t\t\t\t},\n\t\t\t\t\"description\":
-    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
-    \"imageobject or  url\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"name\":
-    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"paymentmethod\":
-    {\n\t\t\t\t\t\"description\": \"The name of the credit card or other method of payment
-    for the order. \",\n\t\t\t\t\t\"type\": \"order or invoice\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
-    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\": \"URL
-    of a reference Web page that unambiguously indicates the item\\'s identity. E.g.
-    the URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"supersededby\": {\n\t\t\t\t\t\"description\": \"Relates
-    a term (i.e. a property, class or enumeration) to one that supersedes it.\",\n\t\t\t\t\t\"type\":
-    \"class or  property or  enumeration\"\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"description\":
-    \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Payment Method API
+    description: 'A payment method is a standardized procedure for transferring the
+      monetary amount for a purchase. Payment methods are characterized by the legal
+      and technical structures used, and by the organization or group carrying out the
+      transaction. Commonly used values: http://purl.org/goodrelations/v1#ByBankTransferInAdvance
+      http://purl.org/goodrelations/v1#ByInvoice http://purl.org/goodrelations/v1#Cash
+      http://purl.org/goodrelations/v1#CheckInAdvance http://purl.org/goodrelations/v1#COD
+      http://purl.org/goodrelations/v1#DirectDebit http://purl.org/goodrelations/v1#GoogleCheckout
+      http://purl.org/goodrelations/v1#PayPal http://purl.org/goodrelations/v1#PaySwarm '
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: payment.method.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /payment-method/:
+      get:
+        summary: Get Payment Method
+        description: Returns Payment Method
+        operationId: getPaymentMethod
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/PaymentMethod'
+        tags:
+        - Payment Method
+      post:
+        summary: Add Payment Method
+        description: Add Payment Method
+        operationId: addPaymentMethod
+        parameters:
+        - name: acceptedpaymentmethod
+          in: formData
+          description: 'The payment method(s) accepted by seller for this offer. '
+          required: false
+          type: demand or offer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: appliestopaymentmethod
+          in: formData
+          description: 'The payment method(s) to which the payment charge specification
+            applies. '
+          required: false
+          type: paymentchargespecification
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: imageobject or  url
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: paymentmethod
+          in: formData
+          description: 'The name of the credit card or other method of payment for the
+            order. '
+          required: false
+          type: order or invoice
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: supersededby
+          in: formData
+          description: Relates a term (i.e. a property, class or enumeration) to one
+            that supersedes it.
+          required: false
+          type: class or  property or  enumeration
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/PaymentMethod'
+        tags:
+        - Payment Method
+    /payment-method/{id}/:
+      get:
+        summary: Get Payment Method
+        description: Returns a single Payment Method
+        operationId: getPaymentMethod
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/PaymentMethod'
+        tags:
+        - Payment Method
+      put:
+        summary: Update Payment Method
+        description: Update a single Payment Method
+        operationId: updatePaymentMethodItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: acceptedpaymentmethod
+          in: formData
+          description: 'The payment method(s) accepted by seller for this offer. '
+          required: false
+          type: demand or offer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: appliestopaymentmethod
+          in: formData
+          description: 'The payment method(s) to which the payment charge specification
+            applies. '
+          required: false
+          type: paymentchargespecification
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: imageobject or  url
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: paymentmethod
+          in: formData
+          description: 'The name of the credit card or other method of payment for the
+            order. '
+          required: false
+          type: order or invoice
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: supersededby
+          in: formData
+          description: Relates a term (i.e. a property, class or enumeration) to one
+            that supersedes it.
+          required: false
+          type: class or  property or  enumeration
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/PaymentMethod'
+        tags:
+        - Payment Method
+      delete:
+        summary: Payment Method
+        description: Deletes a single Payment Method
+        operationId: deletePaymentMethod
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/PaymentMethod'
+        tags:
+        - Payment Method
+  definitions:
+    PaymentMethod:
+      properties:
+        acceptedpaymentmethod:
+          description: 'The payment method(s) accepted by seller for this offer. '
+          type: demand or offer
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        appliestopaymentmethod:
+          description: 'The payment method(s) to which the payment charge specification
+            applies. '
+          type: paymentchargespecification
+        description:
+          description: A short description of the item.
+          type: text
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: imageobject or  url
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        name:
+          description: The name of the item.
+          type: text
+        paymentmethod:
+          description: 'The name of the credit card or other method of payment for the
+            order. '
+          type: order or invoice
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        supersededby:
+          description: Relates a term (i.e. a property, class or enumeration) to one
+            that supersedes it.
+          type: class or  property or  enumeration
+        url:
+          description: URL of the item.
+          type: url

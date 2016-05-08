@@ -1,200 +1,405 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Parent Audience API\",\n\t\t\"description\":
-    \"A set of characteristics describing parents, who can be interested in viewing
-    some content.\",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
-    \"v1\"\n\t},\n\t\"host\": \"parent.audience.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
-    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/parent-audience/\":
-    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Parent Audience\",\n\t\t\t\t\"description\":
-    \"Returns Parent Audience\",\n\t\t\t\t\"operationId\": \"getParentAudience\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/ParentAudience\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Parent Audience\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Parent
-    Audience\",\n\t\t\t\t\"description\": \"Add Parent Audience\",\n\t\t\t\t\"operationId\":
-    \"addParentAudience\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
-    used for adding more specific types from external vocabularies in microdata syntax.
-    This is a relationship between something and a class that the thing is in. In RDFa
-    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
-    - for multiple types. Schema.org tools may have only weaker understanding of extra
-    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"audiencetype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    target group associated with a given audience (e.g. veterans, car owners, musicians,
-    etc.).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"childmaxage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Maximal
-    age of the child.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"childminage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Minimal
-    age of the child.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"geographicarea\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The geographic area associated with
-    the audience.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"healthcondition\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Expectations for health conditions of target audience.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalcondition\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"requiredgender\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Audiences defined by a person\\'s gender.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"requiredmaxage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Audiences defined by a person\\'s maximum age.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"requiredminage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Audiences defined by a person\\'s minimum
-    age.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"suggestedgender\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The gender of the person or audience.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"suggestedmaxage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Maximal age recommended for viewing
-    content.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"suggestedminage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Minimal age recommended for viewing content.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ParentAudience\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Parent Audience\"]\n\t\t\t}\n\t\t},\n\t\t\"/parent-audience/{id}/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Parent Audience\",\n\t\t\t\t\"description\": \"Returns
-    a single Parent Audience\",\n\t\t\t\t\"operationId\": \"getParentAudience\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ParentAudience\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Parent Audience\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
-    Parent Audience\",\n\t\t\t\t\"description\": \"Update a single Parent Audience\",\n\t\t\t\t\"operationId\":
-    \"updateParentAudienceItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"audiencetype\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The target group associated with a given
-    audience (e.g. veterans, car owners, musicians, etc.).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"childmaxage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Maximal
-    age of the child.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"childminage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Minimal
-    age of the child.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"geographicarea\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The geographic area associated with
-    the audience.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"healthcondition\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Expectations for health conditions of target audience.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalcondition\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"requiredgender\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Audiences defined by a person\\'s gender.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"requiredmaxage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Audiences defined by a person\\'s maximum age.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"requiredminage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Audiences defined by a person\\'s minimum
-    age.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"suggestedgender\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The gender of the person or audience.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"suggestedmaxage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Maximal age recommended for viewing
-    content.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"suggestedminage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Minimal age recommended for viewing content.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ParentAudience\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Parent Audience\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Parent
-    Audience\",\n\t\t\t\t\"description\": \"Deletes a single Parent Audience\",\n\t\t\t\t\"operationId\":
-    \"deleteParentAudience\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ParentAudience\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Parent Audience\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"ParentAudience\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
-    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"audiencetype\":
-    {\n\t\t\t\t\t\"description\": \"The target group associated with a given audience
-    (e.g. veterans, car owners, musicians, etc.).\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"childmaxage\":
-    {\n\t\t\t\t\t\"description\": \"Maximal age of the child.\",\n\t\t\t\t\t\"type\":
-    \"number\"\n\t\t\t\t},\n\t\t\t\t\"childminage\": {\n\t\t\t\t\t\"description\": \"Minimal
-    age of the child.\",\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t\"description\":
-    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"geographicarea\": {\n\t\t\t\t\t\"description\":
-    \"The geographic area associated with the audience.\",\n\t\t\t\t\t\"type\": \"administrativearea\"\n\t\t\t\t},\n\t\t\t\t\"healthcondition\":
-    {\n\t\t\t\t\t\"description\": \"Expectations for health conditions of target audience.\",\n\t\t\t\t\t\"type\":
-    \"medicalcondition\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\":
-    \"An image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t\"name\":
-    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
-    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t\"requiredgender\": {\n\t\t\t\t\t\"description\":
-    \"Audiences defined by a person\\'s gender.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"requiredmaxage\":
-    {\n\t\t\t\t\t\"description\": \"Audiences defined by a person\\'s maximum age.\",\n\t\t\t\t\t\"type\":
-    \"integer\"\n\t\t\t\t},\n\t\t\t\t\"requiredminage\": {\n\t\t\t\t\t\"description\":
-    \"Audiences defined by a person\\'s minimum age.\",\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
-    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
-    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
-    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"suggestedgender\":
-    {\n\t\t\t\t\t\"description\": \"The gender of the person or audience.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"suggestedmaxage\": {\n\t\t\t\t\t\"description\":
-    \"Maximal age recommended for viewing content.\",\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t\"suggestedminage\":
-    {\n\t\t\t\t\t\"description\": \"Minimal age recommended for viewing content.\",\n\t\t\t\t\t\"type\":
-    \"number\"\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"description\": \"URL of
-    the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Parent Audience API
+    description: A set of characteristics describing parents, who can be interested
+      in viewing some content.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: parent.audience.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /parent-audience/:
+      get:
+        summary: Get Parent Audience
+        description: Returns Parent Audience
+        operationId: getParentAudience
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ParentAudience'
+        tags:
+        - Parent Audience
+      post:
+        summary: Add Parent Audience
+        description: Add Parent Audience
+        operationId: addParentAudience
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: audiencetype
+          in: formData
+          description: The target group associated with a given audience (e.g. veterans,
+            car owners, musicians, etc.).
+          required: false
+          type: text
+        - name: childmaxage
+          in: formData
+          description: Maximal age of the child.
+          required: false
+          type: number
+        - name: childminage
+          in: formData
+          description: Minimal age of the child.
+          required: false
+          type: number
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: geographicarea
+          in: formData
+          description: The geographic area associated with the audience.
+          required: false
+          type: administrativearea
+        - name: healthcondition
+          in: formData
+          description: Expectations for health conditions of target audience.
+          required: false
+          type: medicalcondition
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: requiredgender
+          in: formData
+          description: Audiences defined by a person\'s gender.
+          required: false
+          type: text
+        - name: requiredmaxage
+          in: formData
+          description: Audiences defined by a person\'s maximum age.
+          required: false
+          type: integer
+        - name: requiredminage
+          in: formData
+          description: Audiences defined by a person\'s minimum age.
+          required: false
+          type: integer
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: suggestedgender
+          in: formData
+          description: The gender of the person or audience.
+          required: false
+          type: text
+        - name: suggestedmaxage
+          in: formData
+          description: Maximal age recommended for viewing content.
+          required: false
+          type: number
+        - name: suggestedminage
+          in: formData
+          description: Minimal age recommended for viewing content.
+          required: false
+          type: number
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ParentAudience'
+        tags:
+        - Parent Audience
+    /parent-audience/{id}/:
+      get:
+        summary: Get Parent Audience
+        description: Returns a single Parent Audience
+        operationId: getParentAudience
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ParentAudience'
+        tags:
+        - Parent Audience
+      put:
+        summary: Update Parent Audience
+        description: Update a single Parent Audience
+        operationId: updateParentAudienceItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: audiencetype
+          in: formData
+          description: The target group associated with a given audience (e.g. veterans,
+            car owners, musicians, etc.).
+          required: false
+          type: text
+        - name: childmaxage
+          in: formData
+          description: Maximal age of the child.
+          required: false
+          type: number
+        - name: childminage
+          in: formData
+          description: Minimal age of the child.
+          required: false
+          type: number
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: geographicarea
+          in: formData
+          description: The geographic area associated with the audience.
+          required: false
+          type: administrativearea
+        - name: healthcondition
+          in: formData
+          description: Expectations for health conditions of target audience.
+          required: false
+          type: medicalcondition
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: requiredgender
+          in: formData
+          description: Audiences defined by a person\'s gender.
+          required: false
+          type: text
+        - name: requiredmaxage
+          in: formData
+          description: Audiences defined by a person\'s maximum age.
+          required: false
+          type: integer
+        - name: requiredminage
+          in: formData
+          description: Audiences defined by a person\'s minimum age.
+          required: false
+          type: integer
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: suggestedgender
+          in: formData
+          description: The gender of the person or audience.
+          required: false
+          type: text
+        - name: suggestedmaxage
+          in: formData
+          description: Maximal age recommended for viewing content.
+          required: false
+          type: number
+        - name: suggestedminage
+          in: formData
+          description: Minimal age recommended for viewing content.
+          required: false
+          type: number
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ParentAudience'
+        tags:
+        - Parent Audience
+      delete:
+        summary: Parent Audience
+        description: Deletes a single Parent Audience
+        operationId: deleteParentAudience
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ParentAudience'
+        tags:
+        - Parent Audience
+  definitions:
+    ParentAudience:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        audiencetype:
+          description: The target group associated with a given audience (e.g. veterans,
+            car owners, musicians, etc.).
+          type: text
+        childmaxage:
+          description: Maximal age of the child.
+          type: number
+        childminage:
+          description: Minimal age of the child.
+          type: number
+        description:
+          description: A short description of the item.
+          type: text
+        geographicarea:
+          description: The geographic area associated with the audience.
+          type: administrativearea
+        healthcondition:
+          description: Expectations for health conditions of target audience.
+          type: medicalcondition
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        requiredgender:
+          description: Audiences defined by a person\'s gender.
+          type: text
+        requiredmaxage:
+          description: Audiences defined by a person\'s maximum age.
+          type: integer
+        requiredminage:
+          description: Audiences defined by a person\'s minimum age.
+          type: integer
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        suggestedgender:
+          description: The gender of the person or audience.
+          type: text
+        suggestedmaxage:
+          description: Maximal age recommended for viewing content.
+          type: number
+        suggestedminage:
+          description: Minimal age recommended for viewing content.
+          type: number
+        url:
+          description: URL of the item.
+          type: url

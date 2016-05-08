@@ -1,182 +1,359 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Opening Hours Specification
-    API\",\n\t\t\"description\": \"A structured value providing information about the
-    opening hours of a place or a certain service inside a place.\",\n\t\t\"termsOfService\":
-    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
-    \"opening.hours.specification.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
-    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/opening-hours-specification/\":
-    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Opening Hours Specification\",\n\t\t\t\t\"description\":
-    \"Returns Opening Hours Specification\",\n\t\t\t\t\"operationId\": \"getOpeningHoursSpecification\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/OpeningHoursSpecification\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Opening Hours Specification\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\":
-    \"Add Opening Hours Specification\",\n\t\t\t\t\"description\": \"Add Opening Hours
-    Specification\",\n\t\t\t\t\"operationId\": \"addOpeningHoursSpecification\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"closes\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The closing hour of the place or service
-    on the given day(s) of the week.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"time\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"dayofweek\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The day of the week for which these
-    opening hours are valid.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"dayofweek\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"hoursavailable\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The hours during which this service or contact is available. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"contactpoint or service\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
-    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"openinghoursspecification\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The opening hours of a certain place. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"opens\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The opening hour of the place or service
-    on the given day(s) of the week.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"time\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
-    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"validfrom\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    date when the item becomes valid.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"validthrough\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The end of the validity of offer, price
-    specification, or opening hours data.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/OpeningHoursSpecification\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Opening Hours Specification\"]\n\t\t\t}\n\t\t},\n\t\t\"/opening-hours-specification/{id}/\":
-    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Opening Hours Specification\",\n\t\t\t\t\"description\":
-    \"Returns a single Opening Hours Specification\",\n\t\t\t\t\"operationId\": \"getOpeningHoursSpecification\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/OpeningHoursSpecification\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Opening Hours Specification\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\":
-    \"Update Opening Hours Specification\",\n\t\t\t\t\"description\": \"Update a single
-    Opening Hours Specification\",\n\t\t\t\t\"operationId\": \"updateOpeningHoursSpecificationItem\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"closes\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The closing hour of the place or service
-    on the given day(s) of the week.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"time\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"dayofweek\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The day of the week for which these
-    opening hours are valid.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"dayofweek\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"hoursavailable\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The hours during which this service or contact is available. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"contactpoint or service\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
-    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"openinghoursspecification\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The opening hours of a certain place. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"opens\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The opening hour of the place or service
-    on the given day(s) of the week.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"time\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
-    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"validfrom\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    date when the item becomes valid.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"validthrough\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The end of the validity of offer, price
-    specification, or opening hours data.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/OpeningHoursSpecification\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Opening Hours Specification\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\":
-    \"Opening Hours Specification\",\n\t\t\t\t\"description\": \"Deletes a single Opening
-    Hours Specification\",\n\t\t\t\t\"operationId\": \"deleteOpeningHoursSpecification\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/OpeningHoursSpecification\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Opening Hours Specification\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"OpeningHoursSpecification\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
-    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"closes\":
-    {\n\t\t\t\t\t\"description\": \"The closing hour of the place or service on the
-    given day(s) of the week.\",\n\t\t\t\t\t\"type\": \"time\"\n\t\t\t\t},\n\t\t\t\t\"dayofweek\":
-    {\n\t\t\t\t\t\"description\": \"The day of the week for which these opening hours
-    are valid.\",\n\t\t\t\t\t\"type\": \"dayofweek\"\n\t\t\t\t},\n\t\t\t\t\"description\":
-    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"hoursavailable\": {\n\t\t\t\t\t\"description\":
-    \"The hours during which this service or contact is available. \",\n\t\t\t\t\t\"type\":
-    \"contactpoint or service\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\":
-    \"An image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"name\":
-    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"openinghoursspecification\":
-    {\n\t\t\t\t\t\"description\": \"The opening hours of a certain place. \",\n\t\t\t\t\t\"type\":
-    \"place\"\n\t\t\t\t},\n\t\t\t\t\"opens\": {\n\t\t\t\t\t\"description\": \"The opening
-    hour of the place or service on the given day(s) of the week.\",\n\t\t\t\t\t\"type\":
-    \"time\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
-    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
-    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
-    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"url\":
-    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"validfrom\":
-    {\n\t\t\t\t\t\"description\": \"The date when the item becomes valid.\",\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"validthrough\": {\n\t\t\t\t\t\"description\":
-    \"The end of the validity of offer, price specification, or opening hours data.\",\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Opening Hours Specification API
+    description: A structured value providing information about the opening hours of
+      a place or a certain service inside a place.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: opening.hours.specification.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /opening-hours-specification/:
+      get:
+        summary: Get Opening Hours Specification
+        description: Returns Opening Hours Specification
+        operationId: getOpeningHoursSpecification
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/OpeningHoursSpecification'
+        tags:
+        - Opening Hours Specification
+      post:
+        summary: Add Opening Hours Specification
+        description: Add Opening Hours Specification
+        operationId: addOpeningHoursSpecification
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: closes
+          in: formData
+          description: The closing hour of the place or service on the given day(s)
+            of the week.
+          required: false
+          type: time
+        - name: dayofweek
+          in: formData
+          description: The day of the week for which these opening hours are valid.
+          required: false
+          type: dayofweek
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: hoursavailable
+          in: formData
+          description: 'The hours during which this service or contact is available. '
+          required: false
+          type: contactpoint or service
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: openinghoursspecification
+          in: formData
+          description: 'The opening hours of a certain place. '
+          required: false
+          type: place
+        - name: opens
+          in: formData
+          description: The opening hour of the place or service on the given day(s)
+            of the week.
+          required: false
+          type: time
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: validfrom
+          in: formData
+          description: The date when the item becomes valid.
+          required: false
+          type: datetime
+        - name: validthrough
+          in: formData
+          description: The end of the validity of offer, price specification, or opening
+            hours data.
+          required: false
+          type: datetime
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/OpeningHoursSpecification'
+        tags:
+        - Opening Hours Specification
+    /opening-hours-specification/{id}/:
+      get:
+        summary: Get Opening Hours Specification
+        description: Returns a single Opening Hours Specification
+        operationId: getOpeningHoursSpecification
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/OpeningHoursSpecification'
+        tags:
+        - Opening Hours Specification
+      put:
+        summary: Update Opening Hours Specification
+        description: Update a single Opening Hours Specification
+        operationId: updateOpeningHoursSpecificationItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: closes
+          in: formData
+          description: The closing hour of the place or service on the given day(s)
+            of the week.
+          required: false
+          type: time
+        - name: dayofweek
+          in: formData
+          description: The day of the week for which these opening hours are valid.
+          required: false
+          type: dayofweek
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: hoursavailable
+          in: formData
+          description: 'The hours during which this service or contact is available. '
+          required: false
+          type: contactpoint or service
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: openinghoursspecification
+          in: formData
+          description: 'The opening hours of a certain place. '
+          required: false
+          type: place
+        - name: opens
+          in: formData
+          description: The opening hour of the place or service on the given day(s)
+            of the week.
+          required: false
+          type: time
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: validfrom
+          in: formData
+          description: The date when the item becomes valid.
+          required: false
+          type: datetime
+        - name: validthrough
+          in: formData
+          description: The end of the validity of offer, price specification, or opening
+            hours data.
+          required: false
+          type: datetime
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/OpeningHoursSpecification'
+        tags:
+        - Opening Hours Specification
+      delete:
+        summary: Opening Hours Specification
+        description: Deletes a single Opening Hours Specification
+        operationId: deleteOpeningHoursSpecification
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/OpeningHoursSpecification'
+        tags:
+        - Opening Hours Specification
+  definitions:
+    OpeningHoursSpecification:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        closes:
+          description: The closing hour of the place or service on the given day(s)
+            of the week.
+          type: time
+        dayofweek:
+          description: The day of the week for which these opening hours are valid.
+          type: dayofweek
+        description:
+          description: A short description of the item.
+          type: text
+        hoursavailable:
+          description: 'The hours during which this service or contact is available. '
+          type: contactpoint or service
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        name:
+          description: The name of the item.
+          type: text
+        openinghoursspecification:
+          description: 'The opening hours of a certain place. '
+          type: place
+        opens:
+          description: The opening hour of the place or service on the given day(s)
+            of the week.
+          type: time
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        url:
+          description: URL of the item.
+          type: url
+        validfrom:
+          description: The date when the item becomes valid.
+          type: datetime
+        validthrough:
+          description: The end of the validity of offer, price specification, or opening
+            hours data.
+          type: datetime

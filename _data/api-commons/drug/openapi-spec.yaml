@@ -1,472 +1,862 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Drug API\",\n\t\t\"description\":
-    \"A chemical or biologic substance, used as a medical therapy, that has a physiological
-    effect on an organism.\",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
-    \"v1\"\n\t},\n\t\"host\": \"drug.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
-    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/drug/\":
-    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Drug\",\n\t\t\t\t\"description\":
-    \"Returns Drug\",\n\t\t\t\t\"operationId\": \"getDrug\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/Drug\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Drug\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Drug\",\n\t\t\t\t\"description\":
-    \"Add Drug\",\n\t\t\t\t\"operationId\": \"addDrug\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\":
-    \"activeingredient\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An active ingredient, typically chemical compounds and/or biologic substances.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"administrationroute\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A route by which this drug may be administered, e.g. \\'oral\\'.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"adverseoutcome\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A possible complication and/or side effect of this therapy. If it is known that
-    an adverse outcome is serious (resulting in death, disability, or permanent damage;
-    requiring hospitalization; or is otherwise life-threatening or requires immediate
-    medical attention), tag it as a seriouseAdverseOutcome instead.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalentity\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"affectedby\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Drugs
-    that affect the test\\'s results. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicaltest\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alcoholwarning\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Any precaution, guidance, contraindication,
-    etc. related to consumption of alcohol while taking this drug.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"availablestrength\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An available dosage strength for the
-    drug.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"drugstrength\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"breastfeedingwarning\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Any precaution, guidance, contraindication, etc. related to this drug\\'s use
-    by breastfeeding mothers.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"clinicalpharmacology\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Description of the absorption and elimination
-    of drugs, including their concentration (pharmacokinetics, pK) and biological effects
-    (pharmacodynamics, pD). Supersedes clincalPharmacology.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"code\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
-    code for the entity, taken from a controlled vocabulary or ontology such as ICD-9,
-    DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"contraindication\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A contraindication for this therapy.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalcontraindication\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"cost\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Cost per
-    unit of the drug, as reported by the source being tagged.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drugcost\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"dosageform\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A dosage form in which this drug/supplement
-    is available, e.g. \\'tablet\\', \\'suspension\\', \\'injection\\'.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"doseschedule\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    dosing schedule for the drug for a given population, either observed, recommended,
-    or maximum dose based on the type used.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"doseschedule\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"drug\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A drug in this drug class. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drugclass\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"drugclass\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    class of drug this belongs to (e.g., statins).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"drugclass\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"duplicatetherapy\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A therapy that duplicates or overlaps
-    this one.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicaltherapy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"foodwarning\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Any
-    precaution, guidance, contraindication, etc. related to consumption of specific
-    foods while taking this drug.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"guideline\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A medical guideline related to this
-    entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"indication\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    factor that indicates use of this therapy for treatment and/or prevention of a condition,
-    symptom, etc. For therapies such as drugs, indications can include both officially-approved
-    indications as well as off-label uses. These can be distinguished by using the ApprovedIndication
-    subtype of MedicalIndication.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalindication\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"interactingdrug\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Another drug that is known to interact
-    with this drug in a way that impacts the effect of this drug or causes a risk to
-    the patient. Note: disease interactions are typically captured as contraindications.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drug\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"isavailablegenerically\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"True if the drug is available in a generic form (regardless of name).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"isproprietary\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"True if this item\\'s name is a proprietary/brand name (vs. generic name).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"labeldetails\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Link
-    to the drug\\'s label details.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"legalstatus\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The drug or supplement\\'s legal status,
-    including any controlled substance schedules that apply.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"druglegalstatus\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"manufacturer\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    manufacturer of the product.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mechanismofaction\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The specific biochemical interaction
-    through which this drug or supplement produces its pharmacological effect.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"medicinesystem\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\',
-    \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"nonproprietaryname\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The generic name of this drug or supplement.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"overdosage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Any information related to overdose
-    on a drug, including signs or symptoms, treatments, contact information for emergency
-    response.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"pregnancycategory\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Pregnancy category of this drug.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drugpregnancycategory\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"pregnancywarning\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Any precaution, guidance, contraindication, etc. related to this drug\\'s use
-    during pregnancy.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"prescribinginfo\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Link to prescribing information for the drug.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"prescriptionstatus\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates whether this drug is available
-    by prescription or over-the-counter.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"drugprescriptionstatus\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
-    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"relateddrug\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Any
-    other drug related to this one, for example commonly-prescribed alternatives.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drug\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"relevantspecialty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"seriousadverseoutcome\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A possible serious complication and/or serious side effect of this therapy. Serious
-    adverse outcomes include those that are life-threatening; result in death, disability,
-    or permanent damage; require hospitalization or prolong existing hospitalization;
-    cause congenital anomalies or birth defects; or jeopardize the patient and may require
-    medical or surgical intervention to prevent one of the outcomes in this definition.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalentity\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"study\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
-    study or trial related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"warning\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Any
-    FDA or other warnings about the drug (text or URL).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text or  url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/Drug\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Drug\"]\n\t\t\t}\n\t\t},\n\t\t\"/drug/{id}/\": {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\":
-    \"Get Drug\",\n\t\t\t\t\"description\": \"Returns a single Drug\",\n\t\t\t\t\"operationId\":
-    \"getDrug\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/Drug\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Drug\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update Drug\",\n\t\t\t\t\"description\":
-    \"Update a single Drug\",\n\t\t\t\t\"operationId\": \"updateDrugItem\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"activeingredient\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An active ingredient, typically chemical compounds and/or biologic substances.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"administrationroute\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A route by which this drug may be administered, e.g. \\'oral\\'.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"adverseoutcome\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A possible complication and/or side effect of this therapy. If it is known that
-    an adverse outcome is serious (resulting in death, disability, or permanent damage;
-    requiring hospitalization; or is otherwise life-threatening or requires immediate
-    medical attention), tag it as a seriouseAdverseOutcome instead.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalentity\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"affectedby\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Drugs
-    that affect the test\\'s results. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicaltest\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alcoholwarning\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Any precaution, guidance, contraindication,
-    etc. related to consumption of alcohol while taking this drug.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"availablestrength\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An available dosage strength for the
-    drug.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"drugstrength\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"breastfeedingwarning\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Any precaution, guidance, contraindication, etc. related to this drug\\'s use
-    by breastfeeding mothers.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"clinicalpharmacology\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Description of the absorption and elimination
-    of drugs, including their concentration (pharmacokinetics, pK) and biological effects
-    (pharmacodynamics, pD). Supersedes clincalPharmacology.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"code\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
-    code for the entity, taken from a controlled vocabulary or ontology such as ICD-9,
-    DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"contraindication\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A contraindication for this therapy.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalcontraindication\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"cost\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Cost per
-    unit of the drug, as reported by the source being tagged.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drugcost\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"dosageform\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A dosage form in which this drug/supplement
-    is available, e.g. \\'tablet\\', \\'suspension\\', \\'injection\\'.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"doseschedule\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    dosing schedule for the drug for a given population, either observed, recommended,
-    or maximum dose based on the type used.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"doseschedule\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"drug\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A drug in this drug class. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drugclass\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"drugclass\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    class of drug this belongs to (e.g., statins).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"drugclass\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"duplicatetherapy\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A therapy that duplicates or overlaps
-    this one.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicaltherapy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"foodwarning\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Any
-    precaution, guidance, contraindication, etc. related to consumption of specific
-    foods while taking this drug.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"guideline\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A medical guideline related to this
-    entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"indication\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    factor that indicates use of this therapy for treatment and/or prevention of a condition,
-    symptom, etc. For therapies such as drugs, indications can include both officially-approved
-    indications as well as off-label uses. These can be distinguished by using the ApprovedIndication
-    subtype of MedicalIndication.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalindication\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"interactingdrug\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Another drug that is known to interact
-    with this drug in a way that impacts the effect of this drug or causes a risk to
-    the patient. Note: disease interactions are typically captured as contraindications.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drug\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"isavailablegenerically\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"True if the drug is available in a generic form (regardless of name).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"isproprietary\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"True if this item\\'s name is a proprietary/brand name (vs. generic name).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"labeldetails\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Link
-    to the drug\\'s label details.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"legalstatus\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The drug or supplement\\'s legal status,
-    including any controlled substance schedules that apply.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"druglegalstatus\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"manufacturer\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    manufacturer of the product.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mechanismofaction\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The specific biochemical interaction
-    through which this drug or supplement produces its pharmacological effect.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"medicinesystem\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\',
-    \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"nonproprietaryname\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The generic name of this drug or supplement.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"overdosage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Any information related to overdose
-    on a drug, including signs or symptoms, treatments, contact information for emergency
-    response.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"pregnancycategory\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Pregnancy category of this drug.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drugpregnancycategory\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"pregnancywarning\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Any precaution, guidance, contraindication, etc. related to this drug\\'s use
-    during pregnancy.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"prescribinginfo\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Link to prescribing information for the drug.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"prescriptionstatus\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates whether this drug is available
-    by prescription or over-the-counter.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"drugprescriptionstatus\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
-    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"relateddrug\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Any
-    other drug related to this one, for example commonly-prescribed alternatives.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drug\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"relevantspecialty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"seriousadverseoutcome\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A possible serious complication and/or serious side effect of this therapy. Serious
-    adverse outcomes include those that are life-threatening; result in death, disability,
-    or permanent damage; require hospitalization or prolong existing hospitalization;
-    cause congenital anomalies or birth defects; or jeopardize the patient and may require
-    medical or surgical intervention to prevent one of the outcomes in this definition.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalentity\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"study\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
-    study or trial related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"warning\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Any
-    FDA or other warnings about the drug (text or URL).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text or  url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/Drug\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Drug\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Drug\",\n\t\t\t\t\"description\":
-    \"Deletes a single Drug\",\n\t\t\t\t\"operationId\": \"deleteDrug\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/Drug\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Drug\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"Drug\": {\n\t\t\t\"properties\":
-    {\n\t\t\t\t\"activeingredient\": {\n\t\t\t\t\t\"description\": \"An active ingredient,
-    typically chemical compounds and/or biologic substances.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"administrationroute\": {\n\t\t\t\t\t\"description\":
-    \"A route by which this drug may be administered, e.g. \\'oral\\'.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"adverseoutcome\": {\n\t\t\t\t\t\"description\":
-    \"A possible complication and/or side effect of this therapy. If it is known that
-    an adverse outcome is serious (resulting in death, disability, or permanent damage;
-    requiring hospitalization; or is otherwise life-threatening or requires immediate
-    medical attention), tag it as a seriouseAdverseOutcome instead.\",\n\t\t\t\t\t\"type\":
-    \"medicalentity\"\n\t\t\t\t},\n\t\t\t\t\"affectedby\": {\n\t\t\t\t\t\"description\":
-    \"Drugs that affect the test\\'s results. \",\n\t\t\t\t\t\"type\": \"medicaltest\"\n\t\t\t\t},\n\t\t\t\t\"alcoholwarning\":
-    {\n\t\t\t\t\t\"description\": \"Any precaution, guidance, contraindication, etc.
-    related to consumption of alcohol while taking this drug.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
-    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"availablestrength\":
-    {\n\t\t\t\t\t\"description\": \"An available dosage strength for the drug.\",\n\t\t\t\t\t\"type\":
-    \"drugstrength\"\n\t\t\t\t},\n\t\t\t\t\"breastfeedingwarning\": {\n\t\t\t\t\t\"description\":
-    \"Any precaution, guidance, contraindication, etc. related to this drug\\'s use
-    by breastfeeding mothers.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"clinicalpharmacology\":
-    {\n\t\t\t\t\t\"description\": \"Description of the absorption and elimination of
-    drugs, including their concentration (pharmacokinetics, pK) and biological effects
-    (pharmacodynamics, pD). Supersedes clincalPharmacology.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"code\": {\n\t\t\t\t\t\"description\": \"A medical
-    code for the entity, taken from a controlled vocabulary or ontology such as ICD-9,
-    DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"type\": \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t\"contraindication\":
-    {\n\t\t\t\t\t\"description\": \"A contraindication for this therapy.\",\n\t\t\t\t\t\"type\":
-    \"medicalcontraindication\"\n\t\t\t\t},\n\t\t\t\t\"cost\": {\n\t\t\t\t\t\"description\":
-    \"Cost per unit of the drug, as reported by the source being tagged.\",\n\t\t\t\t\t\"type\":
-    \"drugcost\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\":
-    \"A short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"dosageform\":
-    {\n\t\t\t\t\t\"description\": \"A dosage form in which this drug/supplement is available,
-    e.g. \\'tablet\\', \\'suspension\\', \\'injection\\'.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"doseschedule\":
-    {\n\t\t\t\t\t\"description\": \"A dosing schedule for the drug for a given population,
-    either observed, recommended, or maximum dose based on the type used.\",\n\t\t\t\t\t\"type\":
-    \"doseschedule\"\n\t\t\t\t},\n\t\t\t\t\"drug\": {\n\t\t\t\t\t\"description\": \"A
-    drug in this drug class. \",\n\t\t\t\t\t\"type\": \"drugclass\"\n\t\t\t\t},\n\t\t\t\t\"drugclass\":
-    {\n\t\t\t\t\t\"description\": \"The class of drug this belongs to (e.g., statins).\",\n\t\t\t\t\t\"type\":
-    \"drugclass\"\n\t\t\t\t},\n\t\t\t\t\"duplicatetherapy\": {\n\t\t\t\t\t\"description\":
-    \"A therapy that duplicates or overlaps this one.\",\n\t\t\t\t\t\"type\": \"medicaltherapy\"\n\t\t\t\t},\n\t\t\t\t\"foodwarning\":
-    {\n\t\t\t\t\t\"description\": \"Any precaution, guidance, contraindication, etc.
-    related to consumption of specific foods while taking this drug.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"guideline\": {\n\t\t\t\t\t\"description\": \"A medical
-    guideline related to this entity.\",\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t\"image\":
-    {\n\t\t\t\t\t\"description\": \"An image of the item. This can be a URL or a fully
-    described ImageObject.\",\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"indication\":
-    {\n\t\t\t\t\t\"description\": \"A factor that indicates use of this therapy for
-    treatment and/or prevention of a condition, symptom, etc. For therapies such as
-    drugs, indications can include both officially-approved indications as well as off-label
-    uses. These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.\",\n\t\t\t\t\t\"type\":
-    \"medicalindication\"\n\t\t\t\t},\n\t\t\t\t\"interactingdrug\": {\n\t\t\t\t\t\"description\":
-    \"Another drug that is known to interact with this drug in a way that impacts the
-    effect of this drug or causes a risk to the patient. Note: disease interactions
-    are typically captured as contraindications.\",\n\t\t\t\t\t\"type\": \"drug\"\n\t\t\t\t},\n\t\t\t\t\"isavailablegenerically\":
-    {\n\t\t\t\t\t\"description\": \"True if the drug is available in a generic form
-    (regardless of name).\",\n\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t},\n\t\t\t\t\"isproprietary\":
-    {\n\t\t\t\t\t\"description\": \"True if this item\\'s name is a proprietary/brand
-    name (vs. generic name).\",\n\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t},\n\t\t\t\t\"labeldetails\":
-    {\n\t\t\t\t\t\"description\": \"Link to the drug\\'s label details.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"legalstatus\": {\n\t\t\t\t\t\"description\": \"The
-    drug or supplement\\'s legal status, including any controlled substance schedules
-    that apply.\",\n\t\t\t\t\t\"type\": \"druglegalstatus\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork) for which
-    this thing is the main entity being described.            See background notes for
-    details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t\"manufacturer\":
-    {\n\t\t\t\t\t\"description\": \"The manufacturer of the product.\",\n\t\t\t\t\t\"type\":
-    \"organization\"\n\t\t\t\t},\n\t\t\t\t\"mechanismofaction\": {\n\t\t\t\t\t\"description\":
-    \"The specific biochemical interaction through which this drug or supplement produces
-    its pharmacological effect.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"medicinesystem\":
-    {\n\t\t\t\t\t\"description\": \"The system of medicine that includes this MedicalEntity,
-    for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"type\":
-    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\":
-    \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"nonproprietaryname\":
-    {\n\t\t\t\t\t\"description\": \"The generic name of this drug or supplement.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"overdosage\": {\n\t\t\t\t\t\"description\": \"Any
-    information related to overdose on a drug, including signs or symptoms, treatments,
-    contact information for emergency response.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
-    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t\"pregnancycategory\": {\n\t\t\t\t\t\"description\":
-    \"Pregnancy category of this drug.\",\n\t\t\t\t\t\"type\": \"drugpregnancycategory\"\n\t\t\t\t},\n\t\t\t\t\"pregnancywarning\":
-    {\n\t\t\t\t\t\"description\": \"Any precaution, guidance, contraindication, etc.
-    related to this drug\\'s use during pregnancy.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"prescribinginfo\":
-    {\n\t\t\t\t\t\"description\": \"Link to prescribing information for the drug.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"prescriptionstatus\": {\n\t\t\t\t\t\"description\":
-    \"Indicates whether this drug is available by prescription or over-the-counter.\",\n\t\t\t\t\t\"type\":
-    \"drugprescriptionstatus\"\n\t\t\t\t},\n\t\t\t\t\"recognizingauthority\": {\n\t\t\t\t\t\"description\":
-    \"If applicable, the organization that officially recognizes this entity as part
-    of its endorsed system of medicine.\",\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t\"relateddrug\":
-    {\n\t\t\t\t\t\"description\": \"Any other drug related to this one, for example
-    commonly-prescribed alternatives.\",\n\t\t\t\t\t\"type\": \"drug\"\n\t\t\t\t},\n\t\t\t\t\"relevantspecialty\":
-    {\n\t\t\t\t\t\"description\": \"If applicable, a medical specialty in which this
-    entity is relevant.\",\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
-    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
-    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
-    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"seriousadverseoutcome\":
-    {\n\t\t\t\t\t\"description\": \"A possible serious complication and/or serious side
-    effect of this therapy. Serious adverse outcomes include those that are life-threatening;
-    result in death, disability, or permanent damage; require hospitalization or prolong
-    existing hospitalization; cause congenital anomalies or birth defects; or jeopardize
-    the patient and may require medical or surgical intervention to prevent one of the
-    outcomes in this definition.\",\n\t\t\t\t\t\"type\": \"medicalentity\"\n\t\t\t\t},\n\t\t\t\t\"study\":
-    {\n\t\t\t\t\t\"description\": \"A medical study or trial related to this entity.\",\n\t\t\t\t\t\"type\":
-    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t\"url\": {\n\t\t\t\t\t\"description\": \"URL
-    of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"warning\": {\n\t\t\t\t\t\"description\":
-    \"Any FDA or other warnings about the drug (text or URL).\",\n\t\t\t\t\t\"type\":
-    \"text or  url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Drug API
+    description: A chemical or biologic substance, used as a medical therapy, that has
+      a physiological effect on an organism.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: drug.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /drug/:
+      get:
+        summary: Get Drug
+        description: Returns Drug
+        operationId: getDrug
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Drug'
+        tags:
+        - Drug
+      post:
+        summary: Add Drug
+        description: Add Drug
+        operationId: addDrug
+        parameters:
+        - name: activeingredient
+          in: formData
+          description: An active ingredient, typically chemical compounds and/or biologic
+            substances.
+          required: false
+          type: text
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: administrationroute
+          in: formData
+          description: A route by which this drug may be administered, e.g. \'oral\'.
+          required: false
+          type: text
+        - name: adverseoutcome
+          in: formData
+          description: A possible complication and/or side effect of this therapy. If
+            it is known that an adverse outcome is serious (resulting in death, disability,
+            or permanent damage; requiring hospitalization; or is otherwise life-threatening
+            or requires immediate medical attention), tag it as a seriouseAdverseOutcome
+            instead.
+          required: false
+          type: medicalentity
+        - name: affectedby
+          in: formData
+          description: 'Drugs that affect the test\''s results. '
+          required: false
+          type: medicaltest
+        - name: alcoholwarning
+          in: formData
+          description: Any precaution, guidance, contraindication, etc. related to consumption
+            of alcohol while taking this drug.
+          required: false
+          type: text
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: availablestrength
+          in: formData
+          description: An available dosage strength for the drug.
+          required: false
+          type: drugstrength
+        - name: breastfeedingwarning
+          in: formData
+          description: Any precaution, guidance, contraindication, etc. related to this
+            drug\'s use by breastfeeding mothers.
+          required: false
+          type: text
+        - name: clinicalpharmacology
+          in: formData
+          description: Description of the absorption and elimination of drugs, including
+            their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics,
+            pD). Supersedes clincalPharmacology.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: contraindication
+          in: formData
+          description: A contraindication for this therapy.
+          required: false
+          type: medicalcontraindication
+        - name: cost
+          in: formData
+          description: Cost per unit of the drug, as reported by the source being tagged.
+          required: false
+          type: drugcost
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: dosageform
+          in: formData
+          description: A dosage form in which this drug/supplement is available, e.g.
+            \'tablet\', \'suspension\', \'injection\'.
+          required: false
+          type: text
+        - name: doseschedule
+          in: formData
+          description: A dosing schedule for the drug for a given population, either
+            observed, recommended, or maximum dose based on the type used.
+          required: false
+          type: doseschedule
+        - name: drug
+          in: formData
+          description: 'A drug in this drug class. '
+          required: false
+          type: drugclass
+        - name: drugclass
+          in: formData
+          description: The class of drug this belongs to (e.g., statins).
+          required: false
+          type: drugclass
+        - name: duplicatetherapy
+          in: formData
+          description: A therapy that duplicates or overlaps this one.
+          required: false
+          type: medicaltherapy
+        - name: foodwarning
+          in: formData
+          description: Any precaution, guidance, contraindication, etc. related to consumption
+            of specific foods while taking this drug.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: indication
+          in: formData
+          description: A factor that indicates use of this therapy for treatment and/or
+            prevention of a condition, symptom, etc. For therapies such as drugs, indications
+            can include both officially-approved indications as well as off-label uses.
+            These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.
+          required: false
+          type: medicalindication
+        - name: interactingdrug
+          in: formData
+          description: 'Another drug that is known to interact with this drug in a way
+            that impacts the effect of this drug or causes a risk to the patient. Note:
+            disease interactions are typically captured as contraindications.'
+          required: false
+          type: drug
+        - name: isavailablegenerically
+          in: formData
+          description: True if the drug is available in a generic form (regardless of
+            name).
+          required: false
+          type: boolean
+        - name: isproprietary
+          in: formData
+          description: True if this item\'s name is a proprietary/brand name (vs. generic
+            name).
+          required: false
+          type: boolean
+        - name: labeldetails
+          in: formData
+          description: Link to the drug\'s label details.
+          required: false
+          type: url
+        - name: legalstatus
+          in: formData
+          description: The drug or supplement\'s legal status, including any controlled
+            substance schedules that apply.
+          required: false
+          type: druglegalstatus
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: manufacturer
+          in: formData
+          description: The manufacturer of the product.
+          required: false
+          type: organization
+        - name: mechanismofaction
+          in: formData
+          description: The specific biochemical interaction through which this drug
+            or supplement produces its pharmacological effect.
+          required: false
+          type: text
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: nonproprietaryname
+          in: formData
+          description: The generic name of this drug or supplement.
+          required: false
+          type: text
+        - name: overdosage
+          in: formData
+          description: Any information related to overdose on a drug, including signs
+            or symptoms, treatments, contact information for emergency response.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: pregnancycategory
+          in: formData
+          description: Pregnancy category of this drug.
+          required: false
+          type: drugpregnancycategory
+        - name: pregnancywarning
+          in: formData
+          description: Any precaution, guidance, contraindication, etc. related to this
+            drug\'s use during pregnancy.
+          required: false
+          type: text
+        - name: prescribinginfo
+          in: formData
+          description: Link to prescribing information for the drug.
+          required: false
+          type: url
+        - name: prescriptionstatus
+          in: formData
+          description: Indicates whether this drug is available by prescription or over-the-counter.
+          required: false
+          type: drugprescriptionstatus
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relateddrug
+          in: formData
+          description: Any other drug related to this one, for example commonly-prescribed
+            alternatives.
+          required: false
+          type: drug
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: seriousadverseoutcome
+          in: formData
+          description: A possible serious complication and/or serious side effect of
+            this therapy. Serious adverse outcomes include those that are life-threatening;
+            result in death, disability, or permanent damage; require hospitalization
+            or prolong existing hospitalization; cause congenital anomalies or birth
+            defects; or jeopardize the patient and may require medical or surgical intervention
+            to prevent one of the outcomes in this definition.
+          required: false
+          type: medicalentity
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: warning
+          in: formData
+          description: Any FDA or other warnings about the drug (text or URL).
+          required: false
+          type: text or  url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Drug'
+        tags:
+        - Drug
+    /drug/{id}/:
+      get:
+        summary: Get Drug
+        description: Returns a single Drug
+        operationId: getDrug
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Drug'
+        tags:
+        - Drug
+      put:
+        summary: Update Drug
+        description: Update a single Drug
+        operationId: updateDrugItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: activeingredient
+          in: formData
+          description: An active ingredient, typically chemical compounds and/or biologic
+            substances.
+          required: false
+          type: text
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: administrationroute
+          in: formData
+          description: A route by which this drug may be administered, e.g. \'oral\'.
+          required: false
+          type: text
+        - name: adverseoutcome
+          in: formData
+          description: A possible complication and/or side effect of this therapy. If
+            it is known that an adverse outcome is serious (resulting in death, disability,
+            or permanent damage; requiring hospitalization; or is otherwise life-threatening
+            or requires immediate medical attention), tag it as a seriouseAdverseOutcome
+            instead.
+          required: false
+          type: medicalentity
+        - name: affectedby
+          in: formData
+          description: 'Drugs that affect the test\''s results. '
+          required: false
+          type: medicaltest
+        - name: alcoholwarning
+          in: formData
+          description: Any precaution, guidance, contraindication, etc. related to consumption
+            of alcohol while taking this drug.
+          required: false
+          type: text
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: availablestrength
+          in: formData
+          description: An available dosage strength for the drug.
+          required: false
+          type: drugstrength
+        - name: breastfeedingwarning
+          in: formData
+          description: Any precaution, guidance, contraindication, etc. related to this
+            drug\'s use by breastfeeding mothers.
+          required: false
+          type: text
+        - name: clinicalpharmacology
+          in: formData
+          description: Description of the absorption and elimination of drugs, including
+            their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics,
+            pD). Supersedes clincalPharmacology.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: contraindication
+          in: formData
+          description: A contraindication for this therapy.
+          required: false
+          type: medicalcontraindication
+        - name: cost
+          in: formData
+          description: Cost per unit of the drug, as reported by the source being tagged.
+          required: false
+          type: drugcost
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: dosageform
+          in: formData
+          description: A dosage form in which this drug/supplement is available, e.g.
+            \'tablet\', \'suspension\', \'injection\'.
+          required: false
+          type: text
+        - name: doseschedule
+          in: formData
+          description: A dosing schedule for the drug for a given population, either
+            observed, recommended, or maximum dose based on the type used.
+          required: false
+          type: doseschedule
+        - name: drug
+          in: formData
+          description: 'A drug in this drug class. '
+          required: false
+          type: drugclass
+        - name: drugclass
+          in: formData
+          description: The class of drug this belongs to (e.g., statins).
+          required: false
+          type: drugclass
+        - name: duplicatetherapy
+          in: formData
+          description: A therapy that duplicates or overlaps this one.
+          required: false
+          type: medicaltherapy
+        - name: foodwarning
+          in: formData
+          description: Any precaution, guidance, contraindication, etc. related to consumption
+            of specific foods while taking this drug.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: indication
+          in: formData
+          description: A factor that indicates use of this therapy for treatment and/or
+            prevention of a condition, symptom, etc. For therapies such as drugs, indications
+            can include both officially-approved indications as well as off-label uses.
+            These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.
+          required: false
+          type: medicalindication
+        - name: interactingdrug
+          in: formData
+          description: 'Another drug that is known to interact with this drug in a way
+            that impacts the effect of this drug or causes a risk to the patient. Note:
+            disease interactions are typically captured as contraindications.'
+          required: false
+          type: drug
+        - name: isavailablegenerically
+          in: formData
+          description: True if the drug is available in a generic form (regardless of
+            name).
+          required: false
+          type: boolean
+        - name: isproprietary
+          in: formData
+          description: True if this item\'s name is a proprietary/brand name (vs. generic
+            name).
+          required: false
+          type: boolean
+        - name: labeldetails
+          in: formData
+          description: Link to the drug\'s label details.
+          required: false
+          type: url
+        - name: legalstatus
+          in: formData
+          description: The drug or supplement\'s legal status, including any controlled
+            substance schedules that apply.
+          required: false
+          type: druglegalstatus
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: manufacturer
+          in: formData
+          description: The manufacturer of the product.
+          required: false
+          type: organization
+        - name: mechanismofaction
+          in: formData
+          description: The specific biochemical interaction through which this drug
+            or supplement produces its pharmacological effect.
+          required: false
+          type: text
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: nonproprietaryname
+          in: formData
+          description: The generic name of this drug or supplement.
+          required: false
+          type: text
+        - name: overdosage
+          in: formData
+          description: Any information related to overdose on a drug, including signs
+            or symptoms, treatments, contact information for emergency response.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: pregnancycategory
+          in: formData
+          description: Pregnancy category of this drug.
+          required: false
+          type: drugpregnancycategory
+        - name: pregnancywarning
+          in: formData
+          description: Any precaution, guidance, contraindication, etc. related to this
+            drug\'s use during pregnancy.
+          required: false
+          type: text
+        - name: prescribinginfo
+          in: formData
+          description: Link to prescribing information for the drug.
+          required: false
+          type: url
+        - name: prescriptionstatus
+          in: formData
+          description: Indicates whether this drug is available by prescription or over-the-counter.
+          required: false
+          type: drugprescriptionstatus
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relateddrug
+          in: formData
+          description: Any other drug related to this one, for example commonly-prescribed
+            alternatives.
+          required: false
+          type: drug
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: seriousadverseoutcome
+          in: formData
+          description: A possible serious complication and/or serious side effect of
+            this therapy. Serious adverse outcomes include those that are life-threatening;
+            result in death, disability, or permanent damage; require hospitalization
+            or prolong existing hospitalization; cause congenital anomalies or birth
+            defects; or jeopardize the patient and may require medical or surgical intervention
+            to prevent one of the outcomes in this definition.
+          required: false
+          type: medicalentity
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: warning
+          in: formData
+          description: Any FDA or other warnings about the drug (text or URL).
+          required: false
+          type: text or  url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Drug'
+        tags:
+        - Drug
+      delete:
+        summary: Drug
+        description: Deletes a single Drug
+        operationId: deleteDrug
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Drug'
+        tags:
+        - Drug
+  definitions:
+    Drug:
+      properties:
+        activeingredient:
+          description: An active ingredient, typically chemical compounds and/or biologic
+            substances.
+          type: text
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        administrationroute:
+          description: A route by which this drug may be administered, e.g. \'oral\'.
+          type: text
+        adverseoutcome:
+          description: A possible complication and/or side effect of this therapy. If
+            it is known that an adverse outcome is serious (resulting in death, disability,
+            or permanent damage; requiring hospitalization; or is otherwise life-threatening
+            or requires immediate medical attention), tag it as a seriouseAdverseOutcome
+            instead.
+          type: medicalentity
+        affectedby:
+          description: 'Drugs that affect the test\''s results. '
+          type: medicaltest
+        alcoholwarning:
+          description: Any precaution, guidance, contraindication, etc. related to consumption
+            of alcohol while taking this drug.
+          type: text
+        alternatename:
+          description: An alias for the item.
+          type: text
+        availablestrength:
+          description: An available dosage strength for the drug.
+          type: drugstrength
+        breastfeedingwarning:
+          description: Any precaution, guidance, contraindication, etc. related to this
+            drug\'s use by breastfeeding mothers.
+          type: text
+        clinicalpharmacology:
+          description: Description of the absorption and elimination of drugs, including
+            their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics,
+            pD). Supersedes clincalPharmacology.
+          type: text
+        code:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+        contraindication:
+          description: A contraindication for this therapy.
+          type: medicalcontraindication
+        cost:
+          description: Cost per unit of the drug, as reported by the source being tagged.
+          type: drugcost
+        description:
+          description: A short description of the item.
+          type: text
+        dosageform:
+          description: A dosage form in which this drug/supplement is available, e.g.
+            \'tablet\', \'suspension\', \'injection\'.
+          type: text
+        doseschedule:
+          description: A dosing schedule for the drug for a given population, either
+            observed, recommended, or maximum dose based on the type used.
+          type: doseschedule
+        drug:
+          description: 'A drug in this drug class. '
+          type: drugclass
+        drugclass:
+          description: The class of drug this belongs to (e.g., statins).
+          type: drugclass
+        duplicatetherapy:
+          description: A therapy that duplicates or overlaps this one.
+          type: medicaltherapy
+        foodwarning:
+          description: Any precaution, guidance, contraindication, etc. related to consumption
+            of specific foods while taking this drug.
+          type: text
+        guideline:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        indication:
+          description: A factor that indicates use of this therapy for treatment and/or
+            prevention of a condition, symptom, etc. For therapies such as drugs, indications
+            can include both officially-approved indications as well as off-label uses.
+            These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.
+          type: medicalindication
+        interactingdrug:
+          description: 'Another drug that is known to interact with this drug in a way
+            that impacts the effect of this drug or causes a risk to the patient. Note:
+            disease interactions are typically captured as contraindications.'
+          type: drug
+        isavailablegenerically:
+          description: True if the drug is available in a generic form (regardless of
+            name).
+          type: boolean
+        isproprietary:
+          description: True if this item\'s name is a proprietary/brand name (vs. generic
+            name).
+          type: boolean
+        labeldetails:
+          description: Link to the drug\'s label details.
+          type: url
+        legalstatus:
+          description: The drug or supplement\'s legal status, including any controlled
+            substance schedules that apply.
+          type: druglegalstatus
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        manufacturer:
+          description: The manufacturer of the product.
+          type: organization
+        mechanismofaction:
+          description: The specific biochemical interaction through which this drug
+            or supplement produces its pharmacological effect.
+          type: text
+        medicinesystem:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+        name:
+          description: The name of the item.
+          type: text
+        nonproprietaryname:
+          description: The generic name of this drug or supplement.
+          type: text
+        overdosage:
+          description: Any information related to overdose on a drug, including signs
+            or symptoms, treatments, contact information for emergency response.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        pregnancycategory:
+          description: Pregnancy category of this drug.
+          type: drugpregnancycategory
+        pregnancywarning:
+          description: Any precaution, guidance, contraindication, etc. related to this
+            drug\'s use during pregnancy.
+          type: text
+        prescribinginfo:
+          description: Link to prescribing information for the drug.
+          type: url
+        prescriptionstatus:
+          description: Indicates whether this drug is available by prescription or over-the-counter.
+          type: drugprescriptionstatus
+        recognizingauthority:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+        relateddrug:
+          description: Any other drug related to this one, for example commonly-prescribed
+            alternatives.
+          type: drug
+        relevantspecialty:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        seriousadverseoutcome:
+          description: A possible serious complication and/or serious side effect of
+            this therapy. Serious adverse outcomes include those that are life-threatening;
+            result in death, disability, or permanent damage; require hospitalization
+            or prolong existing hospitalization; cause congenital anomalies or birth
+            defects; or jeopardize the patient and may require medical or surgical intervention
+            to prevent one of the outcomes in this definition.
+          type: medicalentity
+        study:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+        url:
+          description: URL of the item.
+          type: url
+        warning:
+          description: Any FDA or other warnings about the drug (text or URL).
+          type: text or  url

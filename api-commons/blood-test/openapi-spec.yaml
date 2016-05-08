@@ -1,210 +1,410 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Blood Test API\",\n\t\t\"description\":
-    \"A medical test performed on a sample of a patient\\'s blood.\",\n\t\t\"termsOfService\":
-    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
-    \"blood.test.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\":
-    [\"application/json\"],\n\t\"paths\": {\n\t\t\"/blood-test/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Blood Test\",\n\t\t\t\t\"description\": \"Returns
-    Blood Test\",\n\t\t\t\t\"operationId\": \"getBloodTest\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/BloodTest\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Blood Test\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Blood
-    Test\",\n\t\t\t\t\"description\": \"Add Blood Test\",\n\t\t\t\t\"operationId\":
-    \"addBloodTest\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
-    used for adding more specific types from external vocabularies in microdata syntax.
-    This is a relationship between something and a class that the thing is in. In RDFa
-    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
-    - for multiple types. Schema.org tools may have only weaker understanding of extra
-    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"affectedby\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Drugs that affect the test\\'s results.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"drug\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"code\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken
-    from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT,
-    RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"guideline\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A medical guideline related to this
-    entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
-    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"medicinesystem\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The system of medicine that includes
-    this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\',
-    etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"normalrange\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Range
-    of acceptable values for a typical patient, when applicable.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
-    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"relevantspecialty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"signdetected\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    sign detected by the test.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalsign\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"study\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A medical study or trial related to
-    this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"usedtodiagnose\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A condition the test is used to diagnose.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalcondition\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"usesdevice\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Device used to perform the test.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicaldevice\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/BloodTest\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Blood Test\"]\n\t\t\t}\n\t\t},\n\t\t\"/blood-test/{id}/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Blood Test\",\n\t\t\t\t\"description\": \"Returns
-    a single Blood Test\",\n\t\t\t\t\"operationId\": \"getBloodTest\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/BloodTest\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Blood Test\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update Blood
-    Test\",\n\t\t\t\t\"description\": \"Update a single Blood Test\",\n\t\t\t\t\"operationId\":
-    \"updateBloodTestItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"affectedby\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Drugs
-    that affect the test\\'s results.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"drug\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"code\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
-    code for the entity, taken from a controlled vocabulary or ontology such as ICD-9,
-    DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"guideline\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    medical guideline related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
-    for which this thing is the main entity being described.            See background
-    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"medicinesystem\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\',
-    \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"normalrange\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Range
-    of acceptable values for a typical patient, when applicable.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
-    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"relevantspecialty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"signdetected\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    sign detected by the test.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalsign\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"study\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A medical study or trial related to
-    this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"usedtodiagnose\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A condition the test is used to diagnose.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalcondition\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"usesdevice\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Device used to perform the test.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicaldevice\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/BloodTest\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Blood Test\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Blood Test\",\n\t\t\t\t\"description\":
-    \"Deletes a single Blood Test\",\n\t\t\t\t\"operationId\": \"deleteBloodTest\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/BloodTest\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Blood Test\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"BloodTest\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"affectedby\": {\n\t\t\t\t\t\"description\": \"Drugs
-    that affect the test\\'s results.\",\n\t\t\t\t\t\"type\": \"drug\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\":
-    {\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"code\":
-    {\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken from a controlled
-    vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"type\":
-    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\":
-    \"A short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"guideline\":
-    {\n\t\t\t\t\t\"description\": \"A medical guideline related to this entity.\",\n\t\t\t\t\t\"type\":
-    \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\":
-    \"An image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"medicinesystem\":
-    {\n\t\t\t\t\t\"description\": \"The system of medicine that includes this MedicalEntity,
-    for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"type\":
-    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\":
-    \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"normalrange\":
-    {\n\t\t\t\t\t\"description\": \"Range of acceptable values for a typical patient,
-    when applicable.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
-    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t\"recognizingauthority\": {\n\t\t\t\t\t\"description\":
-    \"If applicable, the organization that officially recognizes this entity as part
-    of its endorsed system of medicine.\",\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t\"relevantspecialty\":
-    {\n\t\t\t\t\t\"description\": \"If applicable, a medical specialty in which this
-    entity is relevant.\",\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
-    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
-    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
-    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"signdetected\":
-    {\n\t\t\t\t\t\"description\": \"A sign detected by the test.\",\n\t\t\t\t\t\"type\":
-    \"medicalsign\"\n\t\t\t\t},\n\t\t\t\t\"study\": {\n\t\t\t\t\t\"description\": \"A
-    medical study or trial related to this entity.\",\n\t\t\t\t\t\"type\": \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t\"url\":
-    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"usedtodiagnose\":
-    {\n\t\t\t\t\t\"description\": \"A condition the test is used to diagnose.\",\n\t\t\t\t\t\"type\":
-    \"medicalcondition\"\n\t\t\t\t},\n\t\t\t\t\"usesdevice\": {\n\t\t\t\t\t\"description\":
-    \"Device used to perform the test.\",\n\t\t\t\t\t\"type\": \"medicaldevice\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Blood Test API
+    description: A medical test performed on a sample of a patient\'s blood.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: blood.test.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /blood-test/:
+      get:
+        summary: Get Blood Test
+        description: Returns Blood Test
+        operationId: getBloodTest
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/BloodTest'
+        tags:
+        - Blood Test
+      post:
+        summary: Add Blood Test
+        description: Add Blood Test
+        operationId: addBloodTest
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: affectedby
+          in: formData
+          description: Drugs that affect the test\'s results.
+          required: false
+          type: drug
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: normalrange
+          in: formData
+          description: Range of acceptable values for a typical patient, when applicable.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: signdetected
+          in: formData
+          description: A sign detected by the test.
+          required: false
+          type: medicalsign
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: usedtodiagnose
+          in: formData
+          description: A condition the test is used to diagnose.
+          required: false
+          type: medicalcondition
+        - name: usesdevice
+          in: formData
+          description: Device used to perform the test.
+          required: false
+          type: medicaldevice
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/BloodTest'
+        tags:
+        - Blood Test
+    /blood-test/{id}/:
+      get:
+        summary: Get Blood Test
+        description: Returns a single Blood Test
+        operationId: getBloodTest
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/BloodTest'
+        tags:
+        - Blood Test
+      put:
+        summary: Update Blood Test
+        description: Update a single Blood Test
+        operationId: updateBloodTestItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: affectedby
+          in: formData
+          description: Drugs that affect the test\'s results.
+          required: false
+          type: drug
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: normalrange
+          in: formData
+          description: Range of acceptable values for a typical patient, when applicable.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: signdetected
+          in: formData
+          description: A sign detected by the test.
+          required: false
+          type: medicalsign
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: usedtodiagnose
+          in: formData
+          description: A condition the test is used to diagnose.
+          required: false
+          type: medicalcondition
+        - name: usesdevice
+          in: formData
+          description: Device used to perform the test.
+          required: false
+          type: medicaldevice
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/BloodTest'
+        tags:
+        - Blood Test
+      delete:
+        summary: Blood Test
+        description: Deletes a single Blood Test
+        operationId: deleteBloodTest
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/BloodTest'
+        tags:
+        - Blood Test
+  definitions:
+    BloodTest:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        affectedby:
+          description: Drugs that affect the test\'s results.
+          type: drug
+        alternatename:
+          description: An alias for the item.
+          type: text
+        code:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+        description:
+          description: A short description of the item.
+          type: text
+        guideline:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        medicinesystem:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+        name:
+          description: The name of the item.
+          type: text
+        normalrange:
+          description: Range of acceptable values for a typical patient, when applicable.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        recognizingauthority:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+        relevantspecialty:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        signdetected:
+          description: A sign detected by the test.
+          type: medicalsign
+        study:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+        url:
+          description: URL of the item.
+          type: url
+        usedtodiagnose:
+          description: A condition the test is used to diagnose.
+          type: medicalcondition
+        usesdevice:
+          description: Device used to perform the test.
+          type: medicaldevice

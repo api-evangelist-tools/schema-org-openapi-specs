@@ -1,191 +1,382 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Service Channel API\",\n\t\t\"description\":
-    \"A means for accessing a service, e.g. a government office location, web site,
-    or phone number.\",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
-    \"v1\"\n\t},\n\t\"host\": \"service.channel.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
-    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/service-channel/\":
-    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Service Channel\",\n\t\t\t\t\"description\":
-    \"Returns Service Channel\",\n\t\t\t\t\"operationId\": \"getServiceChannel\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/ServiceChannel\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Service Channel\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Service
-    Channel\",\n\t\t\t\t\"description\": \"Add Service Channel\",\n\t\t\t\t\"operationId\":
-    \"addServiceChannel\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
-    used for adding more specific types from external vocabularies in microdata syntax.
-    This is a relationship between something and a class that the thing is in. In RDFa
-    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
-    - for multiple types. Schema.org tools may have only weaker understanding of extra
-    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"availablechannel\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).
-    \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"service\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"availablelanguage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A language someone may use with the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"language\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"processingtime\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Estimated processing time for the service
-    using this channel.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"duration\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"providesservice\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The service provided by this channel.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"service\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
-    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
-    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"servicelocation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The location (e.g. civic structure,
-    local business, etc.) where a person can go to access the service.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"servicephone\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    phone number to use to access the service.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"contactpoint\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"servicepostaladdress\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The address for accessing the service
-    by mail.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"postaladdress\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"servicesmsnumber\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The number to access the service by text message.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"contactpoint\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"serviceurl\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    website to access the service.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ServiceChannel\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Service Channel\"]\n\t\t\t}\n\t\t},\n\t\t\"/service-channel/{id}/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Service Channel\",\n\t\t\t\t\"description\": \"Returns
-    a single Service Channel\",\n\t\t\t\t\"operationId\": \"getServiceChannel\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ServiceChannel\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Service Channel\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
-    Service Channel\",\n\t\t\t\t\"description\": \"Update a single Service Channel\",\n\t\t\t\t\"operationId\":
-    \"updateServiceChannelItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"availablechannel\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A means of accessing the service (e.g.
-    a phone bank, a web site, a location, etc.). \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"service\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"availablelanguage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A language someone may use with the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"language\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
-    for which this thing is the main entity being described.            See background
-    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"processingtime\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Estimated processing time for the service
-    using this channel.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"duration\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"providesservice\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The service provided by this channel.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"service\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
-    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
-    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"servicelocation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The location (e.g. civic structure,
-    local business, etc.) where a person can go to access the service.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"servicephone\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    phone number to use to access the service.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"contactpoint\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"servicepostaladdress\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The address for accessing the service
-    by mail.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"postaladdress\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"servicesmsnumber\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The number to access the service by text message.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"contactpoint\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"serviceurl\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    website to access the service.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"url\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ServiceChannel\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Service Channel\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Service
-    Channel\",\n\t\t\t\t\"description\": \"Deletes a single Service Channel\",\n\t\t\t\t\"operationId\":
-    \"deleteServiceChannel\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/ServiceChannel\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Service Channel\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"ServiceChannel\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
-    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"availablechannel\":
-    {\n\t\t\t\t\t\"description\": \"A means of accessing the service (e.g. a phone bank,
-    a web site, a location, etc.). \",\n\t\t\t\t\t\"type\": \"service\"\n\t\t\t\t},\n\t\t\t\t\"availablelanguage\":
-    {\n\t\t\t\t\t\"description\": \"A language someone may use with the item.\",\n\t\t\t\t\t\"type\":
-    \"language\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\":
-    \"A short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"image\":
-    {\n\t\t\t\t\t\"description\": \"An image of the item. This can be a URL or a fully
-    described ImageObject.\",\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork) for which
-    this thing is the main entity being described.            See background notes for
-    details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t\"name\":
-    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
-    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t\"processingtime\": {\n\t\t\t\t\t\"description\":
-    \"Estimated processing time for the service using this channel.\",\n\t\t\t\t\t\"type\":
-    \"duration\"\n\t\t\t\t},\n\t\t\t\t\"providesservice\": {\n\t\t\t\t\t\"description\":
-    \"The service provided by this channel.\",\n\t\t\t\t\t\"type\": \"service\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
-    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
-    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
-    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"servicelocation\":
-    {\n\t\t\t\t\t\"description\": \"The location (e.g. civic structure, local business,
-    etc.) where a person can go to access the service.\",\n\t\t\t\t\t\"type\": \"place\"\n\t\t\t\t},\n\t\t\t\t\"servicephone\":
-    {\n\t\t\t\t\t\"description\": \"The phone number to use to access the service.\",\n\t\t\t\t\t\"type\":
-    \"contactpoint\"\n\t\t\t\t},\n\t\t\t\t\"servicepostaladdress\": {\n\t\t\t\t\t\"description\":
-    \"The address for accessing the service by mail.\",\n\t\t\t\t\t\"type\": \"postaladdress\"\n\t\t\t\t},\n\t\t\t\t\"servicesmsnumber\":
-    {\n\t\t\t\t\t\"description\": \"The number to access the service by text message.\",\n\t\t\t\t\t\"type\":
-    \"contactpoint\"\n\t\t\t\t},\n\t\t\t\t\"serviceurl\": {\n\t\t\t\t\t\"description\":
-    \"The website to access the service.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"url\":
-    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Service Channel API
+    description: A means for accessing a service, e.g. a government office location,
+      web site, or phone number.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: service.channel.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /service-channel/:
+      get:
+        summary: Get Service Channel
+        description: Returns Service Channel
+        operationId: getServiceChannel
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ServiceChannel'
+        tags:
+        - Service Channel
+      post:
+        summary: Add Service Channel
+        description: Add Service Channel
+        operationId: addServiceChannel
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: availablechannel
+          in: formData
+          description: 'A means of accessing the service (e.g. a phone bank, a web site,
+            a location, etc.). '
+          required: false
+          type: service
+        - name: availablelanguage
+          in: formData
+          description: A language someone may use with the item.
+          required: false
+          type: language
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: processingtime
+          in: formData
+          description: Estimated processing time for the service using this channel.
+          required: false
+          type: duration
+        - name: providesservice
+          in: formData
+          description: The service provided by this channel.
+          required: false
+          type: service
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: servicelocation
+          in: formData
+          description: The location (e.g. civic structure, local business, etc.) where
+            a person can go to access the service.
+          required: false
+          type: place
+        - name: servicephone
+          in: formData
+          description: The phone number to use to access the service.
+          required: false
+          type: contactpoint
+        - name: servicepostaladdress
+          in: formData
+          description: The address for accessing the service by mail.
+          required: false
+          type: postaladdress
+        - name: servicesmsnumber
+          in: formData
+          description: The number to access the service by text message.
+          required: false
+          type: contactpoint
+        - name: serviceurl
+          in: formData
+          description: The website to access the service.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ServiceChannel'
+        tags:
+        - Service Channel
+    /service-channel/{id}/:
+      get:
+        summary: Get Service Channel
+        description: Returns a single Service Channel
+        operationId: getServiceChannel
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ServiceChannel'
+        tags:
+        - Service Channel
+      put:
+        summary: Update Service Channel
+        description: Update a single Service Channel
+        operationId: updateServiceChannelItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: availablechannel
+          in: formData
+          description: 'A means of accessing the service (e.g. a phone bank, a web site,
+            a location, etc.). '
+          required: false
+          type: service
+        - name: availablelanguage
+          in: formData
+          description: A language someone may use with the item.
+          required: false
+          type: language
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: processingtime
+          in: formData
+          description: Estimated processing time for the service using this channel.
+          required: false
+          type: duration
+        - name: providesservice
+          in: formData
+          description: The service provided by this channel.
+          required: false
+          type: service
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: servicelocation
+          in: formData
+          description: The location (e.g. civic structure, local business, etc.) where
+            a person can go to access the service.
+          required: false
+          type: place
+        - name: servicephone
+          in: formData
+          description: The phone number to use to access the service.
+          required: false
+          type: contactpoint
+        - name: servicepostaladdress
+          in: formData
+          description: The address for accessing the service by mail.
+          required: false
+          type: postaladdress
+        - name: servicesmsnumber
+          in: formData
+          description: The number to access the service by text message.
+          required: false
+          type: contactpoint
+        - name: serviceurl
+          in: formData
+          description: The website to access the service.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ServiceChannel'
+        tags:
+        - Service Channel
+      delete:
+        summary: Service Channel
+        description: Deletes a single Service Channel
+        operationId: deleteServiceChannel
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ServiceChannel'
+        tags:
+        - Service Channel
+  definitions:
+    ServiceChannel:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        availablechannel:
+          description: 'A means of accessing the service (e.g. a phone bank, a web site,
+            a location, etc.). '
+          type: service
+        availablelanguage:
+          description: A language someone may use with the item.
+          type: language
+        description:
+          description: A short description of the item.
+          type: text
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        processingtime:
+          description: Estimated processing time for the service using this channel.
+          type: duration
+        providesservice:
+          description: The service provided by this channel.
+          type: service
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        servicelocation:
+          description: The location (e.g. civic structure, local business, etc.) where
+            a person can go to access the service.
+          type: place
+        servicephone:
+          description: The phone number to use to access the service.
+          type: contactpoint
+        servicepostaladdress:
+          description: The address for accessing the service by mail.
+          type: postaladdress
+        servicesmsnumber:
+          description: The number to access the service by text message.
+          type: contactpoint
+        serviceurl:
+          description: The website to access the service.
+          type: url
+        url:
+          description: URL of the item.
+          type: url

@@ -1,221 +1,428 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Geo Circle API\",\n\t\t\"description\":
-    \"A GeoCircle is a GeoShape representing a circular geographic area. As it is a
-    GeoShape it provides the simple textual property \\'circle\\', but also allows the
-    combination of postalCode alongside geoRadius. The center of the circle can be indicated
-    via the \\'geoMidpoint\\' property, or more approximately using \\'address\\', \\'postalCode\\'.
-    \",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
-    \"v1\"\n\t},\n\t\"host\": \"geo.circle.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
-    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/geo-circle/\":
-    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Geo Circle\",\n\t\t\t\t\"description\":
-    \"Returns Geo Circle\",\n\t\t\t\t\"operationId\": \"getGeoCircle\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/GeoCircle\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Geo Circle\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Geo Circle\",\n\t\t\t\t\"description\":
-    \"Add Geo Circle\",\n\t\t\t\t\"operationId\": \"addGeoCircle\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"address\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Physical
-    address of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text
-    or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"addresscountry\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The country. For example, USA. You can
-    also provide the two-letter ISO 3166-1 alpha-2 country code.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text or  country\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"box\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A box is the area enclosed by the rectangle
-    formed by two points. The first point is the lower corner, the second point is the
-    upper corner. A box is expressed as two points separated by a space character.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"circle\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A circle
-    is the circular region of a specified radius centered at a specified latitude and
-    longitude. A circle is expressed as a pair followed by a radius in meters.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"elevation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The elevation of a location (WGS 84).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"geomidpoint\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
-    the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"geocoordinates\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"georadius\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
-    the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance
-    notation).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text or  distance
-    or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"line\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A line is a point-to-point path consisting
-    of two or more points. A line is expressed as a series of two or more point objects
-    separated by space.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"polygon\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A polygon
-    is the area enclosed by a point-to-point path for which the starting and ending
-    points are the same. A polygon is expressed as a series of four or more space delimited
-    points where the first and final points are identical.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"postalcode\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    postal code. For example, 94043.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
-    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/GeoCircle\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Geo Circle\"]\n\t\t\t}\n\t\t},\n\t\t\"/geo-circle/{id}/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Geo Circle\",\n\t\t\t\t\"description\": \"Returns
-    a single Geo Circle\",\n\t\t\t\t\"operationId\": \"getGeoCircle\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/GeoCircle\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Geo Circle\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update Geo
-    Circle\",\n\t\t\t\t\"description\": \"Update a single Geo Circle\",\n\t\t\t\t\"operationId\":
-    \"updateGeoCircleItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"address\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Physical
-    address of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text
-    or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"addresscountry\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The country. For example, USA. You can
-    also provide the two-letter ISO 3166-1 alpha-2 country code.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text or  country\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"box\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A box is the area enclosed by the rectangle
-    formed by two points. The first point is the lower corner, the second point is the
-    upper corner. A box is expressed as two points separated by a space character.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"circle\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A circle
-    is the circular region of a specified radius centered at a specified latitude and
-    longitude. A circle is expressed as a pair followed by a radius in meters.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"elevation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The elevation of a location (WGS 84).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"geomidpoint\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
-    the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"geocoordinates\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"georadius\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Indicates
-    the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance
-    notation).\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text or  distance
-    or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"line\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A line is a point-to-point path consisting
-    of two or more points. A line is expressed as a series of two or more point objects
-    separated by space.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"polygon\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A polygon
-    is the area enclosed by a point-to-point path for which the starting and ending
-    points are the same. A polygon is expressed as a series of four or more space delimited
-    points where the first and final points are identical.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"postalcode\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    postal code. For example, 94043.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
-    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/GeoCircle\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Geo Circle\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Geo Circle\",\n\t\t\t\t\"description\":
-    \"Deletes a single Geo Circle\",\n\t\t\t\t\"operationId\": \"deleteGeoCircle\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/GeoCircle\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Geo Circle\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"GeoCircle\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"address\": {\n\t\t\t\t\t\"description\": \"Physical
-    address of the item.\",\n\t\t\t\t\t\"type\": \"text or  postaladdress\"\n\t\t\t\t},\n\t\t\t\t\"addresscountry\":
-    {\n\t\t\t\t\t\"description\": \"The country. For example, USA. You can also provide
-    the two-letter ISO 3166-1 alpha-2 country code.\",\n\t\t\t\t\t\"type\": \"text or
-    \ country\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"box\":
-    {\n\t\t\t\t\t\"description\": \"A box is the area enclosed by the rectangle formed
-    by two points. The first point is the lower corner, the second point is the upper
-    corner. A box is expressed as two points separated by a space character.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"circle\": {\n\t\t\t\t\t\"description\": \"A circle
-    is the circular region of a specified radius centered at a specified latitude and
-    longitude. A circle is expressed as a pair followed by a radius in meters.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"elevation\":
-    {\n\t\t\t\t\t\"description\": \"The elevation of a location (WGS 84).\",\n\t\t\t\t\t\"type\":
-    \"text or  number\"\n\t\t\t\t},\n\t\t\t\t\"geomidpoint\": {\n\t\t\t\t\t\"description\":
-    \"Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.\",\n\t\t\t\t\t\"type\":
-    \"geocoordinates\"\n\t\t\t\t},\n\t\t\t\t\"georadius\": {\n\t\t\t\t\t\"description\":
-    \"Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise
-    via Distance notation).\",\n\t\t\t\t\t\"type\": \"text or  distance or  number\"\n\t\t\t\t},\n\t\t\t\t\"image\":
-    {\n\t\t\t\t\t\"description\": \"An image of the item. This can be a URL or a fully
-    described ImageObject.\",\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"line\":
-    {\n\t\t\t\t\t\"description\": \"A line is a point-to-point path consisting of two
-    or more points. A line is expressed as a series of two or more point objects separated
-    by space.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork) for which
-    this thing is the main entity being described.            See background notes for
-    details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t\"name\":
-    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"polygon\":
-    {\n\t\t\t\t\t\"description\": \"A polygon is the area enclosed by a point-to-point
-    path for which the starting and ending points are the same. A polygon is expressed
-    as a series of four or more space delimited points where the first and final points
-    are identical.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"postalcode\":
-    {\n\t\t\t\t\t\"description\": \"The postal code. For example, 94043.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
-    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
-    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
-    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"url\":
-    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Geo Circle API
+    description: 'A GeoCircle is a GeoShape representing a circular geographic area.
+      As it is a GeoShape it provides the simple textual property \''circle\'', but
+      also allows the combination of postalCode alongside geoRadius. The center of the
+      circle can be indicated via the \''geoMidpoint\'' property, or more approximately
+      using \''address\'', \''postalCode\''. '
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: geo.circle.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /geo-circle/:
+      get:
+        summary: Get Geo Circle
+        description: Returns Geo Circle
+        operationId: getGeoCircle
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/GeoCircle'
+        tags:
+        - Geo Circle
+      post:
+        summary: Add Geo Circle
+        description: Add Geo Circle
+        operationId: addGeoCircle
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: address
+          in: formData
+          description: Physical address of the item.
+          required: false
+          type: text or  postaladdress
+        - name: addresscountry
+          in: formData
+          description: The country. For example, USA. You can also provide the two-letter
+            ISO 3166-1 alpha-2 country code.
+          required: false
+          type: text or  country
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: box
+          in: formData
+          description: A box is the area enclosed by the rectangle formed by two points.
+            The first point is the lower corner, the second point is the upper corner.
+            A box is expressed as two points separated by a space character.
+          required: false
+          type: text
+        - name: circle
+          in: formData
+          description: A circle is the circular region of a specified radius centered
+            at a specified latitude and longitude. A circle is expressed as a pair followed
+            by a radius in meters.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: elevation
+          in: formData
+          description: The elevation of a location (WGS 84).
+          required: false
+          type: text or  number
+        - name: geomidpoint
+          in: formData
+          description: Indicates the GeoCoordinates at the centre of a GeoShape e.g.
+            GeoCircle.
+          required: false
+          type: geocoordinates
+        - name: georadius
+          in: formData
+          description: Indicates the approximate radius of a GeoCircle (metres unless
+            indicated otherwise via Distance notation).
+          required: false
+          type: text or  distance or  number
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: line
+          in: formData
+          description: A line is a point-to-point path consisting of two or more points.
+            A line is expressed as a series of two or more point objects separated by
+            space.
+          required: false
+          type: text
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: polygon
+          in: formData
+          description: A polygon is the area enclosed by a point-to-point path for which
+            the starting and ending points are the same. A polygon is expressed as a
+            series of four or more space delimited points where the first and final
+            points are identical.
+          required: false
+          type: text
+        - name: postalcode
+          in: formData
+          description: The postal code. For example, 94043.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/GeoCircle'
+        tags:
+        - Geo Circle
+    /geo-circle/{id}/:
+      get:
+        summary: Get Geo Circle
+        description: Returns a single Geo Circle
+        operationId: getGeoCircle
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/GeoCircle'
+        tags:
+        - Geo Circle
+      put:
+        summary: Update Geo Circle
+        description: Update a single Geo Circle
+        operationId: updateGeoCircleItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: address
+          in: formData
+          description: Physical address of the item.
+          required: false
+          type: text or  postaladdress
+        - name: addresscountry
+          in: formData
+          description: The country. For example, USA. You can also provide the two-letter
+            ISO 3166-1 alpha-2 country code.
+          required: false
+          type: text or  country
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: box
+          in: formData
+          description: A box is the area enclosed by the rectangle formed by two points.
+            The first point is the lower corner, the second point is the upper corner.
+            A box is expressed as two points separated by a space character.
+          required: false
+          type: text
+        - name: circle
+          in: formData
+          description: A circle is the circular region of a specified radius centered
+            at a specified latitude and longitude. A circle is expressed as a pair followed
+            by a radius in meters.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: elevation
+          in: formData
+          description: The elevation of a location (WGS 84).
+          required: false
+          type: text or  number
+        - name: geomidpoint
+          in: formData
+          description: Indicates the GeoCoordinates at the centre of a GeoShape e.g.
+            GeoCircle.
+          required: false
+          type: geocoordinates
+        - name: georadius
+          in: formData
+          description: Indicates the approximate radius of a GeoCircle (metres unless
+            indicated otherwise via Distance notation).
+          required: false
+          type: text or  distance or  number
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: line
+          in: formData
+          description: A line is a point-to-point path consisting of two or more points.
+            A line is expressed as a series of two or more point objects separated by
+            space.
+          required: false
+          type: text
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: polygon
+          in: formData
+          description: A polygon is the area enclosed by a point-to-point path for which
+            the starting and ending points are the same. A polygon is expressed as a
+            series of four or more space delimited points where the first and final
+            points are identical.
+          required: false
+          type: text
+        - name: postalcode
+          in: formData
+          description: The postal code. For example, 94043.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/GeoCircle'
+        tags:
+        - Geo Circle
+      delete:
+        summary: Geo Circle
+        description: Deletes a single Geo Circle
+        operationId: deleteGeoCircle
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/GeoCircle'
+        tags:
+        - Geo Circle
+  definitions:
+    GeoCircle:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        address:
+          description: Physical address of the item.
+          type: text or  postaladdress
+        addresscountry:
+          description: The country. For example, USA. You can also provide the two-letter
+            ISO 3166-1 alpha-2 country code.
+          type: text or  country
+        alternatename:
+          description: An alias for the item.
+          type: text
+        box:
+          description: A box is the area enclosed by the rectangle formed by two points.
+            The first point is the lower corner, the second point is the upper corner.
+            A box is expressed as two points separated by a space character.
+          type: text
+        circle:
+          description: A circle is the circular region of a specified radius centered
+            at a specified latitude and longitude. A circle is expressed as a pair followed
+            by a radius in meters.
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+        elevation:
+          description: The elevation of a location (WGS 84).
+          type: text or  number
+        geomidpoint:
+          description: Indicates the GeoCoordinates at the centre of a GeoShape e.g.
+            GeoCircle.
+          type: geocoordinates
+        georadius:
+          description: Indicates the approximate radius of a GeoCircle (metres unless
+            indicated otherwise via Distance notation).
+          type: text or  distance or  number
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        line:
+          description: A line is a point-to-point path consisting of two or more points.
+            A line is expressed as a series of two or more point objects separated by
+            space.
+          type: text
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        name:
+          description: The name of the item.
+          type: text
+        polygon:
+          description: A polygon is the area enclosed by a point-to-point path for which
+            the starting and ending points are the same. A polygon is expressed as a
+            series of four or more space delimited points where the first and final
+            points are identical.
+          type: text
+        postalcode:
+          description: The postal code. For example, 94043.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        url:
+          description: URL of the item.
+          type: url

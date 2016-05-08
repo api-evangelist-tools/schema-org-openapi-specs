@@ -1,219 +1,418 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Maximum Dose Schedule
-    API\",\n\t\t\"description\": \"The maximum dosing schedule considered safe for a
-    drug or supplement as recommended by an authority or by the drug/supplement\\'s
-    manufacturer. Capture the recommending authority in the recognizingAuthority property
-    of MedicalEntity.\",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
-    \"v1\"\n\t},\n\t\"host\": \"maximum.dose.schedule.example.com\",\n\t\"basePath\":
-    \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\":
-    {\n\t\t\"/maximum-dose-schedule/\": {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get
-    Maximum Dose Schedule\",\n\t\t\t\t\"description\": \"Returns Maximum Dose Schedule\",\n\t\t\t\t\"operationId\":
-    \"getMaximumDoseSchedule\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\":
-    \"query\",\n\t\t\t\t\t\"description\": \"Keyword search for item\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/MaximumDoseSchedule\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Maximum Dose Schedule\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add
-    Maximum Dose Schedule\",\n\t\t\t\t\"description\": \"Add Maximum Dose Schedule\",\n\t\t\t\t\"operationId\":
-    \"addMaximumDoseSchedule\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
-    used for adding more specific types from external vocabularies in microdata syntax.
-    This is a relationship between something and a class that the thing is in. In RDFa
-    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
-    - for multiple types. Schema.org tools may have only weaker understanding of extra
-    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"code\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
-    code for the entity, taken from a controlled vocabulary or ontology such as ICD-9,
-    DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"doseunit\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    unit of the dose, e.g. \\'mg\\'.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"dosevalue\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The value of the dose, e.g. 500.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"frequency\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"How
-    often the dose is taken, e.g. \\'daily\\'.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"guideline\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A medical guideline related to this
-    entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"imageobject or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"creativework
-    or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"maximumintake\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Recommended intake of this supplement
-    for a given population as defined by a specific recommending authority. \",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"dietarysupplement\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"medicinesystem\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\',
-    \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
-    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"relevantspecialty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"study\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
-    study or trial related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"targetpopulation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Characteristics of the population for
-    which this is intended, or which typically uses it, e.g. \\'adults\\'.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/MaximumDoseSchedule\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Maximum Dose Schedule\"]\n\t\t\t}\n\t\t},\n\t\t\"/maximum-dose-schedule/{id}/\":
-    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Maximum Dose Schedule\",\n\t\t\t\t\"description\":
-    \"Returns a single Maximum Dose Schedule\",\n\t\t\t\t\"operationId\": \"getMaximumDoseSchedule\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/MaximumDoseSchedule\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Maximum Dose Schedule\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
-    Maximum Dose Schedule\",\n\t\t\t\t\"description\": \"Update a single Maximum Dose
-    Schedule\",\n\t\t\t\t\"operationId\": \"updateMaximumDoseScheduleItem\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"code\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken
-    from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT,
-    RxNorm, etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"doseunit\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The unit of the dose, e.g. \\'mg\\'.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"dosevalue\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    value of the dose, e.g. 500.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"frequency\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"How often the dose is taken, e.g. \\'daily\\'.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"guideline\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    medical guideline related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"imageobject or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
-    for which this thing is the main entity being described.            See background
-    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"maximumintake\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Recommended intake of this supplement for a given population as defined by a specific
-    recommending authority. \",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"dietarysupplement\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"medicinesystem\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The system of medicine that includes
-    this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\',
-    etc.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"recognizingauthority\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"If applicable, the organization that
-    officially recognizes this entity as part of its endorsed system of medicine.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"relevantspecialty\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"If applicable, a medical specialty in which this entity is relevant.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"study\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A medical
-    study or trial related to this entity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"targetpopulation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Characteristics of the population for
-    which this is intended, or which typically uses it, e.g. \\'adults\\'.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/MaximumDoseSchedule\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Maximum Dose Schedule\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\":
-    \"Maximum Dose Schedule\",\n\t\t\t\t\"description\": \"Deletes a single Maximum
-    Dose Schedule\",\n\t\t\t\t\"operationId\": \"deleteMaximumDoseSchedule\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/MaximumDoseSchedule\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Maximum Dose Schedule\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"MaximumDoseSchedule\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
-    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"code\":
-    {\n\t\t\t\t\t\"description\": \"A medical code for the entity, taken from a controlled
-    vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.\",\n\t\t\t\t\t\"type\":
-    \"medicalcode\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\":
-    \"A short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"doseunit\":
-    {\n\t\t\t\t\t\"description\": \"The unit of the dose, e.g. \\'mg\\'.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"dosevalue\": {\n\t\t\t\t\t\"description\": \"The
-    value of the dose, e.g. 500.\",\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t},\n\t\t\t\t\"frequency\":
-    {\n\t\t\t\t\t\"description\": \"How often the dose is taken, e.g. \\'daily\\'.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"guideline\": {\n\t\t\t\t\t\"description\": \"A medical
-    guideline related to this entity.\",\n\t\t\t\t\t\"type\": \"medicalguideline\"\n\t\t\t\t},\n\t\t\t\t\"image\":
-    {\n\t\t\t\t\t\"description\": \"An image of the item. This can be a URL or a fully
-    described ImageObject.\",\n\t\t\t\t\t\"type\": \"imageobject or  url\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork) for which
-    this thing is the main entity being described.            See background notes for
-    details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework
-    or  url\"\n\t\t\t\t},\n\t\t\t\t\"maximumintake\": {\n\t\t\t\t\t\"description\":
-    \"Recommended intake of this supplement for a given population as defined by a specific
-    recommending authority. \",\n\t\t\t\t\t\"type\": \"dietarysupplement\"\n\t\t\t\t},\n\t\t\t\t\"medicinesystem\":
-    {\n\t\t\t\t\t\"description\": \"The system of medicine that includes this MedicalEntity,
-    for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.\",\n\t\t\t\t\t\"type\":
-    \"medicinesystem\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\":
-    \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
-    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t\"recognizingauthority\": {\n\t\t\t\t\t\"description\":
-    \"If applicable, the organization that officially recognizes this entity as part
-    of its endorsed system of medicine.\",\n\t\t\t\t\t\"type\": \"organization\"\n\t\t\t\t},\n\t\t\t\t\"relevantspecialty\":
-    {\n\t\t\t\t\t\"description\": \"If applicable, a medical specialty in which this
-    entity is relevant.\",\n\t\t\t\t\t\"type\": \"medicalspecialty\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
-    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
-    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
-    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"study\":
-    {\n\t\t\t\t\t\"description\": \"A medical study or trial related to this entity.\",\n\t\t\t\t\t\"type\":
-    \"medicalstudy\"\n\t\t\t\t},\n\t\t\t\t\"targetpopulation\": {\n\t\t\t\t\t\"description\":
-    \"Characteristics of the population for which this is intended, or which typically
-    uses it, e.g. \\'adults\\'.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"url\":
-    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Maximum Dose Schedule API
+    description: The maximum dosing schedule considered safe for a drug or supplement
+      as recommended by an authority or by the drug/supplement\'s manufacturer. Capture
+      the recommending authority in the recognizingAuthority property of MedicalEntity.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: maximum.dose.schedule.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /maximum-dose-schedule/:
+      get:
+        summary: Get Maximum Dose Schedule
+        description: Returns Maximum Dose Schedule
+        operationId: getMaximumDoseSchedule
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/MaximumDoseSchedule'
+        tags:
+        - Maximum Dose Schedule
+      post:
+        summary: Add Maximum Dose Schedule
+        description: Add Maximum Dose Schedule
+        operationId: addMaximumDoseSchedule
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: doseunit
+          in: formData
+          description: The unit of the dose, e.g. \'mg\'.
+          required: false
+          type: text
+        - name: dosevalue
+          in: formData
+          description: The value of the dose, e.g. 500.
+          required: false
+          type: number
+        - name: frequency
+          in: formData
+          description: How often the dose is taken, e.g. \'daily\'.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: imageobject or  url
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: maximumintake
+          in: formData
+          description: 'Recommended intake of this supplement for a given population
+            as defined by a specific recommending authority. '
+          required: false
+          type: dietarysupplement
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: targetpopulation
+          in: formData
+          description: Characteristics of the population for which this is intended,
+            or which typically uses it, e.g. \'adults\'.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/MaximumDoseSchedule'
+        tags:
+        - Maximum Dose Schedule
+    /maximum-dose-schedule/{id}/:
+      get:
+        summary: Get Maximum Dose Schedule
+        description: Returns a single Maximum Dose Schedule
+        operationId: getMaximumDoseSchedule
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/MaximumDoseSchedule'
+        tags:
+        - Maximum Dose Schedule
+      put:
+        summary: Update Maximum Dose Schedule
+        description: Update a single Maximum Dose Schedule
+        operationId: updateMaximumDoseScheduleItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: doseunit
+          in: formData
+          description: The unit of the dose, e.g. \'mg\'.
+          required: false
+          type: text
+        - name: dosevalue
+          in: formData
+          description: The value of the dose, e.g. 500.
+          required: false
+          type: number
+        - name: frequency
+          in: formData
+          description: How often the dose is taken, e.g. \'daily\'.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: imageobject or  url
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: maximumintake
+          in: formData
+          description: 'Recommended intake of this supplement for a given population
+            as defined by a specific recommending authority. '
+          required: false
+          type: dietarysupplement
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: targetpopulation
+          in: formData
+          description: Characteristics of the population for which this is intended,
+            or which typically uses it, e.g. \'adults\'.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/MaximumDoseSchedule'
+        tags:
+        - Maximum Dose Schedule
+      delete:
+        summary: Maximum Dose Schedule
+        description: Deletes a single Maximum Dose Schedule
+        operationId: deleteMaximumDoseSchedule
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/MaximumDoseSchedule'
+        tags:
+        - Maximum Dose Schedule
+  definitions:
+    MaximumDoseSchedule:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        code:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+        description:
+          description: A short description of the item.
+          type: text
+        doseunit:
+          description: The unit of the dose, e.g. \'mg\'.
+          type: text
+        dosevalue:
+          description: The value of the dose, e.g. 500.
+          type: number
+        frequency:
+          description: How often the dose is taken, e.g. \'daily\'.
+          type: text
+        guideline:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: imageobject or  url
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        maximumintake:
+          description: 'Recommended intake of this supplement for a given population
+            as defined by a specific recommending authority. '
+          type: dietarysupplement
+        medicinesystem:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        recognizingauthority:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+        relevantspecialty:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        study:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+        targetpopulation:
+          description: Characteristics of the population for which this is intended,
+            or which typically uses it, e.g. \'adults\'.
+          type: text
+        url:
+          description: URL of the item.
+          type: url

@@ -1,257 +1,489 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Taxi Reservation
-    API\",\n\t\t\"description\": \"A reservation for a taxi.\",\n\t\t\"termsOfService\":
-    \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\": \"v1\"\n\t},\n\t\"host\":
-    \"taxi.reservation.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\": [\"http\"],\n\t\"produces\":
-    [\"application/json\"],\n\t\"paths\": {\n\t\t\"/taxi-reservation/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Taxi Reservation\",\n\t\t\t\t\"description\": \"Returns
-    Taxi Reservation\",\n\t\t\t\t\"operationId\": \"getTaxiReservation\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/TaxiReservation\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Taxi Reservation\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add
-    Taxi Reservation\",\n\t\t\t\t\"description\": \"Add Taxi Reservation\",\n\t\t\t\t\"operationId\":
-    \"addTaxiReservation\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
-    used for adding more specific types from external vocabularies in microdata syntax.
-    This is a relationship between something and a class that the thing is in. In RDFa
-    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
-    - for multiple types. Schema.org tools may have only weaker understanding of extra
-    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"bookingtime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    date and time the reservation was booked.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"broker\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An entity that arranges for an exchange
-    between a buyer and a seller.  In most cases a broker never acquires or releases
-    ownership of a product or service involved in an exchange.  If it is not clear whether
-    an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes
-    bookingAgent.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"organization
-    or  person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"modifiedtime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    date and time the reservation was modified.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"partysize\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Number
-    of people the reservation should accommodate.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"quantitativevalue or  integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"pickuplocation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Where a taxi will pick up a passenger
-    or a rental car can be picked up.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"pickuptime\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"When a taxi will pickup a passenger
-    or a rental car can be picked up.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
-    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"pricecurrency\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The currency (in 3-letter ISO 4217 format) of the price or a price component,
-    when attached to PriceSpecification and its subtypes.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"programmembershipused\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Any membership in a frequent flyer, hotel loyalty program, etc. being applied
-    to the reservation.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"programmembership\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"provider\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    service provider, service operator, or service performer; the goods producer. Another
-    party (a seller) may offer those services or goods on behalf of the provider. A
-    provider may also serve as the seller. Supersedes carrier.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"reservationfor\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The thing -- flight, event, restaurant,etc. being reserved.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"reservationid\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A unique identifier for the reservation.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"reservationstatus\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The current status of the reservation.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"reservationstatustype\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"reservedticket\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A ticket associated with the reservation.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"ticket\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
-    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
-    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"totalprice\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The total price for the reservation
-    or ticket, including applicable taxes, shipping, etc.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text or  pricespecification or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"undername\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    person or organization the reservation or ticket is for.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/TaxiReservation\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Taxi Reservation\"]\n\t\t\t}\n\t\t},\n\t\t\"/taxi-reservation/{id}/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Taxi Reservation\",\n\t\t\t\t\"description\": \"Returns
-    a single Taxi Reservation\",\n\t\t\t\t\"operationId\": \"getTaxiReservation\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/TaxiReservation\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Taxi Reservation\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update
-    Taxi Reservation\",\n\t\t\t\t\"description\": \"Update a single Taxi Reservation\",\n\t\t\t\t\"operationId\":
-    \"updateTaxiReservationItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\":
-    \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\": \"Unique id for
-    item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"bookingtime\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The date and time the reservation was
-    booked.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"broker\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An entity
-    that arranges for an exchange between a buyer and a seller.  In most cases a broker
-    never acquires or releases ownership of a product or service involved in an exchange.
-    \ If it is not clear whether an entity is a broker, seller, or buyer, the latter
-    two terms are preferred. Supersedes bookingAgent.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"description\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"image\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An image
-    of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"mainentityofpage\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"modifiedtime\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    date and time the reservation was modified.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"name\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"partysize\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"Number
-    of people the reservation should accommodate.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"quantitativevalue or  integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"pickuplocation\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Where a taxi will pick up a passenger
-    or a rental car can be picked up.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"place\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"pickuptime\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"When a taxi will pickup a passenger
-    or a rental car can be picked up.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"potentialaction\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which
-    describes an idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"pricecurrency\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The currency (in 3-letter ISO 4217 format) of the price or a price component,
-    when attached to PriceSpecification and its subtypes.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"programmembershipused\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Any membership in a frequent flyer, hotel loyalty program, etc. being applied
-    to the reservation.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"programmembership\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"provider\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    service provider, service operator, or service performer; the goods producer. Another
-    party (a seller) may offer those services or goods on behalf of the provider. A
-    provider may also serve as the seller. Supersedes carrier.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"reservationfor\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The thing -- flight, event, restaurant,etc. being reserved.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"reservationid\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A unique identifier for the reservation.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"reservationstatus\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The current status of the reservation.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"reservationstatustype\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"reservedticket\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A ticket associated with the reservation.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"ticket\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"sameas\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously
-    indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase
-    page, or official website.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"totalprice\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The total price for the reservation
-    or ticket, including applicable taxes, shipping, etc.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text or  pricespecification or  number\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"undername\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    person or organization the reservation or ticket is for.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/TaxiReservation\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Taxi Reservation\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Taxi
-    Reservation\",\n\t\t\t\t\"description\": \"Deletes a single Taxi Reservation\",\n\t\t\t\t\"operationId\":
-    \"deleteTaxiReservation\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\":
-    {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/TaxiReservation\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Taxi Reservation\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"TaxiReservation\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\": \"An
-    alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"bookingtime\":
-    {\n\t\t\t\t\t\"description\": \"The date and time the reservation was booked.\",\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"broker\": {\n\t\t\t\t\t\"description\": \"An
-    entity that arranges for an exchange between a buyer and a seller.  In most cases
-    a broker never acquires or releases ownership of a product or service involved in
-    an exchange.  If it is not clear whether an entity is a broker, seller, or buyer,
-    the latter two terms are preferred. Supersedes bookingAgent.\",\n\t\t\t\t\t\"type\":
-    \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t\"description\": {\n\t\t\t\t\t\"description\":
-    \"A short description of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"image\":
-    {\n\t\t\t\t\t\"description\": \"An image of the item. This can be a URL or a fully
-    described ImageObject.\",\n\t\t\t\t\t\"type\": \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork) for which
-    this thing is the main entity being described.            See background notes for
-    details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"type\": \"url or  creativework\"\n\t\t\t\t},\n\t\t\t\t\"modifiedtime\":
-    {\n\t\t\t\t\t\"description\": \"The date and time the reservation was modified.\",\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"description\": \"The
-    name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"partysize\":
-    {\n\t\t\t\t\t\"description\": \"Number of people the reservation should accommodate.\",\n\t\t\t\t\t\"type\":
-    \"quantitativevalue or  integer\"\n\t\t\t\t},\n\t\t\t\t\"pickuplocation\": {\n\t\t\t\t\t\"description\":
-    \"Where a taxi will pick up a passenger or a rental car can be picked up.\",\n\t\t\t\t\t\"type\":
-    \"place\"\n\t\t\t\t},\n\t\t\t\t\"pickuptime\": {\n\t\t\t\t\t\"description\": \"When
-    a taxi will pickup a passenger or a rental car can be picked up.\",\n\t\t\t\t\t\"type\":
-    \"datetime\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\": \"action\"\n\t\t\t\t},\n\t\t\t\t\"pricecurrency\":
-    {\n\t\t\t\t\t\"description\": \"The currency (in 3-letter ISO 4217 format) of the
-    price or a price component, when attached to PriceSpecification and its subtypes.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"programmembershipused\": {\n\t\t\t\t\t\"description\":
-    \"Any membership in a frequent flyer, hotel loyalty program, etc. being applied
-    to the reservation.\",\n\t\t\t\t\t\"type\": \"programmembership\"\n\t\t\t\t},\n\t\t\t\t\"provider\":
-    {\n\t\t\t\t\t\"description\": \"The service provider, service operator, or service
-    performer; the goods producer. Another party (a seller) may offer those services
-    or goods on behalf of the provider. A provider may also serve as the seller. Supersedes
-    carrier.\",\n\t\t\t\t\t\"type\": \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t\"reservationfor\":
-    {\n\t\t\t\t\t\"description\": \"The thing -- flight, event, restaurant,etc. being
-    reserved.\",\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t\"reservationid\":
-    {\n\t\t\t\t\t\"description\": \"A unique identifier for the reservation.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"reservationstatus\": {\n\t\t\t\t\t\"description\":
-    \"The current status of the reservation.\",\n\t\t\t\t\t\"type\": \"reservationstatustype\"\n\t\t\t\t},\n\t\t\t\t\"reservedticket\":
-    {\n\t\t\t\t\t\"description\": \"A ticket associated with the reservation.\",\n\t\t\t\t\t\"type\":
-    \"ticket\"\n\t\t\t\t},\n\t\t\t\t\"sameas\": {\n\t\t\t\t\t\"description\": \"URL
-    of a reference Web page that unambiguously indicates the item\\'s identity. E.g.
-    the URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"totalprice\": {\n\t\t\t\t\t\"description\": \"The
-    total price for the reservation or ticket, including applicable taxes, shipping,
-    etc.\",\n\t\t\t\t\t\"type\": \"text or  pricespecification or  number\"\n\t\t\t\t},\n\t\t\t\t\"undername\":
-    {\n\t\t\t\t\t\"description\": \"The person or organization the reservation or ticket
-    is for.\",\n\t\t\t\t\t\"type\": \"organization or  person\"\n\t\t\t\t},\n\t\t\t\t\"url\":
-    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Taxi Reservation API
+    description: A reservation for a taxi.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: taxi.reservation.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /taxi-reservation/:
+      get:
+        summary: Get Taxi Reservation
+        description: Returns Taxi Reservation
+        operationId: getTaxiReservation
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TaxiReservation'
+        tags:
+        - Taxi Reservation
+      post:
+        summary: Add Taxi Reservation
+        description: Add Taxi Reservation
+        operationId: addTaxiReservation
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: bookingtime
+          in: formData
+          description: The date and time the reservation was booked.
+          required: false
+          type: datetime
+        - name: broker
+          in: formData
+          description: An entity that arranges for an exchange between a buyer and a
+            seller.  In most cases a broker never acquires or releases ownership of
+            a product or service involved in an exchange.  If it is not clear whether
+            an entity is a broker, seller, or buyer, the latter two terms are preferred.
+            Supersedes bookingAgent.
+          required: false
+          type: organization or  person
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: modifiedtime
+          in: formData
+          description: The date and time the reservation was modified.
+          required: false
+          type: datetime
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: partysize
+          in: formData
+          description: Number of people the reservation should accommodate.
+          required: false
+          type: quantitativevalue or  integer
+        - name: pickuplocation
+          in: formData
+          description: Where a taxi will pick up a passenger or a rental car can be
+            picked up.
+          required: false
+          type: place
+        - name: pickuptime
+          in: formData
+          description: When a taxi will pickup a passenger or a rental car can be picked
+            up.
+          required: false
+          type: datetime
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: pricecurrency
+          in: formData
+          description: The currency (in 3-letter ISO 4217 format) of the price or a
+            price component, when attached to PriceSpecification and its subtypes.
+          required: false
+          type: text
+        - name: programmembershipused
+          in: formData
+          description: Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+          required: false
+          type: programmembership
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: organization or  person
+        - name: reservationfor
+          in: formData
+          description: The thing -- flight, event, restaurant,etc. being reserved.
+          required: false
+          type: thing
+        - name: reservationid
+          in: formData
+          description: A unique identifier for the reservation.
+          required: false
+          type: text
+        - name: reservationstatus
+          in: formData
+          description: The current status of the reservation.
+          required: false
+          type: reservationstatustype
+        - name: reservedticket
+          in: formData
+          description: A ticket associated with the reservation.
+          required: false
+          type: ticket
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: totalprice
+          in: formData
+          description: The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          required: false
+          type: text or  pricespecification or  number
+        - name: undername
+          in: formData
+          description: The person or organization the reservation or ticket is for.
+          required: false
+          type: organization or  person
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TaxiReservation'
+        tags:
+        - Taxi Reservation
+    /taxi-reservation/{id}/:
+      get:
+        summary: Get Taxi Reservation
+        description: Returns a single Taxi Reservation
+        operationId: getTaxiReservation
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TaxiReservation'
+        tags:
+        - Taxi Reservation
+      put:
+        summary: Update Taxi Reservation
+        description: Update a single Taxi Reservation
+        operationId: updateTaxiReservationItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: bookingtime
+          in: formData
+          description: The date and time the reservation was booked.
+          required: false
+          type: datetime
+        - name: broker
+          in: formData
+          description: An entity that arranges for an exchange between a buyer and a
+            seller.  In most cases a broker never acquires or releases ownership of
+            a product or service involved in an exchange.  If it is not clear whether
+            an entity is a broker, seller, or buyer, the latter two terms are preferred.
+            Supersedes bookingAgent.
+          required: false
+          type: organization or  person
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: modifiedtime
+          in: formData
+          description: The date and time the reservation was modified.
+          required: false
+          type: datetime
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: partysize
+          in: formData
+          description: Number of people the reservation should accommodate.
+          required: false
+          type: quantitativevalue or  integer
+        - name: pickuplocation
+          in: formData
+          description: Where a taxi will pick up a passenger or a rental car can be
+            picked up.
+          required: false
+          type: place
+        - name: pickuptime
+          in: formData
+          description: When a taxi will pickup a passenger or a rental car can be picked
+            up.
+          required: false
+          type: datetime
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: pricecurrency
+          in: formData
+          description: The currency (in 3-letter ISO 4217 format) of the price or a
+            price component, when attached to PriceSpecification and its subtypes.
+          required: false
+          type: text
+        - name: programmembershipused
+          in: formData
+          description: Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+          required: false
+          type: programmembership
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: organization or  person
+        - name: reservationfor
+          in: formData
+          description: The thing -- flight, event, restaurant,etc. being reserved.
+          required: false
+          type: thing
+        - name: reservationid
+          in: formData
+          description: A unique identifier for the reservation.
+          required: false
+          type: text
+        - name: reservationstatus
+          in: formData
+          description: The current status of the reservation.
+          required: false
+          type: reservationstatustype
+        - name: reservedticket
+          in: formData
+          description: A ticket associated with the reservation.
+          required: false
+          type: ticket
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: totalprice
+          in: formData
+          description: The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          required: false
+          type: text or  pricespecification or  number
+        - name: undername
+          in: formData
+          description: The person or organization the reservation or ticket is for.
+          required: false
+          type: organization or  person
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TaxiReservation'
+        tags:
+        - Taxi Reservation
+      delete:
+        summary: Taxi Reservation
+        description: Deletes a single Taxi Reservation
+        operationId: deleteTaxiReservation
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TaxiReservation'
+        tags:
+        - Taxi Reservation
+  definitions:
+    TaxiReservation:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        bookingtime:
+          description: The date and time the reservation was booked.
+          type: datetime
+        broker:
+          description: An entity that arranges for an exchange between a buyer and a
+            seller.  In most cases a broker never acquires or releases ownership of
+            a product or service involved in an exchange.  If it is not clear whether
+            an entity is a broker, seller, or buyer, the latter two terms are preferred.
+            Supersedes bookingAgent.
+          type: organization or  person
+        description:
+          description: A short description of the item.
+          type: text
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        modifiedtime:
+          description: The date and time the reservation was modified.
+          type: datetime
+        name:
+          description: The name of the item.
+          type: text
+        partysize:
+          description: Number of people the reservation should accommodate.
+          type: quantitativevalue or  integer
+        pickuplocation:
+          description: Where a taxi will pick up a passenger or a rental car can be
+            picked up.
+          type: place
+        pickuptime:
+          description: When a taxi will pickup a passenger or a rental car can be picked
+            up.
+          type: datetime
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        pricecurrency:
+          description: The currency (in 3-letter ISO 4217 format) of the price or a
+            price component, when attached to PriceSpecification and its subtypes.
+          type: text
+        programmembershipused:
+          description: Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+          type: programmembership
+        provider:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: organization or  person
+        reservationfor:
+          description: The thing -- flight, event, restaurant,etc. being reserved.
+          type: thing
+        reservationid:
+          description: A unique identifier for the reservation.
+          type: text
+        reservationstatus:
+          description: The current status of the reservation.
+          type: reservationstatustype
+        reservedticket:
+          description: A ticket associated with the reservation.
+          type: ticket
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        totalprice:
+          description: The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          type: text or  pricespecification or  number
+        undername:
+          description: The person or organization the reservation or ticket is for.
+          type: organization or  person
+        url:
+          description: URL of the item.
+          type: url

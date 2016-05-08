@@ -1,239 +1,467 @@
-- "{\n\t\"swagger\": \"2.0\",\n\t\"info\": {\n\t\t\"title\": \"Taxi Service API\",\n\t\t\"description\":
-    \"A service for a vehicle for hire with a driver for local travel. Fares are usually
-    calculated based on distance traveled.\",\n\t\t\"termsOfService\": \"http://apievangelist.com/terms-of-service.html\",\n\t\t\"version\":
-    \"v1\"\n\t},\n\t\"host\": \"taxi.service.example.com\",\n\t\"basePath\": \"/\",\n\t\"schemes\":
-    [\"http\"],\n\t\"produces\": [\"application/json\"],\n\t\"paths\": {\n\t\t\"/taxi-service/\":
-    {\n\t\t\t\"get\": {\n\t\t\t\t\"summary\": \"Get Taxi Service\",\n\t\t\t\t\"description\":
-    \"Returns Taxi Service\",\n\t\t\t\t\"operationId\": \"getTaxiService\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"q\",\n\t\t\t\t\t\"in\": \"query\",\n\t\t\t\t\t\"description\":
-    \"Keyword search for item\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"string\"\n\t\t\t\t}],\n\t\t\t\t\"responses\": {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\":
-    \"A successful response.\",\n\t\t\t\t\t\t\"schema\": {\n\t\t\t\t\t\t\t\"type\":
-    \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\": \"#/definitions/TaxiService\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Taxi Service\"]\n\t\t\t},\n\t\t\t\"post\": {\n\t\t\t\t\"summary\": \"Add Taxi
-    Service\",\n\t\t\t\t\"description\": \"Add Taxi Service\",\n\t\t\t\t\"operationId\":
-    \"addTaxiService\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"additionaltype\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An additional type for the item, typically
-    used for adding more specific types from external vocabularies in microdata syntax.
-    This is a relationship between something and a class that the thing is in. In RDFa
-    syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute
-    - for multiple types. Schema.org tools may have only weaker understanding of extra
-    types, in particular those defined externally.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"aggregaterating\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The overall rating, based on a collection
-    of reviews or ratings, of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"alternatename\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An alias for the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"areaserved\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    geographic area where a service or offered item is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text or  place or  geoshape or  administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"availablechannel\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"award\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An award
-    won by or for this item. Supersedes awards.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"category\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A category for the item. Greater signs
-    or slashes can be used to informally indicate a category hierarchy.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"thing or  text or  physicalactivitycategory\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"hasoffercatalog\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates an OfferCatalog listing for
-    this Organization, Person, or Service.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"offercatalog\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"hoursavailable\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The hours during which this service
-    or contact is available.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
-    for which this thing is the main entity being described.            See background
-    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"offers\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An offer
-    to provide this item&#x2014;for example, an offer to sell a product, rent the DVD
-    of a movie, perform a service, or give away tickets to an event.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"offer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"provider\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The service provider, service operator,
-    or service performer; the goods producer. Another party (a seller) may offer those
-    services or goods on behalf of the provider. A provider may also serve as the seller.
-    Supersedes carrier.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"person
-    or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"providermobility\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates the mobility of a provided
-    service (e.g. \\'static\\', \\'dynamic\\').\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"review\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A review of the item. Supersedes reviews.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"review\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"serviceoutput\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The tangible thing generated by the service, e.g. a passport, permit, etc. Supersedes
-    produces.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"servicetype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    type of service being offered, e.g. veterans\\' benefits, emergency relief, etc.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/TaxiService\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Taxi Service\"]\n\t\t\t}\n\t\t},\n\t\t\"/taxi-service/{id}/\": {\n\t\t\t\"get\":
-    {\n\t\t\t\t\"summary\": \"Get Taxi Service\",\n\t\t\t\t\"description\": \"Returns
-    a single Taxi Service\",\n\t\t\t\t\"operationId\": \"getTaxiService\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/TaxiService\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Taxi Service\"]\n\t\t\t},\n\t\t\t\"put\": {\n\t\t\t\t\"summary\": \"Update Taxi
-    Service\",\n\t\t\t\t\"description\": \"Update a single Taxi Service\",\n\t\t\t\t\"operationId\":
-    \"updateTaxiServiceItem\",\n\t\t\t\t\"parameters\": [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\":
-    \"path\",\n\t\t\t\t\t\"description\": \"Unique id for item\",\n\t\t\t\t\t\"required\":
-    true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"additionaltype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"aggregaterating\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The overall rating, based on a collection of reviews or ratings, of the item.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"alternatename\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"areaserved\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The geographic area where a service
-    or offered item is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text or  place or  geoshape or  administrativearea\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"availablechannel\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"award\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An award
-    won by or for this item. Supersedes awards.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"category\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A category for the item. Greater signs
-    or slashes can be used to informally indicate a category hierarchy.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"thing or  text or  physicalactivitycategory\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"description\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"A
-    short description of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"hasoffercatalog\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates an OfferCatalog listing for
-    this Organization, Person, or Service.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"offercatalog\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"hoursavailable\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The hours during which this service
-    or contact is available.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"image\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"An image of the item. This can be a
-    URL or a fully described ImageObject.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"mainentityofpage\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates a page (or other CreativeWork)
-    for which this thing is the main entity being described.            See background
-    notes for details.       Inverse property: mainEntity.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"name\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The name
-    of the item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"offers\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"An offer
-    to provide this item&#x2014;for example, an offer to sell a product, rent the DVD
-    of a movie, perform a service, or give away tickets to an event.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"offer\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"potentialaction\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"Indicates a potential Action, which describes an idealized action in which this
-    thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"provider\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"The service provider, service operator,
-    or service performer; the goods producer. Another party (a seller) may offer those
-    services or goods on behalf of the provider. A provider may also serve as the seller.
-    Supersedes carrier.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"person
-    or  organization\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"providermobility\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"Indicates the mobility of a provided
-    service (e.g. \\'static\\', \\'dynamic\\').\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"review\",\n\t\t\t\t\t\"in\":
-    \"formData\",\n\t\t\t\t\t\"description\": \"A review of the item. Supersedes reviews.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"review\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"sameas\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of
-    a reference Web page that unambiguously indicates the item\\'s identity. E.g. the
-    URL of the item\\'s Wikipedia page, Freebase page, or official website.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"serviceoutput\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\":
-    \"The tangible thing generated by the service, e.g. a passport, permit, etc. Supersedes
-    produces.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"servicetype\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"The
-    type of service being offered, e.g. veterans\\' benefits, emergency relief, etc.\",\n\t\t\t\t\t\"required\":
-    false,\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\":
-    \"url\",\n\t\t\t\t\t\"in\": \"formData\",\n\t\t\t\t\t\"description\": \"URL of the
-    item.\",\n\t\t\t\t\t\"required\": false,\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/TaxiService\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Taxi Service\"]\n\t\t\t},\n\t\t\t\"delete\": {\n\t\t\t\t\"summary\": \"Taxi Service\",\n\t\t\t\t\"description\":
-    \"Deletes a single Taxi Service\",\n\t\t\t\t\"operationId\": \"deleteTaxiService\",\n\t\t\t\t\"parameters\":
-    [{\n\t\t\t\t\t\"name\": \"id\",\n\t\t\t\t\t\"in\": \"path\",\n\t\t\t\t\t\"description\":
-    \"Unique id for item\",\n\t\t\t\t\t\"required\": true,\n\t\t\t\t\t\"type\": \"integer\"\n\t\t\t\t}],\n\t\t\t\t\"responses\":
-    {\n\t\t\t\t\t\"200\": {\n\t\t\t\t\t\t\"description\": \"A successful response.\",\n\t\t\t\t\t\t\"schema\":
-    {\n\t\t\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\t\t\"$ref\":
-    \"#/definitions/TaxiService\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"tags\":
-    [\"Taxi Service\"]\n\t\t\t}\n\t\t}\n\t},\n\t\"definitions\": {\n\t\t\"TaxiService\":
-    {\n\t\t\t\"properties\": {\n\t\t\t\t\"additionaltype\": {\n\t\t\t\t\t\"description\":
-    \"An additional type for the item, typically used for adding more specific types
-    from external vocabularies in microdata syntax. This is a relationship between something
-    and a class that the thing is in. In RDFa syntax, it is better to use the native
-    RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools
-    may have only weaker understanding of extra types, in particular those defined externally.\",\n\t\t\t\t\t\"type\":
-    \"url\"\n\t\t\t\t},\n\t\t\t\t\"aggregaterating\": {\n\t\t\t\t\t\"description\":
-    \"The overall rating, based on a collection of reviews or ratings, of the item.\",\n\t\t\t\t\t\"type\":
-    \"aggregaterating\"\n\t\t\t\t},\n\t\t\t\t\"alternatename\": {\n\t\t\t\t\t\"description\":
-    \"An alias for the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"areaserved\":
-    {\n\t\t\t\t\t\"description\": \"The geographic area where a service or offered item
-    is provided. Supersedes serviceArea.\",\n\t\t\t\t\t\"type\": \"text or  place or
-    \ geoshape or  administrativearea\"\n\t\t\t\t},\n\t\t\t\t\"availablechannel\": {\n\t\t\t\t\t\"description\":
-    \"A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).\",\n\t\t\t\t\t\"type\":
-    \"servicechannel\"\n\t\t\t\t},\n\t\t\t\t\"award\": {\n\t\t\t\t\t\"description\":
-    \"An award won by or for this item. Supersedes awards.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"category\":
-    {\n\t\t\t\t\t\"description\": \"A category for the item. Greater signs or slashes
-    can be used to informally indicate a category hierarchy.\",\n\t\t\t\t\t\"type\":
-    \"thing or  text or  physicalactivitycategory\"\n\t\t\t\t},\n\t\t\t\t\"description\":
-    {\n\t\t\t\t\t\"description\": \"A short description of the item.\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"hasoffercatalog\": {\n\t\t\t\t\t\"description\":
-    \"Indicates an OfferCatalog listing for this Organization, Person, or Service.\",\n\t\t\t\t\t\"type\":
-    \"offercatalog\"\n\t\t\t\t},\n\t\t\t\t\"hoursavailable\": {\n\t\t\t\t\t\"description\":
-    \"The hours during which this service or contact is available.\",\n\t\t\t\t\t\"type\":
-    \"openinghoursspecification\"\n\t\t\t\t},\n\t\t\t\t\"image\": {\n\t\t\t\t\t\"description\":
-    \"An image of the item. This can be a URL or a fully described ImageObject.\",\n\t\t\t\t\t\"type\":
-    \"url or  imageobject\"\n\t\t\t\t},\n\t\t\t\t\"mainentityofpage\": {\n\t\t\t\t\t\"description\":
-    \"Indicates a page (or other CreativeWork) for which this thing is the main entity
-    being described.            See background notes for details.       Inverse property:
-    mainEntity.\",\n\t\t\t\t\t\"type\": \"creativework or  url\"\n\t\t\t\t},\n\t\t\t\t\"name\":
-    {\n\t\t\t\t\t\"description\": \"The name of the item.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"offers\":
-    {\n\t\t\t\t\t\"description\": \"An offer to provide this item&#x2014;for example,
-    an offer to sell a product, rent the DVD of a movie, perform a service, or give
-    away tickets to an event.\",\n\t\t\t\t\t\"type\": \"offer\"\n\t\t\t\t},\n\t\t\t\t\"potentialaction\":
-    {\n\t\t\t\t\t\"description\": \"Indicates a potential Action, which describes an
-    idealized action in which this thing would play an \\'object\\' role.\",\n\t\t\t\t\t\"type\":
-    \"action\"\n\t\t\t\t},\n\t\t\t\t\"provider\": {\n\t\t\t\t\t\"description\": \"The
-    service provider, service operator, or service performer; the goods producer. Another
-    party (a seller) may offer those services or goods on behalf of the provider. A
-    provider may also serve as the seller. Supersedes carrier.\",\n\t\t\t\t\t\"type\":
-    \"person or  organization\"\n\t\t\t\t},\n\t\t\t\t\"providermobility\": {\n\t\t\t\t\t\"description\":
-    \"Indicates the mobility of a provided service (e.g. \\'static\\', \\'dynamic\\').\",\n\t\t\t\t\t\"type\":
-    \"text\"\n\t\t\t\t},\n\t\t\t\t\"review\": {\n\t\t\t\t\t\"description\": \"A review
-    of the item. Supersedes reviews.\",\n\t\t\t\t\t\"type\": \"review\"\n\t\t\t\t},\n\t\t\t\t\"sameas\":
-    {\n\t\t\t\t\t\"description\": \"URL of a reference Web page that unambiguously indicates
-    the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page,
-    or official website.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t},\n\t\t\t\t\"serviceoutput\":
-    {\n\t\t\t\t\t\"description\": \"The tangible thing generated by the service, e.g.
-    a passport, permit, etc. Supersedes produces.\",\n\t\t\t\t\t\"type\": \"thing\"\n\t\t\t\t},\n\t\t\t\t\"servicetype\":
-    {\n\t\t\t\t\t\"description\": \"The type of service being offered, e.g. veterans\\'
-    benefits, emergency relief, etc.\",\n\t\t\t\t\t\"type\": \"text\"\n\t\t\t\t},\n\t\t\t\t\"url\":
-    {\n\t\t\t\t\t\"description\": \"URL of the item.\",\n\t\t\t\t\t\"type\": \"url\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+- swagger: "2.0"
+  info:
+    title: Taxi Service API
+    description: A service for a vehicle for hire with a driver for local travel. Fares
+      are usually calculated based on distance traveled.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: taxi.service.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /taxi-service/:
+      get:
+        summary: Get Taxi Service
+        description: Returns Taxi Service
+        operationId: getTaxiService
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TaxiService'
+        tags:
+        - Taxi Service
+      post:
+        summary: Add Taxi Service
+        description: Add Taxi Service
+        operationId: addTaxiService
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: aggregaterating
+          in: formData
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          required: false
+          type: aggregaterating
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: areaserved
+          in: formData
+          description: The geographic area where a service or offered item is provided.
+            Supersedes serviceArea.
+          required: false
+          type: text or  place or  geoshape or  administrativearea
+        - name: availablechannel
+          in: formData
+          description: A means of accessing the service (e.g. a phone bank, a web site,
+            a location, etc.).
+          required: false
+          type: servicechannel
+        - name: award
+          in: formData
+          description: An award won by or for this item. Supersedes awards.
+          required: false
+          type: text
+        - name: category
+          in: formData
+          description: A category for the item. Greater signs or slashes can be used
+            to informally indicate a category hierarchy.
+          required: false
+          type: thing or  text or  physicalactivitycategory
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: hasoffercatalog
+          in: formData
+          description: Indicates an OfferCatalog listing for this Organization, Person,
+            or Service.
+          required: false
+          type: offercatalog
+        - name: hoursavailable
+          in: formData
+          description: The hours during which this service or contact is available.
+          required: false
+          type: openinghoursspecification
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: offers
+          in: formData
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          required: false
+          type: offer
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: person or  organization
+        - name: providermobility
+          in: formData
+          description: Indicates the mobility of a provided service (e.g. \'static\',
+            \'dynamic\').
+          required: false
+          type: text
+        - name: review
+          in: formData
+          description: A review of the item. Supersedes reviews.
+          required: false
+          type: review
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: serviceoutput
+          in: formData
+          description: The tangible thing generated by the service, e.g. a passport,
+            permit, etc. Supersedes produces.
+          required: false
+          type: thing
+        - name: servicetype
+          in: formData
+          description: The type of service being offered, e.g. veterans\' benefits,
+            emergency relief, etc.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TaxiService'
+        tags:
+        - Taxi Service
+    /taxi-service/{id}/:
+      get:
+        summary: Get Taxi Service
+        description: Returns a single Taxi Service
+        operationId: getTaxiService
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TaxiService'
+        tags:
+        - Taxi Service
+      put:
+        summary: Update Taxi Service
+        description: Update a single Taxi Service
+        operationId: updateTaxiServiceItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: aggregaterating
+          in: formData
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          required: false
+          type: aggregaterating
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: areaserved
+          in: formData
+          description: The geographic area where a service or offered item is provided.
+            Supersedes serviceArea.
+          required: false
+          type: text or  place or  geoshape or  administrativearea
+        - name: availablechannel
+          in: formData
+          description: A means of accessing the service (e.g. a phone bank, a web site,
+            a location, etc.).
+          required: false
+          type: servicechannel
+        - name: award
+          in: formData
+          description: An award won by or for this item. Supersedes awards.
+          required: false
+          type: text
+        - name: category
+          in: formData
+          description: A category for the item. Greater signs or slashes can be used
+            to informally indicate a category hierarchy.
+          required: false
+          type: thing or  text or  physicalactivitycategory
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: hasoffercatalog
+          in: formData
+          description: Indicates an OfferCatalog listing for this Organization, Person,
+            or Service.
+          required: false
+          type: offercatalog
+        - name: hoursavailable
+          in: formData
+          description: The hours during which this service or contact is available.
+          required: false
+          type: openinghoursspecification
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: offers
+          in: formData
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          required: false
+          type: offer
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: person or  organization
+        - name: providermobility
+          in: formData
+          description: Indicates the mobility of a provided service (e.g. \'static\',
+            \'dynamic\').
+          required: false
+          type: text
+        - name: review
+          in: formData
+          description: A review of the item. Supersedes reviews.
+          required: false
+          type: review
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: serviceoutput
+          in: formData
+          description: The tangible thing generated by the service, e.g. a passport,
+            permit, etc. Supersedes produces.
+          required: false
+          type: thing
+        - name: servicetype
+          in: formData
+          description: The type of service being offered, e.g. veterans\' benefits,
+            emergency relief, etc.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TaxiService'
+        tags:
+        - Taxi Service
+      delete:
+        summary: Taxi Service
+        description: Deletes a single Taxi Service
+        operationId: deleteTaxiService
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TaxiService'
+        tags:
+        - Taxi Service
+  definitions:
+    TaxiService:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        aggregaterating:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+        alternatename:
+          description: An alias for the item.
+          type: text
+        areaserved:
+          description: The geographic area where a service or offered item is provided.
+            Supersedes serviceArea.
+          type: text or  place or  geoshape or  administrativearea
+        availablechannel:
+          description: A means of accessing the service (e.g. a phone bank, a web site,
+            a location, etc.).
+          type: servicechannel
+        award:
+          description: An award won by or for this item. Supersedes awards.
+          type: text
+        category:
+          description: A category for the item. Greater signs or slashes can be used
+            to informally indicate a category hierarchy.
+          type: thing or  text or  physicalactivitycategory
+        description:
+          description: A short description of the item.
+          type: text
+        hasoffercatalog:
+          description: Indicates an OfferCatalog listing for this Organization, Person,
+            or Service.
+          type: offercatalog
+        hoursavailable:
+          description: The hours during which this service or contact is available.
+          type: openinghoursspecification
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        name:
+          description: The name of the item.
+          type: text
+        offers:
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          type: offer
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        provider:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: person or  organization
+        providermobility:
+          description: Indicates the mobility of a provided service (e.g. \'static\',
+            \'dynamic\').
+          type: text
+        review:
+          description: A review of the item. Supersedes reviews.
+          type: review
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        serviceoutput:
+          description: The tangible thing generated by the service, e.g. a passport,
+            permit, etc. Supersedes produces.
+          type: thing
+        servicetype:
+          description: The type of service being offered, e.g. veterans\' benefits,
+            emergency relief, etc.
+          type: text
+        url:
+          description: URL of the item.
+          type: url

@@ -1,0 +1,329 @@
+- swagger: "2.0"
+  info:
+    title: Interaction Counter API
+    description: A summary of how users have interacted with this CreativeWork. In most
+      cases, authors will use a subtype to specify the specific type of interaction.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: interaction.counter.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /interaction-counter/:
+      get:
+        summary: Get Interaction Counter
+        description: Returns Interaction Counter
+        operationId: getInteractionCounter
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/InteractionCounter'
+        tags:
+        - Interaction Counter
+      post:
+        summary: Add Interaction Counter
+        description: Add Interaction Counter
+        operationId: addInteractionCounter
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: interactionservice
+          in: formData
+          description: The WebSite or SoftwareApplication where the interactions took
+            place.
+          required: false
+          type: softwareapplication or  website
+        - name: interactionstatistic
+          in: formData
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication. The most specific child type of InteractionCounter
+            should be used.  Supersedes interactionCount.
+          required: false
+          type: creativework
+        - name: interactiontype
+          in: formData
+          description: The Action representing the type of interaction. For up votes,
+            +1s, etc. use LikeAction. For down votes use DislikeAction. Otherwise, use
+            the most specific Action.
+          required: false
+          type: action
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: userinteractioncount
+          in: formData
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication.
+          required: false
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/InteractionCounter'
+        tags:
+        - Interaction Counter
+    /interaction-counter/{id}/:
+      get:
+        summary: Get Interaction Counter
+        description: Returns a single Interaction Counter
+        operationId: getInteractionCounter
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/InteractionCounter'
+        tags:
+        - Interaction Counter
+      put:
+        summary: Update Interaction Counter
+        description: Update a single Interaction Counter
+        operationId: updateInteractionCounterItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: interactionservice
+          in: formData
+          description: The WebSite or SoftwareApplication where the interactions took
+            place.
+          required: false
+          type: softwareapplication or  website
+        - name: interactionstatistic
+          in: formData
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication. The most specific child type of InteractionCounter
+            should be used.  Supersedes interactionCount.
+          required: false
+          type: creativework
+        - name: interactiontype
+          in: formData
+          description: The Action representing the type of interaction. For up votes,
+            +1s, etc. use LikeAction. For down votes use DislikeAction. Otherwise, use
+            the most specific Action.
+          required: false
+          type: action
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: userinteractioncount
+          in: formData
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication.
+          required: false
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/InteractionCounter'
+        tags:
+        - Interaction Counter
+      delete:
+        summary: Interaction Counter
+        description: Deletes a single Interaction Counter
+        operationId: deleteInteractionCounter
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/InteractionCounter'
+        tags:
+        - Interaction Counter
+  definitions:
+    InteractionCounter:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        interactionservice:
+          description: The WebSite or SoftwareApplication where the interactions took
+            place.
+          type: softwareapplication or  website
+        interactionstatistic:
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication. The most specific child type of InteractionCounter
+            should be used.  Supersedes interactionCount.
+          type: creativework
+        interactiontype:
+          description: The Action representing the type of interaction. For up votes,
+            +1s, etc. use LikeAction. For down votes use DislikeAction. Otherwise, use
+            the most specific Action.
+          type: action
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        url:
+          description: URL of the item.
+          type: url
+        userinteractioncount:
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication.
+          type: integer

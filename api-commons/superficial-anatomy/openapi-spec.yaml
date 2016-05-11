@@ -1,0 +1,472 @@
+- swagger: "2.0"
+  info:
+    title: Superficial Anatomy API
+    description: Anatomical features that can be observed by sight (without dissection),
+      including the form and proportions of the human body as well as surface landmarks
+      that correspond to deeper subcutaneous structures. Superficial anatomy plays an
+      important role in sports medicine, phlebotomy, and other medical specialties as
+      underlying anatomical structures can be identified through surface palpation.
+      For example, during back surgery, superficial anatomy can be used to palpate and
+      count vertebrae to find the site of incision. Or in phlebotomy, superficial anatomy
+      can be used to locate an underlying vein; for example, the median cubital vein
+      can be located by palpating the borders of the cubital fossa (such as the epicondyles
+      of the humerus) and then looking for the superficial signs of the vein, such as
+      size, prominence, ability to refill after depression, and feel of surrounding
+      tissue support. As another example, in a subluxation (dislocation) of the glenohumeral
+      joint, the bony structure becomes pronounced with the deltoid muscle failing to
+      cover the glenohumeral joint allowing the edges of the scapula to be superficially
+      visible. Here, the superficial anatomy is the visible edges of the scapula, implying
+      the underlying dislocation of the joint (the related anatomical structure).
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: superficial.anatomy.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /superficial-anatomy/:
+      get:
+        summary: Get Superficial Anatomy
+        description: Returns Superficial Anatomy
+        operationId: getSuperficialAnatomy
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/SuperficialAnatomy'
+        tags:
+        - Superficial Anatomy
+      post:
+        summary: Add Superficial Anatomy
+        description: Add Superficial Anatomy
+        operationId: addSuperficialAnatomy
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: associatedanatomy
+          in: formData
+          description: 'The anatomy of the underlying organ system or structures associated
+            with this entity. '
+          required: false
+          type: physicalactivity or medicalcondition
+        - name: associatedpathophysiology
+          in: formData
+          description: If applicable, a description of the pathophysiology associated
+            with the anatomical system, including potential abnormal changes in the
+            mechanical, physical, and biochemical functions of the system.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relatedanatomy
+          in: formData
+          description: Anatomical systems or structures that relate to the superficial
+            anatomy.
+          required: false
+          type: anatomicalsystem or  anatomicalstructure
+        - name: relatedcondition
+          in: formData
+          description: A medical condition associated with this anatomy.
+          required: false
+          type: medicalcondition
+        - name: relatedtherapy
+          in: formData
+          description: A medical therapy related to this anatomy.
+          required: false
+          type: medicaltherapy
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: sensoryunit
+          in: formData
+          description: 'The neurological pathway extension that inputs and sends information
+            to the brain or spinal cord. '
+          required: false
+          type: nerve
+        - name: significance
+          in: formData
+          description: The significance associated with the superficial anatomy; as
+            an example, how characteristics of the superficial anatomy can suggest underlying
+            medical conditions or courses of treatment.
+          required: false
+          type: text
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/SuperficialAnatomy'
+        tags:
+        - Superficial Anatomy
+    /superficial-anatomy/{id}/:
+      get:
+        summary: Get Superficial Anatomy
+        description: Returns a single Superficial Anatomy
+        operationId: getSuperficialAnatomy
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/SuperficialAnatomy'
+        tags:
+        - Superficial Anatomy
+      put:
+        summary: Update Superficial Anatomy
+        description: Update a single Superficial Anatomy
+        operationId: updateSuperficialAnatomyItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: associatedanatomy
+          in: formData
+          description: 'The anatomy of the underlying organ system or structures associated
+            with this entity. '
+          required: false
+          type: physicalactivity or medicalcondition
+        - name: associatedpathophysiology
+          in: formData
+          description: If applicable, a description of the pathophysiology associated
+            with the anatomical system, including potential abnormal changes in the
+            mechanical, physical, and biochemical functions of the system.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relatedanatomy
+          in: formData
+          description: Anatomical systems or structures that relate to the superficial
+            anatomy.
+          required: false
+          type: anatomicalsystem or  anatomicalstructure
+        - name: relatedcondition
+          in: formData
+          description: A medical condition associated with this anatomy.
+          required: false
+          type: medicalcondition
+        - name: relatedtherapy
+          in: formData
+          description: A medical therapy related to this anatomy.
+          required: false
+          type: medicaltherapy
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: sensoryunit
+          in: formData
+          description: 'The neurological pathway extension that inputs and sends information
+            to the brain or spinal cord. '
+          required: false
+          type: nerve
+        - name: significance
+          in: formData
+          description: The significance associated with the superficial anatomy; as
+            an example, how characteristics of the superficial anatomy can suggest underlying
+            medical conditions or courses of treatment.
+          required: false
+          type: text
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/SuperficialAnatomy'
+        tags:
+        - Superficial Anatomy
+      delete:
+        summary: Superficial Anatomy
+        description: Deletes a single Superficial Anatomy
+        operationId: deleteSuperficialAnatomy
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/SuperficialAnatomy'
+        tags:
+        - Superficial Anatomy
+  definitions:
+    SuperficialAnatomy:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        associatedanatomy:
+          description: 'The anatomy of the underlying organ system or structures associated
+            with this entity. '
+          type: physicalactivity or medicalcondition
+        associatedpathophysiology:
+          description: If applicable, a description of the pathophysiology associated
+            with the anatomical system, including potential abnormal changes in the
+            mechanical, physical, and biochemical functions of the system.
+          type: text
+        code:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+        description:
+          description: A short description of the item.
+          type: text
+        guideline:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        medicinesystem:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        recognizingauthority:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+        relatedanatomy:
+          description: Anatomical systems or structures that relate to the superficial
+            anatomy.
+          type: anatomicalsystem or  anatomicalstructure
+        relatedcondition:
+          description: A medical condition associated with this anatomy.
+          type: medicalcondition
+        relatedtherapy:
+          description: A medical therapy related to this anatomy.
+          type: medicaltherapy
+        relevantspecialty:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        sensoryunit:
+          description: 'The neurological pathway extension that inputs and sends information
+            to the brain or spinal cord. '
+          type: nerve
+        significance:
+          description: The significance associated with the superficial anatomy; as
+            an example, how characteristics of the superficial anatomy can suggest underlying
+            medical conditions or courses of treatment.
+          type: text
+        study:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+        url:
+          description: URL of the item.
+          type: url

@@ -1,0 +1,358 @@
+- swagger: "2.0"
+  info:
+    title: Bus Trip API
+    description: A trip on a commercial bus line.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: bus.trip.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /bus-trip/:
+      get:
+        summary: Get Bus Trip
+        description: Returns Bus Trip
+        operationId: getBusTrip
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/BusTrip'
+        tags:
+        - Bus Trip
+      post:
+        summary: Add Bus Trip
+        description: Add Bus Trip
+        operationId: addBusTrip
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: arrivalbusstop
+          in: formData
+          description: The stop or station from which the bus arrives.
+          required: false
+          type: busstation or  busstop
+        - name: arrivaltime
+          in: formData
+          description: The expected arrival time.
+          required: false
+          type: datetime
+        - name: busname
+          in: formData
+          description: The name of the bus (e.g. Bolt Express).
+          required: false
+          type: text
+        - name: busnumber
+          in: formData
+          description: The unique identifier for the bus.
+          required: false
+          type: text
+        - name: departurebusstop
+          in: formData
+          description: The stop or station from which the bus departs.
+          required: false
+          type: busstation or  busstop
+        - name: departuretime
+          in: formData
+          description: The expected departure time.
+          required: false
+          type: datetime
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: organization or  person
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/BusTrip'
+        tags:
+        - Bus Trip
+    /bus-trip/{id}/:
+      get:
+        summary: Get Bus Trip
+        description: Returns a single Bus Trip
+        operationId: getBusTrip
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/BusTrip'
+        tags:
+        - Bus Trip
+      put:
+        summary: Update Bus Trip
+        description: Update a single Bus Trip
+        operationId: updateBusTripItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: arrivalbusstop
+          in: formData
+          description: The stop or station from which the bus arrives.
+          required: false
+          type: busstation or  busstop
+        - name: arrivaltime
+          in: formData
+          description: The expected arrival time.
+          required: false
+          type: datetime
+        - name: busname
+          in: formData
+          description: The name of the bus (e.g. Bolt Express).
+          required: false
+          type: text
+        - name: busnumber
+          in: formData
+          description: The unique identifier for the bus.
+          required: false
+          type: text
+        - name: departurebusstop
+          in: formData
+          description: The stop or station from which the bus departs.
+          required: false
+          type: busstation or  busstop
+        - name: departuretime
+          in: formData
+          description: The expected departure time.
+          required: false
+          type: datetime
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: organization or  person
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/BusTrip'
+        tags:
+        - Bus Trip
+      delete:
+        summary: Bus Trip
+        description: Deletes a single Bus Trip
+        operationId: deleteBusTrip
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/BusTrip'
+        tags:
+        - Bus Trip
+  definitions:
+    BusTrip:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        arrivalbusstop:
+          description: The stop or station from which the bus arrives.
+          type: busstation or  busstop
+        arrivaltime:
+          description: The expected arrival time.
+          type: datetime
+        busname:
+          description: The name of the bus (e.g. Bolt Express).
+          type: text
+        busnumber:
+          description: The unique identifier for the bus.
+          type: text
+        departurebusstop:
+          description: The stop or station from which the bus departs.
+          type: busstation or  busstop
+        departuretime:
+          description: The expected departure time.
+          type: datetime
+        description:
+          description: A short description of the item.
+          type: text
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        provider:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: organization or  person
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        url:
+          description: URL of the item.
+          type: url

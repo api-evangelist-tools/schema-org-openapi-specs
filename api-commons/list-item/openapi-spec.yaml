@@ -1,0 +1,350 @@
+- swagger: "2.0"
+  info:
+    title: List Item API
+    description: An list item, e.g. a step in a checklist or how-to description.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: list.item.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /list-item/:
+      get:
+        summary: Get List Item
+        description: Returns List Item
+        operationId: getListItem
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ListItem'
+        tags:
+        - List Item
+      post:
+        summary: Add List Item
+        description: Add List Item
+        operationId: addListItem
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: imageobject or  url
+        - name: item
+          in: formData
+          description: "An entity represented by an entry in a list or data feed (e.g.
+            an \\'artist\\' in a list of \\'artists\\')\u2019."
+          required: false
+          type: thing
+        - name: itemlistelement
+          in: formData
+          description: 'For itemListElement values, you can use simple strings (e.g.
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
+            values are best if the elements in the list are plain strings. Existing
+            entities are best for a simple, unordered list of existing things in your
+            data. ListItem is used with ordered lists when you want to provide additional
+            context about the element in that list or when the same item might be in
+            different places in different lists.        Note: The order of elements
+            in your mark-up is not sufficient for indicating the order or elements.  Use
+            ListItem with a \''position\'' property in such cases. '
+          required: false
+          type: itemlist
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: nextitem
+          in: formData
+          description: A link to the ListItem that follows the current one.
+          required: false
+          type: listitem
+        - name: position
+          in: formData
+          description: The position of an item in a series or sequence of items.
+          required: false
+          type: integer or  text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: previousitem
+          in: formData
+          description: A link to the ListItem that preceeds the current one.
+          required: false
+          type: listitem
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ListItem'
+        tags:
+        - List Item
+    /list-item/{id}/:
+      get:
+        summary: Get List Item
+        description: Returns a single List Item
+        operationId: getListItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ListItem'
+        tags:
+        - List Item
+      put:
+        summary: Update List Item
+        description: Update a single List Item
+        operationId: updateListItemItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: imageobject or  url
+        - name: item
+          in: formData
+          description: "An entity represented by an entry in a list or data feed (e.g.
+            an \\'artist\\' in a list of \\'artists\\')\u2019."
+          required: false
+          type: thing
+        - name: itemlistelement
+          in: formData
+          description: 'For itemListElement values, you can use simple strings (e.g.
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
+            values are best if the elements in the list are plain strings. Existing
+            entities are best for a simple, unordered list of existing things in your
+            data. ListItem is used with ordered lists when you want to provide additional
+            context about the element in that list or when the same item might be in
+            different places in different lists.        Note: The order of elements
+            in your mark-up is not sufficient for indicating the order or elements.  Use
+            ListItem with a \''position\'' property in such cases. '
+          required: false
+          type: itemlist
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: nextitem
+          in: formData
+          description: A link to the ListItem that follows the current one.
+          required: false
+          type: listitem
+        - name: position
+          in: formData
+          description: The position of an item in a series or sequence of items.
+          required: false
+          type: integer or  text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: previousitem
+          in: formData
+          description: A link to the ListItem that preceeds the current one.
+          required: false
+          type: listitem
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ListItem'
+        tags:
+        - List Item
+      delete:
+        summary: List Item
+        description: Deletes a single List Item
+        operationId: deleteListItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ListItem'
+        tags:
+        - List Item
+  definitions:
+    ListItem:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: imageobject or  url
+        item:
+          description: "An entity represented by an entry in a list or data feed (e.g.
+            an \\'artist\\' in a list of \\'artists\\')\u2019."
+          type: thing
+        itemlistelement:
+          description: 'For itemListElement values, you can use simple strings (e.g.
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
+            values are best if the elements in the list are plain strings. Existing
+            entities are best for a simple, unordered list of existing things in your
+            data. ListItem is used with ordered lists when you want to provide additional
+            context about the element in that list or when the same item might be in
+            different places in different lists.        Note: The order of elements
+            in your mark-up is not sufficient for indicating the order or elements.  Use
+            ListItem with a \''position\'' property in such cases. '
+          type: itemlist
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        name:
+          description: The name of the item.
+          type: text
+        nextitem:
+          description: A link to the ListItem that follows the current one.
+          type: listitem
+        position:
+          description: The position of an item in a series or sequence of items.
+          type: integer or  text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        previousitem:
+          description: A link to the ListItem that preceeds the current one.
+          type: listitem
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        url:
+          description: URL of the item.
+          type: url

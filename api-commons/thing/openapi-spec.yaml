@@ -1,0 +1,642 @@
+- swagger: "2.0"
+  info:
+    title: Thing API
+    description: The most generic type of item.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: thing.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /thing/:
+      get:
+        summary: Get Thing
+        description: Returns Thing
+        operationId: getThing
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Thing'
+        tags:
+        - Thing
+      post:
+        summary: Add Thing
+        description: Add Thing
+        operationId: addThing
+        parameters:
+        - name: about
+          in: formData
+          description: 'The subject matter of the content. '
+          required: false
+          type: creativework or communicateaction
+        - name: actionoption
+          in: formData
+          description: A sub property of object. The options subject to this action.  Supersedes
+            option.
+          required: false
+          type: chooseaction
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: category
+          in: formData
+          description: 'A category for the item. Greater signs or slashes can be used
+            to informally indicate a category hierarchy. '
+          required: false
+          type: physicalactivity or offer or invoice or product or service
+        - name: characterattribute
+          in: formData
+          description: 'A piece of data that represents a particular aspect of a fictional
+            character (skill, power, character points, advantage, disadvantage). '
+          required: false
+          type: game or videogameseries
+        - name: datafeedelement
+          in: formData
+          description: 'An item within in a data feed. Data feeds may have many elements. '
+          required: false
+          type: datafeed
+        - name: defaultvalue
+          in: formData
+          description: 'The default value of the input.  For properties that expect
+            a literal, the default is a literal value, for properties that expect an
+            object, it\''s an ID reference to one of the current values. '
+          required: false
+          type: propertyvaluespecification
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: error
+          in: formData
+          description: 'For failed actions, more information on the cause of the failure. '
+          required: false
+          type: action
+        - name: gameitem
+          in: formData
+          description: 'An item is an object within the game world that can be collected
+            by a player or, occasionally, a non-player character. '
+          required: false
+          type: game or videogameseries
+        - name: gameplatform
+          in: formData
+          description: 'The electronic systems used to play video games. '
+          required: false
+          type: videogameseries or videogame
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: instrument
+          in: formData
+          description: 'The object that helped the agent perform the action. e.g. John
+            wrote a book with *a pen*. '
+          required: false
+          type: action
+        - name: item
+          in: formData
+          description: "An entity represented by an entry in a list or data feed (e.g.
+            an \\'artist\\' in a list of \\'artists\\')\u2019. "
+          required: false
+          type: listitem or datafeeditem
+        - name: itemlistelement
+          in: formData
+          description: 'For itemListElement values, you can use simple strings (e.g.
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
+            values are best if the elements in the list are plain strings. Existing
+            entities are best for a simple, unordered list of existing things in your
+            data. ListItem is used with ordered lists when you want to provide additional
+            context about the element in that list or when the same item might be in
+            different places in different lists.        Note: The order of elements
+            in your mark-up is not sufficient for indicating the order or elements.  Use
+            ListItem with a \''position\'' property in such cases. '
+          required: false
+          type: itemlist
+        - name: itemreviewed
+          in: formData
+          description: 'The item that is being reviewed/rated. '
+          required: false
+          type: aggregaterating or review
+        - name: mainentity
+          in: formData
+          description: 'Indicates the primary entity described in some page or other
+            CreativeWork.  inverse property: mainEntityOfPage.'
+          required: false
+          type: creativework
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: mentions
+          in: formData
+          description: 'Indicates that the CreativeWork contains a reference to, but
+            is not necessarily about a concept. '
+          required: false
+          type: creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: object
+          in: formData
+          description: 'The object upon the action is carried out, whose state is kept
+            intact or changed. Also known as the semantic roles patient, affected or
+            undergoer (which change their state) or theme (which doesn\''t). e.g. John
+            read *a book*. '
+          required: false
+          type: action
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: purpose
+          in: formData
+          description: 'A goal towards an action is taken. Can be concrete or abstract. '
+          required: false
+          type: medicaldevice or allocateaction or payaction
+        - name: quest
+          in: formData
+          description: 'The task that a player-controlled character, or group of characters
+            may complete in order to gain a reward. '
+          required: false
+          type: game or videogameseries
+        - name: replacee
+          in: formData
+          description: 'A sub property of object. The object that is being replaced. '
+          required: false
+          type: replaceaction
+        - name: replacer
+          in: formData
+          description: 'A sub property of object. The object that replaces. '
+          required: false
+          type: replaceaction
+        - name: reservationfor
+          in: formData
+          description: 'The thing -- flight, event, restaurant,etc. being reserved. '
+          required: false
+          type: reservation
+        - name: result
+          in: formData
+          description: 'The result produced in the action. e.g. John wrote *a book*. '
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: serviceoutput
+          in: formData
+          description: The tangible thing generated by the service, e.g. a passport,
+            permit, etc.  Supersedes produces.
+          required: false
+          type: service
+        - name: targetcollection
+          in: formData
+          description: A sub property of object. The collection target of the action.  Supersedes
+            collection.
+          required: false
+          type: updateaction
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Thing'
+        tags:
+        - Thing
+    /thing/{id}/:
+      get:
+        summary: Get Thing
+        description: Returns a single Thing
+        operationId: getThing
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Thing'
+        tags:
+        - Thing
+      put:
+        summary: Update Thing
+        description: Update a single Thing
+        operationId: updateThingItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: about
+          in: formData
+          description: 'The subject matter of the content. '
+          required: false
+          type: creativework or communicateaction
+        - name: actionoption
+          in: formData
+          description: A sub property of object. The options subject to this action.  Supersedes
+            option.
+          required: false
+          type: chooseaction
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: category
+          in: formData
+          description: 'A category for the item. Greater signs or slashes can be used
+            to informally indicate a category hierarchy. '
+          required: false
+          type: physicalactivity or offer or invoice or product or service
+        - name: characterattribute
+          in: formData
+          description: 'A piece of data that represents a particular aspect of a fictional
+            character (skill, power, character points, advantage, disadvantage). '
+          required: false
+          type: game or videogameseries
+        - name: datafeedelement
+          in: formData
+          description: 'An item within in a data feed. Data feeds may have many elements. '
+          required: false
+          type: datafeed
+        - name: defaultvalue
+          in: formData
+          description: 'The default value of the input.  For properties that expect
+            a literal, the default is a literal value, for properties that expect an
+            object, it\''s an ID reference to one of the current values. '
+          required: false
+          type: propertyvaluespecification
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: error
+          in: formData
+          description: 'For failed actions, more information on the cause of the failure. '
+          required: false
+          type: action
+        - name: gameitem
+          in: formData
+          description: 'An item is an object within the game world that can be collected
+            by a player or, occasionally, a non-player character. '
+          required: false
+          type: game or videogameseries
+        - name: gameplatform
+          in: formData
+          description: 'The electronic systems used to play video games. '
+          required: false
+          type: videogameseries or videogame
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: instrument
+          in: formData
+          description: 'The object that helped the agent perform the action. e.g. John
+            wrote a book with *a pen*. '
+          required: false
+          type: action
+        - name: item
+          in: formData
+          description: "An entity represented by an entry in a list or data feed (e.g.
+            an \\'artist\\' in a list of \\'artists\\')\u2019. "
+          required: false
+          type: listitem or datafeeditem
+        - name: itemlistelement
+          in: formData
+          description: 'For itemListElement values, you can use simple strings (e.g.
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
+            values are best if the elements in the list are plain strings. Existing
+            entities are best for a simple, unordered list of existing things in your
+            data. ListItem is used with ordered lists when you want to provide additional
+            context about the element in that list or when the same item might be in
+            different places in different lists.        Note: The order of elements
+            in your mark-up is not sufficient for indicating the order or elements.  Use
+            ListItem with a \''position\'' property in such cases. '
+          required: false
+          type: itemlist
+        - name: itemreviewed
+          in: formData
+          description: 'The item that is being reviewed/rated. '
+          required: false
+          type: aggregaterating or review
+        - name: mainentity
+          in: formData
+          description: 'Indicates the primary entity described in some page or other
+            CreativeWork.  inverse property: mainEntityOfPage.'
+          required: false
+          type: creativework
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: mentions
+          in: formData
+          description: 'Indicates that the CreativeWork contains a reference to, but
+            is not necessarily about a concept. '
+          required: false
+          type: creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: object
+          in: formData
+          description: 'The object upon the action is carried out, whose state is kept
+            intact or changed. Also known as the semantic roles patient, affected or
+            undergoer (which change their state) or theme (which doesn\''t). e.g. John
+            read *a book*. '
+          required: false
+          type: action
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: purpose
+          in: formData
+          description: 'A goal towards an action is taken. Can be concrete or abstract. '
+          required: false
+          type: medicaldevice or allocateaction or payaction
+        - name: quest
+          in: formData
+          description: 'The task that a player-controlled character, or group of characters
+            may complete in order to gain a reward. '
+          required: false
+          type: game or videogameseries
+        - name: replacee
+          in: formData
+          description: 'A sub property of object. The object that is being replaced. '
+          required: false
+          type: replaceaction
+        - name: replacer
+          in: formData
+          description: 'A sub property of object. The object that replaces. '
+          required: false
+          type: replaceaction
+        - name: reservationfor
+          in: formData
+          description: 'The thing -- flight, event, restaurant,etc. being reserved. '
+          required: false
+          type: reservation
+        - name: result
+          in: formData
+          description: 'The result produced in the action. e.g. John wrote *a book*. '
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: serviceoutput
+          in: formData
+          description: The tangible thing generated by the service, e.g. a passport,
+            permit, etc.  Supersedes produces.
+          required: false
+          type: service
+        - name: targetcollection
+          in: formData
+          description: A sub property of object. The collection target of the action.  Supersedes
+            collection.
+          required: false
+          type: updateaction
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Thing'
+        tags:
+        - Thing
+      delete:
+        summary: Thing
+        description: Deletes a single Thing
+        operationId: deleteThing
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Thing'
+        tags:
+        - Thing
+  definitions:
+    Thing:
+      properties:
+        about:
+          description: 'The subject matter of the content. '
+          type: creativework or communicateaction
+        actionoption:
+          description: A sub property of object. The options subject to this action.  Supersedes
+            option.
+          type: chooseaction
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        category:
+          description: 'A category for the item. Greater signs or slashes can be used
+            to informally indicate a category hierarchy. '
+          type: physicalactivity or offer or invoice or product or service
+        characterattribute:
+          description: 'A piece of data that represents a particular aspect of a fictional
+            character (skill, power, character points, advantage, disadvantage). '
+          type: game or videogameseries
+        datafeedelement:
+          description: 'An item within in a data feed. Data feeds may have many elements. '
+          type: datafeed
+        defaultvalue:
+          description: 'The default value of the input.  For properties that expect
+            a literal, the default is a literal value, for properties that expect an
+            object, it\''s an ID reference to one of the current values. '
+          type: propertyvaluespecification
+        description:
+          description: A short description of the item.
+          type: text
+        error:
+          description: 'For failed actions, more information on the cause of the failure. '
+          type: action
+        gameitem:
+          description: 'An item is an object within the game world that can be collected
+            by a player or, occasionally, a non-player character. '
+          type: game or videogameseries
+        gameplatform:
+          description: 'The electronic systems used to play video games. '
+          type: videogameseries or videogame
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        instrument:
+          description: 'The object that helped the agent perform the action. e.g. John
+            wrote a book with *a pen*. '
+          type: action
+        item:
+          description: "An entity represented by an entry in a list or data feed (e.g.
+            an \\'artist\\' in a list of \\'artists\\')\u2019. "
+          type: listitem or datafeeditem
+        itemlistelement:
+          description: 'For itemListElement values, you can use simple strings (e.g.
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
+            values are best if the elements in the list are plain strings. Existing
+            entities are best for a simple, unordered list of existing things in your
+            data. ListItem is used with ordered lists when you want to provide additional
+            context about the element in that list or when the same item might be in
+            different places in different lists.        Note: The order of elements
+            in your mark-up is not sufficient for indicating the order or elements.  Use
+            ListItem with a \''position\'' property in such cases. '
+          type: itemlist
+        itemreviewed:
+          description: 'The item that is being reviewed/rated. '
+          type: aggregaterating or review
+        mainentity:
+          description: 'Indicates the primary entity described in some page or other
+            CreativeWork.  inverse property: mainEntityOfPage.'
+          type: creativework
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        mentions:
+          description: 'Indicates that the CreativeWork contains a reference to, but
+            is not necessarily about a concept. '
+          type: creativework
+        name:
+          description: The name of the item.
+          type: text
+        object:
+          description: 'The object upon the action is carried out, whose state is kept
+            intact or changed. Also known as the semantic roles patient, affected or
+            undergoer (which change their state) or theme (which doesn\''t). e.g. John
+            read *a book*. '
+          type: action
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        purpose:
+          description: 'A goal towards an action is taken. Can be concrete or abstract. '
+          type: medicaldevice or allocateaction or payaction
+        quest:
+          description: 'The task that a player-controlled character, or group of characters
+            may complete in order to gain a reward. '
+          type: game or videogameseries
+        replacee:
+          description: 'A sub property of object. The object that is being replaced. '
+          type: replaceaction
+        replacer:
+          description: 'A sub property of object. The object that replaces. '
+          type: replaceaction
+        reservationfor:
+          description: 'The thing -- flight, event, restaurant,etc. being reserved. '
+          type: reservation
+        result:
+          description: 'The result produced in the action. e.g. John wrote *a book*. '
+          type: action
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        serviceoutput:
+          description: The tangible thing generated by the service, e.g. a passport,
+            permit, etc.  Supersedes produces.
+          type: service
+        targetcollection:
+          description: A sub property of object. The collection target of the action.  Supersedes
+            collection.
+          type: updateaction
+        url:
+          description: URL of the item.
+          type: url

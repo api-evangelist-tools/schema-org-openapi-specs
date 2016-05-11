@@ -1,0 +1,502 @@
+- swagger: "2.0"
+  info:
+    title: Rental Car Reservation API
+    description: A reservation for a rental car.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: rental.car.reservation.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /rental-car-reservation/:
+      get:
+        summary: Get Rental Car Reservation
+        description: Returns Rental Car Reservation
+        operationId: getRentalCarReservation
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/RentalCarReservation'
+        tags:
+        - Rental Car Reservation
+      post:
+        summary: Add Rental Car Reservation
+        description: Add Rental Car Reservation
+        operationId: addRentalCarReservation
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: bookingtime
+          in: formData
+          description: The date and time the reservation was booked.
+          required: false
+          type: datetime
+        - name: broker
+          in: formData
+          description: An entity that arranges for an exchange between a buyer and a
+            seller.  In most cases a broker never acquires or releases ownership of
+            a product or service involved in an exchange.  If it is not clear whether
+            an entity is a broker, seller, or buyer, the latter two terms are preferred.
+            Supersedes bookingAgent.
+          required: false
+          type: organization or  person
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: dropofflocation
+          in: formData
+          description: Where a rental car can be dropped off.
+          required: false
+          type: place
+        - name: dropofftime
+          in: formData
+          description: When a rental car can be dropped off.
+          required: false
+          type: datetime
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: modifiedtime
+          in: formData
+          description: The date and time the reservation was modified.
+          required: false
+          type: datetime
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: pickuplocation
+          in: formData
+          description: Where a taxi will pick up a passenger or a rental car can be
+            picked up.
+          required: false
+          type: place
+        - name: pickuptime
+          in: formData
+          description: When a taxi will pickup a passenger or a rental car can be picked
+            up.
+          required: false
+          type: datetime
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: pricecurrency
+          in: formData
+          description: The currency (in 3-letter ISO 4217 format) of the price or a
+            price component, when attached to PriceSpecification and its subtypes.
+          required: false
+          type: text
+        - name: programmembershipused
+          in: formData
+          description: Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+          required: false
+          type: programmembership
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: organization or  person
+        - name: reservationfor
+          in: formData
+          description: The thing -- flight, event, restaurant,etc. being reserved.
+          required: false
+          type: thing
+        - name: reservationid
+          in: formData
+          description: A unique identifier for the reservation.
+          required: false
+          type: text
+        - name: reservationstatus
+          in: formData
+          description: The current status of the reservation.
+          required: false
+          type: reservationstatustype
+        - name: reservedticket
+          in: formData
+          description: A ticket associated with the reservation.
+          required: false
+          type: ticket
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: totalprice
+          in: formData
+          description: The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          required: false
+          type: text or  pricespecification or  number
+        - name: undername
+          in: formData
+          description: The person or organization the reservation or ticket is for.
+          required: false
+          type: organization or  person
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/RentalCarReservation'
+        tags:
+        - Rental Car Reservation
+    /rental-car-reservation/{id}/:
+      get:
+        summary: Get Rental Car Reservation
+        description: Returns a single Rental Car Reservation
+        operationId: getRentalCarReservation
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/RentalCarReservation'
+        tags:
+        - Rental Car Reservation
+      put:
+        summary: Update Rental Car Reservation
+        description: Update a single Rental Car Reservation
+        operationId: updateRentalCarReservationItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: bookingtime
+          in: formData
+          description: The date and time the reservation was booked.
+          required: false
+          type: datetime
+        - name: broker
+          in: formData
+          description: An entity that arranges for an exchange between a buyer and a
+            seller.  In most cases a broker never acquires or releases ownership of
+            a product or service involved in an exchange.  If it is not clear whether
+            an entity is a broker, seller, or buyer, the latter two terms are preferred.
+            Supersedes bookingAgent.
+          required: false
+          type: organization or  person
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: dropofflocation
+          in: formData
+          description: Where a rental car can be dropped off.
+          required: false
+          type: place
+        - name: dropofftime
+          in: formData
+          description: When a rental car can be dropped off.
+          required: false
+          type: datetime
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: modifiedtime
+          in: formData
+          description: The date and time the reservation was modified.
+          required: false
+          type: datetime
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: pickuplocation
+          in: formData
+          description: Where a taxi will pick up a passenger or a rental car can be
+            picked up.
+          required: false
+          type: place
+        - name: pickuptime
+          in: formData
+          description: When a taxi will pickup a passenger or a rental car can be picked
+            up.
+          required: false
+          type: datetime
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: pricecurrency
+          in: formData
+          description: The currency (in 3-letter ISO 4217 format) of the price or a
+            price component, when attached to PriceSpecification and its subtypes.
+          required: false
+          type: text
+        - name: programmembershipused
+          in: formData
+          description: Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+          required: false
+          type: programmembership
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: organization or  person
+        - name: reservationfor
+          in: formData
+          description: The thing -- flight, event, restaurant,etc. being reserved.
+          required: false
+          type: thing
+        - name: reservationid
+          in: formData
+          description: A unique identifier for the reservation.
+          required: false
+          type: text
+        - name: reservationstatus
+          in: formData
+          description: The current status of the reservation.
+          required: false
+          type: reservationstatustype
+        - name: reservedticket
+          in: formData
+          description: A ticket associated with the reservation.
+          required: false
+          type: ticket
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: totalprice
+          in: formData
+          description: The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          required: false
+          type: text or  pricespecification or  number
+        - name: undername
+          in: formData
+          description: The person or organization the reservation or ticket is for.
+          required: false
+          type: organization or  person
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/RentalCarReservation'
+        tags:
+        - Rental Car Reservation
+      delete:
+        summary: Rental Car Reservation
+        description: Deletes a single Rental Car Reservation
+        operationId: deleteRentalCarReservation
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/RentalCarReservation'
+        tags:
+        - Rental Car Reservation
+  definitions:
+    RentalCarReservation:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        bookingtime:
+          description: The date and time the reservation was booked.
+          type: datetime
+        broker:
+          description: An entity that arranges for an exchange between a buyer and a
+            seller.  In most cases a broker never acquires or releases ownership of
+            a product or service involved in an exchange.  If it is not clear whether
+            an entity is a broker, seller, or buyer, the latter two terms are preferred.
+            Supersedes bookingAgent.
+          type: organization or  person
+        description:
+          description: A short description of the item.
+          type: text
+        dropofflocation:
+          description: Where a rental car can be dropped off.
+          type: place
+        dropofftime:
+          description: When a rental car can be dropped off.
+          type: datetime
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        modifiedtime:
+          description: The date and time the reservation was modified.
+          type: datetime
+        name:
+          description: The name of the item.
+          type: text
+        pickuplocation:
+          description: Where a taxi will pick up a passenger or a rental car can be
+            picked up.
+          type: place
+        pickuptime:
+          description: When a taxi will pickup a passenger or a rental car can be picked
+            up.
+          type: datetime
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        pricecurrency:
+          description: The currency (in 3-letter ISO 4217 format) of the price or a
+            price component, when attached to PriceSpecification and its subtypes.
+          type: text
+        programmembershipused:
+          description: Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+          type: programmembership
+        provider:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: organization or  person
+        reservationfor:
+          description: The thing -- flight, event, restaurant,etc. being reserved.
+          type: thing
+        reservationid:
+          description: A unique identifier for the reservation.
+          type: text
+        reservationstatus:
+          description: The current status of the reservation.
+          type: reservationstatustype
+        reservedticket:
+          description: A ticket associated with the reservation.
+          type: ticket
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        totalprice:
+          description: The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          type: text or  pricespecification or  number
+        undername:
+          description: The person or organization the reservation or ticket is for.
+          type: organization or  person
+        url:
+          description: URL of the item.
+          type: url

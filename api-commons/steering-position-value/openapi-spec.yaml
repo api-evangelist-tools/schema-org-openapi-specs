@@ -1,0 +1,436 @@
+- swagger: "2.0"
+  info:
+    title: Steering Position Value API
+    description: A value indicating a steering position.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: steering.position.value.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /steering-position-value/:
+      get:
+        summary: Get Steering Position Value
+        description: Returns Steering Position Value
+        operationId: getSteeringPositionValue
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/SteeringPositionValue'
+        tags:
+        - Steering Position Value
+      post:
+        summary: Add Steering Position Value
+        description: Add Steering Position Value
+        operationId: addSteeringPositionValue
+        parameters:
+        - name: additionalproperty
+          in: formData
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          required: false
+          type: propertyvalue
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: equal
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is equal to the object.
+          required: false
+          type: qualitativevalue
+        - name: greater
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is greater than the object.
+          required: false
+          type: qualitativevalue
+        - name: greaterorequal
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is greater than or equal to the object.
+          required: false
+          type: qualitativevalue
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: lesser
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is lesser than the object.
+          required: false
+          type: qualitativevalue
+        - name: lesserorequal
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is lesser than or equal to the object.
+          required: false
+          type: qualitativevalue
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: nonequal
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is not equal to the object.
+          required: false
+          type: qualitativevalue
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: steeringposition
+          in: formData
+          description: 'The position of the steering wheel or similar device (mostly
+            for cars). '
+          required: false
+          type: vehicle
+        - name: supersededby
+          in: formData
+          description: Relates a term (i.e. a property, class or enumeration) to one
+            that supersedes it.
+          required: false
+          type: class or  property or  enumeration
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: valuereference
+          in: formData
+          description: A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+          required: false
+          type: qualitativevalue or  enumeration or  structuredvalue or  quantitativevalue
+            or  propertyvalue
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/SteeringPositionValue'
+        tags:
+        - Steering Position Value
+    /steering-position-value/{id}/:
+      get:
+        summary: Get Steering Position Value
+        description: Returns a single Steering Position Value
+        operationId: getSteeringPositionValue
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/SteeringPositionValue'
+        tags:
+        - Steering Position Value
+      put:
+        summary: Update Steering Position Value
+        description: Update a single Steering Position Value
+        operationId: updateSteeringPositionValueItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionalproperty
+          in: formData
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          required: false
+          type: propertyvalue
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: equal
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is equal to the object.
+          required: false
+          type: qualitativevalue
+        - name: greater
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is greater than the object.
+          required: false
+          type: qualitativevalue
+        - name: greaterorequal
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is greater than or equal to the object.
+          required: false
+          type: qualitativevalue
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: lesser
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is lesser than the object.
+          required: false
+          type: qualitativevalue
+        - name: lesserorequal
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is lesser than or equal to the object.
+          required: false
+          type: qualitativevalue
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: nonequal
+          in: formData
+          description: This ordering relation for qualitative values indicates that
+            the subject is not equal to the object.
+          required: false
+          type: qualitativevalue
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: steeringposition
+          in: formData
+          description: 'The position of the steering wheel or similar device (mostly
+            for cars). '
+          required: false
+          type: vehicle
+        - name: supersededby
+          in: formData
+          description: Relates a term (i.e. a property, class or enumeration) to one
+            that supersedes it.
+          required: false
+          type: class or  property or  enumeration
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: valuereference
+          in: formData
+          description: A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+          required: false
+          type: qualitativevalue or  enumeration or  structuredvalue or  quantitativevalue
+            or  propertyvalue
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/SteeringPositionValue'
+        tags:
+        - Steering Position Value
+      delete:
+        summary: Steering Position Value
+        description: Deletes a single Steering Position Value
+        operationId: deleteSteeringPositionValue
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/SteeringPositionValue'
+        tags:
+        - Steering Position Value
+  definitions:
+    SteeringPositionValue:
+      properties:
+        additionalproperty:
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          type: propertyvalue
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+        equal:
+          description: This ordering relation for qualitative values indicates that
+            the subject is equal to the object.
+          type: qualitativevalue
+        greater:
+          description: This ordering relation for qualitative values indicates that
+            the subject is greater than the object.
+          type: qualitativevalue
+        greaterorequal:
+          description: This ordering relation for qualitative values indicates that
+            the subject is greater than or equal to the object.
+          type: qualitativevalue
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        lesser:
+          description: This ordering relation for qualitative values indicates that
+            the subject is lesser than the object.
+          type: qualitativevalue
+        lesserorequal:
+          description: This ordering relation for qualitative values indicates that
+            the subject is lesser than or equal to the object.
+          type: qualitativevalue
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        name:
+          description: The name of the item.
+          type: text
+        nonequal:
+          description: This ordering relation for qualitative values indicates that
+            the subject is not equal to the object.
+          type: qualitativevalue
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        steeringposition:
+          description: 'The position of the steering wheel or similar device (mostly
+            for cars). '
+          type: vehicle
+        supersededby:
+          description: Relates a term (i.e. a property, class or enumeration) to one
+            that supersedes it.
+          type: class or  property or  enumeration
+        url:
+          description: URL of the item.
+          type: url
+        valuereference:
+          description: A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+          type: qualitativevalue or  enumeration or  structuredvalue or  quantitativevalue
+            or  propertyvalue

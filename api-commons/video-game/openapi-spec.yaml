@@ -1,0 +1,1864 @@
+- swagger: "2.0"
+  info:
+    title: Video Game API
+    description: A video game is an electronic game that involves human interaction
+      with a user interface to generate visual feedback on a video device.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: video.game.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /video-game/:
+      get:
+        summary: Get Video Game
+        description: Returns Video Game
+        operationId: getVideoGame
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/VideoGame'
+        tags:
+        - Video Game
+      post:
+        summary: Add Video Game
+        description: Add Video Game
+        operationId: addVideoGame
+        parameters:
+        - name: about
+          in: formData
+          description: The subject matter of the content.
+          required: false
+          type: thing
+        - name: accessibilityapi
+          in: formData
+          description: Indicates that the resource is compatible with the referenced
+            accessibility API (WebSchemas wiki lists possible values).
+          required: false
+          type: text
+        - name: accessibilitycontrol
+          in: formData
+          description: Identifies input methods that are sufficient to fully control
+            the described resource (WebSchemas wiki lists possible values).
+          required: false
+          type: text
+        - name: accessibilityfeature
+          in: formData
+          description: Content features of the resource, such as accessible media, alternatives
+            and supported enhancements for accessibility (WebSchemas wiki lists possible
+            values).
+          required: false
+          type: text
+        - name: accessibilityhazard
+          in: formData
+          description: A characteristic of the described resource that is physiologically
+            dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki
+            lists possible values).
+          required: false
+          type: text
+        - name: accountableperson
+          in: formData
+          description: Specifies the Person that is legally accountable for the CreativeWork.
+          required: false
+          type: person
+        - name: actor
+          in: formData
+          description: An actor, e.g. in tv, radio, movie, video games etc. Actors can
+            be associated with individual items or with a series, episode, clip. Supersedes
+            actors.
+          required: false
+          type: person
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: aggregaterating
+          in: formData
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          required: false
+          type: aggregaterating
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: alternativeheadline
+          in: formData
+          description: A secondary title of the CreativeWork.
+          required: false
+          type: text
+        - name: applicationcategory
+          in: formData
+          description: Type of software application, e.g. \"Game, Multimedia\".
+          required: false
+          type: text or  url
+        - name: applicationsubcategory
+          in: formData
+          description: Subcategory of the application, e.g. \"Arcade Game\".
+          required: false
+          type: text or  url
+        - name: applicationsuite
+          in: formData
+          description: The name of the application suite to which the application belongs
+            (e.g. Excel belongs to Office).
+          required: false
+          type: text
+        - name: associatedmedia
+          in: formData
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for encoding.
+          required: false
+          type: mediaobject
+        - name: audience
+          in: formData
+          description: An intended audience, i.e. a group for whom something was created.
+            Supersedes serviceAudience.
+          required: false
+          type: audience
+        - name: audio
+          in: formData
+          description: An embedded audio object.
+          required: false
+          type: audioobject
+        - name: author
+          in: formData
+          description: The author of this content. Please note that author is special
+            in that HTML 5 provides a special mechanism for indicating authorship via
+            the rel tag. That is equivalent to this and may be used interchangeably.
+          required: false
+          type: person or  organization
+        - name: availableondevice
+          in: formData
+          description: Device required to run the application. Used in cases where a
+            specific make/model is required to run the application. Supersedes device.
+          required: false
+          type: text
+        - name: award
+          in: formData
+          description: An award won by or for this item. Supersedes awards.
+          required: false
+          type: text
+        - name: character
+          in: formData
+          description: Fictional person connected with a creative work.
+          required: false
+          type: person
+        - name: characterattribute
+          in: formData
+          description: A piece of data that represents a particular aspect of a fictional
+            character (skill, power, character points, advantage, disadvantage).
+          required: false
+          type: thing
+        - name: cheatcode
+          in: formData
+          description: Cheat codes to the game.
+          required: false
+          type: creativework
+        - name: citation
+          in: formData
+          description: A citation or reference to another creative work, such as another
+            publication, web page, scholarly article, etc.
+          required: false
+          type: creativework or  text
+        - name: comment
+          in: formData
+          description: Comments, typically from users.
+          required: false
+          type: comment
+        - name: commentcount
+          in: formData
+          description: The number of comments this CreativeWork (e.g. Article, Question
+            or Answer) has received. This is most applicable to works published in Web
+            sites with commenting system; additional comments may exist elsewhere.
+          required: false
+          type: integer
+        - name: contentlocation
+          in: formData
+          description: The location depicted or described in the content. For example,
+            the location in a photograph or painting.
+          required: false
+          type: place
+        - name: contentrating
+          in: formData
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
+          required: false
+          type: text
+        - name: contributor
+          in: formData
+          description: A secondary contributor to the CreativeWork.
+          required: false
+          type: person or  organization
+        - name: copyrightholder
+          in: formData
+          description: The party holding the legal copyright to the CreativeWork.
+          required: false
+          type: person or  organization
+        - name: copyrightyear
+          in: formData
+          description: The year during which the claimed copyright for the CreativeWork
+            was first asserted.
+          required: false
+          type: number
+        - name: countriesnotsupported
+          in: formData
+          description: Countries for which the application is not supported. You can
+            also provide the two-letter ISO 3166-1 alpha-2 country code.
+          required: false
+          type: text
+        - name: countriessupported
+          in: formData
+          description: Countries for which the application is supported. You can also
+            provide the two-letter ISO 3166-1 alpha-2 country code.
+          required: false
+          type: text
+        - name: creator
+          in: formData
+          description: The creator/author of this CreativeWork. This is the same as
+            the Author property for CreativeWork.
+          required: false
+          type: person or  organization
+        - name: datecreated
+          in: formData
+          description: The date on which the CreativeWork was created or the item was
+            added to a DataFeed.
+          required: false
+          type: date or  datetime
+        - name: datemodified
+          in: formData
+          description: The date on which the CreativeWork was most recently modified
+            or when the item\'s entry was modified within a DataFeed.
+          required: false
+          type: date or  datetime
+        - name: datepublished
+          in: formData
+          description: Date of first broadcast/publication.
+          required: false
+          type: date
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: director
+          in: formData
+          description: A director of e.g. tv, radio, movie, video games etc. content.
+            Directors can be associated with individual items or with a series, episode,
+            clip. Supersedes directors.
+          required: false
+          type: person
+        - name: discussionurl
+          in: formData
+          description: A link to the page containing the comments of the CreativeWork.
+          required: false
+          type: url
+        - name: downloadurl
+          in: formData
+          description: If the file can be downloaded, URL to download the binary.
+          required: false
+          type: url
+        - name: editor
+          in: formData
+          description: Specifies the Person who edited the CreativeWork.
+          required: false
+          type: person
+        - name: educationalalignment
+          in: formData
+          description: An alignment to an established educational framework.
+          required: false
+          type: alignmentobject
+        - name: educationaluse
+          in: formData
+          description: The purpose of a work in the context of education; for example,
+            \'assignment\', \'group work\'.
+          required: false
+          type: text
+        - name: encoding
+          in: formData
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for associatedMedia. Supersedes encodings.
+          required: false
+          type: mediaobject
+        - name: exampleofwork
+          in: formData
+          description: 'A creative work that this work is an example/instance/realization/derivation
+            of. Inverse property: workExample.'
+          required: false
+          type: creativework
+        - name: featurelist
+          in: formData
+          description: Features or modules provided by this application (and possibly
+            required by other applications).
+          required: false
+          type: text or  url
+        - name: fileformat
+          in: formData
+          description: Media type (aka MIME format, see IANA site) of the content e.g.
+            application/zip of a SoftwareApplication binary. In cases where a CreativeWork
+            has several media type representations, \'encoding\' can be used to indicate
+            each MediaObject alongside particular fileFormat information.
+          required: false
+          type: text
+        - name: filesize
+          in: formData
+          description: Size of the application / package (e.g. 18MB). In the absence
+            of a unit (MB, KB etc.), KB will be assumed.
+          required: false
+          type: text
+        - name: game
+          in: formData
+          description: 'Video game which is played on this server.  inverse property:
+            gameServer.'
+          required: false
+          type: gameserver
+        - name: gameitem
+          in: formData
+          description: An item is an object within the game world that can be collected
+            by a player or, occasionally, a non-player character.
+          required: false
+          type: thing
+        - name: gamelocation
+          in: formData
+          description: Real or fictional location of the game (or part of game).
+          required: false
+          type: url or  place or  postaladdress
+        - name: gameplatform
+          in: formData
+          description: The electronic systems used to play video games.
+          required: false
+          type: thing or  text or  url
+        - name: gameserver
+          in: formData
+          description: 'The server on which  it is possible to play the game. Inverse
+            property: game.'
+          required: false
+          type: gameserver
+        - name: gametip
+          in: formData
+          description: Links to tips, tactics, etc.
+          required: false
+          type: creativework
+        - name: genre
+          in: formData
+          description: Genre of the creative work or group.
+          required: false
+          type: text or  url
+        - name: haspart
+          in: formData
+          description: 'Indicates a CreativeWork that is (in some sense) a part of this
+            CreativeWork. Inverse property: isPartOf.'
+          required: false
+          type: creativework
+        - name: headline
+          in: formData
+          description: Headline of the article.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: inlanguage
+          in: formData
+          description: The language of the content or performance or used in an action.
+            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
+            language.
+          required: false
+          type: text or  language
+        - name: installurl
+          in: formData
+          description: URL at which the app may be installed, if different from the
+            URL of the item.
+          required: false
+          type: url
+        - name: interactionstatistic
+          in: formData
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication. The most specific child type of InteractionCounter
+            should be used. Supersedes interactionCount.
+          required: false
+          type: interactioncounter
+        - name: interactivitytype
+          in: formData
+          description: The predominant mode of learning supported by the learning resource.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
+          required: false
+          type: text
+        - name: isbasedonurl
+          in: formData
+          description: A resource that was used in the creation of this resource. This
+            term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+          required: false
+          type: url
+        - name: isfamilyfriendly
+          in: formData
+          description: Indicates whether this content is family friendly.
+          required: false
+          type: boolean
+        - name: ispartof
+          in: formData
+          description: 'Indicates a CreativeWork that this CreativeWork is (in some
+            sense) part of. Inverse property: hasPart.'
+          required: false
+          type: creativework
+        - name: keywords
+          in: formData
+          description: Keywords or tags used to describe this content. Multiple entries
+            in a keywords list are typically delimited by commas.
+          required: false
+          type: text
+        - name: learningresourcetype
+          in: formData
+          description: The predominant type or kind characterizing the learning resource.
+            For example, \'presentation\', \'handout\'.
+          required: false
+          type: text
+        - name: license
+          in: formData
+          description: A license document that applies to this content, typically indicated
+            by URL.
+          required: false
+          type: creativework or  url
+        - name: locationcreated
+          in: formData
+          description: The location where the CreativeWork was created, which may not
+            be the same as the location depicted in the CreativeWork.
+          required: false
+          type: place
+        - name: mainentity
+          in: formData
+          description: 'Indicates the primary entity described in some page or other
+            CreativeWork. Inverse property: mainEntityOfPage.'
+          required: false
+          type: thing
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: memoryrequirements
+          in: formData
+          description: Minimum memory requirements.
+          required: false
+          type: text or  url
+        - name: mentions
+          in: formData
+          description: Indicates that the CreativeWork contains a reference to, but
+            is not necessarily about a concept.
+          required: false
+          type: thing
+        - name: musicby
+          in: formData
+          description: The composer of the soundtrack.
+          required: false
+          type: person or  musicgroup
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: numberofplayers
+          in: formData
+          description: Indicate how many people can play this game (minimum, maximum,
+            or range).
+          required: false
+          type: quantitativevalue
+        - name: offers
+          in: formData
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          required: false
+          type: offer
+        - name: operatingsystem
+          in: formData
+          description: Operating systems supported (Windows 7, OSX 10.6, Android 1.6).
+          required: false
+          type: text
+        - name: permissions
+          in: formData
+          description: Permission(s) required to run the app (for example, a mobile
+            app may require full internet access or may run only on wifi).
+          required: false
+          type: text
+        - name: playmode
+          in: formData
+          description: Indicates whether this game is multi-player, co-op or single-player.  The
+            game can be marked as multi-player, co-op and single-player at the same
+            time.
+          required: false
+          type: gameplaymode
+        - name: position
+          in: formData
+          description: The position of an item in a series or sequence of items.
+          required: false
+          type: text or  integer
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: processorrequirements
+          in: formData
+          description: Processor architecture required to run the application (e.g.
+            IA64).
+          required: false
+          type: text
+        - name: producer
+          in: formData
+          description: The person or organization who produced the work (e.g. music
+            album, movie, tv/radio series etc.).
+          required: false
+          type: person or  organization
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: person or  organization
+        - name: publication
+          in: formData
+          description: A publication event associated with the item.
+          required: false
+          type: publicationevent
+        - name: publisher
+          in: formData
+          description: The publisher of the creative work.
+          required: false
+          type: person or  organization
+        - name: publishingprinciples
+          in: formData
+          description: Link to page describing the editorial principles of the organization
+            primarily responsible for the creation of the CreativeWork.
+          required: false
+          type: url
+        - name: quest
+          in: formData
+          description: The task that a player-controlled character, or group of characters
+            may complete in order to gain a reward.
+          required: false
+          type: thing
+        - name: recordedat
+          in: formData
+          description: 'The Event where the CreativeWork was recorded. The CreativeWork
+            may capture all or part of the event. Inverse property: recordedIn.'
+          required: false
+          type: event
+        - name: releasedevent
+          in: formData
+          description: The place and time the release was issued, expressed as a PublicationEvent.
+          required: false
+          type: publicationevent
+        - name: releasenotes
+          in: formData
+          description: Description of what changed in this version.
+          required: false
+          type: text or  url
+        - name: review
+          in: formData
+          description: A review of the item. Supersedes reviews.
+          required: false
+          type: review
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: schemaversion
+          in: formData
+          description: 'Indicates (by URL or string) a particular version of a schema
+            used in some CreativeWork. For example, a document could declare a schemaVersion
+            using a URL such as http://schema.org/version/2.0/ if precise indication
+            of schema version was required by some application. '
+          required: false
+          type: text or  url
+        - name: screenshot
+          in: formData
+          description: A link to a screenshot image of the app.
+          required: false
+          type: url or  imageobject
+        - name: softwareaddon
+          in: formData
+          description: Additional content for a software application.
+          required: false
+          type: softwareapplication
+        - name: softwarehelp
+          in: formData
+          description: Software application help.
+          required: false
+          type: creativework
+        - name: softwarerequirements
+          in: formData
+          description: 'Component dependency requirements for application. This includes
+            runtime environments and shared libraries that are not included in the application
+            distribution package, but required to run the application (Examples: DirectX,
+            Java or .NET runtime). Supersedes requirements.'
+          required: false
+          type: text or  url
+        - name: softwareversion
+          in: formData
+          description: Version of the software instance.
+          required: false
+          type: text
+        - name: sourceorganization
+          in: formData
+          description: The Organization on whose behalf the creator was working.
+          required: false
+          type: organization
+        - name: storagerequirements
+          in: formData
+          description: Storage requirements (free space required).
+          required: false
+          type: text or  url
+        - name: supportingdata
+          in: formData
+          description: Supporting data for a SoftwareApplication.
+          required: false
+          type: datafeed
+        - name: text
+          in: formData
+          description: The textual content of this CreativeWork.
+          required: false
+          type: text
+        - name: thumbnailurl
+          in: formData
+          description: A thumbnail image relevant to the Thing.
+          required: false
+          type: url
+        - name: timerequired
+          in: formData
+          description: Approximate or typical time it takes to work with or through
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
+          required: false
+          type: duration
+        - name: trailer
+          in: formData
+          description: The trailer of a movie or tv/radio series, season, episode, etc.
+          required: false
+          type: videoobject
+        - name: translator
+          in: formData
+          description: Organization or person who adapts a creative work to different
+            languages, regional differences and technical requirements of a target market.
+          required: false
+          type: person or  organization
+        - name: typicalagerange
+          in: formData
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: version
+          in: formData
+          description: The version of the CreativeWork embodied by a specified resource.
+          required: false
+          type: number
+        - name: video
+          in: formData
+          description: An embedded video object.
+          required: false
+          type: videoobject
+        - name: workexample
+          in: formData
+          description: 'Example/instance/realization/derivation of the concept of this
+            creative work. eg. The paperback edition, first edition, or eBook. Inverse
+            property: exampleOfWork.'
+          required: false
+          type: creativework
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/VideoGame'
+        tags:
+        - Video Game
+    /video-game/{id}/:
+      get:
+        summary: Get Video Game
+        description: Returns a single Video Game
+        operationId: getVideoGame
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/VideoGame'
+        tags:
+        - Video Game
+      put:
+        summary: Update Video Game
+        description: Update a single Video Game
+        operationId: updateVideoGameItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: about
+          in: formData
+          description: The subject matter of the content.
+          required: false
+          type: thing
+        - name: accessibilityapi
+          in: formData
+          description: Indicates that the resource is compatible with the referenced
+            accessibility API (WebSchemas wiki lists possible values).
+          required: false
+          type: text
+        - name: accessibilitycontrol
+          in: formData
+          description: Identifies input methods that are sufficient to fully control
+            the described resource (WebSchemas wiki lists possible values).
+          required: false
+          type: text
+        - name: accessibilityfeature
+          in: formData
+          description: Content features of the resource, such as accessible media, alternatives
+            and supported enhancements for accessibility (WebSchemas wiki lists possible
+            values).
+          required: false
+          type: text
+        - name: accessibilityhazard
+          in: formData
+          description: A characteristic of the described resource that is physiologically
+            dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki
+            lists possible values).
+          required: false
+          type: text
+        - name: accountableperson
+          in: formData
+          description: Specifies the Person that is legally accountable for the CreativeWork.
+          required: false
+          type: person
+        - name: actor
+          in: formData
+          description: An actor, e.g. in tv, radio, movie, video games etc. Actors can
+            be associated with individual items or with a series, episode, clip. Supersedes
+            actors.
+          required: false
+          type: person
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: aggregaterating
+          in: formData
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          required: false
+          type: aggregaterating
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: alternativeheadline
+          in: formData
+          description: A secondary title of the CreativeWork.
+          required: false
+          type: text
+        - name: applicationcategory
+          in: formData
+          description: Type of software application, e.g. \"Game, Multimedia\".
+          required: false
+          type: text or  url
+        - name: applicationsubcategory
+          in: formData
+          description: Subcategory of the application, e.g. \"Arcade Game\".
+          required: false
+          type: text or  url
+        - name: applicationsuite
+          in: formData
+          description: The name of the application suite to which the application belongs
+            (e.g. Excel belongs to Office).
+          required: false
+          type: text
+        - name: associatedmedia
+          in: formData
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for encoding.
+          required: false
+          type: mediaobject
+        - name: audience
+          in: formData
+          description: An intended audience, i.e. a group for whom something was created.
+            Supersedes serviceAudience.
+          required: false
+          type: audience
+        - name: audio
+          in: formData
+          description: An embedded audio object.
+          required: false
+          type: audioobject
+        - name: author
+          in: formData
+          description: The author of this content. Please note that author is special
+            in that HTML 5 provides a special mechanism for indicating authorship via
+            the rel tag. That is equivalent to this and may be used interchangeably.
+          required: false
+          type: person or  organization
+        - name: availableondevice
+          in: formData
+          description: Device required to run the application. Used in cases where a
+            specific make/model is required to run the application. Supersedes device.
+          required: false
+          type: text
+        - name: award
+          in: formData
+          description: An award won by or for this item. Supersedes awards.
+          required: false
+          type: text
+        - name: character
+          in: formData
+          description: Fictional person connected with a creative work.
+          required: false
+          type: person
+        - name: characterattribute
+          in: formData
+          description: A piece of data that represents a particular aspect of a fictional
+            character (skill, power, character points, advantage, disadvantage).
+          required: false
+          type: thing
+        - name: cheatcode
+          in: formData
+          description: Cheat codes to the game.
+          required: false
+          type: creativework
+        - name: citation
+          in: formData
+          description: A citation or reference to another creative work, such as another
+            publication, web page, scholarly article, etc.
+          required: false
+          type: creativework or  text
+        - name: comment
+          in: formData
+          description: Comments, typically from users.
+          required: false
+          type: comment
+        - name: commentcount
+          in: formData
+          description: The number of comments this CreativeWork (e.g. Article, Question
+            or Answer) has received. This is most applicable to works published in Web
+            sites with commenting system; additional comments may exist elsewhere.
+          required: false
+          type: integer
+        - name: contentlocation
+          in: formData
+          description: The location depicted or described in the content. For example,
+            the location in a photograph or painting.
+          required: false
+          type: place
+        - name: contentrating
+          in: formData
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
+          required: false
+          type: text
+        - name: contributor
+          in: formData
+          description: A secondary contributor to the CreativeWork.
+          required: false
+          type: person or  organization
+        - name: copyrightholder
+          in: formData
+          description: The party holding the legal copyright to the CreativeWork.
+          required: false
+          type: person or  organization
+        - name: copyrightyear
+          in: formData
+          description: The year during which the claimed copyright for the CreativeWork
+            was first asserted.
+          required: false
+          type: number
+        - name: countriesnotsupported
+          in: formData
+          description: Countries for which the application is not supported. You can
+            also provide the two-letter ISO 3166-1 alpha-2 country code.
+          required: false
+          type: text
+        - name: countriessupported
+          in: formData
+          description: Countries for which the application is supported. You can also
+            provide the two-letter ISO 3166-1 alpha-2 country code.
+          required: false
+          type: text
+        - name: creator
+          in: formData
+          description: The creator/author of this CreativeWork. This is the same as
+            the Author property for CreativeWork.
+          required: false
+          type: person or  organization
+        - name: datecreated
+          in: formData
+          description: The date on which the CreativeWork was created or the item was
+            added to a DataFeed.
+          required: false
+          type: date or  datetime
+        - name: datemodified
+          in: formData
+          description: The date on which the CreativeWork was most recently modified
+            or when the item\'s entry was modified within a DataFeed.
+          required: false
+          type: date or  datetime
+        - name: datepublished
+          in: formData
+          description: Date of first broadcast/publication.
+          required: false
+          type: date
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: director
+          in: formData
+          description: A director of e.g. tv, radio, movie, video games etc. content.
+            Directors can be associated with individual items or with a series, episode,
+            clip. Supersedes directors.
+          required: false
+          type: person
+        - name: discussionurl
+          in: formData
+          description: A link to the page containing the comments of the CreativeWork.
+          required: false
+          type: url
+        - name: downloadurl
+          in: formData
+          description: If the file can be downloaded, URL to download the binary.
+          required: false
+          type: url
+        - name: editor
+          in: formData
+          description: Specifies the Person who edited the CreativeWork.
+          required: false
+          type: person
+        - name: educationalalignment
+          in: formData
+          description: An alignment to an established educational framework.
+          required: false
+          type: alignmentobject
+        - name: educationaluse
+          in: formData
+          description: The purpose of a work in the context of education; for example,
+            \'assignment\', \'group work\'.
+          required: false
+          type: text
+        - name: encoding
+          in: formData
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for associatedMedia. Supersedes encodings.
+          required: false
+          type: mediaobject
+        - name: exampleofwork
+          in: formData
+          description: 'A creative work that this work is an example/instance/realization/derivation
+            of. Inverse property: workExample.'
+          required: false
+          type: creativework
+        - name: featurelist
+          in: formData
+          description: Features or modules provided by this application (and possibly
+            required by other applications).
+          required: false
+          type: text or  url
+        - name: fileformat
+          in: formData
+          description: Media type (aka MIME format, see IANA site) of the content e.g.
+            application/zip of a SoftwareApplication binary. In cases where a CreativeWork
+            has several media type representations, \'encoding\' can be used to indicate
+            each MediaObject alongside particular fileFormat information.
+          required: false
+          type: text
+        - name: filesize
+          in: formData
+          description: Size of the application / package (e.g. 18MB). In the absence
+            of a unit (MB, KB etc.), KB will be assumed.
+          required: false
+          type: text
+        - name: game
+          in: formData
+          description: 'Video game which is played on this server.  inverse property:
+            gameServer.'
+          required: false
+          type: gameserver
+        - name: gameitem
+          in: formData
+          description: An item is an object within the game world that can be collected
+            by a player or, occasionally, a non-player character.
+          required: false
+          type: thing
+        - name: gamelocation
+          in: formData
+          description: Real or fictional location of the game (or part of game).
+          required: false
+          type: url or  place or  postaladdress
+        - name: gameplatform
+          in: formData
+          description: The electronic systems used to play video games.
+          required: false
+          type: thing or  text or  url
+        - name: gameserver
+          in: formData
+          description: 'The server on which  it is possible to play the game. Inverse
+            property: game.'
+          required: false
+          type: gameserver
+        - name: gametip
+          in: formData
+          description: Links to tips, tactics, etc.
+          required: false
+          type: creativework
+        - name: genre
+          in: formData
+          description: Genre of the creative work or group.
+          required: false
+          type: text or  url
+        - name: haspart
+          in: formData
+          description: 'Indicates a CreativeWork that is (in some sense) a part of this
+            CreativeWork. Inverse property: isPartOf.'
+          required: false
+          type: creativework
+        - name: headline
+          in: formData
+          description: Headline of the article.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: inlanguage
+          in: formData
+          description: The language of the content or performance or used in an action.
+            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
+            language.
+          required: false
+          type: text or  language
+        - name: installurl
+          in: formData
+          description: URL at which the app may be installed, if different from the
+            URL of the item.
+          required: false
+          type: url
+        - name: interactionstatistic
+          in: formData
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication. The most specific child type of InteractionCounter
+            should be used. Supersedes interactionCount.
+          required: false
+          type: interactioncounter
+        - name: interactivitytype
+          in: formData
+          description: The predominant mode of learning supported by the learning resource.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
+          required: false
+          type: text
+        - name: isbasedonurl
+          in: formData
+          description: A resource that was used in the creation of this resource. This
+            term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+          required: false
+          type: url
+        - name: isfamilyfriendly
+          in: formData
+          description: Indicates whether this content is family friendly.
+          required: false
+          type: boolean
+        - name: ispartof
+          in: formData
+          description: 'Indicates a CreativeWork that this CreativeWork is (in some
+            sense) part of. Inverse property: hasPart.'
+          required: false
+          type: creativework
+        - name: keywords
+          in: formData
+          description: Keywords or tags used to describe this content. Multiple entries
+            in a keywords list are typically delimited by commas.
+          required: false
+          type: text
+        - name: learningresourcetype
+          in: formData
+          description: The predominant type or kind characterizing the learning resource.
+            For example, \'presentation\', \'handout\'.
+          required: false
+          type: text
+        - name: license
+          in: formData
+          description: A license document that applies to this content, typically indicated
+            by URL.
+          required: false
+          type: creativework or  url
+        - name: locationcreated
+          in: formData
+          description: The location where the CreativeWork was created, which may not
+            be the same as the location depicted in the CreativeWork.
+          required: false
+          type: place
+        - name: mainentity
+          in: formData
+          description: 'Indicates the primary entity described in some page or other
+            CreativeWork. Inverse property: mainEntityOfPage.'
+          required: false
+          type: thing
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: memoryrequirements
+          in: formData
+          description: Minimum memory requirements.
+          required: false
+          type: text or  url
+        - name: mentions
+          in: formData
+          description: Indicates that the CreativeWork contains a reference to, but
+            is not necessarily about a concept.
+          required: false
+          type: thing
+        - name: musicby
+          in: formData
+          description: The composer of the soundtrack.
+          required: false
+          type: person or  musicgroup
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: numberofplayers
+          in: formData
+          description: Indicate how many people can play this game (minimum, maximum,
+            or range).
+          required: false
+          type: quantitativevalue
+        - name: offers
+          in: formData
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          required: false
+          type: offer
+        - name: operatingsystem
+          in: formData
+          description: Operating systems supported (Windows 7, OSX 10.6, Android 1.6).
+          required: false
+          type: text
+        - name: permissions
+          in: formData
+          description: Permission(s) required to run the app (for example, a mobile
+            app may require full internet access or may run only on wifi).
+          required: false
+          type: text
+        - name: playmode
+          in: formData
+          description: Indicates whether this game is multi-player, co-op or single-player.  The
+            game can be marked as multi-player, co-op and single-player at the same
+            time.
+          required: false
+          type: gameplaymode
+        - name: position
+          in: formData
+          description: The position of an item in a series or sequence of items.
+          required: false
+          type: text or  integer
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: processorrequirements
+          in: formData
+          description: Processor architecture required to run the application (e.g.
+            IA64).
+          required: false
+          type: text
+        - name: producer
+          in: formData
+          description: The person or organization who produced the work (e.g. music
+            album, movie, tv/radio series etc.).
+          required: false
+          type: person or  organization
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: person or  organization
+        - name: publication
+          in: formData
+          description: A publication event associated with the item.
+          required: false
+          type: publicationevent
+        - name: publisher
+          in: formData
+          description: The publisher of the creative work.
+          required: false
+          type: person or  organization
+        - name: publishingprinciples
+          in: formData
+          description: Link to page describing the editorial principles of the organization
+            primarily responsible for the creation of the CreativeWork.
+          required: false
+          type: url
+        - name: quest
+          in: formData
+          description: The task that a player-controlled character, or group of characters
+            may complete in order to gain a reward.
+          required: false
+          type: thing
+        - name: recordedat
+          in: formData
+          description: 'The Event where the CreativeWork was recorded. The CreativeWork
+            may capture all or part of the event. Inverse property: recordedIn.'
+          required: false
+          type: event
+        - name: releasedevent
+          in: formData
+          description: The place and time the release was issued, expressed as a PublicationEvent.
+          required: false
+          type: publicationevent
+        - name: releasenotes
+          in: formData
+          description: Description of what changed in this version.
+          required: false
+          type: text or  url
+        - name: review
+          in: formData
+          description: A review of the item. Supersedes reviews.
+          required: false
+          type: review
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: schemaversion
+          in: formData
+          description: 'Indicates (by URL or string) a particular version of a schema
+            used in some CreativeWork. For example, a document could declare a schemaVersion
+            using a URL such as http://schema.org/version/2.0/ if precise indication
+            of schema version was required by some application. '
+          required: false
+          type: text or  url
+        - name: screenshot
+          in: formData
+          description: A link to a screenshot image of the app.
+          required: false
+          type: url or  imageobject
+        - name: softwareaddon
+          in: formData
+          description: Additional content for a software application.
+          required: false
+          type: softwareapplication
+        - name: softwarehelp
+          in: formData
+          description: Software application help.
+          required: false
+          type: creativework
+        - name: softwarerequirements
+          in: formData
+          description: 'Component dependency requirements for application. This includes
+            runtime environments and shared libraries that are not included in the application
+            distribution package, but required to run the application (Examples: DirectX,
+            Java or .NET runtime). Supersedes requirements.'
+          required: false
+          type: text or  url
+        - name: softwareversion
+          in: formData
+          description: Version of the software instance.
+          required: false
+          type: text
+        - name: sourceorganization
+          in: formData
+          description: The Organization on whose behalf the creator was working.
+          required: false
+          type: organization
+        - name: storagerequirements
+          in: formData
+          description: Storage requirements (free space required).
+          required: false
+          type: text or  url
+        - name: supportingdata
+          in: formData
+          description: Supporting data for a SoftwareApplication.
+          required: false
+          type: datafeed
+        - name: text
+          in: formData
+          description: The textual content of this CreativeWork.
+          required: false
+          type: text
+        - name: thumbnailurl
+          in: formData
+          description: A thumbnail image relevant to the Thing.
+          required: false
+          type: url
+        - name: timerequired
+          in: formData
+          description: Approximate or typical time it takes to work with or through
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
+          required: false
+          type: duration
+        - name: trailer
+          in: formData
+          description: The trailer of a movie or tv/radio series, season, episode, etc.
+          required: false
+          type: videoobject
+        - name: translator
+          in: formData
+          description: Organization or person who adapts a creative work to different
+            languages, regional differences and technical requirements of a target market.
+          required: false
+          type: person or  organization
+        - name: typicalagerange
+          in: formData
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: version
+          in: formData
+          description: The version of the CreativeWork embodied by a specified resource.
+          required: false
+          type: number
+        - name: video
+          in: formData
+          description: An embedded video object.
+          required: false
+          type: videoobject
+        - name: workexample
+          in: formData
+          description: 'Example/instance/realization/derivation of the concept of this
+            creative work. eg. The paperback edition, first edition, or eBook. Inverse
+            property: exampleOfWork.'
+          required: false
+          type: creativework
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/VideoGame'
+        tags:
+        - Video Game
+      delete:
+        summary: Video Game
+        description: Deletes a single Video Game
+        operationId: deleteVideoGame
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/VideoGame'
+        tags:
+        - Video Game
+  definitions:
+    VideoGame:
+      properties:
+        about:
+          description: The subject matter of the content.
+          type: thing
+        accessibilityapi:
+          description: Indicates that the resource is compatible with the referenced
+            accessibility API (WebSchemas wiki lists possible values).
+          type: text
+        accessibilitycontrol:
+          description: Identifies input methods that are sufficient to fully control
+            the described resource (WebSchemas wiki lists possible values).
+          type: text
+        accessibilityfeature:
+          description: Content features of the resource, such as accessible media, alternatives
+            and supported enhancements for accessibility (WebSchemas wiki lists possible
+            values).
+          type: text
+        accessibilityhazard:
+          description: A characteristic of the described resource that is physiologically
+            dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki
+            lists possible values).
+          type: text
+        accountableperson:
+          description: Specifies the Person that is legally accountable for the CreativeWork.
+          type: person
+        actor:
+          description: An actor, e.g. in tv, radio, movie, video games etc. Actors can
+            be associated with individual items or with a series, episode, clip. Supersedes
+            actors.
+          type: person
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        aggregaterating:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+        alternatename:
+          description: An alias for the item.
+          type: text
+        alternativeheadline:
+          description: A secondary title of the CreativeWork.
+          type: text
+        applicationcategory:
+          description: Type of software application, e.g. \"Game, Multimedia\".
+          type: text or  url
+        applicationsubcategory:
+          description: Subcategory of the application, e.g. \"Arcade Game\".
+          type: text or  url
+        applicationsuite:
+          description: The name of the application suite to which the application belongs
+            (e.g. Excel belongs to Office).
+          type: text
+        associatedmedia:
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for encoding.
+          type: mediaobject
+        audience:
+          description: An intended audience, i.e. a group for whom something was created.
+            Supersedes serviceAudience.
+          type: audience
+        audio:
+          description: An embedded audio object.
+          type: audioobject
+        author:
+          description: The author of this content. Please note that author is special
+            in that HTML 5 provides a special mechanism for indicating authorship via
+            the rel tag. That is equivalent to this and may be used interchangeably.
+          type: person or  organization
+        availableondevice:
+          description: Device required to run the application. Used in cases where a
+            specific make/model is required to run the application. Supersedes device.
+          type: text
+        award:
+          description: An award won by or for this item. Supersedes awards.
+          type: text
+        character:
+          description: Fictional person connected with a creative work.
+          type: person
+        characterattribute:
+          description: A piece of data that represents a particular aspect of a fictional
+            character (skill, power, character points, advantage, disadvantage).
+          type: thing
+        cheatcode:
+          description: Cheat codes to the game.
+          type: creativework
+        citation:
+          description: A citation or reference to another creative work, such as another
+            publication, web page, scholarly article, etc.
+          type: creativework or  text
+        comment:
+          description: Comments, typically from users.
+          type: comment
+        commentcount:
+          description: The number of comments this CreativeWork (e.g. Article, Question
+            or Answer) has received. This is most applicable to works published in Web
+            sites with commenting system; additional comments may exist elsewhere.
+          type: integer
+        contentlocation:
+          description: The location depicted or described in the content. For example,
+            the location in a photograph or painting.
+          type: place
+        contentrating:
+          description: Official rating of a piece of content&#x2014;for example,\'MPAA
+            PG-13\'.
+          type: text
+        contributor:
+          description: A secondary contributor to the CreativeWork.
+          type: person or  organization
+        copyrightholder:
+          description: The party holding the legal copyright to the CreativeWork.
+          type: person or  organization
+        copyrightyear:
+          description: The year during which the claimed copyright for the CreativeWork
+            was first asserted.
+          type: number
+        countriesnotsupported:
+          description: Countries for which the application is not supported. You can
+            also provide the two-letter ISO 3166-1 alpha-2 country code.
+          type: text
+        countriessupported:
+          description: Countries for which the application is supported. You can also
+            provide the two-letter ISO 3166-1 alpha-2 country code.
+          type: text
+        creator:
+          description: The creator/author of this CreativeWork. This is the same as
+            the Author property for CreativeWork.
+          type: person or  organization
+        datecreated:
+          description: The date on which the CreativeWork was created or the item was
+            added to a DataFeed.
+          type: date or  datetime
+        datemodified:
+          description: The date on which the CreativeWork was most recently modified
+            or when the item\'s entry was modified within a DataFeed.
+          type: date or  datetime
+        datepublished:
+          description: Date of first broadcast/publication.
+          type: date
+        description:
+          description: A short description of the item.
+          type: text
+        director:
+          description: A director of e.g. tv, radio, movie, video games etc. content.
+            Directors can be associated with individual items or with a series, episode,
+            clip. Supersedes directors.
+          type: person
+        discussionurl:
+          description: A link to the page containing the comments of the CreativeWork.
+          type: url
+        downloadurl:
+          description: If the file can be downloaded, URL to download the binary.
+          type: url
+        editor:
+          description: Specifies the Person who edited the CreativeWork.
+          type: person
+        educationalalignment:
+          description: An alignment to an established educational framework.
+          type: alignmentobject
+        educationaluse:
+          description: The purpose of a work in the context of education; for example,
+            \'assignment\', \'group work\'.
+          type: text
+        encoding:
+          description: A media object that encodes this CreativeWork. This property
+            is a synonym for associatedMedia. Supersedes encodings.
+          type: mediaobject
+        exampleofwork:
+          description: 'A creative work that this work is an example/instance/realization/derivation
+            of. Inverse property: workExample.'
+          type: creativework
+        featurelist:
+          description: Features or modules provided by this application (and possibly
+            required by other applications).
+          type: text or  url
+        fileformat:
+          description: Media type (aka MIME format, see IANA site) of the content e.g.
+            application/zip of a SoftwareApplication binary. In cases where a CreativeWork
+            has several media type representations, \'encoding\' can be used to indicate
+            each MediaObject alongside particular fileFormat information.
+          type: text
+        filesize:
+          description: Size of the application / package (e.g. 18MB). In the absence
+            of a unit (MB, KB etc.), KB will be assumed.
+          type: text
+        game:
+          description: 'Video game which is played on this server.  inverse property:
+            gameServer.'
+          type: gameserver
+        gameitem:
+          description: An item is an object within the game world that can be collected
+            by a player or, occasionally, a non-player character.
+          type: thing
+        gamelocation:
+          description: Real or fictional location of the game (or part of game).
+          type: url or  place or  postaladdress
+        gameplatform:
+          description: The electronic systems used to play video games.
+          type: thing or  text or  url
+        gameserver:
+          description: 'The server on which  it is possible to play the game. Inverse
+            property: game.'
+          type: gameserver
+        gametip:
+          description: Links to tips, tactics, etc.
+          type: creativework
+        genre:
+          description: Genre of the creative work or group.
+          type: text or  url
+        haspart:
+          description: 'Indicates a CreativeWork that is (in some sense) a part of this
+            CreativeWork. Inverse property: isPartOf.'
+          type: creativework
+        headline:
+          description: Headline of the article.
+          type: text
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        inlanguage:
+          description: The language of the content or performance or used in an action.
+            Please use one of the language codes from the IETF BCP 47 standard. Supersedes
+            language.
+          type: text or  language
+        installurl:
+          description: URL at which the app may be installed, if different from the
+            URL of the item.
+          type: url
+        interactionstatistic:
+          description: The number of interactions for the CreativeWork using the WebSite
+            or SoftwareApplication. The most specific child type of InteractionCounter
+            should be used. Supersedes interactionCount.
+          type: interactioncounter
+        interactivitytype:
+          description: The predominant mode of learning supported by the learning resource.
+            Acceptable values are \'active\', \'expositive\', or \'mixed\'.
+          type: text
+        isbasedonurl:
+          description: A resource that was used in the creation of this resource. This
+            term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+          type: url
+        isfamilyfriendly:
+          description: Indicates whether this content is family friendly.
+          type: boolean
+        ispartof:
+          description: 'Indicates a CreativeWork that this CreativeWork is (in some
+            sense) part of. Inverse property: hasPart.'
+          type: creativework
+        keywords:
+          description: Keywords or tags used to describe this content. Multiple entries
+            in a keywords list are typically delimited by commas.
+          type: text
+        learningresourcetype:
+          description: The predominant type or kind characterizing the learning resource.
+            For example, \'presentation\', \'handout\'.
+          type: text
+        license:
+          description: A license document that applies to this content, typically indicated
+            by URL.
+          type: creativework or  url
+        locationcreated:
+          description: The location where the CreativeWork was created, which may not
+            be the same as the location depicted in the CreativeWork.
+          type: place
+        mainentity:
+          description: 'Indicates the primary entity described in some page or other
+            CreativeWork. Inverse property: mainEntityOfPage.'
+          type: thing
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        memoryrequirements:
+          description: Minimum memory requirements.
+          type: text or  url
+        mentions:
+          description: Indicates that the CreativeWork contains a reference to, but
+            is not necessarily about a concept.
+          type: thing
+        musicby:
+          description: The composer of the soundtrack.
+          type: person or  musicgroup
+        name:
+          description: The name of the item.
+          type: text
+        numberofplayers:
+          description: Indicate how many people can play this game (minimum, maximum,
+            or range).
+          type: quantitativevalue
+        offers:
+          description: An offer to provide this item&#x2014;for example, an offer to
+            sell a product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+          type: offer
+        operatingsystem:
+          description: Operating systems supported (Windows 7, OSX 10.6, Android 1.6).
+          type: text
+        permissions:
+          description: Permission(s) required to run the app (for example, a mobile
+            app may require full internet access or may run only on wifi).
+          type: text
+        playmode:
+          description: Indicates whether this game is multi-player, co-op or single-player.  The
+            game can be marked as multi-player, co-op and single-player at the same
+            time.
+          type: gameplaymode
+        position:
+          description: The position of an item in a series or sequence of items.
+          type: text or  integer
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        processorrequirements:
+          description: Processor architecture required to run the application (e.g.
+            IA64).
+          type: text
+        producer:
+          description: The person or organization who produced the work (e.g. music
+            album, movie, tv/radio series etc.).
+          type: person or  organization
+        provider:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: person or  organization
+        publication:
+          description: A publication event associated with the item.
+          type: publicationevent
+        publisher:
+          description: The publisher of the creative work.
+          type: person or  organization
+        publishingprinciples:
+          description: Link to page describing the editorial principles of the organization
+            primarily responsible for the creation of the CreativeWork.
+          type: url
+        quest:
+          description: The task that a player-controlled character, or group of characters
+            may complete in order to gain a reward.
+          type: thing
+        recordedat:
+          description: 'The Event where the CreativeWork was recorded. The CreativeWork
+            may capture all or part of the event. Inverse property: recordedIn.'
+          type: event
+        releasedevent:
+          description: The place and time the release was issued, expressed as a PublicationEvent.
+          type: publicationevent
+        releasenotes:
+          description: Description of what changed in this version.
+          type: text or  url
+        review:
+          description: A review of the item. Supersedes reviews.
+          type: review
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        schemaversion:
+          description: 'Indicates (by URL or string) a particular version of a schema
+            used in some CreativeWork. For example, a document could declare a schemaVersion
+            using a URL such as http://schema.org/version/2.0/ if precise indication
+            of schema version was required by some application. '
+          type: text or  url
+        screenshot:
+          description: A link to a screenshot image of the app.
+          type: url or  imageobject
+        softwareaddon:
+          description: Additional content for a software application.
+          type: softwareapplication
+        softwarehelp:
+          description: Software application help.
+          type: creativework
+        softwarerequirements:
+          description: 'Component dependency requirements for application. This includes
+            runtime environments and shared libraries that are not included in the application
+            distribution package, but required to run the application (Examples: DirectX,
+            Java or .NET runtime). Supersedes requirements.'
+          type: text or  url
+        softwareversion:
+          description: Version of the software instance.
+          type: text
+        sourceorganization:
+          description: The Organization on whose behalf the creator was working.
+          type: organization
+        storagerequirements:
+          description: Storage requirements (free space required).
+          type: text or  url
+        supportingdata:
+          description: Supporting data for a SoftwareApplication.
+          type: datafeed
+        text:
+          description: The textual content of this CreativeWork.
+          type: text
+        thumbnailurl:
+          description: A thumbnail image relevant to the Thing.
+          type: url
+        timerequired:
+          description: Approximate or typical time it takes to work with or through
+            this learning resource for the typical intended target audience, e.g. \'P30M\',
+            \'P1H25M\'.
+          type: duration
+        trailer:
+          description: The trailer of a movie or tv/radio series, season, episode, etc.
+          type: videoobject
+        translator:
+          description: Organization or person who adapts a creative work to different
+            languages, regional differences and technical requirements of a target market.
+          type: person or  organization
+        typicalagerange:
+          description: The typical expected age range, e.g. \'7-9\', \'11-\'.
+          type: text
+        url:
+          description: URL of the item.
+          type: url
+        version:
+          description: The version of the CreativeWork embodied by a specified resource.
+          type: number
+        video:
+          description: An embedded video object.
+          type: videoobject
+        workexample:
+          description: 'Example/instance/realization/derivation of the concept of this
+            creative work. eg. The paperback edition, first edition, or eBook. Inverse
+            property: exampleOfWork.'
+          type: creativework

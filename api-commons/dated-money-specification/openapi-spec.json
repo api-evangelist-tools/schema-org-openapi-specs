@@ -1,0 +1,372 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Dated Money Specification API",
+		"description": "A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee\\'s salary over a specific period of time.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "dated.money.specification.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/dated-money-specification\/": {
+			"get": {
+				"summary": "Get Dated Money Specification",
+				"description": "Returns Dated Money Specification",
+				"operationId": "getDatedMoneySpecification",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/DatedMoneySpecification"
+							}
+						}
+					}
+				},
+				"tags": ["Dated Money Specification"]
+			},
+			"post": {
+				"summary": "Add Dated Money Specification",
+				"description": "Add Dated Money Specification",
+				"operationId": "addDatedMoneySpecification",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "amount",
+					"in": "formData",
+					"description": "The amount of money.",
+					"required": false,
+					"type": "number"
+				},
+				{
+					"name": "currency",
+					"in": "formData",
+					"description": "The currency in which the monetary amount is expressed (in 3-letter ",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "enddate",
+					"in": "formData",
+					"description": "The end date and time of the item (in ISO 8601 date format).",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "startdate",
+					"in": "formData",
+					"description": "The start date and time of the item (in ISO 8601 date format).",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/DatedMoneySpecification"
+							}
+						}
+					}
+				},
+				"tags": ["Dated Money Specification"]
+			}
+		},
+		"\/dated-money-specification\/{id}\/": {
+			"get": {
+				"summary": "Get Dated Money Specification",
+				"description": "Returns a single Dated Money Specification",
+				"operationId": "getDatedMoneySpecification",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/DatedMoneySpecification"
+							}
+						}
+					}
+				},
+				"tags": ["Dated Money Specification"]
+			},
+			"put": {
+				"summary": "Update Dated Money Specification",
+				"description": "Update a single Dated Money Specification",
+				"operationId": "updateDatedMoneySpecificationItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "amount",
+					"in": "formData",
+					"description": "The amount of money.",
+					"required": false,
+					"type": "number"
+				},
+				{
+					"name": "currency",
+					"in": "formData",
+					"description": "The currency in which the monetary amount is expressed (in 3-letter ",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "enddate",
+					"in": "formData",
+					"description": "The end date and time of the item (in ISO 8601 date format).",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "startdate",
+					"in": "formData",
+					"description": "The start date and time of the item (in ISO 8601 date format).",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/DatedMoneySpecification"
+							}
+						}
+					}
+				},
+				"tags": ["Dated Money Specification"]
+			},
+			"delete": {
+				"summary": "Dated Money Specification",
+				"description": "Deletes a single Dated Money Specification",
+				"operationId": "deleteDatedMoneySpecification",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/DatedMoneySpecification"
+							}
+						}
+					}
+				},
+				"tags": ["Dated Money Specification"]
+			}
+		}
+	},
+	"definitions": {
+		"DatedMoneySpecification": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"amount": {
+					"description": "The amount of money.",
+					"type": "number"
+				},
+				"currency": {
+					"description": "The currency in which the monetary amount is expressed (in 3-letter ",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"enddate": {
+					"description": "The end date and time of the item (in ISO 8601 date format).",
+					"type": "date"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"startdate": {
+					"description": "The start date and time of the item (in ISO 8601 date format).",
+					"type": "date"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}
+		}
+	}
+}

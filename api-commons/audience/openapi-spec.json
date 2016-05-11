@@ -1,0 +1,408 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Audience API",
+		"description": "Intended audience for an item, i.e. the group for whom the item was created.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "audience.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/audience\/": {
+			"get": {
+				"summary": "Get Audience",
+				"description": "Returns Audience",
+				"operationId": "getAudience",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Audience"
+							}
+						}
+					}
+				},
+				"tags": ["Audience"]
+			},
+			"post": {
+				"summary": "Add Audience",
+				"description": "Add Audience",
+				"operationId": "addAudience",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "audience",
+					"in": "formData",
+					"description": "An intended audience, i.e. a group for whom something was created.  Supersedes serviceAudience.",
+					"required": false,
+					"type": "creativework or playaction or product"
+				},
+				{
+					"name": "audiencetype",
+					"in": "formData",
+					"description": "The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "geographicarea",
+					"in": "formData",
+					"description": "The geographic area associated with the audience.",
+					"required": false,
+					"type": "administrativearea"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "permitaudience",
+					"in": "formData",
+					"description": "The target audience for this permit. ",
+					"required": false,
+					"type": "permit"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "recipient",
+					"in": "formData",
+					"description": "A sub property of participant. The participant who is at the receiving end of the action. ",
+					"required": false,
+					"type": "tipaction or communicateaction or giveaction or payaction or authorizeaction or returnaction or sendaction or donateaction"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "sender",
+					"in": "formData",
+					"description": "A sub property of participant. The participant who is at the sending end of the action. ",
+					"required": false,
+					"type": "receiveaction"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Audience"
+							}
+						}
+					}
+				},
+				"tags": ["Audience"]
+			}
+		},
+		"\/audience\/{id}\/": {
+			"get": {
+				"summary": "Get Audience",
+				"description": "Returns a single Audience",
+				"operationId": "getAudience",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Audience"
+							}
+						}
+					}
+				},
+				"tags": ["Audience"]
+			},
+			"put": {
+				"summary": "Update Audience",
+				"description": "Update a single Audience",
+				"operationId": "updateAudienceItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "audience",
+					"in": "formData",
+					"description": "An intended audience, i.e. a group for whom something was created.  Supersedes serviceAudience.",
+					"required": false,
+					"type": "creativework or playaction or product"
+				},
+				{
+					"name": "audiencetype",
+					"in": "formData",
+					"description": "The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "geographicarea",
+					"in": "formData",
+					"description": "The geographic area associated with the audience.",
+					"required": false,
+					"type": "administrativearea"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "permitaudience",
+					"in": "formData",
+					"description": "The target audience for this permit. ",
+					"required": false,
+					"type": "permit"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "recipient",
+					"in": "formData",
+					"description": "A sub property of participant. The participant who is at the receiving end of the action. ",
+					"required": false,
+					"type": "tipaction or communicateaction or giveaction or payaction or authorizeaction or returnaction or sendaction or donateaction"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "sender",
+					"in": "formData",
+					"description": "A sub property of participant. The participant who is at the sending end of the action. ",
+					"required": false,
+					"type": "receiveaction"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Audience"
+							}
+						}
+					}
+				},
+				"tags": ["Audience"]
+			},
+			"delete": {
+				"summary": "Audience",
+				"description": "Deletes a single Audience",
+				"operationId": "deleteAudience",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Audience"
+							}
+						}
+					}
+				},
+				"tags": ["Audience"]
+			}
+		}
+	},
+	"definitions": {
+		"Audience": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"audience": {
+					"description": "An intended audience, i.e. a group for whom something was created.  Supersedes serviceAudience.",
+					"type": "creativework or playaction or product"
+				},
+				"audiencetype": {
+					"description": "The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"geographicarea": {
+					"description": "The geographic area associated with the audience.",
+					"type": "administrativearea"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"permitaudience": {
+					"description": "The target audience for this permit. ",
+					"type": "permit"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"recipient": {
+					"description": "A sub property of participant. The participant who is at the receiving end of the action. ",
+					"type": "tipaction or communicateaction or giveaction or payaction or authorizeaction or returnaction or sendaction or donateaction"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"sender": {
+					"description": "A sub property of participant. The participant who is at the sending end of the action. ",
+					"type": "receiveaction"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}
+		}
+	}
+}

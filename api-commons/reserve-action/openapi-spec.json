@@ -1,0 +1,516 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Reserve Action API",
+		"description": "Reserving a concrete object.Related actions:ScheduleAction: Unlike ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel) towards a time slot \/ spatial allocation.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "reserve.action.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/reserve-action\/": {
+			"get": {
+				"summary": "Get Reserve Action",
+				"description": "Returns Reserve Action",
+				"operationId": "getReserveAction",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/ReserveAction"
+							}
+						}
+					}
+				},
+				"tags": ["Reserve Action"]
+			},
+			"post": {
+				"summary": "Add Reserve Action",
+				"description": "Add Reserve Action",
+				"operationId": "addReserveAction",
+				"parameters": [{
+					"name": "actionstatus",
+					"in": "formData",
+					"description": "Indicates the current disposition of the Action.",
+					"required": false,
+					"type": "actionstatustype"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "agent",
+					"in": "formData",
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.",
+					"required": false,
+					"type": "organization or  person"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "endtime",
+					"in": "formData",
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "error",
+					"in": "formData",
+					"description": "For failed actions, more information on the cause of the failure.",
+					"required": false,
+					"type": "thing"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "instrument",
+					"in": "formData",
+					"description": "The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.",
+					"required": false,
+					"type": "thing"
+				},
+				{
+					"name": "location",
+					"in": "formData",
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"required": false,
+					"type": "place or  postaladdress or  text"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "url or  creativework"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "object",
+					"in": "formData",
+					"description": "The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn\\'t). e.g. John read *a book*.",
+					"required": false,
+					"type": "thing"
+				},
+				{
+					"name": "participant",
+					"in": "formData",
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.",
+					"required": false,
+					"type": "organization or  person"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "result",
+					"in": "formData",
+					"description": "The result produced in the action. e.g. John wrote *a book*.",
+					"required": false,
+					"type": "thing"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "scheduledtime",
+					"in": "formData",
+					"description": "The time the object is scheduled to.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "starttime",
+					"in": "formData",
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "target",
+					"in": "formData",
+					"description": "Indicates a target EntryPoint for an Action.",
+					"required": false,
+					"type": "entrypoint"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/ReserveAction"
+							}
+						}
+					}
+				},
+				"tags": ["Reserve Action"]
+			}
+		},
+		"\/reserve-action\/{id}\/": {
+			"get": {
+				"summary": "Get Reserve Action",
+				"description": "Returns a single Reserve Action",
+				"operationId": "getReserveAction",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/ReserveAction"
+							}
+						}
+					}
+				},
+				"tags": ["Reserve Action"]
+			},
+			"put": {
+				"summary": "Update Reserve Action",
+				"description": "Update a single Reserve Action",
+				"operationId": "updateReserveActionItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "actionstatus",
+					"in": "formData",
+					"description": "Indicates the current disposition of the Action.",
+					"required": false,
+					"type": "actionstatustype"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "agent",
+					"in": "formData",
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.",
+					"required": false,
+					"type": "organization or  person"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "endtime",
+					"in": "formData",
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "error",
+					"in": "formData",
+					"description": "For failed actions, more information on the cause of the failure.",
+					"required": false,
+					"type": "thing"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "instrument",
+					"in": "formData",
+					"description": "The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.",
+					"required": false,
+					"type": "thing"
+				},
+				{
+					"name": "location",
+					"in": "formData",
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"required": false,
+					"type": "place or  postaladdress or  text"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "url or  creativework"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "object",
+					"in": "formData",
+					"description": "The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn\\'t). e.g. John read *a book*.",
+					"required": false,
+					"type": "thing"
+				},
+				{
+					"name": "participant",
+					"in": "formData",
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.",
+					"required": false,
+					"type": "organization or  person"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "result",
+					"in": "formData",
+					"description": "The result produced in the action. e.g. John wrote *a book*.",
+					"required": false,
+					"type": "thing"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "scheduledtime",
+					"in": "formData",
+					"description": "The time the object is scheduled to.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "starttime",
+					"in": "formData",
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "target",
+					"in": "formData",
+					"description": "Indicates a target EntryPoint for an Action.",
+					"required": false,
+					"type": "entrypoint"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/ReserveAction"
+							}
+						}
+					}
+				},
+				"tags": ["Reserve Action"]
+			},
+			"delete": {
+				"summary": "Reserve Action",
+				"description": "Deletes a single Reserve Action",
+				"operationId": "deleteReserveAction",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/ReserveAction"
+							}
+						}
+					}
+				},
+				"tags": ["Reserve Action"]
+			}
+		}
+	},
+	"definitions": {
+		"ReserveAction": {
+			"properties": {
+				"actionstatus": {
+					"description": "Indicates the current disposition of the Action.",
+					"type": "actionstatustype"
+				},
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"agent": {
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.",
+					"type": "organization or  person"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"endtime": {
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				},
+				"error": {
+					"description": "For failed actions, more information on the cause of the failure.",
+					"type": "thing"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"instrument": {
+					"description": "The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.",
+					"type": "thing"
+				},
+				"location": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "place or  postaladdress or  text"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"object": {
+					"description": "The object upon the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn\\'t). e.g. John read *a book*.",
+					"type": "thing"
+				},
+				"participant": {
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.",
+					"type": "organization or  person"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"result": {
+					"description": "The result produced in the action. e.g. John wrote *a book*.",
+					"type": "thing"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"scheduledtime": {
+					"description": "The time the object is scheduled to.",
+					"type": "datetime"
+				},
+				"starttime": {
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				},
+				"target": {
+					"description": "Indicates a target EntryPoint for an Action.",
+					"type": "entrypoint"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}
+		}
+	}
+}

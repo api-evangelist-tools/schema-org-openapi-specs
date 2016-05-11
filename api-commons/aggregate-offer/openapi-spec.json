@@ -1,0 +1,1092 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Aggregate Offer API",
+		"description": "When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "aggregate.offer.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/aggregate-offer\/": {
+			"get": {
+				"summary": "Get Aggregate Offer",
+				"description": "Returns Aggregate Offer",
+				"operationId": "getAggregateOffer",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/AggregateOffer"
+							}
+						}
+					}
+				},
+				"tags": ["Aggregate Offer"]
+			},
+			"post": {
+				"summary": "Add Aggregate Offer",
+				"description": "Add Aggregate Offer",
+				"operationId": "addAggregateOffer",
+				"parameters": [{
+					"name": "acceptedpaymentmethod",
+					"in": "formData",
+					"description": "The payment method(s) accepted by seller for this offer.",
+					"required": false,
+					"type": "paymentmethod"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "addon",
+					"in": "formData",
+					"description": "An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are available for a surcharge).",
+					"required": false,
+					"type": "offer"
+				},
+				{
+					"name": "advancebookingrequirement",
+					"in": "formData",
+					"description": "The amount of time that is required between accepting the offer and the actual usage of the resource or service.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "aggregaterating",
+					"in": "formData",
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"required": false,
+					"type": "aggregaterating"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "areaserved",
+					"in": "formData",
+					"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+					"required": false,
+					"type": "text or  place or  geoshape or  administrativearea"
+				},
+				{
+					"name": "availability",
+					"in": "formData",
+					"description": "The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.",
+					"required": false,
+					"type": "itemavailability"
+				},
+				{
+					"name": "availabilityends",
+					"in": "formData",
+					"description": "The end of the availability of the product or service included in the offer.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "availabilitystarts",
+					"in": "formData",
+					"description": "The beginning of the availability of the product or service included in the offer.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "availableatorfrom",
+					"in": "formData",
+					"description": "The place(s) from which the offer can be obtained (e.g. store locations).",
+					"required": false,
+					"type": "place"
+				},
+				{
+					"name": "availabledeliverymethod",
+					"in": "formData",
+					"description": "The delivery method(s) available for this offer.",
+					"required": false,
+					"type": "deliverymethod"
+				},
+				{
+					"name": "businessfunction",
+					"in": "formData",
+					"description": "The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http:\/\/purl.org\/goodrelations\/v1#Sell.",
+					"required": false,
+					"type": "businessfunction"
+				},
+				{
+					"name": "category",
+					"in": "formData",
+					"description": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+					"required": false,
+					"type": "thing or  text or  physicalactivitycategory"
+				},
+				{
+					"name": "deliveryleadtime",
+					"in": "formData",
+					"description": "The typical delay between the receipt of the order and the goods leaving the warehouse.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "eligiblecustomertype",
+					"in": "formData",
+					"description": "The type(s) of customers for which the given offer is valid.",
+					"required": false,
+					"type": "businessentitytype"
+				},
+				{
+					"name": "eligibleduration",
+					"in": "formData",
+					"description": "The duration for which the given offer is valid.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "eligiblequantity",
+					"in": "formData",
+					"description": "The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "eligibleregion",
+					"in": "formData",
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.       See also ineligibleRegion.    ",
+					"required": false,
+					"type": "text or  place or  geoshape"
+				},
+				{
+					"name": "eligibletransactionvolume",
+					"in": "formData",
+					"description": "The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.",
+					"required": false,
+					"type": "pricespecification"
+				},
+				{
+					"name": "gtin12",
+					"in": "formData",
+					"description": "The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See GS1 GTIN Summary for more details.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "gtin13",
+					"in": "formData",
+					"description": "The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceeding zero. See GS1 GTIN Summary for more details.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "gtin14",
+					"in": "formData",
+					"description": "The GTIN-14 code of the product, or the product to which the offer refers. See GS1 GTIN Summary for more details.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "gtin8",
+					"in": "formData",
+					"description": "The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN\/UCC-8 or 8-digit EAN. See GS1 GTIN Summary for more details.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "highprice",
+					"in": "formData",
+					"description": "The highest price of all offers available.",
+					"required": false,
+					"type": "text or  number"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "includesobject",
+					"in": "formData",
+					"description": "This links to a node or nodes indicating the exact quantity of the products included in the offer.",
+					"required": false,
+					"type": "typeandquantitynode"
+				},
+				{
+					"name": "ineligibleregion",
+					"in": "formData",
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.       See also eligibleRegion.      ",
+					"required": false,
+					"type": "text or  place or  geoshape"
+				},
+				{
+					"name": "inventorylevel",
+					"in": "formData",
+					"description": "The current approximate inventory level for the item or items.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "itemcondition",
+					"in": "formData",
+					"description": "A predefined value from OfferItemCondition or a textual description of the condition of the product or service, or the products or services included in the offer.",
+					"required": false,
+					"type": "offeritemcondition"
+				},
+				{
+					"name": "itemoffered",
+					"in": "formData",
+					"description": "The item being offered.",
+					"required": false,
+					"type": "product or  service"
+				},
+				{
+					"name": "lowprice",
+					"in": "formData",
+					"description": "The lowest price of all offers available.",
+					"required": false,
+					"type": "text or  number"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "mpn",
+					"in": "formData",
+					"description": "The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "offercount",
+					"in": "formData",
+					"description": "The number of offers for the product.",
+					"required": false,
+					"type": "integer"
+				},
+				{
+					"name": "offeredby",
+					"in": "formData",
+					"description": "A pointer to the organization or person making the offer. Inverse property: makesOffer.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "offers",
+					"in": "formData",
+					"description": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
+					"required": false,
+					"type": "offer"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "price",
+					"in": "formData",
+					"description": "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. \\\"USD\\\") instead of      including ambiguous symbols such as \\'$\\' in the value.      Use \\'.\\' (Unicode \\'FULL STOP\\' (U+002E)) rather than \\',\\' to indicate a decimal point. Avoid using these symbols as a readability separator.      Note that both RDFa and Microdata syntax allow the use of a \\\"content=\\\" attribute for publishing simple machine-readable values      alongside more human-friendly formatting.      Use values from 0123456789 (Unicode \\'DIGIT ZERO\\' (U+0030) to \\'DIGIT NINE\\' (U+0039)) rather than superficially similiar Unicode symbols.      ",
+					"required": false,
+					"type": "text or  number"
+				},
+				{
+					"name": "pricecurrency",
+					"in": "formData",
+					"description": "The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "pricespecification",
+					"in": "formData",
+					"description": "One or more detailed price specifications, indicating the unit price and delivery or payment charges.",
+					"required": false,
+					"type": "pricespecification"
+				},
+				{
+					"name": "pricevaliduntil",
+					"in": "formData",
+					"description": "The date after which the price is no longer available.",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "review",
+					"in": "formData",
+					"description": "A review of the item. Supersedes reviews.",
+					"required": false,
+					"type": "review"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "seller",
+					"in": "formData",
+					"description": "An entity which offers (sells \/ leases \/ lends \/ loans) the services \/ goods.  A seller may also be a provider. Supersedes vendor, merchant.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "serialnumber",
+					"in": "formData",
+					"description": "The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "sku",
+					"in": "formData",
+					"description": "The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "validfrom",
+					"in": "formData",
+					"description": "The date when the item becomes valid.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "validthrough",
+					"in": "formData",
+					"description": "The end of the validity of offer, price specification, or opening hours data.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "warranty",
+					"in": "formData",
+					"description": "The warranty promise(s) included in the offer. Supersedes warrantyPromise.",
+					"required": false,
+					"type": "warrantypromise"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/AggregateOffer"
+							}
+						}
+					}
+				},
+				"tags": ["Aggregate Offer"]
+			}
+		},
+		"\/aggregate-offer\/{id}\/": {
+			"get": {
+				"summary": "Get Aggregate Offer",
+				"description": "Returns a single Aggregate Offer",
+				"operationId": "getAggregateOffer",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/AggregateOffer"
+							}
+						}
+					}
+				},
+				"tags": ["Aggregate Offer"]
+			},
+			"put": {
+				"summary": "Update Aggregate Offer",
+				"description": "Update a single Aggregate Offer",
+				"operationId": "updateAggregateOfferItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "acceptedpaymentmethod",
+					"in": "formData",
+					"description": "The payment method(s) accepted by seller for this offer.",
+					"required": false,
+					"type": "paymentmethod"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "addon",
+					"in": "formData",
+					"description": "An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are available for a surcharge).",
+					"required": false,
+					"type": "offer"
+				},
+				{
+					"name": "advancebookingrequirement",
+					"in": "formData",
+					"description": "The amount of time that is required between accepting the offer and the actual usage of the resource or service.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "aggregaterating",
+					"in": "formData",
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"required": false,
+					"type": "aggregaterating"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "areaserved",
+					"in": "formData",
+					"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+					"required": false,
+					"type": "text or  place or  geoshape or  administrativearea"
+				},
+				{
+					"name": "availability",
+					"in": "formData",
+					"description": "The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.",
+					"required": false,
+					"type": "itemavailability"
+				},
+				{
+					"name": "availabilityends",
+					"in": "formData",
+					"description": "The end of the availability of the product or service included in the offer.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "availabilitystarts",
+					"in": "formData",
+					"description": "The beginning of the availability of the product or service included in the offer.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "availableatorfrom",
+					"in": "formData",
+					"description": "The place(s) from which the offer can be obtained (e.g. store locations).",
+					"required": false,
+					"type": "place"
+				},
+				{
+					"name": "availabledeliverymethod",
+					"in": "formData",
+					"description": "The delivery method(s) available for this offer.",
+					"required": false,
+					"type": "deliverymethod"
+				},
+				{
+					"name": "businessfunction",
+					"in": "formData",
+					"description": "The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http:\/\/purl.org\/goodrelations\/v1#Sell.",
+					"required": false,
+					"type": "businessfunction"
+				},
+				{
+					"name": "category",
+					"in": "formData",
+					"description": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+					"required": false,
+					"type": "thing or  text or  physicalactivitycategory"
+				},
+				{
+					"name": "deliveryleadtime",
+					"in": "formData",
+					"description": "The typical delay between the receipt of the order and the goods leaving the warehouse.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "eligiblecustomertype",
+					"in": "formData",
+					"description": "The type(s) of customers for which the given offer is valid.",
+					"required": false,
+					"type": "businessentitytype"
+				},
+				{
+					"name": "eligibleduration",
+					"in": "formData",
+					"description": "The duration for which the given offer is valid.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "eligiblequantity",
+					"in": "formData",
+					"description": "The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "eligibleregion",
+					"in": "formData",
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.       See also ineligibleRegion.    ",
+					"required": false,
+					"type": "text or  place or  geoshape"
+				},
+				{
+					"name": "eligibletransactionvolume",
+					"in": "formData",
+					"description": "The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.",
+					"required": false,
+					"type": "pricespecification"
+				},
+				{
+					"name": "gtin12",
+					"in": "formData",
+					"description": "The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See GS1 GTIN Summary for more details.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "gtin13",
+					"in": "formData",
+					"description": "The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceeding zero. See GS1 GTIN Summary for more details.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "gtin14",
+					"in": "formData",
+					"description": "The GTIN-14 code of the product, or the product to which the offer refers. See GS1 GTIN Summary for more details.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "gtin8",
+					"in": "formData",
+					"description": "The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN\/UCC-8 or 8-digit EAN. See GS1 GTIN Summary for more details.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "highprice",
+					"in": "formData",
+					"description": "The highest price of all offers available.",
+					"required": false,
+					"type": "text or  number"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "includesobject",
+					"in": "formData",
+					"description": "This links to a node or nodes indicating the exact quantity of the products included in the offer.",
+					"required": false,
+					"type": "typeandquantitynode"
+				},
+				{
+					"name": "ineligibleregion",
+					"in": "formData",
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.       See also eligibleRegion.      ",
+					"required": false,
+					"type": "text or  place or  geoshape"
+				},
+				{
+					"name": "inventorylevel",
+					"in": "formData",
+					"description": "The current approximate inventory level for the item or items.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "itemcondition",
+					"in": "formData",
+					"description": "A predefined value from OfferItemCondition or a textual description of the condition of the product or service, or the products or services included in the offer.",
+					"required": false,
+					"type": "offeritemcondition"
+				},
+				{
+					"name": "itemoffered",
+					"in": "formData",
+					"description": "The item being offered.",
+					"required": false,
+					"type": "product or  service"
+				},
+				{
+					"name": "lowprice",
+					"in": "formData",
+					"description": "The lowest price of all offers available.",
+					"required": false,
+					"type": "text or  number"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "mpn",
+					"in": "formData",
+					"description": "The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "offercount",
+					"in": "formData",
+					"description": "The number of offers for the product.",
+					"required": false,
+					"type": "integer"
+				},
+				{
+					"name": "offeredby",
+					"in": "formData",
+					"description": "A pointer to the organization or person making the offer. Inverse property: makesOffer.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "offers",
+					"in": "formData",
+					"description": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
+					"required": false,
+					"type": "offer"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "price",
+					"in": "formData",
+					"description": "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. \\\"USD\\\") instead of      including ambiguous symbols such as \\'$\\' in the value.      Use \\'.\\' (Unicode \\'FULL STOP\\' (U+002E)) rather than \\',\\' to indicate a decimal point. Avoid using these symbols as a readability separator.      Note that both RDFa and Microdata syntax allow the use of a \\\"content=\\\" attribute for publishing simple machine-readable values      alongside more human-friendly formatting.      Use values from 0123456789 (Unicode \\'DIGIT ZERO\\' (U+0030) to \\'DIGIT NINE\\' (U+0039)) rather than superficially similiar Unicode symbols.      ",
+					"required": false,
+					"type": "text or  number"
+				},
+				{
+					"name": "pricecurrency",
+					"in": "formData",
+					"description": "The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "pricespecification",
+					"in": "formData",
+					"description": "One or more detailed price specifications, indicating the unit price and delivery or payment charges.",
+					"required": false,
+					"type": "pricespecification"
+				},
+				{
+					"name": "pricevaliduntil",
+					"in": "formData",
+					"description": "The date after which the price is no longer available.",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "review",
+					"in": "formData",
+					"description": "A review of the item. Supersedes reviews.",
+					"required": false,
+					"type": "review"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "seller",
+					"in": "formData",
+					"description": "An entity which offers (sells \/ leases \/ lends \/ loans) the services \/ goods.  A seller may also be a provider. Supersedes vendor, merchant.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "serialnumber",
+					"in": "formData",
+					"description": "The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "sku",
+					"in": "formData",
+					"description": "The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "validfrom",
+					"in": "formData",
+					"description": "The date when the item becomes valid.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "validthrough",
+					"in": "formData",
+					"description": "The end of the validity of offer, price specification, or opening hours data.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "warranty",
+					"in": "formData",
+					"description": "The warranty promise(s) included in the offer. Supersedes warrantyPromise.",
+					"required": false,
+					"type": "warrantypromise"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/AggregateOffer"
+							}
+						}
+					}
+				},
+				"tags": ["Aggregate Offer"]
+			},
+			"delete": {
+				"summary": "Aggregate Offer",
+				"description": "Deletes a single Aggregate Offer",
+				"operationId": "deleteAggregateOffer",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/AggregateOffer"
+							}
+						}
+					}
+				},
+				"tags": ["Aggregate Offer"]
+			}
+		}
+	},
+	"definitions": {
+		"AggregateOffer": {
+			"properties": {
+				"acceptedpaymentmethod": {
+					"description": "The payment method(s) accepted by seller for this offer.",
+					"type": "paymentmethod"
+				},
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"addon": {
+					"description": "An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are available for a surcharge).",
+					"type": "offer"
+				},
+				"advancebookingrequirement": {
+					"description": "The amount of time that is required between accepting the offer and the actual usage of the resource or service.",
+					"type": "quantitativevalue"
+				},
+				"aggregaterating": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"areaserved": {
+					"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+					"type": "text or  place or  geoshape or  administrativearea"
+				},
+				"availability": {
+					"description": "The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.",
+					"type": "itemavailability"
+				},
+				"availabilityends": {
+					"description": "The end of the availability of the product or service included in the offer.",
+					"type": "datetime"
+				},
+				"availabilitystarts": {
+					"description": "The beginning of the availability of the product or service included in the offer.",
+					"type": "datetime"
+				},
+				"availableatorfrom": {
+					"description": "The place(s) from which the offer can be obtained (e.g. store locations).",
+					"type": "place"
+				},
+				"availabledeliverymethod": {
+					"description": "The delivery method(s) available for this offer.",
+					"type": "deliverymethod"
+				},
+				"businessfunction": {
+					"description": "The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http:\/\/purl.org\/goodrelations\/v1#Sell.",
+					"type": "businessfunction"
+				},
+				"category": {
+					"description": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+					"type": "thing or  text or  physicalactivitycategory"
+				},
+				"deliveryleadtime": {
+					"description": "The typical delay between the receipt of the order and the goods leaving the warehouse.",
+					"type": "quantitativevalue"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"eligiblecustomertype": {
+					"description": "The type(s) of customers for which the given offer is valid.",
+					"type": "businessentitytype"
+				},
+				"eligibleduration": {
+					"description": "The duration for which the given offer is valid.",
+					"type": "quantitativevalue"
+				},
+				"eligiblequantity": {
+					"description": "The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.",
+					"type": "quantitativevalue"
+				},
+				"eligibleregion": {
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.       See also ineligibleRegion.    ",
+					"type": "text or  place or  geoshape"
+				},
+				"eligibletransactionvolume": {
+					"description": "The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.",
+					"type": "pricespecification"
+				},
+				"gtin12": {
+					"description": "The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See GS1 GTIN Summary for more details.",
+					"type": "text"
+				},
+				"gtin13": {
+					"description": "The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceeding zero. See GS1 GTIN Summary for more details.",
+					"type": "text"
+				},
+				"gtin14": {
+					"description": "The GTIN-14 code of the product, or the product to which the offer refers. See GS1 GTIN Summary for more details.",
+					"type": "text"
+				},
+				"gtin8": {
+					"description": "The GTIN-8 code of the product, or the product to which the offer refers. This code is also known as EAN\/UCC-8 or 8-digit EAN. See GS1 GTIN Summary for more details.",
+					"type": "text"
+				},
+				"highprice": {
+					"description": "The highest price of all offers available.",
+					"type": "text or  number"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"includesobject": {
+					"description": "This links to a node or nodes indicating the exact quantity of the products included in the offer.",
+					"type": "typeandquantitynode"
+				},
+				"ineligibleregion": {
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.       See also eligibleRegion.      ",
+					"type": "text or  place or  geoshape"
+				},
+				"inventorylevel": {
+					"description": "The current approximate inventory level for the item or items.",
+					"type": "quantitativevalue"
+				},
+				"itemcondition": {
+					"description": "A predefined value from OfferItemCondition or a textual description of the condition of the product or service, or the products or services included in the offer.",
+					"type": "offeritemcondition"
+				},
+				"itemoffered": {
+					"description": "The item being offered.",
+					"type": "product or  service"
+				},
+				"lowprice": {
+					"description": "The lowest price of all offers available.",
+					"type": "text or  number"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"mpn": {
+					"description": "The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.",
+					"type": "text"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"offercount": {
+					"description": "The number of offers for the product.",
+					"type": "integer"
+				},
+				"offeredby": {
+					"description": "A pointer to the organization or person making the offer. Inverse property: makesOffer.",
+					"type": "person or  organization"
+				},
+				"offers": {
+					"description": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
+					"type": "offer"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"price": {
+					"description": "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.      Usage guidelines:Use the priceCurrency property (with ISO 4217 codes e.g. \\\"USD\\\") instead of      including ambiguous symbols such as \\'$\\' in the value.      Use \\'.\\' (Unicode \\'FULL STOP\\' (U+002E)) rather than \\',\\' to indicate a decimal point. Avoid using these symbols as a readability separator.      Note that both RDFa and Microdata syntax allow the use of a \\\"content=\\\" attribute for publishing simple machine-readable values      alongside more human-friendly formatting.      Use values from 0123456789 (Unicode \\'DIGIT ZERO\\' (U+0030) to \\'DIGIT NINE\\' (U+0039)) rather than superficially similiar Unicode symbols.      ",
+					"type": "text or  number"
+				},
+				"pricecurrency": {
+					"description": "The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.",
+					"type": "text"
+				},
+				"pricespecification": {
+					"description": "One or more detailed price specifications, indicating the unit price and delivery or payment charges.",
+					"type": "pricespecification"
+				},
+				"pricevaliduntil": {
+					"description": "The date after which the price is no longer available.",
+					"type": "date"
+				},
+				"review": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"seller": {
+					"description": "An entity which offers (sells \/ leases \/ lends \/ loans) the services \/ goods.  A seller may also be a provider. Supersedes vendor, merchant.",
+					"type": "person or  organization"
+				},
+				"serialnumber": {
+					"description": "The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.",
+					"type": "text"
+				},
+				"sku": {
+					"description": "The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers.",
+					"type": "text"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				},
+				"validfrom": {
+					"description": "The date when the item becomes valid.",
+					"type": "datetime"
+				},
+				"validthrough": {
+					"description": "The end of the validity of offer, price specification, or opening hours data.",
+					"type": "datetime"
+				},
+				"warranty": {
+					"description": "The warranty promise(s) included in the offer. Supersedes warrantyPromise.",
+					"type": "warrantypromise"
+				}
+			}
+		}
+	}
+}

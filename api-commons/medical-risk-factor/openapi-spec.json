@@ -1,0 +1,462 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Medical Risk Factor API",
+		"description": "A risk factor is anything that increases a person\\'s likelihood of developing or contracting a disease, medical condition, or complication.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "medical.risk.factor.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/medical-risk-factor\/": {
+			"get": {
+				"summary": "Get Medical Risk Factor",
+				"description": "Returns Medical Risk Factor",
+				"operationId": "getMedicalRiskFactor",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalRiskFactor"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Risk Factor"]
+			},
+			"post": {
+				"summary": "Add Medical Risk Factor",
+				"description": "Add Medical Risk Factor",
+				"operationId": "addMedicalRiskFactor",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "code",
+					"in": "formData",
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"required": false,
+					"type": "medicalcode"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "guideline",
+					"in": "formData",
+					"description": "A medical guideline related to this entity.",
+					"required": false,
+					"type": "medicalguideline"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "includedriskfactor",
+					"in": "formData",
+					"description": "A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition. ",
+					"required": false,
+					"type": "medicalriskestimator"
+				},
+				{
+					"name": "increasesriskof",
+					"in": "formData",
+					"description": "The condition, complication, etc. influenced by this factor.",
+					"required": false,
+					"type": "medicalentity"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "medicinesystem",
+					"in": "formData",
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"required": false,
+					"type": "medicinesystem"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "recognizingauthority",
+					"in": "formData",
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "relevantspecialty",
+					"in": "formData",
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"required": false,
+					"type": "medicalspecialty"
+				},
+				{
+					"name": "riskfactor",
+					"in": "formData",
+					"description": "A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition. ",
+					"required": false,
+					"type": "medicalcondition"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "study",
+					"in": "formData",
+					"description": "A medical study or trial related to this entity.",
+					"required": false,
+					"type": "medicalstudy"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalRiskFactor"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Risk Factor"]
+			}
+		},
+		"\/medical-risk-factor\/{id}\/": {
+			"get": {
+				"summary": "Get Medical Risk Factor",
+				"description": "Returns a single Medical Risk Factor",
+				"operationId": "getMedicalRiskFactor",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalRiskFactor"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Risk Factor"]
+			},
+			"put": {
+				"summary": "Update Medical Risk Factor",
+				"description": "Update a single Medical Risk Factor",
+				"operationId": "updateMedicalRiskFactorItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "code",
+					"in": "formData",
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"required": false,
+					"type": "medicalcode"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "guideline",
+					"in": "formData",
+					"description": "A medical guideline related to this entity.",
+					"required": false,
+					"type": "medicalguideline"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "includedriskfactor",
+					"in": "formData",
+					"description": "A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition. ",
+					"required": false,
+					"type": "medicalriskestimator"
+				},
+				{
+					"name": "increasesriskof",
+					"in": "formData",
+					"description": "The condition, complication, etc. influenced by this factor.",
+					"required": false,
+					"type": "medicalentity"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "medicinesystem",
+					"in": "formData",
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"required": false,
+					"type": "medicinesystem"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "recognizingauthority",
+					"in": "formData",
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "relevantspecialty",
+					"in": "formData",
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"required": false,
+					"type": "medicalspecialty"
+				},
+				{
+					"name": "riskfactor",
+					"in": "formData",
+					"description": "A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition. ",
+					"required": false,
+					"type": "medicalcondition"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "study",
+					"in": "formData",
+					"description": "A medical study or trial related to this entity.",
+					"required": false,
+					"type": "medicalstudy"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalRiskFactor"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Risk Factor"]
+			},
+			"delete": {
+				"summary": "Medical Risk Factor",
+				"description": "Deletes a single Medical Risk Factor",
+				"operationId": "deleteMedicalRiskFactor",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalRiskFactor"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Risk Factor"]
+			}
+		}
+	},
+	"definitions": {
+		"MedicalRiskFactor": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"code": {
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"type": "medicalcode"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"guideline": {
+					"description": "A medical guideline related to this entity.",
+					"type": "medicalguideline"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"includedriskfactor": {
+					"description": "A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition. ",
+					"type": "medicalriskestimator"
+				},
+				"increasesriskof": {
+					"description": "The condition, complication, etc. influenced by this factor.",
+					"type": "medicalentity"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"medicinesystem": {
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"type": "medicinesystem"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"recognizingauthority": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"type": "organization"
+				},
+				"relevantspecialty": {
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"type": "medicalspecialty"
+				},
+				"riskfactor": {
+					"description": "A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition. ",
+					"type": "medicalcondition"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"study": {
+					"description": "A medical study or trial related to this entity.",
+					"type": "medicalstudy"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}
+		}
+	}
+}

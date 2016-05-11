@@ -1,0 +1,588 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Medical Therapy API",
+		"description": "Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy (with fluid or nutrition for example), or detoxification (e.g. hemodialysis) aimed at improving or preventing a health condition.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "medical.therapy.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/medical-therapy\/": {
+			"get": {
+				"summary": "Get Medical Therapy",
+				"description": "Returns Medical Therapy",
+				"operationId": "getMedicalTherapy",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalTherapy"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Therapy"]
+			},
+			"post": {
+				"summary": "Add Medical Therapy",
+				"description": "Add Medical Therapy",
+				"operationId": "addMedicalTherapy",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "adverseoutcome",
+					"in": "formData",
+					"description": "A possible complication and\/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or is otherwise life-threatening or requires immediate medical attention), tag it as a seriouseAdverseOutcome instead.",
+					"required": false,
+					"type": "medicalentity"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "availableservice",
+					"in": "formData",
+					"description": "A medical service available from this provider. ",
+					"required": false,
+					"type": "medicalclinic or physician or hospital"
+				},
+				{
+					"name": "code",
+					"in": "formData",
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"required": false,
+					"type": "medicalcode"
+				},
+				{
+					"name": "contraindication",
+					"in": "formData",
+					"description": "A contraindication for this therapy.",
+					"required": false,
+					"type": "medicalcontraindication"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "duplicatetherapy",
+					"in": "formData",
+					"description": "A therapy that duplicates or overlaps this one.",
+					"required": false,
+					"type": "medicaltherapy"
+				},
+				{
+					"name": "guideline",
+					"in": "formData",
+					"description": "A medical guideline related to this entity.",
+					"required": false,
+					"type": "medicalguideline"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "imageobject or  url"
+				},
+				{
+					"name": "indication",
+					"in": "formData",
+					"description": "A factor that indicates use of this therapy for treatment and\/or prevention of a condition, symptom, etc. For therapies such as drugs, indications can include both officially-approved indications as well as off-label uses. These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.",
+					"required": false,
+					"type": "medicalindication"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "medicinesystem",
+					"in": "formData",
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"required": false,
+					"type": "medicinesystem"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "possibletreatment",
+					"in": "formData",
+					"description": "A possible treatment to address this condition, sign or symptom. ",
+					"required": false,
+					"type": "medicalcondition or medicalsignorsymptom"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "primaryprevention",
+					"in": "formData",
+					"description": "A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination. ",
+					"required": false,
+					"type": "medicalcondition"
+				},
+				{
+					"name": "recognizingauthority",
+					"in": "formData",
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "relatedtherapy",
+					"in": "formData",
+					"description": "A medical therapy related to this anatomy. ",
+					"required": false,
+					"type": "anatomicalsystem or superficialanatomy or anatomicalstructure"
+				},
+				{
+					"name": "relevantspecialty",
+					"in": "formData",
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"required": false,
+					"type": "medicalspecialty"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "secondaryprevention",
+					"in": "formData",
+					"description": "A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition. ",
+					"required": false,
+					"type": "medicalcondition"
+				},
+				{
+					"name": "seriousadverseoutcome",
+					"in": "formData",
+					"description": "A possible serious complication and\/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.",
+					"required": false,
+					"type": "medicalentity"
+				},
+				{
+					"name": "study",
+					"in": "formData",
+					"description": "A medical study or trial related to this entity.",
+					"required": false,
+					"type": "medicalstudy"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalTherapy"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Therapy"]
+			}
+		},
+		"\/medical-therapy\/{id}\/": {
+			"get": {
+				"summary": "Get Medical Therapy",
+				"description": "Returns a single Medical Therapy",
+				"operationId": "getMedicalTherapy",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalTherapy"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Therapy"]
+			},
+			"put": {
+				"summary": "Update Medical Therapy",
+				"description": "Update a single Medical Therapy",
+				"operationId": "updateMedicalTherapyItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "adverseoutcome",
+					"in": "formData",
+					"description": "A possible complication and\/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or is otherwise life-threatening or requires immediate medical attention), tag it as a seriouseAdverseOutcome instead.",
+					"required": false,
+					"type": "medicalentity"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "availableservice",
+					"in": "formData",
+					"description": "A medical service available from this provider. ",
+					"required": false,
+					"type": "medicalclinic or physician or hospital"
+				},
+				{
+					"name": "code",
+					"in": "formData",
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"required": false,
+					"type": "medicalcode"
+				},
+				{
+					"name": "contraindication",
+					"in": "formData",
+					"description": "A contraindication for this therapy.",
+					"required": false,
+					"type": "medicalcontraindication"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "duplicatetherapy",
+					"in": "formData",
+					"description": "A therapy that duplicates or overlaps this one.",
+					"required": false,
+					"type": "medicaltherapy"
+				},
+				{
+					"name": "guideline",
+					"in": "formData",
+					"description": "A medical guideline related to this entity.",
+					"required": false,
+					"type": "medicalguideline"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "imageobject or  url"
+				},
+				{
+					"name": "indication",
+					"in": "formData",
+					"description": "A factor that indicates use of this therapy for treatment and\/or prevention of a condition, symptom, etc. For therapies such as drugs, indications can include both officially-approved indications as well as off-label uses. These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.",
+					"required": false,
+					"type": "medicalindication"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "medicinesystem",
+					"in": "formData",
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"required": false,
+					"type": "medicinesystem"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "possibletreatment",
+					"in": "formData",
+					"description": "A possible treatment to address this condition, sign or symptom. ",
+					"required": false,
+					"type": "medicalcondition or medicalsignorsymptom"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "primaryprevention",
+					"in": "formData",
+					"description": "A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination. ",
+					"required": false,
+					"type": "medicalcondition"
+				},
+				{
+					"name": "recognizingauthority",
+					"in": "formData",
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "relatedtherapy",
+					"in": "formData",
+					"description": "A medical therapy related to this anatomy. ",
+					"required": false,
+					"type": "anatomicalsystem or superficialanatomy or anatomicalstructure"
+				},
+				{
+					"name": "relevantspecialty",
+					"in": "formData",
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"required": false,
+					"type": "medicalspecialty"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "secondaryprevention",
+					"in": "formData",
+					"description": "A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition. ",
+					"required": false,
+					"type": "medicalcondition"
+				},
+				{
+					"name": "seriousadverseoutcome",
+					"in": "formData",
+					"description": "A possible serious complication and\/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.",
+					"required": false,
+					"type": "medicalentity"
+				},
+				{
+					"name": "study",
+					"in": "formData",
+					"description": "A medical study or trial related to this entity.",
+					"required": false,
+					"type": "medicalstudy"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalTherapy"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Therapy"]
+			},
+			"delete": {
+				"summary": "Medical Therapy",
+				"description": "Deletes a single Medical Therapy",
+				"operationId": "deleteMedicalTherapy",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalTherapy"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Therapy"]
+			}
+		}
+	},
+	"definitions": {
+		"MedicalTherapy": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"adverseoutcome": {
+					"description": "A possible complication and\/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or is otherwise life-threatening or requires immediate medical attention), tag it as a seriouseAdverseOutcome instead.",
+					"type": "medicalentity"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"availableservice": {
+					"description": "A medical service available from this provider. ",
+					"type": "medicalclinic or physician or hospital"
+				},
+				"code": {
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"type": "medicalcode"
+				},
+				"contraindication": {
+					"description": "A contraindication for this therapy.",
+					"type": "medicalcontraindication"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"duplicatetherapy": {
+					"description": "A therapy that duplicates or overlaps this one.",
+					"type": "medicaltherapy"
+				},
+				"guideline": {
+					"description": "A medical guideline related to this entity.",
+					"type": "medicalguideline"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "imageobject or  url"
+				},
+				"indication": {
+					"description": "A factor that indicates use of this therapy for treatment and\/or prevention of a condition, symptom, etc. For therapies such as drugs, indications can include both officially-approved indications as well as off-label uses. These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.",
+					"type": "medicalindication"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"medicinesystem": {
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"type": "medicinesystem"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"possibletreatment": {
+					"description": "A possible treatment to address this condition, sign or symptom. ",
+					"type": "medicalcondition or medicalsignorsymptom"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"primaryprevention": {
+					"description": "A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination. ",
+					"type": "medicalcondition"
+				},
+				"recognizingauthority": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"type": "organization"
+				},
+				"relatedtherapy": {
+					"description": "A medical therapy related to this anatomy. ",
+					"type": "anatomicalsystem or superficialanatomy or anatomicalstructure"
+				},
+				"relevantspecialty": {
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"type": "medicalspecialty"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"secondaryprevention": {
+					"description": "A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition. ",
+					"type": "medicalcondition"
+				},
+				"seriousadverseoutcome": {
+					"description": "A possible serious complication and\/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.",
+					"type": "medicalentity"
+				},
+				"study": {
+					"description": "A medical study or trial related to this entity.",
+					"type": "medicalstudy"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}
+		}
+	}
+}

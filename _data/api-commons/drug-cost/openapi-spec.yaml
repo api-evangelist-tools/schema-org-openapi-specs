@@ -1,0 +1,447 @@
+- swagger: "2.0"
+  info:
+    title: Drug Cost API
+    description: The cost per unit of a medical drug. Note that this type is not meant
+      to represent the price in an offer of a drug for sale; see the Offer type for
+      that. This type will typically be used to tag wholesale or average retail cost
+      of a drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending
+      on how and where they are paid for, so while this type captures some of the variables,
+      costs should be used with caution by consumers of this schema\'s markup.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: drug.cost.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /drug-cost/:
+      get:
+        summary: Get Drug Cost
+        description: Returns Drug Cost
+        operationId: getDrugCost
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/DrugCost'
+        tags:
+        - Drug Cost
+      post:
+        summary: Add Drug Cost
+        description: Add Drug Cost
+        operationId: addDrugCost
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: applicablelocation
+          in: formData
+          description: The location in which the status applies.
+          required: false
+          type: administrativearea
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: cost
+          in: formData
+          description: 'Cost per unit of the drug, as reported by the source being tagged. '
+          required: false
+          type: drug
+        - name: costcategory
+          in: formData
+          description: The category of cost, such as wholesale, retail, reimbursement
+            cap, etc.
+          required: false
+          type: drugcostcategory
+        - name: costcurrency
+          in: formData
+          description: The currency (in 3-letter ISO 4217 format) of the drug cost.
+          required: false
+          type: text
+        - name: costorigin
+          in: formData
+          description: Additional details to capture the origin of the cost data. For
+            example, \'Medicare Part B\'.
+          required: false
+          type: text
+        - name: costperunit
+          in: formData
+          description: The cost per unit of the drug.
+          required: false
+          type: text or  number
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: drugunit
+          in: formData
+          description: The unit in which the drug is measured, e.g. \'5 mg tablet\'.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/DrugCost'
+        tags:
+        - Drug Cost
+    /drug-cost/{id}/:
+      get:
+        summary: Get Drug Cost
+        description: Returns a single Drug Cost
+        operationId: getDrugCost
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/DrugCost'
+        tags:
+        - Drug Cost
+      put:
+        summary: Update Drug Cost
+        description: Update a single Drug Cost
+        operationId: updateDrugCostItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: applicablelocation
+          in: formData
+          description: The location in which the status applies.
+          required: false
+          type: administrativearea
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: cost
+          in: formData
+          description: 'Cost per unit of the drug, as reported by the source being tagged. '
+          required: false
+          type: drug
+        - name: costcategory
+          in: formData
+          description: The category of cost, such as wholesale, retail, reimbursement
+            cap, etc.
+          required: false
+          type: drugcostcategory
+        - name: costcurrency
+          in: formData
+          description: The currency (in 3-letter ISO 4217 format) of the drug cost.
+          required: false
+          type: text
+        - name: costorigin
+          in: formData
+          description: Additional details to capture the origin of the cost data. For
+            example, \'Medicare Part B\'.
+          required: false
+          type: text
+        - name: costperunit
+          in: formData
+          description: The cost per unit of the drug.
+          required: false
+          type: text or  number
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: drugunit
+          in: formData
+          description: The unit in which the drug is measured, e.g. \'5 mg tablet\'.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/DrugCost'
+        tags:
+        - Drug Cost
+      delete:
+        summary: Drug Cost
+        description: Deletes a single Drug Cost
+        operationId: deleteDrugCost
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/DrugCost'
+        tags:
+        - Drug Cost
+  definitions:
+    DrugCost:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        applicablelocation:
+          description: The location in which the status applies.
+          type: administrativearea
+        code:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+        cost:
+          description: 'Cost per unit of the drug, as reported by the source being tagged. '
+          type: drug
+        costcategory:
+          description: The category of cost, such as wholesale, retail, reimbursement
+            cap, etc.
+          type: drugcostcategory
+        costcurrency:
+          description: The currency (in 3-letter ISO 4217 format) of the drug cost.
+          type: text
+        costorigin:
+          description: Additional details to capture the origin of the cost data. For
+            example, \'Medicare Part B\'.
+          type: text
+        costperunit:
+          description: The cost per unit of the drug.
+          type: text or  number
+        description:
+          description: A short description of the item.
+          type: text
+        drugunit:
+          description: The unit in which the drug is measured, e.g. \'5 mg tablet\'.
+          type: text
+        guideline:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        medicinesystem:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        recognizingauthority:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+        relevantspecialty:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        study:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+        url:
+          description: URL of the item.
+          type: url

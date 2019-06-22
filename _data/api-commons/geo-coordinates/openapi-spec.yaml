@@ -1,0 +1,368 @@
+- swagger: "2.0"
+  info:
+    title: Geo Coordinates API
+    description: The geographic coordinates of a place or event.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: geo.coordinates.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /geo-coordinates/:
+      get:
+        summary: Get Geo Coordinates
+        description: Returns Geo Coordinates
+        operationId: getGeoCoordinates
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/GeoCoordinates'
+        tags:
+        - Geo Coordinates
+      post:
+        summary: Add Geo Coordinates
+        description: Add Geo Coordinates
+        operationId: addGeoCoordinates
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: address
+          in: formData
+          description: Physical address of the item.
+          required: false
+          type: text or  postaladdress
+        - name: addresscountry
+          in: formData
+          description: The country. For example, USA. You can also provide the two-letter
+            ISO 3166-1 alpha-2 country code.
+          required: false
+          type: text or  country
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: elevation
+          in: formData
+          description: The elevation of a location (WGS 84).
+          required: false
+          type: text or  number
+        - name: geo
+          in: formData
+          description: 'The geo coordinates of the place. '
+          required: false
+          type: place
+        - name: geomidpoint
+          in: formData
+          description: 'Indicates the GeoCoordinates at the centre of a GeoShape e.g.
+            GeoCircle. '
+          required: false
+          type: geocircle
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: latitude
+          in: formData
+          description: The latitude of a location. For example 37.42242 (WGS 84).
+          required: false
+          type: text or  number
+        - name: longitude
+          in: formData
+          description: The longitude of a location. For example -122.08585 (WGS 84).
+          required: false
+          type: text or  number
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: postalcode
+          in: formData
+          description: The postal code. For example, 94043.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/GeoCoordinates'
+        tags:
+        - Geo Coordinates
+    /geo-coordinates/{id}/:
+      get:
+        summary: Get Geo Coordinates
+        description: Returns a single Geo Coordinates
+        operationId: getGeoCoordinates
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/GeoCoordinates'
+        tags:
+        - Geo Coordinates
+      put:
+        summary: Update Geo Coordinates
+        description: Update a single Geo Coordinates
+        operationId: updateGeoCoordinatesItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: address
+          in: formData
+          description: Physical address of the item.
+          required: false
+          type: text or  postaladdress
+        - name: addresscountry
+          in: formData
+          description: The country. For example, USA. You can also provide the two-letter
+            ISO 3166-1 alpha-2 country code.
+          required: false
+          type: text or  country
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: elevation
+          in: formData
+          description: The elevation of a location (WGS 84).
+          required: false
+          type: text or  number
+        - name: geo
+          in: formData
+          description: 'The geo coordinates of the place. '
+          required: false
+          type: place
+        - name: geomidpoint
+          in: formData
+          description: 'Indicates the GeoCoordinates at the centre of a GeoShape e.g.
+            GeoCircle. '
+          required: false
+          type: geocircle
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: latitude
+          in: formData
+          description: The latitude of a location. For example 37.42242 (WGS 84).
+          required: false
+          type: text or  number
+        - name: longitude
+          in: formData
+          description: The longitude of a location. For example -122.08585 (WGS 84).
+          required: false
+          type: text or  number
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: postalcode
+          in: formData
+          description: The postal code. For example, 94043.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/GeoCoordinates'
+        tags:
+        - Geo Coordinates
+      delete:
+        summary: Geo Coordinates
+        description: Deletes a single Geo Coordinates
+        operationId: deleteGeoCoordinates
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/GeoCoordinates'
+        tags:
+        - Geo Coordinates
+  definitions:
+    GeoCoordinates:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        address:
+          description: Physical address of the item.
+          type: text or  postaladdress
+        addresscountry:
+          description: The country. For example, USA. You can also provide the two-letter
+            ISO 3166-1 alpha-2 country code.
+          type: text or  country
+        alternatename:
+          description: An alias for the item.
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+        elevation:
+          description: The elevation of a location (WGS 84).
+          type: text or  number
+        geo:
+          description: 'The geo coordinates of the place. '
+          type: place
+        geomidpoint:
+          description: 'Indicates the GeoCoordinates at the centre of a GeoShape e.g.
+            GeoCircle. '
+          type: geocircle
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        latitude:
+          description: The latitude of a location. For example 37.42242 (WGS 84).
+          type: text or  number
+        longitude:
+          description: The longitude of a location. For example -122.08585 (WGS 84).
+          type: text or  number
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        name:
+          description: The name of the item.
+          type: text
+        postalcode:
+          description: The postal code. For example, 94043.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        url:
+          description: URL of the item.
+          type: url

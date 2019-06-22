@@ -1,0 +1,420 @@
+- swagger: "2.0"
+  info:
+    title: Medical Guideline Recommendation API
+    description: A guideline recommendation that is regarded as efficacious and where
+      quality of the data supporting the recommendation is sound.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: medical.guideline.recommendation.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /medical-guideline-recommendation/:
+      get:
+        summary: Get Medical Guideline Recommendation
+        description: Returns Medical Guideline Recommendation
+        operationId: getMedicalGuidelineRecommendation
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/MedicalGuidelineRecommendation'
+        tags:
+        - Medical Guideline Recommendation
+      post:
+        summary: Add Medical Guideline Recommendation
+        description: Add Medical Guideline Recommendation
+        operationId: addMedicalGuidelineRecommendation
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: evidencelevel
+          in: formData
+          description: Strength of evidence of the data used to formulate the guideline
+            (enumerated).
+          required: false
+          type: medicalevidencelevel
+        - name: evidenceorigin
+          in: formData
+          description: Source of the data used to formulate the guidance, e.g. RCT,
+            consensus opinion, etc.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: guidelinedate
+          in: formData
+          description: Date on which this guideline\'s recommendation was made.
+          required: false
+          type: date
+        - name: guidelinesubject
+          in: formData
+          description: The medical conditions, treatments, etc. that are the subject
+            of the guideline.
+          required: false
+          type: medicalentity
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: recommendationstrength
+          in: formData
+          description: Strength of the guideline\'s recommendation (e.g. \'class I\').
+          required: false
+          type: text
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/MedicalGuidelineRecommendation'
+        tags:
+        - Medical Guideline Recommendation
+    /medical-guideline-recommendation/{id}/:
+      get:
+        summary: Get Medical Guideline Recommendation
+        description: Returns a single Medical Guideline Recommendation
+        operationId: getMedicalGuidelineRecommendation
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/MedicalGuidelineRecommendation'
+        tags:
+        - Medical Guideline Recommendation
+      put:
+        summary: Update Medical Guideline Recommendation
+        description: Update a single Medical Guideline Recommendation
+        operationId: updateMedicalGuidelineRecommendationItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: evidencelevel
+          in: formData
+          description: Strength of evidence of the data used to formulate the guideline
+            (enumerated).
+          required: false
+          type: medicalevidencelevel
+        - name: evidenceorigin
+          in: formData
+          description: Source of the data used to formulate the guidance, e.g. RCT,
+            consensus opinion, etc.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: guidelinedate
+          in: formData
+          description: Date on which this guideline\'s recommendation was made.
+          required: false
+          type: date
+        - name: guidelinesubject
+          in: formData
+          description: The medical conditions, treatments, etc. that are the subject
+            of the guideline.
+          required: false
+          type: medicalentity
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: recommendationstrength
+          in: formData
+          description: Strength of the guideline\'s recommendation (e.g. \'class I\').
+          required: false
+          type: text
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/MedicalGuidelineRecommendation'
+        tags:
+        - Medical Guideline Recommendation
+      delete:
+        summary: Medical Guideline Recommendation
+        description: Deletes a single Medical Guideline Recommendation
+        operationId: deleteMedicalGuidelineRecommendation
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/MedicalGuidelineRecommendation'
+        tags:
+        - Medical Guideline Recommendation
+  definitions:
+    MedicalGuidelineRecommendation:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        code:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+        description:
+          description: A short description of the item.
+          type: text
+        evidencelevel:
+          description: Strength of evidence of the data used to formulate the guideline
+            (enumerated).
+          type: medicalevidencelevel
+        evidenceorigin:
+          description: Source of the data used to formulate the guidance, e.g. RCT,
+            consensus opinion, etc.
+          type: text
+        guideline:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+        guidelinedate:
+          description: Date on which this guideline\'s recommendation was made.
+          type: date
+        guidelinesubject:
+          description: The medical conditions, treatments, etc. that are the subject
+            of the guideline.
+          type: medicalentity
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        medicinesystem:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        recognizingauthority:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+        recommendationstrength:
+          description: Strength of the guideline\'s recommendation (e.g. \'class I\').
+          type: text
+        relevantspecialty:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        study:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+        url:
+          description: URL of the item.
+          type: url

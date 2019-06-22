@@ -1,0 +1,434 @@
+- swagger: "2.0"
+  info:
+    title: Property Value Specification API
+    description: A Property value specification.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: property.value.specification.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /property-value-specification/:
+      get:
+        summary: Get Property Value Specification
+        description: Returns Property Value Specification
+        operationId: getPropertyValueSpecification
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/PropertyValueSpecification'
+        tags:
+        - Property Value Specification
+      post:
+        summary: Add Property Value Specification
+        description: Add Property Value Specification
+        operationId: addPropertyValueSpecification
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: defaultvalue
+          in: formData
+          description: The default value of the input.  For properties that expect a
+            literal, the default is a literal value, for properties that expect an object,
+            it\'s an ID reference to one of the current values.
+          required: false
+          type: thing or  text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: maxvalue
+          in: formData
+          description: The upper value of some characteristic or property.
+          required: false
+          type: number
+        - name: minvalue
+          in: formData
+          description: The lower value of some characteristic or property.
+          required: false
+          type: number
+        - name: multiplevalues
+          in: formData
+          description: Whether multiple values are allowed for the property.  Default
+            is false.
+          required: false
+          type: boolean
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: readonlyvalue
+          in: formData
+          description: Whether or not a property is mutable.  Default is false. Specifying
+            this for a property that also has a value makes it act similar to a \"hidden\"
+            input in an HTML form.
+          required: false
+          type: boolean
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: stepvalue
+          in: formData
+          description: The stepValue attribute indicates the granularity that is expected
+            (and required) of the value in a PropertyValueSpecification.
+          required: false
+          type: number
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: valuemaxlength
+          in: formData
+          description: Specifies the allowed range for number of characters in a literal
+            value.
+          required: false
+          type: number
+        - name: valueminlength
+          in: formData
+          description: Specifies the minimum allowed range for number of characters
+            in a literal value.
+          required: false
+          type: number
+        - name: valuename
+          in: formData
+          description: Indicates the name of the PropertyValueSpecification to be used
+            in URL templates and form encoding in a manner analogous to HTML\'s input@name.
+          required: false
+          type: text
+        - name: valuepattern
+          in: formData
+          description: Specifies a regular expression for testing literal values according
+            to the HTML spec.
+          required: false
+          type: text
+        - name: valuerequired
+          in: formData
+          description: Whether the property must be filled in to complete the action.  Default
+            is false.
+          required: false
+          type: boolean
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/PropertyValueSpecification'
+        tags:
+        - Property Value Specification
+    /property-value-specification/{id}/:
+      get:
+        summary: Get Property Value Specification
+        description: Returns a single Property Value Specification
+        operationId: getPropertyValueSpecification
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/PropertyValueSpecification'
+        tags:
+        - Property Value Specification
+      put:
+        summary: Update Property Value Specification
+        description: Update a single Property Value Specification
+        operationId: updatePropertyValueSpecificationItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: defaultvalue
+          in: formData
+          description: The default value of the input.  For properties that expect a
+            literal, the default is a literal value, for properties that expect an object,
+            it\'s an ID reference to one of the current values.
+          required: false
+          type: thing or  text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: maxvalue
+          in: formData
+          description: The upper value of some characteristic or property.
+          required: false
+          type: number
+        - name: minvalue
+          in: formData
+          description: The lower value of some characteristic or property.
+          required: false
+          type: number
+        - name: multiplevalues
+          in: formData
+          description: Whether multiple values are allowed for the property.  Default
+            is false.
+          required: false
+          type: boolean
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: readonlyvalue
+          in: formData
+          description: Whether or not a property is mutable.  Default is false. Specifying
+            this for a property that also has a value makes it act similar to a \"hidden\"
+            input in an HTML form.
+          required: false
+          type: boolean
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: stepvalue
+          in: formData
+          description: The stepValue attribute indicates the granularity that is expected
+            (and required) of the value in a PropertyValueSpecification.
+          required: false
+          type: number
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: valuemaxlength
+          in: formData
+          description: Specifies the allowed range for number of characters in a literal
+            value.
+          required: false
+          type: number
+        - name: valueminlength
+          in: formData
+          description: Specifies the minimum allowed range for number of characters
+            in a literal value.
+          required: false
+          type: number
+        - name: valuename
+          in: formData
+          description: Indicates the name of the PropertyValueSpecification to be used
+            in URL templates and form encoding in a manner analogous to HTML\'s input@name.
+          required: false
+          type: text
+        - name: valuepattern
+          in: formData
+          description: Specifies a regular expression for testing literal values according
+            to the HTML spec.
+          required: false
+          type: text
+        - name: valuerequired
+          in: formData
+          description: Whether the property must be filled in to complete the action.  Default
+            is false.
+          required: false
+          type: boolean
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/PropertyValueSpecification'
+        tags:
+        - Property Value Specification
+      delete:
+        summary: Property Value Specification
+        description: Deletes a single Property Value Specification
+        operationId: deletePropertyValueSpecification
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/PropertyValueSpecification'
+        tags:
+        - Property Value Specification
+  definitions:
+    PropertyValueSpecification:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        defaultvalue:
+          description: The default value of the input.  For properties that expect a
+            literal, the default is a literal value, for properties that expect an object,
+            it\'s an ID reference to one of the current values.
+          type: thing or  text
+        description:
+          description: A short description of the item.
+          type: text
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        maxvalue:
+          description: The upper value of some characteristic or property.
+          type: number
+        minvalue:
+          description: The lower value of some characteristic or property.
+          type: number
+        multiplevalues:
+          description: Whether multiple values are allowed for the property.  Default
+            is false.
+          type: boolean
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        readonlyvalue:
+          description: Whether or not a property is mutable.  Default is false. Specifying
+            this for a property that also has a value makes it act similar to a \"hidden\"
+            input in an HTML form.
+          type: boolean
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        stepvalue:
+          description: The stepValue attribute indicates the granularity that is expected
+            (and required) of the value in a PropertyValueSpecification.
+          type: number
+        url:
+          description: URL of the item.
+          type: url
+        valuemaxlength:
+          description: Specifies the allowed range for number of characters in a literal
+            value.
+          type: number
+        valueminlength:
+          description: Specifies the minimum allowed range for number of characters
+            in a literal value.
+          type: number
+        valuename:
+          description: Indicates the name of the PropertyValueSpecification to be used
+            in URL templates and form encoding in a manner analogous to HTML\'s input@name.
+          type: text
+        valuepattern:
+          description: Specifies a regular expression for testing literal values according
+            to the HTML spec.
+          type: text
+        valuerequired:
+          description: Whether the property must be filled in to complete the action.  Default
+            is false.
+          type: boolean

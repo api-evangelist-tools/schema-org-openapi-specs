@@ -1,0 +1,905 @@
+- swagger: "2.0"
+  info:
+    title: Place API
+    description: Entities that have a somewhat fixed, physical extension.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: place.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /place/:
+      get:
+        summary: Get Place
+        description: Returns Place
+        operationId: getPlace
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Place'
+        tags:
+        - Place
+      post:
+        summary: Add Place
+        description: Add Place
+        operationId: addPlace
+        parameters:
+        - name: additionalproperty
+          in: formData
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          required: false
+          type: propertyvalue
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: address
+          in: formData
+          description: Physical address of the item.
+          required: false
+          type: postaladdress or  text
+        - name: aggregaterating
+          in: formData
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          required: false
+          type: aggregaterating
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: areaserved
+          in: formData
+          description: The geographic area where a service or offered item is provided.  Supersedes
+            serviceArea.
+          required: false
+          type: contactpoint or organization or service or demand or offer or deliverychargespecification
+        - name: availableatorfrom
+          in: formData
+          description: 'The place(s) from which the offer can be obtained (e.g. store
+            locations). '
+          required: false
+          type: demand or offer
+        - name: birthplace
+          in: formData
+          description: 'The place where the person was born. '
+          required: false
+          type: person
+        - name: branchcode
+          in: formData
+          description: 'A short textual code (also called \"store code\") that uniquely
+            identifies a place of business. The code is typically assigned by the parentOrganization
+            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
+            the code \"3047\" is a branchCode for a particular branch.      '
+          required: false
+          type: text
+        - name: containedinplace
+          in: formData
+          description: 'The basic containment relation between a place and one that
+            contains it. Supersedes containedIn. Inverse property: containsPlace.'
+          required: false
+          type: place
+        - name: containsplace
+          in: formData
+          description: 'The basic containment relation between a place and another that
+            it contains. Inverse property: containsPlace.'
+          required: false
+          type: place
+        - name: contentlocation
+          in: formData
+          description: 'The location depicted or described in the content. For example,
+            the location in a photograph or painting. '
+          required: false
+          type: creativework
+        - name: deathplace
+          in: formData
+          description: 'The place where the person died. '
+          required: false
+          type: person
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: dropofflocation
+          in: formData
+          description: 'Where a rental car can be dropped off. '
+          required: false
+          type: rentalcarreservation
+        - name: eligibleregion
+          in: formData
+          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
+            place, or the GeoShape for the geo-political region(s) for which the offer
+            or delivery charge specification is valid.       See also ineligibleRegion.     '
+          required: false
+          type: deliverychargespecification or demand or offer
+        - name: event
+          in: formData
+          description: Upcoming or past event associated with this place, organization,
+            or action. Supersedes events.
+          required: false
+          type: event
+        - name: exercisecourse
+          in: formData
+          description: A sub property of location. The course where this action was
+            taken.  Supersedes course.
+          required: false
+          type: exerciseaction
+        - name: faxnumber
+          in: formData
+          description: The fax number.
+          required: false
+          type: text
+        - name: foodestablishment
+          in: formData
+          description: 'A sub property of location. The specific food establishment
+            where the action occurred. '
+          required: false
+          type: cookaction
+        - name: foundinglocation
+          in: formData
+          description: 'The place where the Organization was founded. '
+          required: false
+          type: organization
+        - name: fromlocation
+          in: formData
+          description: 'A sub property of location. The original location of the object
+            or the agent before the action. '
+          required: false
+          type: exerciseaction or transferaction or moveaction
+        - name: gamelocation
+          in: formData
+          description: 'Real or fictional location of the game (or part of game). '
+          required: false
+          type: game or videogameseries
+        - name: geo
+          in: formData
+          description: The geo coordinates of the place.
+          required: false
+          type: geocoordinates or  geoshape
+        - name: globallocationnumber
+          in: formData
+          description: The Global Location Number (GLN, sometimes also referred to as
+            International Location Number or ILN) of the respective organization, person,
+            or place. The GLN is a 13-digit number used to identify parties and physical
+            locations.
+          required: false
+          type: text
+        - name: hasmap
+          in: formData
+          description: A URL to a map of the place. Supersedes map, maps.
+          required: false
+          type: url or  map
+        - name: haspos
+          in: formData
+          description: 'Points-of-Sales operated by the organization or person. '
+          required: false
+          type: person or organization
+        - name: homelocation
+          in: formData
+          description: 'A contact location for a person\''s residence. '
+          required: false
+          type: person
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: ineligibleregion
+          in: formData
+          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
+            place, or the GeoShape for the geo-political region(s) for which the offer
+            or delivery charge specification is not valid, e.g. a region where the transaction
+            is not allowed.       See also eligibleRegion.       '
+          required: false
+          type: deliverychargespecification or demand or offer
+        - name: isicv4
+          in: formData
+          description: The International Standard of Industrial Classification of All
+            Economic Activities (ISIC), Revision 4 code for a particular organization,
+            business person, or place.
+          required: false
+          type: text
+        - name: joblocation
+          in: formData
+          description: 'A (typically single) geographic location associated with the
+            job position. '
+          required: false
+          type: jobposting
+        - name: location
+          in: formData
+          description: 'The location of for example where the event is happening, an
+            organization is located, or where an action takes place. '
+          required: false
+          type: event or action or organization
+        - name: locationcreated
+          in: formData
+          description: 'The location where the CreativeWork was created, which may not
+            be the same as the location depicted in the CreativeWork. '
+          required: false
+          type: creativework
+        - name: logo
+          in: formData
+          description: An associated logo.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: openinghoursspecification
+          in: formData
+          description: The opening hours of a certain place.
+          required: false
+          type: openinghoursspecification
+        - name: photo
+          in: formData
+          description: A photograph of this place. Supersedes photos.
+          required: false
+          type: photograph or  imageobject
+        - name: pickuplocation
+          in: formData
+          description: 'Where a taxi will pick up a passenger or a rental car can be
+            picked up. '
+          required: false
+          type: taxireservation or rentalcarreservation
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: regionsallowed
+          in: formData
+          description: 'The regions where the media is allowed. If not specified, then
+            it\''s assumed to be allowed everywhere. Specify the countries in ISO 3166
+            format. '
+          required: false
+          type: mediaobject
+        - name: review
+          in: formData
+          description: A review of the item. Supersedes reviews.
+          required: false
+          type: review
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: servicelocation
+          in: formData
+          description: 'The location (e.g. civic structure, local business, etc.) where
+            a person can go to access the service. '
+          required: false
+          type: servicechannel
+        - name: spatial
+          in: formData
+          description: 'The range of spatial applicability of a dataset, e.g. for a
+            dataset of New York weather, the state of New York. '
+          required: false
+          type: dataset
+        - name: telephone
+          in: formData
+          description: The telephone number.
+          required: false
+          type: text
+        - name: tolocation
+          in: formData
+          description: 'A sub property of location. The final location of the object
+            or the agent after the action. '
+          required: false
+          type: exerciseaction or insertaction or moveaction or transferaction
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: worklocation
+          in: formData
+          description: 'A contact location for a person\''s place of work. '
+          required: false
+          type: person
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Place'
+        tags:
+        - Place
+    /place/{id}/:
+      get:
+        summary: Get Place
+        description: Returns a single Place
+        operationId: getPlace
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Place'
+        tags:
+        - Place
+      put:
+        summary: Update Place
+        description: Update a single Place
+        operationId: updatePlaceItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionalproperty
+          in: formData
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          required: false
+          type: propertyvalue
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: address
+          in: formData
+          description: Physical address of the item.
+          required: false
+          type: postaladdress or  text
+        - name: aggregaterating
+          in: formData
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          required: false
+          type: aggregaterating
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: areaserved
+          in: formData
+          description: The geographic area where a service or offered item is provided.  Supersedes
+            serviceArea.
+          required: false
+          type: contactpoint or organization or service or demand or offer or deliverychargespecification
+        - name: availableatorfrom
+          in: formData
+          description: 'The place(s) from which the offer can be obtained (e.g. store
+            locations). '
+          required: false
+          type: demand or offer
+        - name: birthplace
+          in: formData
+          description: 'The place where the person was born. '
+          required: false
+          type: person
+        - name: branchcode
+          in: formData
+          description: 'A short textual code (also called \"store code\") that uniquely
+            identifies a place of business. The code is typically assigned by the parentOrganization
+            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
+            the code \"3047\" is a branchCode for a particular branch.      '
+          required: false
+          type: text
+        - name: containedinplace
+          in: formData
+          description: 'The basic containment relation between a place and one that
+            contains it. Supersedes containedIn. Inverse property: containsPlace.'
+          required: false
+          type: place
+        - name: containsplace
+          in: formData
+          description: 'The basic containment relation between a place and another that
+            it contains. Inverse property: containsPlace.'
+          required: false
+          type: place
+        - name: contentlocation
+          in: formData
+          description: 'The location depicted or described in the content. For example,
+            the location in a photograph or painting. '
+          required: false
+          type: creativework
+        - name: deathplace
+          in: formData
+          description: 'The place where the person died. '
+          required: false
+          type: person
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: dropofflocation
+          in: formData
+          description: 'Where a rental car can be dropped off. '
+          required: false
+          type: rentalcarreservation
+        - name: eligibleregion
+          in: formData
+          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
+            place, or the GeoShape for the geo-political region(s) for which the offer
+            or delivery charge specification is valid.       See also ineligibleRegion.     '
+          required: false
+          type: deliverychargespecification or demand or offer
+        - name: event
+          in: formData
+          description: Upcoming or past event associated with this place, organization,
+            or action. Supersedes events.
+          required: false
+          type: event
+        - name: exercisecourse
+          in: formData
+          description: A sub property of location. The course where this action was
+            taken.  Supersedes course.
+          required: false
+          type: exerciseaction
+        - name: faxnumber
+          in: formData
+          description: The fax number.
+          required: false
+          type: text
+        - name: foodestablishment
+          in: formData
+          description: 'A sub property of location. The specific food establishment
+            where the action occurred. '
+          required: false
+          type: cookaction
+        - name: foundinglocation
+          in: formData
+          description: 'The place where the Organization was founded. '
+          required: false
+          type: organization
+        - name: fromlocation
+          in: formData
+          description: 'A sub property of location. The original location of the object
+            or the agent before the action. '
+          required: false
+          type: exerciseaction or transferaction or moveaction
+        - name: gamelocation
+          in: formData
+          description: 'Real or fictional location of the game (or part of game). '
+          required: false
+          type: game or videogameseries
+        - name: geo
+          in: formData
+          description: The geo coordinates of the place.
+          required: false
+          type: geocoordinates or  geoshape
+        - name: globallocationnumber
+          in: formData
+          description: The Global Location Number (GLN, sometimes also referred to as
+            International Location Number or ILN) of the respective organization, person,
+            or place. The GLN is a 13-digit number used to identify parties and physical
+            locations.
+          required: false
+          type: text
+        - name: hasmap
+          in: formData
+          description: A URL to a map of the place. Supersedes map, maps.
+          required: false
+          type: url or  map
+        - name: haspos
+          in: formData
+          description: 'Points-of-Sales operated by the organization or person. '
+          required: false
+          type: person or organization
+        - name: homelocation
+          in: formData
+          description: 'A contact location for a person\''s residence. '
+          required: false
+          type: person
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: ineligibleregion
+          in: formData
+          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
+            place, or the GeoShape for the geo-political region(s) for which the offer
+            or delivery charge specification is not valid, e.g. a region where the transaction
+            is not allowed.       See also eligibleRegion.       '
+          required: false
+          type: deliverychargespecification or demand or offer
+        - name: isicv4
+          in: formData
+          description: The International Standard of Industrial Classification of All
+            Economic Activities (ISIC), Revision 4 code for a particular organization,
+            business person, or place.
+          required: false
+          type: text
+        - name: joblocation
+          in: formData
+          description: 'A (typically single) geographic location associated with the
+            job position. '
+          required: false
+          type: jobposting
+        - name: location
+          in: formData
+          description: 'The location of for example where the event is happening, an
+            organization is located, or where an action takes place. '
+          required: false
+          type: event or action or organization
+        - name: locationcreated
+          in: formData
+          description: 'The location where the CreativeWork was created, which may not
+            be the same as the location depicted in the CreativeWork. '
+          required: false
+          type: creativework
+        - name: logo
+          in: formData
+          description: An associated logo.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: url or  creativework
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: openinghoursspecification
+          in: formData
+          description: The opening hours of a certain place.
+          required: false
+          type: openinghoursspecification
+        - name: photo
+          in: formData
+          description: A photograph of this place. Supersedes photos.
+          required: false
+          type: photograph or  imageobject
+        - name: pickuplocation
+          in: formData
+          description: 'Where a taxi will pick up a passenger or a rental car can be
+            picked up. '
+          required: false
+          type: taxireservation or rentalcarreservation
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: regionsallowed
+          in: formData
+          description: 'The regions where the media is allowed. If not specified, then
+            it\''s assumed to be allowed everywhere. Specify the countries in ISO 3166
+            format. '
+          required: false
+          type: mediaobject
+        - name: review
+          in: formData
+          description: A review of the item. Supersedes reviews.
+          required: false
+          type: review
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: servicelocation
+          in: formData
+          description: 'The location (e.g. civic structure, local business, etc.) where
+            a person can go to access the service. '
+          required: false
+          type: servicechannel
+        - name: spatial
+          in: formData
+          description: 'The range of spatial applicability of a dataset, e.g. for a
+            dataset of New York weather, the state of New York. '
+          required: false
+          type: dataset
+        - name: telephone
+          in: formData
+          description: The telephone number.
+          required: false
+          type: text
+        - name: tolocation
+          in: formData
+          description: 'A sub property of location. The final location of the object
+            or the agent after the action. '
+          required: false
+          type: exerciseaction or insertaction or moveaction or transferaction
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        - name: worklocation
+          in: formData
+          description: 'A contact location for a person\''s place of work. '
+          required: false
+          type: person
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Place'
+        tags:
+        - Place
+      delete:
+        summary: Place
+        description: Deletes a single Place
+        operationId: deletePlace
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Place'
+        tags:
+        - Place
+  definitions:
+    Place:
+      properties:
+        additionalproperty:
+          description: 'A property-value pair representing an additional characteristics
+            of the entitity, e.g. a product feature or another characteristic for which
+            there is no matching property in schema.org. Note: Publishers should be
+            aware that applications designed to use specific schema.org properties (e.g.
+            http://schema.org/width, http://schema.org/color, http://schema.org/gtin13,
+            ...) will typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.'
+          type: propertyvalue
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        address:
+          description: Physical address of the item.
+          type: postaladdress or  text
+        aggregaterating:
+          description: The overall rating, based on a collection of reviews or ratings,
+            of the item.
+          type: aggregaterating
+        alternatename:
+          description: An alias for the item.
+          type: text
+        areaserved:
+          description: The geographic area where a service or offered item is provided.  Supersedes
+            serviceArea.
+          type: contactpoint or organization or service or demand or offer or deliverychargespecification
+        availableatorfrom:
+          description: 'The place(s) from which the offer can be obtained (e.g. store
+            locations). '
+          type: demand or offer
+        birthplace:
+          description: 'The place where the person was born. '
+          type: person
+        branchcode:
+          description: 'A short textual code (also called \"store code\") that uniquely
+            identifies a place of business. The code is typically assigned by the parentOrganization
+            and used in structured URLs. For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
+            the code \"3047\" is a branchCode for a particular branch.      '
+          type: text
+        containedinplace:
+          description: 'The basic containment relation between a place and one that
+            contains it. Supersedes containedIn. Inverse property: containsPlace.'
+          type: place
+        containsplace:
+          description: 'The basic containment relation between a place and another that
+            it contains. Inverse property: containsPlace.'
+          type: place
+        contentlocation:
+          description: 'The location depicted or described in the content. For example,
+            the location in a photograph or painting. '
+          type: creativework
+        deathplace:
+          description: 'The place where the person died. '
+          type: person
+        description:
+          description: A short description of the item.
+          type: text
+        dropofflocation:
+          description: 'Where a rental car can be dropped off. '
+          type: rentalcarreservation
+        eligibleregion:
+          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
+            place, or the GeoShape for the geo-political region(s) for which the offer
+            or delivery charge specification is valid.       See also ineligibleRegion.     '
+          type: deliverychargespecification or demand or offer
+        event:
+          description: Upcoming or past event associated with this place, organization,
+            or action. Supersedes events.
+          type: event
+        exercisecourse:
+          description: A sub property of location. The course where this action was
+            taken.  Supersedes course.
+          type: exerciseaction
+        faxnumber:
+          description: The fax number.
+          type: text
+        foodestablishment:
+          description: 'A sub property of location. The specific food establishment
+            where the action occurred. '
+          type: cookaction
+        foundinglocation:
+          description: 'The place where the Organization was founded. '
+          type: organization
+        fromlocation:
+          description: 'A sub property of location. The original location of the object
+            or the agent before the action. '
+          type: exerciseaction or transferaction or moveaction
+        gamelocation:
+          description: 'Real or fictional location of the game (or part of game). '
+          type: game or videogameseries
+        geo:
+          description: The geo coordinates of the place.
+          type: geocoordinates or  geoshape
+        globallocationnumber:
+          description: The Global Location Number (GLN, sometimes also referred to as
+            International Location Number or ILN) of the respective organization, person,
+            or place. The GLN is a 13-digit number used to identify parties and physical
+            locations.
+          type: text
+        hasmap:
+          description: A URL to a map of the place. Supersedes map, maps.
+          type: url or  map
+        haspos:
+          description: 'Points-of-Sales operated by the organization or person. '
+          type: person or organization
+        homelocation:
+          description: 'A contact location for a person\''s residence. '
+          type: person
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        ineligibleregion:
+          description: 'The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the
+            place, or the GeoShape for the geo-political region(s) for which the offer
+            or delivery charge specification is not valid, e.g. a region where the transaction
+            is not allowed.       See also eligibleRegion.       '
+          type: deliverychargespecification or demand or offer
+        isicv4:
+          description: The International Standard of Industrial Classification of All
+            Economic Activities (ISIC), Revision 4 code for a particular organization,
+            business person, or place.
+          type: text
+        joblocation:
+          description: 'A (typically single) geographic location associated with the
+            job position. '
+          type: jobposting
+        location:
+          description: 'The location of for example where the event is happening, an
+            organization is located, or where an action takes place. '
+          type: event or action or organization
+        locationcreated:
+          description: 'The location where the CreativeWork was created, which may not
+            be the same as the location depicted in the CreativeWork. '
+          type: creativework
+        logo:
+          description: An associated logo.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: url or  creativework
+        name:
+          description: The name of the item.
+          type: text
+        openinghoursspecification:
+          description: The opening hours of a certain place.
+          type: openinghoursspecification
+        photo:
+          description: A photograph of this place. Supersedes photos.
+          type: photograph or  imageobject
+        pickuplocation:
+          description: 'Where a taxi will pick up a passenger or a rental car can be
+            picked up. '
+          type: taxireservation or rentalcarreservation
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        regionsallowed:
+          description: 'The regions where the media is allowed. If not specified, then
+            it\''s assumed to be allowed everywhere. Specify the countries in ISO 3166
+            format. '
+          type: mediaobject
+        review:
+          description: A review of the item. Supersedes reviews.
+          type: review
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        servicelocation:
+          description: 'The location (e.g. civic structure, local business, etc.) where
+            a person can go to access the service. '
+          type: servicechannel
+        spatial:
+          description: 'The range of spatial applicability of a dataset, e.g. for a
+            dataset of New York weather, the state of New York. '
+          type: dataset
+        telephone:
+          description: The telephone number.
+          type: text
+        tolocation:
+          description: 'A sub property of location. The final location of the object
+            or the agent after the action. '
+          type: exerciseaction or insertaction or moveaction or transferaction
+        url:
+          description: URL of the item.
+          type: url
+        worklocation:
+          description: 'A contact location for a person\''s place of work. '
+          type: person

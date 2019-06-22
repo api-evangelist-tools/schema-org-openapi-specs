@@ -1,0 +1,389 @@
+- swagger: "2.0"
+  info:
+    title: Mass API
+    description: Properties that take Mass as values are of the form \'&lt;Number&gt;
+      &lt;Mass unit of measure&gt;\'. E.g., \'7 kg\'.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: mass.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /mass/:
+      get:
+        summary: Get Mass
+        description: Returns Mass
+        operationId: getMass
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Mass'
+        tags:
+        - Mass
+      post:
+        summary: Add Mass
+        description: Add Mass
+        operationId: addMass
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: carbohydratecontent
+          in: formData
+          description: 'The number of grams of carbohydrates. '
+          required: false
+          type: nutritioninformation
+        - name: cholesterolcontent
+          in: formData
+          description: 'The number of milligrams of cholesterol. '
+          required: false
+          type: nutritioninformation
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: fatcontent
+          in: formData
+          description: 'The number of grams of fat. '
+          required: false
+          type: nutritioninformation
+        - name: fibercontent
+          in: formData
+          description: 'The number of grams of fiber. '
+          required: false
+          type: nutritioninformation
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: proteincontent
+          in: formData
+          description: 'The number of grams of protein. '
+          required: false
+          type: nutritioninformation
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: saturatedfatcontent
+          in: formData
+          description: 'The number of grams of saturated fat. '
+          required: false
+          type: nutritioninformation
+        - name: sodiumcontent
+          in: formData
+          description: 'The number of milligrams of sodium. '
+          required: false
+          type: nutritioninformation
+        - name: sugarcontent
+          in: formData
+          description: 'The number of grams of sugar. '
+          required: false
+          type: nutritioninformation
+        - name: transfatcontent
+          in: formData
+          description: 'The number of grams of trans fat. '
+          required: false
+          type: nutritioninformation
+        - name: unsaturatedfatcontent
+          in: formData
+          description: 'The number of grams of unsaturated fat. '
+          required: false
+          type: nutritioninformation
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Mass'
+        tags:
+        - Mass
+    /mass/{id}/:
+      get:
+        summary: Get Mass
+        description: Returns a single Mass
+        operationId: getMass
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Mass'
+        tags:
+        - Mass
+      put:
+        summary: Update Mass
+        description: Update a single Mass
+        operationId: updateMassItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: carbohydratecontent
+          in: formData
+          description: 'The number of grams of carbohydrates. '
+          required: false
+          type: nutritioninformation
+        - name: cholesterolcontent
+          in: formData
+          description: 'The number of milligrams of cholesterol. '
+          required: false
+          type: nutritioninformation
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: fatcontent
+          in: formData
+          description: 'The number of grams of fat. '
+          required: false
+          type: nutritioninformation
+        - name: fibercontent
+          in: formData
+          description: 'The number of grams of fiber. '
+          required: false
+          type: nutritioninformation
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: proteincontent
+          in: formData
+          description: 'The number of grams of protein. '
+          required: false
+          type: nutritioninformation
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: saturatedfatcontent
+          in: formData
+          description: 'The number of grams of saturated fat. '
+          required: false
+          type: nutritioninformation
+        - name: sodiumcontent
+          in: formData
+          description: 'The number of milligrams of sodium. '
+          required: false
+          type: nutritioninformation
+        - name: sugarcontent
+          in: formData
+          description: 'The number of grams of sugar. '
+          required: false
+          type: nutritioninformation
+        - name: transfatcontent
+          in: formData
+          description: 'The number of grams of trans fat. '
+          required: false
+          type: nutritioninformation
+        - name: unsaturatedfatcontent
+          in: formData
+          description: 'The number of grams of unsaturated fat. '
+          required: false
+          type: nutritioninformation
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Mass'
+        tags:
+        - Mass
+      delete:
+        summary: Mass
+        description: Deletes a single Mass
+        operationId: deleteMass
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Mass'
+        tags:
+        - Mass
+  definitions:
+    Mass:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        carbohydratecontent:
+          description: 'The number of grams of carbohydrates. '
+          type: nutritioninformation
+        cholesterolcontent:
+          description: 'The number of milligrams of cholesterol. '
+          type: nutritioninformation
+        description:
+          description: A short description of the item.
+          type: text
+        fatcontent:
+          description: 'The number of grams of fat. '
+          type: nutritioninformation
+        fibercontent:
+          description: 'The number of grams of fiber. '
+          type: nutritioninformation
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        proteincontent:
+          description: 'The number of grams of protein. '
+          type: nutritioninformation
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        saturatedfatcontent:
+          description: 'The number of grams of saturated fat. '
+          type: nutritioninformation
+        sodiumcontent:
+          description: 'The number of milligrams of sodium. '
+          type: nutritioninformation
+        sugarcontent:
+          description: 'The number of grams of sugar. '
+          type: nutritioninformation
+        transfatcontent:
+          description: 'The number of grams of trans fat. '
+          type: nutritioninformation
+        unsaturatedfatcontent:
+          description: 'The number of grams of unsaturated fat. '
+          type: nutritioninformation
+        url:
+          description: URL of the item.
+          type: url

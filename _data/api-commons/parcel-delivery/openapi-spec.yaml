@@ -1,0 +1,427 @@
+- swagger: "2.0"
+  info:
+    title: Parcel Delivery API
+    description: The delivery of a parcel either via the postal service or a commercial
+      service.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: parcel.delivery.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /parcel-delivery/:
+      get:
+        summary: Get Parcel Delivery
+        description: Returns Parcel Delivery
+        operationId: getParcelDelivery
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ParcelDelivery'
+        tags:
+        - Parcel Delivery
+      post:
+        summary: Add Parcel Delivery
+        description: Add Parcel Delivery
+        operationId: addParcelDelivery
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: deliveryaddress
+          in: formData
+          description: Destination address.
+          required: false
+          type: postaladdress
+        - name: deliverystatus
+          in: formData
+          description: New entry added as the package passes through each leg of its
+            journey (from shipment to final delivery).
+          required: false
+          type: deliveryevent
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: expectedarrivalfrom
+          in: formData
+          description: The earliest date the package may arrive.
+          required: false
+          type: datetime
+        - name: expectedarrivaluntil
+          in: formData
+          description: The latest date the package may arrive.
+          required: false
+          type: datetime
+        - name: hasdeliverymethod
+          in: formData
+          description: Method used for delivery or shipping.
+          required: false
+          type: deliverymethod
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: itemshipped
+          in: formData
+          description: Item(s) being shipped.
+          required: false
+          type: product
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: orderdelivery
+          in: formData
+          description: 'The delivery of the parcel related to this order or order item. '
+          required: false
+          type: orderitem or order
+        - name: originaddress
+          in: formData
+          description: Shipper\'s address.
+          required: false
+          type: postaladdress
+        - name: partoforder
+          in: formData
+          description: The overall order the items in this delivery were included in.
+          required: false
+          type: order
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: person or  organization
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: trackingnumber
+          in: formData
+          description: Shipper tracking number.
+          required: false
+          type: text
+        - name: trackingurl
+          in: formData
+          description: Tracking url for the parcel delivery.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ParcelDelivery'
+        tags:
+        - Parcel Delivery
+    /parcel-delivery/{id}/:
+      get:
+        summary: Get Parcel Delivery
+        description: Returns a single Parcel Delivery
+        operationId: getParcelDelivery
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ParcelDelivery'
+        tags:
+        - Parcel Delivery
+      put:
+        summary: Update Parcel Delivery
+        description: Update a single Parcel Delivery
+        operationId: updateParcelDeliveryItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: deliveryaddress
+          in: formData
+          description: Destination address.
+          required: false
+          type: postaladdress
+        - name: deliverystatus
+          in: formData
+          description: New entry added as the package passes through each leg of its
+            journey (from shipment to final delivery).
+          required: false
+          type: deliveryevent
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: expectedarrivalfrom
+          in: formData
+          description: The earliest date the package may arrive.
+          required: false
+          type: datetime
+        - name: expectedarrivaluntil
+          in: formData
+          description: The latest date the package may arrive.
+          required: false
+          type: datetime
+        - name: hasdeliverymethod
+          in: formData
+          description: Method used for delivery or shipping.
+          required: false
+          type: deliverymethod
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: itemshipped
+          in: formData
+          description: Item(s) being shipped.
+          required: false
+          type: product
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: orderdelivery
+          in: formData
+          description: 'The delivery of the parcel related to this order or order item. '
+          required: false
+          type: orderitem or order
+        - name: originaddress
+          in: formData
+          description: Shipper\'s address.
+          required: false
+          type: postaladdress
+        - name: partoforder
+          in: formData
+          description: The overall order the items in this delivery were included in.
+          required: false
+          type: order
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: provider
+          in: formData
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          required: false
+          type: person or  organization
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: trackingnumber
+          in: formData
+          description: Shipper tracking number.
+          required: false
+          type: text
+        - name: trackingurl
+          in: formData
+          description: Tracking url for the parcel delivery.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ParcelDelivery'
+        tags:
+        - Parcel Delivery
+      delete:
+        summary: Parcel Delivery
+        description: Deletes a single Parcel Delivery
+        operationId: deleteParcelDelivery
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/ParcelDelivery'
+        tags:
+        - Parcel Delivery
+  definitions:
+    ParcelDelivery:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        deliveryaddress:
+          description: Destination address.
+          type: postaladdress
+        deliverystatus:
+          description: New entry added as the package passes through each leg of its
+            journey (from shipment to final delivery).
+          type: deliveryevent
+        description:
+          description: A short description of the item.
+          type: text
+        expectedarrivalfrom:
+          description: The earliest date the package may arrive.
+          type: datetime
+        expectedarrivaluntil:
+          description: The latest date the package may arrive.
+          type: datetime
+        hasdeliverymethod:
+          description: Method used for delivery or shipping.
+          type: deliverymethod
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        itemshipped:
+          description: Item(s) being shipped.
+          type: product
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        name:
+          description: The name of the item.
+          type: text
+        orderdelivery:
+          description: 'The delivery of the parcel related to this order or order item. '
+          type: orderitem or order
+        originaddress:
+          description: Shipper\'s address.
+          type: postaladdress
+        partoforder:
+          description: The overall order the items in this delivery were included in.
+          type: order
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        provider:
+          description: The service provider, service operator, or service performer;
+            the goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the seller.
+            Supersedes carrier.
+          type: person or  organization
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        trackingnumber:
+          description: Shipper tracking number.
+          type: text
+        trackingurl:
+          description: Tracking url for the parcel delivery.
+          type: url
+        url:
+          description: URL of the item.
+          type: url

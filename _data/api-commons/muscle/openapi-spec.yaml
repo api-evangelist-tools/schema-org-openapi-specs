@@ -1,0 +1,563 @@
+- swagger: "2.0"
+  info:
+    title: Muscle API
+    description: A muscle is an anatomical structure consisting of a contractile form
+      of tissue that animals use to effect movement.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: muscle.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /muscle/:
+      get:
+        summary: Get Muscle
+        description: Returns Muscle
+        operationId: getMuscle
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Muscle'
+        tags:
+        - Muscle
+      post:
+        summary: Add Muscle
+        description: Add Muscle
+        operationId: addMuscle
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: antagonist
+          in: formData
+          description: The muscle whose action counteracts the specified muscle.
+          required: false
+          type: muscle
+        - name: associatedpathophysiology
+          in: formData
+          description: If applicable, a description of the pathophysiology associated
+            with the anatomical system, including potential abnormal changes in the
+            mechanical, physical, and biochemical functions of the system.
+          required: false
+          type: text
+        - name: bloodsupply
+          in: formData
+          description: The blood vessel that carries blood from the heart to the muscle.
+          required: false
+          type: vessel
+        - name: bodylocation
+          in: formData
+          description: Location in the body of the anatomical structure.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: connectedto
+          in: formData
+          description: Other anatomical structures to which this structure is connected.
+          required: false
+          type: anatomicalstructure
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: diagram
+          in: formData
+          description: An image containing a diagram that illustrates the structure
+            and/or its component substructures and/or connections with other structures.
+          required: false
+          type: imageobject
+        - name: function
+          in: formData
+          description: Function of the anatomical structure.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: insertion
+          in: formData
+          description: The place of attachment of a muscle, or what the muscle moves.
+          required: false
+          type: anatomicalstructure
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: muscleaction
+          in: formData
+          description: The movement the muscle generates. Supersedes action.
+          required: false
+          type: text
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: nerve
+          in: formData
+          description: The underlying innervation associated with the muscle.
+          required: false
+          type: nerve
+        - name: nervemotor
+          in: formData
+          description: 'The neurological pathway extension that involves muscle control. '
+          required: false
+          type: nerve
+        - name: origin
+          in: formData
+          description: The place or point where a muscle arises.
+          required: false
+          type: anatomicalstructure
+        - name: partofsystem
+          in: formData
+          description: The anatomical or organ system that this structure is part of.
+          required: false
+          type: anatomicalsystem
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relatedcondition
+          in: formData
+          description: A medical condition associated with this anatomy.
+          required: false
+          type: medicalcondition
+        - name: relatedtherapy
+          in: formData
+          description: A medical therapy related to this anatomy.
+          required: false
+          type: medicaltherapy
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: substructure
+          in: formData
+          description: Component (sub-)structure(s) that comprise this anatomical structure.
+          required: false
+          type: anatomicalstructure
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Muscle'
+        tags:
+        - Muscle
+    /muscle/{id}/:
+      get:
+        summary: Get Muscle
+        description: Returns a single Muscle
+        operationId: getMuscle
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Muscle'
+        tags:
+        - Muscle
+      put:
+        summary: Update Muscle
+        description: Update a single Muscle
+        operationId: updateMuscleItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: antagonist
+          in: formData
+          description: The muscle whose action counteracts the specified muscle.
+          required: false
+          type: muscle
+        - name: associatedpathophysiology
+          in: formData
+          description: If applicable, a description of the pathophysiology associated
+            with the anatomical system, including potential abnormal changes in the
+            mechanical, physical, and biochemical functions of the system.
+          required: false
+          type: text
+        - name: bloodsupply
+          in: formData
+          description: The blood vessel that carries blood from the heart to the muscle.
+          required: false
+          type: vessel
+        - name: bodylocation
+          in: formData
+          description: Location in the body of the anatomical structure.
+          required: false
+          type: text
+        - name: code
+          in: formData
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          required: false
+          type: medicalcode
+        - name: connectedto
+          in: formData
+          description: Other anatomical structures to which this structure is connected.
+          required: false
+          type: anatomicalstructure
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: diagram
+          in: formData
+          description: An image containing a diagram that illustrates the structure
+            and/or its component substructures and/or connections with other structures.
+          required: false
+          type: imageobject
+        - name: function
+          in: formData
+          description: Function of the anatomical structure.
+          required: false
+          type: text
+        - name: guideline
+          in: formData
+          description: A medical guideline related to this entity.
+          required: false
+          type: medicalguideline
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: insertion
+          in: formData
+          description: The place of attachment of a muscle, or what the muscle moves.
+          required: false
+          type: anatomicalstructure
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: medicinesystem
+          in: formData
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          required: false
+          type: medicinesystem
+        - name: muscleaction
+          in: formData
+          description: The movement the muscle generates. Supersedes action.
+          required: false
+          type: text
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: nerve
+          in: formData
+          description: The underlying innervation associated with the muscle.
+          required: false
+          type: nerve
+        - name: nervemotor
+          in: formData
+          description: 'The neurological pathway extension that involves muscle control. '
+          required: false
+          type: nerve
+        - name: origin
+          in: formData
+          description: The place or point where a muscle arises.
+          required: false
+          type: anatomicalstructure
+        - name: partofsystem
+          in: formData
+          description: The anatomical or organ system that this structure is part of.
+          required: false
+          type: anatomicalsystem
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: recognizingauthority
+          in: formData
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          required: false
+          type: organization
+        - name: relatedcondition
+          in: formData
+          description: A medical condition associated with this anatomy.
+          required: false
+          type: medicalcondition
+        - name: relatedtherapy
+          in: formData
+          description: A medical therapy related to this anatomy.
+          required: false
+          type: medicaltherapy
+        - name: relevantspecialty
+          in: formData
+          description: If applicable, a medical specialty in which this entity is relevant.
+          required: false
+          type: medicalspecialty
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: study
+          in: formData
+          description: A medical study or trial related to this entity.
+          required: false
+          type: medicalstudy
+        - name: substructure
+          in: formData
+          description: Component (sub-)structure(s) that comprise this anatomical structure.
+          required: false
+          type: anatomicalstructure
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Muscle'
+        tags:
+        - Muscle
+      delete:
+        summary: Muscle
+        description: Deletes a single Muscle
+        operationId: deleteMuscle
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/Muscle'
+        tags:
+        - Muscle
+  definitions:
+    Muscle:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        antagonist:
+          description: The muscle whose action counteracts the specified muscle.
+          type: muscle
+        associatedpathophysiology:
+          description: If applicable, a description of the pathophysiology associated
+            with the anatomical system, including potential abnormal changes in the
+            mechanical, physical, and biochemical functions of the system.
+          type: text
+        bloodsupply:
+          description: The blood vessel that carries blood from the heart to the muscle.
+          type: vessel
+        bodylocation:
+          description: Location in the body of the anatomical structure.
+          type: text
+        code:
+          description: A medical code for the entity, taken from a controlled vocabulary
+            or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+          type: medicalcode
+        connectedto:
+          description: Other anatomical structures to which this structure is connected.
+          type: anatomicalstructure
+        description:
+          description: A short description of the item.
+          type: text
+        diagram:
+          description: An image containing a diagram that illustrates the structure
+            and/or its component substructures and/or connections with other structures.
+          type: imageobject
+        function:
+          description: Function of the anatomical structure.
+          type: text
+        guideline:
+          description: A medical guideline related to this entity.
+          type: medicalguideline
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        insertion:
+          description: The place of attachment of a muscle, or what the muscle moves.
+          type: anatomicalstructure
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        medicinesystem:
+          description: The system of medicine that includes this MedicalEntity, for
+            example \'evidence-based\', \'homeopathic\', \'chiropractic\', etc.
+          type: medicinesystem
+        muscleaction:
+          description: The movement the muscle generates. Supersedes action.
+          type: text
+        name:
+          description: The name of the item.
+          type: text
+        nerve:
+          description: The underlying innervation associated with the muscle.
+          type: nerve
+        nervemotor:
+          description: 'The neurological pathway extension that involves muscle control. '
+          type: nerve
+        origin:
+          description: The place or point where a muscle arises.
+          type: anatomicalstructure
+        partofsystem:
+          description: The anatomical or organ system that this structure is part of.
+          type: anatomicalsystem
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        recognizingauthority:
+          description: If applicable, the organization that officially recognizes this
+            entity as part of its endorsed system of medicine.
+          type: organization
+        relatedcondition:
+          description: A medical condition associated with this anatomy.
+          type: medicalcondition
+        relatedtherapy:
+          description: A medical therapy related to this anatomy.
+          type: medicaltherapy
+        relevantspecialty:
+          description: If applicable, a medical specialty in which this entity is relevant.
+          type: medicalspecialty
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        study:
+          description: A medical study or trial related to this entity.
+          type: medicalstudy
+        substructure:
+          description: Component (sub-)structure(s) that comprise this anatomical structure.
+          type: anatomicalstructure
+        url:
+          description: URL of the item.
+          type: url

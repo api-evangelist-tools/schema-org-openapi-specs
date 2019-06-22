@@ -1,0 +1,12 @@
+<section>
+  <div class="mini-posts">
+    {% assign partners = site.data.partners.index | sort: 'view_sort' %}
+    {% for partner in partners %}
+      {% if partner.type == 'Sponsor' %}
+        <article>
+          <a href="{{ partner.url }}" class="image"><img src="{{ partner.image }}" alt="" width="50%" /></a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

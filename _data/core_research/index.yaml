@@ -1,0 +1,1357 @@
+---
+- viewsort: A
+  name: Definitions
+  identifier: ""
+  url: http://definitions.apievangelist.com
+  description: This is the most important research in my stack in my opinion, focusing
+    on the API definitions, schema, and standards that are being used across the API
+    sector to define every aspect of API operations. These definitions are being used
+    across every stop along this cycle as a sort of central truth, and often providing
+    a contract that defines operations.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-definitions.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: definitions
+  tags: Core Research
+- viewsort: AB
+  name: Design
+  identifier: ""
+  url: http://design.apievangelist.com
+  description: A toolkit where I gather all the news, analysis, companies and technology
+    when it comes to designing APIs.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-design-fiction.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: design
+  tags: Core Research
+- viewsort: ABA
+  name: Versioning
+  identifier: ""
+  url: http://versioning.apievangelist.com
+  description: This is my research into API versioning, and better understanding how
+    API providers are versioning, as well as the leading conversations about it from
+    the experts. This is a very discussed aspect of API operations and I needed a
+    single place where I could reference when crafting stories on the blog. You can
+    find news I've curated, organizations doing interesting things, some of the common
+    building blocks I've identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-version.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: versioning
+  tags: Core Research
+- viewsort: AC
+  name: Hypermedia
+  identifier: ""
+  url: http://hypermedia.apievangelist.com
+  description: Hypermedia is the the latest trend in API design to pick up some serious
+    momentum. It is time for it to have its own research area on API Evangelist, allowing
+    me to curate news, tools, companies and individuals who are leading in the space
+    and start evolving my analysis and storytelling in the area of hypermedia APIs.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-hypermedia.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: hypermedia
+  tags: Core Research
+- viewsort: AD
+  name: DNS
+  identifier: ""
+  url: http://dns.apievangelist.com
+  description: DNS is the front-line of web and API operations, and increasingly this
+    area of API operations is API driven, allowing it to be managed using APIs. Making
+    the the frontline of API operations configurable using APIs, making this part
+    of operations a much more agile, flexible, and powerful part of how APIs are done.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-globe.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: dns
+  tags: Core Research
+- viewsort: AE
+  name: Low Hanging Fruit
+  identifier: ""
+  url: http://low.hanging.fruit.apievangelist.com/
+  description: It can be difficult to get started with APIs, and I have an approach
+    to helping new organizations think about where the lowest hanging fruit is when
+    it comes to providing APis. There are usually two areas I look at as low hanging
+    fruit, involved what is already on the website, and available via existing software
+    systems. This is my work to track what is going on from this area of the API lifecycle.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-grapes.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: low-hanging-fruit
+  githubrepo: master
+  tags: Core Research
+- viewsort: AF
+  name: Scraping
+  identifier: ""
+  url: http://scraping.apievangelist.com
+  description: My research into the wonderful and often very controversial world of
+    web scraping and how this can be used to generate data, content and resources
+    for APIs. &nbsp;I'm tracking on news and companies in the space, but also watching
+    some of the politics and legalities around scraping.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-scraping.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: scraping
+  tags: Core Research
+- viewsort: AG
+  name: Database
+  identifier: ""
+  url: http://database.apievangelist.com
+  description: Many API implementations begin with a database. Often times APIs assume
+    the characteristics of the databases behind them. Making APIs available from data
+    that is stored in a central database is the number one way in which folks are
+    deploying APIs, so I wanted to take the time and consider the database implications
+    on the API lifecycle.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-database-new.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: database
+  tags: Core Research
+- viewsort: AH
+  name: Deployment
+  identifier: ""
+  url: http://deployment.apievangelist.com
+  description: A toolkit where I gather all the news, analysis, companies and technology
+    when it comes to deploying APIs.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-deployment.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: deployment
+  tags: Core Research
+- viewsort: AH
+  name: Rogue
+  identifier: ""
+  url: http://rogue.apievangelist.com
+  description: This is my research around the deployment of rogue APIs, where someone
+    launches an API based upon an existing web or mobile app, exposing the backend
+    for others to use via a public unauthorized API. You can find news I've curated,
+    organizations doing interesting things, some of the common building blocks I've
+    identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-pirate-flag.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: rogue
+  tags: Core Research
+- viewsort: AI
+  name: Microservices
+  identifier: ""
+  url: http://microservices.apievangelist.com
+  description: My work to cover the latest trend in the API space, and designing your
+    APIs in a very moduler, decoupled way, allowing APIs to do one thing, and do it
+    well, but play an important role in a larger strategy. I see microservices as
+    more philosophy and culture than it is technology, but nonetheless it is an important
+    aspect of API operation.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-microservice.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: microservices
+  tags: Core Research
+- viewsort: AJ
+  name: Algorithms
+  identifier: ""
+  url: http://algorithms.apievangelist.com
+  description: Many data are APIs, but when they are more programmatic, and algorithmic
+    I will track on details here. I am a big proponent of algorithmic transparency
+    using APIs, where the inputs and outputs of algorithms can be made available via
+    APIs--pulling back the curtain a little bit on the black box that is often algorithms.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-algorithms.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: algorithms
+  tags: Core Research
+- viewsort: AK
+  name: Search
+  identifier: ""
+  url: http://search.apievangelist.com
+  description: This is my research around APIs that provide search all the way to
+    search platforms that provide APIs. I'm trying to understand how search is accomplished
+    across the API economy.  There are a number of ways APIs and search go together,
+    and this is where I"m trying to bring that into focus. You can find news I've
+    curated, organizations doing interesting things, some of the common building blocks
+    I've identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-search.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: search
+  tags: Core Research
+- viewsort: AK
+  name: Machine Learning
+  identifier: ""
+  url: http://machine-learning.apievangelist.com
+  description: This is my research into machine learning APIs, and how APIs are used
+    to provide access to machine learning models. I'm trying to keep a handle on this
+    fast moving trend. This work will overlap with my algorithms research and I will
+    eventually launch other areas specifically for artificial intelligence. You can
+    find news I've curated, organizations doing interesting things, some of the common
+    building blocks I've identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-machine-learning.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: machine-learning
+  tags: Core Research
+- viewsort: AO
+  name: Proxy
+  identifier: ""
+  url: http://proxy.apievangelist.com
+  description: Proxies and gateways play an important role in defining and deploying
+    APIs, but also help us better understand how clients are using APIs, what request
+    and reponses look like, and the other finer details of operations. This is my
+    work to understand the role proxies can play across the API lifecycle.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-proxy.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: proxy
+  tags: Core Research
+- viewsort: AP
+  name: Virtualization
+  identifier: ""
+  url: http://virtualization.apievangelist.com
+  description: Virtualizing APIs and the resources they serve up is an important part
+    of the API design, deployment, management, and testing environments. This is my
+    work to understand how APIs are being mocked and virtualized, as well as the other
+    aspects of API operations, like test data, or may resources for training AI and
+    machine learning. Virtualization is a pretty big umbrella, but this is my research
+    into sorting through exactly what it is.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-virtulization.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: virtualization
+  tags: Core Research
+- viewsort: AQ
+  name: Containers
+  identifier: ""
+  url: http://containers.apievangelist.com
+  description: My goal is to understand how APIs and containers work together, and
+    as I do with all of my research I setup a Github repo for tracking every piece
+    of container news I read that I feel is relevant, each company doing interesting
+    things containers, tools for working with containers, and ultimately my analysis.
+    Cloud computing will continue to be the lead driver of innovation in the API space,
+    and I feel the introduction of cloud computing in 2006&ndash;2008 gave legitimacy
+    to web APIs&mdash;you could now deploy global infrastructure using web APIs, game
+    on. I think containerization will take API design, deployment, management and
+    integration to the next phase, and closer the early visions of a programmable
+    web we all started envisioning around 2005.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-shipping-container.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: containers
+  tags: Core Research
+- viewsort: AR
+  name: Management
+  identifier: ""
+  url: http://management.apievangelist.com/
+  description: This is the oldest area of my research, and the first aspect of APIs
+    I started studying in 2010. It has spawned every other area of the API lifecycle
+    I track on, so there are many overlaps and linkages to other stops along the way.
+    API management has matured to include service composition, establishing analysis
+    and awarness, as well as reporting and billing on top of that activity. I'm looking
+    to track on what is happening to API mangement now that it is being commoditized.
+  image: https://s3.amazonaws.com/kinlane-productions/api-evangelist/services/api-management.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: management
+  tags: Core Research
+- viewsort: AS
+  name: Serverless
+  identifier: ""
+  url: http://serverless.apievangelist.com
+  description: Another latest trend evolving out of cloud computing and the world
+    of microservices being led by Amazon Web Services with their Lambda service. I'm
+    tracking on how serverless is being leveraged to deploy simple, modular, single
+    purpose APIs that can be deployed in any cloud infrastructure, and leveraged to
+    not just build applicaitons, but also manage API infrastructure that drives it.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-serverless.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: serverless
+  tags: Core Research
+- viewsort: AT
+  name: Portal
+  identifier: ""
+  url: http://portal.apievangelist.com
+  description: HTML and websites are for humans, and JSON and portals for developers
+    and the applications they are building on top of API resources. I've looked at
+    thousands of API portals, and have been aggregating the common building blocks
+    of the successful API portals I've come across, and aggregated them, and even
+    crafted a simple set of API and developer portal templates that anyone can fork
+    and put to use in their operations.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-portal.jpg
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: portal
+  tags: Core Research
+- viewsort: AU
+  name: Getting Started
+  identifier: ""
+  url: http://getting-started.apievangelist.com
+  description: A getting started page for APIs is all about getting the new and potential
+    API consumer up to speed with what it takes to get started with an API. This is
+    my research to track on the different approaches, and aggregate into a single
+    approach I can apply to my own APIs, as well as share along the way. I have started
+    crafting an API to help me organize all of it, so stay tuned.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-running.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: getting-started
+  tags: Core Research
+- viewsort: AV
+  name: Documentation
+  identifier: ""
+  url: http://documentation.apievangelist.com
+  description: Documentation is one of the most important building blocks for API
+    operations, and has be continually pointed out as being the biggest pain point
+    when it comes to API integration. You can find news I've curated, organizations
+    doing interesting things, some of the common building blocks I've identified,
+    and open source tooling I've aggregated here in this research projects Github
+    repository.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: documentation
+  tags: Core Research
+- viewsort: AX
+  name: Frequently Asked Questions
+  identifier: ""
+  url: http://frequently-asked-questions.apievangelist.com
+  description: No matter how well designed your API is, and easy it is to get up and
+    running, new users will always have questions. this is a research project, API(s),
+    and tooling to help manage the frequently asked questions that surround API operations.
+    It seems like a simple thing, but can go along way in helping making learning
+    what an API does a lot easier.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-question-mark.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: frequently-asked-questions
+  tags: Core Research
+- viewsort: AY
+  name: Support
+  identifier: ""
+  url: http://support.apievangelist.com
+  description: I've been tracking on the ways that leading companies who are doing
+    APis handle their support for some time now. I've been formalizing my research,
+    and organizing it here. I will keep working to organize better, and produce guides,
+    and tooling. To help drive some of it I have also developed an API that will help
+    me manage my open APIs, as well as the support on others.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-support.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: support
+  tags: Core Research
+- viewsort: AZ
+  name: Communications
+  identifier: ""
+  url: http://communications.apievangelist.com
+  description: When API efforts come out of developer and IT groups they often lack
+    one important component, communication. This is my work to track on the successful
+    API efforts and better understand how they are communicating with developers,
+    end users, and other stakeholders who are involved with an API.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-chat.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: communications
+  tags: Core Research
+- viewsort: B
+  name: Road Map
+  identifier: ""
+  url: http://road-map.apievangelist.com/
+  description: This is a reserch area to understand how companies are publishing a
+    road map as part of their API operations. My goal is to better understand, and
+    aggregate this knowledge into a single place, so I can learn from, as well share
+    knowledge along the way. I have also published an API to help me organize, and
+    use across my API portals.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-roadmap.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: road-map
+  tags: Core Research
+- viewsort: BC
+  name: Issues
+  identifier: ""
+  url: http://issues.apievangelist.com
+  description: This is a reserch area to understand how companies are publishing a
+    road map as part of their API operations. My goal is to better understand, and
+    aggregate this knowledge into a single place, so I can learn from, as well share
+    knowledge along the way. I have also published an API to help me organize, and
+    use across my API portals.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-bug.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: issues
+  tags: Core Research
+- viewsort: BD
+  name: Change Log
+  identifier: ""
+  url: http://change-log.apievangelist.com
+  description: A change log is a critical building block for helping build and keep
+    trust with API consumers. It is about providing enough information as you can
+    about what has changed with the platform. This research tracks on how companies
+    are employing and communicating around their API. I'm aggregating the information,
+    as well as deploying an API to help organize my change log across my projects,
+    as well as share with everyone here.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-recycling.jpg
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: change-log
+  tags: Core Research
+- viewsort: BE
+  name: Monitoring
+  identifier: ""
+  url: http://monitoring.apievangelist.com
+  description: This is my research to better understand how API providers are monitoring
+    their API operations, and what services and tooling they are using to monitor
+    a variety of API services. Monitoring might be as simple as seeing if an API is
+    up or down, or as complex as ensuring an API meets the requirements of any SLA
+    that is present as part of API operations.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-heart-monitor.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: monitoring
+  tags: Core Research
+- viewsort: BF
+  name: Testing
+  identifier: ""
+  url: http://testing.apievangelist.com
+  description: Augmenting my API monitoring research, I quickly saw that testing APIs
+    was a pretty large realm, and understanding how API testing is occurring would
+    take a considerable amount of work. This is my work to understand the companies,
+    services, tools, and the common building blocks that QA and API developers are
+    using to get their job done.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-testing.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: testing
+  tags: Core Research
+- viewsort: BG
+  name: Performance
+  identifier: ""
+  url: http://performance.apievangelist.com
+  description: Nobody like a slow website, and APIs are no different. This is my research
+    into understanding how API providers are measuring API performance, and what services
+    and tooling they are using to do this. This area definitely overlaps with monitoring
+    and testing, but is worthy of its own look to understand performance across the
+    sector.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-performance.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: performance
+  tags: Core Research
+- viewsort: BH
+  name: Caching
+  identifier: ""
+  url: http://caching.apievangelist.com
+  description: This is my research into better understanding how API cachine is conducted
+    by leading providers, providing a look at how we can better leverage the web as
+    part of our API operations. You can find news I've curated, organizations doing
+    interesting things, some of the common building blocks I've identified, and open
+    source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-cache.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: caching
+  tags: Core Research
+- viewsort: BI
+  name: Reliability
+  identifier: ""
+  url: http://reliability.apievangelist.com
+  description: This is a research project to track on how API providers communicate
+    and demonstrate their platform reliabilitiy to their consumers. I'm tracking on
+    status pages to service level agreements (SLA), anything that helps determine
+    reliability. You can find news I've curated, organizations doing interesting things,
+    some of the common building blocks I've identified, and open source tooling I've
+    aggregated here in this research projects Github repository.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-reliability.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: reliability
+  tags: Core Research
+- viewsort: BJ
+  name: Authentication
+  identifier: ""
+  url: http://authentication.apievangelist.com
+  description: This is my work to track on the standard approaches to providing authentication
+    for APIs. As I do with all my research areas, I aggregate the approaches I find,
+    and share the information here. REcently I am working to standardize some of this,
+    and apply to my open APIs, while sharing the information tools, and APIs I create
+    along the way.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-authentication-2.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: authentication
+  tags: Core Research
+- viewsort: BK
+  name: Encryption
+  identifier: ""
+  url: http://encryption.apievangelist.com
+  description: This is my research to better understand encryption, and understand
+    how it impacts APIs, and vice versa. This research project looks to keep an eye
+    on what API providers are doing when it comes to encryption, as well as keep an
+    eye on the features that API service providers are offering up services, and tooling
+    related to encryption.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-encryption.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: encryption
+  tags: Core Research
+- viewsort: BL
+  name: Vulnerabilities
+  identifier: ""
+  url: http://vulnerabilities.apievangelist.com
+  description: This is my research to better understand the types of vulnerabilities
+    being discovered out there. Not everything listed here is directly API related,
+    but I think the wider understand helps my work in this area. Right now it is mostly
+    curated news, but will be expanding information as I have time.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-vulnerabilities.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: vulnerabilities
+  tags: Core Research
+- viewsort: BLA
+  name: Breaches
+  identifier: ""
+  url: http://breaches.apievangelist.com
+  description: This is my research where I am keeping an eye on the breaches that
+    are occuring and more importantly how providers are handling the breaches. Not
+    all of these breaches are directly API related, but there are a lot of lessons
+    to learn here and apply to the API space. You can find news I've curated, organizations
+    doing interesting things, some of the common building blocks I've identified,
+    and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-breach.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: breaches
+  tags: Core Research
+- viewsort: BM
+  name: Security
+  identifier: ""
+  url: http://security.apievangelist.com
+  description: This is my research to better understand, and hopefully define what
+    it takes to secure APIs. This area is the biggest concern of companies looking
+    to do APIs, but is one of the most deficient areas of the API life cycle. You
+    can find news I've curated, organizations doing interesting things, some of the
+    common building blocks I've identified, and open source tooling in this research
+    report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-padlock.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: security
+  tags: Core Research
+- viewsort: BN
+  name: Terms of Service (TOS)
+  identifier: ""
+  url: http://terms-of-service.apievangelist.com
+  description: This is the single most important building block of any API, yet is
+    one of the most under discussed and shared area of the API communities. I'm determined
+    in 2014 to bring API terms of service (TOS) front and center, increase the number
+    of open tools and support services available for API providers and consumers.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-terms-of-use.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: terms-of-service
+  tags: Core Research
+- viewsort: BN
+  name: Surveillance
+  identifier: ""
+  url: http://surveillance.apievangelist.com
+  description: The Internet is quickly becoming a vehicle for surveillance, and something
+    APIs are playing a significant role in--I want to better understand this. You
+    can find news I've curated, organizations doing interesting things, some of the
+    common building blocks I've identified, and open source tooling in this research
+    report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-surveillance-camera.jpg
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: surveillance
+  tags: Core Research
+- viewsort: BO
+  name: Privacy
+  identifier: ""
+  url: http://privacy.apievangelist.com
+  description: This is my research to track on how API can be used to the impact privacy
+    of API providers, API consumers, as well as end users. You can find news I've
+    curated, organizations doing interesting things, some of the common building blocks
+    I've identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-privacy.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: privacy
+  tags: Core Research
+- viewsort: BO
+  name: Cybersecurity
+  identifier: ""
+  url: http://cybersecurity.apievangelist.com
+  description: The world of cybersecurity is exploding, and APIs are sometimes how
+    breaches occur, but more often it is how the story of the breach is broadcasted.
+    You can find news I've curated, organizations doing interesting things, some of
+    the common building blocks I've identified, and open source tooling in this research
+    report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-cybersecurity.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: cybersecurity
+  tags: Core Research
+- viewsort: BP
+  name: Reclaim
+  identifier: ""
+  url: http://reclaim.apievangelist.com
+  description: This is my research into how we reclaim our data, content, media, and
+    the other digital bits that are being exchanged via APIs. I'm hoping to better
+    understand how I can take more control over my digital bits as a small business
+    and individual, and share what I learn with others. You can find news I've curated,
+    organizations doing interesting things, some of the common building blocks I've
+    identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-fist.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: reclaim
+  tags: Core Research
+- viewsort: BQ
+  name: Transparency
+  identifier: ""
+  url: http://transparency.apievangelist.com
+  description: APIs can contribute significantly to transparency of organizations,
+    and this is my work to better understand how wider transparency is achieved (or
+    not), and the role APIs can play. You can find news I've curated, organizations
+    doing interesting things, some of the common building blocks I've identified,
+    and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-transparency.jpg
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: transparency
+  tags: Core Research
+- viewsort: BQA
+  name: Observability
+  identifier: ""
+  url: http://observability.apievangelist.com
+  description: This is the beginning of my research to understand a new trend from
+    API providers called observability, which in the context of my research is overlapping
+    transparency, monitoring, and other aspects of the API lifecycle. You can find
+    news I've curated, organizations doing interesting things, some of the common
+    building blocks I've identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-observable.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: observability
+  tags: Core Research
+- viewsort: BR
+  name: Licensing
+  identifier: ""
+  url: http://licensing.apievangelist.com
+  description: This is my work to try and understand, and separate the layers of API
+    licensing. It can be easy to think of APIs as code, and apply related licenses,
+    but as the layers separate, copyright, and patents are coming into play more.
+    You can find news I've curated, organizations doing interesting things, some of
+    the common building blocks I've identified, and open source tooling in this research
+    report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-creative-commons.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: licensing
+  tags: Core Research
+- viewsort: BT
+  name: Copyright
+  identifier: ""
+  url: http://copyright.apievangelist.com
+  description: This is my research into the world of copyright as well as how it is
+    being applied to APIs. You'll find dicussions around the Oracle v Google copyright
+    case here. You can find news I've curated, organizations doing interesting things,
+    some of the common building blocks I've identified, and open source tooling in
+    this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-copyright.gif
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: copyright
+  tags: Core Research
+- viewsort: BU
+  name: Accessibility
+  identifier: ""
+  url: http://accessibility.apievangelist.com
+  description: This is my research into how we can ensure that APIs will be more accessibility
+    to folks with disability. I'm building on existing 508 compliancy with websites,
+    and seeing where we can evangelize in the API sector. You can find news I've curated,
+    organizations doing interesting things, some of the common building blocks I've
+    identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-accessbility.jpg
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: accessibility
+  tags: Core Research
+- viewsort: BV
+  name: Branding
+  identifier: ""
+  url: http://branding.apievangelist.com
+  description: This is my research on how different API providers are handling the
+    branding around their API operations. This area is a huge concern for many companies
+    looking to do APIs, but there are few tools or services to help providers handle.
+    You can find news I've curated, organizations doing interesting things, some of
+    the common building blocks I've identified, and open source tooling in this research
+    report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-brand.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: branding
+  tags: Core Research
+- viewsort: BW
+  name: Regulation
+  identifier: ""
+  url: http://regulation.apievangelist.com
+  description: Government regulations are slowly finding their way into the world
+    of software, and increasingly APIs are playing a role in providing regulators
+    a look into company operations, and pulling data to better understand regulated
+    industries. This research area was started to better prepare for how regulation
+    will be applied to APIs, as we see government and the tech industry continue to
+    collide.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-government-regulation.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: regulation
+  tags: Core Research
+- viewsort: BX
+  name: Patents
+  identifier: ""
+  url: http://patents.apievangelist.com/
+  description: This is my research into better understanding, and documenting which
+    companies have API related patents, which I will merge with other research, for
+    my analysis around the politics of APIs. You can find news I've curated, organizations
+    doing interesting things, some of the common building blocks I've identified,
+    and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-certificate.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: patents
+  tags: Core Research
+- viewsort: CG
+  name: Discovery
+  identifier: ""
+  url: http://discovery.apievangelist.com
+  description: This is my research around the world of API discovery, as well as how
+    you get your APIs discovered. This is both a provider and consumer issue, and
+    something that is vastly more complex than just web search. You can find news
+    I've curated, organizations doing interesting things, some of the common building
+    blocks I've identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/api-evangelist/services/api-discovery.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: discovery
+  tags: Core Research
+- viewsort: FB
+  name: Client
+  identifier: ""
+  url: http://client.apievangelist.com
+  description: This is my research around the evolution of API clients. Not the integrated
+    type of SDK or code client, but the growing number of of web and desktop tooling
+    for developing with APIs. You can find news I've curated, organizations doing
+    interesting things, some of the common building blocks I've identified, and open
+    source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-client.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: client
+  tags: Core Research
+- viewsort: FD
+  name: Command Line Interface
+  identifier: ""
+  url: http://command-line-interface.apievangelist.com
+  description: The command line interface (CLI) is the preferred interface of many
+    developers and is often available alongside, or built on top of APIs. I want to
+    better track on this added layer to the API world, and understand how it augments
+    and overlaps with APIs. You can find news I've curated, organizations doing interesting
+    things, some of the common building blocks I've identified, and open source tooling
+    in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-command-line.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: command-line-interface
+  tags: Core Research
+- viewsort: FF
+  name: Bots
+  identifier: ""
+  url: http://bots.apievangelist.com
+  description: This is a research project to help me better understand exactly what
+    a bot is these days, and how APIs are used as engines for these increasingly aware,
+    active, nuggets of compute. I am looking at how APIs are used to drive bots, but
+    also how are bots employed via API driven platforms like Twitter, and Slack.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-robots.jpeg
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: bots
+  tags: Core Research
+- viewsort: FK
+  name: Internet of Things
+  identifier: ""
+  url: http://internet-of-things.apievangelist.com
+  description: This is one of my larger buckets of research that I've carved several
+    other smaller projects out of like automobile and home. I still do a lot of tagging
+    of news as Internet of Things, so I needed a single place to aggregate, then carve
+    off smaller trends other research projects. Pretty much any connected object gets
+    lumped here, until I decide otherwise.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-internet-of-things.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: internet-of-things
+  tags: Core Research
+- viewsort: FM
+  name: Industrial
+  identifier: ""
+  url: http://industrial.apievangelist.com
+  description: This is my research around the evolution of API industrials. Not the
+    integrated type of SDK or code industrial, but the growing number of of web and
+    desktop tooling for developing with APIs. You can find news I've curated, organizations
+    doing interesting things, some of the common building blocks I've identified,
+    and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-industrial.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: industrial
+  tags: Core Research
+- viewsort: H
+  name: Network
+  identifier: ""
+  url: http://network.apievangelist.com
+  description: This is my research around the evolution of API networks. Not the integrated
+    type of SDK or code network, but the growing number of of web and desktop tooling
+    for developing with APIs. You can find news I've curated, organizations doing
+    interesting things, some of the common building blocks I've identified, and open
+    source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-network.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: network
+  tags: Core Research
+- viewsort: IA
+  name: IDE
+  identifier: ""
+  url: http://ide.apievangelist.com
+  description: This is my research around the evolution of IDEs that have more support
+    for APIs. Early examples were from SalesForce and Google, using Eclipse plugins,
+    and now we are seeing more movement from Visual Studio, and new player Atom from
+    Github. You can find news I've curated, organizations doing interesting things,
+    some of the common building blocks I've identified, and open source tooling in
+    this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-ide.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: ide
+  tags: Core Research
+- viewsort: ID
+  name: SDK
+  identifier: ""
+  url: http://sdk.apievangelist.com
+  description: This is my research around the conversation, and approaches to SDKs.
+    They can be very controversial sometimes, but there are plenty of interesting
+    approaches to using SDKs that I've seen across the API sector. You can find news
+    I've curated, organizations doing interesting things, some of the common building
+    blocks I've identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-sdk.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: sdk
+  tags: Core Research
+- viewsort: IF
+  name: Plugin
+  identifier: ""
+  url: http://plugin.apievangelist.com
+  description: This is my research around how plugs are developed at the edge of the
+    API space, providing a wrapper, and new way to look at SDK or connectivity in
+    a plug and play way. I am just trying to understand how APIs can be made more
+    plug and play across a variety of platforms. You can find news I've curated, organizations
+    doing interesting things, some of the common building blocks I've identified,
+    and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-plugin.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: plugin
+  tags: Core Research
+- viewsort: IJ
+  name: Browsers
+  identifier: ""
+  url: http://browsers.apievangelist.com
+  description: This is my research into browser specific APIs that provide a programmatic
+    layer to the browser, but also how APIs are used as part of browser and plugin
+    operations. You can find news I've curated, organizations doing interesting things,
+    some of the common building blocks I've identified, and open source tooling in
+    this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-browser.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: browsers
+  tags: Core Research
+- viewsort: IK
+  name: Embeddable
+  identifier: ""
+  url: http://embeddable.apievangelist.com
+  description: An embeddable strategy is an important part of any API providers strategy.
+    This research is trying to understand the best approaches and technology when
+    it comes to embeddable tools that depend on APIs.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-embeddable.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: embeddable
+  tags: Core Research
+- viewsort: IM
+  name: Visualization
+  identifier: ""
+  url: http://visualization.apievangelist.com
+  description: Large amounts of content, data, and abstract, often algorightms are
+    often difficul to wrap you mind around, and visualizations can help bring things
+    to life. This is my work to understand the intersection of APIs and visualizations.
+    You can find news I've curated, organizations doing interesting things, some of
+    the common building blocks I've identified, and open source tooling in this research
+    report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-visualization.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: visualization
+  tags: Core Research
+- viewsort: JA
+  name: Analysis
+  identifier: ""
+  url: http://analysis.apievangelist.com
+  description: Analyzing the growing amount of content and data we are generating
+    and storing is growing more important. It is something that will need to increasingly
+    be automated using APis. This is my work to understand the intersection of APIs
+    and analysis. You can find news I've curated, organizations doing interesting
+    things, some of the common building blocks I've identified, and open source tooling
+    in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-analysis.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: analysis
+  tags: Core Research
+- viewsort: JB
+  name: Logging
+  identifier: ""
+  url: http://logging.apievangelist.com
+  description: This is a research project to keep the different approaches to logging
+    using APIs, and logging solutions that focus on using APIs. You can find news
+    I've curated, organizations doing interesting things, some of the common building
+    blocks I've identified, and open source tooling in this research repo.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-logging.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: logging
+  tags: Core Research
+- viewsort: K
+  name: Aggregation
+  identifier: ""
+  url: http://aggregation.apievangelist.com
+  description: As the number of APIs grow, there is a lot of aggregation going on
+    in social, personal and other prominent sectors like cloud computing. This research
+    is trying to keep an eye on this potential trend.
+  image: https://s3.amazonaws.com/kinlane-productions/api-evangelist/trends/aggregation-trend.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: aggregation
+  tags: Core Research
+- viewsort: L
+  name: iPaaS
+  identifier: ""
+  url: http://ipaas.apievangelist.com/
+  description: Interoperability between businesses, non-profit organizations, government
+    and the individual is being fueled by API driven sites, applications and devices.
+    APIs enable interoperability, two way communication that are in the interest of
+    all parties involved. This research site focuses on how APIs are being abled to
+    facility reciprocity between indivdiuals and groups in this connected world.
+  image: https://s3.amazonaws.com/kinlane-productions/api-evangelist/trends/reciprocity-trends.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: ipaas
+  tags: Core Research
+- viewsort: ML
+  name: Integrations
+  identifier: ""
+  url: http://webhooks.apievangelist.com
+  description: This is my evolving area looking at API integration from both a provider
+    and consumer level, trying to understand the overlap of partnerships, all the
+    way to just resources about integration. This area is just coming back into focus
+    for me after having this research dormant for a while--I'm hoping it will come
+    into focus more.You can find news I've curated, organizations doing interesting
+    things, some of the common building blocks I've identified, and open source tooling
+    in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/webhooks.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: integrations
+  tags: Core Research
+- viewsort: MM
+  name: Migration
+  identifier: ""
+  url: http://migration.apievangelist.com
+  description: This is my research to understand how APIs can allow for the migration
+    of data, content, media, and other digital bits around the web. I'm also looking
+    to see how infrastructure can be migrated in addition to the data, content, and
+    other things it is producing and consuming. You can find news I've curated, organizations
+    doing interesting things, some of the common building blocks I've identified,
+    and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-migration.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: migration
+  tags: Core Research
+- viewsort: MN
+  name: Backups
+  identifier: ""
+  url: http://backups.apievangelist.com
+  description: This is my research into how APIs can provide backup capabilities,
+    as well as how APIs themsevles are being backed up and syndicated. I'm seeing
+    more services offer up backup services alongside APIs, and existing platform operations--I
+    want to learn more. You can find news I've curated, organizations doing interesting
+    things, some of the common building blocks I've identified, and open source tooling
+    in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-backup.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: backups
+  tags: Core Research
+- viewsort: MR
+  name: Real Time
+  identifier: ""
+  url: http://realtime.apievangelist.com
+  description: Our connected lives are becoming increasingly real-time, and much of
+    this is being driven by APIs.&nbsp;I'm looking to understand who the key players
+    are, what they are up to, as well as where the opportunities lie by aggregating
+    news, analysis, companies and technology in a single project.
+  image: https://s3.amazonaws.com/kinlane-productions/api-evangelist/trends/real-time-2.jpg
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: real-time
+  tags: Core Research
+- viewsort: MS
+  name: Orchestration
+  identifier: ""
+  url: http://orchestration.apievangelist.com
+  description: My research project to keep track of what is going on with API orchestration,
+    continuous integration, and possibly devops. You can find news I've curated, organizations
+    doing interesting things, some of the common building blocks I've identified,
+    and open source tooling in this research repo.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-orchestration.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: orchestration
+  tags: Core Research
+- viewsort: MT
+  name: Voice
+  identifier: ""
+  url: http://voice.apievangelist.com
+  description: This is my research into how APIs are driving voice, and how voice
+    is driving API consumption. There are many different ways voice enabled tech overlaps
+    with APIs, and this is the exploration of that affinity. You can find news I've
+    curated, organizations doing interesting things, some of the common building blocks
+    I've identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-microphone.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: voice
+  tags: Core Research
+- viewsort: "N"
+  name: Spreadsheets
+  identifier: ""
+  url: http://spreadsheets.apievangelist.com
+  description: I've seen enough movement in the area of Microsoft Excel and Google
+    Spreadsheets being used with APIs to warrant closer monitoring. To support this
+    I've started publishing most of my research to an API Evangelist spreadsheet research
+    site, which will allow me to better track, curate, tag, and tell stories around
+    spreadsheets and APIs. As I do with my 60+ API research projects, I will update
+    this site when I have time, publishing anything I've read, written, and companies
+    I think are doing interesting things spreadsheets and APIs. I'm pretty convinced
+    that spreadsheets will be another one of those bridge tools we use to connect
+    where we are going with APIs, with the reality of where the everyday person is,
+    just trying to get their job done.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-excel-icon.jpg
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: spreadsheets
+  tags: Core Research
+- viewsort: OA
+  name: Investment
+  identifier: ""
+  url: http://investment.apievangelist.com
+  description: I started this area because I wanted to have more links to link to
+    when talking about which API companies I track on were getting investment, going
+    public, etc. There is still a lot of work to be done here, but eventually I'd
+    like to have more VC related information, as well as SEC filings. For now it will
+    be just a list of curated news and anything I write about related to investment.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-investment.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: investment
+  tags: Core Research
+- viewsort: OB
+  name: Monetization
+  identifier: ""
+  url: http://monetization.apievangelist.com
+  description: This is my research into how APIs are being monetized across the space.
+    Not all APIs make money directly, and I work to track on the indirect benefits
+    as well. You can find news I've curated, organizations doing interesting things,
+    some of the common building blocks I've identified, and open source tooling in
+    this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dollar-sign.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: monetization
+  tags: Core Research
+- viewsort: OC
+  name: Plans
+  identifier: ""
+  url: http://plans.apievangelist.com
+  description: This is my research into the plans of leading API providers, across
+    a variety of the top business sectors. I am looking to establish a baseline for
+    how APIs are planned acrosss the industry today, establish models others can follow.
+    You can find news I've curated, organizations doing interesting things, some of
+    the common building blocks I've identified, and open source tooling in this research
+    report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-plan.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: plans
+  tags: Core Research
+- viewsort: OD
+  name: Partners
+  identifier: ""
+  url: http://partners.apievangelist.com
+  description: This is my research into how leading API platforms conduct their official
+    partner programs, adding additional layers to the API partnerning and management
+    process. You can find news I've curated, organizations doing interesting things,
+    some of the common building blocks I've identified, and open source tooling in
+    this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-partner.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: partners
+  tags: Core Research
+- viewsort: OE
+  name: Certification
+  identifier: ""
+  url: http://certification.apievangelist.com
+  description: This is my research into how certification is happening via API driven
+    platforms. It could be certification of the platform, or certification of the
+    user--if it is about certification I am tracking on it here. You can find news
+    I've curated, organizations doing interesting things, some of the common building
+    blocks I've identified, and open source tooling in this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-certification.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: certification
+  tags: Core Research
+- viewsort: OM
+  name: Acquisitions
+  identifier: ""
+  url: http://acquisitions.apievangelist.com
+  description: As part of my work I keep an eye on some of the acquisitions going
+    on that are API related, not because I'm interested in the funding, more about
+    the reliability, stability, and viability of individual APIs, as well as the perception
+    of the API space.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-acquisitions.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: acquisitions
+  tags: Core Research
+- viewsort: RA
+  name: Evangelism
+  identifier: ""
+  url: http://evangelism.apievangelist.com
+  description: This is my research around the different approaches to API evangelism,
+    advocacy, and other ways API providers are reaching out to developers, and API
+    consumers. You can find news I've curated, organizations doing interesting things,
+    some of the common building blocks I've identified, and open source tooling in
+    this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: evangelism
+  tags: Core Research
+- viewsort: RD
+  name: Showcase
+  identifier: ""
+  url: http://showcase.apievangelist.com
+  description: I am always interested to see which API providers are proud of their
+    developers, and the applications and integrations they have built on top of a
+    platform. I find it is a sign, when API stop showcasing their developers and applications,
+    of things are not right. This is my research into who is showcasing their devs,
+    and how they do it.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-spotlights.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: showcase
+  tags: Core Research
+- viewsort: T
+  name: Deprecation
+  identifier: ""
+  url: http://deprecation.apievangelist.com
+  description: This is my research around the different approaches to API evangelism,
+    advocacy, and other ways API providers are reaching out to developers, and API
+    consumers. You can find news I've curated, organizations doing interesting things,
+    some of the common building blocks I've identified, and open source tooling in
+    this research report.
+  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-deprecation-2.png
+  imagewidth: ""
+  category: Core Research
+  brand: ""
+  githuborg: api-evangelist
+  githubrepo: deprecation
+  tags: Core Research
+...

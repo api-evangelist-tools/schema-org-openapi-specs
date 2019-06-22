@@ -1,0 +1,127 @@
+- view_sort: A
+  name: CSV to JSON Converter
+  identifier: csv-json-converter
+  url: 'http://kinlane.github.io/csv-converter/'
+  description: >-
+    This is a CSV to JSON converter that I developed on top of Mr. Data
+    Converter, allowing CSVs to be tranlated into JSON, and other formats, and
+    back again. The  part I added was the ability to save on Github, using an
+    entirely client-based solution leveraging the Github API to write JSON, CSV
+    and other files to the master repository.
+  image: 'https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-csv.png'
+  imagewidth: ''
+  category: Converter
+  brand: API Evangelist
+- view_sort: B
+  name: Minimum Viable API Operations Definition
+  identifier: minimum-viable-api-operations-definition
+  url: 'http://minimum.viable.api.operations.definition.apievangelist.com/'
+  description: >-
+    This is my micro tool to help you achieve what I'd consider to be a minimum
+    viable presence for your API operations. Answer any question that you can,
+    and generate a report that you can consider as you are crafting your API
+    management road map.
+  image: 'https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tools.png'
+  imagewidth: ''
+  category: Definition
+  brand: API Evangelist
+- view_sort: C
+  name: Create Your First APIs.json File
+  identifier: create-your-first-apis.json-file
+  url: 'http://create.your.first.apis.json.file.tools.apievangelist.com/'
+  description: >-
+    This is a form to walk you through building your first APIs.json file index
+    for your API, providing machine readable access to your API, as and the
+    supporting platform operations. Just fill out the fields below, and click on
+    the "Generate My APIs.json" button to generate the APIs.json.
+  image: >-
+    https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png
+  imagewidth: ''
+  category: APIs.json
+  brand: API Evangelist
+- view_sort: D
+  name: Create Your First APIs.json File (minimum viable)
+  identifier: create-your-first-apis.json-file-minimum
+  url: 'http://create.your.first.apis.json.file.minimal.tools.apievangelist.com/'
+  description: >-
+    This is a quick and dirty way to build you first APIs.json file. Most likely
+    you came across one of my tools that needed an APIs.json file to do
+    something interesting with your OpenAPI Spec. All you need to create is add
+    the URL for your OpenAPI Spec, and this will do the rest.
+  image: >-
+    https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png
+  imagewidth: ''
+  category: APIs.json
+  brand: API Evangelist
+- view_sort: E
+  name: APIs.json Subscriptions
+  identifier: apis-json-subscriptions
+  url: 'http://apis.json.subscribe.apievangelist.com/'
+  description: >-
+    This is a tool for pulling the OpenAPI Spec files that are indexed in any of
+    the APIs.json indexed within the APIs.json file for this subscription repo.
+    It loops through any APIs.json added to the include collection, loops
+    through each APIs.json, adds a folder to the master branch for this repo,
+    and publishes a copy of the APIs.json, and any OpenAPI Specs to the folder.
+  image: >-
+    https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png
+  imagewidth: ''
+  category: Subscriptions
+  brand: API Evangelist
+- view_sort: F
+  name: APIs.json Annotations
+  identifier: apis-json-annotations
+  url: 'http://apis.json.annotation.apievangelist.com/'
+  description: >-
+    I wanted a way to have a conversation around an API design with a group of
+    folks. Some who are technical, but others who are not. I also wanted to use
+    Github issues to help manage the ongoing conversations around the API and
+    its design. I got to work building one of my micro tools to help me manage
+    the process, in a way that can easily be forked and run for any project.
+  image: >-
+    https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png
+  imagewidth: ''
+  category: Annotations
+  brand: API Evangelist
+- view_sort: G
+  name: API Design Stylebook Builder
+  identifier: api-design-stylebook-builder
+  url: 'https://api-evangelist-tools.github.io/api-design-guide/'
+  description: >-
+    I was pretty happy when my friend Arnaud Lauret (@arno_di_loreto) developed
+    API Stylebook. I want to see his work expand and grow into someday
+    containing hundreds or thousands of API design guides. To help contribute to
+    his work I took the YAML core of the design topics he's aggregated and began
+    developing an API design guide builder that runs 100% on Github, allowing
+    anyone to fork, and use to build their own API Stylebook on top of Arnaud's
+    work.
+  image: 'https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-design.png'
+  imagewidth: ''
+  category: Design
+  brand: API Evangelist
+- view_sort: H
+  name: OpenAPI Spec Toolbox
+  identifier: openapi-toolbox
+  url: 'http://openapi.toolbox.apievangelist.com/'
+  description: >-
+    This is a toolbox of OpenAPI-driven solutions. This site is a Jekyll-driven
+    website running on Github, using Github Pages. The tools in this toolbox are
+    driven by a YAML file in the _data folder for this repository.
+  image: >-
+    https://s3.amazonaws.com/kinlane-productions/api-evangelist/openapi-spec/openapi-spec-icon.png
+  imagewidth: ''
+  category: Definition
+  brand: API Evangelist
+- view_sort: I
+  name: RSS Aggregator
+  identifier: rss-aggregat
+  url: 'http://indieedtech.github.io/rss-aggregator/'
+  description: >-
+    This is a JavaScript RSS aggregator I build to pull feeds a list of URLs,
+    and store the results locally in a Github repository. The project is meant
+    to run 100% on Github, with no backend. The job to run the kupdate requires
+    a valid Github OAuth token run via URL.
+  image: 'https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-example.png'
+  imagewidth: ''
+  category: Aggregator
+  brand: API Evangelist

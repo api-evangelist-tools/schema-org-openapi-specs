@@ -1,0 +1,152 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/FlightReservation.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A reservation for air travel.  Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use Offer.",
+    "properties": {
+        "boardingGroup": {
+            "description": "The airline-specific indicator of boarding order \/ preference.",
+            "type": "string"
+        },
+        "passengerSequenceNumber": {
+            "description": "The passenger s sequence number as assigned by the airline.",
+            "type": "string"
+        },
+        "securityScreening": {
+            "description": "The type of security screening the passenger is subject to.",
+            "type": "string"
+        },
+        "passengerPriorityStatus": {
+            "description": "The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).",
+            "type": "string"
+        },
+        "provider": {
+            "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "programMembershipUsed": {
+            "description": "Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ProgramMembership"
+            }
+        },
+        "reservationStatus": {
+            "description": "The current status of the reservation.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ReservationStatusType"
+            }
+        },
+        "underName": {
+            "description": "The person or organization the reservation or ticket is for.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "bookingAgent": {
+            "description": " bookingAgent  is an out-dated term indicating a  broker  that serves as a booking agent.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "totalPrice": {
+            "description": "The total price for the reservation or ticket, including applicable taxes, shipping, etc.",
+            "type": "number",
+            "format": "float"
+        },
+        "reservationFor": {
+            "description": "The thing -- flight, event, restaurant,etc. being reserved.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "priceCurrency": {
+            "description": "The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.",
+            "type": "string"
+        },
+        "broker": {
+            "description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "modifiedTime": {
+            "description": "The date and time the reservation was modified.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "bookingTime": {
+            "description": "The date and time the reservation was booked.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "reservationId": {
+            "description": "A unique identifier for the reservation.",
+            "type": "string"
+        },
+        "reservedTicket": {
+            "description": "A ticket associated with the reservation.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Ticket"
+            }
+        },
+        "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item s identity. E.g. the URL of the item s Wikipedia page, Wikidata entry, or official website.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "url": {
+            "description": "URL of the item.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "image": {
+            "description": "An image of the item. This can be a URL or a fully described ImageObject.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ImageObject"
+            }
+        },
+        "additionalType": {
+            "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the  typeof  attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "name": {
+            "description": "The name of the item.",
+            "type": "string"
+        },
+        "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/PropertyValue"
+            }
+        },
+        "potentialAction": {
+            "description": "Indicates a potential Action, which describes an idealized action in which this thing would play an  object  role.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Action"
+            }
+        },
+        "mainEntityOfPage": {
+            "description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "description": {
+            "description": "A description of the item.",
+            "type": "string"
+        },
+        "disambiguatingDescription": {
+            "description": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+            "type": "string"
+        },
+        "alternateName": {
+            "description": "An alias for the item.",
+            "type": "string"
+        }
+    }
+}

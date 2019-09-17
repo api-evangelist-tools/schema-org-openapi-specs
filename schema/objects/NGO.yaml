@@ -1,0 +1,276 @@
+---
+$id: http://schema.org.apievangelist.com/schema/objects/NGO.yaml
+schema: http://json-schema.org/draft-07/schema#
+description: 'Organization: Non-governmental Organization.'
+properties:
+  serviceArea:
+    description: The geographic area where the service is provided.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Place'
+  funder:
+    description: A person or organization that supports (sponsors) something through
+      some kind of financial contribution.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  areaServed:
+    description: The geographic area where a service or offered item is provided.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/GeoShape'
+  memberOf:
+    description: An Organization (or ProgramMembership) to which this Person or Organization
+      belongs.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  events:
+    description: Upcoming or past events associated with this place or organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Event'
+  subOrganization:
+    description: 'A relationship between two organizations where the first includes
+      the second, e.g., as a subsidiary. See also: the more specific  department  property.'
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  hasOfferCatalog:
+    description: Indicates an OfferCatalog listing for this Organization, Person,
+      or Service.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/OfferCatalog'
+  globalLocationNumber:
+    description: The Global Location Number (GLN, sometimes also referred to as International
+      Location Number or ILN) of the respective organization, person, or place. The
+      GLN is a 13-digit number used to identify parties and physical locations.
+    type: string
+  reviews:
+    description: Review of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Review'
+  members:
+    description: A member of this organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  aggregateRating:
+    description: The overall rating, based on a collection of reviews or ratings,
+      of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/AggregateRating'
+  duns:
+    description: The Dun &amp; Bradstreet DUNS number for identifying an organization
+      or business person.
+    type: string
+  taxID:
+    description: The Tax / Fiscal ID of the organization or person, e.g. the TIN in
+      the US or the CIF/NIF in Spain.
+    type: string
+  award:
+    description: An award won by or for this item.
+    type: string
+  makesOffer:
+    description: A pointer to products or services offered by the organization or
+      person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Offer'
+  contactPoints:
+    description: A contact point for a person or organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ContactPoint'
+  awards:
+    description: Awards won by or for this item.
+    type: string
+  seeks:
+    description: A pointer to products or services sought by the organization or person
+      (demand).
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Demand'
+  member:
+    description: A member of an Organization or a ProgramMembership. Organizations
+      can be members of organizations; ProgramMembership is typically for individuals.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  founders:
+    description: A person who founded this organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  alumni:
+    description: Alumni of an organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  dissolutionDate:
+    description: The date that this organization was dissolved.
+    type: string
+    format: date
+  address:
+    description: Physical address of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PostalAddress'
+  logo:
+    description: An associated logo.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  employees:
+    description: People working for this organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  telephone:
+    description: The telephone number.
+    type: string
+  email:
+    description: Email address.
+    type: string
+  department:
+    description: 'A relationship between an organization and a department of that
+      organization, also described as an organization (allowing different urls, logos,
+      opening hours). For example: a store with a pharmacy, or a bakery with a cafe.'
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  contactPoint:
+    description: A contact point for a person or organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ContactPoint'
+  parentOrganization:
+    description: The larger organization that this organization is a subOrganization
+      of, if any.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  legalName:
+    description: The official name of the organization, e.g. the registered company
+      name.
+    type: string
+  foundingDate:
+    description: The date that this organization was founded.
+    type: string
+    format: date
+  employee:
+    description: Someone working for this organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  numberOfEmployees:
+    description: The number of employees in an organization e.g. business.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/QuantitativeValue'
+  naics:
+    description: The North American Industry Classification System (NAICS) code for
+      a particular organization or business person.
+    type: string
+  hasPOS:
+    description: Points-of-Sales operated by the organization or person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Place'
+  review:
+    description: A review of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Review'
+  foundingLocation:
+    description: The place where the Organization was founded.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Place'
+  owns:
+    description: Products owned by the organization or person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Product'
+  event:
+    description: Upcoming or past event associated with this place, organization,
+      or action.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Event'
+  founder:
+    description: A person who founded this organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  publishingPrinciples:
+    description: The publishingPrinciples property indicates (typically via URL) a
+      document describing the editorial principles of an Organization (or individual
+      e.g. a Person writing a blog) that relate to their activities as a publisher,
+      e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle)
+      the principles are those of the party primarily responsible for the creation
+      of the CreativeWork.  While such policies are most typically expressed in natural
+      language, sometimes related information (e.g. indicating a funder) can be expressed
+      using schema.org terminology.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/CreativeWork'
+  sponsor:
+    description: A person or organization that supports a thing through a pledge,
+      promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate
+      sponsor of an event.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  isicV4:
+    description: The International Standard of Industrial Classification of All Economic
+      Activities (ISIC), Revision 4 code for a particular organization, business person,
+      or place.
+    type: string
+  location:
+    description: The location of for example where the event is happening, an organization
+      is located, or where an action takes place.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Place'
+  brand:
+    description: The brand(s) associated with a product or service, or the brand(s)
+      maintained by an organization or business person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  vatID:
+    description: The Value-added Tax ID of the organization or person.
+    type: string
+  leiCode:
+    description: An organization identifier that uniquely identifies a legal entity
+      as defined in ISO 17442.
+    type: string
+  faxNumber:
+    description: The fax number.
+    type: string
+  sameAs:
+    description: URL of a reference Web page that unambiguously indicates the item
+      s identity. E.g. the URL of the item s Wikipedia page, Wikidata entry, or official
+      website.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  url:
+    description: URL of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  image:
+    description: An image of the item. This can be a URL or a fully described ImageObject.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ImageObject'
+  additionalType:
+    description: An additional type for the item, typically used for adding more specific
+      types from external vocabularies in microdata syntax. This is a relationship
+      between something and a class that the thing is in. In RDFa syntax, it is better
+      to use the native RDFa syntax - the  typeof  attribute - for multiple types.
+      Schema.org tools may have only weaker understanding of extra types, in particular
+      those defined externally.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  name:
+    description: The name of the item.
+    type: string
+  identifier:
+    description: The identifier property represents any kind of identifier for any
+      kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+      properties for representing many of these, either as textual strings or as URL
+      (URI) links. See background notes for more details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PropertyValue'
+  potentialAction:
+    description: Indicates a potential Action, which describes an idealized action
+      in which this thing would play an  object  role.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Action'
+  mainEntityOfPage:
+    description: Indicates a page (or other CreativeWork) for which this thing is
+      the main entity being described. See background notes for details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  description:
+    description: A description of the item.
+    type: string
+  disambiguatingDescription:
+    description: A sub property of description. A short description of the item used
+      to disambiguate from other, similar items. Information from other properties
+      (in particular, name) may be necessary for the description to be useful for
+      disambiguation.
+    type: string
+  alternateName:
+    description: An alias for the item.
+    type: string
+...

@@ -1,0 +1,87 @@
+---
+$id: http://schema.org.apievangelist.com/schema/objects/HowToSection.yaml
+schema: http://json-schema.org/draft-07/schema#
+description: A sub-grouping of steps in the instructions for how to achieve a result
+  (e.g. steps for making a pie crust within a pie recipe).
+properties:
+  steps:
+    description: The steps in the form of a single item (text, document, video, etc.)
+      or an ordered list with HowToStep and/or HowToSection items.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ItemList'
+  itemListElement:
+    description: 'For itemListElement values, you can use simple strings (e.g.  Peter
+      ,  Paul ,  Mary ), existing entities, or use ListItem.  Text values are best
+      if the elements in the list are plain strings. Existing entities are best for
+      a simple, unordered list of existing things in your data. ListItem is used with
+      ordered lists when you want to provide additional context about the element
+      in that list or when the same item might be in different places in different
+      lists.  Note: The order of elements in your mark-up is not sufficient for indicating
+      the order or elements.  Use ListItem with a  position  property in such cases.'
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ListItem'
+  itemListOrder:
+    description: Type of ordering (e.g. Ascending, Descending, Unordered).
+    type: string
+  numberOfItems:
+    description: The number of items in an ItemList. Note that some descriptions might
+      not fully describe all items in a list (e.g., multi-page pagination); in such
+      cases, the numberOfItems would be for the entire list.
+    type: integer
+    format: int32
+  sameAs:
+    description: URL of a reference Web page that unambiguously indicates the item
+      s identity. E.g. the URL of the item s Wikipedia page, Wikidata entry, or official
+      website.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  url:
+    description: URL of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  image:
+    description: An image of the item. This can be a URL or a fully described ImageObject.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ImageObject'
+  additionalType:
+    description: An additional type for the item, typically used for adding more specific
+      types from external vocabularies in microdata syntax. This is a relationship
+      between something and a class that the thing is in. In RDFa syntax, it is better
+      to use the native RDFa syntax - the  typeof  attribute - for multiple types.
+      Schema.org tools may have only weaker understanding of extra types, in particular
+      those defined externally.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  name:
+    description: The name of the item.
+    type: string
+  identifier:
+    description: The identifier property represents any kind of identifier for any
+      kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+      properties for representing many of these, either as textual strings or as URL
+      (URI) links. See background notes for more details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PropertyValue'
+  potentialAction:
+    description: Indicates a potential Action, which describes an idealized action
+      in which this thing would play an  object  role.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Action'
+  mainEntityOfPage:
+    description: Indicates a page (or other CreativeWork) for which this thing is
+      the main entity being described. See background notes for details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  description:
+    description: A description of the item.
+    type: string
+  disambiguatingDescription:
+    description: A sub property of description. A short description of the item used
+      to disambiguate from other, similar items. Information from other properties
+      (in particular, name) may be necessary for the description to be useful for
+      disambiguation.
+    type: string
+  alternateName:
+    description: An alias for the item.
+    type: string
+...

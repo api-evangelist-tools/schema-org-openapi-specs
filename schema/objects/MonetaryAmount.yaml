@@ -1,0 +1,93 @@
+---
+$id: http://schema.org.apievangelist.com/schema/objects/MonetaryAmount.yaml
+schema: http://json-schema.org/draft-07/schema#
+description: "A monetary value or range. This type can be used to describe an amount
+  of money such as $50 USD, or a range as in describing a bank account being suitable
+  for a balance between \xA31,000 and \xA31,000,000 GBP, or the value of a salary,
+  etc. It is recommended to use PriceSpecification Types to describe the price of
+  an Offer, Invoice, etc."
+properties:
+  minValue:
+    description: The lower value of some characteristic or property.
+    type: number
+    format: float
+  currency:
+    description: The currency in which the monetary amount is expressed (in 3-letter
+      ISO 4217 format).
+    type: string
+  value:
+    description: 'The value of the quantitative value or property value node.   For
+      QuantitativeValue and MonetaryAmount, the recommended type for values is  Number
+      . For PropertyValue, it can be  Text; ,  Number ,  Boolean , or  StructuredValue
+      .  '
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/StructuredValue'
+  validFrom:
+    description: The date when the item becomes valid.
+    type: string
+    format: date-time
+  validThrough:
+    description: The date after when the item is not valid. For example the end of
+      an offer, salary period, or a period of opening hours.
+    type: string
+    format: date-time
+  maxValue:
+    description: The upper value of some characteristic or property.
+    type: number
+    format: float
+  sameAs:
+    description: URL of a reference Web page that unambiguously indicates the item
+      s identity. E.g. the URL of the item s Wikipedia page, Wikidata entry, or official
+      website.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  url:
+    description: URL of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  image:
+    description: An image of the item. This can be a URL or a fully described ImageObject.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ImageObject'
+  additionalType:
+    description: An additional type for the item, typically used for adding more specific
+      types from external vocabularies in microdata syntax. This is a relationship
+      between something and a class that the thing is in. In RDFa syntax, it is better
+      to use the native RDFa syntax - the  typeof  attribute - for multiple types.
+      Schema.org tools may have only weaker understanding of extra types, in particular
+      those defined externally.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  name:
+    description: The name of the item.
+    type: string
+  identifier:
+    description: The identifier property represents any kind of identifier for any
+      kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+      properties for representing many of these, either as textual strings or as URL
+      (URI) links. See background notes for more details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PropertyValue'
+  potentialAction:
+    description: Indicates a potential Action, which describes an idealized action
+      in which this thing would play an  object  role.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Action'
+  mainEntityOfPage:
+    description: Indicates a page (or other CreativeWork) for which this thing is
+      the main entity being described. See background notes for details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  description:
+    description: A description of the item.
+    type: string
+  disambiguatingDescription:
+    description: A sub property of description. A short description of the item used
+      to disambiguate from other, similar items. Information from other properties
+      (in particular, name) may be necessary for the description to be useful for
+      disambiguation.
+    type: string
+  alternateName:
+    description: An alias for the item.
+    type: string
+...

@@ -1,0 +1,129 @@
+---
+$id: http://schema.org.apievangelist.com/schema/objects/Invoice.yaml
+schema: http://json-schema.org/draft-07/schema#
+description: A statement of the money due for goods or services; a bill.
+properties:
+  provider:
+    description: The service provider, service operator, or service performer; the
+      goods producer. Another party (a seller) may offer those services or goods on
+      behalf of the provider. A provider may also serve as the seller.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  paymentDue:
+    description: The date that payment is due.
+    type: string
+    format: date-time
+  billingPeriod:
+    description: The time interval used to compute the invoice.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Duration'
+  confirmationNumber:
+    description: A number that confirms the given order or payment has been received.
+    type: string
+  scheduledPaymentDate:
+    description: The date the invoice is scheduled to be paid.
+    type: string
+    format: date
+  customer:
+    description: Party placing the order or paying the invoice.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  category:
+    description: A category for the item. Greater signs or slashes can be used to
+      informally indicate a category hierarchy.
+    type: string
+  paymentStatus:
+    description: The status of payment; whether the invoice has been paid or not.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PaymentStatusType'
+  broker:
+    description: An entity that arranges for an exchange between a buyer and a seller.  In
+      most cases a broker never acquires or releases ownership of a product or service
+      involved in an exchange.  If it is not clear whether an entity is a broker,
+      seller, or buyer, the latter two terms are preferred.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  referencesOrder:
+    description: The Order(s) related to this Invoice. One or more Orders may be combined
+      into a single Invoice.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Order'
+  paymentMethod:
+    description: The name of the credit card or other method of payment for the order.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PaymentMethod'
+  paymentMethodId:
+    description: An identifier for the method of payment used (e.g. the last 4 digits
+      of the credit card).
+    type: string
+  minimumPaymentDue:
+    description: The minimum payment required at this time.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PriceSpecification'
+  totalPaymentDue:
+    description: The total amount due.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/MonetaryAmount'
+  accountId:
+    description: The identifier for the account the payment will be applied to.
+    type: string
+  paymentDueDate:
+    description: The date that payment is due.
+    type: string
+    format: date-time
+  sameAs:
+    description: URL of a reference Web page that unambiguously indicates the item
+      s identity. E.g. the URL of the item s Wikipedia page, Wikidata entry, or official
+      website.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  url:
+    description: URL of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  image:
+    description: An image of the item. This can be a URL or a fully described ImageObject.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ImageObject'
+  additionalType:
+    description: An additional type for the item, typically used for adding more specific
+      types from external vocabularies in microdata syntax. This is a relationship
+      between something and a class that the thing is in. In RDFa syntax, it is better
+      to use the native RDFa syntax - the  typeof  attribute - for multiple types.
+      Schema.org tools may have only weaker understanding of extra types, in particular
+      those defined externally.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  name:
+    description: The name of the item.
+    type: string
+  identifier:
+    description: The identifier property represents any kind of identifier for any
+      kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+      properties for representing many of these, either as textual strings or as URL
+      (URI) links. See background notes for more details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PropertyValue'
+  potentialAction:
+    description: Indicates a potential Action, which describes an idealized action
+      in which this thing would play an  object  role.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Action'
+  mainEntityOfPage:
+    description: Indicates a page (or other CreativeWork) for which this thing is
+      the main entity being described. See background notes for details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  description:
+    description: A description of the item.
+    type: string
+  disambiguatingDescription:
+    description: A sub property of description. A short description of the item used
+      to disambiguate from other, similar items. Information from other properties
+      (in particular, name) may be necessary for the description to be useful for
+      disambiguation.
+    type: string
+  alternateName:
+    description: An alias for the item.
+    type: string
+...

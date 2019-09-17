@@ -1,0 +1,151 @@
+---
+$id: http://schema.org.apievangelist.com/schema/objects/Order.yaml
+schema: http://json-schema.org/draft-07/schema#
+description: An order is a confirmation of a transaction (a receipt), which can contain
+  multiple line items, each represented by an Offer that has been accepted by the
+  customer.
+properties:
+  orderDate:
+    description: Date order was placed.
+    type: string
+    format: date-time
+  paymentDue:
+    description: The date that payment is due.
+    type: string
+    format: date-time
+  orderNumber:
+    description: The identifier of the transaction.
+    type: string
+  paymentUrl:
+    description: The URL for sending a payment.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  orderStatus:
+    description: The current status of the order.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/OrderStatus'
+  billingAddress:
+    description: The billing address for the order.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PostalAddress'
+  partOfInvoice:
+    description: The order is being paid as part of the referenced Invoice.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Invoice'
+  confirmationNumber:
+    description: A number that confirms the given order or payment has been received.
+    type: string
+  customer:
+    description: Party placing the order or paying the invoice.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  merchant:
+    description: ' merchant  is an out-dated term for  seller .'
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  broker:
+    description: An entity that arranges for an exchange between a buyer and a seller.  In
+      most cases a broker never acquires or releases ownership of a product or service
+      involved in an exchange.  If it is not clear whether an entity is a broker,
+      seller, or buyer, the latter two terms are preferred.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  isGift:
+    description: Was the offer accepted as a gift for someone other than the buyer.
+    type: boolean
+  paymentMethod:
+    description: The name of the credit card or other method of payment for the order.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PaymentMethod'
+  seller:
+    description: An entity which offers (sells / leases / lends / loans) the services
+      / goods.  A seller may also be a provider.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  paymentMethodId:
+    description: An identifier for the method of payment used (e.g. the last 4 digits
+      of the credit card).
+    type: string
+  discount:
+    description: Any discount applied (to an Order).
+    type: number
+    format: float
+  orderDelivery:
+    description: The delivery of the parcel related to this order or order item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ParcelDelivery'
+  orderedItem:
+    description: The item ordered.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/OrderItem'
+  acceptedOffer:
+    description: The offer(s) -- e.g., product, quantity and price combinations --
+      included in the order.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Offer'
+  discountCurrency:
+    description: The currency (in 3-letter ISO 4217 format) of the discount.
+    type: string
+  paymentDueDate:
+    description: The date that payment is due.
+    type: string
+    format: date-time
+  discountCode:
+    description: Code used to redeem a discount.
+    type: string
+  sameAs:
+    description: URL of a reference Web page that unambiguously indicates the item
+      s identity. E.g. the URL of the item s Wikipedia page, Wikidata entry, or official
+      website.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  url:
+    description: URL of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  image:
+    description: An image of the item. This can be a URL or a fully described ImageObject.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ImageObject'
+  additionalType:
+    description: An additional type for the item, typically used for adding more specific
+      types from external vocabularies in microdata syntax. This is a relationship
+      between something and a class that the thing is in. In RDFa syntax, it is better
+      to use the native RDFa syntax - the  typeof  attribute - for multiple types.
+      Schema.org tools may have only weaker understanding of extra types, in particular
+      those defined externally.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  name:
+    description: The name of the item.
+    type: string
+  identifier:
+    description: The identifier property represents any kind of identifier for any
+      kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+      properties for representing many of these, either as textual strings or as URL
+      (URI) links. See background notes for more details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PropertyValue'
+  potentialAction:
+    description: Indicates a potential Action, which describes an idealized action
+      in which this thing would play an  object  role.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Action'
+  mainEntityOfPage:
+    description: Indicates a page (or other CreativeWork) for which this thing is
+      the main entity being described. See background notes for details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  description:
+    description: A description of the item.
+    type: string
+  disambiguatingDescription:
+    description: A sub property of description. A short description of the item used
+      to disambiguate from other, similar items. Information from other properties
+      (in particular, name) may be necessary for the description to be useful for
+      disambiguation.
+    type: string
+  alternateName:
+    description: An alias for the item.
+    type: string
+...

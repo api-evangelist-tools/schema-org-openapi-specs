@@ -1,0 +1,295 @@
+---
+$id: http://schema.org.apievangelist.com/schema/objects/Person.yaml
+schema: http://json-schema.org/draft-07/schema#
+description: A person (alive, dead, undead, or fictional).
+properties:
+  spouse:
+    description: The person s spouse.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  funder:
+    description: A person or organization that supports (sponsors) something through
+      some kind of financial contribution.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  colleagues:
+    description: A colleague of the person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  deathDate:
+    description: Date of death.
+    type: string
+    format: date
+  memberOf:
+    description: An Organization (or ProgramMembership) to which this Person or Organization
+      belongs.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  height:
+    description: The height of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Distance'
+  workLocation:
+    description: A contact location for a person s place of work.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Place'
+  netWorth:
+    description: The total financial value of the person as calculated by subtracting
+      assets from liabilities.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/MonetaryAmount'
+  children:
+    description: A child of the person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  jobTitle:
+    description: The job title of the person (for example, Financial Manager).
+    type: string
+  hasOfferCatalog:
+    description: Indicates an OfferCatalog listing for this Organization, Person,
+      or Service.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/OfferCatalog'
+  deathPlace:
+    description: The place where the person died.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Place'
+  globalLocationNumber:
+    description: The Global Location Number (GLN, sometimes also referred to as International
+      Location Number or ILN) of the respective organization, person, or place. The
+      GLN is a 13-digit number used to identify parties and physical locations.
+    type: string
+  birthPlace:
+    description: The place where the person was born.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Place'
+  gender:
+    description: Gender of the person. While http://schema.org/Male and http://schema.org/Female
+      may be used, text strings are also acceptable for people who do not identify
+      as a binary gender.
+    type: string
+  alumniOf:
+    description: An organization that the person is an alumni of.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/EducationalOrganization'
+  homeLocation:
+    description: A contact location for a person s residence.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ContactPoint'
+  duns:
+    description: The Dun &amp; Bradstreet DUNS number for identifying an organization
+      or business person.
+    type: string
+  taxID:
+    description: The Tax / Fiscal ID of the organization or person, e.g. the TIN in
+      the US or the CIF/NIF in Spain.
+    type: string
+  award:
+    description: An award won by or for this item.
+    type: string
+  birthDate:
+    description: Date of birth.
+    type: string
+    format: date
+  makesOffer:
+    description: A pointer to products or services offered by the organization or
+      person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Offer'
+  givenName:
+    description: Given name. In the U.S., the first name of a Person. This can be
+      used along with familyName instead of the name property.
+    type: string
+  contactPoints:
+    description: A contact point for a person or organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ContactPoint'
+  awards:
+    description: Awards won by or for this item.
+    type: string
+  familyName:
+    description: Family name. In the U.S., the last name of an Person. This can be
+      used along with givenName instead of the name property.
+    type: string
+  seeks:
+    description: A pointer to products or services sought by the organization or person
+      (demand).
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Demand'
+  sibling:
+    description: A sibling of the person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  address:
+    description: Physical address of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PostalAddress'
+  performerIn:
+    description: Event that this person is a performer or participant in.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Event'
+  honorificPrefix:
+    description: An honorific prefix preceding a Person s name such as Dr/Mrs/Mr.
+    type: string
+  additionalName:
+    description: An additional name for a Person, can be used for a middle name.
+    type: string
+  siblings:
+    description: A sibling of the person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  telephone:
+    description: The telephone number.
+    type: string
+  email:
+    description: Email address.
+    type: string
+  weight:
+    description: The weight of the product or person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/QuantitativeValue'
+  contactPoint:
+    description: A contact point for a person or organization.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ContactPoint'
+  colleague:
+    description: A colleague of the person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  parents:
+    description: A parents of the person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  naics:
+    description: The North American Industry Classification System (NAICS) code for
+      a particular organization or business person.
+    type: string
+  hasPOS:
+    description: Points-of-Sales operated by the organization or person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Place'
+  parent:
+    description: A parent of this person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  owns:
+    description: Products owned by the organization or person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Product'
+  affiliation:
+    description: An organization that this person is affiliated with. For example,
+      a school/university, a club, or a team.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  publishingPrinciples:
+    description: The publishingPrinciples property indicates (typically via URL) a
+      document describing the editorial principles of an Organization (or individual
+      e.g. a Person writing a blog) that relate to their activities as a publisher,
+      e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle)
+      the principles are those of the party primarily responsible for the creation
+      of the CreativeWork.  While such policies are most typically expressed in natural
+      language, sometimes related information (e.g. indicating a funder) can be expressed
+      using schema.org terminology.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/CreativeWork'
+  sponsor:
+    description: A person or organization that supports a thing through a pledge,
+      promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate
+      sponsor of an event.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  isicV4:
+    description: The International Standard of Industrial Classification of All Economic
+      Activities (ISIC), Revision 4 code for a particular organization, business person,
+      or place.
+    type: string
+  brand:
+    description: The brand(s) associated with a product or service, or the brand(s)
+      maintained by an organization or business person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  honorificSuffix:
+    description: An honorific suffix preceding a Person s name such as M.D. /PhD/MSCSW.
+    type: string
+  vatID:
+    description: The Value-added Tax ID of the organization or person.
+    type: string
+  nationality:
+    description: Nationality of the person.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Country'
+  faxNumber:
+    description: The fax number.
+    type: string
+  relatedTo:
+    description: The most generic familial relation.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  follows:
+    description: The most generic uni-directional social relation.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  knows:
+    description: The most generic bi-directional social/work relation.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Person'
+  worksFor:
+    description: Organizations that the person works for.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Organization'
+  sameAs:
+    description: URL of a reference Web page that unambiguously indicates the item
+      s identity. E.g. the URL of the item s Wikipedia page, Wikidata entry, or official
+      website.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  url:
+    description: URL of the item.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  image:
+    description: An image of the item. This can be a URL or a fully described ImageObject.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/ImageObject'
+  additionalType:
+    description: An additional type for the item, typically used for adding more specific
+      types from external vocabularies in microdata syntax. This is a relationship
+      between something and a class that the thing is in. In RDFa syntax, it is better
+      to use the native RDFa syntax - the  typeof  attribute - for multiple types.
+      Schema.org tools may have only weaker understanding of extra types, in particular
+      those defined externally.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  name:
+    description: The name of the item.
+    type: string
+  identifier:
+    description: The identifier property represents any kind of identifier for any
+      kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+      properties for representing many of these, either as textual strings or as URL
+      (URI) links. See background notes for more details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/PropertyValue'
+  potentialAction:
+    description: Indicates a potential Action, which describes an idealized action
+      in which this thing would play an  object  role.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/Action'
+  mainEntityOfPage:
+    description: Indicates a page (or other CreativeWork) for which this thing is
+      the main entity being described. See background notes for details.
+    schema:
+      $ref: 'http://schema.org.apievangelist.com/schema/objects/URL'
+  description:
+    description: A description of the item.
+    type: string
+  disambiguatingDescription:
+    description: A sub property of description. A short description of the item used
+      to disambiguate from other, similar items. Information from other properties
+      (in particular, name) may be necessary for the description to be useful for
+      disambiguation.
+    type: string
+  alternateName:
+    description: An alias for the item.
+    type: string
+...

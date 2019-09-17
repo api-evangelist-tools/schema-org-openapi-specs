@@ -1,0 +1,113 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/SteeringPositionValue.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A value indicating a steering position.",
+    "properties": {
+        "greater": {
+            "description": "This ordering relation for qualitative values indicates that the subject is greater than the object.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/QualitativeValue"
+            }
+        },
+        "equal": {
+            "description": "This ordering relation for qualitative values indicates that the subject is equal to the object.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/QualitativeValue"
+            }
+        },
+        "additionalProperty": {
+            "description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.  Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http:\/\/schema.org\/width, http:\/\/schema.org\/color, http:\/\/schema.org\/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property\/value mechanism.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/PropertyValue"
+            }
+        },
+        "lesser": {
+            "description": "This ordering relation for qualitative values indicates that the subject is lesser than the object.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/QualitativeValue"
+            }
+        },
+        "valueReference": {
+            "description": "A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Enumeration"
+            }
+        },
+        "nonEqual": {
+            "description": "This ordering relation for qualitative values indicates that the subject is not equal to the object.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/QualitativeValue"
+            }
+        },
+        "lesserOrEqual": {
+            "description": "This ordering relation for qualitative values indicates that the subject is lesser than or equal to the object.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/QualitativeValue"
+            }
+        },
+        "greaterOrEqual": {
+            "description": "This ordering relation for qualitative values indicates that the subject is greater than or equal to the object.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/QualitativeValue"
+            }
+        },
+        "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item s identity. E.g. the URL of the item s Wikipedia page, Wikidata entry, or official website.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "url": {
+            "description": "URL of the item.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "image": {
+            "description": "An image of the item. This can be a URL or a fully described ImageObject.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ImageObject"
+            }
+        },
+        "additionalType": {
+            "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the  typeof  attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "name": {
+            "description": "The name of the item.",
+            "type": "string"
+        },
+        "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/PropertyValue"
+            }
+        },
+        "potentialAction": {
+            "description": "Indicates a potential Action, which describes an idealized action in which this thing would play an  object  role.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Action"
+            }
+        },
+        "mainEntityOfPage": {
+            "description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "description": {
+            "description": "A description of the item.",
+            "type": "string"
+        },
+        "disambiguatingDescription": {
+            "description": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+            "type": "string"
+        },
+        "alternateName": {
+            "description": "An alias for the item.",
+            "type": "string"
+        }
+    }
+}

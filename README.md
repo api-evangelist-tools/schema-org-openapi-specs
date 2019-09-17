@@ -1,4 +1,4 @@
-# Schema.org OpenAPI Specs
-This is a collection of OpenAPI Specs for all the Schema.org entities.
+# Schema.org JSON Schema and OpenAPI Specs
+This is a collection of JSON Schema and OpenAPI Specs for all the Schema.org entities.
 
-You can view the site at: http://schema.org.apis.apievangelist.com/
+You can view the site at: http://schema.org.apievangelist.com/

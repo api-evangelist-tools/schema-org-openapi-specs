@@ -1,0 +1,59 @@
+{
+    "id": "04d6a6cee90d26514e3a382d9c15c637",
+    "name": "Bakery",
+    "description": "Autogeneration of Bakery Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2cebd382cf9a3af57ad910286d741887",
+        "name": "\/Bakery\/",
+        "url": "{{url}}\/Bakery\/",
+        "description": "Autogeneration of Bakery Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2cebd382cf9a3af57ad910286d741887",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Bakery\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "09df9bc02e020e6e2a3ffffd5c875362",
+                "collection": "04d6a6cee90d26514e3a382d9c15c637"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "04d6a6cee90d26514e3a382d9c15c637",
+        "rawModeData": ""
+    }
+}

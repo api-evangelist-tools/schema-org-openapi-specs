@@ -1,0 +1,59 @@
+{
+    "id": "9200728b957d9459b7310de8bc09ecd9",
+    "name": "Business Entity Type",
+    "description": "Autogeneration of Business Entity Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c02c1084da80d22d3df9bf826e765287",
+        "name": "\/Business-Entity-Type\/",
+        "url": "{{url}}\/Business-Entity-Type\/",
+        "description": "Autogeneration of Business Entity Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c02c1084da80d22d3df9bf826e765287",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Business-Entity-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "8dd954fb009dd9a4a2897634b68fe745",
+                "collection": "9200728b957d9459b7310de8bc09ecd9"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "9200728b957d9459b7310de8bc09ecd9",
+        "rawModeData": ""
+    }
+}

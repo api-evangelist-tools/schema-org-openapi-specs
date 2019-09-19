@@ -1,0 +1,59 @@
+{
+    "id": "878d7bde3322437e64614d8e0a588d3d",
+    "name": "Body Of Water",
+    "description": "Autogeneration of Body Of Water Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "0222c14170c8ce47ee94ee0b6dfdd568",
+        "name": "\/Body-Of-Water\/",
+        "url": "{{url}}\/Body-Of-Water\/",
+        "description": "Autogeneration of Body Of Water Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "0222c14170c8ce47ee94ee0b6dfdd568",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Body-Of-Water\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "8f3cdec60ce3c6e1fa57b9b5a6e8f927",
+                "collection": "878d7bde3322437e64614d8e0a588d3d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "878d7bde3322437e64614d8e0a588d3d",
+        "rawModeData": ""
+    }
+}

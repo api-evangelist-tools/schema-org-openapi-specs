@@ -1,0 +1,59 @@
+{
+    "id": "e2b2b40ab5ecf474280f91b2d1731e88",
+    "name": "Ice Cream Shop",
+    "description": "Autogeneration of Ice Cream Shop Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "09b1ccc0a9607717fc9e67daf2586980",
+        "name": "\/Ice-Cream-Shop\/",
+        "url": "{{url}}\/Ice-Cream-Shop\/",
+        "description": "Autogeneration of Ice Cream Shop Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "09b1ccc0a9607717fc9e67daf2586980",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {},\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Ice-Cream-Shop\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "06e4d05fcdbed79afd33d881c7ba8f33",
+                "collection": "e2b2b40ab5ecf474280f91b2d1731e88"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e2b2b40ab5ecf474280f91b2d1731e88",
+        "rawModeData": ""
+    }
+}

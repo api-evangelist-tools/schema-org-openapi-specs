@@ -1,0 +1,59 @@
+{
+    "id": "b455969694492f07dea22e186d6dc355",
+    "name": "Bus Reservation",
+    "description": "Autogeneration of Bus Reservation Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "fa9e8b58addf6c4bd4114d308cb4785c",
+        "name": "\/Bus-Reservation\/",
+        "url": "{{url}}\/Bus-Reservation\/",
+        "description": "Autogeneration of Bus Reservation Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "fa9e8b58addf6c4bd4114d308cb4785c",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Bus-Reservation\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "2e4c89b519da21085957db8a46a41b1b",
+                "collection": "b455969694492f07dea22e186d6dc355"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b455969694492f07dea22e186d6dc355",
+        "rawModeData": ""
+    }
+}

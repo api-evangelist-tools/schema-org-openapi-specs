@@ -1,0 +1,59 @@
+{
+    "id": "c340eec0501ed2a6b6e858e2732d0995",
+    "name": "Game Play Mode",
+    "description": "Autogeneration of Game Play Mode Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "abec6fa79e0a6d22a619bdcdb32ed5b2",
+        "name": "\/Game-Play-Mode\/",
+        "url": "{{url}}\/Game-Play-Mode\/",
+        "description": "Autogeneration of Game Play Mode Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "abec6fa79e0a6d22a619bdcdb32ed5b2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Game-Play-Mode\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "505d3647cc03987da024a1e2e9f66e0e",
+                "collection": "c340eec0501ed2a6b6e858e2732d0995"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c340eec0501ed2a6b6e858e2732d0995",
+        "rawModeData": ""
+    }
+}

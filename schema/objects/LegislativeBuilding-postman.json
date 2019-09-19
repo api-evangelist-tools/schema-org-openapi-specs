@@ -1,0 +1,59 @@
+{
+    "id": "0fe1fc4ef764b90c8504acff29540ed5",
+    "name": "Legislative Building",
+    "description": "Autogeneration of Legislative Building Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7db96015a9215d0d9ccce2a409039452",
+        "name": "\/Legislative-Building\/",
+        "url": "{{url}}\/Legislative-Building\/",
+        "description": "Autogeneration of Legislative Building Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7db96015a9215d0d9ccce2a409039452",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Legislative-Building\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "15af123e9fbddcdfad2b6da7fc19123e",
+                "collection": "0fe1fc4ef764b90c8504acff29540ed5"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0fe1fc4ef764b90c8504acff29540ed5",
+        "rawModeData": ""
+    }
+}

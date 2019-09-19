@@ -1,0 +1,59 @@
+{
+    "id": "80ab3439fb2fbaf305ea9b598d683c50",
+    "name": "Health Club",
+    "description": "Autogeneration of Health Club Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "fd63618e685556d81e3ccbad1fc71e11",
+        "name": "\/Health-Club\/",
+        "url": "{{url}}\/Health-Club\/",
+        "description": "Autogeneration of Health Club Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "fd63618e685556d81e3ccbad1fc71e11",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Health-Club\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1915377e17315a10e8070b34b0b642a0",
+                "collection": "80ab3439fb2fbaf305ea9b598d683c50"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "80ab3439fb2fbaf305ea9b598d683c50",
+        "rawModeData": ""
+    }
+}

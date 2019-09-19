@@ -1,0 +1,59 @@
+{
+    "id": "f13924f4e27eb03b9ce41a160586f83a",
+    "name": "Course Instance",
+    "description": "Autogeneration of Course Instance Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f794c4afded62c8b00fce47879d6744b",
+        "name": "\/Course-Instance\/",
+        "url": "{{url}}\/Course-Instance\/",
+        "description": "Autogeneration of Course Instance Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f794c4afded62c8b00fce47879d6744b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"instructor\": {},\n    \"courseMode\": \"String Content\",\n    \"about\": {},\n    \"funder\": {},\n    \"workFeatured\": {},\n    \"audience\": {},\n    \"remainingAttendeeCapacity\": 100,\n    \"actor\": {},\n    \"performers\": {},\n    \"endDate\": \"String Content\",\n    \"doorTime\": \"String Content\",\n    \"contributor\": {},\n    \"maximumAttendeeCapacity\": 100,\n    \"typicalAgeRange\": \"String Content\",\n    \"organizer\": {},\n    \"attendees\": {},\n    \"aggregateRating\": {},\n    \"subEvent\": {},\n    \"subEvents\": {},\n    \"offers\": {},\n    \"inLanguage\": {},\n    \"attendee\": {},\n    \"workPerformed\": {},\n    \"eventStatus\": {},\n    \"startDate\": \"String Content\",\n    \"director\": {},\n    \"superEvent\": {},\n    \"duration\": {},\n    \"translator\": {},\n    \"previousStartDate\": \"String Content\",\n    \"review\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"recordedIn\": {},\n    \"composer\": {},\n    \"isAccessibleForFree\": 1,\n    \"performer\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Course-Instance\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "46a21798575ee00fe1e7cb0318a52f8e",
+                "collection": "f13924f4e27eb03b9ce41a160586f83a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f13924f4e27eb03b9ce41a160586f83a",
+        "rawModeData": ""
+    }
+}

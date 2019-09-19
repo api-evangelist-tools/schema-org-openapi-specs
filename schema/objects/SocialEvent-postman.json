@@ -1,0 +1,59 @@
+{
+    "id": "232cdb01f664c8f8114cae8bd614163b",
+    "name": "Social Event",
+    "description": "Autogeneration of Social Event Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "244e2fc7ada7e75b5907d9decfc1ae61",
+        "name": "\/Social-Event\/",
+        "url": "{{url}}\/Social-Event\/",
+        "description": "Autogeneration of Social Event Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "244e2fc7ada7e75b5907d9decfc1ae61",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"about\": {},\n    \"funder\": {},\n    \"workFeatured\": {},\n    \"audience\": {},\n    \"remainingAttendeeCapacity\": 100,\n    \"actor\": {},\n    \"performers\": {},\n    \"endDate\": \"String Content\",\n    \"doorTime\": \"String Content\",\n    \"contributor\": {},\n    \"maximumAttendeeCapacity\": 100,\n    \"typicalAgeRange\": \"String Content\",\n    \"organizer\": {},\n    \"attendees\": {},\n    \"aggregateRating\": {},\n    \"subEvent\": {},\n    \"subEvents\": {},\n    \"offers\": {},\n    \"inLanguage\": {},\n    \"attendee\": {},\n    \"workPerformed\": {},\n    \"eventStatus\": {},\n    \"startDate\": \"String Content\",\n    \"director\": {},\n    \"superEvent\": {},\n    \"duration\": {},\n    \"translator\": {},\n    \"previousStartDate\": \"String Content\",\n    \"review\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"recordedIn\": {},\n    \"composer\": {},\n    \"isAccessibleForFree\": 1,\n    \"performer\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Social-Event\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "b7519a81b725b68846fcf393e04b2033",
+                "collection": "232cdb01f664c8f8114cae8bd614163b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "232cdb01f664c8f8114cae8bd614163b",
+        "rawModeData": ""
+    }
+}

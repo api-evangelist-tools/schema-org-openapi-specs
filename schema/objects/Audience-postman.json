@@ -1,0 +1,59 @@
+{
+    "id": "e4d71c63a047b077491bee9572401dc4",
+    "name": "Audience",
+    "description": "Autogeneration of Audience Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "83951f96330c263272c4cab25c14b5ad",
+        "name": "\/Audience\/",
+        "url": "{{url}}\/Audience\/",
+        "description": "Autogeneration of Audience Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "83951f96330c263272c4cab25c14b5ad",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"audienceType\": \"String Content\",\n    \"geographicArea\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Audience\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "76e1a2cdbd7cc589e9ca6ef29fca7ee6",
+                "collection": "e4d71c63a047b077491bee9572401dc4"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e4d71c63a047b077491bee9572401dc4",
+        "rawModeData": ""
+    }
+}

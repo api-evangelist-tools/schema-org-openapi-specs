@@ -1,0 +1,59 @@
+{
+    "id": "d41020c881b693bbd367443474181bd6",
+    "name": "Auto Wash",
+    "description": "Autogeneration of Auto Wash Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "edd95c8447bfb6669104e3ce3507caf6",
+        "name": "\/Auto-Wash\/",
+        "url": "{{url}}\/Auto-Wash\/",
+        "description": "Autogeneration of Auto Wash Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "edd95c8447bfb6669104e3ce3507caf6",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Auto-Wash\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "af6e6249c198e69105e13bc3d53e7306",
+                "collection": "d41020c881b693bbd367443474181bd6"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d41020c881b693bbd367443474181bd6",
+        "rawModeData": ""
+    }
+}

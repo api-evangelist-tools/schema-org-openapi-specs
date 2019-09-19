@@ -1,0 +1,59 @@
+{
+    "id": "c9760ed1502a822bc5f127f8500bd6c3",
+    "name": "A P I Reference",
+    "description": "Autogeneration of A P I Reference Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "795945eacc1bc52c1010aae19ff4d838",
+        "name": "\/A-P-I-Reference\/",
+        "url": "{{url}}\/A-P-I-Reference\/",
+        "description": "Autogeneration of A P I Reference Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "795945eacc1bc52c1010aae19ff4d838",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"executableLibraryName\": \"String Content\",\n    \"assemblyVersion\": \"String Content\",\n    \"programmingModel\": \"String Content\",\n    \"assembly\": \"String Content\",\n    \"targetPlatform\": \"String Content\",\n    \"dependencies\": \"String Content\",\n    \"proficiencyLevel\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/A-P-I-Reference\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "98a002112a8de3ff220446c77899496b",
+                "collection": "c9760ed1502a822bc5f127f8500bd6c3"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c9760ed1502a822bc5f127f8500bd6c3",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "09dcbeba4040bb49b077d6327016ecae",
+    "name": "Dance Event",
+    "description": "Autogeneration of Dance Event Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3095acf664a22fd099bafdacb51709ec",
+        "name": "\/Dance-Event\/",
+        "url": "{{url}}\/Dance-Event\/",
+        "description": "Autogeneration of Dance Event Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3095acf664a22fd099bafdacb51709ec",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"about\": {},\n    \"funder\": {},\n    \"workFeatured\": {},\n    \"audience\": {},\n    \"remainingAttendeeCapacity\": 100,\n    \"actor\": {},\n    \"performers\": {},\n    \"endDate\": \"String Content\",\n    \"doorTime\": \"String Content\",\n    \"contributor\": {},\n    \"maximumAttendeeCapacity\": 100,\n    \"typicalAgeRange\": \"String Content\",\n    \"organizer\": {},\n    \"attendees\": {},\n    \"aggregateRating\": {},\n    \"subEvent\": {},\n    \"subEvents\": {},\n    \"offers\": {},\n    \"inLanguage\": {},\n    \"attendee\": {},\n    \"workPerformed\": {},\n    \"eventStatus\": {},\n    \"startDate\": \"String Content\",\n    \"director\": {},\n    \"superEvent\": {},\n    \"duration\": {},\n    \"translator\": {},\n    \"previousStartDate\": \"String Content\",\n    \"review\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"recordedIn\": {},\n    \"composer\": {},\n    \"isAccessibleForFree\": 1,\n    \"performer\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Dance-Event\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f44f75b2c566a2f74606d4ea4de88a69",
+                "collection": "09dcbeba4040bb49b077d6327016ecae"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "09dcbeba4040bb49b077d6327016ecae",
+        "rawModeData": ""
+    }
+}

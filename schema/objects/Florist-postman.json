@@ -1,0 +1,59 @@
+{
+    "id": "0397b9b689b83ca221a05c200a9e5a30",
+    "name": "Florist",
+    "description": "Autogeneration of Florist Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f2648a0c952a3ef19118fa5aad4f44f7",
+        "name": "\/Florist\/",
+        "url": "{{url}}\/Florist\/",
+        "description": "Autogeneration of Florist Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f2648a0c952a3ef19118fa5aad4f44f7",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Florist\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "b7d9ff295062c68fd54831c143e2a583",
+                "collection": "0397b9b689b83ca221a05c200a9e5a30"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0397b9b689b83ca221a05c200a9e5a30",
+        "rawModeData": ""
+    }
+}

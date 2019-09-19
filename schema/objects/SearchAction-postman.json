@@ -1,0 +1,59 @@
+{
+    "id": "9a1173d8087aa9d45ec692c280970a37",
+    "name": "Search Action",
+    "description": "Autogeneration of Search Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d5aa4cc24bc79eaefde4eec774f15f60",
+        "name": "\/Search-Action\/",
+        "url": "{{url}}\/Search-Action\/",
+        "description": "Autogeneration of Search Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d5aa4cc24bc79eaefde4eec774f15f60",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"query\": \"String Content\",\n    \"result\": {},\n    \"actionStatus\": {},\n    \"target\": {},\n    \"agent\": {},\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"instrument\": {},\n    \"participant\": {},\n    \"object\": {},\n    \"error\": {},\n    \"location\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Search-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "2e9f19488f8349673060115963c3bf6c",
+                "collection": "9a1173d8087aa9d45ec692c280970a37"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "9a1173d8087aa9d45ec692c280970a37",
+        "rawModeData": ""
+    }
+}

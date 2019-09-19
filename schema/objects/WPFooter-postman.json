@@ -1,0 +1,59 @@
+{
+    "id": "1107065d709a29bfd3119a67b88a579e",
+    "name": "W P Footer",
+    "description": "Autogeneration of W P Footer Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3b054cf9056a3270511153d359cd7581",
+        "name": "\/W-P-Footer\/",
+        "url": "{{url}}\/W-P-Footer\/",
+        "description": "Autogeneration of W P Footer Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3b054cf9056a3270511153d359cd7581",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/W-P-Footer\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "276bd442ce78554b39a75cd89d9d3a11",
+                "collection": "1107065d709a29bfd3119a67b88a579e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1107065d709a29bfd3119a67b88a579e",
+        "rawModeData": ""
+    }
+}

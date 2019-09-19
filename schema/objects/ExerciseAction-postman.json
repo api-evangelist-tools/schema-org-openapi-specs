@@ -1,0 +1,59 @@
+{
+    "id": "15cbf58fa9ec000dd8278112abe3cfdd",
+    "name": "Exercise Action",
+    "description": "Autogeneration of Exercise Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "cd08ec933a414c04727c1ed620b53603",
+        "name": "\/Exercise-Action\/",
+        "url": "{{url}}\/Exercise-Action\/",
+        "description": "Autogeneration of Exercise Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "cd08ec933a414c04727c1ed620b53603",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"course\": {},\n    \"sportsTeam\": {},\n    \"sportsEvent\": {},\n    \"distance\": {},\n    \"opponent\": {},\n    \"sportsActivityLocation\": {},\n    \"toLocation\": {},\n    \"fromLocation\": {},\n    \"exerciseCourse\": {},\n    \"audience\": {},\n    \"event\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Exercise-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "b1fe7b22b6db0c05152ed96767f6965b",
+                "collection": "15cbf58fa9ec000dd8278112abe3cfdd"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "15cbf58fa9ec000dd8278112abe3cfdd",
+        "rawModeData": ""
+    }
+}

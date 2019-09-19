@@ -1,0 +1,59 @@
+{
+    "id": "70da9246cca75f40a0f6d160e86f180b",
+    "name": "Duration",
+    "description": "Autogeneration of Duration Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "5d992adf050a223e96e3f3aa921852c6",
+        "name": "\/Duration\/",
+        "url": "{{url}}\/Duration\/",
+        "description": "Autogeneration of Duration Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "5d992adf050a223e96e3f3aa921852c6",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Duration\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "5a585470cf2350b56e3c05a408d608da",
+                "collection": "70da9246cca75f40a0f6d160e86f180b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "70da9246cca75f40a0f6d160e86f180b",
+        "rawModeData": ""
+    }
+}

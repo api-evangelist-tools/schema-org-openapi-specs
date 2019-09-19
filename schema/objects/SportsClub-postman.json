@@ -1,0 +1,59 @@
+{
+    "id": "967fc00db3ed2641b7bb9d6b6d86d0fa",
+    "name": "Sports Club",
+    "description": "Autogeneration of Sports Club Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e0060264d5f625664f57d526c903c9ad",
+        "name": "\/Sports-Club\/",
+        "url": "{{url}}\/Sports-Club\/",
+        "description": "Autogeneration of Sports Club Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e0060264d5f625664f57d526c903c9ad",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Sports-Club\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "47c3187afd6737fe2a31d6473bd380c4",
+                "collection": "967fc00db3ed2641b7bb9d6b6d86d0fa"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "967fc00db3ed2641b7bb9d6b6d86d0fa",
+        "rawModeData": ""
+    }
+}

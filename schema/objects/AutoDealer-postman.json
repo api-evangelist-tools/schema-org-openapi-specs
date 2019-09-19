@@ -1,0 +1,59 @@
+{
+    "id": "c9310df359847a652c1476f1c714966e",
+    "name": "Auto Dealer",
+    "description": "Autogeneration of Auto Dealer Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1f3a42b09110914822ae57e8c5167f7f",
+        "name": "\/Auto-Dealer\/",
+        "url": "{{url}}\/Auto-Dealer\/",
+        "description": "Autogeneration of Auto Dealer Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1f3a42b09110914822ae57e8c5167f7f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Auto-Dealer\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "6ceaa0d44c14cc692889c14fb63cbe01",
+                "collection": "c9310df359847a652c1476f1c714966e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c9310df359847a652c1476f1c714966e",
+        "rawModeData": ""
+    }
+}

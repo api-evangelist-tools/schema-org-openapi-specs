@@ -1,0 +1,59 @@
+{
+    "id": "917b2f953bda6c8c15d57fa245972815",
+    "name": "Beach",
+    "description": "Autogeneration of Beach Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "664e60c6934f06eb33d1c3d7217bc6a9",
+        "name": "\/Beach\/",
+        "url": "{{url}}\/Beach\/",
+        "description": "Autogeneration of Beach Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "664e60c6934f06eb33d1c3d7217bc6a9",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Beach\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "fe3e5f31d5174577d84abe68f0910973",
+                "collection": "917b2f953bda6c8c15d57fa245972815"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "917b2f953bda6c8c15d57fa245972815",
+        "rawModeData": ""
+    }
+}

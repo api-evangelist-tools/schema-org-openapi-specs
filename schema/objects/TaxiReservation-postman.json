@@ -1,0 +1,59 @@
+{
+    "id": "fe993589834d024c87002c16605b3fcc",
+    "name": "Taxi Reservation",
+    "description": "Autogeneration of Taxi Reservation Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "bd4817e2e7e04dfa4344c85a422d4106",
+        "name": "\/Taxi-Reservation\/",
+        "url": "{{url}}\/Taxi-Reservation\/",
+        "description": "Autogeneration of Taxi Reservation Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "bd4817e2e7e04dfa4344c85a422d4106",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"pickupTime\": \"String Content\",\n    \"partySize\": 100,\n    \"pickupLocation\": {},\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Taxi-Reservation\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4f09e89d7ba0cdc5b293f9c3b2978aee",
+                "collection": "fe993589834d024c87002c16605b3fcc"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "fe993589834d024c87002c16605b3fcc",
+        "rawModeData": ""
+    }
+}

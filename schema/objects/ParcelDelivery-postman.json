@@ -1,0 +1,59 @@
+{
+    "id": "e7aac4022b49a217f72532246e1b8406",
+    "name": "Parcel Delivery",
+    "description": "Autogeneration of Parcel Delivery Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2ccfb317f488a5f11e1a741b41304b64",
+        "name": "\/Parcel-Delivery\/",
+        "url": "{{url}}\/Parcel-Delivery\/",
+        "description": "Autogeneration of Parcel Delivery Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2ccfb317f488a5f11e1a741b41304b64",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"provider\": {},\n    \"trackingUrl\": {},\n    \"deliveryAddress\": {},\n    \"trackingNumber\": \"String Content\",\n    \"hasDeliveryMethod\": {},\n    \"deliveryStatus\": {},\n    \"carrier\": {},\n    \"originAddress\": {},\n    \"itemShipped\": {},\n    \"partOfOrder\": {},\n    \"expectedArrivalFrom\": \"String Content\",\n    \"expectedArrivalUntil\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Parcel-Delivery\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a8b79e309afd12fab313f89c704a72ec",
+                "collection": "e7aac4022b49a217f72532246e1b8406"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e7aac4022b49a217f72532246e1b8406",
+        "rawModeData": ""
+    }
+}

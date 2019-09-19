@@ -1,0 +1,59 @@
+{
+    "id": "ecbe203250c8875bb2acfa6bb2a15ef2",
+    "name": "Bridge",
+    "description": "Autogeneration of Bridge Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "083a378810f250476fc183f0962b708a",
+        "name": "\/Bridge\/",
+        "url": "{{url}}\/Bridge\/",
+        "description": "Autogeneration of Bridge Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "083a378810f250476fc183f0962b708a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Bridge\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "622a812f6aefabf81cbd8866147b57aa",
+                "collection": "ecbe203250c8875bb2acfa6bb2a15ef2"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ecbe203250c8875bb2acfa6bb2a15ef2",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "0ebcb90aee22c0f945a65cf812c2994c",
+    "name": "Breadcrumb List",
+    "description": "Autogeneration of Breadcrumb List Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3021129c5543a323a166c16faeeba690",
+        "name": "\/Breadcrumb-List\/",
+        "url": "{{url}}\/Breadcrumb-List\/",
+        "description": "Autogeneration of Breadcrumb List Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3021129c5543a323a166c16faeeba690",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"itemListElement\": {},\n    \"itemListOrder\": \"String Content\",\n    \"numberOfItems\": 100\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Breadcrumb-List\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "5e4943b0c5c6c03c5bb40c315b4feb1f",
+                "collection": "0ebcb90aee22c0f945a65cf812c2994c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0ebcb90aee22c0f945a65cf812c2994c",
+        "rawModeData": ""
+    }
+}

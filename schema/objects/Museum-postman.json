@@ -1,0 +1,59 @@
+{
+    "id": "edd78fc8a718ea24c60e26319b63f53f",
+    "name": "Museum",
+    "description": "Autogeneration of Museum Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "69a4dfcbae186dcfa2e7f7f461a9210b",
+        "name": "\/Museum\/",
+        "url": "{{url}}\/Museum\/",
+        "description": "Autogeneration of Museum Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "69a4dfcbae186dcfa2e7f7f461a9210b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Museum\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "be04757e707960b1d8ab8bc53b17fbeb",
+                "collection": "edd78fc8a718ea24c60e26319b63f53f"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "edd78fc8a718ea24c60e26319b63f53f",
+        "rawModeData": ""
+    }
+}

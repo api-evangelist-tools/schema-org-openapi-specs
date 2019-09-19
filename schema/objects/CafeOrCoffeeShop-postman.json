@@ -1,0 +1,59 @@
+{
+    "id": "7d3bc2a2f7300fa8a0a13f7b1a2292a1",
+    "name": "Cafe Or Coffee Shop",
+    "description": "Autogeneration of Cafe Or Coffee Shop Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d5fa1e9411d96a96863400031d7938b3",
+        "name": "\/Cafe-Or-Coffee-Shop\/",
+        "url": "{{url}}\/Cafe-Or-Coffee-Shop\/",
+        "description": "Autogeneration of Cafe Or Coffee Shop Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d5fa1e9411d96a96863400031d7938b3",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Cafe-Or-Coffee-Shop\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "632d689cb98f8340042107d91c009781",
+                "collection": "7d3bc2a2f7300fa8a0a13f7b1a2292a1"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "7d3bc2a2f7300fa8a0a13f7b1a2292a1",
+        "rawModeData": ""
+    }
+}

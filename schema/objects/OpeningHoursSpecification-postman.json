@@ -1,0 +1,59 @@
+{
+    "id": "3ca1f3d1aa8d98ab23d7400d987c7132",
+    "name": "Opening Hours Specification",
+    "description": "Autogeneration of Opening Hours Specification Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e4c246865ada25d95dd6ebf2ec030efa",
+        "name": "\/Opening-Hours-Specification\/",
+        "url": "{{url}}\/Opening-Hours-Specification\/",
+        "description": "Autogeneration of Opening Hours Specification Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e4c246865ada25d95dd6ebf2ec030efa",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"opens\": \"String Content\",\n    \"closes\": \"String Content\",\n    \"dayOfWeek\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Opening-Hours-Specification\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f18185dc782087a91f52fd9498a60f91",
+                "collection": "3ca1f3d1aa8d98ab23d7400d987c7132"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "3ca1f3d1aa8d98ab23d7400d987c7132",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "1e18f631cb9a601c17ebc2c5138dd30b",
+    "name": "Education Event",
+    "description": "Autogeneration of Education Event Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "4514a715d026e4cfc78cd224ed029268",
+        "name": "\/Education-Event\/",
+        "url": "{{url}}\/Education-Event\/",
+        "description": "Autogeneration of Education Event Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "4514a715d026e4cfc78cd224ed029268",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"about\": {},\n    \"funder\": {},\n    \"workFeatured\": {},\n    \"audience\": {},\n    \"remainingAttendeeCapacity\": 100,\n    \"actor\": {},\n    \"performers\": {},\n    \"endDate\": \"String Content\",\n    \"doorTime\": \"String Content\",\n    \"contributor\": {},\n    \"maximumAttendeeCapacity\": 100,\n    \"typicalAgeRange\": \"String Content\",\n    \"organizer\": {},\n    \"attendees\": {},\n    \"aggregateRating\": {},\n    \"subEvent\": {},\n    \"subEvents\": {},\n    \"offers\": {},\n    \"inLanguage\": {},\n    \"attendee\": {},\n    \"workPerformed\": {},\n    \"eventStatus\": {},\n    \"startDate\": \"String Content\",\n    \"director\": {},\n    \"superEvent\": {},\n    \"duration\": {},\n    \"translator\": {},\n    \"previousStartDate\": \"String Content\",\n    \"review\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"recordedIn\": {},\n    \"composer\": {},\n    \"isAccessibleForFree\": 1,\n    \"performer\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Education-Event\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "0c11628fda36d1c919ddcf33f7a8e70a",
+                "collection": "1e18f631cb9a601c17ebc2c5138dd30b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1e18f631cb9a601c17ebc2c5138dd30b",
+        "rawModeData": ""
+    }
+}

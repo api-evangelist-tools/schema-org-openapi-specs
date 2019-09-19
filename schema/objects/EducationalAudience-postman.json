@@ -1,0 +1,59 @@
+{
+    "id": "931fc17f8da02dd1a842cc17d6c43d97",
+    "name": "Educational Audience",
+    "description": "Autogeneration of Educational Audience Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1545fbb13d4d459679fe679ce8501f91",
+        "name": "\/Educational-Audience\/",
+        "url": "{{url}}\/Educational-Audience\/",
+        "description": "Autogeneration of Educational Audience Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1545fbb13d4d459679fe679ce8501f91",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"educationalRole\": \"String Content\",\n    \"audienceType\": \"String Content\",\n    \"geographicArea\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Educational-Audience\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "82c125fe89241cd1e4f10ae2a3fc87e1",
+                "collection": "931fc17f8da02dd1a842cc17d6c43d97"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "931fc17f8da02dd1a842cc17d6c43d97",
+        "rawModeData": ""
+    }
+}

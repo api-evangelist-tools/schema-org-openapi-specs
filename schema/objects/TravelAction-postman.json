@@ -1,0 +1,59 @@
+{
+    "id": "f64f6fbac0cf5413fb6c9d35ec88772b",
+    "name": "Travel Action",
+    "description": "Autogeneration of Travel Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1ba39874942aae2fded522def2b453e3",
+        "name": "\/Travel-Action\/",
+        "url": "{{url}}\/Travel-Action\/",
+        "description": "Autogeneration of Travel Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1ba39874942aae2fded522def2b453e3",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"distance\": {},\n    \"toLocation\": {},\n    \"fromLocation\": {},\n    \"result\": {},\n    \"actionStatus\": {},\n    \"target\": {},\n    \"agent\": {},\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"instrument\": {},\n    \"participant\": {},\n    \"object\": {},\n    \"error\": {},\n    \"location\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Travel-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f79afae5b04b27a6307767d5ccac82b5",
+                "collection": "f64f6fbac0cf5413fb6c9d35ec88772b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f64f6fbac0cf5413fb6c9d35ec88772b",
+        "rawModeData": ""
+    }
+}

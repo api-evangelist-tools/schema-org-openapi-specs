@@ -1,0 +1,59 @@
+{
+    "id": "de60e3768ed714d79ee6594fcc0abd9c",
+    "name": "Book Format Type",
+    "description": "Autogeneration of Book Format Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "89fbcbb2121352638245aee1830b4a9f",
+        "name": "\/Book-Format-Type\/",
+        "url": "{{url}}\/Book-Format-Type\/",
+        "description": "Autogeneration of Book Format Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "89fbcbb2121352638245aee1830b4a9f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Book-Format-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "612f79365259c3161ec93741619b378e",
+                "collection": "de60e3768ed714d79ee6594fcc0abd9c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "de60e3768ed714d79ee6594fcc0abd9c",
+        "rawModeData": ""
+    }
+}

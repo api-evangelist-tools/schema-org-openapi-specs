@@ -1,0 +1,59 @@
+{
+    "id": "e1c0f301d551ffaa0c8a14b01f405267",
+    "name": "Motorcycle Repair",
+    "description": "Autogeneration of Motorcycle Repair Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "13a14b2382775cd85d5038eedf12fb69",
+        "name": "\/Motorcycle-Repair\/",
+        "url": "{{url}}\/Motorcycle-Repair\/",
+        "description": "Autogeneration of Motorcycle Repair Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "13a14b2382775cd85d5038eedf12fb69",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Motorcycle-Repair\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "47497ccd2d72cb477ad3c3ef5194c971",
+                "collection": "e1c0f301d551ffaa0c8a14b01f405267"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e1c0f301d551ffaa0c8a14b01f405267",
+        "rawModeData": ""
+    }
+}

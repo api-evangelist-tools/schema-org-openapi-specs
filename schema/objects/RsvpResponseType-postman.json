@@ -1,0 +1,59 @@
+{
+    "id": "e4af9e200150408ac3869b40c565d6ad",
+    "name": "Rsvp Response Type",
+    "description": "Autogeneration of Rsvp Response Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c66066246d86d5ac930c33e83899eb76",
+        "name": "\/Rsvp-Response-Type\/",
+        "url": "{{url}}\/Rsvp-Response-Type\/",
+        "description": "Autogeneration of Rsvp Response Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c66066246d86d5ac930c33e83899eb76",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Rsvp-Response-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "dac25ece5e7b05fa86bdc1faccb82f69",
+                "collection": "e4af9e200150408ac3869b40c565d6ad"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e4af9e200150408ac3869b40c565d6ad",
+        "rawModeData": ""
+    }
+}

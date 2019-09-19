@@ -1,0 +1,59 @@
+{
+    "id": "63f9f8f2e1e2fc634eae08c6f69a96a3",
+    "name": "Confirm Action",
+    "description": "Autogeneration of Confirm Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e9b72ec01108d56ce48b0d8e1a993d55",
+        "name": "\/Confirm-Action\/",
+        "url": "{{url}}\/Confirm-Action\/",
+        "description": "Autogeneration of Confirm Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e9b72ec01108d56ce48b0d8e1a993d55",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"event\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Confirm-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "ddabfb9292412ff242da18d63ba4719d",
+                "collection": "63f9f8f2e1e2fc634eae08c6f69a96a3"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "63f9f8f2e1e2fc634eae08c6f69a96a3",
+        "rawModeData": ""
+    }
+}

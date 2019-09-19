@@ -1,0 +1,59 @@
+{
+    "id": "0cbb9c9b57a364f397865a59917640ee",
+    "name": "Pawn Shop",
+    "description": "Autogeneration of Pawn Shop Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "82a3b22d714f0c2fe056f12446ca0b59",
+        "name": "\/Pawn-Shop\/",
+        "url": "{{url}}\/Pawn-Shop\/",
+        "description": "Autogeneration of Pawn Shop Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "82a3b22d714f0c2fe056f12446ca0b59",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Pawn-Shop\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "373bf141e765f6924aad6a2127e7de17",
+                "collection": "0cbb9c9b57a364f397865a59917640ee"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0cbb9c9b57a364f397865a59917640ee",
+        "rawModeData": ""
+    }
+}

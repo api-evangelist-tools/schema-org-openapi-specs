@@ -1,0 +1,59 @@
+{
+    "id": "043b9b2dad04dbf08fd880659f0147de",
+    "name": "Video Object",
+    "description": "Autogeneration of Video Object Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "53e470df4452aa84533647a5a81e62b5",
+        "name": "\/Video-Object\/",
+        "url": "{{url}}\/Video-Object\/",
+        "description": "Autogeneration of Video Object Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "53e470df4452aa84533647a5a81e62b5",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"actor\": {},\n    \"videoFrameSize\": \"String Content\",\n    \"musicBy\": {},\n    \"directors\": {},\n    \"videoQuality\": \"String Content\",\n    \"director\": {},\n    \"transcript\": \"String Content\",\n    \"thumbnail\": {},\n    \"caption\": \"String Content\",\n    \"actors\": {},\n    \"uploadDate\": \"String Content\",\n    \"playerType\": \"String Content\",\n    \"height\": {},\n    \"bitrate\": \"String Content\",\n    \"requiresSubscription\": 1,\n    \"regionsAllowed\": {},\n    \"contentSize\": \"String Content\",\n    \"embedUrl\": {},\n    \"width\": {},\n    \"contentUrl\": {},\n    \"associatedArticle\": {},\n    \"productionCompany\": {},\n    \"duration\": {},\n    \"encodesCreativeWork\": {},\n    \"encodingFormat\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Video-Object\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "2c28b41ebd8790c62568e74f92102345",
+                "collection": "043b9b2dad04dbf08fd880659f0147de"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "043b9b2dad04dbf08fd880659f0147de",
+        "rawModeData": ""
+    }
+}

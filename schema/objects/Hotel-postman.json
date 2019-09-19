@@ -1,0 +1,59 @@
+{
+    "id": "ea5314f39985de55ba7b5651473270fb",
+    "name": "Hotel",
+    "description": "Autogeneration of Hotel Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "91ae23c5806c59285baccb8951ffe916",
+        "name": "\/Hotel\/",
+        "url": "{{url}}\/Hotel\/",
+        "description": "Autogeneration of Hotel Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "91ae23c5806c59285baccb8951ffe916",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"audience\": {},\n    \"checkinTime\": \"String Content\",\n    \"petsAllowed\": \"String Content\",\n    \"availableLanguage\": \"String Content\",\n    \"amenityFeature\": {},\n    \"starRating\": {},\n    \"checkoutTime\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Hotel\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "555a4d314582f71dc0c4a56a4b27bcd7",
+                "collection": "ea5314f39985de55ba7b5651473270fb"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ea5314f39985de55ba7b5651473270fb",
+        "rawModeData": ""
+    }
+}

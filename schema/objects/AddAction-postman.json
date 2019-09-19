@@ -1,0 +1,59 @@
+{
+    "id": "418fc43d315cea009dcebbc159a57ee0",
+    "name": "Add Action",
+    "description": "Autogeneration of Add Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3e629dd3361ef8d02027186f6d6bf010",
+        "name": "\/Add-Action\/",
+        "url": "{{url}}\/Add-Action\/",
+        "description": "Autogeneration of Add Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3e629dd3361ef8d02027186f6d6bf010",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"collection\": {},\n    \"targetCollection\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Add-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1be99e594fcb77e800886a245295e0ee",
+                "collection": "418fc43d315cea009dcebbc159a57ee0"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "418fc43d315cea009dcebbc159a57ee0",
+        "rawModeData": ""
+    }
+}

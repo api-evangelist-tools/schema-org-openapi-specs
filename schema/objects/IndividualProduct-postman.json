@@ -1,0 +1,59 @@
+{
+    "id": "867a914247cd069f7b069ef1d23227a8",
+    "name": "Individual Product",
+    "description": "Autogeneration of Individual Product Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3367db40428ac446dc1b837cc1c1c25d",
+        "name": "\/Individual-Product\/",
+        "url": "{{url}}\/Individual-Product\/",
+        "description": "Autogeneration of Individual Product Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3367db40428ac446dc1b837cc1c1c25d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"serialNumber\": \"String Content\",\n    \"manufacturer\": {},\n    \"sku\": \"String Content\",\n    \"audience\": {},\n    \"mpn\": \"String Content\",\n    \"height\": {},\n    \"gtin8\": \"String Content\",\n    \"reviews\": {},\n    \"aggregateRating\": {},\n    \"isConsumableFor\": {},\n    \"offers\": {},\n    \"award\": \"String Content\",\n    \"category\": \"String Content\",\n    \"width\": {},\n    \"awards\": \"String Content\",\n    \"additionalProperty\": {},\n    \"isAccessoryOrSparePartFor\": {},\n    \"logo\": {},\n    \"gtin14\": \"String Content\",\n    \"gtin13\": \"String Content\",\n    \"gtin12\": \"String Content\",\n    \"material\": \"String Content\",\n    \"weight\": {},\n    \"depth\": {},\n    \"isSimilarTo\": {},\n    \"model\": {},\n    \"color\": \"String Content\",\n    \"isRelatedTo\": {},\n    \"productID\": \"String Content\",\n    \"review\": {},\n    \"purchaseDate\": \"String Content\",\n    \"itemCondition\": {},\n    \"productionDate\": \"String Content\",\n    \"brand\": {},\n    \"releaseDate\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Individual-Product\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c005c17f53358bbef408828c294b9a17",
+                "collection": "867a914247cd069f7b069ef1d23227a8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "867a914247cd069f7b069ef1d23227a8",
+        "rawModeData": ""
+    }
+}

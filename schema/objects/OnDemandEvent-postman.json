@@ -1,0 +1,59 @@
+{
+    "id": "baf734cb1be057f2b48b3d3bcb50ecf3",
+    "name": "On Demand Event",
+    "description": "Autogeneration of On Demand Event Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "14914ff3480642d89fa07044185e69f6",
+        "name": "\/On-Demand-Event\/",
+        "url": "{{url}}\/On-Demand-Event\/",
+        "description": "Autogeneration of On Demand Event Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "14914ff3480642d89fa07044185e69f6",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"publishedOn\": {},\n    \"free\": 1,\n    \"isAccessibleForFree\": 1,\n    \"about\": {},\n    \"funder\": {},\n    \"workFeatured\": {},\n    \"audience\": {},\n    \"remainingAttendeeCapacity\": 100,\n    \"actor\": {},\n    \"performers\": {},\n    \"endDate\": \"String Content\",\n    \"doorTime\": \"String Content\",\n    \"contributor\": {},\n    \"maximumAttendeeCapacity\": 100,\n    \"typicalAgeRange\": \"String Content\",\n    \"organizer\": {},\n    \"attendees\": {},\n    \"aggregateRating\": {},\n    \"subEvent\": {},\n    \"subEvents\": {},\n    \"offers\": {},\n    \"inLanguage\": {},\n    \"attendee\": {},\n    \"workPerformed\": {},\n    \"eventStatus\": {},\n    \"startDate\": \"String Content\",\n    \"director\": {},\n    \"superEvent\": {},\n    \"duration\": {},\n    \"translator\": {},\n    \"previousStartDate\": \"String Content\",\n    \"review\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"recordedIn\": {},\n    \"composer\": {},\n    \"performer\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/On-Demand-Event\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "de1dbd28657237fb30ffb5c684aecc1b",
+                "collection": "baf734cb1be057f2b48b3d3bcb50ecf3"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "baf734cb1be057f2b48b3d3bcb50ecf3",
+        "rawModeData": ""
+    }
+}

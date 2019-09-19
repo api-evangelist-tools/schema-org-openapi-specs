@@ -1,0 +1,59 @@
+{
+    "id": "d6870a4a6e3c361321c19d2dd63f295d",
+    "name": "H V A C Business",
+    "description": "Autogeneration of H V A C Business Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d9d434b6ad0b97870a507a189257a920",
+        "name": "\/H-V-A-C-Business\/",
+        "url": "{{url}}\/H-V-A-C-Business\/",
+        "description": "Autogeneration of H V A C Business Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d9d434b6ad0b97870a507a189257a920",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/H-V-A-C-Business\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "5d172a45ca1e905020f6f041063a73c6",
+                "collection": "d6870a4a6e3c361321c19d2dd63f295d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d6870a4a6e3c361321c19d2dd63f295d",
+        "rawModeData": ""
+    }
+}

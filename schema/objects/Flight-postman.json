@@ -1,0 +1,59 @@
+{
+    "id": "cef9724a629309a38a6655dafa8c3304",
+    "name": "Flight",
+    "description": "Autogeneration of Flight Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "16f66acdc064f7dbe9d9f57645af9c52",
+        "name": "\/Flight\/",
+        "url": "{{url}}\/Flight\/",
+        "description": "Autogeneration of Flight Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "16f66acdc064f7dbe9d9f57645af9c52",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"arrivalAirport\": {},\n    \"provider\": {},\n    \"arrivalGate\": \"String Content\",\n    \"flightNumber\": \"String Content\",\n    \"carrier\": {},\n    \"boardingPolicy\": {},\n    \"aircraft\": {},\n    \"arrivalTime\": \"String Content\",\n    \"seller\": {},\n    \"webCheckinTime\": \"String Content\",\n    \"mealService\": \"String Content\",\n    \"departureGate\": \"String Content\",\n    \"departureTerminal\": \"String Content\",\n    \"estimatedFlightDuration\": {},\n    \"flightDistance\": {},\n    \"arrivalTerminal\": \"String Content\",\n    \"departureAirport\": {},\n    \"departureTime\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Flight\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "40fb394bc2d075214eb54494ada1731f",
+                "collection": "cef9724a629309a38a6655dafa8c3304"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "cef9724a629309a38a6655dafa8c3304",
+        "rawModeData": ""
+    }
+}

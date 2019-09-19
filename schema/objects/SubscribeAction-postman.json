@@ -1,0 +1,59 @@
+{
+    "id": "9a5af2894f6d6399b06126d80512cb02",
+    "name": "Subscribe Action",
+    "description": "Autogeneration of Subscribe Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "fd5019586adf314dc2f1524abda8bb06",
+        "name": "\/Subscribe-Action\/",
+        "url": "{{url}}\/Subscribe-Action\/",
+        "description": "Autogeneration of Subscribe Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "fd5019586adf314dc2f1524abda8bb06",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Subscribe-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "635d42a677813f327fb3666121ee1760",
+                "collection": "9a5af2894f6d6399b06126d80512cb02"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "9a5af2894f6d6399b06126d80512cb02",
+        "rawModeData": ""
+    }
+}

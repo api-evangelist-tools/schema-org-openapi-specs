@@ -1,0 +1,59 @@
+{
+    "id": "b4025f5b7342e454a2b3d7327f3b14da",
+    "name": "Cook Action",
+    "description": "Autogeneration of Cook Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "773f5c6a8aaf3a7ccadef175fb3f37ca",
+        "name": "\/Cook-Action\/",
+        "url": "{{url}}\/Cook-Action\/",
+        "description": "Autogeneration of Cook Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "773f5c6a8aaf3a7ccadef175fb3f37ca",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"recipe\": {},\n    \"foodEvent\": {},\n    \"foodEstablishment\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Cook-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "e9610d7f06c1a9b7f1279037badebc51",
+                "collection": "b4025f5b7342e454a2b3d7327f3b14da"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b4025f5b7342e454a2b3d7327f3b14da",
+        "rawModeData": ""
+    }
+}

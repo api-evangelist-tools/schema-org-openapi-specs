@@ -1,0 +1,59 @@
+{
+    "id": "795abc89f54ec0612556e250717f8c93",
+    "name": "Movie Rental Store",
+    "description": "Autogeneration of Movie Rental Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "cbbbaf77b2e3c029f1df1bc5bc2cebd0",
+        "name": "\/Movie-Rental-Store\/",
+        "url": "{{url}}\/Movie-Rental-Store\/",
+        "description": "Autogeneration of Movie Rental Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "cbbbaf77b2e3c029f1df1bc5bc2cebd0",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Movie-Rental-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "08204bfbcf2043ef890a86c9dbcfb148",
+                "collection": "795abc89f54ec0612556e250717f8c93"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "795abc89f54ec0612556e250717f8c93",
+        "rawModeData": ""
+    }
+}

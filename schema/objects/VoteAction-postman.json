@@ -1,0 +1,59 @@
+{
+    "id": "b7f0e5a65ab979b77eecd599da561c3d",
+    "name": "Vote Action",
+    "description": "Autogeneration of Vote Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "21f58d0105a4bfa0766b3d2bc44ceaab",
+        "name": "\/Vote-Action\/",
+        "url": "{{url}}\/Vote-Action\/",
+        "description": "Autogeneration of Vote Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "21f58d0105a4bfa0766b3d2bc44ceaab",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"candidate\": {},\n    \"actionOption\": {},\n    \"option\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Vote-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4679f80f89d12619b248b600ed28035a",
+                "collection": "b7f0e5a65ab979b77eecd599da561c3d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b7f0e5a65ab979b77eecd599da561c3d",
+        "rawModeData": ""
+    }
+}

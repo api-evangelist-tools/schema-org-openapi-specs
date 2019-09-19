@@ -1,0 +1,59 @@
+{
+    "id": "cbd4d11db2cf46e20dfad9d17d77bc58",
+    "name": "Contact Point Option",
+    "description": "Autogeneration of Contact Point Option Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d7b67992abe90f4687af20e88d26e0a2",
+        "name": "\/Contact-Point-Option\/",
+        "url": "{{url}}\/Contact-Point-Option\/",
+        "description": "Autogeneration of Contact Point Option Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d7b67992abe90f4687af20e88d26e0a2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Contact-Point-Option\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c6371de5dc8d9c79abf9c0e3d1f93154",
+                "collection": "cbd4d11db2cf46e20dfad9d17d77bc58"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "cbd4d11db2cf46e20dfad9d17d77bc58",
+        "rawModeData": ""
+    }
+}

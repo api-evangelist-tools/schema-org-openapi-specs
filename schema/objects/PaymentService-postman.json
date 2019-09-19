@@ -1,0 +1,59 @@
+{
+    "id": "2f5198017977fc73a06415bb64c9b1ac",
+    "name": "Payment Service",
+    "description": "Autogeneration of Payment Service Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c8739f12191da428766209536654a6b7",
+        "name": "\/Payment-Service\/",
+        "url": "{{url}}\/Payment-Service\/",
+        "description": "Autogeneration of Payment Service Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c8739f12191da428766209536654a6b7",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"annualPercentageRate\": {},\n    \"interestRate\": {},\n    \"feesAndCommissionsSpecification\": \"String Content\",\n    \"serviceArea\": {},\n    \"produces\": {},\n    \"provider\": {},\n    \"serviceAudience\": {},\n    \"areaServed\": {},\n    \"audience\": {},\n    \"hasOfferCatalog\": {},\n    \"hoursAvailable\": {},\n    \"providerMobility\": \"String Content\",\n    \"aggregateRating\": {},\n    \"offers\": {},\n    \"award\": \"String Content\",\n    \"category\": \"String Content\",\n    \"broker\": {},\n    \"serviceOutput\": {},\n    \"logo\": {},\n    \"isSimilarTo\": {},\n    \"isRelatedTo\": {},\n    \"availableChannel\": {},\n    \"review\": {},\n    \"serviceType\": \"String Content\",\n    \"brand\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Payment-Service\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4bb1200783e2488aa9be07c653dbcfcc",
+                "collection": "2f5198017977fc73a06415bb64c9b1ac"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "2f5198017977fc73a06415bb64c9b1ac",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "c2af2a1a90c083a742c847459f7fa56b",
+    "name": "Locksmith",
+    "description": "Autogeneration of Locksmith Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "0fcb4228e39e6fa8ca18f0b635b9ce50",
+        "name": "\/Locksmith\/",
+        "url": "{{url}}\/Locksmith\/",
+        "description": "Autogeneration of Locksmith Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "0fcb4228e39e6fa8ca18f0b635b9ce50",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Locksmith\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "222f169765a2458636287ee5a929e67e",
+                "collection": "c2af2a1a90c083a742c847459f7fa56b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c2af2a1a90c083a742c847459f7fa56b",
+        "rawModeData": ""
+    }
+}

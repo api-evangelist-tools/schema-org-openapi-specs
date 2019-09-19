@@ -1,0 +1,59 @@
+{
+    "id": "62bd42cd7d8e2e3500a6c6bbf973da2d",
+    "name": "Resort",
+    "description": "Autogeneration of Resort Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d05ebecedabc94010191d56143dcb30c",
+        "name": "\/Resort\/",
+        "url": "{{url}}\/Resort\/",
+        "description": "Autogeneration of Resort Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d05ebecedabc94010191d56143dcb30c",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"audience\": {},\n    \"checkinTime\": \"String Content\",\n    \"petsAllowed\": \"String Content\",\n    \"availableLanguage\": \"String Content\",\n    \"amenityFeature\": {},\n    \"starRating\": {},\n    \"checkoutTime\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Resort\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "af919308fb1ed419af2f7b231b53ea5a",
+                "collection": "62bd42cd7d8e2e3500a6c6bbf973da2d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "62bd42cd7d8e2e3500a6c6bbf973da2d",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "be0a2e216369f8a752e743642ac4ee14",
+    "name": "Quantitative Value",
+    "description": "Autogeneration of Quantitative Value Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e5cb8996df963a1a3c409cc9a939fd4d",
+        "name": "\/Quantitative-Value\/",
+        "url": "{{url}}\/Quantitative-Value\/",
+        "description": "Autogeneration of Quantitative Value Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e5cb8996df963a1a3c409cc9a939fd4d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"unitCode\": {},\n    \"minValue\": 10,\n    \"value\": {},\n    \"additionalProperty\": {},\n    \"valueReference\": {},\n    \"maxValue\": 10,\n    \"unitText\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Quantitative-Value\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d8f8f8945d7b7ae551e914804c3fffba",
+                "collection": "be0a2e216369f8a752e743642ac4ee14"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "be0a2e216369f8a752e743642ac4ee14",
+        "rawModeData": ""
+    }
+}

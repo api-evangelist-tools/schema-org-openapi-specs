@@ -1,0 +1,59 @@
+{
+    "id": "a7270bd9f0cabada804feef493b2f591",
+    "name": "Legal Service",
+    "description": "Autogeneration of Legal Service Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "8f72140f6abb4ff76880b4350b221635",
+        "name": "\/Legal-Service\/",
+        "url": "{{url}}\/Legal-Service\/",
+        "description": "Autogeneration of Legal Service Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "8f72140f6abb4ff76880b4350b221635",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Legal-Service\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "9fcf5aa6cd4db24d1d1321e09b9b8935",
+                "collection": "a7270bd9f0cabada804feef493b2f591"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a7270bd9f0cabada804feef493b2f591",
+        "rawModeData": ""
+    }
+}

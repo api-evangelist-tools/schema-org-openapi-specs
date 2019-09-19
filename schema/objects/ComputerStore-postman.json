@@ -1,0 +1,59 @@
+{
+    "id": "528fb93d5b4b90a27ac37ec089a0ac57",
+    "name": "Computer Store",
+    "description": "Autogeneration of Computer Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e23bbb378ade09fccc408542f9ecfffb",
+        "name": "\/Computer-Store\/",
+        "url": "{{url}}\/Computer-Store\/",
+        "description": "Autogeneration of Computer Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e23bbb378ade09fccc408542f9ecfffb",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Computer-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4156ccb44af91ff147ba77698b2a8623",
+                "collection": "528fb93d5b4b90a27ac37ec089a0ac57"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "528fb93d5b4b90a27ac37ec089a0ac57",
+        "rawModeData": ""
+    }
+}

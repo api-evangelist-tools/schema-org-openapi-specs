@@ -1,0 +1,59 @@
+{
+    "id": "eb4fe44344d915e0ef924dfb4a5641e9",
+    "name": "Live Blog Posting",
+    "description": "Autogeneration of Live Blog Posting Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e5eeb39ed93c55ced14294dcf838d8dd",
+        "name": "\/Live-Blog-Posting\/",
+        "url": "{{url}}\/Live-Blog-Posting\/",
+        "description": "Autogeneration of Live Blog Posting Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e5eeb39ed93c55ced14294dcf838d8dd",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"coverageStartTime\": \"String Content\",\n    \"coverageEndTime\": \"String Content\",\n    \"liveBlogUpdate\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Live-Blog-Posting\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "0c4ac146573125f1cb11493efdf4cf4c",
+                "collection": "eb4fe44344d915e0ef924dfb4a5641e9"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "eb4fe44344d915e0ef924dfb4a5641e9",
+        "rawModeData": ""
+    }
+}

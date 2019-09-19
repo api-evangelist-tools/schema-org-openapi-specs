@@ -1,0 +1,59 @@
+{
+    "id": "c5371c7c10c008c7fc7f49ecd6a25724",
+    "name": "Location Feature Specification",
+    "description": "Autogeneration of Location Feature Specification Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d6902ba9ca1616933fb78152fcf41b2b",
+        "name": "\/Location-Feature-Specification\/",
+        "url": "{{url}}\/Location-Feature-Specification\/",
+        "description": "Autogeneration of Location Feature Specification Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d6902ba9ca1616933fb78152fcf41b2b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"hoursAvailable\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"unitCode\": {},\n    \"minValue\": 10,\n    \"propertyID\": {},\n    \"value\": {},\n    \"valueReference\": {},\n    \"maxValue\": 10,\n    \"unitText\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Location-Feature-Specification\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "2cff343c274dbf730aef9e9f2393e15d",
+                "collection": "c5371c7c10c008c7fc7f49ecd6a25724"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c5371c7c10c008c7fc7f49ecd6a25724",
+        "rawModeData": ""
+    }
+}

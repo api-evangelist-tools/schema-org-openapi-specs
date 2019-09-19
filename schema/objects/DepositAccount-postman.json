@@ -1,0 +1,59 @@
+{
+    "id": "ec5b98b9e5dece44a7bc9cea14a2251f",
+    "name": "Deposit Account",
+    "description": "Autogeneration of Deposit Account Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "8d7163d6c8f1f06809f23150d61fda4d",
+        "name": "\/Deposit-Account\/",
+        "url": "{{url}}\/Deposit-Account\/",
+        "description": "Autogeneration of Deposit Account Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "8d7163d6c8f1f06809f23150d61fda4d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"amount\": {},\n    \"annualPercentageRate\": {},\n    \"interestRate\": {},\n    \"feesAndCommissionsSpecification\": \"String Content\",\n    \"serviceArea\": {},\n    \"produces\": {},\n    \"provider\": {},\n    \"serviceAudience\": {},\n    \"areaServed\": {},\n    \"audience\": {},\n    \"hasOfferCatalog\": {},\n    \"hoursAvailable\": {},\n    \"providerMobility\": \"String Content\",\n    \"aggregateRating\": {},\n    \"offers\": {},\n    \"award\": \"String Content\",\n    \"category\": \"String Content\",\n    \"broker\": {},\n    \"serviceOutput\": {},\n    \"logo\": {},\n    \"isSimilarTo\": {},\n    \"isRelatedTo\": {},\n    \"availableChannel\": {},\n    \"review\": {},\n    \"serviceType\": \"String Content\",\n    \"brand\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Deposit-Account\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "acb92594ac0f5e6e7a0128f2b1dd6391",
+                "collection": "ec5b98b9e5dece44a7bc9cea14a2251f"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ec5b98b9e5dece44a7bc9cea14a2251f",
+        "rawModeData": ""
+    }
+}

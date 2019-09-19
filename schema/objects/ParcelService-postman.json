@@ -1,0 +1,59 @@
+{
+    "id": "0d46ed677da2e30c244af7a8effc6743",
+    "name": "Parcel Service",
+    "description": "Autogeneration of Parcel Service Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "9816c0bda2ed9752d0b358698e93635e",
+        "name": "\/Parcel-Service\/",
+        "url": "{{url}}\/Parcel-Service\/",
+        "description": "Autogeneration of Parcel Service Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "9816c0bda2ed9752d0b358698e93635e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Parcel-Service\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "446dd4ee1e1ede2f90c4d3a5e3cdbb71",
+                "collection": "0d46ed677da2e30c244af7a8effc6743"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0d46ed677da2e30c244af7a8effc6743",
+        "rawModeData": ""
+    }
+}

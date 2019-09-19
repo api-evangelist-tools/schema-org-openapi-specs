@@ -1,0 +1,59 @@
+{
+    "id": "7503337708cf5ab512d2f89aef85c5f9",
+    "name": "Property Value Specification",
+    "description": "Autogeneration of Property Value Specification Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7e8305e657675cf2325b816f2787676a",
+        "name": "\/Property-Value-Specification\/",
+        "url": "{{url}}\/Property-Value-Specification\/",
+        "description": "Autogeneration of Property Value Specification Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7e8305e657675cf2325b816f2787676a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"defaultValue\": \"String Content\",\n    \"minValue\": 10,\n    \"valuePattern\": \"String Content\",\n    \"stepValue\": 10,\n    \"valueMaxLength\": 10,\n    \"readonlyValue\": 1,\n    \"valueMinLength\": 10,\n    \"maxValue\": 10,\n    \"valueName\": \"String Content\",\n    \"multipleValues\": 1,\n    \"valueRequired\": 1\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Property-Value-Specification\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "b55dec4a87a5ef90e692af222870d25a",
+                "collection": "7503337708cf5ab512d2f89aef85c5f9"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "7503337708cf5ab512d2f89aef85c5f9",
+        "rawModeData": ""
+    }
+}

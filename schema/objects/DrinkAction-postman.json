@@ -1,0 +1,59 @@
+{
+    "id": "0cfeb3ed340921ed94078af57adfd583",
+    "name": "Drink Action",
+    "description": "Autogeneration of Drink Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "73ccfd2b11e341ac3a8c3bbc181ae0dc",
+        "name": "\/Drink-Action\/",
+        "url": "{{url}}\/Drink-Action\/",
+        "description": "Autogeneration of Drink Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "73ccfd2b11e341ac3a8c3bbc181ae0dc",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"expectsAcceptanceOf\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Drink-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3bc1dcffbdeb642cccfa71d78191ab74",
+                "collection": "0cfeb3ed340921ed94078af57adfd583"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0cfeb3ed340921ed94078af57adfd583",
+        "rawModeData": ""
+    }
+}

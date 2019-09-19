@@ -1,0 +1,59 @@
+{
+    "id": "cbe905ca435a4945067335546c32e315",
+    "name": "How To Item",
+    "description": "Autogeneration of How To Item Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1574d050a7ce4371438d9afd86e4e908",
+        "name": "\/How-To-Item\/",
+        "url": "{{url}}\/How-To-Item\/",
+        "description": "Autogeneration of How To Item Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1574d050a7ce4371438d9afd86e4e908",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"requiredQuantity\": 10,\n    \"nextItem\": {},\n    \"position\": 100,\n    \"previousItem\": {},\n    \"item\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/How-To-Item\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3f78eb5aa02c1f9d0f107e1ecb79a717",
+                "collection": "cbe905ca435a4945067335546c32e315"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "cbe905ca435a4945067335546c32e315",
+        "rawModeData": ""
+    }
+}

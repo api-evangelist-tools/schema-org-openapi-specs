@@ -1,0 +1,59 @@
+{
+    "id": "c30d5b2914ed47a75ddbf5d8f9b6c213",
+    "name": "Reply Action",
+    "description": "Autogeneration of Reply Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "10d31fcef86c7eca0cab34a22ecebd98",
+        "name": "\/Reply-Action\/",
+        "url": "{{url}}\/Reply-Action\/",
+        "description": "Autogeneration of Reply Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "10d31fcef86c7eca0cab34a22ecebd98",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"resultComment\": {},\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Reply-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "472e20daa918cec978700d5a29b260d0",
+                "collection": "c30d5b2914ed47a75ddbf5d8f9b6c213"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c30d5b2914ed47a75ddbf5d8f9b6c213",
+        "rawModeData": ""
+    }
+}

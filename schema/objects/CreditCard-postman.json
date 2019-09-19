@@ -1,0 +1,59 @@
+{
+    "id": "7abb4f1c046e6f678e08d6a2564a729c",
+    "name": "Credit Card",
+    "description": "Autogeneration of Credit Card Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e6768351d008c3b77ae5df5363e66c0f",
+        "name": "\/Credit-Card\/",
+        "url": "{{url}}\/Credit-Card\/",
+        "description": "Autogeneration of Credit Card Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e6768351d008c3b77ae5df5363e66c0f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"annualPercentageRate\": {},\n    \"interestRate\": {},\n    \"feesAndCommissionsSpecification\": \"String Content\",\n    \"serviceArea\": {},\n    \"produces\": {},\n    \"provider\": {},\n    \"serviceAudience\": {},\n    \"areaServed\": {},\n    \"audience\": {},\n    \"hasOfferCatalog\": {},\n    \"hoursAvailable\": {},\n    \"providerMobility\": \"String Content\",\n    \"aggregateRating\": {},\n    \"offers\": {},\n    \"award\": \"String Content\",\n    \"category\": \"String Content\",\n    \"broker\": {},\n    \"serviceOutput\": {},\n    \"logo\": {},\n    \"isSimilarTo\": {},\n    \"isRelatedTo\": {},\n    \"availableChannel\": {},\n    \"review\": {},\n    \"serviceType\": \"String Content\",\n    \"brand\": {},\n    \"loanTerm\": {},\n    \"amount\": {},\n    \"requiredCollateral\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Credit-Card\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "6efc98131c042d8d87976fa35d7e2c61",
+                "collection": "7abb4f1c046e6f678e08d6a2564a729c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "7abb4f1c046e6f678e08d6a2564a729c",
+        "rawModeData": ""
+    }
+}

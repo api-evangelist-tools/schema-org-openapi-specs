@@ -1,0 +1,59 @@
+{
+    "id": "f6ed351283e22c6955f632c00188e357",
+    "name": "Business Audience",
+    "description": "Autogeneration of Business Audience Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "8840eff1774654f6e3cc914e5c9ac7c7",
+        "name": "\/Business-Audience\/",
+        "url": "{{url}}\/Business-Audience\/",
+        "description": "Autogeneration of Business Audience Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "8840eff1774654f6e3cc914e5c9ac7c7",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"yearsInOperation\": {},\n    \"yearlyRevenue\": {},\n    \"numberOfEmployees\": {},\n    \"audienceType\": \"String Content\",\n    \"geographicArea\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Business-Audience\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "e7b2711cba2cd7565a7c8a3959fe5cd0",
+                "collection": "f6ed351283e22c6955f632c00188e357"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f6ed351283e22c6955f632c00188e357",
+        "rawModeData": ""
+    }
+}

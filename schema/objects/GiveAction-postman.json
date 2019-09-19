@@ -1,0 +1,59 @@
+{
+    "id": "c406915de3c94b7449e7ea4b4e580d40",
+    "name": "Give Action",
+    "description": "Autogeneration of Give Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "fa53d008470fedf0ae9e59f45a9bef95",
+        "name": "\/Give-Action\/",
+        "url": "{{url}}\/Give-Action\/",
+        "description": "Autogeneration of Give Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "fa53d008470fedf0ae9e59f45a9bef95",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"recipient\": {},\n    \"toLocation\": {},\n    \"fromLocation\": {},\n    \"result\": {},\n    \"actionStatus\": {},\n    \"target\": {},\n    \"agent\": {},\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"instrument\": {},\n    \"participant\": {},\n    \"object\": {},\n    \"error\": {},\n    \"location\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Give-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "000c8eeb22803d854016089a1b7fb5ab",
+                "collection": "c406915de3c94b7449e7ea4b4e580d40"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c406915de3c94b7449e7ea4b4e580d40",
+        "rawModeData": ""
+    }
+}

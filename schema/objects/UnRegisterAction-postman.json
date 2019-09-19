@@ -1,0 +1,59 @@
+{
+    "id": "1be0b22c1f40481f7e6cf2de2a73ad52",
+    "name": "Un Register Action",
+    "description": "Autogeneration of Un Register Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "cbcae483cb3ca8082530194dc1539ad0",
+        "name": "\/Un-Register-Action\/",
+        "url": "{{url}}\/Un-Register-Action\/",
+        "description": "Autogeneration of Un Register Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "cbcae483cb3ca8082530194dc1539ad0",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Un-Register-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "b64da69f000feecf4af8a0eadbf17e5e",
+                "collection": "1be0b22c1f40481f7e6cf2de2a73ad52"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1be0b22c1f40481f7e6cf2de2a73ad52",
+        "rawModeData": ""
+    }
+}

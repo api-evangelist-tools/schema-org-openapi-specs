@@ -1,0 +1,59 @@
+{
+    "id": "dc933cc4e33edbde4275c6c7f31935c5",
+    "name": "Product",
+    "description": "Autogeneration of Product Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f3273be321404ef555e8adda5b29b89f",
+        "name": "\/Product\/",
+        "url": "{{url}}\/Product\/",
+        "description": "Autogeneration of Product Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f3273be321404ef555e8adda5b29b89f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"manufacturer\": {},\n    \"sku\": \"String Content\",\n    \"audience\": {},\n    \"mpn\": \"String Content\",\n    \"height\": {},\n    \"gtin8\": \"String Content\",\n    \"reviews\": {},\n    \"aggregateRating\": {},\n    \"isConsumableFor\": {},\n    \"offers\": {},\n    \"award\": \"String Content\",\n    \"category\": \"String Content\",\n    \"width\": {},\n    \"awards\": \"String Content\",\n    \"additionalProperty\": {},\n    \"isAccessoryOrSparePartFor\": {},\n    \"logo\": {},\n    \"gtin14\": \"String Content\",\n    \"gtin13\": \"String Content\",\n    \"gtin12\": \"String Content\",\n    \"material\": \"String Content\",\n    \"weight\": {},\n    \"depth\": {},\n    \"isSimilarTo\": {},\n    \"model\": {},\n    \"color\": \"String Content\",\n    \"isRelatedTo\": {},\n    \"productID\": \"String Content\",\n    \"review\": {},\n    \"purchaseDate\": \"String Content\",\n    \"itemCondition\": {},\n    \"productionDate\": \"String Content\",\n    \"brand\": {},\n    \"releaseDate\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Product\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c0e2f20104e31175d53079eab5ead4c2",
+                "collection": "dc933cc4e33edbde4275c6c7f31935c5"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "dc933cc4e33edbde4275c6c7f31935c5",
+        "rawModeData": ""
+    }
+}

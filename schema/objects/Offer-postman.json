@@ -1,0 +1,59 @@
+{
+    "id": "6d7aeb61c5e80b5adb4c1addedf8011d",
+    "name": "Offer",
+    "description": "Autogeneration of Offer Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c454057c8e6cbd745af8c325bdfa17a5",
+        "name": "\/Offer\/",
+        "url": "{{url}}\/Offer\/",
+        "description": "Autogeneration of Offer Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c454057c8e6cbd745af8c325bdfa17a5",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"sku\": \"String Content\",\n    \"availabilityStarts\": \"String Content\",\n    \"availableDeliveryMethod\": {},\n    \"areaServed\": {},\n    \"mpn\": \"String Content\",\n    \"serialNumber\": \"String Content\",\n    \"ineligibleRegion\": {},\n    \"gtin8\": \"String Content\",\n    \"reviews\": {},\n    \"availability\": {},\n    \"priceSpecification\": {},\n    \"inventoryLevel\": {},\n    \"aggregateRating\": {},\n    \"eligibleTransactionVolume\": {},\n    \"availableAtOrFrom\": {},\n    \"priceCurrency\": \"String Content\",\n    \"category\": \"String Content\",\n    \"priceValidUntil\": \"String Content\",\n    \"addOn\": {},\n    \"warranty\": {},\n    \"includesObject\": {},\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"advanceBookingRequirement\": {},\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"gtin14\": \"String Content\",\n    \"gtin13\": \"String Content\",\n    \"gtin12\": \"String Content\",\n    \"seller\": {},\n    \"deliveryLeadTime\": {},\n    \"availabilityEnds\": \"String Content\",\n    \"review\": {},\n    \"businessFunction\": {},\n    \"eligibleCustomerType\": {},\n    \"itemCondition\": {},\n    \"itemOffered\": {},\n    \"offeredBy\": {},\n    \"eligibleDuration\": {},\n    \"acceptedPaymentMethod\": {},\n    \"eligibleRegion\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Offer\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d7941b9db3728960063e1240fb76be80",
+                "collection": "6d7aeb61c5e80b5adb4c1addedf8011d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6d7aeb61c5e80b5adb4c1addedf8011d",
+        "rawModeData": ""
+    }
+}

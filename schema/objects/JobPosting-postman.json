@@ -1,0 +1,59 @@
+{
+    "id": "cd55ea5c9caf9152abfa4c9f1de54a58",
+    "name": "Job Posting",
+    "description": "Autogeneration of Job Posting Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b4e6fa28223dca8ed1d87b8eb9259479",
+        "name": "\/Job-Posting\/",
+        "url": "{{url}}\/Job-Posting\/",
+        "description": "Autogeneration of Job Posting Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b4e6fa28223dca8ed1d87b8eb9259479",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"benefits\": \"String Content\",\n    \"qualifications\": \"String Content\",\n    \"incentiveCompensation\": \"String Content\",\n    \"workHours\": \"String Content\",\n    \"salaryCurrency\": \"String Content\",\n    \"jobBenefits\": \"String Content\",\n    \"datePosted\": \"String Content\",\n    \"skills\": \"String Content\",\n    \"incentives\": \"String Content\",\n    \"educationRequirements\": \"String Content\",\n    \"responsibilities\": \"String Content\",\n    \"baseSalary\": {},\n    \"validThrough\": \"String Content\",\n    \"hiringOrganization\": {},\n    \"specialCommitments\": \"String Content\",\n    \"occupationalCategory\": \"String Content\",\n    \"experienceRequirements\": \"String Content\",\n    \"employmentType\": \"String Content\",\n    \"jobLocation\": {},\n    \"title\": \"String Content\",\n    \"industry\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Job-Posting\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "6788220536946d65de55252c32a8df6b",
+                "collection": "cd55ea5c9caf9152abfa4c9f1de54a58"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "cd55ea5c9caf9152abfa4c9f1de54a58",
+        "rawModeData": ""
+    }
+}

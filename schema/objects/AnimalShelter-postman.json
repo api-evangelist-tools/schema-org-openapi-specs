@@ -1,0 +1,59 @@
+{
+    "id": "b8cdabbeff3667b884900acd4552e217",
+    "name": "Animal Shelter",
+    "description": "Autogeneration of Animal Shelter Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "8bac27b75c8102a1e8c3713067507de5",
+        "name": "\/Animal-Shelter\/",
+        "url": "{{url}}\/Animal-Shelter\/",
+        "description": "Autogeneration of Animal Shelter Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "8bac27b75c8102a1e8c3713067507de5",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Animal-Shelter\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "6b89f5bd170edc8fd3afab7d9f2fb732",
+                "collection": "b8cdabbeff3667b884900acd4552e217"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b8cdabbeff3667b884900acd4552e217",
+        "rawModeData": ""
+    }
+}

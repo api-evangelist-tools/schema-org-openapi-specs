@@ -1,0 +1,59 @@
+{
+    "id": "8ad2302fefe8e38b1529d466412d8113",
+    "name": "Ocean Body Of Water",
+    "description": "Autogeneration of Ocean Body Of Water Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "12f7c3bd200c250552d169f3e6826355",
+        "name": "\/Ocean-Body-Of-Water\/",
+        "url": "{{url}}\/Ocean-Body-Of-Water\/",
+        "description": "Autogeneration of Ocean Body Of Water Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "12f7c3bd200c250552d169f3e6826355",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Ocean-Body-Of-Water\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "2bdd7eb99f8bb0fc6979fa948e80d5e8",
+                "collection": "8ad2302fefe8e38b1529d466412d8113"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "8ad2302fefe8e38b1529d466412d8113",
+        "rawModeData": ""
+    }
+}

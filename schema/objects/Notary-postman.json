@@ -1,0 +1,59 @@
+{
+    "id": "6327cddadb390d7e85c34861d9810639",
+    "name": "Notary",
+    "description": "Autogeneration of Notary Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "dd8b5996aed3db7c53721ac612f974af",
+        "name": "\/Notary\/",
+        "url": "{{url}}\/Notary\/",
+        "description": "Autogeneration of Notary Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "dd8b5996aed3db7c53721ac612f974af",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Notary\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "069e0c7bf4ae046c95da449c53a0318c",
+                "collection": "6327cddadb390d7e85c34861d9810639"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6327cddadb390d7e85c34861d9810639",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "ecc9cb8ab466fd27f6e7084be6e643fa",
+    "name": "Warranty Scope",
+    "description": "Autogeneration of Warranty Scope Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "617569a0017cc29db41abad7efa36663",
+        "name": "\/Warranty-Scope\/",
+        "url": "{{url}}\/Warranty-Scope\/",
+        "description": "Autogeneration of Warranty Scope Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "617569a0017cc29db41abad7efa36663",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Warranty-Scope\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a482b223d1a7e5548d8e5c6546432cfd",
+                "collection": "ecc9cb8ab466fd27f6e7084be6e643fa"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ecc9cb8ab466fd27f6e7084be6e643fa",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "aa69c3fdfcec09e40f1a97e5cf5b350a",
+    "name": "Movie Theater",
+    "description": "Autogeneration of Movie Theater Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b36ab20f71d0b837f84a6660648e8ce2",
+        "name": "\/Movie-Theater\/",
+        "url": "{{url}}\/Movie-Theater\/",
+        "description": "Autogeneration of Movie Theater Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b36ab20f71d0b837f84a6660648e8ce2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"screenCount\": 10,\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Movie-Theater\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "16b4f2aea8755ac8824915c3caa0c344",
+                "collection": "aa69c3fdfcec09e40f1a97e5cf5b350a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "aa69c3fdfcec09e40f1a97e5cf5b350a",
+        "rawModeData": ""
+    }
+}

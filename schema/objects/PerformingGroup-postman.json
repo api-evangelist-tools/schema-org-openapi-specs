@@ -1,0 +1,59 @@
+{
+    "id": "32a2fe8adae7c6f9eae6eb3b8b2ed978",
+    "name": "Performing Group",
+    "description": "Autogeneration of Performing Group Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7c70bbc9ec4272e7b85ffe71424cbe3d",
+        "name": "\/Performing-Group\/",
+        "url": "{{url}}\/Performing-Group\/",
+        "description": "Autogeneration of Performing Group Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7c70bbc9ec4272e7b85ffe71424cbe3d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"serviceArea\": {},\n    \"funder\": {},\n    \"areaServed\": {},\n    \"memberOf\": {},\n    \"events\": {},\n    \"subOrganization\": {},\n    \"hasOfferCatalog\": {},\n    \"globalLocationNumber\": \"String Content\",\n    \"reviews\": {},\n    \"members\": {},\n    \"aggregateRating\": {},\n    \"duns\": \"String Content\",\n    \"taxID\": \"String Content\",\n    \"award\": \"String Content\",\n    \"makesOffer\": {},\n    \"contactPoints\": {},\n    \"awards\": \"String Content\",\n    \"seeks\": {},\n    \"member\": {},\n    \"founders\": {},\n    \"alumni\": {},\n    \"dissolutionDate\": \"String Content\",\n    \"address\": {},\n    \"logo\": {},\n    \"employees\": {},\n    \"telephone\": \"String Content\",\n    \"email\": \"String Content\",\n    \"department\": {},\n    \"contactPoint\": {},\n    \"parentOrganization\": {},\n    \"legalName\": \"String Content\",\n    \"foundingDate\": \"String Content\",\n    \"employee\": {},\n    \"numberOfEmployees\": {},\n    \"naics\": \"String Content\",\n    \"hasPOS\": {},\n    \"review\": {},\n    \"foundingLocation\": {},\n    \"owns\": {},\n    \"event\": {},\n    \"founder\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"isicV4\": \"String Content\",\n    \"location\": {},\n    \"brand\": {},\n    \"vatID\": \"String Content\",\n    \"leiCode\": \"String Content\",\n    \"faxNumber\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Performing-Group\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "b2bdedb2a9cc4a0cda662c6761248730",
+                "collection": "32a2fe8adae7c6f9eae6eb3b8b2ed978"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "32a2fe8adae7c6f9eae6eb3b8b2ed978",
+        "rawModeData": ""
+    }
+}

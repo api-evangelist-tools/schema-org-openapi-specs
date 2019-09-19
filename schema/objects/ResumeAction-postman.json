@@ -1,0 +1,59 @@
+{
+    "id": "82f4ddbc32ce9a849b4f05863026e387",
+    "name": "Resume Action",
+    "description": "Autogeneration of Resume Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ce0680c750767a7200c957a8278bd6a5",
+        "name": "\/Resume-Action\/",
+        "url": "{{url}}\/Resume-Action\/",
+        "description": "Autogeneration of Resume Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ce0680c750767a7200c957a8278bd6a5",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Resume-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "91ddc0be38f658e7cc42795c07b5955a",
+                "collection": "82f4ddbc32ce9a849b4f05863026e387"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "82f4ddbc32ce9a849b4f05863026e387",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "69d69b7daf26e1c9fef862d1e830d2d5",
+    "name": "How To Section",
+    "description": "Autogeneration of How To Section Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "79747e1a4aa69a4c91c5fd4dae34e154",
+        "name": "\/How-To-Section\/",
+        "url": "{{url}}\/How-To-Section\/",
+        "description": "Autogeneration of How To Section Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "79747e1a4aa69a4c91c5fd4dae34e154",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"steps\": {},\n    \"itemListElement\": {},\n    \"itemListOrder\": \"String Content\",\n    \"numberOfItems\": 100\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/How-To-Section\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "40e817c3c62c7c996441d63e65fae935",
+                "collection": "69d69b7daf26e1c9fef862d1e830d2d5"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "69d69b7daf26e1c9fef862d1e830d2d5",
+        "rawModeData": ""
+    }
+}

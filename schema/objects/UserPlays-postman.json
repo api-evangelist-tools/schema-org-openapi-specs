@@ -1,0 +1,59 @@
+{
+    "id": "934e192e478eb0a41ff0bd2d79ff787e",
+    "name": "User Plays",
+    "description": "Autogeneration of User Plays Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ae2ce4fb497866a5084f2bd8923d2fa4",
+        "name": "\/User-Plays\/",
+        "url": "{{url}}\/User-Plays\/",
+        "description": "Autogeneration of User Plays Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ae2ce4fb497866a5084f2bd8923d2fa4",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/User-Plays\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "fdc2949ac30d29990c1a227422771678",
+                "collection": "934e192e478eb0a41ff0bd2d79ff787e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "934e192e478eb0a41ff0bd2d79ff787e",
+        "rawModeData": ""
+    }
+}

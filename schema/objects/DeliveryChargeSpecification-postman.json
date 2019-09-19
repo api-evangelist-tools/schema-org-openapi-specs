@@ -1,0 +1,59 @@
+{
+    "id": "4a27e752c8ceab5de83950b1e91dab90",
+    "name": "Delivery Charge Specification",
+    "description": "Autogeneration of Delivery Charge Specification Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "a14a71b260e8e52b43f6a2bc10be580b",
+        "name": "\/Delivery-Charge-Specification\/",
+        "url": "{{url}}\/Delivery-Charge-Specification\/",
+        "description": "Autogeneration of Delivery Charge Specification Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "a14a71b260e8e52b43f6a2bc10be580b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"areaServed\": {},\n    \"ineligibleRegion\": {},\n    \"appliesToDeliveryMethod\": {},\n    \"eligibleRegion\": {},\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Delivery-Charge-Specification\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "465e9247ee3f680fa51357616021002f",
+                "collection": "4a27e752c8ceab5de83950b1e91dab90"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4a27e752c8ceab5de83950b1e91dab90",
+        "rawModeData": ""
+    }
+}

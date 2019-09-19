@@ -1,0 +1,59 @@
+{
+    "id": "1cf71423911275280cb2450e87e25fea",
+    "name": "How To Step",
+    "description": "Autogeneration of How To Step Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "75074519ffb5ba76a8ebc0b3a59737c2",
+        "name": "\/How-To-Step\/",
+        "url": "{{url}}\/How-To-Step\/",
+        "description": "Autogeneration of How To Step Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "75074519ffb5ba76a8ebc0b3a59737c2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"itemListElement\": {},\n    \"itemListOrder\": \"String Content\",\n    \"numberOfItems\": 100\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/How-To-Step\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a2b34258575558bc9700f430d00ab4b9",
+                "collection": "1cf71423911275280cb2450e87e25fea"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1cf71423911275280cb2450e87e25fea",
+        "rawModeData": ""
+    }
+}

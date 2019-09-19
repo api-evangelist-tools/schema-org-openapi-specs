@@ -1,0 +1,59 @@
+{
+    "id": "6e75c386016e3f4ceed64689c9e6bb3b",
+    "name": "Courthouse",
+    "description": "Autogeneration of Courthouse Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "17fe1154e7f0a21ec5c98aea3efced51",
+        "name": "\/Courthouse\/",
+        "url": "{{url}}\/Courthouse\/",
+        "description": "Autogeneration of Courthouse Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "17fe1154e7f0a21ec5c98aea3efced51",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Courthouse\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f86c01495acad86af12de02974be9df0",
+                "collection": "6e75c386016e3f4ceed64689c9e6bb3b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6e75c386016e3f4ceed64689c9e6bb3b",
+        "rawModeData": ""
+    }
+}

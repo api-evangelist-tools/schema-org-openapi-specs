@@ -1,0 +1,59 @@
+{
+    "id": "e4d4931cfeba95ab60ef614ad8fc2b0c",
+    "name": "Entry Point",
+    "description": "Autogeneration of Entry Point Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1f06a81475d207adfc16bbd6041dd48f",
+        "name": "\/Entry-Point\/",
+        "url": "{{url}}\/Entry-Point\/",
+        "description": "Autogeneration of Entry Point Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1f06a81475d207adfc16bbd6041dd48f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"urlTemplate\": \"String Content\",\n    \"actionApplication\": {},\n    \"application\": {},\n    \"actionPlatform\": \"String Content\",\n    \"httpMethod\": \"String Content\",\n    \"encodingType\": \"String Content\",\n    \"contentType\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Entry-Point\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "5be7670d7f74be310d2ff2aaff529ce6",
+                "collection": "e4d4931cfeba95ab60ef614ad8fc2b0c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e4d4931cfeba95ab60ef614ad8fc2b0c",
+        "rawModeData": ""
+    }
+}

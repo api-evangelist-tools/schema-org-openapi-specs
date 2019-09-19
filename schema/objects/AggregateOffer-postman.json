@@ -1,0 +1,59 @@
+{
+    "id": "c5ae2e16dcd1bc756be7883b9292d57b",
+    "name": "Aggregate Offer",
+    "description": "Autogeneration of Aggregate Offer Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e312e9a09b217dc5aea2c21b94e13a05",
+        "name": "\/Aggregate-Offer\/",
+        "url": "{{url}}\/Aggregate-Offer\/",
+        "description": "Autogeneration of Aggregate Offer Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e312e9a09b217dc5aea2c21b94e13a05",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"offers\": {},\n    \"offerCount\": 100,\n    \"lowPrice\": \"String Content\",\n    \"highPrice\": \"String Content\",\n    \"sku\": \"String Content\",\n    \"availabilityStarts\": \"String Content\",\n    \"availableDeliveryMethod\": {},\n    \"areaServed\": {},\n    \"mpn\": \"String Content\",\n    \"serialNumber\": \"String Content\",\n    \"ineligibleRegion\": {},\n    \"gtin8\": \"String Content\",\n    \"reviews\": {},\n    \"availability\": {},\n    \"priceSpecification\": {},\n    \"inventoryLevel\": {},\n    \"aggregateRating\": {},\n    \"eligibleTransactionVolume\": {},\n    \"availableAtOrFrom\": {},\n    \"priceCurrency\": \"String Content\",\n    \"category\": \"String Content\",\n    \"priceValidUntil\": \"String Content\",\n    \"addOn\": {},\n    \"warranty\": {},\n    \"includesObject\": {},\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"advanceBookingRequirement\": {},\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"gtin14\": \"String Content\",\n    \"gtin13\": \"String Content\",\n    \"gtin12\": \"String Content\",\n    \"seller\": {},\n    \"deliveryLeadTime\": {},\n    \"availabilityEnds\": \"String Content\",\n    \"review\": {},\n    \"businessFunction\": {},\n    \"eligibleCustomerType\": {},\n    \"itemCondition\": {},\n    \"itemOffered\": {},\n    \"offeredBy\": {},\n    \"eligibleDuration\": {},\n    \"acceptedPaymentMethod\": {},\n    \"eligibleRegion\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Aggregate-Offer\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "851699cf0ce0ae74241e40cdce1dc44c",
+                "collection": "c5ae2e16dcd1bc756be7883b9292d57b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c5ae2e16dcd1bc756be7883b9292d57b",
+        "rawModeData": ""
+    }
+}

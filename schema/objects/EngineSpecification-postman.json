@@ -1,0 +1,59 @@
+{
+    "id": "54a96322d715302d3f87c7169a297ed2",
+    "name": "Engine Specification",
+    "description": "Autogeneration of Engine Specification Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c22e9843c4ded5950c1029a99f3aa2be",
+        "name": "\/Engine-Specification\/",
+        "url": "{{url}}\/Engine-Specification\/",
+        "description": "Autogeneration of Engine Specification Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c22e9843c4ded5950c1029a99f3aa2be",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"fuelType\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Engine-Specification\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f8b4dc5b12fbfe9a3f9df5ba2a05b47a",
+                "collection": "54a96322d715302d3f87c7169a297ed2"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "54a96322d715302d3f87c7169a297ed2",
+        "rawModeData": ""
+    }
+}

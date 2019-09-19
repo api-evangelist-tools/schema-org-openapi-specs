@@ -1,0 +1,59 @@
+{
+    "id": "8bdaf769c01556aa1d226a56065888d6",
+    "name": "Music Release",
+    "description": "Autogeneration of Music Release Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "09b2225614c8a44a834cfde441ec28da",
+        "name": "\/Music-Release\/",
+        "url": "{{url}}\/Music-Release\/",
+        "description": "Autogeneration of Music Release Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "09b2225614c8a44a834cfde441ec28da",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"recordLabel\": {},\n    \"catalogNumber\": \"String Content\",\n    \"creditedTo\": {},\n    \"releaseOf\": {},\n    \"duration\": {},\n    \"musicReleaseFormat\": {},\n    \"track\": {},\n    \"numTracks\": 100,\n    \"tracks\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Music-Release\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "2ce0c9622dcfe79097e5d63df7517254",
+                "collection": "8bdaf769c01556aa1d226a56065888d6"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "8bdaf769c01556aa1d226a56065888d6",
+        "rawModeData": ""
+    }
+}

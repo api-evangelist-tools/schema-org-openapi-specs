@@ -1,0 +1,59 @@
+{
+    "id": "d7aabfb205186b6ecd35433daf02c036",
+    "name": "Geo Coordinates",
+    "description": "Autogeneration of Geo Coordinates Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "0f220bda81aa6c3bf362baed08c38485",
+        "name": "\/Geo-Coordinates\/",
+        "url": "{{url}}\/Geo-Coordinates\/",
+        "description": "Autogeneration of Geo Coordinates Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "0f220bda81aa6c3bf362baed08c38485",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"latitude\": 10,\n    \"longitude\": 10,\n    \"address\": {},\n    \"addressCountry\": {},\n    \"postalCode\": \"String Content\",\n    \"elevation\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Geo-Coordinates\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "537503158775ea0db66ddff75f975261",
+                "collection": "d7aabfb205186b6ecd35433daf02c036"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d7aabfb205186b6ecd35433daf02c036",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "706b62d823d1afac29e6f31e0a77c29d",
+    "name": "Map Category Type",
+    "description": "Autogeneration of Map Category Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1dcab78218fe246ce1e25cc7ce265449",
+        "name": "\/Map-Category-Type\/",
+        "url": "{{url}}\/Map-Category-Type\/",
+        "description": "Autogeneration of Map Category Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1dcab78218fe246ce1e25cc7ce265449",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Map-Category-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "81b1fd2e61b37ef8ba36dd94941cbf1f",
+                "collection": "706b62d823d1afac29e6f31e0a77c29d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "706b62d823d1afac29e6f31e0a77c29d",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "570bc4e573695e684d2d8efac8b81af6",
+    "name": "Offer Item Condition",
+    "description": "Autogeneration of Offer Item Condition Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "abfb2633c25bec1abc6d7671f3a26077",
+        "name": "\/Offer-Item-Condition\/",
+        "url": "{{url}}\/Offer-Item-Condition\/",
+        "description": "Autogeneration of Offer Item Condition Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "abfb2633c25bec1abc6d7671f3a26077",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Offer-Item-Condition\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4818e2b382817f720149a1ca27d46560",
+                "collection": "570bc4e573695e684d2d8efac8b81af6"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "570bc4e573695e684d2d8efac8b81af6",
+        "rawModeData": ""
+    }
+}

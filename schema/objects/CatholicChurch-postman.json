@@ -1,0 +1,59 @@
+{
+    "id": "1fc248b5d00ba4d21f59245eb893f746",
+    "name": "Catholic Church",
+    "description": "Autogeneration of Catholic Church Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "fe71056fa9d32ab73bea34a83c67a30f",
+        "name": "\/Catholic-Church\/",
+        "url": "{{url}}\/Catholic-Church\/",
+        "description": "Autogeneration of Catholic Church Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "fe71056fa9d32ab73bea34a83c67a30f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Catholic-Church\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "6c78bf756141e0bf70967504a0546e6c",
+                "collection": "1fc248b5d00ba4d21f59245eb893f746"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1fc248b5d00ba4d21f59245eb893f746",
+        "rawModeData": ""
+    }
+}

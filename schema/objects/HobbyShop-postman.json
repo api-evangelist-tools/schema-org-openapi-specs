@@ -1,0 +1,59 @@
+{
+    "id": "5bc88115944ae76c6a10b44fcc70fb77",
+    "name": "Hobby Shop",
+    "description": "Autogeneration of Hobby Shop Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e8dd46e88db086959d065209f0fa4959",
+        "name": "\/Hobby-Shop\/",
+        "url": "{{url}}\/Hobby-Shop\/",
+        "description": "Autogeneration of Hobby Shop Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e8dd46e88db086959d065209f0fa4959",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Hobby-Shop\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "50e5fdbb8d30ff7b81ec29958193619d",
+                "collection": "5bc88115944ae76c6a10b44fcc70fb77"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "5bc88115944ae76c6a10b44fcc70fb77",
+        "rawModeData": ""
+    }
+}

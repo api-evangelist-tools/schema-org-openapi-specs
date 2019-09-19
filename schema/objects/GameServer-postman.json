@@ -1,0 +1,59 @@
+{
+    "id": "e5805c46bac7f397b4fb7dfeb59f6d40",
+    "name": "Game Server",
+    "description": "Autogeneration of Game Server Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "bcb98997819c5f534f3c880258fcdd71",
+        "name": "\/Game-Server\/",
+        "url": "{{url}}\/Game-Server\/",
+        "description": "Autogeneration of Game Server Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "bcb98997819c5f534f3c880258fcdd71",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"game\": {},\n    \"playersOnline\": 100,\n    \"serverStatus\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Game-Server\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4c711c1137dc133d4c1ed9330fb996bd",
+                "collection": "e5805c46bac7f397b4fb7dfeb59f6d40"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e5805c46bac7f397b4fb7dfeb59f6d40",
+        "rawModeData": ""
+    }
+}

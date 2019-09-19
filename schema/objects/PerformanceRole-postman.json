@@ -1,0 +1,59 @@
+{
+    "id": "0ce8ef4b0b3ec0b4411b616b22ce3390",
+    "name": "Performance Role",
+    "description": "Autogeneration of Performance Role Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b9c0c178250f8ce10c49dbce2685c976",
+        "name": "\/Performance-Role\/",
+        "url": "{{url}}\/Performance-Role\/",
+        "description": "Autogeneration of Performance Role Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b9c0c178250f8ce10c49dbce2685c976",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"characterName\": \"String Content\",\n    \"endDate\": \"String Content\",\n    \"namedPosition\": {},\n    \"startDate\": \"String Content\",\n    \"roleName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Performance-Role\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "6cb9f38639cc821f6b5abc42b01cc445",
+                "collection": "0ce8ef4b0b3ec0b4411b616b22ce3390"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0ce8ef4b0b3ec0b4411b616b22ce3390",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "7b3f10778c34a7e292e9d1cb0d8427ba",
+    "name": "Plumber",
+    "description": "Autogeneration of Plumber Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "052f5d4a9bf84e346752ac6de0aa50ec",
+        "name": "\/Plumber\/",
+        "url": "{{url}}\/Plumber\/",
+        "description": "Autogeneration of Plumber Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "052f5d4a9bf84e346752ac6de0aa50ec",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Plumber\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "ee227d132bb16196d76441ffd78f400f",
+                "collection": "7b3f10778c34a7e292e9d1cb0d8427ba"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "7b3f10778c34a7e292e9d1cb0d8427ba",
+        "rawModeData": ""
+    }
+}

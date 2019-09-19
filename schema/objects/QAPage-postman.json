@@ -1,0 +1,59 @@
+{
+    "id": "bfcf100a0c59f6d880d5fc918ca64f64",
+    "name": "Q A Page",
+    "description": "Autogeneration of Q A Page Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "64b8cf187cdf21d2cb799ce1dbe7184a",
+        "name": "\/Q-A-Page\/",
+        "url": "{{url}}\/Q-A-Page\/",
+        "description": "Autogeneration of Q A Page Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "64b8cf187cdf21d2cb799ce1dbe7184a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"breadcrumb\": \"String Content\",\n    \"significantLink\": {},\n    \"relatedLink\": {},\n    \"lastReviewed\": \"String Content\",\n    \"mainContentOfPage\": {},\n    \"reviewedBy\": {},\n    \"primaryImageOfPage\": {},\n    \"significantLinks\": {},\n    \"specialty\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Q-A-Page\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d31738d58888300effe0603eb43fdcd9",
+                "collection": "bfcf100a0c59f6d880d5fc918ca64f64"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "bfcf100a0c59f6d880d5fc918ca64f64",
+        "rawModeData": ""
+    }
+}

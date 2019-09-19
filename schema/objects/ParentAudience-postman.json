@@ -1,0 +1,59 @@
+{
+    "id": "707757b7325607d6087cc07572d5351f",
+    "name": "Parent Audience",
+    "description": "Autogeneration of Parent Audience Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ccc6648745888a3093a949f4fbb3dbce",
+        "name": "\/Parent-Audience\/",
+        "url": "{{url}}\/Parent-Audience\/",
+        "description": "Autogeneration of Parent Audience Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ccc6648745888a3093a949f4fbb3dbce",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"childMaxAge\": 10,\n    \"childMinAge\": 10,\n    \"suggestedMaxAge\": 10,\n    \"requiredMinAge\": 100,\n    \"requiredGender\": \"String Content\",\n    \"suggestedGender\": \"String Content\",\n    \"requiredMaxAge\": 100,\n    \"suggestedMinAge\": 10,\n    \"audienceType\": \"String Content\",\n    \"geographicArea\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Parent-Audience\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "34e0857bfa2875757353b0819d767b18",
+                "collection": "707757b7325607d6087cc07572d5351f"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "707757b7325607d6087cc07572d5351f",
+        "rawModeData": ""
+    }
+}

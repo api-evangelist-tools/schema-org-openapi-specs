@@ -1,0 +1,59 @@
+{
+    "id": "37c7a689d84eadd032d87a14f9de86b8",
+    "name": "Leave Action",
+    "description": "Autogeneration of Leave Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "9c55fb9c702ba8c38448f6a6404e61c2",
+        "name": "\/Leave-Action\/",
+        "url": "{{url}}\/Leave-Action\/",
+        "description": "Autogeneration of Leave Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "9c55fb9c702ba8c38448f6a6404e61c2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"event\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Leave-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "cb6f71dec067d252e43a7deccc5f339c",
+                "collection": "37c7a689d84eadd032d87a14f9de86b8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "37c7a689d84eadd032d87a14f9de86b8",
+        "rawModeData": ""
+    }
+}

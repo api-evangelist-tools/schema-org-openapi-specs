@@ -1,0 +1,59 @@
+{
+    "id": "1af625213dfa31b8cd62475d9325407c",
+    "name": "Synagogue",
+    "description": "Autogeneration of Synagogue Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "fcf58f6af4d38b69b86ae7be7cb539b5",
+        "name": "\/Synagogue\/",
+        "url": "{{url}}\/Synagogue\/",
+        "description": "Autogeneration of Synagogue Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "fcf58f6af4d38b69b86ae7be7cb539b5",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Synagogue\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4a31060864c94d6aca46842892c8c184",
+                "collection": "1af625213dfa31b8cd62475d9325407c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1af625213dfa31b8cd62475d9325407c",
+        "rawModeData": ""
+    }
+}

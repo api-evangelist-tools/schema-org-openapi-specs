@@ -1,0 +1,59 @@
+{
+    "id": "ff7bdb374a148cabfde50762a83779e8",
+    "name": "Hotel Room",
+    "description": "Autogeneration of Hotel Room Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ea69ea838d4cba2879e8ffa15a9fe937",
+        "name": "\/Hotel-Room\/",
+        "url": "{{url}}\/Hotel-Room\/",
+        "description": "Autogeneration of Hotel Room Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ea69ea838d4cba2879e8ffa15a9fe937",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"occupancy\": {},\n    \"bed\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Hotel-Room\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "73aca3171dc27b79e9e11255e3052c68",
+                "collection": "ff7bdb374a148cabfde50762a83779e8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ff7bdb374a148cabfde50762a83779e8",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "b1112c5f7d065b928a580a4986cfa483",
+    "name": "Train Trip",
+    "description": "Autogeneration of Train Trip Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "fc2a06e0e61ef437799dcf94b8a7efc1",
+        "name": "\/Train-Trip\/",
+        "url": "{{url}}\/Train-Trip\/",
+        "description": "Autogeneration of Train Trip Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "fc2a06e0e61ef437799dcf94b8a7efc1",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"departureStation\": {},\n    \"provider\": {},\n    \"arrivalPlatform\": \"String Content\",\n    \"departurePlatform\": \"String Content\",\n    \"trainName\": \"String Content\",\n    \"trainNumber\": \"String Content\",\n    \"arrivalStation\": {},\n    \"arrivalTime\": \"String Content\",\n    \"departureTime\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Train-Trip\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "70df3327bce1f55a2a9ea9e5e54b653b",
+                "collection": "b1112c5f7d065b928a580a4986cfa483"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b1112c5f7d065b928a580a4986cfa483",
+        "rawModeData": ""
+    }
+}

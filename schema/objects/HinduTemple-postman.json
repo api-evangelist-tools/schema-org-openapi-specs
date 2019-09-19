@@ -1,0 +1,59 @@
+{
+    "id": "76657a2066745445d670682fe7ede1b7",
+    "name": "Hindu Temple",
+    "description": "Autogeneration of Hindu Temple Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "6baec2b614ae5ea3fd1a77b19b8784db",
+        "name": "\/Hindu-Temple\/",
+        "url": "{{url}}\/Hindu-Temple\/",
+        "description": "Autogeneration of Hindu Temple Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "6baec2b614ae5ea3fd1a77b19b8784db",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Hindu-Temple\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "b656c66b6832d082030d89edb7113861",
+                "collection": "76657a2066745445d670682fe7ede1b7"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "76657a2066745445d670682fe7ede1b7",
+        "rawModeData": ""
+    }
+}

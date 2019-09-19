@@ -1,0 +1,59 @@
+{
+    "id": "da275a00d1188ad4d7028b6cd25e235e",
+    "name": "Roofing Contractor",
+    "description": "Autogeneration of Roofing Contractor Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2a71ea2118b3993995daf28058bc432d",
+        "name": "\/Roofing-Contractor\/",
+        "url": "{{url}}\/Roofing-Contractor\/",
+        "description": "Autogeneration of Roofing Contractor Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2a71ea2118b3993995daf28058bc432d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Roofing-Contractor\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f887c0cfe1f9b5b8278159b082c259c8",
+                "collection": "da275a00d1188ad4d7028b6cd25e235e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "da275a00d1188ad4d7028b6cd25e235e",
+        "rawModeData": ""
+    }
+}

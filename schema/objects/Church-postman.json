@@ -1,0 +1,59 @@
+{
+    "id": "83b613c2098e1bda216d2eab022b0b67",
+    "name": "Church",
+    "description": "Autogeneration of Church Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "81d2aabe3696f0a051364551f1d3356b",
+        "name": "\/Church\/",
+        "url": "{{url}}\/Church\/",
+        "description": "Autogeneration of Church Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "81d2aabe3696f0a051364551f1d3356b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Church\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "44c14fa9927715ade94a54a2d11aecf1",
+                "collection": "83b613c2098e1bda216d2eab022b0b67"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "83b613c2098e1bda216d2eab022b0b67",
+        "rawModeData": ""
+    }
+}

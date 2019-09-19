@@ -1,0 +1,59 @@
+{
+    "id": "4ef0af417d2512895c8ddedeffb50705",
+    "name": "Airport",
+    "description": "Autogeneration of Airport Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ddd993e238de0bcb47f97675d0473e96",
+        "name": "\/Airport\/",
+        "url": "{{url}}\/Airport\/",
+        "description": "Autogeneration of Airport Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ddd993e238de0bcb47f97675d0473e96",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"iataCode\": \"String Content\",\n    \"icaoCode\": \"String Content\",\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Airport\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "fdad5b3a3329707c6b48e001eebfe2c1",
+                "collection": "4ef0af417d2512895c8ddedeffb50705"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4ef0af417d2512895c8ddedeffb50705",
+        "rawModeData": ""
+    }
+}

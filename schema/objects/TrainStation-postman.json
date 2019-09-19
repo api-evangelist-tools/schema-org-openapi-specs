@@ -1,0 +1,59 @@
+{
+    "id": "989fc6cd72c73c569a2c4b35e2ea0568",
+    "name": "Train Station",
+    "description": "Autogeneration of Train Station Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "36382d676f0d0e250f034a9abf7bf64e",
+        "name": "\/Train-Station\/",
+        "url": "{{url}}\/Train-Station\/",
+        "description": "Autogeneration of Train Station Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "36382d676f0d0e250f034a9abf7bf64e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Train-Station\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3bfbcb35da2a5d27845c6defa2323205",
+                "collection": "989fc6cd72c73c569a2c4b35e2ea0568"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "989fc6cd72c73c569a2c4b35e2ea0568",
+        "rawModeData": ""
+    }
+}

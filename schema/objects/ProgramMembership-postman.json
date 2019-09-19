@@ -1,0 +1,59 @@
+{
+    "id": "3577c2f43313a94a27593247f0d7cfc5",
+    "name": "Program Membership",
+    "description": "Autogeneration of Program Membership Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "45f2aad203e9994ae90fd2377ed0b63b",
+        "name": "\/Program-Membership\/",
+        "url": "{{url}}\/Program-Membership\/",
+        "description": "Autogeneration of Program Membership Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "45f2aad203e9994ae90fd2377ed0b63b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"membershipNumber\": \"String Content\",\n    \"members\": {},\n    \"member\": {},\n    \"hostingOrganization\": {},\n    \"programName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Program-Membership\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3b26aa0a7268634acdaf1d14237c9c51",
+                "collection": "3577c2f43313a94a27593247f0d7cfc5"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "3577c2f43313a94a27593247f0d7cfc5",
+        "rawModeData": ""
+    }
+}

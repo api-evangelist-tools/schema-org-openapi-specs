@@ -1,0 +1,59 @@
+{
+    "id": "f729d980cb16f999842c07d33e573f19",
+    "name": "Food Establishment",
+    "description": "Autogeneration of Food Establishment Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "88304eaa131d1fa0fce7a5bb1d3c7e5d",
+        "name": "\/Food-Establishment\/",
+        "url": "{{url}}\/Food-Establishment\/",
+        "description": "Autogeneration of Food Establishment Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "88304eaa131d1fa0fce7a5bb1d3c7e5d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {},\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Food-Establishment\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "ab0c3d3a70dc0eb5a0b60ac5df001ebf",
+                "collection": "f729d980cb16f999842c07d33e573f19"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f729d980cb16f999842c07d33e573f19",
+        "rawModeData": ""
+    }
+}

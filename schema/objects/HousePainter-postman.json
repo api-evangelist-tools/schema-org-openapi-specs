@@ -1,0 +1,59 @@
+{
+    "id": "a8c4ba5755c3ff8edd11187a2562b3f8",
+    "name": "House Painter",
+    "description": "Autogeneration of House Painter Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "78c6a0079cc7cb145c6c83d0e10fc41a",
+        "name": "\/House-Painter\/",
+        "url": "{{url}}\/House-Painter\/",
+        "description": "Autogeneration of House Painter Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "78c6a0079cc7cb145c6c83d0e10fc41a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/House-Painter\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3dae7ff115d6a2c479734cc28fa12800",
+                "collection": "a8c4ba5755c3ff8edd11187a2562b3f8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a8c4ba5755c3ff8edd11187a2562b3f8",
+        "rawModeData": ""
+    }
+}

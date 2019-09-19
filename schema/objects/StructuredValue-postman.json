@@ -1,0 +1,59 @@
+{
+    "id": "8ff21587427d077b5b41aace660d87df",
+    "name": "Structured Value",
+    "description": "Autogeneration of Structured Value Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ba4501a423ceb0cd5567ae999d3d8933",
+        "name": "\/Structured-Value\/",
+        "url": "{{url}}\/Structured-Value\/",
+        "description": "Autogeneration of Structured Value Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ba4501a423ceb0cd5567ae999d3d8933",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Structured-Value\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "aa180baf57be3ef9f5d8343a619b4697",
+                "collection": "8ff21587427d077b5b41aace660d87df"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "8ff21587427d077b5b41aace660d87df",
+        "rawModeData": ""
+    }
+}

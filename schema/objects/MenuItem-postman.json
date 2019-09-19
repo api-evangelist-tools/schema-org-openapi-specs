@@ -1,0 +1,59 @@
+{
+    "id": "b64f74fe07da768553262f3e76c66ffd",
+    "name": "Menu Item",
+    "description": "Autogeneration of Menu Item Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "a5fc306877dc7cd9c56900ef3ed4588e",
+        "name": "\/Menu-Item\/",
+        "url": "{{url}}\/Menu-Item\/",
+        "description": "Autogeneration of Menu Item Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "a5fc306877dc7cd9c56900ef3ed4588e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"nutrition\": {},\n    \"offers\": {},\n    \"suitableForDiet\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Menu-Item\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "284c50a4ca7c875193a0796ae8623910",
+                "collection": "b64f74fe07da768553262f3e76c66ffd"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b64f74fe07da768553262f3e76c66ffd",
+        "rawModeData": ""
+    }
+}

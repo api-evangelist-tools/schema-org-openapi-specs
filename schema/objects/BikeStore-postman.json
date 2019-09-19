@@ -1,0 +1,59 @@
+{
+    "id": "c53e703675a3467a58e8f33b1a5d934b",
+    "name": "Bike Store",
+    "description": "Autogeneration of Bike Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "fdc1b157d4101f716f3f814108d750f3",
+        "name": "\/Bike-Store\/",
+        "url": "{{url}}\/Bike-Store\/",
+        "description": "Autogeneration of Bike Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "fdc1b157d4101f716f3f814108d750f3",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Bike-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "08a7f38372d78a0dd8379b2b716489a6",
+                "collection": "c53e703675a3467a58e8f33b1a5d934b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c53e703675a3467a58e8f33b1a5d934b",
+        "rawModeData": ""
+    }
+}

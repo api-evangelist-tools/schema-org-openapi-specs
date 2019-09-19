@@ -1,0 +1,59 @@
+{
+    "id": "1ee682d085fd727c978bf8cb6d23cdd0",
+    "name": "Float",
+    "description": "Autogeneration of Float Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f26fbcfe90e48e7c334394e94fa27005",
+        "name": "\/Float\/",
+        "url": "{{url}}\/Float\/",
+        "description": "Autogeneration of Float Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f26fbcfe90e48e7c334394e94fa27005",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Float\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "37931bf4aa3f19e0eb23b8dc95495b6d",
+                "collection": "1ee682d085fd727c978bf8cb6d23cdd0"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1ee682d085fd727c978bf8cb6d23cdd0",
+        "rawModeData": ""
+    }
+}

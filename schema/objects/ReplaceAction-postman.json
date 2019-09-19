@@ -1,0 +1,59 @@
+{
+    "id": "6312f94b2b24302f7696c96102b82e2d",
+    "name": "Replace Action",
+    "description": "Autogeneration of Replace Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b79d0ce2b2d0e276ae6d960aac0f2e70",
+        "name": "\/Replace-Action\/",
+        "url": "{{url}}\/Replace-Action\/",
+        "description": "Autogeneration of Replace Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b79d0ce2b2d0e276ae6d960aac0f2e70",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"replacee\": {},\n    \"replacer\": {},\n    \"collection\": {},\n    \"targetCollection\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Replace-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f64906ff0c3de04caabe0d1b03416648",
+                "collection": "6312f94b2b24302f7696c96102b82e2d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6312f94b2b24302f7696c96102b82e2d",
+        "rawModeData": ""
+    }
+}

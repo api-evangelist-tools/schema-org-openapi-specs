@@ -1,0 +1,59 @@
+{
+    "id": "959006f2e124fa0924a7c64f96e55794",
+    "name": "Rating",
+    "description": "Autogeneration of Rating Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c2c5af98c0f5474f4250f0d585768867",
+        "name": "\/Rating\/",
+        "url": "{{url}}\/Rating\/",
+        "description": "Autogeneration of Rating Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c2c5af98c0f5474f4250f0d585768867",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"ratingValue\": 10,\n    \"bestRating\": \"String Content\",\n    \"author\": {},\n    \"worstRating\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Rating\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "914a05748b1606f60f952bcd87c89185",
+                "collection": "959006f2e124fa0924a7c64f96e55794"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "959006f2e124fa0924a7c64f96e55794",
+        "rawModeData": ""
+    }
+}

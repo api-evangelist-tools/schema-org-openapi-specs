@@ -1,0 +1,59 @@
+{
+    "id": "0d2db86d4df29572bbfb39c142344085",
+    "name": "Electronics Store",
+    "description": "Autogeneration of Electronics Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3555a7e81e1d9ee21e623d0d83e8f996",
+        "name": "\/Electronics-Store\/",
+        "url": "{{url}}\/Electronics-Store\/",
+        "description": "Autogeneration of Electronics Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3555a7e81e1d9ee21e623d0d83e8f996",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Electronics-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "565959dc429fbcd98318dbe27e96e40b",
+                "collection": "0d2db86d4df29572bbfb39c142344085"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0d2db86d4df29572bbfb39c142344085",
+        "rawModeData": ""
+    }
+}

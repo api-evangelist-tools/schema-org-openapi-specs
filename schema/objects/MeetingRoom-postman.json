@@ -1,0 +1,59 @@
+{
+    "id": "f41a6243c77771c05c44af00342200a0",
+    "name": "Meeting Room",
+    "description": "Autogeneration of Meeting Room Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "bebb67d7c3a8829368ac86821230e7ff",
+        "name": "\/Meeting-Room\/",
+        "url": "{{url}}\/Meeting-Room\/",
+        "description": "Autogeneration of Meeting Room Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "bebb67d7c3a8829368ac86821230e7ff",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Meeting-Room\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "247a76dc9b835c65e2995b36b72353e1",
+                "collection": "f41a6243c77771c05c44af00342200a0"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f41a6243c77771c05c44af00342200a0",
+        "rawModeData": ""
+    }
+}

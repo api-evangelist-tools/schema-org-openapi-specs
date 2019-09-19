@@ -1,0 +1,59 @@
+{
+    "id": "9bcc3127fc0e262d17b3b1f088d46af1",
+    "name": "Download Action",
+    "description": "Autogeneration of Download Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "65f7a5f209f96d2d44c7fd2b182a7215",
+        "name": "\/Download-Action\/",
+        "url": "{{url}}\/Download-Action\/",
+        "description": "Autogeneration of Download Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "65f7a5f209f96d2d44c7fd2b182a7215",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"toLocation\": {},\n    \"fromLocation\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Download-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f3b3fb75c03856f772b7bfeef42e65cd",
+                "collection": "9bcc3127fc0e262d17b3b1f088d46af1"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "9bcc3127fc0e262d17b3b1f088d46af1",
+        "rawModeData": ""
+    }
+}

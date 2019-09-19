@@ -1,0 +1,59 @@
+{
+    "id": "860587668b92b8b15af99886d362eb75",
+    "name": "Demand",
+    "description": "Autogeneration of Demand Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "741f70a05c0976fb7b3d370db40f7cfb",
+        "name": "\/Demand\/",
+        "url": "{{url}}\/Demand\/",
+        "description": "Autogeneration of Demand Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "741f70a05c0976fb7b3d370db40f7cfb",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"sku\": \"String Content\",\n    \"availabilityStarts\": \"String Content\",\n    \"availableDeliveryMethod\": {},\n    \"areaServed\": {},\n    \"mpn\": \"String Content\",\n    \"serialNumber\": \"String Content\",\n    \"ineligibleRegion\": {},\n    \"gtin8\": \"String Content\",\n    \"availability\": {},\n    \"priceSpecification\": {},\n    \"inventoryLevel\": {},\n    \"eligibleTransactionVolume\": {},\n    \"availableAtOrFrom\": {},\n    \"warranty\": {},\n    \"includesObject\": {},\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"advanceBookingRequirement\": {},\n    \"validThrough\": \"String Content\",\n    \"gtin14\": \"String Content\",\n    \"gtin13\": \"String Content\",\n    \"gtin12\": \"String Content\",\n    \"seller\": {},\n    \"deliveryLeadTime\": {},\n    \"availabilityEnds\": \"String Content\",\n    \"businessFunction\": {},\n    \"eligibleCustomerType\": {},\n    \"itemCondition\": {},\n    \"itemOffered\": {},\n    \"eligibleDuration\": {},\n    \"acceptedPaymentMethod\": {},\n    \"eligibleRegion\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Demand\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "0f7be620f7707c39b6823d6a7967ecda",
+                "collection": "860587668b92b8b15af99886d362eb75"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "860587668b92b8b15af99886d362eb75",
+        "rawModeData": ""
+    }
+}

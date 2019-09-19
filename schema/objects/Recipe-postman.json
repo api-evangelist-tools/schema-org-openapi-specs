@@ -1,0 +1,59 @@
+{
+    "id": "430ab115b7d51acfe7e01dfc7b9e5331",
+    "name": "Recipe",
+    "description": "Autogeneration of Recipe Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b92213b8881e387981f78c3f21ebeeeb",
+        "name": "\/Recipe\/",
+        "url": "{{url}}\/Recipe\/",
+        "description": "Autogeneration of Recipe Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b92213b8881e387981f78c3f21ebeeeb",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"recipeYield\": \"String Content\",\n    \"recipeCategory\": \"String Content\",\n    \"recipeIngredient\": \"String Content\",\n    \"recipeInstructions\": {},\n    \"nutrition\": {},\n    \"suitableForDiet\": {},\n    \"recipeCuisine\": \"String Content\",\n    \"cookTime\": {},\n    \"cookingMethod\": \"String Content\",\n    \"ingredients\": \"String Content\",\n    \"prepTime\": {},\n    \"tool\": {},\n    \"steps\": {},\n    \"performTime\": {},\n    \"estimatedCost\": \"String Content\",\n    \"totalTime\": {},\n    \"supply\": {},\n    \"yield\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Recipe\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "abebad1dd37e1ffa643ea26617af2220",
+                "collection": "430ab115b7d51acfe7e01dfc7b9e5331"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "430ab115b7d51acfe7e01dfc7b9e5331",
+        "rawModeData": ""
+    }
+}

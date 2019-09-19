@@ -1,0 +1,59 @@
+{
+    "id": "ad542ff93a488118c1328269dd128434",
+    "name": "Accept Action",
+    "description": "Autogeneration of Accept Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f200be95cf997511085c884eb5c75902",
+        "name": "\/Accept-Action\/",
+        "url": "{{url}}\/Accept-Action\/",
+        "description": "Autogeneration of Accept Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f200be95cf997511085c884eb5c75902",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Accept-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "89465fed5215243f33bab22105341fd0",
+                "collection": "ad542ff93a488118c1328269dd128434"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ad542ff93a488118c1328269dd128434",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "154f5f3c011971d89f374fca40f3d18d",
+    "name": "Mass",
+    "description": "Autogeneration of Mass Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "9a52bf79c060e911b6448cba0e27eb83",
+        "name": "\/Mass\/",
+        "url": "{{url}}\/Mass\/",
+        "description": "Autogeneration of Mass Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "9a52bf79c060e911b6448cba0e27eb83",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Mass\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "371ece6b787f0547941e30e27474574b",
+                "collection": "154f5f3c011971d89f374fca40f3d18d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "154f5f3c011971d89f374fca40f3d18d",
+        "rawModeData": ""
+    }
+}

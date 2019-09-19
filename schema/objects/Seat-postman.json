@@ -1,0 +1,59 @@
+{
+    "id": "f6dfa8a52210885265c0a80f0746544b",
+    "name": "Seat",
+    "description": "Autogeneration of Seat Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "38a73eecb2857f17c320f72096471061",
+        "name": "\/Seat\/",
+        "url": "{{url}}\/Seat\/",
+        "description": "Autogeneration of Seat Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "38a73eecb2857f17c320f72096471061",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"seatingType\": \"String Content\",\n    \"seatSection\": \"String Content\",\n    \"seatRow\": \"String Content\",\n    \"seatNumber\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Seat\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1e6bb29f9907b92607e7ba07a10f4521",
+                "collection": "f6dfa8a52210885265c0a80f0746544b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f6dfa8a52210885265c0a80f0746544b",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "6b8b29ff70fafa3acc0debf1dd11d7bd",
+    "name": "Postal Address",
+    "description": "Autogeneration of Postal Address Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "4552a815d43bcbade1b05131288c40ca",
+        "name": "\/Postal-Address\/",
+        "url": "{{url}}\/Postal-Address\/",
+        "description": "Autogeneration of Postal Address Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "4552a815d43bcbade1b05131288c40ca",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"postOfficeBoxNumber\": \"String Content\",\n    \"streetAddress\": \"String Content\",\n    \"addressCountry\": {},\n    \"addressRegion\": \"String Content\",\n    \"postalCode\": \"String Content\",\n    \"addressLocality\": \"String Content\",\n    \"serviceArea\": {},\n    \"areaServed\": {},\n    \"hoursAvailable\": {},\n    \"contactOption\": {},\n    \"availableLanguage\": \"String Content\",\n    \"telephone\": \"String Content\",\n    \"email\": \"String Content\",\n    \"contactType\": \"String Content\",\n    \"productSupported\": {},\n    \"faxNumber\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Postal-Address\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "dcd55597ea753822a940c14c13a5c0b5",
+                "collection": "6b8b29ff70fafa3acc0debf1dd11d7bd"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6b8b29ff70fafa3acc0debf1dd11d7bd",
+        "rawModeData": ""
+    }
+}

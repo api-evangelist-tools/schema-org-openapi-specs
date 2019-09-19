@@ -1,0 +1,59 @@
+{
+    "id": "ea2b5df3d5af946128f86e6269e3e299",
+    "name": "Golf Course",
+    "description": "Autogeneration of Golf Course Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "58161224a7cf76c0ec5779632796b3b1",
+        "name": "\/Golf-Course\/",
+        "url": "{{url}}\/Golf-Course\/",
+        "description": "Autogeneration of Golf Course Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "58161224a7cf76c0ec5779632796b3b1",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Golf-Course\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "602cd82c0d1fa14385b73bf6cd5f4d5c",
+                "collection": "ea2b5df3d5af946128f86e6269e3e299"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ea2b5df3d5af946128f86e6269e3e299",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "3a94afc32078e3c75fd98a6953236dd9",
+    "name": "Suite",
+    "description": "Autogeneration of Suite Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1a24b30b993402ae7dd820f4fe081aaf",
+        "name": "\/Suite\/",
+        "url": "{{url}}\/Suite\/",
+        "description": "Autogeneration of Suite Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1a24b30b993402ae7dd820f4fe081aaf",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"occupancy\": {},\n    \"bed\": \"String Content\",\n    \"numberOfRooms\": {},\n    \"floorSize\": {},\n    \"petsAllowed\": \"String Content\",\n    \"amenityFeature\": {},\n    \"permittedUsage\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Suite\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1ac4670e2740015af349e48fd2f5bd42",
+                "collection": "3a94afc32078e3c75fd98a6953236dd9"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "3a94afc32078e3c75fd98a6953236dd9",
+        "rawModeData": ""
+    }
+}

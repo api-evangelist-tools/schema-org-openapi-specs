@@ -1,0 +1,59 @@
+{
+    "id": "e281dae205c5911fd6ae829e68a2b9a2",
+    "name": "Taxi",
+    "description": "Autogeneration of Taxi Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "af479dd354331de4155812d971ca1417",
+        "name": "\/Taxi\/",
+        "url": "{{url}}\/Taxi\/",
+        "description": "Autogeneration of Taxi Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "af479dd354331de4155812d971ca1417",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"serviceArea\": {},\n    \"produces\": {},\n    \"provider\": {},\n    \"serviceAudience\": {},\n    \"areaServed\": {},\n    \"audience\": {},\n    \"hasOfferCatalog\": {},\n    \"hoursAvailable\": {},\n    \"providerMobility\": \"String Content\",\n    \"aggregateRating\": {},\n    \"offers\": {},\n    \"award\": \"String Content\",\n    \"category\": \"String Content\",\n    \"broker\": {},\n    \"serviceOutput\": {},\n    \"logo\": {},\n    \"isSimilarTo\": {},\n    \"isRelatedTo\": {},\n    \"availableChannel\": {},\n    \"review\": {},\n    \"serviceType\": \"String Content\",\n    \"brand\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Taxi\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "8d7ad6641d9a6d279b24d410c8ebe375",
+                "collection": "e281dae205c5911fd6ae829e68a2b9a2"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e281dae205c5911fd6ae829e68a2b9a2",
+        "rawModeData": ""
+    }
+}

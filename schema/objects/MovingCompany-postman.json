@@ -1,0 +1,59 @@
+{
+    "id": "943be46d0bbd14aac7e7ccbdeea91032",
+    "name": "Moving Company",
+    "description": "Autogeneration of Moving Company Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "87d6c969349412b9d7f389f0b4ae8593",
+        "name": "\/Moving-Company\/",
+        "url": "{{url}}\/Moving-Company\/",
+        "description": "Autogeneration of Moving Company Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "87d6c969349412b9d7f389f0b4ae8593",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Moving-Company\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "935a959f2d44ec2a4fe1d0f0f01e10ce",
+                "collection": "943be46d0bbd14aac7e7ccbdeea91032"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "943be46d0bbd14aac7e7ccbdeea91032",
+        "rawModeData": ""
+    }
+}

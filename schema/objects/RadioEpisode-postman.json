@@ -1,0 +1,59 @@
+{
+    "id": "0f1d3d88c39eece71bfcc07c9c860b7d",
+    "name": "Radio Episode",
+    "description": "Autogeneration of Radio Episode Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "135975e28e7074fca018ed4662bd9275",
+        "name": "\/Radio-Episode\/",
+        "url": "{{url}}\/Radio-Episode\/",
+        "description": "Autogeneration of Radio Episode Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "135975e28e7074fca018ed4662bd9275",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"actor\": {},\n    \"partOfSeries\": {},\n    \"trailer\": {},\n    \"partOfSeason\": {},\n    \"musicBy\": {},\n    \"directors\": {},\n    \"episodeNumber\": \"String Content\",\n    \"director\": {},\n    \"productionCompany\": {},\n    \"actors\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Radio-Episode\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d51d65a010d00ee93acbc45a92242891",
+                "collection": "0f1d3d88c39eece71bfcc07c9c860b7d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0f1d3d88c39eece71bfcc07c9c860b7d",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "53ab545c7a6291912f4090077f03cb92",
+    "name": "Ignore Action",
+    "description": "Autogeneration of Ignore Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "fdadcc1c95b3e45d4f95499a638dae6c",
+        "name": "\/Ignore-Action\/",
+        "url": "{{url}}\/Ignore-Action\/",
+        "description": "Autogeneration of Ignore Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "fdadcc1c95b3e45d4f95499a638dae6c",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Ignore-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "604bf6702398c07279e2a96cd54f5848",
+                "collection": "53ab545c7a6291912f4090077f03cb92"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "53ab545c7a6291912f4090077f03cb92",
+        "rawModeData": ""
+    }
+}

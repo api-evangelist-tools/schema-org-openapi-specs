@@ -1,0 +1,59 @@
+{
+    "id": "53d0990bd87fa4eeaace1b05a7f5404c",
+    "name": "Interaction Counter",
+    "description": "Autogeneration of Interaction Counter Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7aad588ee17c8fa6135744e4e015bd2c",
+        "name": "\/Interaction-Counter\/",
+        "url": "{{url}}\/Interaction-Counter\/",
+        "description": "Autogeneration of Interaction Counter Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7aad588ee17c8fa6135744e4e015bd2c",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"interactionService\": {},\n    \"userInteractionCount\": 100,\n    \"interactionType\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Interaction-Counter\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "bd718da6984d2567fab739f94089f07d",
+                "collection": "53d0990bd87fa4eeaace1b05a7f5404c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "53d0990bd87fa4eeaace1b05a7f5404c",
+        "rawModeData": ""
+    }
+}

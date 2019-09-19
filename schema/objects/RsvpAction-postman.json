@@ -1,0 +1,59 @@
+{
+    "id": "4447ee015c50442e297b188e95c543ee",
+    "name": "Rsvp Action",
+    "description": "Autogeneration of Rsvp Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ade4390be59f7b3a6c552e21fc5edd50",
+        "name": "\/Rsvp-Action\/",
+        "url": "{{url}}\/Rsvp-Action\/",
+        "description": "Autogeneration of Rsvp Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ade4390be59f7b3a6c552e21fc5edd50",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"additionalNumberOfGuests\": 10,\n    \"comment\": {},\n    \"rsvpResponse\": {},\n    \"event\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Rsvp-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3fcd4443e721585a8839454860813a16",
+                "collection": "4447ee015c50442e297b188e95c543ee"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4447ee015c50442e297b188e95c543ee",
+        "rawModeData": ""
+    }
+}

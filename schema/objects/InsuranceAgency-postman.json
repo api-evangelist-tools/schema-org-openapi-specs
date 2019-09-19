@@ -1,0 +1,59 @@
+{
+    "id": "a27f56501adc7f26a3b8c30a2114390e",
+    "name": "Insurance Agency",
+    "description": "Autogeneration of Insurance Agency Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "9808f174e3b3ffa042bcd279c67bb79e",
+        "name": "\/Insurance-Agency\/",
+        "url": "{{url}}\/Insurance-Agency\/",
+        "description": "Autogeneration of Insurance Agency Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "9808f174e3b3ffa042bcd279c67bb79e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"feesAndCommissionsSpecification\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Insurance-Agency\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "12244bd7d075c9e08014cb4ebe2875c6",
+                "collection": "a27f56501adc7f26a3b8c30a2114390e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a27f56501adc7f26a3b8c30a2114390e",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "ea0c58d491de351a7d2be90e3e665b5a",
+    "name": "Audio Object",
+    "description": "Autogeneration of Audio Object Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7fcdd51a4300ac892d801236e5360d9d",
+        "name": "\/Audio-Object\/",
+        "url": "{{url}}\/Audio-Object\/",
+        "description": "Autogeneration of Audio Object Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7fcdd51a4300ac892d801236e5360d9d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"transcript\": \"String Content\",\n    \"uploadDate\": \"String Content\",\n    \"playerType\": \"String Content\",\n    \"height\": {},\n    \"bitrate\": \"String Content\",\n    \"requiresSubscription\": 1,\n    \"regionsAllowed\": {},\n    \"contentSize\": \"String Content\",\n    \"embedUrl\": {},\n    \"width\": {},\n    \"contentUrl\": {},\n    \"associatedArticle\": {},\n    \"productionCompany\": {},\n    \"duration\": {},\n    \"encodesCreativeWork\": {},\n    \"encodingFormat\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Audio-Object\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "aa405677ffcf26d8cb00b8f7ac0ea171",
+                "collection": "ea0c58d491de351a7d2be90e3e665b5a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ea0c58d491de351a7d2be90e3e665b5a",
+        "rawModeData": ""
+    }
+}

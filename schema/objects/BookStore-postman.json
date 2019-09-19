@@ -1,0 +1,59 @@
+{
+    "id": "547736fbbe07b944d95976f9413cd84a",
+    "name": "Book Store",
+    "description": "Autogeneration of Book Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c54638211880a47f096f0317cc79f64c",
+        "name": "\/Book-Store\/",
+        "url": "{{url}}\/Book-Store\/",
+        "description": "Autogeneration of Book Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c54638211880a47f096f0317cc79f64c",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Book-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "facfdb96306aaa621684634241c15be5",
+                "collection": "547736fbbe07b944d95976f9413cd84a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "547736fbbe07b944d95976f9413cd84a",
+        "rawModeData": ""
+    }
+}

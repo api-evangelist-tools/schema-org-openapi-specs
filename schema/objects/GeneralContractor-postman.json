@@ -1,0 +1,59 @@
+{
+    "id": "15c0e62bd247eb3b67d56b64b8aa2c52",
+    "name": "General Contractor",
+    "description": "Autogeneration of General Contractor Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f51c21b311b249885771be87ba98a357",
+        "name": "\/General-Contractor\/",
+        "url": "{{url}}\/General-Contractor\/",
+        "description": "Autogeneration of General Contractor Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f51c21b311b249885771be87ba98a357",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/General-Contractor\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "08f12862a1458499bde1ab6c80201b12",
+                "collection": "15c0e62bd247eb3b67d56b64b8aa2c52"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "15c0e62bd247eb3b67d56b64b8aa2c52",
+        "rawModeData": ""
+    }
+}

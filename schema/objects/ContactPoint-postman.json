@@ -1,0 +1,59 @@
+{
+    "id": "fed96401f7479d7b087dbcc2c0ce0c9a",
+    "name": "Contact Point",
+    "description": "Autogeneration of Contact Point Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e4922767b94aa57100788b63b2969eac",
+        "name": "\/Contact-Point\/",
+        "url": "{{url}}\/Contact-Point\/",
+        "description": "Autogeneration of Contact Point Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e4922767b94aa57100788b63b2969eac",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"serviceArea\": {},\n    \"areaServed\": {},\n    \"hoursAvailable\": {},\n    \"contactOption\": {},\n    \"availableLanguage\": \"String Content\",\n    \"telephone\": \"String Content\",\n    \"email\": \"String Content\",\n    \"contactType\": \"String Content\",\n    \"productSupported\": {},\n    \"faxNumber\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Contact-Point\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3427cc84d98d98143d8d86e458ba2157",
+                "collection": "fed96401f7479d7b087dbcc2c0ce0c9a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "fed96401f7479d7b087dbcc2c0ce0c9a",
+        "rawModeData": ""
+    }
+}

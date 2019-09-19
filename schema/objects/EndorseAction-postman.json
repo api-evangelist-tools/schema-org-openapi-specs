@@ -1,0 +1,59 @@
+{
+    "id": "c58a3b71eede30c1053ce374345c80a1",
+    "name": "Endorse Action",
+    "description": "Autogeneration of Endorse Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "74cf404773fdde644fa3afc4083250f9",
+        "name": "\/Endorse-Action\/",
+        "url": "{{url}}\/Endorse-Action\/",
+        "description": "Autogeneration of Endorse Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "74cf404773fdde644fa3afc4083250f9",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"endorsee\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Endorse-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "aad2ae849ac0f7ca7cc0abfd335fb83e",
+                "collection": "c58a3b71eede30c1053ce374345c80a1"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c58a3b71eede30c1053ce374345c80a1",
+        "rawModeData": ""
+    }
+}

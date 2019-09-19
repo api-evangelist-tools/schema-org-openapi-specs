@@ -1,0 +1,59 @@
+{
+    "id": "b91efb3efff6a8a43450f9d4b97f1289",
+    "name": "Append Action",
+    "description": "Autogeneration of Append Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ba7e5607422d00252ec045ebdaba6101",
+        "name": "\/Append-Action\/",
+        "url": "{{url}}\/Append-Action\/",
+        "description": "Autogeneration of Append Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ba7e5607422d00252ec045ebdaba6101",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"toLocation\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Append-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c24ee0d628b66cad017b47f68b074259",
+                "collection": "b91efb3efff6a8a43450f9d4b97f1289"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b91efb3efff6a8a43450f9d4b97f1289",
+        "rawModeData": ""
+    }
+}

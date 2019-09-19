@@ -1,0 +1,59 @@
+{
+    "id": "e3faf741e3d41fb41db026cb630a547f",
+    "name": "Perform Action",
+    "description": "Autogeneration of Perform Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1612cbaffd10c05bfc6d224ea09ac342",
+        "name": "\/Perform-Action\/",
+        "url": "{{url}}\/Perform-Action\/",
+        "description": "Autogeneration of Perform Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1612cbaffd10c05bfc6d224ea09ac342",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"entertainmentBusiness\": {},\n    \"audience\": {},\n    \"event\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Perform-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "6d646c1904dd3fe1ee74b6b49da20678",
+                "collection": "e3faf741e3d41fb41db026cb630a547f"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e3faf741e3d41fb41db026cb630a547f",
+        "rawModeData": ""
+    }
+}

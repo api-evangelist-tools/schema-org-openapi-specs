@@ -1,0 +1,59 @@
+{
+    "id": "774511f615157bc46157de185a6eedcb",
+    "name": "Search Results Page",
+    "description": "Autogeneration of Search Results Page Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "92b5d8ab2cb54ae1a082494145b0d0ef",
+        "name": "\/Search-Results-Page\/",
+        "url": "{{url}}\/Search-Results-Page\/",
+        "description": "Autogeneration of Search Results Page Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "92b5d8ab2cb54ae1a082494145b0d0ef",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"breadcrumb\": \"String Content\",\n    \"significantLink\": {},\n    \"relatedLink\": {},\n    \"lastReviewed\": \"String Content\",\n    \"mainContentOfPage\": {},\n    \"reviewedBy\": {},\n    \"primaryImageOfPage\": {},\n    \"significantLinks\": {},\n    \"specialty\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Search-Results-Page\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4d049efa0895a439779194bb6d5fb7dc",
+                "collection": "774511f615157bc46157de185a6eedcb"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "774511f615157bc46157de185a6eedcb",
+        "rawModeData": ""
+    }
+}

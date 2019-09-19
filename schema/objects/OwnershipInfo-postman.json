@@ -1,0 +1,59 @@
+{
+    "id": "628d1c1f0ae7d6c578188af34acf5956",
+    "name": "Ownership Info",
+    "description": "Autogeneration of Ownership Info Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e55c8f4233aa551cc0f4320d445a507d",
+        "name": "\/Ownership-Info\/",
+        "url": "{{url}}\/Ownership-Info\/",
+        "description": "Autogeneration of Ownership Info Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e55c8f4233aa551cc0f4320d445a507d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"typeOfGood\": {},\n    \"ownedThrough\": \"String Content\",\n    \"acquiredFrom\": {},\n    \"ownedFrom\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Ownership-Info\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "478dc157bcecc2e1840e91c9702e7756",
+                "collection": "628d1c1f0ae7d6c578188af34acf5956"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "628d1c1f0ae7d6c578188af34acf5956",
+        "rawModeData": ""
+    }
+}

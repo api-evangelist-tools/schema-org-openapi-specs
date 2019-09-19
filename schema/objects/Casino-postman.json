@@ -1,0 +1,59 @@
+{
+    "id": "216426d4119da48e561e1f4779935697",
+    "name": "Casino",
+    "description": "Autogeneration of Casino Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "57ff86f391c56bf0d3e41869fda64919",
+        "name": "\/Casino\/",
+        "url": "{{url}}\/Casino\/",
+        "description": "Autogeneration of Casino Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "57ff86f391c56bf0d3e41869fda64919",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Casino\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "cd1c202c93887fbf017855c287e6236a",
+                "collection": "216426d4119da48e561e1f4779935697"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "216426d4119da48e561e1f4779935697",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "d059d7c055d6eb908f5151d572736491",
+    "name": "Auto Parts Store",
+    "description": "Autogeneration of Auto Parts Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "003e175bb54d3eeb467c3696b6ab7fd8",
+        "name": "\/Auto-Parts-Store\/",
+        "url": "{{url}}\/Auto-Parts-Store\/",
+        "description": "Autogeneration of Auto Parts Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "003e175bb54d3eeb467c3696b6ab7fd8",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Auto-Parts-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "dfcaf5d94eafbfcdb7bd7c51c38b9cf6",
+                "collection": "d059d7c055d6eb908f5151d572736491"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d059d7c055d6eb908f5151d572736491",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "77f0990451747b35aaf99dc5e2c83351",
+    "name": "Barcode",
+    "description": "Autogeneration of Barcode Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f9dc3ca3a799b1a3f0d36d9457e46722",
+        "name": "\/Barcode\/",
+        "url": "{{url}}\/Barcode\/",
+        "description": "Autogeneration of Barcode Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f9dc3ca3a799b1a3f0d36d9457e46722",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"exifData\": \"String Content\",\n    \"representativeOfPage\": 1,\n    \"thumbnail\": {},\n    \"caption\": \"String Content\",\n    \"uploadDate\": \"String Content\",\n    \"playerType\": \"String Content\",\n    \"height\": {},\n    \"bitrate\": \"String Content\",\n    \"requiresSubscription\": 1,\n    \"regionsAllowed\": {},\n    \"contentSize\": \"String Content\",\n    \"embedUrl\": {},\n    \"width\": {},\n    \"contentUrl\": {},\n    \"associatedArticle\": {},\n    \"productionCompany\": {},\n    \"duration\": {},\n    \"encodesCreativeWork\": {},\n    \"encodingFormat\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Barcode\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a4e829581e69a4ebd1597a0bd0420741",
+                "collection": "77f0990451747b35aaf99dc5e2c83351"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "77f0990451747b35aaf99dc5e2c83351",
+        "rawModeData": ""
+    }
+}

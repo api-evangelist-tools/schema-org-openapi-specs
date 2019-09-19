@@ -1,0 +1,59 @@
+{
+    "id": "b8398393f2e1472a8044af1898273588",
+    "name": "T V Clip",
+    "description": "Autogeneration of T V Clip Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2964bf02bd5fb7d4f80b32a13de78dd9",
+        "name": "\/T-V-Clip\/",
+        "url": "{{url}}\/T-V-Clip\/",
+        "description": "Autogeneration of T V Clip Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2964bf02bd5fb7d4f80b32a13de78dd9",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"partOfTVSeries\": {},\n    \"actor\": {},\n    \"partOfSeries\": {},\n    \"partOfEpisode\": {},\n    \"partOfSeason\": {},\n    \"musicBy\": {},\n    \"directors\": {},\n    \"director\": {},\n    \"actors\": {},\n    \"clipNumber\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/T-V-Clip\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "80f40727fa83f782ee0e1c16633478a6",
+                "collection": "b8398393f2e1472a8044af1898273588"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b8398393f2e1472a8044af1898273588",
+        "rawModeData": ""
+    }
+}

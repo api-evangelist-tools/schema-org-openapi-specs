@@ -1,0 +1,59 @@
+{
+    "id": "f1954b267ee0a4cf005968f9fcc05ad4",
+    "name": "Lodging Reservation",
+    "description": "Autogeneration of Lodging Reservation Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "8198157aba0367f5943eacde0e93c42f",
+        "name": "\/Lodging-Reservation\/",
+        "url": "{{url}}\/Lodging-Reservation\/",
+        "description": "Autogeneration of Lodging Reservation Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "8198157aba0367f5943eacde0e93c42f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"checkinTime\": \"String Content\",\n    \"numChildren\": 100,\n    \"lodgingUnitDescription\": \"String Content\",\n    \"checkoutTime\": \"String Content\",\n    \"lodgingUnitType\": {},\n    \"numAdults\": {},\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Lodging-Reservation\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "dca8c135bb16210cbaef2a3b3e18da80",
+                "collection": "f1954b267ee0a4cf005968f9fcc05ad4"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f1954b267ee0a4cf005968f9fcc05ad4",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "4bc4a86b1d632d6243e572b909faf8e3",
+    "name": "People Audience",
+    "description": "Autogeneration of People Audience Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "19424072c98e4e82e1ece627b6df6d0a",
+        "name": "\/People-Audience\/",
+        "url": "{{url}}\/People-Audience\/",
+        "description": "Autogeneration of People Audience Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "19424072c98e4e82e1ece627b6df6d0a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"suggestedMaxAge\": 10,\n    \"requiredMinAge\": 100,\n    \"requiredGender\": \"String Content\",\n    \"suggestedGender\": \"String Content\",\n    \"requiredMaxAge\": 100,\n    \"suggestedMinAge\": 10,\n    \"audienceType\": \"String Content\",\n    \"geographicArea\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/People-Audience\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "0f25f5c667d2208f10b4be648b18b5e6",
+                "collection": "4bc4a86b1d632d6243e572b909faf8e3"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4bc4a86b1d632d6243e572b909faf8e3",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "0de0795d2a9978b8739a2e8b86ab97e1",
+    "name": "Buy Action",
+    "description": "Autogeneration of Buy Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "9b5a43763062e19b434ac2dbb745fa6a",
+        "name": "\/Buy-Action\/",
+        "url": "{{url}}\/Buy-Action\/",
+        "description": "Autogeneration of Buy Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "9b5a43763062e19b434ac2dbb745fa6a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"vendor\": {},\n    \"seller\": {},\n    \"warrantyPromise\": {},\n    \"priceSpecification\": {},\n    \"price\": \"String Content\",\n    \"result\": {},\n    \"actionStatus\": {},\n    \"target\": {},\n    \"agent\": {},\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"instrument\": {},\n    \"participant\": {},\n    \"object\": {},\n    \"error\": {},\n    \"location\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Buy-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a5601c4e38890012fb611e55b535da78",
+                "collection": "0de0795d2a9978b8739a2e8b86ab97e1"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0de0795d2a9978b8739a2e8b86ab97e1",
+        "rawModeData": ""
+    }
+}

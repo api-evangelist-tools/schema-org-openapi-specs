@@ -1,0 +1,59 @@
+{
+    "id": "f3a38cb29d2984371d13429b49bea505",
+    "name": "Cancel Action",
+    "description": "Autogeneration of Cancel Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c3264b4f472eebdacec8c5e9855371a9",
+        "name": "\/Cancel-Action\/",
+        "url": "{{url}}\/Cancel-Action\/",
+        "description": "Autogeneration of Cancel Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c3264b4f472eebdacec8c5e9855371a9",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"scheduledTime\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Cancel-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "52e2a3a258814355f8d50336f05f8f98",
+                "collection": "f3a38cb29d2984371d13429b49bea505"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f3a38cb29d2984371d13429b49bea505",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "d8a3fa9361701e59d6ca75195e6bfe40",
+    "name": "Day Of Week",
+    "description": "Autogeneration of Day Of Week Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "76ded4cf68d16a92c4c617f998eb3bc8",
+        "name": "\/Day-Of-Week\/",
+        "url": "{{url}}\/Day-Of-Week\/",
+        "description": "Autogeneration of Day Of Week Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "76ded4cf68d16a92c4c617f998eb3bc8",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Day-Of-Week\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1e4dad877ddba1b6c6957fd0338d0bc5",
+                "collection": "d8a3fa9361701e59d6ca75195e6bfe40"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d8a3fa9361701e59d6ca75195e6bfe40",
+        "rawModeData": ""
+    }
+}

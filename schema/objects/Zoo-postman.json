@@ -1,0 +1,59 @@
+{
+    "id": "f938d73283df7d242703aee525125a6d",
+    "name": "Zoo",
+    "description": "Autogeneration of Zoo Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1f73e98c1a2a25db1b0062b80fb287df",
+        "name": "\/Zoo\/",
+        "url": "{{url}}\/Zoo\/",
+        "description": "Autogeneration of Zoo Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1f73e98c1a2a25db1b0062b80fb287df",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Zoo\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "90e471a90a078580727df5bfd14b77f9",
+                "collection": "f938d73283df7d242703aee525125a6d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f938d73283df7d242703aee525125a6d",
+        "rawModeData": ""
+    }
+}

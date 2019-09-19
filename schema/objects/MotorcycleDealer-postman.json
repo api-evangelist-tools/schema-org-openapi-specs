@@ -1,0 +1,59 @@
+{
+    "id": "aa56e2b8a2390849ad04a78736b6da64",
+    "name": "Motorcycle Dealer",
+    "description": "Autogeneration of Motorcycle Dealer Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1beb2dbbcc66fe65c2d70d77ba4a38e7",
+        "name": "\/Motorcycle-Dealer\/",
+        "url": "{{url}}\/Motorcycle-Dealer\/",
+        "description": "Autogeneration of Motorcycle Dealer Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1beb2dbbcc66fe65c2d70d77ba4a38e7",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Motorcycle-Dealer\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "78ade5c96c106ab23ce1266432c64ded",
+                "collection": "aa56e2b8a2390849ad04a78736b6da64"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "aa56e2b8a2390849ad04a78736b6da64",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "a3cdbb145caa80dd94efd1ec8eaf74c7",
+    "name": "Monetary Amount",
+    "description": "Autogeneration of Monetary Amount Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "233ee93e7e013b06b71e10bde5cfd2ab",
+        "name": "\/Monetary-Amount\/",
+        "url": "{{url}}\/Monetary-Amount\/",
+        "description": "Autogeneration of Monetary Amount Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "233ee93e7e013b06b71e10bde5cfd2ab",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"minValue\": 10,\n    \"currency\": \"String Content\",\n    \"value\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"maxValue\": 10\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Monetary-Amount\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d914defae8d2a71ce854471db6823f28",
+                "collection": "a3cdbb145caa80dd94efd1ec8eaf74c7"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a3cdbb145caa80dd94efd1ec8eaf74c7",
+        "rawModeData": ""
+    }
+}

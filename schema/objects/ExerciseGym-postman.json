@@ -1,0 +1,59 @@
+{
+    "id": "2faf3cbb98aa0e48998c8c2bcb00bcbf",
+    "name": "Exercise Gym",
+    "description": "Autogeneration of Exercise Gym Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "22219c5fb837cf42da9bbc6b358b5ef9",
+        "name": "\/Exercise-Gym\/",
+        "url": "{{url}}\/Exercise-Gym\/",
+        "description": "Autogeneration of Exercise Gym Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "22219c5fb837cf42da9bbc6b358b5ef9",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Exercise-Gym\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "091bef2440afa2fb34a9365c59c4c926",
+                "collection": "2faf3cbb98aa0e48998c8c2bcb00bcbf"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "2faf3cbb98aa0e48998c8c2bcb00bcbf",
+        "rawModeData": ""
+    }
+}

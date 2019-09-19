@@ -1,0 +1,59 @@
+{
+    "id": "9b88b5acdae5a650566ee6c9b2f2b55b",
+    "name": "Vehicle",
+    "description": "Autogeneration of Vehicle Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "88ca36feda0ee837b98c760a85b936b2",
+        "name": "\/Vehicle\/",
+        "url": "{{url}}\/Vehicle\/",
+        "description": "Autogeneration of Vehicle Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "88ca36feda0ee837b98c760a85b936b2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"vehicleSpecialUsage\": \"String Content\",\n    \"numberOfForwardGears\": 10,\n    \"mileageFromOdometer\": {},\n    \"vehicleInteriorColor\": \"String Content\",\n    \"steeringPosition\": {},\n    \"vehicleEngine\": {},\n    \"vehicleModelDate\": \"String Content\",\n    \"numberOfDoors\": 10,\n    \"vehicleConfiguration\": \"String Content\",\n    \"fuelType\": {},\n    \"vehicleIdentificationNumber\": \"String Content\",\n    \"fuelConsumption\": {},\n    \"numberOfPreviousOwners\": 10,\n    \"fuelEfficiency\": {},\n    \"numberOfAxles\": 10,\n    \"vehicleInteriorType\": \"String Content\",\n    \"knownVehicleDamages\": \"String Content\",\n    \"numberOfAirbags\": 10,\n    \"vehicleSeatingCapacity\": 10,\n    \"cargoVolume\": {},\n    \"vehicleTransmission\": \"String Content\",\n    \"dateVehicleFirstRegistered\": \"String Content\",\n    \"purchaseDate\": \"String Content\",\n    \"productionDate\": \"String Content\",\n    \"driveWheelConfiguration\": \"String Content\",\n    \"manufacturer\": {},\n    \"sku\": \"String Content\",\n    \"audience\": {},\n    \"mpn\": \"String Content\",\n    \"height\": {},\n    \"gtin8\": \"String Content\",\n    \"reviews\": {},\n    \"aggregateRating\": {},\n    \"isConsumableFor\": {},\n    \"offers\": {},\n    \"award\": \"String Content\",\n    \"category\": \"String Content\",\n    \"width\": {},\n    \"awards\": \"String Content\",\n    \"additionalProperty\": {},\n    \"isAccessoryOrSparePartFor\": {},\n    \"logo\": {},\n    \"gtin14\": \"String Content\",\n    \"gtin13\": \"String Content\",\n    \"gtin12\": \"String Content\",\n    \"material\": \"String Content\",\n    \"weight\": {},\n    \"depth\": {},\n    \"isSimilarTo\": {},\n    \"model\": {},\n    \"color\": \"String Content\",\n    \"isRelatedTo\": {},\n    \"productID\": \"String Content\",\n    \"review\": {},\n    \"itemCondition\": {},\n    \"brand\": {},\n    \"releaseDate\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Vehicle\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "9e6ab5401f1c0ae98eff81f8b7bb1646",
+                "collection": "9b88b5acdae5a650566ee6c9b2f2b55b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "9b88b5acdae5a650566ee6c9b2f2b55b",
+        "rawModeData": ""
+    }
+}

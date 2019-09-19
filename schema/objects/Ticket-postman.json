@@ -1,0 +1,59 @@
+{
+    "id": "cfb40f726293ea0f229225bee743e800",
+    "name": "Ticket",
+    "description": "Autogeneration of Ticket Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "8c07027a520565c98599c98d3b83784f",
+        "name": "\/Ticket\/",
+        "url": "{{url}}\/Ticket\/",
+        "description": "Autogeneration of Ticket Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "8c07027a520565c98599c98d3b83784f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"underName\": {},\n    \"dateIssued\": \"String Content\",\n    \"totalPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"ticketNumber\": \"String Content\",\n    \"issuedBy\": {},\n    \"ticketToken\": {},\n    \"ticketedSeat\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Ticket\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d2f98c0ae4af53324fbca6c6eb768099",
+                "collection": "cfb40f726293ea0f229225bee743e800"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "cfb40f726293ea0f229225bee743e800",
+        "rawModeData": ""
+    }
+}

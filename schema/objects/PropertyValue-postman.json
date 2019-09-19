@@ -1,0 +1,59 @@
+{
+    "id": "24571b74a797220a87dfeb01c0033dce",
+    "name": "Property Value",
+    "description": "Autogeneration of Property Value Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "9c9407423f65f825ccb953d5967b0675",
+        "name": "\/Property-Value\/",
+        "url": "{{url}}\/Property-Value\/",
+        "description": "Autogeneration of Property Value Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "9c9407423f65f825ccb953d5967b0675",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"unitCode\": {},\n    \"minValue\": 10,\n    \"propertyID\": {},\n    \"value\": {},\n    \"valueReference\": {},\n    \"maxValue\": 10,\n    \"unitText\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Property-Value\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "aeb6fa24538e26ce9d6b7eab9f536b2f",
+                "collection": "24571b74a797220a87dfeb01c0033dce"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "24571b74a797220a87dfeb01c0033dce",
+        "rawModeData": ""
+    }
+}

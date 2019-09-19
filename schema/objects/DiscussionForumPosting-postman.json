@@ -1,0 +1,59 @@
+{
+    "id": "bb918906a32210c9ba3b76e2f8abeacf",
+    "name": "Discussion Forum Posting",
+    "description": "Autogeneration of Discussion Forum Posting Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d8872c894cb157fb2525096dd33a821b",
+        "name": "\/Discussion-Forum-Posting\/",
+        "url": "{{url}}\/Discussion-Forum-Posting\/",
+        "description": "Autogeneration of Discussion Forum Posting Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d8872c894cb157fb2525096dd33a821b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"sharedContent\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Discussion-Forum-Posting\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "e1de9b5ccfd6d280b090b0fa99afe419",
+                "collection": "bb918906a32210c9ba3b76e2f8abeacf"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "bb918906a32210c9ba3b76e2f8abeacf",
+        "rawModeData": ""
+    }
+}

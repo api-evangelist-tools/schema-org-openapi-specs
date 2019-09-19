@@ -1,0 +1,59 @@
+{
+    "id": "ec3c3c5fabf9fa9ec7f2e74d8dfde01a",
+    "name": "Photograph Action",
+    "description": "Autogeneration of Photograph Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2ac341d9d65e7545745ef4b665d2a710",
+        "name": "\/Photograph-Action\/",
+        "url": "{{url}}\/Photograph-Action\/",
+        "description": "Autogeneration of Photograph Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2ac341d9d65e7545745ef4b665d2a710",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Photograph-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f3e8ea0e0ed668e741ac348d5cab007e",
+                "collection": "ec3c3c5fabf9fa9ec7f2e74d8dfde01a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ec3c3c5fabf9fa9ec7f2e74d8dfde01a",
+        "rawModeData": ""
+    }
+}

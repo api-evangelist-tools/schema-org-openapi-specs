@@ -1,0 +1,59 @@
+{
+    "id": "624beeae2f4a49b1e17691c82cde0f77",
+    "name": "W P Ad Block",
+    "description": "Autogeneration of W P Ad Block Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "4eea7db54ed19c7e9a993b26c283ae09",
+        "name": "\/W-P-Ad-Block\/",
+        "url": "{{url}}\/W-P-Ad-Block\/",
+        "description": "Autogeneration of W P Ad Block Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "4eea7db54ed19c7e9a993b26c283ae09",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/W-P-Ad-Block\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "50e54463638bc32818acf40890977d1a",
+                "collection": "624beeae2f4a49b1e17691c82cde0f77"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "624beeae2f4a49b1e17691c82cde0f77",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "a38689d6184234907291b4e3e349eb99",
+    "name": "Befriend Action",
+    "description": "Autogeneration of Befriend Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "13f1c077f45c7631999eb5b23b567ef4",
+        "name": "\/Befriend-Action\/",
+        "url": "{{url}}\/Befriend-Action\/",
+        "description": "Autogeneration of Befriend Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "13f1c077f45c7631999eb5b23b567ef4",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Befriend-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "e070db6560e420c8c998f14857334667",
+                "collection": "a38689d6184234907291b4e3e349eb99"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a38689d6184234907291b4e3e349eb99",
+        "rawModeData": ""
+    }
+}

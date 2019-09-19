@@ -1,0 +1,59 @@
+{
+    "id": "0f2eff9be40b19ae8588c6e58f06bec6",
+    "name": "Offer Catalog",
+    "description": "Autogeneration of Offer Catalog Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "8c1ddabff04a33a9e1f1cd2d54dfe3bd",
+        "name": "\/Offer-Catalog\/",
+        "url": "{{url}}\/Offer-Catalog\/",
+        "description": "Autogeneration of Offer Catalog Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "8c1ddabff04a33a9e1f1cd2d54dfe3bd",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"itemListElement\": {},\n    \"itemListOrder\": \"String Content\",\n    \"numberOfItems\": 100\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Offer-Catalog\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "50e41adbd7ce34e5da40e8a696514d4c",
+                "collection": "0f2eff9be40b19ae8588c6e58f06bec6"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0f2eff9be40b19ae8588c6e58f06bec6",
+        "rawModeData": ""
+    }
+}

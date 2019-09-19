@@ -1,0 +1,59 @@
+{
+    "id": "50b88ca35fe45e1cc974764bd259f7c3",
+    "name": "Performing Arts Theater",
+    "description": "Autogeneration of Performing Arts Theater Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7742b9117db749d22fa6dc7702a1a11e",
+        "name": "\/Performing-Arts-Theater\/",
+        "url": "{{url}}\/Performing-Arts-Theater\/",
+        "description": "Autogeneration of Performing Arts Theater Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7742b9117db749d22fa6dc7702a1a11e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Performing-Arts-Theater\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "77a79fc9ae9b1c6b3ebfcde8792b2937",
+                "collection": "50b88ca35fe45e1cc974764bd259f7c3"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "50b88ca35fe45e1cc974764bd259f7c3",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "209faeb8a1d4790e2ce0af95a3dc60f8",
+    "name": "Order",
+    "description": "Autogeneration of Order Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "018552955b8cb7e17ec22e0ad5b8720e",
+        "name": "\/Order\/",
+        "url": "{{url}}\/Order\/",
+        "description": "Autogeneration of Order Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "018552955b8cb7e17ec22e0ad5b8720e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"orderDate\": \"String Content\",\n    \"paymentDue\": \"String Content\",\n    \"orderNumber\": \"String Content\",\n    \"paymentUrl\": {},\n    \"orderStatus\": {},\n    \"billingAddress\": {},\n    \"partOfInvoice\": {},\n    \"confirmationNumber\": \"String Content\",\n    \"customer\": {},\n    \"merchant\": {},\n    \"broker\": {},\n    \"isGift\": 1,\n    \"paymentMethod\": {},\n    \"seller\": {},\n    \"paymentMethodId\": \"String Content\",\n    \"discount\": 10,\n    \"orderDelivery\": {},\n    \"orderedItem\": {},\n    \"acceptedOffer\": {},\n    \"discountCurrency\": \"String Content\",\n    \"paymentDueDate\": \"String Content\",\n    \"discountCode\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Order\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "022ce41c8b9f828dd81263ba07bf2348",
+                "collection": "209faeb8a1d4790e2ce0af95a3dc60f8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "209faeb8a1d4790e2ce0af95a3dc60f8",
+        "rawModeData": ""
+    }
+}

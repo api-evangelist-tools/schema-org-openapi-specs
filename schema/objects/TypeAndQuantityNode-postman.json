@@ -1,0 +1,59 @@
+{
+    "id": "8f1fed745cd593975ba26dd700cc6c97",
+    "name": "Type And Quantity Node",
+    "description": "Autogeneration of Type And Quantity Node Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b58694255d899e5315fcda5eebc47de8",
+        "name": "\/Type-And-Quantity-Node\/",
+        "url": "{{url}}\/Type-And-Quantity-Node\/",
+        "description": "Autogeneration of Type And Quantity Node Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b58694255d899e5315fcda5eebc47de8",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"unitCode\": {},\n    \"typeOfGood\": {},\n    \"amountOfThisGood\": 10,\n    \"businessFunction\": {},\n    \"unitText\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Type-And-Quantity-Node\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "396ec951e98b04d927701dfbafbda15c",
+                "collection": "8f1fed745cd593975ba26dd700cc6c97"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "8f1fed745cd593975ba26dd700cc6c97",
+        "rawModeData": ""
+    }
+}

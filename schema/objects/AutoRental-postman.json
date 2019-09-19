@@ -1,0 +1,59 @@
+{
+    "id": "905b914930e34a8a8b5aac1030d23cf3",
+    "name": "Auto Rental",
+    "description": "Autogeneration of Auto Rental Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7c4ff0354572f3f9aedcc6d9e0829e00",
+        "name": "\/Auto-Rental\/",
+        "url": "{{url}}\/Auto-Rental\/",
+        "description": "Autogeneration of Auto Rental Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7c4ff0354572f3f9aedcc6d9e0829e00",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Auto-Rental\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "639e2ddb6bed710295d0021adce72aca",
+                "collection": "905b914930e34a8a8b5aac1030d23cf3"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "905b914930e34a8a8b5aac1030d23cf3",
+        "rawModeData": ""
+    }
+}

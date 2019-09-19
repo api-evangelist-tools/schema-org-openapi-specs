@@ -1,0 +1,59 @@
+{
+    "id": "0e40f53f68491502e3e3fc09e53a6d70",
+    "name": "Event Status Type",
+    "description": "Autogeneration of Event Status Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "29e7167ca6100aff6039cb724ce73790",
+        "name": "\/Event-Status-Type\/",
+        "url": "{{url}}\/Event-Status-Type\/",
+        "description": "Autogeneration of Event Status Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "29e7167ca6100aff6039cb724ce73790",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Event-Status-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c32371ea21c75d92ece02b74372a199c",
+                "collection": "0e40f53f68491502e3e3fc09e53a6d70"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0e40f53f68491502e3e3fc09e53a6d70",
+        "rawModeData": ""
+    }
+}

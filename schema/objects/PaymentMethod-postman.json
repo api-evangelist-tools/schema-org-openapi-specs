@@ -1,0 +1,59 @@
+{
+    "id": "edc533fcd6b6ca504275bc326b772e25",
+    "name": "Payment Method",
+    "description": "Autogeneration of Payment Method Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c45482a5d4009ffeca31ff9dbdcdb0e0",
+        "name": "\/Payment-Method\/",
+        "url": "{{url}}\/Payment-Method\/",
+        "description": "Autogeneration of Payment Method Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c45482a5d4009ffeca31ff9dbdcdb0e0",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Payment-Method\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d15523f64d17f1e09c0ec0d88fa4195c",
+                "collection": "edc533fcd6b6ca504275bc326b772e25"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "edc533fcd6b6ca504275bc326b772e25",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "3437a4c02e00760a29147ff5d36b85b1",
+    "name": "Geo Circle",
+    "description": "Autogeneration of Geo Circle Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7c0415af72798548cfdc5335bcd997b2",
+        "name": "\/Geo-Circle\/",
+        "url": "{{url}}\/Geo-Circle\/",
+        "description": "Autogeneration of Geo Circle Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7c0415af72798548cfdc5335bcd997b2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"geoRadius\": {},\n    \"geoMidpoint\": {},\n    \"line\": \"String Content\",\n    \"address\": {},\n    \"circle\": \"String Content\",\n    \"box\": \"String Content\",\n    \"addressCountry\": {},\n    \"postalCode\": \"String Content\",\n    \"elevation\": \"String Content\",\n    \"polygon\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Geo-Circle\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "82152a0cbdbae26609c308d30f38d2c6",
+                "collection": "3437a4c02e00760a29147ff5d36b85b1"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "3437a4c02e00760a29147ff5d36b85b1",
+        "rawModeData": ""
+    }
+}

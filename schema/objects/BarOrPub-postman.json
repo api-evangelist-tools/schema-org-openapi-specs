@@ -1,0 +1,59 @@
+{
+    "id": "1bc50bfeaa3cefaf616c92d1ac0c995e",
+    "name": "Bar Or Pub",
+    "description": "Autogeneration of Bar Or Pub Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3ae231254622aba91f781c0b9b59119d",
+        "name": "\/Bar-Or-Pub\/",
+        "url": "{{url}}\/Bar-Or-Pub\/",
+        "description": "Autogeneration of Bar Or Pub Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3ae231254622aba91f781c0b9b59119d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {},\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Bar-Or-Pub\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "490e5e984ab47cad3d1817540dd1dedf",
+                "collection": "1bc50bfeaa3cefaf616c92d1ac0c995e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1bc50bfeaa3cefaf616c92d1ac0c995e",
+        "rawModeData": ""
+    }
+}

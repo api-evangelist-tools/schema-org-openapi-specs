@@ -1,0 +1,59 @@
+{
+    "id": "85ddb3daee8bb643efa7c6b86a8d3894",
+    "name": "About Page",
+    "description": "Autogeneration of About Page Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "49d5130935c1f40c9f1f6e43a0a6a2d7",
+        "name": "\/About-Page\/",
+        "url": "{{url}}\/About-Page\/",
+        "description": "Autogeneration of About Page Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "49d5130935c1f40c9f1f6e43a0a6a2d7",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"breadcrumb\": \"String Content\",\n    \"significantLink\": {},\n    \"relatedLink\": {},\n    \"lastReviewed\": \"String Content\",\n    \"mainContentOfPage\": {},\n    \"reviewedBy\": {},\n    \"primaryImageOfPage\": {},\n    \"significantLinks\": {},\n    \"specialty\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/About-Page\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "81c80b3602a114ea1ff001a52210622b",
+                "collection": "85ddb3daee8bb643efa7c6b86a8d3894"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "85ddb3daee8bb643efa7c6b86a8d3894",
+        "rawModeData": ""
+    }
+}

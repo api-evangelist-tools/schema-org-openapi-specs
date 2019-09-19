@@ -1,0 +1,59 @@
+{
+    "id": "416a059eb473c7ca164b825ee03c7051",
+    "name": "List Item",
+    "description": "Autogeneration of List Item Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7e8606cfe2a345e65e3c1d00ef43bcfd",
+        "name": "\/List-Item\/",
+        "url": "{{url}}\/List-Item\/",
+        "description": "Autogeneration of List Item Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7e8606cfe2a345e65e3c1d00ef43bcfd",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"nextItem\": {},\n    \"position\": 100,\n    \"previousItem\": {},\n    \"item\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/List-Item\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "b989b3f0d67751ec96d732a34f6da862",
+                "collection": "416a059eb473c7ca164b825ee03c7051"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "416a059eb473c7ca164b825ee03c7051",
+        "rawModeData": ""
+    }
+}

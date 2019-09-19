@@ -1,0 +1,59 @@
+{
+    "id": "c9a24141defd74705a0895e9d3f0038b",
+    "name": "Mobile Application",
+    "description": "Autogeneration of Mobile Application Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "9ef258c318792e729fcd0b886f8eba8e",
+        "name": "\/Mobile-Application\/",
+        "url": "{{url}}\/Mobile-Application\/",
+        "description": "Autogeneration of Mobile Application Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "9ef258c318792e729fcd0b886f8eba8e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"carrierRequirements\": \"String Content\",\n    \"softwareRequirements\": \"String Content\",\n    \"permissions\": \"String Content\",\n    \"processorRequirements\": \"String Content\",\n    \"availableOnDevice\": \"String Content\",\n    \"featureList\": \"String Content\",\n    \"applicationSubCategory\": \"String Content\",\n    \"device\": \"String Content\",\n    \"applicationCategory\": \"String Content\",\n    \"softwareVersion\": \"String Content\",\n    \"storageRequirements\": {},\n    \"applicationSuite\": \"String Content\",\n    \"memoryRequirements\": \"String Content\",\n    \"screenshot\": {},\n    \"countriesSupported\": \"String Content\",\n    \"softwareHelp\": {},\n    \"softwareAddOn\": {},\n    \"releaseNotes\": {},\n    \"supportingData\": {},\n    \"requirements\": \"String Content\",\n    \"countriesNotSupported\": \"String Content\",\n    \"operatingSystem\": \"String Content\",\n    \"fileSize\": \"String Content\",\n    \"installUrl\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Mobile-Application\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4ca0d02e14d50390889b887091904d79",
+                "collection": "c9a24141defd74705a0895e9d3f0038b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c9a24141defd74705a0895e9d3f0038b",
+        "rawModeData": ""
+    }
+}

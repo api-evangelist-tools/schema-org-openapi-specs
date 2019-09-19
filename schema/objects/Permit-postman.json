@@ -1,0 +1,59 @@
+{
+    "id": "a0ba72e13d980d03e71194b4d07ae292",
+    "name": "Permit",
+    "description": "Autogeneration of Permit Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ee6da5d81b6db159ecf21bdb881f53c3",
+        "name": "\/Permit\/",
+        "url": "{{url}}\/Permit\/",
+        "description": "Autogeneration of Permit Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ee6da5d81b6db159ecf21bdb881f53c3",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"validFor\": {},\n    \"validUntil\": \"String Content\",\n    \"validFrom\": \"String Content\",\n    \"issuedBy\": {},\n    \"issuedThrough\": {},\n    \"permitAudience\": {},\n    \"validIn\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Permit\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1ad76facbfdc744d9c3e45460881211e",
+                "collection": "a0ba72e13d980d03e71194b4d07ae292"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a0ba72e13d980d03e71194b4d07ae292",
+        "rawModeData": ""
+    }
+}

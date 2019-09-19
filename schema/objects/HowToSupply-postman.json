@@ -1,0 +1,59 @@
+{
+    "id": "d16c960bf185161493eae99b7bd0e706",
+    "name": "How To Supply",
+    "description": "Autogeneration of How To Supply Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e5736702b53ea1d999425c45b81f77cf",
+        "name": "\/How-To-Supply\/",
+        "url": "{{url}}\/How-To-Supply\/",
+        "description": "Autogeneration of How To Supply Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e5736702b53ea1d999425c45b81f77cf",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"estimatedCost\": \"String Content\",\n    \"requiredQuantity\": 10\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/How-To-Supply\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "0b27123e3f6f35063a91061b9734ab32",
+                "collection": "d16c960bf185161493eae99b7bd0e706"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d16c960bf185161493eae99b7bd0e706",
+        "rawModeData": ""
+    }
+}

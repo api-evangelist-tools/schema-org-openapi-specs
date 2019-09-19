@@ -1,0 +1,59 @@
+{
+    "id": "b3b9a1871c68b2d3312b519234f24b2c",
+    "name": "Mobile Phone Store",
+    "description": "Autogeneration of Mobile Phone Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "93c382f69880ec88909d1039deb0efe0",
+        "name": "\/Mobile-Phone-Store\/",
+        "url": "{{url}}\/Mobile-Phone-Store\/",
+        "description": "Autogeneration of Mobile Phone Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "93c382f69880ec88909d1039deb0efe0",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Mobile-Phone-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "ae18be2f5a578db555729955103b214b",
+                "collection": "b3b9a1871c68b2d3312b519234f24b2c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b3b9a1871c68b2d3312b519234f24b2c",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "6edf0e34ae0834d4ffcdcfb5d0c9e7df",
+    "name": "Unit Price Specification",
+    "description": "Autogeneration of Unit Price Specification Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d4ee85eec479875c6406cbd0eac0c3e9",
+        "name": "\/Unit-Price-Specification\/",
+        "url": "{{url}}\/Unit-Price-Specification\/",
+        "description": "Autogeneration of Unit Price Specification Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d4ee85eec479875c6406cbd0eac0c3e9",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"unitCode\": {},\n    \"billingIncrement\": 10,\n    \"referenceQuantity\": {},\n    \"unitText\": \"String Content\",\n    \"priceType\": \"String Content\",\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Unit-Price-Specification\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "07ad291f508973fe3efa91d0186a9bde",
+                "collection": "6edf0e34ae0834d4ffcdcfb5d0c9e7df"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6edf0e34ae0834d4ffcdcfb5d0c9e7df",
+        "rawModeData": ""
+    }
+}

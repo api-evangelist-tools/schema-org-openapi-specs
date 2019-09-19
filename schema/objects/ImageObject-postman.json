@@ -1,0 +1,59 @@
+{
+    "id": "a2f69af6df89772b4af49b0d2c5ba54e",
+    "name": "Image Object",
+    "description": "Autogeneration of Image Object Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "4b68c3f82a8f47dfccb2f674d3f41c71",
+        "name": "\/Image-Object\/",
+        "url": "{{url}}\/Image-Object\/",
+        "description": "Autogeneration of Image Object Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "4b68c3f82a8f47dfccb2f674d3f41c71",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"exifData\": \"String Content\",\n    \"representativeOfPage\": 1,\n    \"thumbnail\": {},\n    \"caption\": \"String Content\",\n    \"uploadDate\": \"String Content\",\n    \"playerType\": \"String Content\",\n    \"height\": {},\n    \"bitrate\": \"String Content\",\n    \"requiresSubscription\": 1,\n    \"regionsAllowed\": {},\n    \"contentSize\": \"String Content\",\n    \"embedUrl\": {},\n    \"width\": {},\n    \"contentUrl\": {},\n    \"associatedArticle\": {},\n    \"productionCompany\": {},\n    \"duration\": {},\n    \"encodesCreativeWork\": {},\n    \"encodingFormat\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Image-Object\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c5770bfef22359c98f903e5cb13d3ade",
+                "collection": "a2f69af6df89772b4af49b0d2c5ba54e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a2f69af6df89772b4af49b0d2c5ba54e",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "8b821f8fbfe755fda551dfd189ff8d9a",
+    "name": "Jewelry Store",
+    "description": "Autogeneration of Jewelry Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f1ce6ffd6860b9aa9a9dc654b0a1011d",
+        "name": "\/Jewelry-Store\/",
+        "url": "{{url}}\/Jewelry-Store\/",
+        "description": "Autogeneration of Jewelry Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f1ce6ffd6860b9aa9a9dc654b0a1011d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Jewelry-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "97a91921c5ba5f61f6eea5bc52c8e855",
+                "collection": "8b821f8fbfe755fda551dfd189ff8d9a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "8b821f8fbfe755fda551dfd189ff8d9a",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "a14f0ae70b2341da7de7fc52a90d4bb5",
+    "name": "Service Channel",
+    "description": "Autogeneration of Service Channel Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "9b4ef439979a73a448385f65447e0b8b",
+        "name": "\/Service-Channel\/",
+        "url": "{{url}}\/Service-Channel\/",
+        "description": "Autogeneration of Service Channel Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "9b4ef439979a73a448385f65447e0b8b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"providesService\": {},\n    \"serviceLocation\": {},\n    \"servicePostalAddress\": {},\n    \"availableLanguage\": \"String Content\",\n    \"serviceSmsNumber\": {},\n    \"serviceUrl\": {},\n    \"servicePhone\": {},\n    \"processingTime\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Service-Channel\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4a6bd3e1f42be15c0b9515a50aa9787e",
+                "collection": "a14f0ae70b2341da7de7fc52a90d4bb5"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a14f0ae70b2341da7de7fc52a90d4bb5",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "abcea5d424b260ae376136d225f51be4",
+    "name": "Aggregate Rating",
+    "description": "Autogeneration of Aggregate Rating Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "03cb4533a37000aca837862d1e32858f",
+        "name": "\/Aggregate-Rating\/",
+        "url": "{{url}}\/Aggregate-Rating\/",
+        "description": "Autogeneration of Aggregate Rating Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "03cb4533a37000aca837862d1e32858f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"itemReviewed\": {},\n    \"reviewCount\": 100,\n    \"ratingCount\": 100,\n    \"ratingValue\": 10,\n    \"bestRating\": \"String Content\",\n    \"author\": {},\n    \"worstRating\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Aggregate-Rating\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "89a401324c7e1c8852258afb373a7b1b",
+                "collection": "abcea5d424b260ae376136d225f51be4"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "abcea5d424b260ae376136d225f51be4",
+        "rawModeData": ""
+    }
+}

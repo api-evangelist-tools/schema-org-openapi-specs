@@ -1,0 +1,59 @@
+{
+    "id": "2bc24fdbdb7b24bc0aec5f1c51d085a4",
+    "name": "User Tweets",
+    "description": "Autogeneration of User Tweets Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "23c1dd96b7fe8a64810c35cfc49cd74e",
+        "name": "\/User-Tweets\/",
+        "url": "{{url}}\/User-Tweets\/",
+        "description": "Autogeneration of User Tweets Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "23c1dd96b7fe8a64810c35cfc49cd74e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/User-Tweets\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "41446b677ae2d4a6862a5c29fa38f3c8",
+                "collection": "2bc24fdbdb7b24bc0aec5f1c51d085a4"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "2bc24fdbdb7b24bc0aec5f1c51d085a4",
+        "rawModeData": ""
+    }
+}

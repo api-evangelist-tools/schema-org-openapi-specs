@@ -1,0 +1,59 @@
+{
+    "id": "4c0a669855c8ffacab1b065d2f731b86",
+    "name": "Music Group",
+    "description": "Autogeneration of Music Group Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "dbfdebcbbb27c400f3514fa3170f7c19",
+        "name": "\/Music-Group\/",
+        "url": "{{url}}\/Music-Group\/",
+        "description": "Autogeneration of Music Group Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "dbfdebcbbb27c400f3514fa3170f7c19",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"albums\": {},\n    \"track\": {},\n    \"genre\": {},\n    \"tracks\": {},\n    \"musicGroupMember\": {},\n    \"album\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Music-Group\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c39df3a0852739c48bbd7f6aed3ffc87",
+                "collection": "4c0a669855c8ffacab1b065d2f731b86"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4c0a669855c8ffacab1b065d2f731b86",
+        "rawModeData": ""
+    }
+}

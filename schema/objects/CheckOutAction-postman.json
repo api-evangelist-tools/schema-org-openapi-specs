@@ -1,0 +1,59 @@
+{
+    "id": "5da467c00c5c02904109f7400e344f09",
+    "name": "Check Out Action",
+    "description": "Autogeneration of Check Out Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2565dbbc14dec3f43b16f1fa7b3f1e4f",
+        "name": "\/Check-Out-Action\/",
+        "url": "{{url}}\/Check-Out-Action\/",
+        "description": "Autogeneration of Check Out Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2565dbbc14dec3f43b16f1fa7b3f1e4f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Check-Out-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "25455f957de6497fec2b1429a92738be",
+                "collection": "5da467c00c5c02904109f7400e344f09"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "5da467c00c5c02904109f7400e344f09",
+        "rawModeData": ""
+    }
+}

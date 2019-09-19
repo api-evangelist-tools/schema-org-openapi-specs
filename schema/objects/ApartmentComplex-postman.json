@@ -1,0 +1,59 @@
+{
+    "id": "083497a1a91c4157bbbfdce0d596ed4c",
+    "name": "Apartment Complex",
+    "description": "Autogeneration of Apartment Complex Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e649307dac88f2edfa35b6e157d6e30a",
+        "name": "\/Apartment-Complex\/",
+        "url": "{{url}}\/Apartment-Complex\/",
+        "description": "Autogeneration of Apartment Complex Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e649307dac88f2edfa35b6e157d6e30a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Apartment-Complex\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "ff07c1be67c0b835440a437070f6c086",
+                "collection": "083497a1a91c4157bbbfdce0d596ed4c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "083497a1a91c4157bbbfdce0d596ed4c",
+        "rawModeData": ""
+    }
+}

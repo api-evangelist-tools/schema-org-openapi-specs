@@ -1,0 +1,59 @@
+{
+    "id": "9e6ec66690a58e77d17fb9f15439ef8a",
+    "name": "Dated Money Specification",
+    "description": "Autogeneration of Dated Money Specification Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ae5dacdeba4c54552434b28410eb3a9a",
+        "name": "\/Dated-Money-Specification\/",
+        "url": "{{url}}\/Dated-Money-Specification\/",
+        "description": "Autogeneration of Dated Money Specification Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ae5dacdeba4c54552434b28410eb3a9a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"endDate\": \"String Content\",\n    \"currency\": \"String Content\",\n    \"amount\": {},\n    \"startDate\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Dated-Money-Specification\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "74f73877de5a40c901b147a83fd9ce97",
+                "collection": "9e6ec66690a58e77d17fb9f15439ef8a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "9e6ec66690a58e77d17fb9f15439ef8a",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "eabae51ab26e22c42d6c574c253e1eb9",
+    "name": "Profile Page",
+    "description": "Autogeneration of Profile Page Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "291d711a0a3583047b7e4e53c79da419",
+        "name": "\/Profile-Page\/",
+        "url": "{{url}}\/Profile-Page\/",
+        "description": "Autogeneration of Profile Page Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "291d711a0a3583047b7e4e53c79da419",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"breadcrumb\": \"String Content\",\n    \"significantLink\": {},\n    \"relatedLink\": {},\n    \"lastReviewed\": \"String Content\",\n    \"mainContentOfPage\": {},\n    \"reviewedBy\": {},\n    \"primaryImageOfPage\": {},\n    \"significantLinks\": {},\n    \"specialty\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Profile-Page\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "272f24ccd596c5b5c1038d557e951e90",
+                "collection": "eabae51ab26e22c42d6c574c253e1eb9"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "eabae51ab26e22c42d6c574c253e1eb9",
+        "rawModeData": ""
+    }
+}

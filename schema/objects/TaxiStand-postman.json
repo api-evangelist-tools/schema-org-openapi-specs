@@ -1,0 +1,59 @@
+{
+    "id": "a90f37df7b450f55141d5505b6b3699e",
+    "name": "Taxi Stand",
+    "description": "Autogeneration of Taxi Stand Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "396f8aae95f905ef0fc50861f30c3744",
+        "name": "\/Taxi-Stand\/",
+        "url": "{{url}}\/Taxi-Stand\/",
+        "description": "Autogeneration of Taxi Stand Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "396f8aae95f905ef0fc50861f30c3744",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Taxi-Stand\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c136ca3ad94e2417ee9b60ad5bacf957",
+                "collection": "a90f37df7b450f55141d5505b6b3699e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a90f37df7b450f55141d5505b6b3699e",
+        "rawModeData": ""
+    }
+}

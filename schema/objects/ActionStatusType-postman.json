@@ -1,0 +1,59 @@
+{
+    "id": "afec26dea304d3908c52995491de6888",
+    "name": "Action Status Type",
+    "description": "Autogeneration of Action Status Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "025466aec540ccda5b4616ba122f926e",
+        "name": "\/Action-Status-Type\/",
+        "url": "{{url}}\/Action-Status-Type\/",
+        "description": "Autogeneration of Action Status Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "025466aec540ccda5b4616ba122f926e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Action-Status-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3b25bf7aa925ece7106c042da3484573",
+                "collection": "afec26dea304d3908c52995491de6888"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "afec26dea304d3908c52995491de6888",
+        "rawModeData": ""
+    }
+}

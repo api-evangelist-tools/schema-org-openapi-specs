@@ -1,0 +1,59 @@
+{
+    "id": "1d7456e938da1aec34d0e4e37fa9f896",
+    "name": "Invoice",
+    "description": "Autogeneration of Invoice Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b7e465cbcf3b33c6f11bd47d579918d2",
+        "name": "\/Invoice\/",
+        "url": "{{url}}\/Invoice\/",
+        "description": "Autogeneration of Invoice Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b7e465cbcf3b33c6f11bd47d579918d2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"provider\": {},\n    \"paymentDue\": \"String Content\",\n    \"billingPeriod\": {},\n    \"confirmationNumber\": \"String Content\",\n    \"scheduledPaymentDate\": \"String Content\",\n    \"customer\": {},\n    \"category\": \"String Content\",\n    \"paymentStatus\": {},\n    \"broker\": {},\n    \"referencesOrder\": {},\n    \"paymentMethod\": {},\n    \"paymentMethodId\": \"String Content\",\n    \"minimumPaymentDue\": {},\n    \"totalPaymentDue\": {},\n    \"accountId\": \"String Content\",\n    \"paymentDueDate\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Invoice\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "bce26f15ef7bb49adeee4509e6660330",
+                "collection": "1d7456e938da1aec34d0e4e37fa9f896"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1d7456e938da1aec34d0e4e37fa9f896",
+        "rawModeData": ""
+    }
+}

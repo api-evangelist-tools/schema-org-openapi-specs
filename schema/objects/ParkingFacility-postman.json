@@ -1,0 +1,59 @@
+{
+    "id": "c33cd693df525b36b5f27808dd860552",
+    "name": "Parking Facility",
+    "description": "Autogeneration of Parking Facility Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c366b6eeb9a682fd1d16403f0e130ff9",
+        "name": "\/Parking-Facility\/",
+        "url": "{{url}}\/Parking-Facility\/",
+        "description": "Autogeneration of Parking Facility Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c366b6eeb9a682fd1d16403f0e130ff9",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Parking-Facility\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a319f118200ed21f04303df80423fc7f",
+                "collection": "c33cd693df525b36b5f27808dd860552"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c33cd693df525b36b5f27808dd860552",
+        "rawModeData": ""
+    }
+}

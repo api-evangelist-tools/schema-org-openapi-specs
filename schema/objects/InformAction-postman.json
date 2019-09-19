@@ -1,0 +1,59 @@
+{
+    "id": "060258ebec454e9ac8dcecf725fd5c45",
+    "name": "Inform Action",
+    "description": "Autogeneration of Inform Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "6027d2f24b992bd5373393522cef6925",
+        "name": "\/Inform-Action\/",
+        "url": "{{url}}\/Inform-Action\/",
+        "description": "Autogeneration of Inform Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "6027d2f24b992bd5373393522cef6925",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"event\": {},\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Inform-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f189abff1292e5b9c0aa8029b2b2662f",
+                "collection": "060258ebec454e9ac8dcecf725fd5c45"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "060258ebec454e9ac8dcecf725fd5c45",
+        "rawModeData": ""
+    }
+}

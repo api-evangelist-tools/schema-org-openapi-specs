@@ -1,0 +1,59 @@
+{
+    "id": "5f68cce325f8f336c181d4c04d5f0af2",
+    "name": "Crematorium",
+    "description": "Autogeneration of Crematorium Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7acb65c337665e7404429e08e2171f7e",
+        "name": "\/Crematorium\/",
+        "url": "{{url}}\/Crematorium\/",
+        "description": "Autogeneration of Crematorium Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7acb65c337665e7404429e08e2171f7e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Crematorium\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "fb9708abbc07c4149abbad5392ed427e",
+                "collection": "5f68cce325f8f336c181d4c04d5f0af2"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "5f68cce325f8f336c181d4c04d5f0af2",
+        "rawModeData": ""
+    }
+}

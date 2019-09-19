@@ -1,0 +1,59 @@
+{
+    "id": "489380334f445d00d84256aa7495261a",
+    "name": "Reject Action",
+    "description": "Autogeneration of Reject Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "733cc21d56cf93483f6fc7a295dbb6d0",
+        "name": "\/Reject-Action\/",
+        "url": "{{url}}\/Reject-Action\/",
+        "description": "Autogeneration of Reject Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "733cc21d56cf93483f6fc7a295dbb6d0",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Reject-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "5c7ae00bca2e69d031458fb7dd640596",
+                "collection": "489380334f445d00d84256aa7495261a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "489380334f445d00d84256aa7495261a",
+        "rawModeData": ""
+    }
+}

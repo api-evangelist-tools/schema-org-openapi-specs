@@ -1,0 +1,59 @@
+{
+    "id": "e6a724be7e096aafb4d537ff4c7a36be",
+    "name": "Rental Car Reservation",
+    "description": "Autogeneration of Rental Car Reservation Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "18d999253d111b2b40d55d67fe478771",
+        "name": "\/Rental-Car-Reservation\/",
+        "url": "{{url}}\/Rental-Car-Reservation\/",
+        "description": "Autogeneration of Rental Car Reservation Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "18d999253d111b2b40d55d67fe478771",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"pickupTime\": \"String Content\",\n    \"dropoffLocation\": {},\n    \"dropoffTime\": \"String Content\",\n    \"pickupLocation\": {},\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Rental-Car-Reservation\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "2be3c0daff67a719227b3bc81c04eb08",
+                "collection": "e6a724be7e096aafb4d537ff4c7a36be"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e6a724be7e096aafb4d537ff4c7a36be",
+        "rawModeData": ""
+    }
+}

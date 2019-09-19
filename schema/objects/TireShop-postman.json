@@ -1,0 +1,59 @@
+{
+    "id": "b593fe33a7c90906d3f5257563b66b55",
+    "name": "Tire Shop",
+    "description": "Autogeneration of Tire Shop Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "da8e1bf64d5533bc4af791c21b8e1e85",
+        "name": "\/Tire-Shop\/",
+        "url": "{{url}}\/Tire-Shop\/",
+        "description": "Autogeneration of Tire Shop Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "da8e1bf64d5533bc4af791c21b8e1e85",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Tire-Shop\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "50e5edb80ee28564df317359a9ee7fbb",
+                "collection": "b593fe33a7c90906d3f5257563b66b55"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b593fe33a7c90906d3f5257563b66b55",
+        "rawModeData": ""
+    }
+}

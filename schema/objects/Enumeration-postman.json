@@ -1,0 +1,59 @@
+{
+    "id": "47e3c60682f1d13d370f15d556b844ac",
+    "name": "Enumeration",
+    "description": "Autogeneration of Enumeration Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "48dbd910d5373dcacf3f16c1b6f46f93",
+        "name": "\/Enumeration\/",
+        "url": "{{url}}\/Enumeration\/",
+        "description": "Autogeneration of Enumeration Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "48dbd910d5373dcacf3f16c1b6f46f93",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Enumeration\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "10215d028e52f05f7fed62bcbc620a18",
+                "collection": "47e3c60682f1d13d370f15d556b844ac"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "47e3c60682f1d13d370f15d556b844ac",
+        "rawModeData": ""
+    }
+}

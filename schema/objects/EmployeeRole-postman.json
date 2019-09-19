@@ -1,0 +1,59 @@
+{
+    "id": "0397a63fb3f829b446c9612287aef6d6",
+    "name": "Employee Role",
+    "description": "Autogeneration of Employee Role Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1fd87609e0d93a68fb327e4a4033a1c1",
+        "name": "\/Employee-Role\/",
+        "url": "{{url}}\/Employee-Role\/",
+        "description": "Autogeneration of Employee Role Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1fd87609e0d93a68fb327e4a4033a1c1",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"salaryCurrency\": \"String Content\",\n    \"baseSalary\": {},\n    \"numberedPosition\": 10\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Employee-Role\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "aaf310d70e153d48ebe533a3bf39db8d",
+                "collection": "0397a63fb3f829b446c9612287aef6d6"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0397a63fb3f829b446c9612287aef6d6",
+        "rawModeData": ""
+    }
+}

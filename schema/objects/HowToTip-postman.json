@@ -1,0 +1,59 @@
+{
+    "id": "5616884a1f06ee1761ce67c52347ac88",
+    "name": "How To Tip",
+    "description": "Autogeneration of How To Tip Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d34e2e3f88306b6ee76dc47e7da5c505",
+        "name": "\/How-To-Tip\/",
+        "url": "{{url}}\/How-To-Tip\/",
+        "description": "Autogeneration of How To Tip Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d34e2e3f88306b6ee76dc47e7da5c505",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"nextItem\": {},\n    \"position\": 100,\n    \"previousItem\": {},\n    \"item\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/How-To-Tip\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f6164dac056d00b3be6d12d1d69bcd7d",
+                "collection": "5616884a1f06ee1761ce67c52347ac88"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "5616884a1f06ee1761ce67c52347ac88",
+        "rawModeData": ""
+    }
+}

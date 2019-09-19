@@ -1,0 +1,59 @@
+{
+    "id": "d64f048b059dd076acbc980cec913fae",
+    "name": "Steering Position Value",
+    "description": "Autogeneration of Steering Position Value Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1b6cc09737ea59c70e755b942763fb8a",
+        "name": "\/Steering-Position-Value\/",
+        "url": "{{url}}\/Steering-Position-Value\/",
+        "description": "Autogeneration of Steering Position Value Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1b6cc09737ea59c70e755b942763fb8a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"greater\": {},\n    \"equal\": {},\n    \"additionalProperty\": {},\n    \"lesser\": {},\n    \"valueReference\": {},\n    \"nonEqual\": {},\n    \"lesserOrEqual\": {},\n    \"greaterOrEqual\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Steering-Position-Value\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1573ee939111ee7b15f8923b67ebbee1",
+                "collection": "d64f048b059dd076acbc980cec913fae"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d64f048b059dd076acbc980cec913fae",
+        "rawModeData": ""
+    }
+}

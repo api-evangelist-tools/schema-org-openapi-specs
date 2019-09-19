@@ -1,0 +1,59 @@
+{
+    "id": "7f19432f6d5c305892a08ecc4f678286",
+    "name": "Auto Body Shop",
+    "description": "Autogeneration of Auto Body Shop Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "add65ff93c1f6026dde311b47ba0b095",
+        "name": "\/Auto-Body-Shop\/",
+        "url": "{{url}}\/Auto-Body-Shop\/",
+        "description": "Autogeneration of Auto Body Shop Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "add65ff93c1f6026dde311b47ba0b095",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Auto-Body-Shop\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "699268e2d9d5a4cc811fcb8d0b5f4b5d",
+                "collection": "7f19432f6d5c305892a08ecc4f678286"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "7f19432f6d5c305892a08ecc4f678286",
+        "rawModeData": ""
+    }
+}

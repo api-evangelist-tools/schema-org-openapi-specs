@@ -1,0 +1,59 @@
+{
+    "id": "f846da151332de6c5e25ded5a55a4da6",
+    "name": "Paint Action",
+    "description": "Autogeneration of Paint Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "81a118cf275b232a8edb6829cf3abf6f",
+        "name": "\/Paint-Action\/",
+        "url": "{{url}}\/Paint-Action\/",
+        "description": "Autogeneration of Paint Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "81a118cf275b232a8edb6829cf3abf6f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Paint-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4d15271b1baa78ff0bf0a04649e3482b",
+                "collection": "f846da151332de6c5e25ded5a55a4da6"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f846da151332de6c5e25ded5a55a4da6",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "1139fbd8bd61d9d38c7e010449df079f",
+    "name": "Place Of Worship",
+    "description": "Autogeneration of Place Of Worship Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ab7485b7427f46c3e085c1fdf9bee403",
+        "name": "\/Place-Of-Worship\/",
+        "url": "{{url}}\/Place-Of-Worship\/",
+        "description": "Autogeneration of Place Of Worship Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ab7485b7427f46c3e085c1fdf9bee403",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Place-Of-Worship\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "be8d302c5263f37964932be96f9f9a8b",
+                "collection": "1139fbd8bd61d9d38c7e010449df079f"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1139fbd8bd61d9d38c7e010449df079f",
+        "rawModeData": ""
+    }
+}

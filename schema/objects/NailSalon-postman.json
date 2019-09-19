@@ -1,0 +1,59 @@
+{
+    "id": "1b085a7c87481e3fca44809ecb09911d",
+    "name": "Nail Salon",
+    "description": "Autogeneration of Nail Salon Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d8c3198760908b0b6a7554c06a02cfc5",
+        "name": "\/Nail-Salon\/",
+        "url": "{{url}}\/Nail-Salon\/",
+        "description": "Autogeneration of Nail Salon Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d8c3198760908b0b6a7554c06a02cfc5",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Nail-Salon\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "94d34e231c7631f1be64c1438b449f38",
+                "collection": "1b085a7c87481e3fca44809ecb09911d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1b085a7c87481e3fca44809ecb09911d",
+        "rawModeData": ""
+    }
+}

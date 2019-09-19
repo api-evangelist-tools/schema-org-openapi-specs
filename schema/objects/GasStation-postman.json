@@ -1,0 +1,59 @@
+{
+    "id": "9c93e4d5ef520215379ab0785431daa5",
+    "name": "Gas Station",
+    "description": "Autogeneration of Gas Station Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e2fe654f96584440992d41948e67c0be",
+        "name": "\/Gas-Station\/",
+        "url": "{{url}}\/Gas-Station\/",
+        "description": "Autogeneration of Gas Station Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e2fe654f96584440992d41948e67c0be",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Gas-Station\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "98742ed9857a769f4cd08b325965f2ee",
+                "collection": "9c93e4d5ef520215379ab0785431daa5"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "9c93e4d5ef520215379ab0785431daa5",
+        "rawModeData": ""
+    }
+}

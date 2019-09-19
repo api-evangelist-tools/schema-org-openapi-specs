@@ -1,0 +1,59 @@
+{
+    "id": "34d1bcb77ff7e8b4d986fa87fafa62b7",
+    "name": "Prepend Action",
+    "description": "Autogeneration of Prepend Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "065cca775b7102a2bc2f56590d1c9119",
+        "name": "\/Prepend-Action\/",
+        "url": "{{url}}\/Prepend-Action\/",
+        "description": "Autogeneration of Prepend Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "065cca775b7102a2bc2f56590d1c9119",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"toLocation\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Prepend-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d0d6da254310efff53ae2b180533277c",
+                "collection": "34d1bcb77ff7e8b4d986fa87fafa62b7"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "34d1bcb77ff7e8b4d986fa87fafa62b7",
+        "rawModeData": ""
+    }
+}

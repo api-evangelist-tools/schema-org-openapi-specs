@@ -1,0 +1,59 @@
+{
+    "id": "f9a6ae932705192b83aae38f4b8a3cd8",
+    "name": "Music Album Release Type",
+    "description": "Autogeneration of Music Album Release Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "8aaa271be8050a2e8c858ec0967cd88e",
+        "name": "\/Music-Album-Release-Type\/",
+        "url": "{{url}}\/Music-Album-Release-Type\/",
+        "description": "Autogeneration of Music Album Release Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "8aaa271be8050a2e8c858ec0967cd88e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Music-Album-Release-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "143fe7fa7789adf46f5db5ed399560ca",
+                "collection": "f9a6ae932705192b83aae38f4b8a3cd8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f9a6ae932705192b83aae38f4b8a3cd8",
+        "rawModeData": ""
+    }
+}

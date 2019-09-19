@@ -1,0 +1,59 @@
+{
+    "id": "daab3dad3931754f6ae47d6fa9e0e75b",
+    "name": "Fire Station",
+    "description": "Autogeneration of Fire Station Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "00f8c8e07d8eb724d2ed39878b170c36",
+        "name": "\/Fire-Station\/",
+        "url": "{{url}}\/Fire-Station\/",
+        "description": "Autogeneration of Fire Station Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "00f8c8e07d8eb724d2ed39878b170c36",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Fire-Station\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c2f0d4cb486088a7224ed6bb18c1c162",
+                "collection": "daab3dad3931754f6ae47d6fa9e0e75b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "daab3dad3931754f6ae47d6fa9e0e75b",
+        "rawModeData": ""
+    }
+}

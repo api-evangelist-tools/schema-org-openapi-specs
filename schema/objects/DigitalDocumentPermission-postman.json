@@ -1,0 +1,59 @@
+{
+    "id": "c05c5c8c27a7a649329379e975906774",
+    "name": "Digital Document Permission",
+    "description": "Autogeneration of Digital Document Permission Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "00232866c7e83c7943b91fc8b3c6efca",
+        "name": "\/Digital-Document-Permission\/",
+        "url": "{{url}}\/Digital-Document-Permission\/",
+        "description": "Autogeneration of Digital Document Permission Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "00232866c7e83c7943b91fc8b3c6efca",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"grantee\": {},\n    \"permissionType\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Digital-Document-Permission\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "86d42e45657c0dc55147c2972885c8d1",
+                "collection": "c05c5c8c27a7a649329379e975906774"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c05c5c8c27a7a649329379e975906774",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "6660bf0fb1872766635f9d6d76bc8b74",
+    "name": "Brand",
+    "description": "Autogeneration of Brand Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "a71022ac3085c07e397b5b0acfe24f4e",
+        "name": "\/Brand\/",
+        "url": "{{url}}\/Brand\/",
+        "description": "Autogeneration of Brand Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "a71022ac3085c07e397b5b0acfe24f4e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"aggregateRating\": {},\n    \"logo\": {},\n    \"review\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Brand\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "161700f09bf7fef15727c1200fa128c2",
+                "collection": "6660bf0fb1872766635f9d6d76bc8b74"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6660bf0fb1872766635f9d6d76bc8b74",
+        "rawModeData": ""
+    }
+}

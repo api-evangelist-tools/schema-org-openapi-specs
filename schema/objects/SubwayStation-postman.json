@@ -1,0 +1,59 @@
+{
+    "id": "dda3b88555a29524c7a75e00a2ed5b29",
+    "name": "Subway Station",
+    "description": "Autogeneration of Subway Station Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "aba0f1aa68834af24f2de5d6ae0d58d9",
+        "name": "\/Subway-Station\/",
+        "url": "{{url}}\/Subway-Station\/",
+        "description": "Autogeneration of Subway Station Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "aba0f1aa68834af24f2de5d6ae0d58d9",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Subway-Station\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d9280feea60b0b41ed3cf9c86bc52c15",
+                "collection": "dda3b88555a29524c7a75e00a2ed5b29"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "dda3b88555a29524c7a75e00a2ed5b29",
+        "rawModeData": ""
+    }
+}

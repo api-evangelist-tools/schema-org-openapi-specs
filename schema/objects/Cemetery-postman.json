@@ -1,0 +1,59 @@
+{
+    "id": "ca6980f67cd985b597a4bcb19db5b74b",
+    "name": "Cemetery",
+    "description": "Autogeneration of Cemetery Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "4a1bbdc75756522d87eb9f016451a2ef",
+        "name": "\/Cemetery\/",
+        "url": "{{url}}\/Cemetery\/",
+        "description": "Autogeneration of Cemetery Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "4a1bbdc75756522d87eb9f016451a2ef",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Cemetery\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "868db5955820a315561d27c3ffe57415",
+                "collection": "ca6980f67cd985b597a4bcb19db5b74b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ca6980f67cd985b597a4bcb19db5b74b",
+        "rawModeData": ""
+    }
+}

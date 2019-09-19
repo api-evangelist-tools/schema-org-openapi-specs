@@ -1,0 +1,59 @@
+{
+    "id": "4f2bded78996bcba14f96de5bd2040d5",
+    "name": "Auto Repair",
+    "description": "Autogeneration of Auto Repair Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3a75e14e935b3fc44db0ab095dd916f0",
+        "name": "\/Auto-Repair\/",
+        "url": "{{url}}\/Auto-Repair\/",
+        "description": "Autogeneration of Auto Repair Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3a75e14e935b3fc44db0ab095dd916f0",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Auto-Repair\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "62bb6705b93f3b25c2038a95e4057f25",
+                "collection": "4f2bded78996bcba14f96de5bd2040d5"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4f2bded78996bcba14f96de5bd2040d5",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "fea1e125a27c8b6d013712f9576948b3",
+    "name": "Disagree Action",
+    "description": "Autogeneration of Disagree Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3ef357cfbf24420612a02235807616cf",
+        "name": "\/Disagree-Action\/",
+        "url": "{{url}}\/Disagree-Action\/",
+        "description": "Autogeneration of Disagree Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3ef357cfbf24420612a02235807616cf",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Disagree-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "22446f189136eb8ef6e45ba7906e4bf2",
+                "collection": "fea1e125a27c8b6d013712f9576948b3"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "fea1e125a27c8b6d013712f9576948b3",
+        "rawModeData": ""
+    }
+}

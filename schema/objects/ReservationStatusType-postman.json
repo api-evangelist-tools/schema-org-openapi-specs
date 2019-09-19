@@ -1,0 +1,59 @@
+{
+    "id": "5f12aea52b7ffde8c47dbdd6b7c31430",
+    "name": "Reservation Status Type",
+    "description": "Autogeneration of Reservation Status Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "8eebbc1101b69712522ca3ca140de31a",
+        "name": "\/Reservation-Status-Type\/",
+        "url": "{{url}}\/Reservation-Status-Type\/",
+        "description": "Autogeneration of Reservation Status Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "8eebbc1101b69712522ca3ca140de31a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Reservation-Status-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "9fc8a3207f08149a446721c132c64f53",
+                "collection": "5f12aea52b7ffde8c47dbdd6b7c31430"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "5f12aea52b7ffde8c47dbdd6b7c31430",
+        "rawModeData": ""
+    }
+}

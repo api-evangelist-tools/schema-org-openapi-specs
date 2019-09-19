@@ -1,0 +1,59 @@
+{
+    "id": "06b2caa2d546a2b24067c69e1b8342a2",
+    "name": "Computer Language",
+    "description": "Autogeneration of Computer Language Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f134c3dddd3ac8ee56ec279d3e8c73ff",
+        "name": "\/Computer-Language\/",
+        "url": "{{url}}\/Computer-Language\/",
+        "description": "Autogeneration of Computer Language Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f134c3dddd3ac8ee56ec279d3e8c73ff",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Computer-Language\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "39e1b89a60ac3f5cedae9a8615cdf5c7",
+                "collection": "06b2caa2d546a2b24067c69e1b8342a2"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "06b2caa2d546a2b24067c69e1b8342a2",
+        "rawModeData": ""
+    }
+}

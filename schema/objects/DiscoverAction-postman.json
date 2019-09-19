@@ -1,0 +1,59 @@
+{
+    "id": "1ded16d794541d61858817cc0098d6af",
+    "name": "Discover Action",
+    "description": "Autogeneration of Discover Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "326de303657341e708f7090fc2d934b3",
+        "name": "\/Discover-Action\/",
+        "url": "{{url}}\/Discover-Action\/",
+        "description": "Autogeneration of Discover Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "326de303657341e708f7090fc2d934b3",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Discover-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a7e6a781491fbb98e12b8c9b281abb1f",
+                "collection": "1ded16d794541d61858817cc0098d6af"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1ded16d794541d61858817cc0098d6af",
+        "rawModeData": ""
+    }
+}

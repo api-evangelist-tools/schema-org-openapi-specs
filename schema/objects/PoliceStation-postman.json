@@ -1,0 +1,59 @@
+{
+    "id": "db841519b260b197c40f2b4ede3ccb1e",
+    "name": "Police Station",
+    "description": "Autogeneration of Police Station Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "99e1e3ec6f8ebfb26ae27b905ae6884f",
+        "name": "\/Police-Station\/",
+        "url": "{{url}}\/Police-Station\/",
+        "description": "Autogeneration of Police Station Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "99e1e3ec6f8ebfb26ae27b905ae6884f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Police-Station\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "9dab03581c707d7aa1f4fe85a777a59d",
+                "collection": "db841519b260b197c40f2b4ede3ccb1e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "db841519b260b197c40f2b4ede3ccb1e",
+        "rawModeData": ""
+    }
+}

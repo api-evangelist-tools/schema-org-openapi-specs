@@ -1,0 +1,59 @@
+{
+    "id": "58d0e20dba73be7552a4eb49d5f66356",
+    "name": "Restricted Diet",
+    "description": "Autogeneration of Restricted Diet Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ededc176a00e7368cdc621503a10212d",
+        "name": "\/Restricted-Diet\/",
+        "url": "{{url}}\/Restricted-Diet\/",
+        "description": "Autogeneration of Restricted Diet Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ededc176a00e7368cdc621503a10212d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Restricted-Diet\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d0a834ae577431e9c55ae7ab6749ee7d",
+                "collection": "58d0e20dba73be7552a4eb49d5f66356"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "58d0e20dba73be7552a4eb49d5f66356",
+        "rawModeData": ""
+    }
+}

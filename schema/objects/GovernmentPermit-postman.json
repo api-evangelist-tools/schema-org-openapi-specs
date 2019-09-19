@@ -1,0 +1,59 @@
+{
+    "id": "23af162bcdb332621e94d0e459540ee8",
+    "name": "Government Permit",
+    "description": "Autogeneration of Government Permit Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c8197839aa8402c6d90f61dad6f47383",
+        "name": "\/Government-Permit\/",
+        "url": "{{url}}\/Government-Permit\/",
+        "description": "Autogeneration of Government Permit Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c8197839aa8402c6d90f61dad6f47383",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"validFor\": {},\n    \"validUntil\": \"String Content\",\n    \"validFrom\": \"String Content\",\n    \"issuedBy\": {},\n    \"issuedThrough\": {},\n    \"permitAudience\": {},\n    \"validIn\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Government-Permit\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1a0ea66bd32427aa25bc3c5450c13f68",
+                "collection": "23af162bcdb332621e94d0e459540ee8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "23af162bcdb332621e94d0e459540ee8",
+        "rawModeData": ""
+    }
+}

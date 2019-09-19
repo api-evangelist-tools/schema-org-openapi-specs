@@ -1,0 +1,59 @@
+{
+    "id": "4bd18fe496908d2e20da31f07a848b42",
+    "name": "Comment Action",
+    "description": "Autogeneration of Comment Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c64118a23eb303da7a699abfe5a747c8",
+        "name": "\/Comment-Action\/",
+        "url": "{{url}}\/Comment-Action\/",
+        "description": "Autogeneration of Comment Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c64118a23eb303da7a699abfe5a747c8",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"resultComment\": {},\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Comment-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "fd69560897da6cc100ed3ea1e48e3285",
+                "collection": "4bd18fe496908d2e20da31f07a848b42"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4bd18fe496908d2e20da31f07a848b42",
+        "rawModeData": ""
+    }
+}

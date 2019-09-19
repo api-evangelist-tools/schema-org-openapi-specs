@@ -1,0 +1,59 @@
+{
+    "id": "969dabf976c75fcb38f2fb9e2d8c6818",
+    "name": "State",
+    "description": "Autogeneration of State Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "4f87077996c3bc302f0e96973cea99bf",
+        "name": "\/State\/",
+        "url": "{{url}}\/State\/",
+        "description": "Autogeneration of State Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "4f87077996c3bc302f0e96973cea99bf",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/State\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3a69d667ce9e695663d63ebf4aaff29d",
+                "collection": "969dabf976c75fcb38f2fb9e2d8c6818"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "969dabf976c75fcb38f2fb9e2d8c6818",
+        "rawModeData": ""
+    }
+}

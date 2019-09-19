@@ -1,0 +1,59 @@
+{
+    "id": "8e0c07346da56236b23700c58d6876ed",
+    "name": "U R L",
+    "description": "Autogeneration of U R L Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d247e0167c647fdf61e74c3b2ed723d2",
+        "name": "\/U-R-L\/",
+        "url": "{{url}}\/U-R-L\/",
+        "description": "Autogeneration of U R L Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d247e0167c647fdf61e74c3b2ed723d2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/U-R-L\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "f0f5a6f7ef62e436061023a7fd3e326b",
+                "collection": "8e0c07346da56236b23700c58d6876ed"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "8e0c07346da56236b23700c58d6876ed",
+        "rawModeData": ""
+    }
+}

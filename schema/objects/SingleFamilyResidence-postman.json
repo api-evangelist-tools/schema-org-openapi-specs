@@ -1,0 +1,59 @@
+{
+    "id": "7ba76244bef53ae2d1f35eeb9816597a",
+    "name": "Single Family Residence",
+    "description": "Autogeneration of Single Family Residence Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "44d234e8db66f8daa253b578f852f3a3",
+        "name": "\/Single-Family-Residence\/",
+        "url": "{{url}}\/Single-Family-Residence\/",
+        "description": "Autogeneration of Single Family Residence Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "44d234e8db66f8daa253b578f852f3a3",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"occupancy\": {},\n    \"numberOfRooms\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Single-Family-Residence\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1f6692540d35caffb587ec7b9bef2eec",
+                "collection": "7ba76244bef53ae2d1f35eeb9816597a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "7ba76244bef53ae2d1f35eeb9816597a",
+        "rawModeData": ""
+    }
+}

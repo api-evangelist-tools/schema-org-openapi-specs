@@ -1,0 +1,59 @@
+{
+    "id": "2f3731430dd57343f55e45d23cce7961",
+    "name": "Movie Clip",
+    "description": "Autogeneration of Movie Clip Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "38b4e4f0ecf976d15d7f3db6d2ed8809",
+        "name": "\/Movie-Clip\/",
+        "url": "{{url}}\/Movie-Clip\/",
+        "description": "Autogeneration of Movie Clip Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "38b4e4f0ecf976d15d7f3db6d2ed8809",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"actor\": {},\n    \"partOfSeries\": {},\n    \"partOfEpisode\": {},\n    \"partOfSeason\": {},\n    \"musicBy\": {},\n    \"directors\": {},\n    \"director\": {},\n    \"actors\": {},\n    \"clipNumber\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Movie-Clip\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "48ec2d13cc3619ca1230ed072333b404",
+                "collection": "2f3731430dd57343f55e45d23cce7961"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "2f3731430dd57343f55e45d23cce7961",
+        "rawModeData": ""
+    }
+}

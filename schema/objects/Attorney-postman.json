@@ -1,0 +1,59 @@
+{
+    "id": "0b6308224f1f43c553dead774e097bc8",
+    "name": "Attorney",
+    "description": "Autogeneration of Attorney Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "471c9f050d9f22c51787f96bd14c7252",
+        "name": "\/Attorney\/",
+        "url": "{{url}}\/Attorney\/",
+        "description": "Autogeneration of Attorney Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "471c9f050d9f22c51787f96bd14c7252",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Attorney\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "445ad855c0952991237459b218230015",
+                "collection": "0b6308224f1f43c553dead774e097bc8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0b6308224f1f43c553dead774e097bc8",
+        "rawModeData": ""
+    }
+}

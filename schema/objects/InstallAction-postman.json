@@ -1,0 +1,59 @@
+{
+    "id": "c1ffc0fbd75c0889fb0e3af26c1a6d52",
+    "name": "Install Action",
+    "description": "Autogeneration of Install Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "600331cf9dafcc7f0c10f243a3d91b12",
+        "name": "\/Install-Action\/",
+        "url": "{{url}}\/Install-Action\/",
+        "description": "Autogeneration of Install Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "600331cf9dafcc7f0c10f243a3d91b12",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"expectsAcceptanceOf\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Install-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "b087533d28a4555f683da68374e10f8c",
+                "collection": "c1ffc0fbd75c0889fb0e3af26c1a6d52"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c1ffc0fbd75c0889fb0e3af26c1a6d52",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "828bde99afd8346e6b75226be608027e",
+    "name": "Pet Store",
+    "description": "Autogeneration of Pet Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3a67a7e802d03283bc93c32cf76cf041",
+        "name": "\/Pet-Store\/",
+        "url": "{{url}}\/Pet-Store\/",
+        "description": "Autogeneration of Pet Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3a67a7e802d03283bc93c32cf76cf041",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Pet-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d6dce5d3aaea32b99272ea874f382f8b",
+                "collection": "828bde99afd8346e6b75226be608027e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "828bde99afd8346e6b75226be608027e",
+        "rawModeData": ""
+    }
+}

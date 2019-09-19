@@ -1,0 +1,59 @@
+{
+    "id": "9bfd163c1c17b8329fbf907b1683628c",
+    "name": "Grocery Store",
+    "description": "Autogeneration of Grocery Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "0056378f097b6529d316814aa3f9c707",
+        "name": "\/Grocery-Store\/",
+        "url": "{{url}}\/Grocery-Store\/",
+        "description": "Autogeneration of Grocery Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "0056378f097b6529d316814aa3f9c707",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Grocery-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c36bfde9853cf22f351be86c1422d65d",
+                "collection": "9bfd163c1c17b8329fbf907b1683628c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "9bfd163c1c17b8329fbf907b1683628c",
+        "rawModeData": ""
+    }
+}

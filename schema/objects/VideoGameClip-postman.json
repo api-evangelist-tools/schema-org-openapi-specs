@@ -1,0 +1,59 @@
+{
+    "id": "b19b79bca5875a0a51e6ee69044d7061",
+    "name": "Video Game Clip",
+    "description": "Autogeneration of Video Game Clip Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e25d2e2274e6e54c924c31f214880d57",
+        "name": "\/Video-Game-Clip\/",
+        "url": "{{url}}\/Video-Game-Clip\/",
+        "description": "Autogeneration of Video Game Clip Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e25d2e2274e6e54c924c31f214880d57",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"actor\": {},\n    \"partOfSeries\": {},\n    \"partOfEpisode\": {},\n    \"partOfSeason\": {},\n    \"musicBy\": {},\n    \"directors\": {},\n    \"director\": {},\n    \"actors\": {},\n    \"clipNumber\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Video-Game-Clip\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "65aa597e922028bb46d5936629710c63",
+                "collection": "b19b79bca5875a0a51e6ee69044d7061"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b19b79bca5875a0a51e6ee69044d7061",
+        "rawModeData": ""
+    }
+}

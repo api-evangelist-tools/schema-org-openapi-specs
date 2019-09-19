@@ -1,0 +1,59 @@
+{
+    "id": "0550e12467a6f7badb1150284dafdba4",
+    "name": "Role",
+    "description": "Autogeneration of Role Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f4fce072c655b10ee22ec24c362ac64b",
+        "name": "\/Role\/",
+        "url": "{{url}}\/Role\/",
+        "description": "Autogeneration of Role Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f4fce072c655b10ee22ec24c362ac64b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"endDate\": \"String Content\",\n    \"namedPosition\": {},\n    \"startDate\": \"String Content\",\n    \"roleName\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Role\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "35f33b683c6ab9326f610d2c6eeeb1ec",
+                "collection": "0550e12467a6f7badb1150284dafdba4"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "0550e12467a6f7badb1150284dafdba4",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "45c8a513019f5b4895e466d3b38d72f6",
+    "name": "Amusement Park",
+    "description": "Autogeneration of Amusement Park Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "605e0fd9cb802d95b8be6f1aeecfe824",
+        "name": "\/Amusement-Park\/",
+        "url": "{{url}}\/Amusement-Park\/",
+        "description": "Autogeneration of Amusement Park Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "605e0fd9cb802d95b8be6f1aeecfe824",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Amusement-Park\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "65cb0a087224d32f122e21764178293d",
+                "collection": "45c8a513019f5b4895e466d3b38d72f6"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "45c8a513019f5b4895e466d3b38d72f6",
+        "rawModeData": ""
+    }
+}

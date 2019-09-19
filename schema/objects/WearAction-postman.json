@@ -1,0 +1,59 @@
+{
+    "id": "6b32bd77e4b4b91144c638638031f511",
+    "name": "Wear Action",
+    "description": "Autogeneration of Wear Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3b558c721c33d3e5d22321765378bba2",
+        "name": "\/Wear-Action\/",
+        "url": "{{url}}\/Wear-Action\/",
+        "description": "Autogeneration of Wear Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3b558c721c33d3e5d22321765378bba2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"expectsAcceptanceOf\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Wear-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "cf27ab0cbd3284b952dcf0c83ec6f417",
+                "collection": "6b32bd77e4b4b91144c638638031f511"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6b32bd77e4b4b91144c638638031f511",
+        "rawModeData": ""
+    }
+}

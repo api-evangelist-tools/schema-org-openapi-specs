@@ -1,0 +1,59 @@
+{
+    "id": "d64f6031ff35583041130a627a665cd8",
+    "name": "River Body Of Water",
+    "description": "Autogeneration of River Body Of Water Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2ac1b2817f10e4938857356e0f311df6",
+        "name": "\/River-Body-Of-Water\/",
+        "url": "{{url}}\/River-Body-Of-Water\/",
+        "description": "Autogeneration of River Body Of Water Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2ac1b2817f10e4938857356e0f311df6",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/River-Body-Of-Water\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "88e9a1faa6336254e1cd66e204d5d705",
+                "collection": "d64f6031ff35583041130a627a665cd8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d64f6031ff35583041130a627a665cd8",
+        "rawModeData": ""
+    }
+}

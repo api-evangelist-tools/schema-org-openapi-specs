@@ -1,0 +1,59 @@
+{
+    "id": "753cfa0ebae525aa1d14fb3912023f64",
+    "name": "Bus Station",
+    "description": "Autogeneration of Bus Station Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "fa5920c9e6678f1fb3407d20e934ae09",
+        "name": "\/Bus-Station\/",
+        "url": "{{url}}\/Bus-Station\/",
+        "description": "Autogeneration of Bus Station Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "fa5920c9e6678f1fb3407d20e934ae09",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Bus-Station\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "82582c65c36d0ad8c01b9ea751c4c589",
+                "collection": "753cfa0ebae525aa1d14fb3912023f64"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "753cfa0ebae525aa1d14fb3912023f64",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "8b9189eca0bf9a920be695bbd255abea",
+    "name": "Music Album",
+    "description": "Autogeneration of Music Album Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b23b7e5e5adeefa94cf90a3fe65bbf6c",
+        "name": "\/Music-Album\/",
+        "url": "{{url}}\/Music-Album\/",
+        "description": "Autogeneration of Music Album Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b23b7e5e5adeefa94cf90a3fe65bbf6c",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"albumProductionType\": {},\n    \"albumReleaseType\": {},\n    \"byArtist\": {},\n    \"albumRelease\": {},\n    \"track\": {},\n    \"numTracks\": 100,\n    \"tracks\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Music-Album\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "6d191441e1dd8fd6d8467da9f57ffff5",
+                "collection": "8b9189eca0bf9a920be695bbd255abea"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "8b9189eca0bf9a920be695bbd255abea",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "53e25f1446e1d24d38155c5c7eaec52c",
+    "name": "Continent",
+    "description": "Autogeneration of Continent Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "4d21b832a0ef519fa1675ca21acba8dc",
+        "name": "\/Continent\/",
+        "url": "{{url}}\/Continent\/",
+        "description": "Autogeneration of Continent Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "4d21b832a0ef519fa1675ca21acba8dc",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Continent\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "63969f015ed7747a8dd89c93d91c71e1",
+                "collection": "53e25f1446e1d24d38155c5c7eaec52c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "53e25f1446e1d24d38155c5c7eaec52c",
+        "rawModeData": ""
+    }
+}

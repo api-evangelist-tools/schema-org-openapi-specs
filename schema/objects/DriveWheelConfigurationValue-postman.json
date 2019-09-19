@@ -1,0 +1,59 @@
+{
+    "id": "673468d903da6edcfbcf8f1b063d5236",
+    "name": "Drive Wheel Configuration Value",
+    "description": "Autogeneration of Drive Wheel Configuration Value Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d1b44db578d6d815a4cd47252283ad90",
+        "name": "\/Drive-Wheel-Configuration-Value\/",
+        "url": "{{url}}\/Drive-Wheel-Configuration-Value\/",
+        "description": "Autogeneration of Drive Wheel Configuration Value Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d1b44db578d6d815a4cd47252283ad90",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"greater\": {},\n    \"equal\": {},\n    \"additionalProperty\": {},\n    \"lesser\": {},\n    \"valueReference\": {},\n    \"nonEqual\": {},\n    \"lesserOrEqual\": {},\n    \"greaterOrEqual\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Drive-Wheel-Configuration-Value\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4aa41204517e8ac0fe7d3b9236a76135",
+                "collection": "673468d903da6edcfbcf8f1b063d5236"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "673468d903da6edcfbcf8f1b063d5236",
+        "rawModeData": ""
+    }
+}

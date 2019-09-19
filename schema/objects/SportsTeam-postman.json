@@ -1,0 +1,59 @@
+{
+    "id": "ef252bd48320a66b59fae6dec98dba2e",
+    "name": "Sports Team",
+    "description": "Autogeneration of Sports Team Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1e56d07e5dc1d70bfc591fb5587c3881",
+        "name": "\/Sports-Team\/",
+        "url": "{{url}}\/Sports-Team\/",
+        "description": "Autogeneration of Sports Team Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1e56d07e5dc1d70bfc591fb5587c3881",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"athlete\": {},\n    \"coach\": {},\n    \"sport\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Sports-Team\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "bb496e40b8f2bfbab58866674db94ab7",
+                "collection": "ef252bd48320a66b59fae6dec98dba2e"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ef252bd48320a66b59fae6dec98dba2e",
+        "rawModeData": ""
+    }
+}

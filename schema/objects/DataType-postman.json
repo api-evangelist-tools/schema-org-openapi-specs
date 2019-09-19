@@ -1,0 +1,59 @@
+{
+    "id": "d0e557569404529338bbde6993e17cc3",
+    "name": "Data Type",
+    "description": "Autogeneration of Data Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1029fb515250453a3c58c1f5276c53f7",
+        "name": "\/Data-Type\/",
+        "url": "{{url}}\/Data-Type\/",
+        "description": "Autogeneration of Data Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1029fb515250453a3c58c1f5276c53f7",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Data-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "105325e66ce6d2c81e4819eeb9bb83f1",
+                "collection": "d0e557569404529338bbde6993e17cc3"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d0e557569404529338bbde6993e17cc3",
+        "rawModeData": ""
+    }
+}

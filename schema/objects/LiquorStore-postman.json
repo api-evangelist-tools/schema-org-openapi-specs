@@ -1,0 +1,59 @@
+{
+    "id": "cee6d36263c8c39323c5d53a5c3b4649",
+    "name": "Liquor Store",
+    "description": "Autogeneration of Liquor Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "0ef08da64576a7c992f78ce748416a62",
+        "name": "\/Liquor-Store\/",
+        "url": "{{url}}\/Liquor-Store\/",
+        "description": "Autogeneration of Liquor Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "0ef08da64576a7c992f78ce748416a62",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Liquor-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3e5339ba0c852fd9c452067979343e0e",
+                "collection": "cee6d36263c8c39323c5d53a5c3b4649"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "cee6d36263c8c39323c5d53a5c3b4649",
+        "rawModeData": ""
+    }
+}

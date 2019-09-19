@@ -1,0 +1,59 @@
+{
+    "id": "7c3bf7df77c8cf11f74fd56544da7973",
+    "name": "Alignment Object",
+    "description": "Autogeneration of Alignment Object Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "bfa474f3f94d68b6d44b5408028543d7",
+        "name": "\/Alignment-Object\/",
+        "url": "{{url}}\/Alignment-Object\/",
+        "description": "Autogeneration of Alignment Object Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "bfa474f3f94d68b6d44b5408028543d7",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"targetDescription\": \"String Content\",\n    \"alignmentType\": \"String Content\",\n    \"targetUrl\": {},\n    \"targetName\": \"String Content\",\n    \"educationalFramework\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Alignment-Object\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "096bd2c4fb557606d296ac0d6598bc4b",
+                "collection": "7c3bf7df77c8cf11f74fd56544da7973"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "7c3bf7df77c8cf11f74fd56544da7973",
+        "rawModeData": ""
+    }
+}

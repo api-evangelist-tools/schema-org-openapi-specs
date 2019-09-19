@@ -1,0 +1,59 @@
+{
+    "id": "39b905feb756ff863521e1d575a58be4",
+    "name": "Site Navigation Element",
+    "description": "Autogeneration of Site Navigation Element Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b98ccda7814dad5fc86ce3c53f962c15",
+        "name": "\/Site-Navigation-Element\/",
+        "url": "{{url}}\/Site-Navigation-Element\/",
+        "description": "Autogeneration of Site Navigation Element Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b98ccda7814dad5fc86ce3c53f962c15",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Site-Navigation-Element\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "5c51772d104d0f716acb5cd27e2fb502",
+                "collection": "39b905feb756ff863521e1d575a58be4"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "39b905feb756ff863521e1d575a58be4",
+        "rawModeData": ""
+    }
+}

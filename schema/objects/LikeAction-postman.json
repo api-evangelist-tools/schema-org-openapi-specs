@@ -1,0 +1,59 @@
+{
+    "id": "b95bab0534ecf4de61fb4dc049a073ca",
+    "name": "Like Action",
+    "description": "Autogeneration of Like Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "a553ade7ff3fade3934bdd6a0ef6dbb3",
+        "name": "\/Like-Action\/",
+        "url": "{{url}}\/Like-Action\/",
+        "description": "Autogeneration of Like Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "a553ade7ff3fade3934bdd6a0ef6dbb3",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Like-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "9701a188f62023127a71887d2842afda",
+                "collection": "b95bab0534ecf4de61fb4dc049a073ca"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b95bab0534ecf4de61fb4dc049a073ca",
+        "rawModeData": ""
+    }
+}

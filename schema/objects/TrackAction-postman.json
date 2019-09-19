@@ -1,0 +1,59 @@
+{
+    "id": "d8324e0d480632b4e05a7638b0838410",
+    "name": "Track Action",
+    "description": "Autogeneration of Track Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "e21db86c3c05ea4f418025ef08719bc2",
+        "name": "\/Track-Action\/",
+        "url": "{{url}}\/Track-Action\/",
+        "description": "Autogeneration of Track Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "e21db86c3c05ea4f418025ef08719bc2",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"deliveryMethod\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Track-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "7514d4055b85ebc1b0da4e35f7a4915d",
+                "collection": "d8324e0d480632b4e05a7638b0838410"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d8324e0d480632b4e05a7638b0838410",
+        "rawModeData": ""
+    }
+}

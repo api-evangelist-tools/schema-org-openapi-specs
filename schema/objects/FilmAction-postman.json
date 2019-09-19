@@ -1,0 +1,59 @@
+{
+    "id": "2cef27f540377f4f97884296e3b9bffc",
+    "name": "Film Action",
+    "description": "Autogeneration of Film Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1db727a21841f8405f75614418ebc244",
+        "name": "\/Film-Action\/",
+        "url": "{{url}}\/Film-Action\/",
+        "description": "Autogeneration of Film Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1db727a21841f8405f75614418ebc244",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Film-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a1f2b0b530dbc1aef947bd43ee9220a8",
+                "collection": "2cef27f540377f4f97884296e3b9bffc"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "2cef27f540377f4f97884296e3b9bffc",
+        "rawModeData": ""
+    }
+}

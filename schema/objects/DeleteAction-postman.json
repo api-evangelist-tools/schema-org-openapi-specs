@@ -1,0 +1,59 @@
+{
+    "id": "d649a6e5bb94eecea4e7e60ea02713c4",
+    "name": "Delete Action",
+    "description": "Autogeneration of Delete Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ee01082cc12c5baed6750808c3c993e6",
+        "name": "\/Delete-Action\/",
+        "url": "{{url}}\/Delete-Action\/",
+        "description": "Autogeneration of Delete Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ee01082cc12c5baed6750808c3c993e6",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"collection\": {},\n    \"targetCollection\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Delete-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "5a6a526d5942de738fdd52fa764b4ce3",
+                "collection": "d649a6e5bb94eecea4e7e60ea02713c4"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "d649a6e5bb94eecea4e7e60ea02713c4",
+        "rawModeData": ""
+    }
+}

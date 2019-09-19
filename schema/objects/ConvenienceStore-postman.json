@@ -1,0 +1,59 @@
+{
+    "id": "4d27bf976b54d7a60b72620b52d9f87d",
+    "name": "Convenience Store",
+    "description": "Autogeneration of Convenience Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "96d78001ed12baacbfb843d1beda2ce3",
+        "name": "\/Convenience-Store\/",
+        "url": "{{url}}\/Convenience-Store\/",
+        "description": "Autogeneration of Convenience Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "96d78001ed12baacbfb843d1beda2ce3",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Convenience-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "dca62e15730ba0b53198493c52559c0e",
+                "collection": "4d27bf976b54d7a60b72620b52d9f87d"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4d27bf976b54d7a60b72620b52d9f87d",
+        "rawModeData": ""
+    }
+}

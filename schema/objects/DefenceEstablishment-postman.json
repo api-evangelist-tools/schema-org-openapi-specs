@@ -1,0 +1,59 @@
+{
+    "id": "ef6e24bfd6949a8e252f1c77c8e5c335",
+    "name": "Defence Establishment",
+    "description": "Autogeneration of Defence Establishment Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "630005ce20f63c2da0245fd594250140",
+        "name": "\/Defence-Establishment\/",
+        "url": "{{url}}\/Defence-Establishment\/",
+        "description": "Autogeneration of Defence Establishment Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "630005ce20f63c2da0245fd594250140",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Defence-Establishment\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "9f1c69115bfda67a88d9a8b14d5696c5",
+                "collection": "ef6e24bfd6949a8e252f1c77c8e5c335"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ef6e24bfd6949a8e252f1c77c8e5c335",
+        "rawModeData": ""
+    }
+}

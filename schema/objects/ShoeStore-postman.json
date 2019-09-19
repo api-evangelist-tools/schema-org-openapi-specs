@@ -1,0 +1,59 @@
+{
+    "id": "907df6c9160cf688126dd1dcdca916b8",
+    "name": "Shoe Store",
+    "description": "Autogeneration of Shoe Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b8b178638dca864c9a6db3e9c909f724",
+        "name": "\/Shoe-Store\/",
+        "url": "{{url}}\/Shoe-Store\/",
+        "description": "Autogeneration of Shoe Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b8b178638dca864c9a6db3e9c909f724",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Shoe-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "2ccf74fd0640078b3d3e2ae25af60ede",
+                "collection": "907df6c9160cf688126dd1dcdca916b8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "907df6c9160cf688126dd1dcdca916b8",
+        "rawModeData": ""
+    }
+}

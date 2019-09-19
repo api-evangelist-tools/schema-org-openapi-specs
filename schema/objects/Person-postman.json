@@ -1,0 +1,59 @@
+{
+    "id": "6892251f8ce5bb1142f84daa5dbf2df9",
+    "name": "Person",
+    "description": "Autogeneration of Person Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "94b61407d23f7ba16614717a4673d2d7",
+        "name": "\/Person\/",
+        "url": "{{url}}\/Person\/",
+        "description": "Autogeneration of Person Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "94b61407d23f7ba16614717a4673d2d7",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"spouse\": {},\n    \"funder\": {},\n    \"colleagues\": {},\n    \"deathDate\": \"String Content\",\n    \"memberOf\": {},\n    \"height\": {},\n    \"workLocation\": {},\n    \"netWorth\": {},\n    \"children\": {},\n    \"jobTitle\": \"String Content\",\n    \"hasOfferCatalog\": {},\n    \"deathPlace\": {},\n    \"globalLocationNumber\": \"String Content\",\n    \"birthPlace\": {},\n    \"gender\": \"String Content\",\n    \"alumniOf\": {},\n    \"homeLocation\": {},\n    \"duns\": \"String Content\",\n    \"taxID\": \"String Content\",\n    \"award\": \"String Content\",\n    \"birthDate\": \"String Content\",\n    \"makesOffer\": {},\n    \"givenName\": \"String Content\",\n    \"contactPoints\": {},\n    \"awards\": \"String Content\",\n    \"familyName\": \"String Content\",\n    \"seeks\": {},\n    \"sibling\": {},\n    \"address\": {},\n    \"performerIn\": {},\n    \"honorificPrefix\": \"String Content\",\n    \"additionalName\": \"String Content\",\n    \"siblings\": {},\n    \"telephone\": \"String Content\",\n    \"email\": \"String Content\",\n    \"weight\": {},\n    \"contactPoint\": {},\n    \"colleague\": {},\n    \"parents\": {},\n    \"naics\": \"String Content\",\n    \"hasPOS\": {},\n    \"parent\": {},\n    \"owns\": {},\n    \"affiliation\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"isicV4\": \"String Content\",\n    \"brand\": {},\n    \"honorificSuffix\": \"String Content\",\n    \"vatID\": \"String Content\",\n    \"nationality\": {},\n    \"faxNumber\": \"String Content\",\n    \"relatedTo\": {},\n    \"follows\": {},\n    \"knows\": {},\n    \"worksFor\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Person\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "af362e44072b735850ea06db83f8d3aa",
+                "collection": "6892251f8ce5bb1142f84daa5dbf2df9"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6892251f8ce5bb1142f84daa5dbf2df9",
+        "rawModeData": ""
+    }
+}

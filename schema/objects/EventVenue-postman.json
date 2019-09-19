@@ -1,0 +1,59 @@
+{
+    "id": "e3390731683c7566a852a6e65090b4df",
+    "name": "Event Venue",
+    "description": "Autogeneration of Event Venue Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "95a6da97002bc8583b0e89948d11e205",
+        "name": "\/Event-Venue\/",
+        "url": "{{url}}\/Event-Venue\/",
+        "description": "Autogeneration of Event Venue Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "95a6da97002bc8583b0e89948d11e205",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Event-Venue\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4d2099a6e11219a030942d686ae59a90",
+                "collection": "e3390731683c7566a852a6e65090b4df"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e3390731683c7566a852a6e65090b4df",
+        "rawModeData": ""
+    }
+}

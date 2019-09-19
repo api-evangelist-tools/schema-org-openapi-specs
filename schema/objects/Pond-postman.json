@@ -1,0 +1,59 @@
+{
+    "id": "1768f07456e1bf6760e021b59f8caeb2",
+    "name": "Pond",
+    "description": "Autogeneration of Pond Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "263db09f2320e926c226e9af0177554f",
+        "name": "\/Pond\/",
+        "url": "{{url}}\/Pond\/",
+        "description": "Autogeneration of Pond Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "263db09f2320e926c226e9af0177554f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Pond\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "9e7f20a93d9cbbf18f9004d115b65b8d",
+                "collection": "1768f07456e1bf6760e021b59f8caeb2"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1768f07456e1bf6760e021b59f8caeb2",
+        "rawModeData": ""
+    }
+}

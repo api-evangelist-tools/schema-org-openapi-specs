@@ -1,0 +1,59 @@
+{
+    "id": "2c2b3990ecf3fee524767fad5ec7bde7",
+    "name": "Bus Trip",
+    "description": "Autogeneration of Bus Trip Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "5cfcab873c8f73604e3fcd4eb71b2bc4",
+        "name": "\/Bus-Trip\/",
+        "url": "{{url}}\/Bus-Trip\/",
+        "description": "Autogeneration of Bus Trip Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "5cfcab873c8f73604e3fcd4eb71b2bc4",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"provider\": {},\n    \"busName\": \"String Content\",\n    \"departureBusStop\": {},\n    \"arrivalBusStop\": {},\n    \"arrivalTime\": \"String Content\",\n    \"busNumber\": \"String Content\",\n    \"departureTime\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Bus-Trip\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "b214b49859d3195001c71c2954befe05",
+                "collection": "2c2b3990ecf3fee524767fad5ec7bde7"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "2c2b3990ecf3fee524767fad5ec7bde7",
+        "rawModeData": ""
+    }
+}

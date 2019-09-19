@@ -1,0 +1,59 @@
+{
+    "id": "111fef2fe40f8753323f8b489f421856",
+    "name": "Specialty",
+    "description": "Autogeneration of Specialty Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f4556856c5e77edfffe619b616c4bb33",
+        "name": "\/Specialty\/",
+        "url": "{{url}}\/Specialty\/",
+        "description": "Autogeneration of Specialty Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f4556856c5e77edfffe619b616c4bb33",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Specialty\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "0a3037c123a0b49946d9f1035fe13526",
+                "collection": "111fef2fe40f8753323f8b489f421856"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "111fef2fe40f8753323f8b489f421856",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "ad2c452cf29555bdc3af1c5b595f8267",
+    "name": "How To Tool",
+    "description": "Autogeneration of How To Tool Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1fef811d56d700bce7f08a98fbd7d285",
+        "name": "\/How-To-Tool\/",
+        "url": "{{url}}\/How-To-Tool\/",
+        "description": "Autogeneration of How To Tool Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1fef811d56d700bce7f08a98fbd7d285",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"requiredQuantity\": 10\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/How-To-Tool\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "38435d09059a5b6a7b2cdc37f474cdf0",
+                "collection": "ad2c452cf29555bdc3af1c5b595f8267"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ad2c452cf29555bdc3af1c5b595f8267",
+        "rawModeData": ""
+    }
+}

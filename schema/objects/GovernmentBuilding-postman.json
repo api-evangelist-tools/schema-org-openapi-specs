@@ -1,0 +1,59 @@
+{
+    "id": "8b99b5d34b340f790f0d8ab243256a25",
+    "name": "Government Building",
+    "description": "Autogeneration of Government Building Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2781d539f3ab688d68de550a0208108b",
+        "name": "\/Government-Building\/",
+        "url": "{{url}}\/Government-Building\/",
+        "description": "Autogeneration of Government Building Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2781d539f3ab688d68de550a0208108b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Government-Building\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "95d883b91743361be3d6b5f1d3debc67",
+                "collection": "8b99b5d34b340f790f0d8ab243256a25"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "8b99b5d34b340f790f0d8ab243256a25",
+        "rawModeData": ""
+    }
+}

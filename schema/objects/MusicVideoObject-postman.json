@@ -1,0 +1,59 @@
+{
+    "id": "591b57ae39ba11f93aac45c8f051e9f9",
+    "name": "Music Video Object",
+    "description": "Autogeneration of Music Video Object Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "85c06ebfe18b992dd9bf3bd7bba3de56",
+        "name": "\/Music-Video-Object\/",
+        "url": "{{url}}\/Music-Video-Object\/",
+        "description": "Autogeneration of Music Video Object Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "85c06ebfe18b992dd9bf3bd7bba3de56",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"uploadDate\": \"String Content\",\n    \"playerType\": \"String Content\",\n    \"height\": {},\n    \"bitrate\": \"String Content\",\n    \"requiresSubscription\": 1,\n    \"regionsAllowed\": {},\n    \"contentSize\": \"String Content\",\n    \"embedUrl\": {},\n    \"width\": {},\n    \"contentUrl\": {},\n    \"associatedArticle\": {},\n    \"productionCompany\": {},\n    \"duration\": {},\n    \"encodesCreativeWork\": {},\n    \"encodingFormat\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Music-Video-Object\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a8095de90eaa4998538e50f46c32056a",
+                "collection": "591b57ae39ba11f93aac45c8f051e9f9"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "591b57ae39ba11f93aac45c8f051e9f9",
+        "rawModeData": ""
+    }
+}

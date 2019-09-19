@@ -1,0 +1,59 @@
+{
+    "id": "213bdeb2bd9400eb2f9f0e44664be938",
+    "name": "Broadcast Service",
+    "description": "Autogeneration of Broadcast Service Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "21891f91c57a5f532d6156dcd6edc4ed",
+        "name": "\/Broadcast-Service\/",
+        "url": "{{url}}\/Broadcast-Service\/",
+        "description": "Autogeneration of Broadcast Service Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "21891f91c57a5f532d6156dcd6edc4ed",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"broadcastTimezone\": \"String Content\",\n    \"videoFormat\": \"String Content\",\n    \"broadcastAffiliateOf\": {},\n    \"parentService\": {},\n    \"broadcastDisplayName\": \"String Content\",\n    \"area\": {},\n    \"broadcaster\": {},\n    \"serviceArea\": {},\n    \"produces\": {},\n    \"provider\": {},\n    \"serviceAudience\": {},\n    \"areaServed\": {},\n    \"audience\": {},\n    \"hasOfferCatalog\": {},\n    \"hoursAvailable\": {},\n    \"providerMobility\": \"String Content\",\n    \"aggregateRating\": {},\n    \"offers\": {},\n    \"award\": \"String Content\",\n    \"category\": \"String Content\",\n    \"broker\": {},\n    \"serviceOutput\": {},\n    \"logo\": {},\n    \"isSimilarTo\": {},\n    \"isRelatedTo\": {},\n    \"availableChannel\": {},\n    \"review\": {},\n    \"serviceType\": \"String Content\",\n    \"brand\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Broadcast-Service\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a21d3ffc68f938445acb68d49fe10ea8",
+                "collection": "213bdeb2bd9400eb2f9f0e44664be938"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "213bdeb2bd9400eb2f9f0e44664be938",
+        "rawModeData": ""
+    }
+}

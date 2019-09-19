@@ -1,0 +1,59 @@
+{
+    "id": "ec96a57cc3729e7a417ff7cb50b1c7cd",
+    "name": "Item Availability",
+    "description": "Autogeneration of Item Availability Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "a637e9336161615efe2bfe2700ac6d26",
+        "name": "\/Item-Availability\/",
+        "url": "{{url}}\/Item-Availability\/",
+        "description": "Autogeneration of Item Availability Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "a637e9336161615efe2bfe2700ac6d26",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Item-Availability\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "29bded5fecfcde4f861966ba46a7da28",
+                "collection": "ec96a57cc3729e7a417ff7cb50b1c7cd"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ec96a57cc3729e7a417ff7cb50b1c7cd",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "324e57e5c8eaba08ac943a3c47c68d34",
+    "name": "Authorize Action",
+    "description": "Autogeneration of Authorize Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2b0cf8433f922256ab45ad5e9b88b826",
+        "name": "\/Authorize-Action\/",
+        "url": "{{url}}\/Authorize-Action\/",
+        "description": "Autogeneration of Authorize Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2b0cf8433f922256ab45ad5e9b88b826",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"recipient\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Authorize-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "fc278ff66b6ec3e4b0a8d2bb5d388c93",
+                "collection": "324e57e5c8eaba08ac943a3c47c68d34"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "324e57e5c8eaba08ac943a3c47c68d34",
+        "rawModeData": ""
+    }
+}

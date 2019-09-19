@@ -1,0 +1,59 @@
+{
+    "id": "e8f7c7efc7d4ceab1d19f641abf37772",
+    "name": "Digital Document Permission Type",
+    "description": "Autogeneration of Digital Document Permission Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "260e4dc79fef5ae3f7f3ccf3d8803932",
+        "name": "\/Digital-Document-Permission-Type\/",
+        "url": "{{url}}\/Digital-Document-Permission-Type\/",
+        "description": "Autogeneration of Digital Document Permission Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "260e4dc79fef5ae3f7f3ccf3d8803932",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Digital-Document-Permission-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "e3928fa79dc69150da99c04777f2e023",
+                "collection": "e8f7c7efc7d4ceab1d19f641abf37772"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e8f7c7efc7d4ceab1d19f641abf37772",
+        "rawModeData": ""
+    }
+}

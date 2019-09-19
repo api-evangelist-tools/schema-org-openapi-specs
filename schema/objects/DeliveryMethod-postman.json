@@ -1,0 +1,59 @@
+{
+    "id": "cffdd62e81e76f22fc51bd501e57e0ab",
+    "name": "Delivery Method",
+    "description": "Autogeneration of Delivery Method Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "37786896562eddfe9d55a6e7e05b4acf",
+        "name": "\/Delivery-Method\/",
+        "url": "{{url}}\/Delivery-Method\/",
+        "description": "Autogeneration of Delivery Method Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "37786896562eddfe9d55a6e7e05b4acf",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Delivery-Method\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "21e31ff0eaf52edb63af2fdacbbaff45",
+                "collection": "cffdd62e81e76f22fc51bd501e57e0ab"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "cffdd62e81e76f22fc51bd501e57e0ab",
+        "rawModeData": ""
+    }
+}

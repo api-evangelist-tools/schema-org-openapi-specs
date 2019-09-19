@@ -1,0 +1,59 @@
+{
+    "id": "ff25243d22da79dd63a3d5a87ee50afd",
+    "name": "Invite Action",
+    "description": "Autogeneration of Invite Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "aa93d14dfdf047d8dc7103e3083034ad",
+        "name": "\/Invite-Action\/",
+        "url": "{{url}}\/Invite-Action\/",
+        "description": "Autogeneration of Invite Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "aa93d14dfdf047d8dc7103e3083034ad",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"event\": {},\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Invite-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "0b5f3aba71e044240fb86bc889c5f681",
+                "collection": "ff25243d22da79dd63a3d5a87ee50afd"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ff25243d22da79dd63a3d5a87ee50afd",
+        "rawModeData": ""
+    }
+}

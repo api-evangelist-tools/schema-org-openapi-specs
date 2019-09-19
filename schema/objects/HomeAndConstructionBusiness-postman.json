@@ -1,0 +1,59 @@
+{
+    "id": "99855d30a1073706b969f61691751b66",
+    "name": "Home And Construction Business",
+    "description": "Autogeneration of Home And Construction Business Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "9ec82061fd73755821739c959fd59d41",
+        "name": "\/Home-And-Construction-Business\/",
+        "url": "{{url}}\/Home-And-Construction-Business\/",
+        "description": "Autogeneration of Home And Construction Business Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "9ec82061fd73755821739c959fd59d41",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Home-And-Construction-Business\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "87dd0145553ba7337ca33ceda47a48fd",
+                "collection": "99855d30a1073706b969f61691751b66"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "99855d30a1073706b969f61691751b66",
+        "rawModeData": ""
+    }
+}

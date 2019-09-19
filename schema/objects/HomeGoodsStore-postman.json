@@ -1,0 +1,59 @@
+{
+    "id": "4a64c32e5635509c1915f1018759c237",
+    "name": "Home Goods Store",
+    "description": "Autogeneration of Home Goods Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "112dbb44e8554a53de3f9820bb379157",
+        "name": "\/Home-Goods-Store\/",
+        "url": "{{url}}\/Home-Goods-Store\/",
+        "description": "Autogeneration of Home Goods Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "112dbb44e8554a53de3f9820bb379157",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Home-Goods-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "8c93dc8df278a36bb23fa4ff43995205",
+                "collection": "4a64c32e5635509c1915f1018759c237"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4a64c32e5635509c1915f1018759c237",
+        "rawModeData": ""
+    }
+}

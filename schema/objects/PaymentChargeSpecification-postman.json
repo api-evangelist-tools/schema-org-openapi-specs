@@ -1,0 +1,59 @@
+{
+    "id": "f271817a0fbc893ae892430da070bf73",
+    "name": "Payment Charge Specification",
+    "description": "Autogeneration of Payment Charge Specification Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "678fc76f79097aea0222c050892bda74",
+        "name": "\/Payment-Charge-Specification\/",
+        "url": "{{url}}\/Payment-Charge-Specification\/",
+        "description": "Autogeneration of Payment Charge Specification Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "678fc76f79097aea0222c050892bda74",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"appliesToPaymentMethod\": {},\n    \"appliesToDeliveryMethod\": {},\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Payment-Charge-Specification\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "aef403d9fcf56d9b243670df1e236da6",
+                "collection": "f271817a0fbc893ae892430da070bf73"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f271817a0fbc893ae892430da070bf73",
+        "rawModeData": ""
+    }
+}

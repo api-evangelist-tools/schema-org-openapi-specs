@@ -1,0 +1,59 @@
+{
+    "id": "99ce12c847fd432c3d25d36434bfffad",
+    "name": "City",
+    "description": "Autogeneration of City Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "24c8774d51f423caa1a632534d6cef03",
+        "name": "\/City\/",
+        "url": "{{url}}\/City\/",
+        "description": "Autogeneration of City Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "24c8774d51f423caa1a632534d6cef03",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/City\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1f369b78b802ad58d5ce0620c3e257f4",
+                "collection": "99ce12c847fd432c3d25d36434bfffad"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "99ce12c847fd432c3d25d36434bfffad",
+        "rawModeData": ""
+    }
+}

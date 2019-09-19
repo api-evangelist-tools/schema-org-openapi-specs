@@ -1,0 +1,59 @@
+{
+    "id": "783669879d57531c3554c58ff67fe6ee",
+    "name": "Waterfall",
+    "description": "Autogeneration of Waterfall Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "6f75cae51d391c35b05dc633ebba0d84",
+        "name": "\/Waterfall\/",
+        "url": "{{url}}\/Waterfall\/",
+        "description": "Autogeneration of Waterfall Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "6f75cae51d391c35b05dc633ebba0d84",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Waterfall\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "cf6c9b7fb0bc7d29e72201a561bce208",
+                "collection": "783669879d57531c3554c58ff67fe6ee"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "783669879d57531c3554c58ff67fe6ee",
+        "rawModeData": ""
+    }
+}

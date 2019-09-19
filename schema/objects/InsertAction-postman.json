@@ -1,0 +1,59 @@
+{
+    "id": "6f83a30c1bbd9242f462f74872e94d81",
+    "name": "Insert Action",
+    "description": "Autogeneration of Insert Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "adbe19ceb0a75b57afae23390b508491",
+        "name": "\/Insert-Action\/",
+        "url": "{{url}}\/Insert-Action\/",
+        "description": "Autogeneration of Insert Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "adbe19ceb0a75b57afae23390b508491",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"toLocation\": {},\n    \"collection\": {},\n    \"targetCollection\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Insert-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "97a42520cc6a6ba3b68f90b704c563a1",
+                "collection": "6f83a30c1bbd9242f462f74872e94d81"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6f83a30c1bbd9242f462f74872e94d81",
+        "rawModeData": ""
+    }
+}

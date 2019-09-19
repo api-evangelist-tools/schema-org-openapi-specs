@@ -1,0 +1,59 @@
+{
+    "id": "12cb7e5271bd4a66b6fba7c04bcfb0a1",
+    "name": "Business Function",
+    "description": "Autogeneration of Business Function Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "7770d01b77a4159cbb3047f46edc6c1c",
+        "name": "\/Business-Function\/",
+        "url": "{{url}}\/Business-Function\/",
+        "description": "Autogeneration of Business Function Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "7770d01b77a4159cbb3047f46edc6c1c",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Business-Function\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "94970a26c2dd346b57263e1035614d43",
+                "collection": "12cb7e5271bd4a66b6fba7c04bcfb0a1"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "12cb7e5271bd4a66b6fba7c04bcfb0a1",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "f8bb7682b2f24792050a16317daf5f76",
+    "name": "Buddhist Temple",
+    "description": "Autogeneration of Buddhist Temple Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1f7e1499b2b41aaacb337c2c3951d5bc",
+        "name": "\/Buddhist-Temple\/",
+        "url": "{{url}}\/Buddhist-Temple\/",
+        "description": "Autogeneration of Buddhist Temple Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1f7e1499b2b41aaacb337c2c3951d5bc",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Buddhist-Temple\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "2076f8f429ba8bc3fc584a75aa9db666",
+                "collection": "f8bb7682b2f24792050a16317daf5f76"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "f8bb7682b2f24792050a16317daf5f76",
+        "rawModeData": ""
+    }
+}

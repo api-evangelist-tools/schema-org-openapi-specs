@@ -1,0 +1,59 @@
+{
+    "id": "9eb78a9c65c31168e110feb03a33c569",
+    "name": "Post Office",
+    "description": "Autogeneration of Post Office Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ffd7bfa971c65cae1923325a8ef9b414",
+        "name": "\/Post-Office\/",
+        "url": "{{url}}\/Post-Office\/",
+        "description": "Autogeneration of Post Office Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ffd7bfa971c65cae1923325a8ef9b414",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Post-Office\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "5867e475d337981edfedefa07f8f0384",
+                "collection": "9eb78a9c65c31168e110feb03a33c569"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "9eb78a9c65c31168e110feb03a33c569",
+        "rawModeData": ""
+    }
+}

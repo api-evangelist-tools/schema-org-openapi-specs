@@ -1,0 +1,59 @@
+{
+    "id": "4a02043f9fff2b879d18c5ab276512b7",
+    "name": "Qualitative Value",
+    "description": "Autogeneration of Qualitative Value Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "66bd18e507b9655f42796f4fa347f4c5",
+        "name": "\/Qualitative-Value\/",
+        "url": "{{url}}\/Qualitative-Value\/",
+        "description": "Autogeneration of Qualitative Value Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "66bd18e507b9655f42796f4fa347f4c5",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"greater\": {},\n    \"equal\": {},\n    \"additionalProperty\": {},\n    \"lesser\": {},\n    \"valueReference\": {},\n    \"nonEqual\": {},\n    \"lesserOrEqual\": {},\n    \"greaterOrEqual\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Qualitative-Value\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "01573597bdeb50afa2e19f4aeb395294",
+                "collection": "4a02043f9fff2b879d18c5ab276512b7"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4a02043f9fff2b879d18c5ab276512b7",
+        "rawModeData": ""
+    }
+}

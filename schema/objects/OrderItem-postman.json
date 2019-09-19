@@ -1,0 +1,59 @@
+{
+    "id": "a8c1110e54222257bf27fcc77a40dae7",
+    "name": "Order Item",
+    "description": "Autogeneration of Order Item Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c5803177b560ccb989833fa37141b41b",
+        "name": "\/Order-Item\/",
+        "url": "{{url}}\/Order-Item\/",
+        "description": "Autogeneration of Order Item Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c5803177b560ccb989833fa37141b41b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"orderItemStatus\": {},\n    \"orderQuantity\": 10,\n    \"orderDelivery\": {},\n    \"orderedItem\": {},\n    \"orderItemNumber\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Order-Item\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "6cb8bb5b909f956ca6becbbb32a76605",
+                "collection": "a8c1110e54222257bf27fcc77a40dae7"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a8c1110e54222257bf27fcc77a40dae7",
+        "rawModeData": ""
+    }
+}

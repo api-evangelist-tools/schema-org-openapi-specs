@@ -1,0 +1,59 @@
+{
+    "id": "1a9d7c623399fc6b598e47981c64aa79",
+    "name": "Bus Stop",
+    "description": "Autogeneration of Bus Stop Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "3f7587b9fe570a4e304841add04230fa",
+        "name": "\/Bus-Stop\/",
+        "url": "{{url}}\/Bus-Stop\/",
+        "description": "Autogeneration of Bus Stop Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "3f7587b9fe570a4e304841add04230fa",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Bus-Stop\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "7aa78b06b4b90fa24224dbbe6a4fbdd7",
+                "collection": "1a9d7c623399fc6b598e47981c64aa79"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "1a9d7c623399fc6b598e47981c64aa79",
+        "rawModeData": ""
+    }
+}

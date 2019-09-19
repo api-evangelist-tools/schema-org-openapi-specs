@@ -1,0 +1,59 @@
+{
+    "id": "ea03dc3e379e312763f9511b7e26bdb8",
+    "name": "Agree Action",
+    "description": "Autogeneration of Agree Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "74a405439d706ed4796f563ef2ebef7a",
+        "name": "\/Agree-Action\/",
+        "url": "{{url}}\/Agree-Action\/",
+        "description": "Autogeneration of Agree Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "74a405439d706ed4796f563ef2ebef7a",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Agree-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a230d0d6309e2ca9ee53b69a3b4e5537",
+                "collection": "ea03dc3e379e312763f9511b7e26bdb8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "ea03dc3e379e312763f9511b7e26bdb8",
+        "rawModeData": ""
+    }
+}

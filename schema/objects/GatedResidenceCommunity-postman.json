@@ -1,0 +1,59 @@
+{
+    "id": "4857dcbc3a60497cb824a29820be2f81",
+    "name": "Gated Residence Community",
+    "description": "Autogeneration of Gated Residence Community Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "29f9fd47d8b0a0d5e05ab64f1e4e3528",
+        "name": "\/Gated-Residence-Community\/",
+        "url": "{{url}}\/Gated-Residence-Community\/",
+        "description": "Autogeneration of Gated Residence Community Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "29f9fd47d8b0a0d5e05ab64f1e4e3528",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Gated-Residence-Community\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "cc6523e896cd99acbe8de5aad7979a44",
+                "collection": "4857dcbc3a60497cb824a29820be2f81"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4857dcbc3a60497cb824a29820be2f81",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "4eb82f4d725ae8be734a58f9402eacfb",
+    "name": "T V Episode",
+    "description": "Autogeneration of T V Episode Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "0046138674e5cdf3dab31d7c9e296f2f",
+        "name": "\/T-V-Episode\/",
+        "url": "{{url}}\/T-V-Episode\/",
+        "description": "Autogeneration of T V Episode Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "0046138674e5cdf3dab31d7c9e296f2f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"partOfTVSeries\": {},\n    \"subtitleLanguage\": {},\n    \"countryOfOrigin\": {},\n    \"actor\": {},\n    \"partOfSeries\": {},\n    \"trailer\": {},\n    \"partOfSeason\": {},\n    \"musicBy\": {},\n    \"directors\": {},\n    \"episodeNumber\": \"String Content\",\n    \"director\": {},\n    \"productionCompany\": {},\n    \"actors\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/T-V-Episode\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "8d6ec73cc3a1f324ef72d9cfaac6e32e",
+                "collection": "4eb82f4d725ae8be734a58f9402eacfb"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "4eb82f4d725ae8be734a58f9402eacfb",
+        "rawModeData": ""
+    }
+}

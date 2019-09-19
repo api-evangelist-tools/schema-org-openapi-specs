@@ -1,0 +1,59 @@
+{
+    "id": "a221bfc78eb5577c67bc99e6805da733",
+    "name": "Gender Type",
+    "description": "Autogeneration of Gender Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "81270b0fc4ce9f805af8ee0f988a9a22",
+        "name": "\/Gender-Type\/",
+        "url": "{{url}}\/Gender-Type\/",
+        "description": "Autogeneration of Gender Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "81270b0fc4ce9f805af8ee0f988a9a22",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Gender-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "759d5f6fb35bb5ac8e631ecdfe8529eb",
+                "collection": "a221bfc78eb5577c67bc99e6805da733"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "a221bfc78eb5577c67bc99e6805da733",
+        "rawModeData": ""
+    }
+}

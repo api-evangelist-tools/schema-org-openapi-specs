@@ -1,0 +1,59 @@
+{
+    "id": "3c75e39f8c74bbb54b08327986d40aac",
+    "name": "Flight Reservation",
+    "description": "Autogeneration of Flight Reservation Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2cb82781cbdfc459e89dd8b4df2775ee",
+        "name": "\/Flight-Reservation\/",
+        "url": "{{url}}\/Flight-Reservation\/",
+        "description": "Autogeneration of Flight Reservation Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2cb82781cbdfc459e89dd8b4df2775ee",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"boardingGroup\": \"String Content\",\n    \"passengerSequenceNumber\": \"String Content\",\n    \"securityScreening\": \"String Content\",\n    \"passengerPriorityStatus\": \"String Content\",\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Flight-Reservation\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "cc5e5500803310c307c1f40eddd43d20",
+                "collection": "3c75e39f8c74bbb54b08327986d40aac"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "3c75e39f8c74bbb54b08327986d40aac",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "3440d4e400aa6227804e023ed48a8692",
+    "name": "Locker Delivery",
+    "description": "Autogeneration of Locker Delivery Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f71d6a521433899e1a347f088f2cbe7d",
+        "name": "\/Locker-Delivery\/",
+        "url": "{{url}}\/Locker-Delivery\/",
+        "description": "Autogeneration of Locker Delivery Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f71d6a521433899e1a347f088f2cbe7d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Locker-Delivery\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c6d4fd211e99f15fe4a75f30f6e468a4",
+                "collection": "3440d4e400aa6227804e023ed48a8692"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "3440d4e400aa6227804e023ed48a8692",
+        "rawModeData": ""
+    }
+}

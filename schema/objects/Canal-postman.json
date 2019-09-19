@@ -1,0 +1,59 @@
+{
+    "id": "b2b00a4e5821441c2b3cfcc35d106fcb",
+    "name": "Canal",
+    "description": "Autogeneration of Canal Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "bdd8b3a56c859f16bf20f58209b15086",
+        "name": "\/Canal\/",
+        "url": "{{url}}\/Canal\/",
+        "description": "Autogeneration of Canal Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "bdd8b3a56c859f16bf20f58209b15086",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Canal\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c4232e7d2886645de7861e5b1eb74638",
+                "collection": "b2b00a4e5821441c2b3cfcc35d106fcb"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b2b00a4e5821441c2b3cfcc35d106fcb",
+        "rawModeData": ""
+    }
+}

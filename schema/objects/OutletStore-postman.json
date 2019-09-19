@@ -1,0 +1,59 @@
+{
+    "id": "7e5efbe2e576c82921a104748ae30c14",
+    "name": "Outlet Store",
+    "description": "Autogeneration of Outlet Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "996767420ca088cdf0bef26bec5d4fdb",
+        "name": "\/Outlet-Store\/",
+        "url": "{{url}}\/Outlet-Store\/",
+        "description": "Autogeneration of Outlet Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "996767420ca088cdf0bef26bec5d4fdb",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Outlet-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "030cddd9397a0417ce9c17691cc0cde3",
+                "collection": "7e5efbe2e576c82921a104748ae30c14"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "7e5efbe2e576c82921a104748ae30c14",
+        "rawModeData": ""
+    }
+}

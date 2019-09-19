@@ -1,0 +1,59 @@
+{
+    "id": "095c74e22232a26e3d6b1857b34c8a06",
+    "name": "Radio Channel",
+    "description": "Autogeneration of Radio Channel Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "59f847e3b2c3c94d037ee54a69d06937",
+        "name": "\/Radio-Channel\/",
+        "url": "{{url}}\/Radio-Channel\/",
+        "description": "Autogeneration of Radio Channel Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "59f847e3b2c3c94d037ee54a69d06937",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"broadcastChannelId\": \"String Content\",\n    \"broadcastServiceTier\": \"String Content\",\n    \"inBroadcastLineup\": {},\n    \"providesBroadcastService\": {},\n    \"genre\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Radio-Channel\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "1642e393ac172e8cd30d9dd99eef72d7",
+                "collection": "095c74e22232a26e3d6b1857b34c8a06"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "095c74e22232a26e3d6b1857b34c8a06",
+        "rawModeData": ""
+    }
+}

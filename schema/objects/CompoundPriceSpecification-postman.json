@@ -1,0 +1,59 @@
+{
+    "id": "3f50d3d55e2194ad1de8d7ec505fb9d7",
+    "name": "Compound Price Specification",
+    "description": "Autogeneration of Compound Price Specification Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "0f3f9d51eff6860dc41363858e37fb8f",
+        "name": "\/Compound-Price-Specification\/",
+        "url": "{{url}}\/Compound-Price-Specification\/",
+        "description": "Autogeneration of Compound Price Specification Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "0f3f9d51eff6860dc41363858e37fb8f",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"priceComponent\": {},\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Compound-Price-Specification\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "c312dbdd9b3f1bb4c16e8372a9485b54",
+                "collection": "3f50d3d55e2194ad1de8d7ec505fb9d7"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "3f50d3d55e2194ad1de8d7ec505fb9d7",
+        "rawModeData": ""
+    }
+}

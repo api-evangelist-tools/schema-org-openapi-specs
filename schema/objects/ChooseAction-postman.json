@@ -1,0 +1,59 @@
+{
+    "id": "6b15237ceb7f321caf1dc744d6016505",
+    "name": "Choose Action",
+    "description": "Autogeneration of Choose Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f21d738a749a4a7b5af3666158a64614",
+        "name": "\/Choose-Action\/",
+        "url": "{{url}}\/Choose-Action\/",
+        "description": "Autogeneration of Choose Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f21d738a749a4a7b5af3666158a64614",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"actionOption\": {},\n    \"option\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Choose-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a29e057b7cf920f1f6dcf55213dcbc35",
+                "collection": "6b15237ceb7f321caf1dc744d6016505"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "6b15237ceb7f321caf1dc744d6016505",
+        "rawModeData": ""
+    }
+}

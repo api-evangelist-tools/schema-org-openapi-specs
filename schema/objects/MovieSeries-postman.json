@@ -1,0 +1,59 @@
+{
+    "id": "3e62dfc337748a1676e4ff650921031a",
+    "name": "Movie Series",
+    "description": "Autogeneration of Movie Series Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "ee56cc26d621af5ac324fe683a6326ff",
+        "name": "\/Movie-Series\/",
+        "url": "{{url}}\/Movie-Series\/",
+        "description": "Autogeneration of Movie Series Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "ee56cc26d621af5ac324fe683a6326ff",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"actor\": {},\n    \"trailer\": {},\n    \"musicBy\": {},\n    \"directors\": {},\n    \"director\": {},\n    \"productionCompany\": {},\n    \"actors\": {},\n    \"endDate\": \"String Content\",\n    \"issn\": \"String Content\",\n    \"startDate\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Movie-Series\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "7965fb69e82db61ca01978602fba2e92",
+                "collection": "3e62dfc337748a1676e4ff650921031a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "3e62dfc337748a1676e4ff650921031a",
+        "rawModeData": ""
+    }
+}

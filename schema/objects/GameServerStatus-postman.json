@@ -1,0 +1,59 @@
+{
+    "id": "60ed45af50d2bcacd4dd65c8d0d0b9f6",
+    "name": "Game Server Status",
+    "description": "Autogeneration of Game Server Status Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "5e4e47239702f91542de63943c060482",
+        "name": "\/Game-Server-Status\/",
+        "url": "{{url}}\/Game-Server-Status\/",
+        "description": "Autogeneration of Game Server Status Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "5e4e47239702f91542de63943c060482",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Game-Server-Status\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "04f2b8d3c7d2c4474a7d0754bd9104b3",
+                "collection": "60ed45af50d2bcacd4dd65c8d0d0b9f6"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "60ed45af50d2bcacd4dd65c8d0d0b9f6",
+        "rawModeData": ""
+    }
+}

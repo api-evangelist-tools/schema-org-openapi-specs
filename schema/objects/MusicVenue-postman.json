@@ -1,0 +1,59 @@
+{
+    "id": "c0c7f0025381c2bce4ee83a83521e800",
+    "name": "Music Venue",
+    "description": "Autogeneration of Music Venue Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "f8b35b925d81a92e9f18837c28fa5590",
+        "name": "\/Music-Venue\/",
+        "url": "{{url}}\/Music-Venue\/",
+        "description": "Autogeneration of Music Venue Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "f8b35b925d81a92e9f18837c28fa5590",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"openingHours\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Music-Venue\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "dcce2ea68a241b2e94635934a9bc9dad",
+                "collection": "c0c7f0025381c2bce4ee83a83521e800"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "c0c7f0025381c2bce4ee83a83521e800",
+        "rawModeData": ""
+    }
+}

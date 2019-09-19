@@ -1,0 +1,59 @@
+{
+    "id": "69a15f3de7af502b65e8866927ff20d8",
+    "name": "Warranty Promise",
+    "description": "Autogeneration of Warranty Promise Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "73186f53bda8fd227e75d2f7c26361a9",
+        "name": "\/Warranty-Promise\/",
+        "url": "{{url}}\/Warranty-Promise\/",
+        "description": "Autogeneration of Warranty Promise Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "73186f53bda8fd227e75d2f7c26361a9",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"durationOfWarranty\": {},\n    \"warrantyScope\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Warranty-Promise\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "e76bae9b3b40998593a5b7a00facbf71",
+                "collection": "69a15f3de7af502b65e8866927ff20d8"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "69a15f3de7af502b65e8866927ff20d8",
+        "rawModeData": ""
+    }
+}

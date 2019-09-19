@@ -1,0 +1,59 @@
+{
+    "id": "5332f07480c42b2f8d14a7297d8b552c",
+    "name": "Assign Action",
+    "description": "Autogeneration of Assign Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "845ce3964be12658c2c125d5a6028e7e",
+        "name": "\/Assign-Action\/",
+        "url": "{{url}}\/Assign-Action\/",
+        "description": "Autogeneration of Assign Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "845ce3964be12658c2c125d5a6028e7e",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Assign-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "2539f0d1ca9fe4f9c31dafcec10c3da6",
+                "collection": "5332f07480c42b2f8d14a7297d8b552c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "5332f07480c42b2f8d14a7297d8b552c",
+        "rawModeData": ""
+    }
+}

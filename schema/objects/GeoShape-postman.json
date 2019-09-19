@@ -1,0 +1,59 @@
+{
+    "id": "58613f18e3f790e737b2794a0e418a31",
+    "name": "Geo Shape",
+    "description": "Autogeneration of Geo Shape Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "9f5bbfc1b70b2c159ee55ce276eebcdb",
+        "name": "\/Geo-Shape\/",
+        "url": "{{url}}\/Geo-Shape\/",
+        "description": "Autogeneration of Geo Shape Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "9f5bbfc1b70b2c159ee55ce276eebcdb",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"line\": \"String Content\",\n    \"address\": {},\n    \"circle\": \"String Content\",\n    \"box\": \"String Content\",\n    \"addressCountry\": {},\n    \"postalCode\": \"String Content\",\n    \"elevation\": \"String Content\",\n    \"polygon\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Geo-Shape\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "7ce6f5c80b9e93dba7b540d42bcf76e7",
+                "collection": "58613f18e3f790e737b2794a0e418a31"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "58613f18e3f790e737b2794a0e418a31",
+        "rawModeData": ""
+    }
+}

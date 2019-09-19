@@ -1,0 +1,59 @@
+{
+    "id": "8efe8018c3c5def051286ab2046d85da",
+    "name": "Reservoir",
+    "description": "Autogeneration of Reservoir Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1f98adaa40e7a49db68d98855f2fbd4b",
+        "name": "\/Reservoir\/",
+        "url": "{{url}}\/Reservoir\/",
+        "description": "Autogeneration of Reservoir Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1f98adaa40e7a49db68d98855f2fbd4b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Reservoir\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "ecf4574879b15ecf6e75163d07048148",
+                "collection": "8efe8018c3c5def051286ab2046d85da"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "8efe8018c3c5def051286ab2046d85da",
+        "rawModeData": ""
+    }
+}

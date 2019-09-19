@@ -1,0 +1,59 @@
+{
+    "id": "2993a6da9b336df18fd7822d75968073",
+    "name": "Share Action",
+    "description": "Autogeneration of Share Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "0dfc8e9bfba6898ff925485e1ad29969",
+        "name": "\/Share-Action\/",
+        "url": "{{url}}\/Share-Action\/",
+        "description": "Autogeneration of Share Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "0dfc8e9bfba6898ff925485e1ad29969",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Share-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "18ab712deb100475cf644fb20c7b2b53",
+                "collection": "2993a6da9b336df18fd7822d75968073"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "2993a6da9b336df18fd7822d75968073",
+        "rawModeData": ""
+    }
+}

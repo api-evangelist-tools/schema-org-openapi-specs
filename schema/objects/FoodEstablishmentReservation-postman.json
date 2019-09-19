@@ -1,0 +1,59 @@
+{
+    "id": "497d064ca036958f8ac4fe552742a465",
+    "name": "Food Establishment Reservation",
+    "description": "Autogeneration of Food Establishment Reservation Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "1d43414fb233e5f5818df80ced67676b",
+        "name": "\/Food-Establishment-Reservation\/",
+        "url": "{{url}}\/Food-Establishment-Reservation\/",
+        "description": "Autogeneration of Food Establishment Reservation Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "1d43414fb233e5f5818df80ced67676b",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"partySize\": 100,\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Food-Establishment-Reservation\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "bb5d9db8d721ee77d007e4b08c6f0c9e",
+                "collection": "497d064ca036958f8ac4fe552742a465"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "497d064ca036958f8ac4fe552742a465",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "e7b903812789b0550f5c73fbe2dc9907",
+    "name": "Watch Action",
+    "description": "Autogeneration of Watch Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "d0436984e542aac20b30c2af5315cba1",
+        "name": "\/Watch-Action\/",
+        "url": "{{url}}\/Watch-Action\/",
+        "description": "Autogeneration of Watch Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "d0436984e542aac20b30c2af5315cba1",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"expectsAcceptanceOf\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Watch-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "481b6f21dc8ad1f2732140b5264cdcbb",
+                "collection": "e7b903812789b0550f5c73fbe2dc9907"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "e7b903812789b0550f5c73fbe2dc9907",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "039fb77d851bc8557bd2508abc4ae4b1",
+    "name": "Pharmacy",
+    "description": "Autogeneration of Pharmacy Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "b87c4483d7941d44c93042ddf2ddf544",
+        "name": "\/Pharmacy\/",
+        "url": "{{url}}\/Pharmacy\/",
+        "description": "Autogeneration of Pharmacy Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "b87c4483d7941d44c93042ddf2ddf544",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Pharmacy\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "6846245ab38638e0c5c80bfaad0a2dfb",
+                "collection": "039fb77d851bc8557bd2508abc4ae4b1"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "039fb77d851bc8557bd2508abc4ae4b1",
+        "rawModeData": ""
+    }
+}

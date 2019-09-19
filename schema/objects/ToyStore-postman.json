@@ -1,0 +1,59 @@
+{
+    "id": "b6adeac067ccdc0afb5edeff6e65f960",
+    "name": "Toy Store",
+    "description": "Autogeneration of Toy Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "6b2ad9425ba3568cb17b0f692c70189d",
+        "name": "\/Toy-Store\/",
+        "url": "{{url}}\/Toy-Store\/",
+        "description": "Autogeneration of Toy Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "6b2ad9425ba3568cb17b0f692c70189d",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Toy-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4c1caced4225cf7523128cb8291fe483",
+                "collection": "b6adeac067ccdc0afb5edeff6e65f960"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b6adeac067ccdc0afb5edeff6e65f960",
+        "rawModeData": ""
+    }
+}

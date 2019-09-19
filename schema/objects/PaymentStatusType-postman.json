@@ -1,0 +1,59 @@
+{
+    "id": "97322a9d2da223ac0d0302764f65b024",
+    "name": "Payment Status Type",
+    "description": "Autogeneration of Payment Status Type Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "24b2da880b7d523ae1c9dabe47b103fc",
+        "name": "\/Payment-Status-Type\/",
+        "url": "{{url}}\/Payment-Status-Type\/",
+        "description": "Autogeneration of Payment Status Type Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "24b2da880b7d523ae1c9dabe47b103fc",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Payment-Status-Type\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "a74dd064a02aefff0a1c396b92676166",
+                "collection": "97322a9d2da223ac0d0302764f65b024"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "97322a9d2da223ac0d0302764f65b024",
+        "rawModeData": ""
+    }
+}

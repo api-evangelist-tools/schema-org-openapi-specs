@@ -1,0 +1,59 @@
+{
+    "id": "9358e741d6ac3a110c8a6495969b84ec",
+    "name": "Bed Details",
+    "description": "Autogeneration of Bed Details Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "303516f884ae92a021e9d8879340befd",
+        "name": "\/Bed-Details\/",
+        "url": "{{url}}\/Bed-Details\/",
+        "description": "Autogeneration of Bed Details Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "303516f884ae92a021e9d8879340befd",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"typeOfBed\": \"String Content\",\n    \"numberOfBeds\": 10,\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Bed-Details\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "3fe53e9a02889a7636857cfa4d53da15",
+                "collection": "9358e741d6ac3a110c8a6495969b84ec"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "9358e741d6ac3a110c8a6495969b84ec",
+        "rawModeData": ""
+    }
+}

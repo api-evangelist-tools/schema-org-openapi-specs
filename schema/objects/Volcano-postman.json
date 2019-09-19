@@ -1,0 +1,59 @@
+{
+    "id": "bb4945d8051e8ca0857aab9b8986bba5",
+    "name": "Volcano",
+    "description": "Autogeneration of Volcano Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "94cbcc024cd2f86a56dca0a6ff8c5802",
+        "name": "\/Volcano\/",
+        "url": "{{url}}\/Volcano\/",
+        "description": "Autogeneration of Volcano Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "94cbcc024cd2f86a56dca0a6ff8c5802",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Volcano\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "781f3ed938e60ccb7ec82caa76ed9e0f",
+                "collection": "bb4945d8051e8ca0857aab9b8986bba5"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "bb4945d8051e8ca0857aab9b8986bba5",
+        "rawModeData": ""
+    }
+}

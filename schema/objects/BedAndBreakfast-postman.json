@@ -1,0 +1,59 @@
+{
+    "id": "8fa7030d6675861305d00376f980904c",
+    "name": "Bed And Breakfast",
+    "description": "Autogeneration of Bed And Breakfast Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "c0a4fa5cdf21139a4ed96083ed09fd67",
+        "name": "\/Bed-And-Breakfast\/",
+        "url": "{{url}}\/Bed-And-Breakfast\/",
+        "description": "Autogeneration of Bed And Breakfast Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "c0a4fa5cdf21139a4ed96083ed09fd67",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"audience\": {},\n    \"checkinTime\": \"String Content\",\n    \"petsAllowed\": \"String Content\",\n    \"availableLanguage\": \"String Content\",\n    \"amenityFeature\": {},\n    \"starRating\": {},\n    \"checkoutTime\": \"String Content\"\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Bed-And-Breakfast\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "cea86b1c69cbed096b529369d6283b4c",
+                "collection": "8fa7030d6675861305d00376f980904c"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "8fa7030d6675861305d00376f980904c",
+        "rawModeData": ""
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "fc4d91b3c8d0d9b39f536ff9dca9901a",
+    "name": "View Action",
+    "description": "Autogeneration of View Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "555df9836bdc66b8fa7e22d0e3fa8769",
+        "name": "\/View-Action\/",
+        "url": "{{url}}\/View-Action\/",
+        "description": "Autogeneration of View Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "555df9836bdc66b8fa7e22d0e3fa8769",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"{\n    \"expectsAcceptanceOf\": {}\n}\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/View-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "7451bf74cd7faa2fb7e7404bf662cf60",
+                "collection": "fc4d91b3c8d0d9b39f536ff9dca9901a"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "fc4d91b3c8d0d9b39f536ff9dca9901a",
+        "rawModeData": ""
+    }
+}

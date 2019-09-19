@@ -1,0 +1,59 @@
+{
+    "id": "b2d50b1a257adf4159c2d822a69d17ea",
+    "name": "Check Action",
+    "description": "Autogeneration of Check Action Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "24ef4dccbe48316ee1d3bed83329a7ca",
+        "name": "\/Check-Action\/",
+        "url": "{{url}}\/Check-Action\/",
+        "description": "Autogeneration of Check Action Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "24ef4dccbe48316ee1d3bed83329a7ca",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Check-Action\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "d0d64bce11c5d71aa8d5593e7c8ff1f1",
+                "collection": "b2d50b1a257adf4159c2d822a69d17ea"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "b2d50b1a257adf4159c2d822a69d17ea",
+        "rawModeData": ""
+    }
+}

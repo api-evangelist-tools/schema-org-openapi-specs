@@ -1,0 +1,59 @@
+{
+    "id": "487d541e964d26a7d49deaf7ded3223b",
+    "name": "Music Store",
+    "description": "Autogeneration of Music Store Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "2132189fba55cc44e2f0656eca79c7a8",
+        "name": "\/Music-Store\/",
+        "url": "{{url}}\/Music-Store\/",
+        "description": "Autogeneration of Music Store Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "2132189fba55cc44e2f0656eca79c7a8",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Music-Store\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "4d85cf15a3f9512e1647f60ecd20db81",
+                "collection": "487d541e964d26a7d49deaf7ded3223b"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "487d541e964d26a7d49deaf7ded3223b",
+        "rawModeData": ""
+    }
+}

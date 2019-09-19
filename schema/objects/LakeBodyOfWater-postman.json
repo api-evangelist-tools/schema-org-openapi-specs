@@ -1,0 +1,59 @@
+{
+    "id": "032cc589b2103c3a7b32fe867d881dee",
+    "name": "Lake Body Of Water",
+    "description": "Autogeneration of Lake Body Of Water Schema.org object.",
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [],
+    "0": {
+        "id": "58ccf9936e942209a37eb53d5b40cce6",
+        "name": "\/Lake-Body-Of-Water\/",
+        "url": "{{url}}\/Lake-Body-Of-Water\/",
+        "description": "Autogeneration of Lake Body Of Water Schema.org object.",
+        "data": [],
+        "dataMode": "raw",
+        "headerData": null,
+        "method": "GET",
+        "pathVariableData": null,
+        "queryParams": null,
+        "auth": null,
+        "events": null,
+        "folder": null,
+        "protocolProfileBehavior": {
+            "disableBodyPruning": true
+        },
+        "responses": [
+            {
+                "id": "58ccf9936e942209a37eb53d5b40cce6",
+                "name": "Default",
+                "status": "200",
+                "mime": null,
+                "language": null,
+                "text": "\"[]\"",
+                "responseCode": {
+                    "code": 200,
+                    "name": ""
+                },
+                "requestObject": {
+                    "url": "{{url}}\/Lake-Body-Of-Water\/",
+                    "method": "GET",
+                    "data": "",
+                    "dataMode": "raw",
+                    "protocolProfileBehavior": []
+                },
+                "headers": null,
+                "cookies": null,
+                "request": "47714cd3dc97930eddcc6bcb56520d55",
+                "collection": "032cc589b2103c3a7b32fe867d881dee"
+            }
+        ],
+        "currentHelper": null,
+        "helperAttributes": null,
+        "collectionId": "032cc589b2103c3a7b32fe867d881dee",
+        "rawModeData": ""
+    }
+}

@@ -1,5 +1,5 @@
 {
-    "id": "efced7d824b0b67ebf8c996a2f4673cb",
+    "id": "81f63f0b8f3c7723924572458d724920",
     "name": "Order Item",
     "description": "Autogeneration of Order Item Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "1a062a469a11b026b283e1eb47b96412",
+            "id": "d1f1fdf7189ba078494d60d0163f3d2e",
             "name": "\/Order-Item\/",
             "url": "{{url}}\/Order-Item\/",
             "description": "Autogeneration of Order Item Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "1a062a469a11b026b283e1eb47b96412",
+                    "id": "d1f1fdf7189ba078494d60d0163f3d2e",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"orderItemStatus\": {},\n    \"orderQuantity\": 10,\n    \"orderDelivery\": {},\n    \"orderedItem\": {},\n    \"orderItemNumber\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                    "text": "{\n    \"orderItemStatus\": {},\n    \"orderQuantity\": 10,\n    \"orderDelivery\": {},\n    \"orderedItem\": {},\n    \"orderItemNumber\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "5d6d4531dafe1cc93c32665035c76174",
-                    "collection": "efced7d824b0b67ebf8c996a2f4673cb"
+                    "request": "4e6e18a7bb1cf8a98c9a476522d7e85a",
+                    "collection": "81f63f0b8f3c7723924572458d724920"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "efced7d824b0b67ebf8c996a2f4673cb",
+            "collectionId": "81f63f0b8f3c7723924572458d724920",
             "rawModeData": ""
         }
     ]

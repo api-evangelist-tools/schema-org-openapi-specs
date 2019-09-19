@@ -1,5 +1,5 @@
 {
-    "id": "3bd9ae6ce5aea7033f483f9d3a039eb9",
+    "id": "5b326c178cdd3e9b279b6fa7acbfea60",
     "name": "Postal Address",
     "description": "Autogeneration of Postal Address Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "e91af802b5a178277820d486fe015436",
+            "id": "7ee9c5c310bc3f3c7c131291971c6912",
             "name": "\/Postal-Address\/",
             "url": "{{url}}\/Postal-Address\/",
             "description": "Autogeneration of Postal Address Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "e91af802b5a178277820d486fe015436",
+                    "id": "7ee9c5c310bc3f3c7c131291971c6912",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"postOfficeBoxNumber\": \"String Content\",\n    \"streetAddress\": \"String Content\",\n    \"addressCountry\": {},\n    \"addressRegion\": \"String Content\",\n    \"postalCode\": \"String Content\",\n    \"addressLocality\": \"String Content\",\n    \"serviceArea\": {},\n    \"areaServed\": {},\n    \"hoursAvailable\": {},\n    \"contactOption\": {},\n    \"availableLanguage\": \"String Content\",\n    \"telephone\": \"String Content\",\n    \"email\": \"String Content\",\n    \"contactType\": \"String Content\",\n    \"productSupported\": {},\n    \"faxNumber\": \"String Content\"\n}\"",
+                    "text": "{\n    \"postOfficeBoxNumber\": \"String Content\",\n    \"streetAddress\": \"String Content\",\n    \"addressCountry\": {},\n    \"addressRegion\": \"String Content\",\n    \"postalCode\": \"String Content\",\n    \"addressLocality\": \"String Content\",\n    \"serviceArea\": {},\n    \"areaServed\": {},\n    \"hoursAvailable\": {},\n    \"contactOption\": {},\n    \"availableLanguage\": \"String Content\",\n    \"telephone\": \"String Content\",\n    \"email\": \"String Content\",\n    \"contactType\": \"String Content\",\n    \"productSupported\": {},\n    \"faxNumber\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "b0dd194b9351e00d8495c1f243405499",
-                    "collection": "3bd9ae6ce5aea7033f483f9d3a039eb9"
+                    "request": "2b9b2b2d219d85cf570dca0a7fc6af1d",
+                    "collection": "5b326c178cdd3e9b279b6fa7acbfea60"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3bd9ae6ce5aea7033f483f9d3a039eb9",
+            "collectionId": "5b326c178cdd3e9b279b6fa7acbfea60",
             "rawModeData": ""
         }
     ]

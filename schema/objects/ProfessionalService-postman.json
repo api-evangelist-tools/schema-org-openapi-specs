@@ -1,5 +1,5 @@
 {
-    "id": "5e096dd20834101a69d367646739de5f",
+    "id": "9420ad2fd9ecb05deb804c695a5c9a50",
     "name": "Professional Service",
     "description": "Autogeneration of Professional Service Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "5edc47205d3d2035b5d7e150a79f1483",
+            "id": "e0f32c4562eda8a1726e61ba25aa6503",
             "name": "\/Professional-Service\/",
             "url": "{{url}}\/Professional-Service\/",
             "description": "Autogeneration of Professional Service Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "5edc47205d3d2035b5d7e150a79f1483",
+                    "id": "e0f32c4562eda8a1726e61ba25aa6503",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\",\n    \"photo\": {},\n    \"openingHoursSpecification\": {},\n    \"events\": {},\n    \"smokingAllowed\": 1,\n    \"globalLocationNumber\": \"String Content\",\n    \"maximumAttendeeCapacity\": 100,\n    \"reviews\": {},\n    \"aggregateRating\": {},\n    \"photos\": {},\n    \"map\": {},\n    \"branchCode\": \"String Content\",\n    \"hasMap\": {},\n    \"additionalProperty\": {},\n    \"address\": {},\n    \"specialOpeningHoursSpecification\": {},\n    \"amenityFeature\": {},\n    \"logo\": {},\n    \"telephone\": \"String Content\",\n    \"geo\": {},\n    \"containedInPlace\": {},\n    \"review\": {},\n    \"publicAccess\": 1,\n    \"event\": {},\n    \"containsPlace\": {},\n    \"isicV4\": \"String Content\",\n    \"maps\": {},\n    \"faxNumber\": \"String Content\",\n    \"isAccessibleForFree\": 1,\n    \"containedIn\": {},\n    \"serviceArea\": {},\n    \"funder\": {},\n    \"areaServed\": {},\n    \"memberOf\": {},\n    \"subOrganization\": {},\n    \"hasOfferCatalog\": {},\n    \"members\": {},\n    \"duns\": \"String Content\",\n    \"taxID\": \"String Content\",\n    \"award\": \"String Content\",\n    \"makesOffer\": {},\n    \"contactPoints\": {},\n    \"awards\": \"String Content\",\n    \"seeks\": {},\n    \"member\": {},\n    \"founders\": {},\n    \"alumni\": {},\n    \"dissolutionDate\": \"String Content\",\n    \"employees\": {},\n    \"email\": \"String Content\",\n    \"department\": {},\n    \"contactPoint\": {},\n    \"parentOrganization\": {},\n    \"legalName\": \"String Content\",\n    \"foundingDate\": \"String Content\",\n    \"employee\": {},\n    \"numberOfEmployees\": {},\n    \"naics\": \"String Content\",\n    \"hasPOS\": {},\n    \"foundingLocation\": {},\n    \"owns\": {},\n    \"founder\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"brand\": {},\n    \"vatID\": \"String Content\",\n    \"leiCode\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                    "text": "{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\",\n    \"photo\": {},\n    \"openingHoursSpecification\": {},\n    \"events\": {},\n    \"smokingAllowed\": 1,\n    \"globalLocationNumber\": \"String Content\",\n    \"maximumAttendeeCapacity\": 100,\n    \"reviews\": {},\n    \"aggregateRating\": {},\n    \"photos\": {},\n    \"map\": {},\n    \"branchCode\": \"String Content\",\n    \"hasMap\": {},\n    \"additionalProperty\": {},\n    \"address\": {},\n    \"specialOpeningHoursSpecification\": {},\n    \"amenityFeature\": {},\n    \"logo\": {},\n    \"telephone\": \"String Content\",\n    \"geo\": {},\n    \"containedInPlace\": {},\n    \"review\": {},\n    \"publicAccess\": 1,\n    \"event\": {},\n    \"containsPlace\": {},\n    \"isicV4\": \"String Content\",\n    \"maps\": {},\n    \"faxNumber\": \"String Content\",\n    \"isAccessibleForFree\": 1,\n    \"containedIn\": {},\n    \"serviceArea\": {},\n    \"funder\": {},\n    \"areaServed\": {},\n    \"memberOf\": {},\n    \"subOrganization\": {},\n    \"hasOfferCatalog\": {},\n    \"members\": {},\n    \"duns\": \"String Content\",\n    \"taxID\": \"String Content\",\n    \"award\": \"String Content\",\n    \"makesOffer\": {},\n    \"contactPoints\": {},\n    \"awards\": \"String Content\",\n    \"seeks\": {},\n    \"member\": {},\n    \"founders\": {},\n    \"alumni\": {},\n    \"dissolutionDate\": \"String Content\",\n    \"employees\": {},\n    \"email\": \"String Content\",\n    \"department\": {},\n    \"contactPoint\": {},\n    \"parentOrganization\": {},\n    \"legalName\": \"String Content\",\n    \"foundingDate\": \"String Content\",\n    \"employee\": {},\n    \"numberOfEmployees\": {},\n    \"naics\": \"String Content\",\n    \"hasPOS\": {},\n    \"foundingLocation\": {},\n    \"owns\": {},\n    \"founder\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"brand\": {},\n    \"vatID\": \"String Content\",\n    \"leiCode\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "0aeff5ce004ae58b51cd5a02dc385bb8",
-                    "collection": "5e096dd20834101a69d367646739de5f"
+                    "request": "4f128972e3860fabf9ec49174c9dbd1e",
+                    "collection": "9420ad2fd9ecb05deb804c695a5c9a50"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5e096dd20834101a69d367646739de5f",
+            "collectionId": "9420ad2fd9ecb05deb804c695a5c9a50",
             "rawModeData": ""
         }
     ]

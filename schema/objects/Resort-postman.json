@@ -1,5 +1,5 @@
 {
-    "id": "e3b9bf436df05307d7427d4a5c62ea7a",
+    "id": "6ecd6582de6f21cd2d5005717ef2cf7e",
     "name": "Resort",
     "description": "Autogeneration of Resort Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "ee96e844d4028b690a2560f3d6955128",
+            "id": "6728c3a064e5f891ca593bced0395d64",
             "name": "\/Resort\/",
             "url": "{{url}}\/Resort\/",
             "description": "Autogeneration of Resort Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "ee96e844d4028b690a2560f3d6955128",
+                    "id": "6728c3a064e5f891ca593bced0395d64",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"audience\": {},\n    \"checkinTime\": \"String Content\",\n    \"petsAllowed\": \"String Content\",\n    \"availableLanguage\": \"String Content\",\n    \"amenityFeature\": {},\n    \"starRating\": {},\n    \"checkoutTime\": \"String Content\"\n}\"",
+                    "text": "{\n    \"audience\": {},\n    \"checkinTime\": \"String Content\",\n    \"petsAllowed\": \"String Content\",\n    \"availableLanguage\": \"String Content\",\n    \"amenityFeature\": {},\n    \"starRating\": {},\n    \"checkoutTime\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "32a692efdc76cc2a70501d96ff60a88e",
-                    "collection": "e3b9bf436df05307d7427d4a5c62ea7a"
+                    "request": "e3918081801c7334d3dd8c7b7dcdf939",
+                    "collection": "6ecd6582de6f21cd2d5005717ef2cf7e"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e3b9bf436df05307d7427d4a5c62ea7a",
+            "collectionId": "6ecd6582de6f21cd2d5005717ef2cf7e",
             "rawModeData": ""
         }
     ]

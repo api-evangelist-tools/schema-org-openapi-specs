@@ -1,5 +1,5 @@
 {
-    "id": "532c8a402b396e608864f4c10e7270ec",
+    "id": "471ba18fd8da301fe9154961450a0e47",
     "name": "Payment Charge Specification",
     "description": "Autogeneration of Payment Charge Specification Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "ae3c893bda81c459bcc585151eab4384",
+            "id": "63adaca5f218fe1353f4da6ca8fe0137",
             "name": "\/Payment-Charge-Specification\/",
             "url": "{{url}}\/Payment-Charge-Specification\/",
             "description": "Autogeneration of Payment Charge Specification Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "ae3c893bda81c459bcc585151eab4384",
+                    "id": "63adaca5f218fe1353f4da6ca8fe0137",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"appliesToPaymentMethod\": {},\n    \"appliesToDeliveryMethod\": {},\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}\"",
+                    "text": "{\n    \"appliesToPaymentMethod\": {},\n    \"appliesToDeliveryMethod\": {},\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "e5b2aea5e89b65a52656893a411644e5",
-                    "collection": "532c8a402b396e608864f4c10e7270ec"
+                    "request": "f4a1ff8a24c70e48f13130b728fc2f57",
+                    "collection": "471ba18fd8da301fe9154961450a0e47"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "532c8a402b396e608864f4c10e7270ec",
+            "collectionId": "471ba18fd8da301fe9154961450a0e47",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "6628f3828f707a282a957111a6aee9d4",
+    "id": "b3f7e943085f9775398c6810a5c6db50",
     "name": "Invoice",
     "description": "Autogeneration of Invoice Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "8283b35b5fefb4ff677414ea87633abe",
+            "id": "ce903538299ea7e2491516eb5bf14ca8",
             "name": "\/Invoice\/",
             "url": "{{url}}\/Invoice\/",
             "description": "Autogeneration of Invoice Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "8283b35b5fefb4ff677414ea87633abe",
+                    "id": "ce903538299ea7e2491516eb5bf14ca8",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"provider\": {},\n    \"paymentDue\": \"String Content\",\n    \"billingPeriod\": {},\n    \"confirmationNumber\": \"String Content\",\n    \"scheduledPaymentDate\": \"String Content\",\n    \"customer\": {},\n    \"category\": \"String Content\",\n    \"paymentStatus\": {},\n    \"broker\": {},\n    \"referencesOrder\": {},\n    \"paymentMethod\": {},\n    \"paymentMethodId\": \"String Content\",\n    \"minimumPaymentDue\": {},\n    \"totalPaymentDue\": {},\n    \"accountId\": \"String Content\",\n    \"paymentDueDate\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                    "text": "{\n    \"provider\": {},\n    \"paymentDue\": \"String Content\",\n    \"billingPeriod\": {},\n    \"confirmationNumber\": \"String Content\",\n    \"scheduledPaymentDate\": \"String Content\",\n    \"customer\": {},\n    \"category\": \"String Content\",\n    \"paymentStatus\": {},\n    \"broker\": {},\n    \"referencesOrder\": {},\n    \"paymentMethod\": {},\n    \"paymentMethodId\": \"String Content\",\n    \"minimumPaymentDue\": {},\n    \"totalPaymentDue\": {},\n    \"accountId\": \"String Content\",\n    \"paymentDueDate\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "9aa3366bb8123879b132451710901a44",
-                    "collection": "6628f3828f707a282a957111a6aee9d4"
+                    "request": "acab897bace7c394cfde1b7bc00116f2",
+                    "collection": "b3f7e943085f9775398c6810a5c6db50"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "6628f3828f707a282a957111a6aee9d4",
+            "collectionId": "b3f7e943085f9775398c6810a5c6db50",
             "rawModeData": ""
         }
     ]

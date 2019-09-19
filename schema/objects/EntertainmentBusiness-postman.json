@@ -1,5 +1,5 @@
 {
-    "id": "8bb5fea6dee33d2063b90e7536e00824",
+    "id": "510b2cafaed23b4261327940b66340a3",
     "name": "Entertainment Business",
     "description": "Autogeneration of Entertainment Business Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "3717afe981862826f418e6394840fbc4",
+            "id": "45a62379dabc7b5f3fe9d0efb3314018",
             "name": "\/Entertainment-Business\/",
             "url": "{{url}}\/Entertainment-Business\/",
             "description": "Autogeneration of Entertainment Business Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "3717afe981862826f418e6394840fbc4",
+                    "id": "45a62379dabc7b5f3fe9d0efb3314018",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\",\n    \"photo\": {},\n    \"openingHoursSpecification\": {},\n    \"events\": {},\n    \"smokingAllowed\": 1,\n    \"globalLocationNumber\": \"String Content\",\n    \"maximumAttendeeCapacity\": 100,\n    \"reviews\": {},\n    \"aggregateRating\": {},\n    \"photos\": {},\n    \"map\": {},\n    \"branchCode\": \"String Content\",\n    \"hasMap\": {},\n    \"additionalProperty\": {},\n    \"address\": {},\n    \"specialOpeningHoursSpecification\": {},\n    \"amenityFeature\": {},\n    \"logo\": {},\n    \"telephone\": \"String Content\",\n    \"geo\": {},\n    \"containedInPlace\": {},\n    \"review\": {},\n    \"publicAccess\": 1,\n    \"event\": {},\n    \"containsPlace\": {},\n    \"isicV4\": \"String Content\",\n    \"maps\": {},\n    \"faxNumber\": \"String Content\",\n    \"isAccessibleForFree\": 1,\n    \"containedIn\": {},\n    \"serviceArea\": {},\n    \"funder\": {},\n    \"areaServed\": {},\n    \"memberOf\": {},\n    \"subOrganization\": {},\n    \"hasOfferCatalog\": {},\n    \"members\": {},\n    \"duns\": \"String Content\",\n    \"taxID\": \"String Content\",\n    \"award\": \"String Content\",\n    \"makesOffer\": {},\n    \"contactPoints\": {},\n    \"awards\": \"String Content\",\n    \"seeks\": {},\n    \"member\": {},\n    \"founders\": {},\n    \"alumni\": {},\n    \"dissolutionDate\": \"String Content\",\n    \"employees\": {},\n    \"email\": \"String Content\",\n    \"department\": {},\n    \"contactPoint\": {},\n    \"parentOrganization\": {},\n    \"legalName\": \"String Content\",\n    \"foundingDate\": \"String Content\",\n    \"employee\": {},\n    \"numberOfEmployees\": {},\n    \"naics\": \"String Content\",\n    \"hasPOS\": {},\n    \"foundingLocation\": {},\n    \"owns\": {},\n    \"founder\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"brand\": {},\n    \"vatID\": \"String Content\",\n    \"leiCode\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                    "text": "{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\",\n    \"photo\": {},\n    \"openingHoursSpecification\": {},\n    \"events\": {},\n    \"smokingAllowed\": 1,\n    \"globalLocationNumber\": \"String Content\",\n    \"maximumAttendeeCapacity\": 100,\n    \"reviews\": {},\n    \"aggregateRating\": {},\n    \"photos\": {},\n    \"map\": {},\n    \"branchCode\": \"String Content\",\n    \"hasMap\": {},\n    \"additionalProperty\": {},\n    \"address\": {},\n    \"specialOpeningHoursSpecification\": {},\n    \"amenityFeature\": {},\n    \"logo\": {},\n    \"telephone\": \"String Content\",\n    \"geo\": {},\n    \"containedInPlace\": {},\n    \"review\": {},\n    \"publicAccess\": 1,\n    \"event\": {},\n    \"containsPlace\": {},\n    \"isicV4\": \"String Content\",\n    \"maps\": {},\n    \"faxNumber\": \"String Content\",\n    \"isAccessibleForFree\": 1,\n    \"containedIn\": {},\n    \"serviceArea\": {},\n    \"funder\": {},\n    \"areaServed\": {},\n    \"memberOf\": {},\n    \"subOrganization\": {},\n    \"hasOfferCatalog\": {},\n    \"members\": {},\n    \"duns\": \"String Content\",\n    \"taxID\": \"String Content\",\n    \"award\": \"String Content\",\n    \"makesOffer\": {},\n    \"contactPoints\": {},\n    \"awards\": \"String Content\",\n    \"seeks\": {},\n    \"member\": {},\n    \"founders\": {},\n    \"alumni\": {},\n    \"dissolutionDate\": \"String Content\",\n    \"employees\": {},\n    \"email\": \"String Content\",\n    \"department\": {},\n    \"contactPoint\": {},\n    \"parentOrganization\": {},\n    \"legalName\": \"String Content\",\n    \"foundingDate\": \"String Content\",\n    \"employee\": {},\n    \"numberOfEmployees\": {},\n    \"naics\": \"String Content\",\n    \"hasPOS\": {},\n    \"foundingLocation\": {},\n    \"owns\": {},\n    \"founder\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"brand\": {},\n    \"vatID\": \"String Content\",\n    \"leiCode\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "58061023673cd28710b1d47e334b9b61",
-                    "collection": "8bb5fea6dee33d2063b90e7536e00824"
+                    "request": "8dd4ec351e8ce5fc903c8220be2e7ebe",
+                    "collection": "510b2cafaed23b4261327940b66340a3"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8bb5fea6dee33d2063b90e7536e00824",
+            "collectionId": "510b2cafaed23b4261327940b66340a3",
             "rawModeData": ""
         }
     ]

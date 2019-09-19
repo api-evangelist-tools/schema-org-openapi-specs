@@ -1,5 +1,5 @@
 {
-    "id": "86e0fe8dbe04f72564bc419ecd1fee3d",
+    "id": "8311ff8b84333a074c3de566fcfb992d",
     "name": "Game",
     "description": "Autogeneration of Game Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "690b51e85ce41f12304fcd726eb031fb",
+            "id": "d4998deb9d38f74e31d9d401124e7689",
             "name": "\/Game\/",
             "url": "{{url}}\/Game\/",
             "description": "Autogeneration of Game Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "690b51e85ce41f12304fcd726eb031fb",
+                    "id": "d4998deb9d38f74e31d9d401124e7689",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"gameItem\": {},\n    \"characterAttribute\": {},\n    \"gameLocation\": {},\n    \"quest\": {},\n    \"numberOfPlayers\": {},\n    \"about\": {},\n    \"educationalAlignment\": {},\n    \"associatedMedia\": {},\n    \"funder\": {},\n    \"position\": 100,\n    \"audio\": {},\n    \"workExample\": {},\n    \"provider\": {},\n    \"encoding\": {},\n    \"interactivityType\": \"String Content\",\n    \"accessibilitySummary\": \"String Content\",\n    \"character\": {},\n    \"audience\": {},\n    \"sourceOrganization\": {},\n    \"isPartOf\": {},\n    \"video\": {},\n    \"publisher\": {},\n    \"publication\": {},\n    \"text\": \"String Content\",\n    \"expires\": \"String Content\",\n    \"contributor\": {},\n    \"reviews\": {},\n    \"typicalAgeRange\": \"String Content\",\n    \"releasedEvent\": {},\n    \"educationalUse\": \"String Content\",\n    \"contentLocation\": {},\n    \"schemaVersion\": {},\n    \"accessibilityFeature\": \"String Content\",\n    \"aggregateRating\": {},\n    \"alternativeHeadline\": \"String Content\",\n    \"locationCreated\": {},\n    \"accessModeSufficient\": \"String Content\",\n    \"temporalCoverage\": \"String Content\",\n    \"accountablePerson\": {},\n    \"spatialCoverage\": {},\n    \"offers\": {},\n    \"editor\": {},\n    \"discussionUrl\": {},\n    \"award\": \"String Content\",\n    \"copyrightHolder\": {},\n    \"accessibilityHazard\": \"String Content\",\n    \"copyrightYear\": 10,\n    \"awards\": \"String Content\",\n    \"recordedAt\": {},\n    \"commentCount\": 100,\n    \"fileFormat\": {},\n    \"inLanguage\": {},\n    \"accessibilityAPI\": \"String Content\",\n    \"interactionStatistic\": {},\n    \"contentRating\": \"String Content\",\n    \"learningResourceType\": \"String Content\",\n    \"accessMode\": \"String Content\",\n    \"material\": \"String Content\",\n    \"isFamilyFriendly\": 1,\n    \"exampleOfWork\": {},\n    \"version\": \"String Content\",\n    \"dateModified\": \"String Content\",\n    \"mainEntity\": {},\n    \"genre\": {},\n    \"keywords\": \"String Content\",\n    \"author\": {},\n    \"isBasedOnUrl\": {},\n    \"timeRequired\": {},\n    \"translator\": {},\n    \"thumbnailUrl\": {},\n    \"hasPart\": {},\n    \"comment\": {},\n    \"review\": {},\n    \"license\": {},\n    \"accessibilityControl\": \"String Content\",\n    \"encodings\": {},\n    \"isBasedOn\": {},\n    \"creator\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"producer\": {},\n    \"mentions\": {},\n    \"dateCreated\": \"String Content\",\n    \"datePublished\": \"String Content\",\n    \"isAccessibleForFree\": 1,\n    \"headline\": \"String Content\",\n    \"citation\": {}\n}\"",
+                    "text": "{\n    \"gameItem\": {},\n    \"characterAttribute\": {},\n    \"gameLocation\": {},\n    \"quest\": {},\n    \"numberOfPlayers\": {},\n    \"about\": {},\n    \"educationalAlignment\": {},\n    \"associatedMedia\": {},\n    \"funder\": {},\n    \"position\": 100,\n    \"audio\": {},\n    \"workExample\": {},\n    \"provider\": {},\n    \"encoding\": {},\n    \"interactivityType\": \"String Content\",\n    \"accessibilitySummary\": \"String Content\",\n    \"character\": {},\n    \"audience\": {},\n    \"sourceOrganization\": {},\n    \"isPartOf\": {},\n    \"video\": {},\n    \"publisher\": {},\n    \"publication\": {},\n    \"text\": \"String Content\",\n    \"expires\": \"String Content\",\n    \"contributor\": {},\n    \"reviews\": {},\n    \"typicalAgeRange\": \"String Content\",\n    \"releasedEvent\": {},\n    \"educationalUse\": \"String Content\",\n    \"contentLocation\": {},\n    \"schemaVersion\": {},\n    \"accessibilityFeature\": \"String Content\",\n    \"aggregateRating\": {},\n    \"alternativeHeadline\": \"String Content\",\n    \"locationCreated\": {},\n    \"accessModeSufficient\": \"String Content\",\n    \"temporalCoverage\": \"String Content\",\n    \"accountablePerson\": {},\n    \"spatialCoverage\": {},\n    \"offers\": {},\n    \"editor\": {},\n    \"discussionUrl\": {},\n    \"award\": \"String Content\",\n    \"copyrightHolder\": {},\n    \"accessibilityHazard\": \"String Content\",\n    \"copyrightYear\": 10,\n    \"awards\": \"String Content\",\n    \"recordedAt\": {},\n    \"commentCount\": 100,\n    \"fileFormat\": {},\n    \"inLanguage\": {},\n    \"accessibilityAPI\": \"String Content\",\n    \"interactionStatistic\": {},\n    \"contentRating\": \"String Content\",\n    \"learningResourceType\": \"String Content\",\n    \"accessMode\": \"String Content\",\n    \"material\": \"String Content\",\n    \"isFamilyFriendly\": 1,\n    \"exampleOfWork\": {},\n    \"version\": \"String Content\",\n    \"dateModified\": \"String Content\",\n    \"mainEntity\": {},\n    \"genre\": {},\n    \"keywords\": \"String Content\",\n    \"author\": {},\n    \"isBasedOnUrl\": {},\n    \"timeRequired\": {},\n    \"translator\": {},\n    \"thumbnailUrl\": {},\n    \"hasPart\": {},\n    \"comment\": {},\n    \"review\": {},\n    \"license\": {},\n    \"accessibilityControl\": \"String Content\",\n    \"encodings\": {},\n    \"isBasedOn\": {},\n    \"creator\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"producer\": {},\n    \"mentions\": {},\n    \"dateCreated\": \"String Content\",\n    \"datePublished\": \"String Content\",\n    \"isAccessibleForFree\": 1,\n    \"headline\": \"String Content\",\n    \"citation\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "eb5ca78d616ae17017b8f99ee6e83ed9",
-                    "collection": "86e0fe8dbe04f72564bc419ecd1fee3d"
+                    "request": "c3bbe7b0d5ac4aa47d950d79193cd879",
+                    "collection": "8311ff8b84333a074c3de566fcfb992d"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "86e0fe8dbe04f72564bc419ecd1fee3d",
+            "collectionId": "8311ff8b84333a074c3de566fcfb992d",
             "rawModeData": ""
         }
     ]

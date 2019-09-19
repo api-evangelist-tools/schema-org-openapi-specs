@@ -1,5 +1,5 @@
 {
-    "id": "62df869804d7fa1f93cac67c52681ed8",
+    "id": "7ccf54d5ca7e796b463f39a87196f43d",
     "name": "Property Value Specification",
     "description": "Autogeneration of Property Value Specification Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "98c415fabdbadf9178f7c1e70bfdb8cc",
+            "id": "ecdc5d6fee25dafef8601e72859dbabe",
             "name": "\/Property-Value-Specification\/",
             "url": "{{url}}\/Property-Value-Specification\/",
             "description": "Autogeneration of Property Value Specification Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "98c415fabdbadf9178f7c1e70bfdb8cc",
+                    "id": "ecdc5d6fee25dafef8601e72859dbabe",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"defaultValue\": \"String Content\",\n    \"minValue\": 10,\n    \"valuePattern\": \"String Content\",\n    \"stepValue\": 10,\n    \"valueMaxLength\": 10,\n    \"readonlyValue\": 1,\n    \"valueMinLength\": 10,\n    \"maxValue\": 10,\n    \"valueName\": \"String Content\",\n    \"multipleValues\": 1,\n    \"valueRequired\": 1\n}\"",
+                    "text": "{\n    \"defaultValue\": \"String Content\",\n    \"minValue\": 10,\n    \"valuePattern\": \"String Content\",\n    \"stepValue\": 10,\n    \"valueMaxLength\": 10,\n    \"readonlyValue\": 1,\n    \"valueMinLength\": 10,\n    \"maxValue\": 10,\n    \"valueName\": \"String Content\",\n    \"multipleValues\": 1,\n    \"valueRequired\": 1\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "528ae480f73896900ca365cc6a8ff715",
-                    "collection": "62df869804d7fa1f93cac67c52681ed8"
+                    "request": "8134b7bcda13e6c2d211cb4ab929eba1",
+                    "collection": "7ccf54d5ca7e796b463f39a87196f43d"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "62df869804d7fa1f93cac67c52681ed8",
+            "collectionId": "7ccf54d5ca7e796b463f39a87196f43d",
             "rawModeData": ""
         }
     ]

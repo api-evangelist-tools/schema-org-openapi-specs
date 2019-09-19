@@ -1,5 +1,5 @@
 {
-    "id": "07d03f094414fdbdcb8051fa0ee2b9e2",
+    "id": "8b67fe9355a5de0dd927887ffc7bf11a",
     "name": "Food Establishment",
     "description": "Autogeneration of Food Establishment Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "d9056a87f3a75fe955e9404f11b0ad3c",
+            "id": "9a86150248a6f190ae0bfab5df14b017",
             "name": "\/Food-Establishment\/",
             "url": "{{url}}\/Food-Establishment\/",
             "description": "Autogeneration of Food Establishment Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "d9056a87f3a75fe955e9404f11b0ad3c",
+                    "id": "9a86150248a6f190ae0bfab5df14b017",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {},\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                    "text": "{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {},\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "baee3c6912ada4582f5e027141cfe9d3",
-                    "collection": "07d03f094414fdbdcb8051fa0ee2b9e2"
+                    "request": "05e6cb99965d2c1eb12ecb7c745e20fd",
+                    "collection": "8b67fe9355a5de0dd927887ffc7bf11a"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "07d03f094414fdbdcb8051fa0ee2b9e2",
+            "collectionId": "8b67fe9355a5de0dd927887ffc7bf11a",
             "rawModeData": ""
         }
     ]

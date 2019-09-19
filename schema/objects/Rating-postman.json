@@ -1,5 +1,5 @@
 {
-    "id": "b178ada33a0248efc757c82844baf4f8",
+    "id": "63a9b719abd99b0e02dc8ddc9352af56",
     "name": "Rating",
     "description": "Autogeneration of Rating Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "ac37407160b5802e1e3de59423faafb1",
+            "id": "e2e7e7dfa410586bba4ca11f150146f5",
             "name": "\/Rating\/",
             "url": "{{url}}\/Rating\/",
             "description": "Autogeneration of Rating Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "ac37407160b5802e1e3de59423faafb1",
+                    "id": "e2e7e7dfa410586bba4ca11f150146f5",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"ratingValue\": 10,\n    \"bestRating\": \"String Content\",\n    \"author\": {},\n    \"worstRating\": \"String Content\"\n}\"",
+                    "text": "{\n    \"ratingValue\": 10,\n    \"bestRating\": \"String Content\",\n    \"author\": {},\n    \"worstRating\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "900a98c15201bc928e5716b0d64573b0",
-                    "collection": "b178ada33a0248efc757c82844baf4f8"
+                    "request": "f47fa36c01a49c1d0013f9de74390db0",
+                    "collection": "63a9b719abd99b0e02dc8ddc9352af56"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b178ada33a0248efc757c82844baf4f8",
+            "collectionId": "63a9b719abd99b0e02dc8ddc9352af56",
             "rawModeData": ""
         }
     ]

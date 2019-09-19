@@ -1,5 +1,5 @@
 {
-    "id": "8f222f1849779483f40a1834a2b4a561",
+    "id": "d4d6939b28d862e22655a2c313aa2090",
     "name": "Music Release",
     "description": "Autogeneration of Music Release Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "9a5009ba1ee8e83a3a23320a78fa1f75",
+            "id": "f17ed9b6a99e9946445ec7acbe4861bd",
             "name": "\/Music-Release\/",
             "url": "{{url}}\/Music-Release\/",
             "description": "Autogeneration of Music Release Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "9a5009ba1ee8e83a3a23320a78fa1f75",
+                    "id": "f17ed9b6a99e9946445ec7acbe4861bd",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"recordLabel\": {},\n    \"catalogNumber\": \"String Content\",\n    \"creditedTo\": {},\n    \"releaseOf\": {},\n    \"duration\": {},\n    \"musicReleaseFormat\": {},\n    \"track\": {},\n    \"numTracks\": 100,\n    \"tracks\": {}\n}\"",
+                    "text": "{\n    \"recordLabel\": {},\n    \"catalogNumber\": \"String Content\",\n    \"creditedTo\": {},\n    \"releaseOf\": {},\n    \"duration\": {},\n    \"musicReleaseFormat\": {},\n    \"track\": {},\n    \"numTracks\": 100,\n    \"tracks\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "3dfd164929250e53a653bc74da36ce67",
-                    "collection": "8f222f1849779483f40a1834a2b4a561"
+                    "request": "a52684cac377a83255d8219d39f03380",
+                    "collection": "d4d6939b28d862e22655a2c313aa2090"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8f222f1849779483f40a1834a2b4a561",
+            "collectionId": "d4d6939b28d862e22655a2c313aa2090",
             "rawModeData": ""
         }
     ]

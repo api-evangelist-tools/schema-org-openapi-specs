@@ -1,5 +1,5 @@
 {
-    "id": "017f408425c54db136274a7509b0b93f",
+    "id": "45eff37e4c3ace78e4af8c8c810fbe79",
     "name": "Bus Trip",
     "description": "Autogeneration of Bus Trip Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "a2df40b92d1a4c1d94b9a5c1554242d1",
+            "id": "6b0b4e546fc12f6901427a6c484d26d4",
             "name": "\/Bus-Trip\/",
             "url": "{{url}}\/Bus-Trip\/",
             "description": "Autogeneration of Bus Trip Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "a2df40b92d1a4c1d94b9a5c1554242d1",
+                    "id": "6b0b4e546fc12f6901427a6c484d26d4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"provider\": {},\n    \"busName\": \"String Content\",\n    \"departureBusStop\": {},\n    \"arrivalBusStop\": {},\n    \"arrivalTime\": \"String Content\",\n    \"busNumber\": \"String Content\",\n    \"departureTime\": \"String Content\"\n}\"",
+                    "text": "{\n    \"provider\": {},\n    \"busName\": \"String Content\",\n    \"departureBusStop\": {},\n    \"arrivalBusStop\": {},\n    \"arrivalTime\": \"String Content\",\n    \"busNumber\": \"String Content\",\n    \"departureTime\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "7658bbba87473ecee0406cc94879946d",
-                    "collection": "017f408425c54db136274a7509b0b93f"
+                    "request": "4e8b8ba957270eaf4ca760a08fad072f",
+                    "collection": "45eff37e4c3ace78e4af8c8c810fbe79"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "017f408425c54db136274a7509b0b93f",
+            "collectionId": "45eff37e4c3ace78e4af8c8c810fbe79",
             "rawModeData": ""
         }
     ]

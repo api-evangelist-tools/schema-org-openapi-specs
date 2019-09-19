@@ -1,5 +1,5 @@
 {
-    "id": "7538a11106e9cc813d9fb04ea9def84c",
+    "id": "f14e6da3739f1c6431f194c00d3f1be9",
     "name": "Radio Episode",
     "description": "Autogeneration of Radio Episode Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "2cec9138a027c44899e46276b7de826c",
+            "id": "2930640a2cfdce717d9c871a9a87f9c4",
             "name": "\/Radio-Episode\/",
             "url": "{{url}}\/Radio-Episode\/",
             "description": "Autogeneration of Radio Episode Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "2cec9138a027c44899e46276b7de826c",
+                    "id": "2930640a2cfdce717d9c871a9a87f9c4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"actor\": {},\n    \"partOfSeries\": {},\n    \"trailer\": {},\n    \"partOfSeason\": {},\n    \"musicBy\": {},\n    \"directors\": {},\n    \"episodeNumber\": \"String Content\",\n    \"director\": {},\n    \"productionCompany\": {},\n    \"actors\": {}\n}\"",
+                    "text": "{\n    \"actor\": {},\n    \"partOfSeries\": {},\n    \"trailer\": {},\n    \"partOfSeason\": {},\n    \"musicBy\": {},\n    \"directors\": {},\n    \"episodeNumber\": \"String Content\",\n    \"director\": {},\n    \"productionCompany\": {},\n    \"actors\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "0217f04fc39c5c2c37576338e76393ae",
-                    "collection": "7538a11106e9cc813d9fb04ea9def84c"
+                    "request": "482875d3cc57937cb20930f301bdbcc1",
+                    "collection": "f14e6da3739f1c6431f194c00d3f1be9"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7538a11106e9cc813d9fb04ea9def84c",
+            "collectionId": "f14e6da3739f1c6431f194c00d3f1be9",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "9d3b1594ee214ec0abac30407f71333d",
+    "id": "151a1b7e95d82308aa67ebd3ab748c44",
     "name": "Nutrition Information",
     "description": "Autogeneration of Nutrition Information Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "2f3b17e967933f079cf3a982d4a7401c",
+            "id": "c1701c240171302739fa3e21ed4f4ffc",
             "name": "\/Nutrition-Information\/",
             "url": "{{url}}\/Nutrition-Information\/",
             "description": "Autogeneration of Nutrition Information Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "2f3b17e967933f079cf3a982d4a7401c",
+                    "id": "c1701c240171302739fa3e21ed4f4ffc",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"saturatedFatContent\": {},\n    \"fatContent\": {},\n    \"unsaturatedFatContent\": {},\n    \"sugarContent\": {},\n    \"cholesterolContent\": {},\n    \"carbohydrateContent\": {},\n    \"proteinContent\": {},\n    \"sodiumContent\": {},\n    \"transFatContent\": {},\n    \"fiberContent\": {},\n    \"calories\": {},\n    \"servingSize\": \"String Content\"\n}\"",
+                    "text": "{\n    \"saturatedFatContent\": {},\n    \"fatContent\": {},\n    \"unsaturatedFatContent\": {},\n    \"sugarContent\": {},\n    \"cholesterolContent\": {},\n    \"carbohydrateContent\": {},\n    \"proteinContent\": {},\n    \"sodiumContent\": {},\n    \"transFatContent\": {},\n    \"fiberContent\": {},\n    \"calories\": {},\n    \"servingSize\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "bd71df37e8ca557499176004e9cbed97",
-                    "collection": "9d3b1594ee214ec0abac30407f71333d"
+                    "request": "782da273bbaa85d746386ec1a2410c54",
+                    "collection": "151a1b7e95d82308aa67ebd3ab748c44"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9d3b1594ee214ec0abac30407f71333d",
+            "collectionId": "151a1b7e95d82308aa67ebd3ab748c44",
             "rawModeData": ""
         }
     ]

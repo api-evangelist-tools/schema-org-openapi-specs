@@ -1,5 +1,5 @@
 {
-    "id": "975016a52a16b94f6d51a8f859b80094",
+    "id": "72acc759cdbaf42dead6155a19339bda",
     "name": "Service Channel",
     "description": "Autogeneration of Service Channel Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "df70af430e520b9a3dc4fdd3560f068e",
+            "id": "e35deef4115d52323d3ffcabfa3f6610",
             "name": "\/Service-Channel\/",
             "url": "{{url}}\/Service-Channel\/",
             "description": "Autogeneration of Service Channel Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "df70af430e520b9a3dc4fdd3560f068e",
+                    "id": "e35deef4115d52323d3ffcabfa3f6610",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"providesService\": {},\n    \"serviceLocation\": {},\n    \"servicePostalAddress\": {},\n    \"availableLanguage\": \"String Content\",\n    \"serviceSmsNumber\": {},\n    \"serviceUrl\": {},\n    \"servicePhone\": {},\n    \"processingTime\": {}\n}\"",
+                    "text": "{\n    \"providesService\": {},\n    \"serviceLocation\": {},\n    \"servicePostalAddress\": {},\n    \"availableLanguage\": \"String Content\",\n    \"serviceSmsNumber\": {},\n    \"serviceUrl\": {},\n    \"servicePhone\": {},\n    \"processingTime\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "fa739600e865696c0e27ef0c197511d8",
-                    "collection": "975016a52a16b94f6d51a8f859b80094"
+                    "request": "563b26b2f8358649a052d0b46af764f0",
+                    "collection": "72acc759cdbaf42dead6155a19339bda"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "975016a52a16b94f6d51a8f859b80094",
+            "collectionId": "72acc759cdbaf42dead6155a19339bda",
             "rawModeData": ""
         }
     ]

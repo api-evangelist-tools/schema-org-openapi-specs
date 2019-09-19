@@ -1,5 +1,5 @@
 {
-    "id": "b1200d858974fc6ce875cac672d48179",
+    "id": "9b392d4fcc5db3e8db1160c8542ef352",
     "name": "Permit",
     "description": "Autogeneration of Permit Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "bf8f2d7f44f63147799cff6178b1818b",
+            "id": "6ec0e82fb9ae36a4b53c2e6e62676c35",
             "name": "\/Permit\/",
             "url": "{{url}}\/Permit\/",
             "description": "Autogeneration of Permit Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "bf8f2d7f44f63147799cff6178b1818b",
+                    "id": "6ec0e82fb9ae36a4b53c2e6e62676c35",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"validFor\": {},\n    \"validUntil\": \"String Content\",\n    \"validFrom\": \"String Content\",\n    \"issuedBy\": {},\n    \"issuedThrough\": {},\n    \"permitAudience\": {},\n    \"validIn\": {}\n}\"",
+                    "text": "{\n    \"validFor\": {},\n    \"validUntil\": \"String Content\",\n    \"validFrom\": \"String Content\",\n    \"issuedBy\": {},\n    \"issuedThrough\": {},\n    \"permitAudience\": {},\n    \"validIn\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "a772c626d61639b4d51407d52755f035",
-                    "collection": "b1200d858974fc6ce875cac672d48179"
+                    "request": "a533932a87ddfbe51944f16624908d4c",
+                    "collection": "9b392d4fcc5db3e8db1160c8542ef352"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b1200d858974fc6ce875cac672d48179",
+            "collectionId": "9b392d4fcc5db3e8db1160c8542ef352",
             "rawModeData": ""
         }
     ]

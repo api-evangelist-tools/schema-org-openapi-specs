@@ -1,5 +1,5 @@
 {
-    "id": "0837e677435689d7014265ec9028e972",
+    "id": "5c61e0c9121a2039f12c12d6ae9211dd",
     "name": "Quantitative Value",
     "description": "Autogeneration of Quantitative Value Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "0342b6f20e027f6c17b22f039b4ce535",
+            "id": "65cb3e470027758b91569e63777fa806",
             "name": "\/Quantitative-Value\/",
             "url": "{{url}}\/Quantitative-Value\/",
             "description": "Autogeneration of Quantitative Value Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "0342b6f20e027f6c17b22f039b4ce535",
+                    "id": "65cb3e470027758b91569e63777fa806",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"unitCode\": {},\n    \"minValue\": 10,\n    \"value\": {},\n    \"additionalProperty\": {},\n    \"valueReference\": {},\n    \"maxValue\": 10,\n    \"unitText\": \"String Content\"\n}\"",
+                    "text": "{\n    \"unitCode\": {},\n    \"minValue\": 10,\n    \"value\": {},\n    \"additionalProperty\": {},\n    \"valueReference\": {},\n    \"maxValue\": 10,\n    \"unitText\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "1a88e7f35bd6422c038b9b04b0ecde42",
-                    "collection": "0837e677435689d7014265ec9028e972"
+                    "request": "6dddb27cb91495fedb3c75b95949fe7e",
+                    "collection": "5c61e0c9121a2039f12c12d6ae9211dd"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0837e677435689d7014265ec9028e972",
+            "collectionId": "5c61e0c9121a2039f12c12d6ae9211dd",
             "rawModeData": ""
         }
     ]

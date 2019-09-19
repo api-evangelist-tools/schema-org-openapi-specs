@@ -1,5 +1,5 @@
 {
-    "id": "6e7687bbd85fb9f58179725e3189303b",
+    "id": "fffd23ee6a24f1f79007ec286175d2f2",
     "name": "Payment Card",
     "description": "Autogeneration of Payment Card Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "01d72497f58e2640dd4858cf19e2475a",
+            "id": "47fbc33ef899daeff39a4668f1d29e15",
             "name": "\/Payment-Card\/",
             "url": "{{url}}\/Payment-Card\/",
             "description": "Autogeneration of Payment Card Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "01d72497f58e2640dd4858cf19e2475a",
+                    "id": "47fbc33ef899daeff39a4668f1d29e15",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"annualPercentageRate\": {},\n    \"interestRate\": {},\n    \"feesAndCommissionsSpecification\": \"String Content\",\n    \"serviceArea\": {},\n    \"produces\": {},\n    \"provider\": {},\n    \"serviceAudience\": {},\n    \"areaServed\": {},\n    \"audience\": {},\n    \"hasOfferCatalog\": {},\n    \"hoursAvailable\": {},\n    \"providerMobility\": \"String Content\",\n    \"aggregateRating\": {},\n    \"offers\": {},\n    \"award\": \"String Content\",\n    \"category\": \"String Content\",\n    \"broker\": {},\n    \"serviceOutput\": {},\n    \"logo\": {},\n    \"isSimilarTo\": {},\n    \"isRelatedTo\": {},\n    \"availableChannel\": {},\n    \"review\": {},\n    \"serviceType\": \"String Content\",\n    \"brand\": {}\n}\"",
+                    "text": "{\n    \"annualPercentageRate\": {},\n    \"interestRate\": {},\n    \"feesAndCommissionsSpecification\": \"String Content\",\n    \"serviceArea\": {},\n    \"produces\": {},\n    \"provider\": {},\n    \"serviceAudience\": {},\n    \"areaServed\": {},\n    \"audience\": {},\n    \"hasOfferCatalog\": {},\n    \"hoursAvailable\": {},\n    \"providerMobility\": \"String Content\",\n    \"aggregateRating\": {},\n    \"offers\": {},\n    \"award\": \"String Content\",\n    \"category\": \"String Content\",\n    \"broker\": {},\n    \"serviceOutput\": {},\n    \"logo\": {},\n    \"isSimilarTo\": {},\n    \"isRelatedTo\": {},\n    \"availableChannel\": {},\n    \"review\": {},\n    \"serviceType\": \"String Content\",\n    \"brand\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "48db9c85828c39a0ec730d4ffabbee2a",
-                    "collection": "6e7687bbd85fb9f58179725e3189303b"
+                    "request": "02de21ccfa31f37f667b325182656b5c",
+                    "collection": "fffd23ee6a24f1f79007ec286175d2f2"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "6e7687bbd85fb9f58179725e3189303b",
+            "collectionId": "fffd23ee6a24f1f79007ec286175d2f2",
             "rawModeData": ""
         }
     ]

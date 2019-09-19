@@ -1,5 +1,5 @@
 {
-    "id": "fe8aeae297f307b387d22e35503963a1",
+    "id": "b57a6abbc75951f7929e9c9d2a5cb71e",
     "name": "Motel",
     "description": "Autogeneration of Motel Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "323a9c9e6d354747106c6f0077af56a8",
+            "id": "e6f006862addec69d9ce86533e8afd91",
             "name": "\/Motel\/",
             "url": "{{url}}\/Motel\/",
             "description": "Autogeneration of Motel Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "323a9c9e6d354747106c6f0077af56a8",
+                    "id": "e6f006862addec69d9ce86533e8afd91",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"audience\": {},\n    \"checkinTime\": \"String Content\",\n    \"petsAllowed\": \"String Content\",\n    \"availableLanguage\": \"String Content\",\n    \"amenityFeature\": {},\n    \"starRating\": {},\n    \"checkoutTime\": \"String Content\"\n}\"",
+                    "text": "{\n    \"audience\": {},\n    \"checkinTime\": \"String Content\",\n    \"petsAllowed\": \"String Content\",\n    \"availableLanguage\": \"String Content\",\n    \"amenityFeature\": {},\n    \"starRating\": {},\n    \"checkoutTime\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "9ca4239c97d304460f79eb3ce240a453",
-                    "collection": "fe8aeae297f307b387d22e35503963a1"
+                    "request": "7dcbb1450334e70ad22c7e1852540b03",
+                    "collection": "b57a6abbc75951f7929e9c9d2a5cb71e"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "fe8aeae297f307b387d22e35503963a1",
+            "collectionId": "b57a6abbc75951f7929e9c9d2a5cb71e",
             "rawModeData": ""
         }
     ]

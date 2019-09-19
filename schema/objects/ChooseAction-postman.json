@@ -1,5 +1,5 @@
 {
-    "id": "bfb9734e6ee0640a01a59f16de5f40bd",
+    "id": "91c0afa100835594e5a14c38ac74e4f0",
     "name": "Choose Action",
     "description": "Autogeneration of Choose Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "0c06e282f70a3c9afe7a57b71c10e968",
+            "id": "f81577c1f89301cd7e2e44de0136cfe8",
             "name": "\/Choose-Action\/",
             "url": "{{url}}\/Choose-Action\/",
             "description": "Autogeneration of Choose Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "0c06e282f70a3c9afe7a57b71c10e968",
+                    "id": "f81577c1f89301cd7e2e44de0136cfe8",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"actionOption\": {},\n    \"option\": \"String Content\"\n}\"",
+                    "text": "{\n    \"actionOption\": {},\n    \"option\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "a28d5c56347b145bf033bb57835fc139",
-                    "collection": "bfb9734e6ee0640a01a59f16de5f40bd"
+                    "request": "fdba30f17385a8734c4228f635cb713c",
+                    "collection": "91c0afa100835594e5a14c38ac74e4f0"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "bfb9734e6ee0640a01a59f16de5f40bd",
+            "collectionId": "91c0afa100835594e5a14c38ac74e4f0",
             "rawModeData": ""
         }
     ]

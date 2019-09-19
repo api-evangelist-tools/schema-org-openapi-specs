@@ -1,5 +1,5 @@
 {
-    "id": "6558e0ac91bb959b5c3a8ca5725e46d1",
+    "id": "3d9d0b351ac0958e73222defd598d0c2",
     "name": "Reservation Package",
     "description": "Autogeneration of Reservation Package Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "97063606f71c2ca4a180e4de6eb69a1a",
+            "id": "2d421d75119b71414a1b88c814e2cc80",
             "name": "\/Reservation-Package\/",
             "url": "{{url}}\/Reservation-Package\/",
             "description": "Autogeneration of Reservation Package Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "97063606f71c2ca4a180e4de6eb69a1a",
+                    "id": "2d421d75119b71414a1b88c814e2cc80",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"subReservation\": {},\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                    "text": "{\n    \"subReservation\": {},\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "cad34dd2f452954fe75e85979267770d",
-                    "collection": "6558e0ac91bb959b5c3a8ca5725e46d1"
+                    "request": "8a57333cd56f7708d007f78a17fda3ce",
+                    "collection": "3d9d0b351ac0958e73222defd598d0c2"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "6558e0ac91bb959b5c3a8ca5725e46d1",
+            "collectionId": "3d9d0b351ac0958e73222defd598d0c2",
             "rawModeData": ""
         }
     ]

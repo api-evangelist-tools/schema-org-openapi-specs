@@ -1,5 +1,5 @@
 {
-    "id": "7a624310a60aa8350137af565a31bc4c",
+    "id": "1ca5f15f53fd33cfd563ad8d5cb32be2",
     "name": "Pay Action",
     "description": "Autogeneration of Pay Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "9db0daedf3ce6174f0d8d0c5bf5d6c42",
+            "id": "9091a9ef8c5d3e97fe035be4e899ed09",
             "name": "\/Pay-Action\/",
             "url": "{{url}}\/Pay-Action\/",
             "description": "Autogeneration of Pay Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "9db0daedf3ce6174f0d8d0c5bf5d6c42",
+                    "id": "9091a9ef8c5d3e97fe035be4e899ed09",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"recipient\": {},\n    \"priceSpecification\": {},\n    \"price\": \"String Content\",\n    \"result\": {},\n    \"actionStatus\": {},\n    \"target\": {},\n    \"agent\": {},\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"instrument\": {},\n    \"participant\": {},\n    \"object\": {},\n    \"error\": {},\n    \"location\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                    "text": "{\n    \"recipient\": {},\n    \"priceSpecification\": {},\n    \"price\": \"String Content\",\n    \"result\": {},\n    \"actionStatus\": {},\n    \"target\": {},\n    \"agent\": {},\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"instrument\": {},\n    \"participant\": {},\n    \"object\": {},\n    \"error\": {},\n    \"location\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "3cea50895e31cc55ff3878cd564458c5",
-                    "collection": "7a624310a60aa8350137af565a31bc4c"
+                    "request": "d6c93828a8d708609e6986c51da2da02",
+                    "collection": "1ca5f15f53fd33cfd563ad8d5cb32be2"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7a624310a60aa8350137af565a31bc4c",
+            "collectionId": "1ca5f15f53fd33cfd563ad8d5cb32be2",
             "rawModeData": ""
         }
     ]

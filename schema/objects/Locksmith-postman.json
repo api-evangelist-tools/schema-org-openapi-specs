@@ -1,5 +1,5 @@
 {
-    "id": "0bca1d39070b48c27034697eab6d2667",
+    "id": "f7886b8f78c54bc349e4ecc2341cb95b",
     "name": "Locksmith",
     "description": "Autogeneration of Locksmith Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "8f29282dfe84dd7d4dcca0b76b86d656",
+            "id": "5c89760dde5fa75d1be352324cce3939",
             "name": "\/Locksmith\/",
             "url": "{{url}}\/Locksmith\/",
             "description": "Autogeneration of Locksmith Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "8f29282dfe84dd7d4dcca0b76b86d656",
+                    "id": "5c89760dde5fa75d1be352324cce3939",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                    "text": "{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "62d622233eb44921c1ce0ec9524e276b",
-                    "collection": "0bca1d39070b48c27034697eab6d2667"
+                    "request": "20a49d4b7d969d893c10fe69edb5dbc8",
+                    "collection": "f7886b8f78c54bc349e4ecc2341cb95b"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0bca1d39070b48c27034697eab6d2667",
+            "collectionId": "f7886b8f78c54bc349e4ecc2341cb95b",
             "rawModeData": ""
         }
     ]

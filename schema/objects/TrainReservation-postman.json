@@ -1,5 +1,5 @@
 {
-    "id": "7d2502cf8cc70a1a2c3d6ff3c107df71",
+    "id": "c841dbb4d541996f2b599de32ce156fb",
     "name": "Train Reservation",
     "description": "Autogeneration of Train Reservation Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "fc9b2e00b58b692d2fe2787f921706dc",
+            "id": "3df07b2eccfa4364cd4b77172a8b4e59",
             "name": "\/Train-Reservation\/",
             "url": "{{url}}\/Train-Reservation\/",
             "description": "Autogeneration of Train Reservation Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "fc9b2e00b58b692d2fe2787f921706dc",
+                    "id": "3df07b2eccfa4364cd4b77172a8b4e59",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                    "text": "{\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "ebf63f0441da1b4f9204eb95bacb2fcf",
-                    "collection": "7d2502cf8cc70a1a2c3d6ff3c107df71"
+                    "request": "9bdf61dfd31f1693df854181ef17f7ec",
+                    "collection": "c841dbb4d541996f2b599de32ce156fb"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7d2502cf8cc70a1a2c3d6ff3c107df71",
+            "collectionId": "c841dbb4d541996f2b599de32ce156fb",
             "rawModeData": ""
         }
     ]

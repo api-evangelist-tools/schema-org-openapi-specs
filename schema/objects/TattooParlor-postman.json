@@ -1,5 +1,5 @@
 {
-    "id": "b0bffd5fca941618ccef20414bda8168",
+    "id": "d829947c631e2bd3e656b38f71c81d20",
     "name": "Tattoo Parlor",
     "description": "Autogeneration of Tattoo Parlor Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "f8615fffa9090b6dff295bcf6dc00395",
+            "id": "c33d676ccc452546ed7cc5616fdc60af",
             "name": "\/Tattoo-Parlor\/",
             "url": "{{url}}\/Tattoo-Parlor\/",
             "description": "Autogeneration of Tattoo Parlor Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "f8615fffa9090b6dff295bcf6dc00395",
+                    "id": "c33d676ccc452546ed7cc5616fdc60af",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\",\n    \"photo\": {},\n    \"openingHoursSpecification\": {},\n    \"events\": {},\n    \"smokingAllowed\": 1,\n    \"globalLocationNumber\": \"String Content\",\n    \"maximumAttendeeCapacity\": 100,\n    \"reviews\": {},\n    \"aggregateRating\": {},\n    \"photos\": {},\n    \"map\": {},\n    \"branchCode\": \"String Content\",\n    \"hasMap\": {},\n    \"additionalProperty\": {},\n    \"address\": {},\n    \"specialOpeningHoursSpecification\": {},\n    \"amenityFeature\": {},\n    \"logo\": {},\n    \"telephone\": \"String Content\",\n    \"geo\": {},\n    \"containedInPlace\": {},\n    \"review\": {},\n    \"publicAccess\": 1,\n    \"event\": {},\n    \"containsPlace\": {},\n    \"isicV4\": \"String Content\",\n    \"maps\": {},\n    \"faxNumber\": \"String Content\",\n    \"isAccessibleForFree\": 1,\n    \"containedIn\": {},\n    \"serviceArea\": {},\n    \"funder\": {},\n    \"areaServed\": {},\n    \"memberOf\": {},\n    \"subOrganization\": {},\n    \"hasOfferCatalog\": {},\n    \"members\": {},\n    \"duns\": \"String Content\",\n    \"taxID\": \"String Content\",\n    \"award\": \"String Content\",\n    \"makesOffer\": {},\n    \"contactPoints\": {},\n    \"awards\": \"String Content\",\n    \"seeks\": {},\n    \"member\": {},\n    \"founders\": {},\n    \"alumni\": {},\n    \"dissolutionDate\": \"String Content\",\n    \"employees\": {},\n    \"email\": \"String Content\",\n    \"department\": {},\n    \"contactPoint\": {},\n    \"parentOrganization\": {},\n    \"legalName\": \"String Content\",\n    \"foundingDate\": \"String Content\",\n    \"employee\": {},\n    \"numberOfEmployees\": {},\n    \"naics\": \"String Content\",\n    \"hasPOS\": {},\n    \"foundingLocation\": {},\n    \"owns\": {},\n    \"founder\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"brand\": {},\n    \"vatID\": \"String Content\",\n    \"leiCode\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                    "text": "{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\",\n    \"photo\": {},\n    \"openingHoursSpecification\": {},\n    \"events\": {},\n    \"smokingAllowed\": 1,\n    \"globalLocationNumber\": \"String Content\",\n    \"maximumAttendeeCapacity\": 100,\n    \"reviews\": {},\n    \"aggregateRating\": {},\n    \"photos\": {},\n    \"map\": {},\n    \"branchCode\": \"String Content\",\n    \"hasMap\": {},\n    \"additionalProperty\": {},\n    \"address\": {},\n    \"specialOpeningHoursSpecification\": {},\n    \"amenityFeature\": {},\n    \"logo\": {},\n    \"telephone\": \"String Content\",\n    \"geo\": {},\n    \"containedInPlace\": {},\n    \"review\": {},\n    \"publicAccess\": 1,\n    \"event\": {},\n    \"containsPlace\": {},\n    \"isicV4\": \"String Content\",\n    \"maps\": {},\n    \"faxNumber\": \"String Content\",\n    \"isAccessibleForFree\": 1,\n    \"containedIn\": {},\n    \"serviceArea\": {},\n    \"funder\": {},\n    \"areaServed\": {},\n    \"memberOf\": {},\n    \"subOrganization\": {},\n    \"hasOfferCatalog\": {},\n    \"members\": {},\n    \"duns\": \"String Content\",\n    \"taxID\": \"String Content\",\n    \"award\": \"String Content\",\n    \"makesOffer\": {},\n    \"contactPoints\": {},\n    \"awards\": \"String Content\",\n    \"seeks\": {},\n    \"member\": {},\n    \"founders\": {},\n    \"alumni\": {},\n    \"dissolutionDate\": \"String Content\",\n    \"employees\": {},\n    \"email\": \"String Content\",\n    \"department\": {},\n    \"contactPoint\": {},\n    \"parentOrganization\": {},\n    \"legalName\": \"String Content\",\n    \"foundingDate\": \"String Content\",\n    \"employee\": {},\n    \"numberOfEmployees\": {},\n    \"naics\": \"String Content\",\n    \"hasPOS\": {},\n    \"foundingLocation\": {},\n    \"owns\": {},\n    \"founder\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"location\": {},\n    \"brand\": {},\n    \"vatID\": \"String Content\",\n    \"leiCode\": \"String Content\",\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "ce81145f24a0c82b513996355f8a2502",
-                    "collection": "b0bffd5fca941618ccef20414bda8168"
+                    "request": "12eaad02627a3e0d41b679a8684bd501",
+                    "collection": "d829947c631e2bd3e656b38f71c81d20"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b0bffd5fca941618ccef20414bda8168",
+            "collectionId": "d829947c631e2bd3e656b38f71c81d20",
             "rawModeData": ""
         }
     ]

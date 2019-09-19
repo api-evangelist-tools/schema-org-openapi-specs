@@ -1,5 +1,5 @@
 {
-    "id": "3a0a5e27ada427372800899be1153c09",
+    "id": "4c46a9557400ea734d0730ea42a71904",
     "name": "Notary",
     "description": "Autogeneration of Notary Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "0cc31474f83b5881b06ddf2abfcf7ccf",
+            "id": "c0c3d6cb2dc86af6db21309ffd8004f6",
             "name": "\/Notary\/",
             "url": "{{url}}\/Notary\/",
             "description": "Autogeneration of Notary Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "0cc31474f83b5881b06ddf2abfcf7ccf",
+                    "id": "c0c3d6cb2dc86af6db21309ffd8004f6",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                    "text": "{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "a431de3962797ab435301db58c9da70c",
-                    "collection": "3a0a5e27ada427372800899be1153c09"
+                    "request": "83fb2f8735647d3735aee237bf3456f8",
+                    "collection": "4c46a9557400ea734d0730ea42a71904"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3a0a5e27ada427372800899be1153c09",
+            "collectionId": "4c46a9557400ea734d0730ea42a71904",
             "rawModeData": ""
         }
     ]

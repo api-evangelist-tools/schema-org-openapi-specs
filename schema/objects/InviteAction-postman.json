@@ -1,5 +1,5 @@
 {
-    "id": "4541774fec28fa59931ec03d1a9a78ba",
+    "id": "7aa6af6498bf15a6ae13342a21cde9cd",
     "name": "Invite Action",
     "description": "Autogeneration of Invite Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "f3563201afebe63734b9491c991417fa",
+            "id": "d70c060f81052e8bc5f96ef8c53571f2",
             "name": "\/Invite-Action\/",
             "url": "{{url}}\/Invite-Action\/",
             "description": "Autogeneration of Invite Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "f3563201afebe63734b9491c991417fa",
+                    "id": "d70c060f81052e8bc5f96ef8c53571f2",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"event\": {},\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}\"",
+                    "text": "{\n    \"event\": {},\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "1013ca54f0e6bbebc442f08d86dce5f5",
-                    "collection": "4541774fec28fa59931ec03d1a9a78ba"
+                    "request": "613e320fb95d1f535d5878537bfc3624",
+                    "collection": "7aa6af6498bf15a6ae13342a21cde9cd"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4541774fec28fa59931ec03d1a9a78ba",
+            "collectionId": "7aa6af6498bf15a6ae13342a21cde9cd",
             "rawModeData": ""
         }
     ]

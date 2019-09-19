@@ -1,5 +1,5 @@
 {
-    "id": "1a60529122e68b577015d947ee2c8459",
+    "id": "5dfffa0dcc0c36357cbdbfc87a945cfd",
     "name": "Broadcast Channel",
     "description": "Autogeneration of Broadcast Channel Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "044e38ab984191af68aef2342035aad6",
+            "id": "b7b1d7add977b534986cfe875f585f70",
             "name": "\/Broadcast-Channel\/",
             "url": "{{url}}\/Broadcast-Channel\/",
             "description": "Autogeneration of Broadcast Channel Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "044e38ab984191af68aef2342035aad6",
+                    "id": "b7b1d7add977b534986cfe875f585f70",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"broadcastChannelId\": \"String Content\",\n    \"broadcastServiceTier\": \"String Content\",\n    \"inBroadcastLineup\": {},\n    \"providesBroadcastService\": {},\n    \"genre\": {}\n}\"",
+                    "text": "{\n    \"broadcastChannelId\": \"String Content\",\n    \"broadcastServiceTier\": \"String Content\",\n    \"inBroadcastLineup\": {},\n    \"providesBroadcastService\": {},\n    \"genre\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2f0a9d200584cf053af595e3bf47282e",
-                    "collection": "1a60529122e68b577015d947ee2c8459"
+                    "request": "b44998fc9606beb6387607dc7d493c8d",
+                    "collection": "5dfffa0dcc0c36357cbdbfc87a945cfd"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1a60529122e68b577015d947ee2c8459",
+            "collectionId": "5dfffa0dcc0c36357cbdbfc87a945cfd",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "bd2e0b1af419fd83dbea210c3cdf31ac",
+    "id": "1d57e24389f3229aab8bac317f3e4471",
     "name": "Flight Reservation",
     "description": "Autogeneration of Flight Reservation Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "0af5ece8d5d10fcd4a4d1590e6e52a3f",
+            "id": "dfe6722da90beff635272a2ecaa06d4a",
             "name": "\/Flight-Reservation\/",
             "url": "{{url}}\/Flight-Reservation\/",
             "description": "Autogeneration of Flight Reservation Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "0af5ece8d5d10fcd4a4d1590e6e52a3f",
+                    "id": "dfe6722da90beff635272a2ecaa06d4a",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"boardingGroup\": \"String Content\",\n    \"passengerSequenceNumber\": \"String Content\",\n    \"securityScreening\": \"String Content\",\n    \"passengerPriorityStatus\": \"String Content\",\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                    "text": "{\n    \"boardingGroup\": \"String Content\",\n    \"passengerSequenceNumber\": \"String Content\",\n    \"securityScreening\": \"String Content\",\n    \"passengerPriorityStatus\": \"String Content\",\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "09d8a89181dda420d7bddd5f281be2ad",
-                    "collection": "bd2e0b1af419fd83dbea210c3cdf31ac"
+                    "request": "6c511b32676af0c8739ed24e03b10d41",
+                    "collection": "1d57e24389f3229aab8bac317f3e4471"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "bd2e0b1af419fd83dbea210c3cdf31ac",
+            "collectionId": "1d57e24389f3229aab8bac317f3e4471",
             "rawModeData": ""
         }
     ]

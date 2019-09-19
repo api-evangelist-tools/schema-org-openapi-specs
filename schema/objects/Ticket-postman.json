@@ -1,5 +1,5 @@
 {
-    "id": "184b3f0b52592848265ef6222ff26b1b",
+    "id": "3ac4fbbd85ceeb1c5e8547b49f944fc0",
     "name": "Ticket",
     "description": "Autogeneration of Ticket Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "4addf5e4502b184344563047a6edccf7",
+            "id": "0fa0c9616b1cb283c651efe337460f67",
             "name": "\/Ticket\/",
             "url": "{{url}}\/Ticket\/",
             "description": "Autogeneration of Ticket Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "4addf5e4502b184344563047a6edccf7",
+                    "id": "0fa0c9616b1cb283c651efe337460f67",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"underName\": {},\n    \"dateIssued\": \"String Content\",\n    \"totalPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"ticketNumber\": \"String Content\",\n    \"issuedBy\": {},\n    \"ticketToken\": {},\n    \"ticketedSeat\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                    "text": "{\n    \"underName\": {},\n    \"dateIssued\": \"String Content\",\n    \"totalPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"ticketNumber\": \"String Content\",\n    \"issuedBy\": {},\n    \"ticketToken\": {},\n    \"ticketedSeat\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "f5cd2148e5cd07807b19ba3fee43737c",
-                    "collection": "184b3f0b52592848265ef6222ff26b1b"
+                    "request": "fe74ad167dd41ae6f023db580c25bc8b",
+                    "collection": "3ac4fbbd85ceeb1c5e8547b49f944fc0"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "184b3f0b52592848265ef6222ff26b1b",
+            "collectionId": "3ac4fbbd85ceeb1c5e8547b49f944fc0",
             "rawModeData": ""
         }
     ]

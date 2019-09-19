@@ -1,5 +1,5 @@
 {
-    "id": "4195ecc28cd5165534cfb15f486ddff1",
+    "id": "d082a74c2e92225998dcdb7eb6cfeeee",
     "name": "Taxi Reservation",
     "description": "Autogeneration of Taxi Reservation Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "d10eab8bd05a4cc08f8f6fb348f62f97",
+            "id": "4b5c34a386284eed7fab8259a61a8cae",
             "name": "\/Taxi-Reservation\/",
             "url": "{{url}}\/Taxi-Reservation\/",
             "description": "Autogeneration of Taxi Reservation Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "d10eab8bd05a4cc08f8f6fb348f62f97",
+                    "id": "4b5c34a386284eed7fab8259a61a8cae",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"pickupTime\": \"String Content\",\n    \"partySize\": 100,\n    \"pickupLocation\": {},\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                    "text": "{\n    \"pickupTime\": \"String Content\",\n    \"partySize\": 100,\n    \"pickupLocation\": {},\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "13ba319ccc2889094f43b6b371972978",
-                    "collection": "4195ecc28cd5165534cfb15f486ddff1"
+                    "request": "9656a310e94d63931184b93d93dcde6a",
+                    "collection": "d082a74c2e92225998dcdb7eb6cfeeee"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4195ecc28cd5165534cfb15f486ddff1",
+            "collectionId": "d082a74c2e92225998dcdb7eb6cfeeee",
             "rawModeData": ""
         }
     ]

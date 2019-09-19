@@ -1,5 +1,5 @@
 {
-    "id": "ab5f017f6ccbefaed6cec9798577069f",
+    "id": "777b005456a673eb26b483db03694702",
     "name": "Audience",
     "description": "Autogeneration of Audience Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "77ce4c46616ff21686d23abc0fa019e7",
+            "id": "270f0f2df3fb73b998a517b6f1ea5983",
             "name": "\/Audience\/",
             "url": "{{url}}\/Audience\/",
             "description": "Autogeneration of Audience Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "77ce4c46616ff21686d23abc0fa019e7",
+                    "id": "270f0f2df3fb73b998a517b6f1ea5983",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"audienceType\": \"String Content\",\n    \"geographicArea\": {}\n}\"",
+                    "text": "{\n    \"audienceType\": \"String Content\",\n    \"geographicArea\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "903f3d25a4369a0934085d4f36e52434",
-                    "collection": "ab5f017f6ccbefaed6cec9798577069f"
+                    "request": "f4e17cda392de3492c05563b2a02a3d8",
+                    "collection": "777b005456a673eb26b483db03694702"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ab5f017f6ccbefaed6cec9798577069f",
+            "collectionId": "777b005456a673eb26b483db03694702",
             "rawModeData": ""
         }
     ]

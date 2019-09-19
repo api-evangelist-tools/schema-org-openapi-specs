@@ -1,5 +1,5 @@
 {
-    "id": "fa45ef211381cea3e1346e0d23b145f4",
+    "id": "6a4ab3fa82cf4ddeaa441643b72d51b5",
     "name": "Hotel Room",
     "description": "Autogeneration of Hotel Room Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "323fc17575fd976bb2a97f1804b72a21",
+            "id": "c05453fdd7fc1110c45830f72b8ec1be",
             "name": "\/Hotel-Room\/",
             "url": "{{url}}\/Hotel-Room\/",
             "description": "Autogeneration of Hotel Room Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "323fc17575fd976bb2a97f1804b72a21",
+                    "id": "c05453fdd7fc1110c45830f72b8ec1be",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"occupancy\": {},\n    \"bed\": \"String Content\"\n}\"",
+                    "text": "{\n    \"occupancy\": {},\n    \"bed\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "05f42c12a97ef55ec083273114826f66",
-                    "collection": "fa45ef211381cea3e1346e0d23b145f4"
+                    "request": "2ffff8d55413c6baa0ca455700819778",
+                    "collection": "6a4ab3fa82cf4ddeaa441643b72d51b5"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "fa45ef211381cea3e1346e0d23b145f4",
+            "collectionId": "6a4ab3fa82cf4ddeaa441643b72d51b5",
             "rawModeData": ""
         }
     ]

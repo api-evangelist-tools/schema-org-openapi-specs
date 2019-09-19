@@ -1,5 +1,5 @@
 {
-    "id": "b2d91a52ec7d24264ad8d3023b5cc374",
+    "id": "7e43a2948660afec47ef5a6287d505fd",
     "name": "Hotel",
     "description": "Autogeneration of Hotel Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "b46334182852f548f691e8aaab4f9de8",
+            "id": "17318298a30e4985463038055bf61375",
             "name": "\/Hotel\/",
             "url": "{{url}}\/Hotel\/",
             "description": "Autogeneration of Hotel Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "b46334182852f548f691e8aaab4f9de8",
+                    "id": "17318298a30e4985463038055bf61375",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"audience\": {},\n    \"checkinTime\": \"String Content\",\n    \"petsAllowed\": \"String Content\",\n    \"availableLanguage\": \"String Content\",\n    \"amenityFeature\": {},\n    \"starRating\": {},\n    \"checkoutTime\": \"String Content\"\n}\"",
+                    "text": "{\n    \"audience\": {},\n    \"checkinTime\": \"String Content\",\n    \"petsAllowed\": \"String Content\",\n    \"availableLanguage\": \"String Content\",\n    \"amenityFeature\": {},\n    \"starRating\": {},\n    \"checkoutTime\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "c05b4559d4e33f4e081d1e9d144dd642",
-                    "collection": "b2d91a52ec7d24264ad8d3023b5cc374"
+                    "request": "f9b4bef5610742c73d1d18a337283121",
+                    "collection": "7e43a2948660afec47ef5a6287d505fd"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b2d91a52ec7d24264ad8d3023b5cc374",
+            "collectionId": "7e43a2948660afec47ef5a6287d505fd",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "c08ae876811a67846b4cfa22b69b83df",
+    "id": "73f150fb1708af81afdd6f586c95e181",
     "name": "Food Establishment Reservation",
     "description": "Autogeneration of Food Establishment Reservation Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "ff518bf3272ff93720a2d8c666bd9093",
+            "id": "69a2b354d37144d1baa10aae644efd00",
             "name": "\/Food-Establishment-Reservation\/",
             "url": "{{url}}\/Food-Establishment-Reservation\/",
             "description": "Autogeneration of Food Establishment Reservation Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "ff518bf3272ff93720a2d8c666bd9093",
+                    "id": "69a2b354d37144d1baa10aae644efd00",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"partySize\": 100,\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                    "text": "{\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"partySize\": 100,\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "0fc9293e29dba3cf61ca9152f3c21982",
-                    "collection": "c08ae876811a67846b4cfa22b69b83df"
+                    "request": "165127f679436f38eb5034d6ac325fe6",
+                    "collection": "73f150fb1708af81afdd6f586c95e181"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c08ae876811a67846b4cfa22b69b83df",
+            "collectionId": "73f150fb1708af81afdd6f586c95e181",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "b4c6b8854adcc05e7442596a71f7c728",
+    "id": "73c3304617926ddf9461361056cb29fa",
     "name": "Program Membership",
     "description": "Autogeneration of Program Membership Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "113731caa5eed6461f5866ad87b9ffa6",
+            "id": "d735bac0d3486d7630460087fb2441e4",
             "name": "\/Program-Membership\/",
             "url": "{{url}}\/Program-Membership\/",
             "description": "Autogeneration of Program Membership Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "113731caa5eed6461f5866ad87b9ffa6",
+                    "id": "d735bac0d3486d7630460087fb2441e4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"membershipNumber\": \"String Content\",\n    \"members\": {},\n    \"member\": {},\n    \"hostingOrganization\": {},\n    \"programName\": \"String Content\"\n}\"",
+                    "text": "{\n    \"membershipNumber\": \"String Content\",\n    \"members\": {},\n    \"member\": {},\n    \"hostingOrganization\": {},\n    \"programName\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "340e431f5cbac5da4827b2eae6820ba2",
-                    "collection": "b4c6b8854adcc05e7442596a71f7c728"
+                    "request": "9d60314cef36d97615571bb43d73f55e",
+                    "collection": "73c3304617926ddf9461361056cb29fa"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b4c6b8854adcc05e7442596a71f7c728",
+            "collectionId": "73c3304617926ddf9461361056cb29fa",
             "rawModeData": ""
         }
     ]

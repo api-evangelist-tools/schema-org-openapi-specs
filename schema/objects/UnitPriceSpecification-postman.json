@@ -1,5 +1,5 @@
 {
-    "id": "31715bfe33c58d9830b019d21945cc1d",
+    "id": "5c099aba9c4a420dece47df65a039b92",
     "name": "Unit Price Specification",
     "description": "Autogeneration of Unit Price Specification Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "c5ccb5a4e9446b620c5b8c129cda5625",
+            "id": "5e33f6d476038822bfbdb2bb7c3bac6f",
             "name": "\/Unit-Price-Specification\/",
             "url": "{{url}}\/Unit-Price-Specification\/",
             "description": "Autogeneration of Unit Price Specification Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "c5ccb5a4e9446b620c5b8c129cda5625",
+                    "id": "5e33f6d476038822bfbdb2bb7c3bac6f",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"unitCode\": {},\n    \"billingIncrement\": 10,\n    \"referenceQuantity\": {},\n    \"unitText\": \"String Content\",\n    \"priceType\": \"String Content\",\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}\"",
+                    "text": "{\n    \"unitCode\": {},\n    \"billingIncrement\": 10,\n    \"referenceQuantity\": {},\n    \"unitText\": \"String Content\",\n    \"priceType\": \"String Content\",\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "5d713db082b04e842d33bfb7b99785a7",
-                    "collection": "31715bfe33c58d9830b019d21945cc1d"
+                    "request": "140ae58e3347e8134b322aa928465d3e",
+                    "collection": "5c099aba9c4a420dece47df65a039b92"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "31715bfe33c58d9830b019d21945cc1d",
+            "collectionId": "5c099aba9c4a420dece47df65a039b92",
             "rawModeData": ""
         }
     ]

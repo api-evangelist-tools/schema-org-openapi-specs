@@ -1,5 +1,5 @@
 {
-    "id": "071fff1e771c80a6dec6f4663b618733",
+    "id": "9e019c61bc28b710a01741fc976aaa0d",
     "name": "Geo Coordinates",
     "description": "Autogeneration of Geo Coordinates Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "3bdf257890f56b6433d52451fd927fd7",
+            "id": "a4b9b40faf47a3cf2ea45833b3ce87a5",
             "name": "\/Geo-Coordinates\/",
             "url": "{{url}}\/Geo-Coordinates\/",
             "description": "Autogeneration of Geo Coordinates Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "3bdf257890f56b6433d52451fd927fd7",
+                    "id": "a4b9b40faf47a3cf2ea45833b3ce87a5",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"latitude\": 10,\n    \"longitude\": 10,\n    \"address\": {},\n    \"addressCountry\": {},\n    \"postalCode\": \"String Content\",\n    \"elevation\": \"String Content\"\n}\"",
+                    "text": "{\n    \"latitude\": 10,\n    \"longitude\": 10,\n    \"address\": {},\n    \"addressCountry\": {},\n    \"postalCode\": \"String Content\",\n    \"elevation\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "728b8d9537f976d7009ab7209792f92f",
-                    "collection": "071fff1e771c80a6dec6f4663b618733"
+                    "request": "461fe25f4022e3e36314c96bcc13ea58",
+                    "collection": "9e019c61bc28b710a01741fc976aaa0d"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "071fff1e771c80a6dec6f4663b618733",
+            "collectionId": "9e019c61bc28b710a01741fc976aaa0d",
             "rawModeData": ""
         }
     ]

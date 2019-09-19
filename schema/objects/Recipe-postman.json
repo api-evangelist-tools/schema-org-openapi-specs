@@ -1,5 +1,5 @@
 {
-    "id": "0cc789ed2316db772429ef80d3dfcb50",
+    "id": "ca6a77d5c32c0b4c838669e93362ca5d",
     "name": "Recipe",
     "description": "Autogeneration of Recipe Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "2820b3cf3a23cb26d1fddc04fbebdd1e",
+            "id": "df1914793d0d3299f2566be198316403",
             "name": "\/Recipe\/",
             "url": "{{url}}\/Recipe\/",
             "description": "Autogeneration of Recipe Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "2820b3cf3a23cb26d1fddc04fbebdd1e",
+                    "id": "df1914793d0d3299f2566be198316403",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"recipeYield\": \"String Content\",\n    \"recipeCategory\": \"String Content\",\n    \"recipeIngredient\": \"String Content\",\n    \"recipeInstructions\": {},\n    \"nutrition\": {},\n    \"suitableForDiet\": {},\n    \"recipeCuisine\": \"String Content\",\n    \"cookTime\": {},\n    \"cookingMethod\": \"String Content\",\n    \"ingredients\": \"String Content\",\n    \"prepTime\": {},\n    \"tool\": {},\n    \"steps\": {},\n    \"performTime\": {},\n    \"estimatedCost\": \"String Content\",\n    \"totalTime\": {},\n    \"supply\": {},\n    \"yield\": {}\n}\"",
+                    "text": "{\n    \"recipeYield\": \"String Content\",\n    \"recipeCategory\": \"String Content\",\n    \"recipeIngredient\": \"String Content\",\n    \"recipeInstructions\": {},\n    \"nutrition\": {},\n    \"suitableForDiet\": {},\n    \"recipeCuisine\": \"String Content\",\n    \"cookTime\": {},\n    \"cookingMethod\": \"String Content\",\n    \"ingredients\": \"String Content\",\n    \"prepTime\": {},\n    \"tool\": {},\n    \"steps\": {},\n    \"performTime\": {},\n    \"estimatedCost\": \"String Content\",\n    \"totalTime\": {},\n    \"supply\": {},\n    \"yield\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "db2154bcd4eb12d2b202426dcf91b7b0",
-                    "collection": "0cc789ed2316db772429ef80d3dfcb50"
+                    "request": "5bb00b942332d2864f1ee4907cfe8250",
+                    "collection": "ca6a77d5c32c0b4c838669e93362ca5d"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0cc789ed2316db772429ef80d3dfcb50",
+            "collectionId": "ca6a77d5c32c0b4c838669e93362ca5d",
             "rawModeData": ""
         }
     ]

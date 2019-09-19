@@ -1,5 +1,5 @@
 {
-    "id": "7e2ec1aa6aeacec382461e8bcbe4ca62",
+    "id": "46a2dd1643ac2413989517b7d3ffea87",
     "name": "Ask Action",
     "description": "Autogeneration of Ask Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "e26183083371d90b1f181dc2fbb68ef1",
+            "id": "cc4d637c803854fde8d5ea875140105d",
             "name": "\/Ask-Action\/",
             "url": "{{url}}\/Ask-Action\/",
             "description": "Autogeneration of Ask Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "e26183083371d90b1f181dc2fbb68ef1",
+                    "id": "cc4d637c803854fde8d5ea875140105d",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"question\": {},\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}\"",
+                    "text": "{\n    \"question\": {},\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "cf854854bf9f6d31bf8d290c577332ff",
-                    "collection": "7e2ec1aa6aeacec382461e8bcbe4ca62"
+                    "request": "2d87e09a0df830756d1582ec71c43726",
+                    "collection": "46a2dd1643ac2413989517b7d3ffea87"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7e2ec1aa6aeacec382461e8bcbe4ca62",
+            "collectionId": "46a2dd1643ac2413989517b7d3ffea87",
             "rawModeData": ""
         }
     ]

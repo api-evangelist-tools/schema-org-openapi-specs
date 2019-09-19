@@ -1,5 +1,5 @@
 {
-    "id": "8d05d8c0619faa24d3f203dc4efbb7ef",
+    "id": "de9a7a5ce5cf2734b2b23880b9258c7d",
     "name": "Vote Action",
     "description": "Autogeneration of Vote Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "eb1ab1b6f077d43eee7a981b3d9e91e8",
+            "id": "0d6b0c9924228bea1ed4690b6da92eb4",
             "name": "\/Vote-Action\/",
             "url": "{{url}}\/Vote-Action\/",
             "description": "Autogeneration of Vote Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "eb1ab1b6f077d43eee7a981b3d9e91e8",
+                    "id": "0d6b0c9924228bea1ed4690b6da92eb4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"candidate\": {},\n    \"actionOption\": {},\n    \"option\": \"String Content\"\n}\"",
+                    "text": "{\n    \"candidate\": {},\n    \"actionOption\": {},\n    \"option\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2996278ab5ffcbe2d206dee35cace5ef",
-                    "collection": "8d05d8c0619faa24d3f203dc4efbb7ef"
+                    "request": "0247f371417ec2d92dcce6e8cf1abf5b",
+                    "collection": "de9a7a5ce5cf2734b2b23880b9258c7d"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8d05d8c0619faa24d3f203dc4efbb7ef",
+            "collectionId": "de9a7a5ce5cf2734b2b23880b9258c7d",
             "rawModeData": ""
         }
     ]

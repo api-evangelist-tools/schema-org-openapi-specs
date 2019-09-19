@@ -1,5 +1,5 @@
 {
-    "id": "130a851fddde5108e49bbf94e57dabb3",
+    "id": "b5296833155622aa8f8ad30a1d7d47dc",
     "name": "Lend Action",
     "description": "Autogeneration of Lend Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "b68967203ffe8a12a77cc95d32782716",
+            "id": "027e88c09aaffe83e9da7c312e06d1be",
             "name": "\/Lend-Action\/",
             "url": "{{url}}\/Lend-Action\/",
             "description": "Autogeneration of Lend Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "b68967203ffe8a12a77cc95d32782716",
+                    "id": "027e88c09aaffe83e9da7c312e06d1be",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"borrower\": {},\n    \"toLocation\": {},\n    \"fromLocation\": {}\n}\"",
+                    "text": "{\n    \"borrower\": {},\n    \"toLocation\": {},\n    \"fromLocation\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "f4c3307e9944eb5c09224d251bb7dd70",
-                    "collection": "130a851fddde5108e49bbf94e57dabb3"
+                    "request": "b87986355f2deae8ed53b3aeed72854c",
+                    "collection": "b5296833155622aa8f8ad30a1d7d47dc"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "130a851fddde5108e49bbf94e57dabb3",
+            "collectionId": "b5296833155622aa8f8ad30a1d7d47dc",
             "rawModeData": ""
         }
     ]

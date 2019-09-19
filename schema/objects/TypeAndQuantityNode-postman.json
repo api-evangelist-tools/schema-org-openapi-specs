@@ -1,5 +1,5 @@
 {
-    "id": "61ed3a656bb3c24082ce619fe19a8155",
+    "id": "681495b038a94d370d07168c29c7a5c3",
     "name": "Type And Quantity Node",
     "description": "Autogeneration of Type And Quantity Node Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "04d42e668d10000cf71505911489d7e0",
+            "id": "43c0e958ebe36c62c954838bfa078395",
             "name": "\/Type-And-Quantity-Node\/",
             "url": "{{url}}\/Type-And-Quantity-Node\/",
             "description": "Autogeneration of Type And Quantity Node Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "04d42e668d10000cf71505911489d7e0",
+                    "id": "43c0e958ebe36c62c954838bfa078395",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"unitCode\": {},\n    \"typeOfGood\": {},\n    \"amountOfThisGood\": 10,\n    \"businessFunction\": {},\n    \"unitText\": \"String Content\"\n}\"",
+                    "text": "{\n    \"unitCode\": {},\n    \"typeOfGood\": {},\n    \"amountOfThisGood\": 10,\n    \"businessFunction\": {},\n    \"unitText\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "def3502b0803ba8b274db12083449fdf",
-                    "collection": "61ed3a656bb3c24082ce619fe19a8155"
+                    "request": "0a62f3f4ae94ce5a3fd06997ebe61e50",
+                    "collection": "681495b038a94d370d07168c29c7a5c3"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "61ed3a656bb3c24082ce619fe19a8155",
+            "collectionId": "681495b038a94d370d07168c29c7a5c3",
             "rawModeData": ""
         }
     ]

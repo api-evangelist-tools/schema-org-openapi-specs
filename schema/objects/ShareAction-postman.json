@@ -1,5 +1,5 @@
 {
-    "id": "9d77f2f7235ccd37fcb3faddbb638052",
+    "id": "db868375bf21abada41dbd7e98f7e45a",
     "name": "Share Action",
     "description": "Autogeneration of Share Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "7d66cefb62e742a11ca99826f74f260e",
+            "id": "d5aeb151fb805a3b99b5a017769706c0",
             "name": "\/Share-Action\/",
             "url": "{{url}}\/Share-Action\/",
             "description": "Autogeneration of Share Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "7d66cefb62e742a11ca99826f74f260e",
+                    "id": "d5aeb151fb805a3b99b5a017769706c0",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}\"",
+                    "text": "{\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "8b7a6380e25dcda225dc1a2b56851e54",
-                    "collection": "9d77f2f7235ccd37fcb3faddbb638052"
+                    "request": "aa5f4ebf2a06bc6496addd19c30c91ac",
+                    "collection": "db868375bf21abada41dbd7e98f7e45a"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9d77f2f7235ccd37fcb3faddbb638052",
+            "collectionId": "db868375bf21abada41dbd7e98f7e45a",
             "rawModeData": ""
         }
     ]

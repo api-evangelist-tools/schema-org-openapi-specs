@@ -1,5 +1,5 @@
 {
-    "id": "008713c9d9f5892071ebf6c653c322ba",
+    "id": "38af6be996c969b96528445de79f1d54",
     "name": "Compound Price Specification",
     "description": "Autogeneration of Compound Price Specification Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "f873ab2082d51e4cfc38f6fff89fd778",
+            "id": "0dc1daedd3b7a8e51797241ad7c97ba2",
             "name": "\/Compound-Price-Specification\/",
             "url": "{{url}}\/Compound-Price-Specification\/",
             "description": "Autogeneration of Compound Price Specification Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "f873ab2082d51e4cfc38f6fff89fd778",
+                    "id": "0dc1daedd3b7a8e51797241ad7c97ba2",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"priceComponent\": {},\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}\"",
+                    "text": "{\n    \"priceComponent\": {},\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "b324b49dc5012f61e0dd0aa28d99925f",
-                    "collection": "008713c9d9f5892071ebf6c653c322ba"
+                    "request": "511712b2d92dfdcbc3ed7326fbbfbbe4",
+                    "collection": "38af6be996c969b96528445de79f1d54"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "008713c9d9f5892071ebf6c653c322ba",
+            "collectionId": "38af6be996c969b96528445de79f1d54",
             "rawModeData": ""
         }
     ]

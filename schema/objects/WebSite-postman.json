@@ -1,5 +1,5 @@
 {
-    "id": "80a69542072d340f0853d867a6dc2412",
+    "id": "2b2bc79d4b23f0f1fa006d6f4705ae80",
     "name": "Web Site",
     "description": "Autogeneration of Web Site Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "5b8fd210fdd264c17ef550ac6ea131f6",
+            "id": "45175ea69f112287913cbfd3d24c5ff4",
             "name": "\/Web-Site\/",
             "url": "{{url}}\/Web-Site\/",
             "description": "Autogeneration of Web Site Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "5b8fd210fdd264c17ef550ac6ea131f6",
+                    "id": "45175ea69f112287913cbfd3d24c5ff4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"issn\": \"String Content\",\n    \"about\": {},\n    \"educationalAlignment\": {},\n    \"associatedMedia\": {},\n    \"funder\": {},\n    \"position\": 100,\n    \"audio\": {},\n    \"workExample\": {},\n    \"provider\": {},\n    \"encoding\": {},\n    \"interactivityType\": \"String Content\",\n    \"accessibilitySummary\": \"String Content\",\n    \"character\": {},\n    \"audience\": {},\n    \"sourceOrganization\": {},\n    \"isPartOf\": {},\n    \"video\": {},\n    \"publisher\": {},\n    \"publication\": {},\n    \"text\": \"String Content\",\n    \"expires\": \"String Content\",\n    \"contributor\": {},\n    \"reviews\": {},\n    \"typicalAgeRange\": \"String Content\",\n    \"releasedEvent\": {},\n    \"educationalUse\": \"String Content\",\n    \"contentLocation\": {},\n    \"schemaVersion\": {},\n    \"accessibilityFeature\": \"String Content\",\n    \"aggregateRating\": {},\n    \"alternativeHeadline\": \"String Content\",\n    \"locationCreated\": {},\n    \"accessModeSufficient\": \"String Content\",\n    \"temporalCoverage\": \"String Content\",\n    \"accountablePerson\": {},\n    \"spatialCoverage\": {},\n    \"offers\": {},\n    \"editor\": {},\n    \"discussionUrl\": {},\n    \"award\": \"String Content\",\n    \"copyrightHolder\": {},\n    \"accessibilityHazard\": \"String Content\",\n    \"copyrightYear\": 10,\n    \"awards\": \"String Content\",\n    \"recordedAt\": {},\n    \"commentCount\": 100,\n    \"fileFormat\": {},\n    \"inLanguage\": {},\n    \"accessibilityAPI\": \"String Content\",\n    \"interactionStatistic\": {},\n    \"contentRating\": \"String Content\",\n    \"learningResourceType\": \"String Content\",\n    \"accessMode\": \"String Content\",\n    \"material\": \"String Content\",\n    \"isFamilyFriendly\": 1,\n    \"exampleOfWork\": {},\n    \"version\": \"String Content\",\n    \"dateModified\": \"String Content\",\n    \"mainEntity\": {},\n    \"genre\": {},\n    \"keywords\": \"String Content\",\n    \"author\": {},\n    \"isBasedOnUrl\": {},\n    \"timeRequired\": {},\n    \"translator\": {},\n    \"thumbnailUrl\": {},\n    \"hasPart\": {},\n    \"comment\": {},\n    \"review\": {},\n    \"license\": {},\n    \"accessibilityControl\": \"String Content\",\n    \"encodings\": {},\n    \"isBasedOn\": {},\n    \"creator\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"producer\": {},\n    \"mentions\": {},\n    \"dateCreated\": \"String Content\",\n    \"datePublished\": \"String Content\",\n    \"isAccessibleForFree\": 1,\n    \"headline\": \"String Content\",\n    \"citation\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                    "text": "{\n    \"issn\": \"String Content\",\n    \"about\": {},\n    \"educationalAlignment\": {},\n    \"associatedMedia\": {},\n    \"funder\": {},\n    \"position\": 100,\n    \"audio\": {},\n    \"workExample\": {},\n    \"provider\": {},\n    \"encoding\": {},\n    \"interactivityType\": \"String Content\",\n    \"accessibilitySummary\": \"String Content\",\n    \"character\": {},\n    \"audience\": {},\n    \"sourceOrganization\": {},\n    \"isPartOf\": {},\n    \"video\": {},\n    \"publisher\": {},\n    \"publication\": {},\n    \"text\": \"String Content\",\n    \"expires\": \"String Content\",\n    \"contributor\": {},\n    \"reviews\": {},\n    \"typicalAgeRange\": \"String Content\",\n    \"releasedEvent\": {},\n    \"educationalUse\": \"String Content\",\n    \"contentLocation\": {},\n    \"schemaVersion\": {},\n    \"accessibilityFeature\": \"String Content\",\n    \"aggregateRating\": {},\n    \"alternativeHeadline\": \"String Content\",\n    \"locationCreated\": {},\n    \"accessModeSufficient\": \"String Content\",\n    \"temporalCoverage\": \"String Content\",\n    \"accountablePerson\": {},\n    \"spatialCoverage\": {},\n    \"offers\": {},\n    \"editor\": {},\n    \"discussionUrl\": {},\n    \"award\": \"String Content\",\n    \"copyrightHolder\": {},\n    \"accessibilityHazard\": \"String Content\",\n    \"copyrightYear\": 10,\n    \"awards\": \"String Content\",\n    \"recordedAt\": {},\n    \"commentCount\": 100,\n    \"fileFormat\": {},\n    \"inLanguage\": {},\n    \"accessibilityAPI\": \"String Content\",\n    \"interactionStatistic\": {},\n    \"contentRating\": \"String Content\",\n    \"learningResourceType\": \"String Content\",\n    \"accessMode\": \"String Content\",\n    \"material\": \"String Content\",\n    \"isFamilyFriendly\": 1,\n    \"exampleOfWork\": {},\n    \"version\": \"String Content\",\n    \"dateModified\": \"String Content\",\n    \"mainEntity\": {},\n    \"genre\": {},\n    \"keywords\": \"String Content\",\n    \"author\": {},\n    \"isBasedOnUrl\": {},\n    \"timeRequired\": {},\n    \"translator\": {},\n    \"thumbnailUrl\": {},\n    \"hasPart\": {},\n    \"comment\": {},\n    \"review\": {},\n    \"license\": {},\n    \"accessibilityControl\": \"String Content\",\n    \"encodings\": {},\n    \"isBasedOn\": {},\n    \"creator\": {},\n    \"publishingPrinciples\": {},\n    \"sponsor\": {},\n    \"producer\": {},\n    \"mentions\": {},\n    \"dateCreated\": \"String Content\",\n    \"datePublished\": \"String Content\",\n    \"isAccessibleForFree\": 1,\n    \"headline\": \"String Content\",\n    \"citation\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2724d830c02d0871c104eb4705d2505f",
-                    "collection": "80a69542072d340f0853d867a6dc2412"
+                    "request": "48f516206ba06f24cff53f4ce4f897f9",
+                    "collection": "2b2bc79d4b23f0f1fa006d6f4705ae80"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "80a69542072d340f0853d867a6dc2412",
+            "collectionId": "2b2bc79d4b23f0f1fa006d6f4705ae80",
             "rawModeData": ""
         }
     ]

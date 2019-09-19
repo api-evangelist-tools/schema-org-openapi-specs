@@ -1,5 +1,5 @@
 {
-    "id": "40e666749be3f050af0f614367fdc776",
+    "id": "15bb18a39d572965f677d5ab7f846361",
     "name": "Aggregate Rating",
     "description": "Autogeneration of Aggregate Rating Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "089415cdcd080fecdc5a1974ba1d1185",
+            "id": "fe6529fa762afb9d6a777802b5384749",
             "name": "\/Aggregate-Rating\/",
             "url": "{{url}}\/Aggregate-Rating\/",
             "description": "Autogeneration of Aggregate Rating Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "089415cdcd080fecdc5a1974ba1d1185",
+                    "id": "fe6529fa762afb9d6a777802b5384749",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"itemReviewed\": {},\n    \"reviewCount\": 100,\n    \"ratingCount\": 100,\n    \"ratingValue\": 10,\n    \"bestRating\": \"String Content\",\n    \"author\": {},\n    \"worstRating\": \"String Content\"\n}\"",
+                    "text": "{\n    \"itemReviewed\": {},\n    \"reviewCount\": 100,\n    \"ratingCount\": 100,\n    \"ratingValue\": 10,\n    \"bestRating\": \"String Content\",\n    \"author\": {},\n    \"worstRating\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "5cd68b637d065c1fbd2802bcd6d53c03",
-                    "collection": "40e666749be3f050af0f614367fdc776"
+                    "request": "faf517f9ea16c384b206e6f49d6de226",
+                    "collection": "15bb18a39d572965f677d5ab7f846361"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "40e666749be3f050af0f614367fdc776",
+            "collectionId": "15bb18a39d572965f677d5ab7f846361",
             "rawModeData": ""
         }
     ]

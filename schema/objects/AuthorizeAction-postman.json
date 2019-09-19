@@ -1,5 +1,5 @@
 {
-    "id": "69bed70ea560330b638dcd7459e7ded8",
+    "id": "518a4ff1744f45a7833301f3a9b8f679",
     "name": "Authorize Action",
     "description": "Autogeneration of Authorize Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "f7f54cec9c01f3d8e04e081840ee3a9a",
+            "id": "1807212ea3c2d002b1675aa335bb17c8",
             "name": "\/Authorize-Action\/",
             "url": "{{url}}\/Authorize-Action\/",
             "description": "Autogeneration of Authorize Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "f7f54cec9c01f3d8e04e081840ee3a9a",
+                    "id": "1807212ea3c2d002b1675aa335bb17c8",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"recipient\": {}\n}\"",
+                    "text": "{\n    \"recipient\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "c4e27367d22b507b191bbfc02d4f8261",
-                    "collection": "69bed70ea560330b638dcd7459e7ded8"
+                    "request": "c2a66093965e0b0630757c350109efef",
+                    "collection": "518a4ff1744f45a7833301f3a9b8f679"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "69bed70ea560330b638dcd7459e7ded8",
+            "collectionId": "518a4ff1744f45a7833301f3a9b8f679",
             "rawModeData": ""
         }
     ]

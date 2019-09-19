@@ -1,5 +1,5 @@
 {
-    "id": "00c28eac796aec720dcb89fe601c4a08",
+    "id": "51e42b99b3ebe92da000ca72ceb2fda5",
     "name": "How To Item",
     "description": "Autogeneration of How To Item Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "b07432405701c46b4820762eeb4d3b1a",
+            "id": "861fbaa62188cb098feb179c8ddaf6b4",
             "name": "\/How-To-Item\/",
             "url": "{{url}}\/How-To-Item\/",
             "description": "Autogeneration of How To Item Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "b07432405701c46b4820762eeb4d3b1a",
+                    "id": "861fbaa62188cb098feb179c8ddaf6b4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"requiredQuantity\": 10,\n    \"nextItem\": {},\n    \"position\": 100,\n    \"previousItem\": {},\n    \"item\": {}\n}\"",
+                    "text": "{\n    \"requiredQuantity\": 10,\n    \"nextItem\": {},\n    \"position\": 100,\n    \"previousItem\": {},\n    \"item\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "b9e6a6bc562a50145b07afaf29a1af1f",
-                    "collection": "00c28eac796aec720dcb89fe601c4a08"
+                    "request": "51cebeb5258eef39fa9ff5f7db281335",
+                    "collection": "51e42b99b3ebe92da000ca72ceb2fda5"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "00c28eac796aec720dcb89fe601c4a08",
+            "collectionId": "51e42b99b3ebe92da000ca72ceb2fda5",
             "rawModeData": ""
         }
     ]

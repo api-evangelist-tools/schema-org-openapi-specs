@@ -1,5 +1,5 @@
 {
-    "id": "a7a20425524ce0708971131f2bed5208",
+    "id": "5775ca9227d7146df535ccd94574fbe3",
     "name": "Download Action",
     "description": "Autogeneration of Download Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "0d3fb3291b69fc61ad370464d9fba1e4",
+            "id": "dd7081392c45dbd922d6c6ee5ddf26e4",
             "name": "\/Download-Action\/",
             "url": "{{url}}\/Download-Action\/",
             "description": "Autogeneration of Download Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "0d3fb3291b69fc61ad370464d9fba1e4",
+                    "id": "dd7081392c45dbd922d6c6ee5ddf26e4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"toLocation\": {},\n    \"fromLocation\": {}\n}\"",
+                    "text": "{\n    \"toLocation\": {},\n    \"fromLocation\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "912754bf5106aa971c2c5d28a085e247",
-                    "collection": "a7a20425524ce0708971131f2bed5208"
+                    "request": "e319a6fa2f3a974381bd1a1b5d4d2df3",
+                    "collection": "5775ca9227d7146df535ccd94574fbe3"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a7a20425524ce0708971131f2bed5208",
+            "collectionId": "5775ca9227d7146df535ccd94574fbe3",
             "rawModeData": ""
         }
     ]

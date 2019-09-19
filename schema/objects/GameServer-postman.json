@@ -1,5 +1,5 @@
 {
-    "id": "3ccffb6d2e7c5c78f3be6518d59dc314",
+    "id": "3d15bf4f15d6a0fd54c5259d539787ae",
     "name": "Game Server",
     "description": "Autogeneration of Game Server Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "9b40f39c45533f270056dd55df765c94",
+            "id": "edb40cf3f91241a7dd8a719c32df4d41",
             "name": "\/Game-Server\/",
             "url": "{{url}}\/Game-Server\/",
             "description": "Autogeneration of Game Server Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "9b40f39c45533f270056dd55df765c94",
+                    "id": "edb40cf3f91241a7dd8a719c32df4d41",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"game\": {},\n    \"playersOnline\": 100,\n    \"serverStatus\": {}\n}\"",
+                    "text": "{\n    \"game\": {},\n    \"playersOnline\": 100,\n    \"serverStatus\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2cab91afddbb6249b136f438ee615ce3",
-                    "collection": "3ccffb6d2e7c5c78f3be6518d59dc314"
+                    "request": "74f6d960b9157f49e67baae1eca867b8",
+                    "collection": "3d15bf4f15d6a0fd54c5259d539787ae"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ccffb6d2e7c5c78f3be6518d59dc314",
+            "collectionId": "3d15bf4f15d6a0fd54c5259d539787ae",
             "rawModeData": ""
         }
     ]

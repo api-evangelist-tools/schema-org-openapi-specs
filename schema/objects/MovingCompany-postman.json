@@ -1,5 +1,5 @@
 {
-    "id": "a014bbfde60448503226075a3dab6b08",
+    "id": "271ad258f1cded23cae9b555f24cd4a5",
     "name": "Moving Company",
     "description": "Autogeneration of Moving Company Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "6aa33c342b5ec0dd66fd130d96c95bee",
+            "id": "62b9c1d4e6c79291cea4f257e84c0a11",
             "name": "\/Moving-Company\/",
             "url": "{{url}}\/Moving-Company\/",
             "description": "Autogeneration of Moving Company Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "6aa33c342b5ec0dd66fd130d96c95bee",
+                    "id": "62b9c1d4e6c79291cea4f257e84c0a11",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                    "text": "{\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "be25f4d37643be827a407d83800924ec",
-                    "collection": "a014bbfde60448503226075a3dab6b08"
+                    "request": "e8c9a53d1c996fac2d14b8a6d331c894",
+                    "collection": "271ad258f1cded23cae9b555f24cd4a5"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a014bbfde60448503226075a3dab6b08",
+            "collectionId": "271ad258f1cded23cae9b555f24cd4a5",
             "rawModeData": ""
         }
     ]

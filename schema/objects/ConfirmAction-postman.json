@@ -1,5 +1,5 @@
 {
-    "id": "6dbb87c8bcc2644b106f27a9c70ce1f0",
+    "id": "af8547652b48fa768032c8adfccc4fdc",
     "name": "Confirm Action",
     "description": "Autogeneration of Confirm Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "349c34377f332444bea1fc77923a2bb4",
+            "id": "1e02be154cecbd0b8988d8dbe8317246",
             "name": "\/Confirm-Action\/",
             "url": "{{url}}\/Confirm-Action\/",
             "description": "Autogeneration of Confirm Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "349c34377f332444bea1fc77923a2bb4",
+                    "id": "1e02be154cecbd0b8988d8dbe8317246",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"event\": {}\n}\"",
+                    "text": "{\n    \"event\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "fa7fb093e9ce57f802c7be88776e515e",
-                    "collection": "6dbb87c8bcc2644b106f27a9c70ce1f0"
+                    "request": "22aa90aafcce36c37eec71db1f6f524d",
+                    "collection": "af8547652b48fa768032c8adfccc4fdc"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "6dbb87c8bcc2644b106f27a9c70ce1f0",
+            "collectionId": "af8547652b48fa768032c8adfccc4fdc",
             "rawModeData": ""
         }
     ]

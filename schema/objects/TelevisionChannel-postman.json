@@ -1,5 +1,5 @@
 {
-    "id": "4e048fbb00d5ec6d8dd42c9affe33373",
+    "id": "c587680f4dfc358ac17ed9c3d38d196a",
     "name": "Television Channel",
     "description": "Autogeneration of Television Channel Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "dfa7796951a29fc1457ba1c5eb7928f3",
+            "id": "dd73970f8d1cad57e5cf61ed167df1d0",
             "name": "\/Television-Channel\/",
             "url": "{{url}}\/Television-Channel\/",
             "description": "Autogeneration of Television Channel Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "dfa7796951a29fc1457ba1c5eb7928f3",
+                    "id": "dd73970f8d1cad57e5cf61ed167df1d0",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"broadcastChannelId\": \"String Content\",\n    \"broadcastServiceTier\": \"String Content\",\n    \"inBroadcastLineup\": {},\n    \"providesBroadcastService\": {},\n    \"genre\": {}\n}\"",
+                    "text": "{\n    \"broadcastChannelId\": \"String Content\",\n    \"broadcastServiceTier\": \"String Content\",\n    \"inBroadcastLineup\": {},\n    \"providesBroadcastService\": {},\n    \"genre\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "f6d45aadbbfdf7da0e78be02bd030c46",
-                    "collection": "4e048fbb00d5ec6d8dd42c9affe33373"
+                    "request": "2709249b4be90a396d410a3cbf3c7d50",
+                    "collection": "c587680f4dfc358ac17ed9c3d38d196a"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4e048fbb00d5ec6d8dd42c9affe33373",
+            "collectionId": "c587680f4dfc358ac17ed9c3d38d196a",
             "rawModeData": ""
         }
     ]

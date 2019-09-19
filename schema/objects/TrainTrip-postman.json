@@ -1,5 +1,5 @@
 {
-    "id": "8e9b058fe0b0db6cd9744aef33aea76b",
+    "id": "b04c98a73926f0f9ec5cbc57f5547642",
     "name": "Train Trip",
     "description": "Autogeneration of Train Trip Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "e1d33266177957fc6b9999060b4dbd11",
+            "id": "7426a5d9cbc79e7fb18d50063546344f",
             "name": "\/Train-Trip\/",
             "url": "{{url}}\/Train-Trip\/",
             "description": "Autogeneration of Train Trip Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "e1d33266177957fc6b9999060b4dbd11",
+                    "id": "7426a5d9cbc79e7fb18d50063546344f",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"departureStation\": {},\n    \"provider\": {},\n    \"arrivalPlatform\": \"String Content\",\n    \"departurePlatform\": \"String Content\",\n    \"trainName\": \"String Content\",\n    \"trainNumber\": \"String Content\",\n    \"arrivalStation\": {},\n    \"arrivalTime\": \"String Content\",\n    \"departureTime\": \"String Content\"\n}\"",
+                    "text": "{\n    \"departureStation\": {},\n    \"provider\": {},\n    \"arrivalPlatform\": \"String Content\",\n    \"departurePlatform\": \"String Content\",\n    \"trainName\": \"String Content\",\n    \"trainNumber\": \"String Content\",\n    \"arrivalStation\": {},\n    \"arrivalTime\": \"String Content\",\n    \"departureTime\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "c86da25f13f9078405657b7f246519cb",
-                    "collection": "8e9b058fe0b0db6cd9744aef33aea76b"
+                    "request": "8d03254d1cc02b8d19cbb1594b19b5f6",
+                    "collection": "b04c98a73926f0f9ec5cbc57f5547642"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8e9b058fe0b0db6cd9744aef33aea76b",
+            "collectionId": "b04c98a73926f0f9ec5cbc57f5547642",
             "rawModeData": ""
         }
     ]

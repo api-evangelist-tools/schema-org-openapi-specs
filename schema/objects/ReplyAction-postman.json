@@ -1,5 +1,5 @@
 {
-    "id": "160a8694117b35e9cbfaab120325cf61",
+    "id": "1899d6b86b94b2ee0eb634d251a6c4e6",
     "name": "Reply Action",
     "description": "Autogeneration of Reply Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "2d79b33f015ce7922ec445db99f1abc8",
+            "id": "bfc50d940562e18b7669680f64d7ae31",
             "name": "\/Reply-Action\/",
             "url": "{{url}}\/Reply-Action\/",
             "description": "Autogeneration of Reply Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "2d79b33f015ce7922ec445db99f1abc8",
+                    "id": "bfc50d940562e18b7669680f64d7ae31",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"resultComment\": {},\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}\"",
+                    "text": "{\n    \"resultComment\": {},\n    \"about\": {},\n    \"inLanguage\": {},\n    \"recipient\": {},\n    \"language\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "d1c908b63dee51dd743bb228e4699263",
-                    "collection": "160a8694117b35e9cbfaab120325cf61"
+                    "request": "8c3c1dfd309d0ac5396d941c655b6b02",
+                    "collection": "1899d6b86b94b2ee0eb634d251a6c4e6"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "160a8694117b35e9cbfaab120325cf61",
+            "collectionId": "1899d6b86b94b2ee0eb634d251a6c4e6",
             "rawModeData": ""
         }
     ]

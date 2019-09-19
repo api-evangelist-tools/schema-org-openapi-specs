@@ -1,5 +1,5 @@
 {
-    "id": "f08fdbb582ecb178b51f01773ad69894",
+    "id": "e7e79ded2ac89d1444087ceb210e6d2c",
     "name": "Airport",
     "description": "Autogeneration of Airport Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "4ea567f82c9065dba9c279727c7bad45",
+            "id": "7b54cb6fb085f061672615d2d1bca3fe",
             "name": "\/Airport\/",
             "url": "{{url}}\/Airport\/",
             "description": "Autogeneration of Airport Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "4ea567f82c9065dba9c279727c7bad45",
+                    "id": "7b54cb6fb085f061672615d2d1bca3fe",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"iataCode\": \"String Content\",\n    \"icaoCode\": \"String Content\",\n    \"openingHours\": \"String Content\"\n}\"",
+                    "text": "{\n    \"iataCode\": \"String Content\",\n    \"icaoCode\": \"String Content\",\n    \"openingHours\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "ef35a7a6fdf4621819bf20da8fa68279",
-                    "collection": "f08fdbb582ecb178b51f01773ad69894"
+                    "request": "f9b57c36a122a0b285ff814e427171d5",
+                    "collection": "e7e79ded2ac89d1444087ceb210e6d2c"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f08fdbb582ecb178b51f01773ad69894",
+            "collectionId": "e7e79ded2ac89d1444087ceb210e6d2c",
             "rawModeData": ""
         }
     ]

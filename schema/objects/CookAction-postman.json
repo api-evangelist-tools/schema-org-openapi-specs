@@ -1,5 +1,5 @@
 {
-    "id": "0cc4485e60267399323e87287e9d6c91",
+    "id": "2d6e26a72338c31071e3ed600fce0367",
     "name": "Cook Action",
     "description": "Autogeneration of Cook Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "527858bfc5b1b593e22b63185b32c4c3",
+            "id": "a75482456a681e190548e0e8ab760c34",
             "name": "\/Cook-Action\/",
             "url": "{{url}}\/Cook-Action\/",
             "description": "Autogeneration of Cook Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "527858bfc5b1b593e22b63185b32c4c3",
+                    "id": "a75482456a681e190548e0e8ab760c34",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"recipe\": {},\n    \"foodEvent\": {},\n    \"foodEstablishment\": {}\n}\"",
+                    "text": "{\n    \"recipe\": {},\n    \"foodEvent\": {},\n    \"foodEstablishment\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "53d6db50f678725d00a6a98e3a740a58",
-                    "collection": "0cc4485e60267399323e87287e9d6c91"
+                    "request": "c977f05c619d43721145e70ff2fab921",
+                    "collection": "2d6e26a72338c31071e3ed600fce0367"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0cc4485e60267399323e87287e9d6c91",
+            "collectionId": "2d6e26a72338c31071e3ed600fce0367",
             "rawModeData": ""
         }
     ]

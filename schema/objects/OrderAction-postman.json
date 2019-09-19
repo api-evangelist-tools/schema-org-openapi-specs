@@ -1,5 +1,5 @@
 {
-    "id": "701722c520d49f8e4f6cfddba72fcd11",
+    "id": "9bd6d7eb0ce4e7357f90320158f3dcf7",
     "name": "Order Action",
     "description": "Autogeneration of Order Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "8ced637658410c4af322b05534dd0f89",
+            "id": "7b9810753a821ff4cb62ee01cd296133",
             "name": "\/Order-Action\/",
             "url": "{{url}}\/Order-Action\/",
             "description": "Autogeneration of Order Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "8ced637658410c4af322b05534dd0f89",
+                    "id": "7b9810753a821ff4cb62ee01cd296133",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"deliveryMethod\": {},\n    \"priceSpecification\": {},\n    \"price\": \"String Content\",\n    \"result\": {},\n    \"actionStatus\": {},\n    \"target\": {},\n    \"agent\": {},\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"instrument\": {},\n    \"participant\": {},\n    \"object\": {},\n    \"error\": {},\n    \"location\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}\"",
+                    "text": "{\n    \"deliveryMethod\": {},\n    \"priceSpecification\": {},\n    \"price\": \"String Content\",\n    \"result\": {},\n    \"actionStatus\": {},\n    \"target\": {},\n    \"agent\": {},\n    \"startTime\": \"String Content\",\n    \"endTime\": \"String Content\",\n    \"instrument\": {},\n    \"participant\": {},\n    \"object\": {},\n    \"error\": {},\n    \"location\": {},\n    \"sameAs\": {},\n    \"url\": {},\n    \"image\": {},\n    \"additionalType\": {},\n    \"name\": \"String Content\",\n    \"identifier\": {},\n    \"potentialAction\": {},\n    \"mainEntityOfPage\": {},\n    \"description\": \"String Content\",\n    \"disambiguatingDescription\": \"String Content\",\n    \"alternateName\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "9d16a9894c930362c5aca57a60aaf1cb",
-                    "collection": "701722c520d49f8e4f6cfddba72fcd11"
+                    "request": "a25d8bdc2b8a95750b91e1d99bca6d38",
+                    "collection": "9bd6d7eb0ce4e7357f90320158f3dcf7"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "701722c520d49f8e4f6cfddba72fcd11",
+            "collectionId": "9bd6d7eb0ce4e7357f90320158f3dcf7",
             "rawModeData": ""
         }
     ]

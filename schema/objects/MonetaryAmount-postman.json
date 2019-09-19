@@ -1,5 +1,5 @@
 {
-    "id": "c9556fe42a9dc998bdf1898500a54b1b",
+    "id": "2bcb1ec1ae330ea74db92b3e8b46c156",
     "name": "Monetary Amount",
     "description": "Autogeneration of Monetary Amount Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "9c13451fcac5c4822b5cc03662529a59",
+            "id": "56bf40082e45225801021708d3c15a92",
             "name": "\/Monetary-Amount\/",
             "url": "{{url}}\/Monetary-Amount\/",
             "description": "Autogeneration of Monetary Amount Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "9c13451fcac5c4822b5cc03662529a59",
+                    "id": "56bf40082e45225801021708d3c15a92",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"minValue\": 10,\n    \"currency\": \"String Content\",\n    \"value\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"maxValue\": 10\n}\"",
+                    "text": "{\n    \"minValue\": 10,\n    \"currency\": \"String Content\",\n    \"value\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"maxValue\": 10\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "642e1c805842218732080739729e7a44",
-                    "collection": "c9556fe42a9dc998bdf1898500a54b1b"
+                    "request": "b0beb0094c50d4722eb4b54a4f5e66ca",
+                    "collection": "2bcb1ec1ae330ea74db92b3e8b46c156"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c9556fe42a9dc998bdf1898500a54b1b",
+            "collectionId": "2bcb1ec1ae330ea74db92b3e8b46c156",
             "rawModeData": ""
         }
     ]

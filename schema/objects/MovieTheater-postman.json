@@ -1,5 +1,5 @@
 {
-    "id": "53e4a4fee290351d95ecc24865130350",
+    "id": "0407d7b593a50a5c0586908533ed0c37",
     "name": "Movie Theater",
     "description": "Autogeneration of Movie Theater Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "4015217100382d8727c802beb66919e6",
+            "id": "c01f0c89c7f9a334c8490fae50d4e32d",
             "name": "\/Movie-Theater\/",
             "url": "{{url}}\/Movie-Theater\/",
             "description": "Autogeneration of Movie Theater Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "4015217100382d8727c802beb66919e6",
+                    "id": "c01f0c89c7f9a334c8490fae50d4e32d",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"screenCount\": 10,\n    \"openingHours\": \"String Content\"\n}\"",
+                    "text": "{\n    \"screenCount\": 10,\n    \"openingHours\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "a579b452ccae28dfa9e68a52232727a0",
-                    "collection": "53e4a4fee290351d95ecc24865130350"
+                    "request": "db5fae453751f4e2d7b0deab6060a69c",
+                    "collection": "0407d7b593a50a5c0586908533ed0c37"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "53e4a4fee290351d95ecc24865130350",
+            "collectionId": "0407d7b593a50a5c0586908533ed0c37",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "d4ecec09dc9c734f5a7431c71a21d108",
+    "id": "f0202868b1b77ba1a4f0565cac69f259",
     "name": "Offer Catalog",
     "description": "Autogeneration of Offer Catalog Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "20c57e79a2c7e549d4bf6aada0d9feee",
+            "id": "55ff9266a817138478381221f017687f",
             "name": "\/Offer-Catalog\/",
             "url": "{{url}}\/Offer-Catalog\/",
             "description": "Autogeneration of Offer Catalog Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "20c57e79a2c7e549d4bf6aada0d9feee",
+                    "id": "55ff9266a817138478381221f017687f",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"itemListElement\": {},\n    \"itemListOrder\": \"String Content\",\n    \"numberOfItems\": 100\n}\"",
+                    "text": "{\n    \"itemListElement\": {},\n    \"itemListOrder\": \"String Content\",\n    \"numberOfItems\": 100\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "3a119135f0b93b74469482cf64b6c5f3",
-                    "collection": "d4ecec09dc9c734f5a7431c71a21d108"
+                    "request": "1de2d13b02720faa31ce68a19ac2e6ff",
+                    "collection": "f0202868b1b77ba1a4f0565cac69f259"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "d4ecec09dc9c734f5a7431c71a21d108",
+            "collectionId": "f0202868b1b77ba1a4f0565cac69f259",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "a137e859295944bdf1b6fe9b1ff741ef",
+    "id": "7d81b4383f22121272bc4de73559f223",
     "name": "Restaurant",
     "description": "Autogeneration of Restaurant Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "2f0f5ff0c9d4df137f498ffa3254a569",
+            "id": "586734b43d398f081860f52cf511b2e7",
             "name": "\/Restaurant\/",
             "url": "{{url}}\/Restaurant\/",
             "description": "Autogeneration of Restaurant Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "2f0f5ff0c9d4df137f498ffa3254a569",
+                    "id": "586734b43d398f081860f52cf511b2e7",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {},\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                    "text": "{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {},\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "bf6f0b72c57ecceb8b17781ef1903b30",
-                    "collection": "a137e859295944bdf1b6fe9b1ff741ef"
+                    "request": "bc98fb42e377cf0e3686221165edf496",
+                    "collection": "7d81b4383f22121272bc4de73559f223"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a137e859295944bdf1b6fe9b1ff741ef",
+            "collectionId": "7d81b4383f22121272bc4de73559f223",
             "rawModeData": ""
         }
     ]

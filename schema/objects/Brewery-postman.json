@@ -1,5 +1,5 @@
 {
-    "id": "dfe6c378a972e6d5e4b326cfd1998191",
+    "id": "6ace4b2d7082f27bdbdf79d782d5b630",
     "name": "Brewery",
     "description": "Autogeneration of Brewery Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "bb4fe3e8410b615aff88e686e63a38f8",
+            "id": "32e774f4265f328e3d1b006c4e469f22",
             "name": "\/Brewery\/",
             "url": "{{url}}\/Brewery\/",
             "description": "Autogeneration of Brewery Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "bb4fe3e8410b615aff88e686e63a38f8",
+                    "id": "32e774f4265f328e3d1b006c4e469f22",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {},\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}\"",
+                    "text": "{\n    \"servesCuisine\": \"String Content\",\n    \"hasMenu\": \"String Content\",\n    \"menu\": \"String Content\",\n    \"starRating\": {},\n    \"acceptsReservations\": {},\n    \"priceRange\": \"String Content\",\n    \"branchOf\": {},\n    \"paymentAccepted\": \"String Content\",\n    \"openingHours\": \"String Content\",\n    \"currenciesAccepted\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "9873c7bbc37941c7ef7725e78a9c213d",
-                    "collection": "dfe6c378a972e6d5e4b326cfd1998191"
+                    "request": "36c3507ce9500e3aae0c7bf023c99206",
+                    "collection": "6ace4b2d7082f27bdbdf79d782d5b630"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "dfe6c378a972e6d5e4b326cfd1998191",
+            "collectionId": "6ace4b2d7082f27bdbdf79d782d5b630",
             "rawModeData": ""
         }
     ]

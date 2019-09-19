@@ -1,5 +1,5 @@
 {
-    "id": "2041ff8521155667d98605326c5bdba2",
+    "id": "a9b89ff2fb8d82ae3b30d0bdd58f36b5",
     "name": "Data Feed Item",
     "description": "Autogeneration of Data Feed Item Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "92c0392631e43f475ed8603185666e42",
+            "id": "f986bfd163cfe3c2edfbb4d6af432fb0",
             "name": "\/Data-Feed-Item\/",
             "url": "{{url}}\/Data-Feed-Item\/",
             "description": "Autogeneration of Data Feed Item Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "92c0392631e43f475ed8603185666e42",
+                    "id": "f986bfd163cfe3c2edfbb4d6af432fb0",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"dateModified\": \"String Content\",\n    \"dateDeleted\": \"String Content\",\n    \"dateCreated\": \"String Content\",\n    \"item\": {}\n}\"",
+                    "text": "{\n    \"dateModified\": \"String Content\",\n    \"dateDeleted\": \"String Content\",\n    \"dateCreated\": \"String Content\",\n    \"item\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "132609c5d8c365649893221da0a9b0de",
-                    "collection": "2041ff8521155667d98605326c5bdba2"
+                    "request": "c425ea6150b6ce14f483ba3c53ceca55",
+                    "collection": "a9b89ff2fb8d82ae3b30d0bdd58f36b5"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2041ff8521155667d98605326c5bdba2",
+            "collectionId": "a9b89ff2fb8d82ae3b30d0bdd58f36b5",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "9880f73fc8d682068dba8d26796becfc",
+    "id": "ab310bbbca3e431a4731eebf96218867",
     "name": "Endorse Action",
     "description": "Autogeneration of Endorse Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "6947805db3b8118bd5684b8903ab86a0",
+            "id": "1bfcc4d362e24d259d6e056cbf31b8c9",
             "name": "\/Endorse-Action\/",
             "url": "{{url}}\/Endorse-Action\/",
             "description": "Autogeneration of Endorse Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "6947805db3b8118bd5684b8903ab86a0",
+                    "id": "1bfcc4d362e24d259d6e056cbf31b8c9",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"endorsee\": {}\n}\"",
+                    "text": "{\n    \"endorsee\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "108ad42c1fea58bf3deb6be861d501f4",
-                    "collection": "9880f73fc8d682068dba8d26796becfc"
+                    "request": "24a9b30c58d087a53ba5fb202ad45d89",
+                    "collection": "ab310bbbca3e431a4731eebf96218867"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9880f73fc8d682068dba8d26796becfc",
+            "collectionId": "ab310bbbca3e431a4731eebf96218867",
             "rawModeData": ""
         }
     ]

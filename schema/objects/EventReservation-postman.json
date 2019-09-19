@@ -1,5 +1,5 @@
 {
-    "id": "feb044bfe8b1871b65c379549e32c46b",
+    "id": "009f1fe00a2287d8c71970b4a08548cc",
     "name": "Event Reservation",
     "description": "Autogeneration of Event Reservation Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "917b66e61e38c3554bb6228bb7040fe6",
+            "id": "450fce6e526729b4cc57f0de1bedf142",
             "name": "\/Event-Reservation\/",
             "url": "{{url}}\/Event-Reservation\/",
             "description": "Autogeneration of Event Reservation Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "917b66e61e38c3554bb6228bb7040fe6",
+                    "id": "450fce6e526729b4cc57f0de1bedf142",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}\"",
+                    "text": "{\n    \"provider\": {},\n    \"programMembershipUsed\": {},\n    \"reservationStatus\": {},\n    \"underName\": {},\n    \"bookingAgent\": {},\n    \"totalPrice\": 10,\n    \"reservationFor\": {},\n    \"priceCurrency\": \"String Content\",\n    \"broker\": {},\n    \"modifiedTime\": \"String Content\",\n    \"bookingTime\": \"String Content\",\n    \"reservationId\": \"String Content\",\n    \"reservedTicket\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "d84763a3abbd200f2bd1628da0717d52",
-                    "collection": "feb044bfe8b1871b65c379549e32c46b"
+                    "request": "849f7b4605c1b8698437095f59f717f1",
+                    "collection": "009f1fe00a2287d8c71970b4a08548cc"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "feb044bfe8b1871b65c379549e32c46b",
+            "collectionId": "009f1fe00a2287d8c71970b4a08548cc",
             "rawModeData": ""
         }
     ]

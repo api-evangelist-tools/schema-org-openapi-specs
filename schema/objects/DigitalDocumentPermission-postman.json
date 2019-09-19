@@ -1,5 +1,5 @@
 {
-    "id": "e473ab78cbcad3cf46c32886359a5b21",
+    "id": "72475e414ecbdc880c6b42b6f6111272",
     "name": "Digital Document Permission",
     "description": "Autogeneration of Digital Document Permission Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "f26ca5b0fce06f94f48f720a705047d3",
+            "id": "2148bf79e116ef2e09cb39344645cad2",
             "name": "\/Digital-Document-Permission\/",
             "url": "{{url}}\/Digital-Document-Permission\/",
             "description": "Autogeneration of Digital Document Permission Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "f26ca5b0fce06f94f48f720a705047d3",
+                    "id": "2148bf79e116ef2e09cb39344645cad2",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"grantee\": {},\n    \"permissionType\": {}\n}\"",
+                    "text": "{\n    \"grantee\": {},\n    \"permissionType\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "f226c631546711faa751630ce87436bc",
-                    "collection": "e473ab78cbcad3cf46c32886359a5b21"
+                    "request": "4b12579367dac30a596e0e328ff98043",
+                    "collection": "72475e414ecbdc880c6b42b6f6111272"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e473ab78cbcad3cf46c32886359a5b21",
+            "collectionId": "72475e414ecbdc880c6b42b6f6111272",
             "rawModeData": ""
         }
     ]

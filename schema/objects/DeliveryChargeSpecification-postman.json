@@ -1,5 +1,5 @@
 {
-    "id": "6cd528f1d8c64633a1bbad01d7c8e3c5",
+    "id": "862a7c67dac33f14c3c22b5f8a88207e",
     "name": "Delivery Charge Specification",
     "description": "Autogeneration of Delivery Charge Specification Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "69ebfd531052256d93314ca206eca659",
+            "id": "5654e61d97f43de226d44dfce50f0075",
             "name": "\/Delivery-Charge-Specification\/",
             "url": "{{url}}\/Delivery-Charge-Specification\/",
             "description": "Autogeneration of Delivery Charge Specification Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "69ebfd531052256d93314ca206eca659",
+                    "id": "5654e61d97f43de226d44dfce50f0075",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"areaServed\": {},\n    \"ineligibleRegion\": {},\n    \"appliesToDeliveryMethod\": {},\n    \"eligibleRegion\": {},\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}\"",
+                    "text": "{\n    \"areaServed\": {},\n    \"ineligibleRegion\": {},\n    \"appliesToDeliveryMethod\": {},\n    \"eligibleRegion\": {},\n    \"minPrice\": 10,\n    \"eligibleTransactionVolume\": {},\n    \"maxPrice\": 10,\n    \"priceCurrency\": \"String Content\",\n    \"eligibleQuantity\": {},\n    \"validFrom\": \"String Content\",\n    \"validThrough\": \"String Content\",\n    \"price\": \"String Content\",\n    \"valueAddedTaxIncluded\": 1\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "a1468a1bc8a649574ca3757a07164ea2",
-                    "collection": "6cd528f1d8c64633a1bbad01d7c8e3c5"
+                    "request": "9d0f96a60c4dbe52b0c53a8f028589fb",
+                    "collection": "862a7c67dac33f14c3c22b5f8a88207e"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "6cd528f1d8c64633a1bbad01d7c8e3c5",
+            "collectionId": "862a7c67dac33f14c3c22b5f8a88207e",
             "rawModeData": ""
         }
     ]

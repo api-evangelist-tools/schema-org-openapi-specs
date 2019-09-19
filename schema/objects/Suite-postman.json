@@ -1,5 +1,5 @@
 {
-    "id": "ca3b6566a9daabd73143f9a8f4f098de",
+    "id": "e89579bc30c893e057c8579e2e383cae",
     "name": "Suite",
     "description": "Autogeneration of Suite Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "9597d7b95928029df973e51a0d8e27e2",
+            "id": "4c8004b3421e78a3666af207c76ee9d1",
             "name": "\/Suite\/",
             "url": "{{url}}\/Suite\/",
             "description": "Autogeneration of Suite Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "9597d7b95928029df973e51a0d8e27e2",
+                    "id": "4c8004b3421e78a3666af207c76ee9d1",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"occupancy\": {},\n    \"bed\": \"String Content\",\n    \"numberOfRooms\": {},\n    \"floorSize\": {},\n    \"petsAllowed\": \"String Content\",\n    \"amenityFeature\": {},\n    \"permittedUsage\": \"String Content\"\n}\"",
+                    "text": "{\n    \"occupancy\": {},\n    \"bed\": \"String Content\",\n    \"numberOfRooms\": {},\n    \"floorSize\": {},\n    \"petsAllowed\": \"String Content\",\n    \"amenityFeature\": {},\n    \"permittedUsage\": \"String Content\"\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "cf2d0bfd19e218e77b7459df02115772",
-                    "collection": "ca3b6566a9daabd73143f9a8f4f098de"
+                    "request": "0c1c6fb668c1bd356912390439d30db0",
+                    "collection": "e89579bc30c893e057c8579e2e383cae"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca3b6566a9daabd73143f9a8f4f098de",
+            "collectionId": "e89579bc30c893e057c8579e2e383cae",
             "rawModeData": ""
         }
     ]

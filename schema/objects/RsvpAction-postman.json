@@ -1,5 +1,5 @@
 {
-    "id": "c44292d6e4c389aed6f6169c9a85579d",
+    "id": "8156723b95a82d9b20c0cd3c348b4197",
     "name": "Rsvp Action",
     "description": "Autogeneration of Rsvp Action Schema.org object.",
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "b019c4d86a7acb69634c2010fc518839",
+            "id": "8c76978e4b0f941f36a5dd1f87879a61",
             "name": "\/Rsvp-Action\/",
             "url": "{{url}}\/Rsvp-Action\/",
             "description": "Autogeneration of Rsvp Action Schema.org object.",
@@ -28,12 +28,12 @@
             },
             "responses": [
                 {
-                    "id": "b019c4d86a7acb69634c2010fc518839",
+                    "id": "8c76978e4b0f941f36a5dd1f87879a61",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
                     "language": null,
-                    "text": "\"{\n    \"additionalNumberOfGuests\": 10,\n    \"comment\": {},\n    \"rsvpResponse\": {},\n    \"event\": {}\n}\"",
+                    "text": "{\n    \"additionalNumberOfGuests\": 10,\n    \"comment\": {},\n    \"rsvpResponse\": {},\n    \"event\": {}\n}",
                     "responseCode": {
                         "code": 200,
                         "name": ""
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "643b84d927251e739d9aad0238739f1f",
-                    "collection": "c44292d6e4c389aed6f6169c9a85579d"
+                    "request": "3412650adcbcca106138fc198ab8d20a",
+                    "collection": "8156723b95a82d9b20c0cd3c348b4197"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c44292d6e4c389aed6f6169c9a85579d",
+            "collectionId": "8156723b95a82d9b20c0cd3c348b4197",
             "rawModeData": ""
         }
     ]

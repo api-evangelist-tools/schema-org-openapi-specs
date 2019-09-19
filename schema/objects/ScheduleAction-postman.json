@@ -1,5 +1,5 @@
 {
-    "id": "1bed0a5f2f31ee1b5124c0c1a7f8b1e6",
+    "id": "030b7b562080988163aa78853ef16bdd",
     "name": "Schedule Action",
     "description": "Autogeneration of Schedule Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "c42dde7ca43bc0d29a367fa2b92e4311",
-            "name": "\/Schedule-Action\/",
-            "url": "{{url}}\/Schedule-Action\/",
+            "id": "406afbdd48dddd8604f48789a7b8f005",
+            "name": "\/schedule-action\/",
+            "url": "{{url}}\/schedule-action\/",
             "description": "Autogeneration of Schedule Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "c42dde7ca43bc0d29a367fa2b92e4311",
+                    "id": "406afbdd48dddd8604f48789a7b8f005",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Schedule-Action\/",
+                        "url": "{{url}}\/schedule-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "b0254bf27e5423715099ed0500cf9de1",
-                    "collection": "1bed0a5f2f31ee1b5124c0c1a7f8b1e6"
+                    "request": "96ec6058a45bef402c971bcc6b89108e",
+                    "collection": "030b7b562080988163aa78853ef16bdd"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1bed0a5f2f31ee1b5124c0c1a7f8b1e6",
+            "collectionId": "030b7b562080988163aa78853ef16bdd",
             "rawModeData": ""
         }
     ]

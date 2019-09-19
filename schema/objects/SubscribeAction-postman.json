@@ -1,5 +1,5 @@
 {
-    "id": "404a81280c45142df169bd3bb6b3f293",
+    "id": "ab5b88e36a6e12e6b673651d06a66492",
     "name": "Subscribe Action",
     "description": "Autogeneration of Subscribe Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "510211609776bd9a840d2409283553ec",
-            "name": "\/Subscribe-Action\/",
-            "url": "{{url}}\/Subscribe-Action\/",
+            "id": "a58de798abbb1444377b10fb4d74f048",
+            "name": "\/subscribe-action\/",
+            "url": "{{url}}\/subscribe-action\/",
             "description": "Autogeneration of Subscribe Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "510211609776bd9a840d2409283553ec",
+                    "id": "a58de798abbb1444377b10fb4d74f048",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Subscribe-Action\/",
+                        "url": "{{url}}\/subscribe-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "5110ce193015ffa22677394946a3d051",
-                    "collection": "404a81280c45142df169bd3bb6b3f293"
+                    "request": "9b136eaedb7a0c931230b3d26c4ef1c9",
+                    "collection": "ab5b88e36a6e12e6b673651d06a66492"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "404a81280c45142df169bd3bb6b3f293",
+            "collectionId": "ab5b88e36a6e12e6b673651d06a66492",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "c34a42a5f1c46c26d2979ed03332d1fa",
+    "id": "4cf653f06f0688261be56d545e04c67e",
     "name": "Apartment",
     "description": "Autogeneration of Apartment Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "4642ad4dad5181f2958a8e1dd5b39153",
-            "name": "\/Apartment\/",
-            "url": "{{url}}\/Apartment\/",
+            "id": "fa08add323fc0b2effa53ffefce5fc34",
+            "name": "\/apartment\/",
+            "url": "{{url}}\/apartment\/",
             "description": "Autogeneration of Apartment Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "4642ad4dad5181f2958a8e1dd5b39153",
+                    "id": "fa08add323fc0b2effa53ffefce5fc34",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Apartment\/",
+                        "url": "{{url}}\/apartment\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "8f2fc1ea17b48acf74a07e8a1d960c0f",
-                    "collection": "c34a42a5f1c46c26d2979ed03332d1fa"
+                    "request": "b9dbfb33faedeb0f84b3de2b87cffa90",
+                    "collection": "4cf653f06f0688261be56d545e04c67e"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c34a42a5f1c46c26d2979ed03332d1fa",
+            "collectionId": "4cf653f06f0688261be56d545e04c67e",
             "rawModeData": ""
         }
     ]

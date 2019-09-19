@@ -1,5 +1,5 @@
 {
-    "id": "dcad54c0cf976193dad94f418956b073",
+    "id": "8c3bfed876b6d57fb1cc072248ed939f",
     "name": "Blog",
     "description": "Autogeneration of Blog Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "1418f4ba0060b08382ef1c5ebcc5b3b2",
-            "name": "\/Blog\/",
-            "url": "{{url}}\/Blog\/",
+            "id": "b2c6de69c29dff1ec7c9ac51d9fbd221",
+            "name": "\/blog\/",
+            "url": "{{url}}\/blog\/",
             "description": "Autogeneration of Blog Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "1418f4ba0060b08382ef1c5ebcc5b3b2",
+                    "id": "b2c6de69c29dff1ec7c9ac51d9fbd221",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Blog\/",
+                        "url": "{{url}}\/blog\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "5b890214c46afb6050ac416aad45381c",
-                    "collection": "dcad54c0cf976193dad94f418956b073"
+                    "request": "4d6b449e542506cce4a355794b136c20",
+                    "collection": "8c3bfed876b6d57fb1cc072248ed939f"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "dcad54c0cf976193dad94f418956b073",
+            "collectionId": "8c3bfed876b6d57fb1cc072248ed939f",
             "rawModeData": ""
         }
     ]

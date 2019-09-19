@@ -1,5 +1,5 @@
 {
-    "id": "2c77d073f6626258ae9bb5351e8d6d05",
+    "id": "02da89dea0311a8ea45b1fb8dfb64181",
     "name": "Prepend Action",
     "description": "Autogeneration of Prepend Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "0ec1d0d77f1fe538ce7e7bfaf9e00074",
-            "name": "\/Prepend-Action\/",
-            "url": "{{url}}\/Prepend-Action\/",
+            "id": "368155dccfbbaac9a1a9990b1e2d2ecd",
+            "name": "\/prepend-action\/",
+            "url": "{{url}}\/prepend-action\/",
             "description": "Autogeneration of Prepend Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "0ec1d0d77f1fe538ce7e7bfaf9e00074",
+                    "id": "368155dccfbbaac9a1a9990b1e2d2ecd",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Prepend-Action\/",
+                        "url": "{{url}}\/prepend-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2bfb9e68f84681f720a01bcb1d7f797a",
-                    "collection": "2c77d073f6626258ae9bb5351e8d6d05"
+                    "request": "44c77c3ba6d0fd7c6b1a0384cd1e9417",
+                    "collection": "02da89dea0311a8ea45b1fb8dfb64181"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2c77d073f6626258ae9bb5351e8d6d05",
+            "collectionId": "02da89dea0311a8ea45b1fb8dfb64181",
             "rawModeData": ""
         }
     ]

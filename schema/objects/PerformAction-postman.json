@@ -1,5 +1,5 @@
 {
-    "id": "34a692bf7f702be7d01f6e0c4a9466a6",
+    "id": "5db5965e34d0d4a6e8b9c22bb90aa58c",
     "name": "Perform Action",
     "description": "Autogeneration of Perform Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "4b27caef97384d1ca6d80209e4bf4593",
-            "name": "\/Perform-Action\/",
-            "url": "{{url}}\/Perform-Action\/",
+            "id": "3a6f0b3605d1b21c20d1d654a08666af",
+            "name": "\/perform-action\/",
+            "url": "{{url}}\/perform-action\/",
             "description": "Autogeneration of Perform Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "4b27caef97384d1ca6d80209e4bf4593",
+                    "id": "3a6f0b3605d1b21c20d1d654a08666af",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Perform-Action\/",
+                        "url": "{{url}}\/perform-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2800d179e3c8dcea98b9be957fd8cce3",
-                    "collection": "34a692bf7f702be7d01f6e0c4a9466a6"
+                    "request": "8cc8f1d0448e86c6f4d52d028ddb6a4c",
+                    "collection": "5db5965e34d0d4a6e8b9c22bb90aa58c"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "34a692bf7f702be7d01f6e0c4a9466a6",
+            "collectionId": "5db5965e34d0d4a6e8b9c22bb90aa58c",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "44a27c032013073cafd00b95a4d315a8",
+    "id": "113be71f1f2e596cbfa74d7ddbe7601c",
     "name": "User Downloads",
     "description": "Autogeneration of User Downloads Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "6ff1fd59701d3f0fa330e706d82ffa75",
-            "name": "\/User-Downloads\/",
-            "url": "{{url}}\/User-Downloads\/",
+            "id": "2299c69cf145adb9f5509285f7a3c058",
+            "name": "\/user-downloads\/",
+            "url": "{{url}}\/user-downloads\/",
             "description": "Autogeneration of User Downloads Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "6ff1fd59701d3f0fa330e706d82ffa75",
+                    "id": "2299c69cf145adb9f5509285f7a3c058",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/User-Downloads\/",
+                        "url": "{{url}}\/user-downloads\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "391446f0e1f7246968a3bde90d49aec5",
-                    "collection": "44a27c032013073cafd00b95a4d315a8"
+                    "request": "f37f2983376d29e3d99cae870a692f5a",
+                    "collection": "113be71f1f2e596cbfa74d7ddbe7601c"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "44a27c032013073cafd00b95a4d315a8",
+            "collectionId": "113be71f1f2e596cbfa74d7ddbe7601c",
             "rawModeData": ""
         }
     ]

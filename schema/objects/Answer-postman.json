@@ -1,5 +1,5 @@
 {
-    "id": "bee380f7c4dfc6badd6bd34c9a2f0f4a",
+    "id": "ebfcc13e74d9c73ef73e88ed13ca0769",
     "name": "Answer",
     "description": "Autogeneration of Answer Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "6e3103e0f18e452bc5805b25a69cd1d9",
-            "name": "\/Answer\/",
-            "url": "{{url}}\/Answer\/",
+            "id": "5596298cdb96572017da4551ce2c4b8a",
+            "name": "\/answer\/",
+            "url": "{{url}}\/answer\/",
             "description": "Autogeneration of Answer Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "6e3103e0f18e452bc5805b25a69cd1d9",
+                    "id": "5596298cdb96572017da4551ce2c4b8a",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Answer\/",
+                        "url": "{{url}}\/answer\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "4d0bc37c4a8806513cde16808654a7e4",
-                    "collection": "bee380f7c4dfc6badd6bd34c9a2f0f4a"
+                    "request": "650dc39e2d1b6f119bd8b3dafd8566ff",
+                    "collection": "ebfcc13e74d9c73ef73e88ed13ca0769"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "bee380f7c4dfc6badd6bd34c9a2f0f4a",
+            "collectionId": "ebfcc13e74d9c73ef73e88ed13ca0769",
             "rawModeData": ""
         }
     ]

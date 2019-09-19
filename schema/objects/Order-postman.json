@@ -1,5 +1,5 @@
 {
-    "id": "3bc977af5e3f25ec0c2c9fa3df3ea75b",
+    "id": "3fdcec170b7928a7c368718a766dc2a6",
     "name": "Order",
     "description": "Autogeneration of Order Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "54870ad63b3baaf99452d40660b81abd",
-            "name": "\/Order\/",
-            "url": "{{url}}\/Order\/",
+            "id": "d367209c1b07ccc6d83578956817e759",
+            "name": "\/order\/",
+            "url": "{{url}}\/order\/",
             "description": "Autogeneration of Order Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "54870ad63b3baaf99452d40660b81abd",
+                    "id": "d367209c1b07ccc6d83578956817e759",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Order\/",
+                        "url": "{{url}}\/order\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "7b1bc9b3b0ae2d1bcc6027e44c05af58",
-                    "collection": "3bc977af5e3f25ec0c2c9fa3df3ea75b"
+                    "request": "ab1745032b575d64741fc748edba8a66",
+                    "collection": "3fdcec170b7928a7c368718a766dc2a6"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3bc977af5e3f25ec0c2c9fa3df3ea75b",
+            "collectionId": "3fdcec170b7928a7c368718a766dc2a6",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "920955895bd0560fe5d33d3a4e2fd421",
+    "id": "aad91dc8fc8b25941dfca741e34a3a88",
     "name": "Tip Action",
     "description": "Autogeneration of Tip Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "351ae89142366b3d529b3b485d8bc1a7",
-            "name": "\/Tip-Action\/",
-            "url": "{{url}}\/Tip-Action\/",
+            "id": "889f8728a8d3e87e5668ccac589ed48e",
+            "name": "\/tip-action\/",
+            "url": "{{url}}\/tip-action\/",
             "description": "Autogeneration of Tip Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "351ae89142366b3d529b3b485d8bc1a7",
+                    "id": "889f8728a8d3e87e5668ccac589ed48e",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Tip-Action\/",
+                        "url": "{{url}}\/tip-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "4e7be7e42dc0e36c989d72cc12008c85",
-                    "collection": "920955895bd0560fe5d33d3a4e2fd421"
+                    "request": "8a6caa09a0450c2e28b4e28a79087523",
+                    "collection": "aad91dc8fc8b25941dfca741e34a3a88"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "920955895bd0560fe5d33d3a4e2fd421",
+            "collectionId": "aad91dc8fc8b25941dfca741e34a3a88",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "6ace4b2d7082f27bdbdf79d782d5b630",
+    "id": "1e372cce996d42c0ade30b6dfd594eb4",
     "name": "Brewery",
     "description": "Autogeneration of Brewery Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "32e774f4265f328e3d1b006c4e469f22",
-            "name": "\/Brewery\/",
-            "url": "{{url}}\/Brewery\/",
+            "id": "e4f47cdb47224a142bc0a4823e818ba2",
+            "name": "\/brewery\/",
+            "url": "{{url}}\/brewery\/",
             "description": "Autogeneration of Brewery Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "32e774f4265f328e3d1b006c4e469f22",
+                    "id": "e4f47cdb47224a142bc0a4823e818ba2",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Brewery\/",
+                        "url": "{{url}}\/brewery\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "36c3507ce9500e3aae0c7bf023c99206",
-                    "collection": "6ace4b2d7082f27bdbdf79d782d5b630"
+                    "request": "6b2951ebb53b5c883143661f1326ae1a",
+                    "collection": "1e372cce996d42c0ade30b6dfd594eb4"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "6ace4b2d7082f27bdbdf79d782d5b630",
+            "collectionId": "1e372cce996d42c0ade30b6dfd594eb4",
             "rawModeData": ""
         }
     ]

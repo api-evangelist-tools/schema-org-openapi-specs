@@ -1,5 +1,5 @@
 {
-    "id": "8ea2991d0e4678e331d1e05fb01a29d5",
+    "id": "256c125748f91c28c3fc36b11bbdb907",
     "name": "User Plays",
     "description": "Autogeneration of User Plays Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "e764324026a78b63253bc0b9fe3acd9d",
-            "name": "\/User-Plays\/",
-            "url": "{{url}}\/User-Plays\/",
+            "id": "98c5a5028ff69f8c5bcf71e14b395c6b",
+            "name": "\/user-plays\/",
+            "url": "{{url}}\/user-plays\/",
             "description": "Autogeneration of User Plays Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "e764324026a78b63253bc0b9fe3acd9d",
+                    "id": "98c5a5028ff69f8c5bcf71e14b395c6b",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/User-Plays\/",
+                        "url": "{{url}}\/user-plays\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "196739fdd9b9c8d2b06a1b5a336ec3e2",
-                    "collection": "8ea2991d0e4678e331d1e05fb01a29d5"
+                    "request": "8bd6473fb32507914f3131972a826404",
+                    "collection": "256c125748f91c28c3fc36b11bbdb907"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8ea2991d0e4678e331d1e05fb01a29d5",
+            "collectionId": "256c125748f91c28c3fc36b11bbdb907",
             "rawModeData": ""
         }
     ]

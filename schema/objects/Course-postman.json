@@ -1,5 +1,5 @@
 {
-    "id": "3298eeeb3d244271e1b15dc64e7c8215",
+    "id": "89a1e8a26d6be519917b9ce1905fc4f1",
     "name": "Course",
     "description": "Autogeneration of Course Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "91813349ac4bf2a5f66f1f43711109e9",
-            "name": "\/Course\/",
-            "url": "{{url}}\/Course\/",
+            "id": "2c71ce23ccec131a24c30c57d59beede",
+            "name": "\/course\/",
+            "url": "{{url}}\/course\/",
             "description": "Autogeneration of Course Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "91813349ac4bf2a5f66f1f43711109e9",
+                    "id": "2c71ce23ccec131a24c30c57d59beede",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Course\/",
+                        "url": "{{url}}\/course\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "4bc7f20ede09928006b927a2450ab1e2",
-                    "collection": "3298eeeb3d244271e1b15dc64e7c8215"
+                    "request": "2061ebbd895a8a6c4f15975d0a29cf03",
+                    "collection": "89a1e8a26d6be519917b9ce1905fc4f1"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3298eeeb3d244271e1b15dc64e7c8215",
+            "collectionId": "89a1e8a26d6be519917b9ce1905fc4f1",
             "rawModeData": ""
         }
     ]

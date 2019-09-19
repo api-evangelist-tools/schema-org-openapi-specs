@@ -1,5 +1,5 @@
 {
-    "id": "870b870e5f22d97e96ab5977f2d789e1",
+    "id": "209cc78a22a513a510168e1c2b926d87",
     "name": "Bed And Breakfast",
     "description": "Autogeneration of Bed And Breakfast Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "c46649a62d5af4e0060f4bba12bde765",
-            "name": "\/Bed-And-Breakfast\/",
-            "url": "{{url}}\/Bed-And-Breakfast\/",
+            "id": "37f5fc8e9f6b9c94460fe15357239134",
+            "name": "\/bed-and-breakfast\/",
+            "url": "{{url}}\/bed-and-breakfast\/",
             "description": "Autogeneration of Bed And Breakfast Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "c46649a62d5af4e0060f4bba12bde765",
+                    "id": "37f5fc8e9f6b9c94460fe15357239134",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Bed-And-Breakfast\/",
+                        "url": "{{url}}\/bed-and-breakfast\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "fed3d5eb225e7ec7f35167716279e2e8",
-                    "collection": "870b870e5f22d97e96ab5977f2d789e1"
+                    "request": "e9a9d2b3ef3bb9c84b374055b92ac96f",
+                    "collection": "209cc78a22a513a510168e1c2b926d87"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "870b870e5f22d97e96ab5977f2d789e1",
+            "collectionId": "209cc78a22a513a510168e1c2b926d87",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "32ea89b22a0fbf4b9126864d2bdc81ca",
+    "id": "8492ccc3c180ca8a1124b91079983f22",
     "name": "Automated Teller",
     "description": "Autogeneration of Automated Teller Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "e093224324353aba95d66a3ce9d8f4c7",
-            "name": "\/Automated-Teller\/",
-            "url": "{{url}}\/Automated-Teller\/",
+            "id": "b90fa29b92eb046e9aba5a8271fb6440",
+            "name": "\/automated-teller\/",
+            "url": "{{url}}\/automated-teller\/",
             "description": "Autogeneration of Automated Teller Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "e093224324353aba95d66a3ce9d8f4c7",
+                    "id": "b90fa29b92eb046e9aba5a8271fb6440",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Automated-Teller\/",
+                        "url": "{{url}}\/automated-teller\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "f5d298d118f5b735a6f644c9fe4e0095",
-                    "collection": "32ea89b22a0fbf4b9126864d2bdc81ca"
+                    "request": "f34171c1d1b7625b68f240d30c27b209",
+                    "collection": "8492ccc3c180ca8a1124b91079983f22"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "32ea89b22a0fbf4b9126864d2bdc81ca",
+            "collectionId": "8492ccc3c180ca8a1124b91079983f22",
             "rawModeData": ""
         }
     ]

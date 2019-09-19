@@ -1,5 +1,5 @@
 {
-    "id": "63a9b719abd99b0e02dc8ddc9352af56",
+    "id": "12a85b4dd81deb2de34860931ce9b5cc",
     "name": "Rating",
     "description": "Autogeneration of Rating Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "e2e7e7dfa410586bba4ca11f150146f5",
-            "name": "\/Rating\/",
-            "url": "{{url}}\/Rating\/",
+            "id": "0981ee6f44c327c4e9861efc54e77b46",
+            "name": "\/rating\/",
+            "url": "{{url}}\/rating\/",
             "description": "Autogeneration of Rating Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "e2e7e7dfa410586bba4ca11f150146f5",
+                    "id": "0981ee6f44c327c4e9861efc54e77b46",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Rating\/",
+                        "url": "{{url}}\/rating\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "f47fa36c01a49c1d0013f9de74390db0",
-                    "collection": "63a9b719abd99b0e02dc8ddc9352af56"
+                    "request": "401eb9767474ceff2081abb3c770cbaf",
+                    "collection": "12a85b4dd81deb2de34860931ce9b5cc"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "63a9b719abd99b0e02dc8ddc9352af56",
+            "collectionId": "12a85b4dd81deb2de34860931ce9b5cc",
             "rawModeData": ""
         }
     ]

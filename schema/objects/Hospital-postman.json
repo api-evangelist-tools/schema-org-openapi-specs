@@ -1,5 +1,5 @@
 {
-    "id": "f0ef34b071123f9b18de47c499a9f3b9",
+    "id": "0c70129cf6da49003ee2de441f9076f3",
     "name": "Hospital",
     "description": "Autogeneration of Hospital Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "4a85540d4a64dada8e23892a901f96d3",
-            "name": "\/Hospital\/",
-            "url": "{{url}}\/Hospital\/",
+            "id": "c7372950d847d7e1d5515c3d2d8c68c2",
+            "name": "\/hospital\/",
+            "url": "{{url}}\/hospital\/",
             "description": "Autogeneration of Hospital Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "4a85540d4a64dada8e23892a901f96d3",
+                    "id": "c7372950d847d7e1d5515c3d2d8c68c2",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Hospital\/",
+                        "url": "{{url}}\/hospital\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "fde8629676defa3acb7c47d9cb091173",
-                    "collection": "f0ef34b071123f9b18de47c499a9f3b9"
+                    "request": "0bba1420f6ecf340e04c32ba0c484e46",
+                    "collection": "0c70129cf6da49003ee2de441f9076f3"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f0ef34b071123f9b18de47c499a9f3b9",
+            "collectionId": "0c70129cf6da49003ee2de441f9076f3",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "777b005456a673eb26b483db03694702",
+    "id": "9375b352e225b03305f672ce03bd5ae1",
     "name": "Audience",
     "description": "Autogeneration of Audience Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "270f0f2df3fb73b998a517b6f1ea5983",
-            "name": "\/Audience\/",
-            "url": "{{url}}\/Audience\/",
+            "id": "26032faf472c7a767f4db14aa44b190d",
+            "name": "\/audience\/",
+            "url": "{{url}}\/audience\/",
             "description": "Autogeneration of Audience Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "270f0f2df3fb73b998a517b6f1ea5983",
+                    "id": "26032faf472c7a767f4db14aa44b190d",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Audience\/",
+                        "url": "{{url}}\/audience\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "f4e17cda392de3492c05563b2a02a3d8",
-                    "collection": "777b005456a673eb26b483db03694702"
+                    "request": "c7d4e57500b9533bfa247e1ebbbf0f2b",
+                    "collection": "9375b352e225b03305f672ce03bd5ae1"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "777b005456a673eb26b483db03694702",
+            "collectionId": "9375b352e225b03305f672ce03bd5ae1",
             "rawModeData": ""
         }
     ]

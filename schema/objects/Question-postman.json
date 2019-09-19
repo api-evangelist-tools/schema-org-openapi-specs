@@ -1,5 +1,5 @@
 {
-    "id": "0d44e7515901892f08d99585a481fca4",
+    "id": "c8696aca090edaa16f85ab9828985050",
     "name": "Question",
     "description": "Autogeneration of Question Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "51f153d9858197c83a6955171657aa7e",
-            "name": "\/Question\/",
-            "url": "{{url}}\/Question\/",
+            "id": "2b7eca17f5964ca912fe06e7bbce048d",
+            "name": "\/question\/",
+            "url": "{{url}}\/question\/",
             "description": "Autogeneration of Question Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "51f153d9858197c83a6955171657aa7e",
+                    "id": "2b7eca17f5964ca912fe06e7bbce048d",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Question\/",
+                        "url": "{{url}}\/question\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "afed58ea43ace8e2f0eb378a06cbdbd9",
-                    "collection": "0d44e7515901892f08d99585a481fca4"
+                    "request": "14f74f77e1aea25b70136c2e6a8d7992",
+                    "collection": "c8696aca090edaa16f85ab9828985050"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0d44e7515901892f08d99585a481fca4",
+            "collectionId": "c8696aca090edaa16f85ab9828985050",
             "rawModeData": ""
         }
     ]

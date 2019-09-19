@@ -1,5 +1,5 @@
 {
-    "id": "c0dc9f8c97eb192452839b8dc310fc9f",
+    "id": "7360c12828f334842bcc5a078549b983",
     "name": "Payment Status Type",
     "description": "Autogeneration of Payment Status Type Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "2b0b75c8c815d88b7e99d844a271e268",
-            "name": "\/Payment-Status-Type\/",
-            "url": "{{url}}\/Payment-Status-Type\/",
+            "id": "bea2fb2fc0805d57a7813ea655ae2c46",
+            "name": "\/payment-status-type\/",
+            "url": "{{url}}\/payment-status-type\/",
             "description": "Autogeneration of Payment Status Type Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "2b0b75c8c815d88b7e99d844a271e268",
+                    "id": "bea2fb2fc0805d57a7813ea655ae2c46",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Payment-Status-Type\/",
+                        "url": "{{url}}\/payment-status-type\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "199d481304668f5d6b2d1c3f08e98d10",
-                    "collection": "c0dc9f8c97eb192452839b8dc310fc9f"
+                    "request": "c5f33af4862bf5a67518b32809083637",
+                    "collection": "7360c12828f334842bcc5a078549b983"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c0dc9f8c97eb192452839b8dc310fc9f",
+            "collectionId": "7360c12828f334842bcc5a078549b983",
             "rawModeData": ""
         }
     ]

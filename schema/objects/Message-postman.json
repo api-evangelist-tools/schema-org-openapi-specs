@@ -1,5 +1,5 @@
 {
-    "id": "e1347e4ca7ef730f60280792af7d3f42",
+    "id": "6fe3def4bfd816e0f505eaefbbb5f5bc",
     "name": "Message",
     "description": "Autogeneration of Message Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "fbbbab7ec3ecae4298d2e7f7c03c6a4f",
-            "name": "\/Message\/",
-            "url": "{{url}}\/Message\/",
+            "id": "2d16ca7de1809027c28aadcf0e80c10a",
+            "name": "\/message\/",
+            "url": "{{url}}\/message\/",
             "description": "Autogeneration of Message Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "fbbbab7ec3ecae4298d2e7f7c03c6a4f",
+                    "id": "2d16ca7de1809027c28aadcf0e80c10a",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Message\/",
+                        "url": "{{url}}\/message\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "f57540d23a7b8489aee551db2227b026",
-                    "collection": "e1347e4ca7ef730f60280792af7d3f42"
+                    "request": "553e27f21d57cd560591f048926d9dcf",
+                    "collection": "6fe3def4bfd816e0f505eaefbbb5f5bc"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e1347e4ca7ef730f60280792af7d3f42",
+            "collectionId": "6fe3def4bfd816e0f505eaefbbb5f5bc",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "b64a56f830cceef5005bec27f98c66c9",
+    "id": "61610fb1b5d8abd9fc58d1586bc0a0ca",
     "name": "Demand",
     "description": "Autogeneration of Demand Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "e424a37fb4b04bfef7f5ac6c39940fc0",
-            "name": "\/Demand\/",
-            "url": "{{url}}\/Demand\/",
+            "id": "6995cfbacf51b17d917fc0d434eb4d35",
+            "name": "\/demand\/",
+            "url": "{{url}}\/demand\/",
             "description": "Autogeneration of Demand Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "e424a37fb4b04bfef7f5ac6c39940fc0",
+                    "id": "6995cfbacf51b17d917fc0d434eb4d35",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Demand\/",
+                        "url": "{{url}}\/demand\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "25d6fdfa497d2f711918a2a71d629d06",
-                    "collection": "b64a56f830cceef5005bec27f98c66c9"
+                    "request": "199b3236fd06e32854ae3cf01c6ff138",
+                    "collection": "61610fb1b5d8abd9fc58d1586bc0a0ca"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b64a56f830cceef5005bec27f98c66c9",
+            "collectionId": "61610fb1b5d8abd9fc58d1586bc0a0ca",
             "rawModeData": ""
         }
     ]

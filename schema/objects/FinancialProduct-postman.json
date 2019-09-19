@@ -1,5 +1,5 @@
 {
-    "id": "248e3d9de0ce9515f0722a2475713c63",
+    "id": "b58f30dc9b699189d6413a10248819ab",
     "name": "Financial Product",
     "description": "Autogeneration of Financial Product Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "2ca9764590edf1b2d62efeaa0c0260aa",
-            "name": "\/Financial-Product\/",
-            "url": "{{url}}\/Financial-Product\/",
+            "id": "6a5fb98077460be26060ac7c896e7ee4",
+            "name": "\/financial-product\/",
+            "url": "{{url}}\/financial-product\/",
             "description": "Autogeneration of Financial Product Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "2ca9764590edf1b2d62efeaa0c0260aa",
+                    "id": "6a5fb98077460be26060ac7c896e7ee4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Financial-Product\/",
+                        "url": "{{url}}\/financial-product\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "8417601ab7fda9ecd12ae4f1d9d26e65",
-                    "collection": "248e3d9de0ce9515f0722a2475713c63"
+                    "request": "bacc0cbfa3fa423827c79c4e6f30cdd8",
+                    "collection": "b58f30dc9b699189d6413a10248819ab"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "248e3d9de0ce9515f0722a2475713c63",
+            "collectionId": "b58f30dc9b699189d6413a10248819ab",
             "rawModeData": ""
         }
     ]

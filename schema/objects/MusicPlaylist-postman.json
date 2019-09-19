@@ -1,5 +1,5 @@
 {
-    "id": "c0cb57ff9f93a395c67961989ffea915",
+    "id": "8f9ed9b1ab16dfb4f4dbfe23c394e569",
     "name": "Music Playlist",
     "description": "Autogeneration of Music Playlist Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "8f887c58a0ba57f7396461eb8a362b54",
-            "name": "\/Music-Playlist\/",
-            "url": "{{url}}\/Music-Playlist\/",
+            "id": "8d5a04a03d6e6445d5175c29611e5e0c",
+            "name": "\/music-playlist\/",
+            "url": "{{url}}\/music-playlist\/",
             "description": "Autogeneration of Music Playlist Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "8f887c58a0ba57f7396461eb8a362b54",
+                    "id": "8d5a04a03d6e6445d5175c29611e5e0c",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Music-Playlist\/",
+                        "url": "{{url}}\/music-playlist\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "4ee588c5bcf3de75232a3b6cfc1fd760",
-                    "collection": "c0cb57ff9f93a395c67961989ffea915"
+                    "request": "7c33252138318bf65c3fb976b8fb8842",
+                    "collection": "8f9ed9b1ab16dfb4f4dbfe23c394e569"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c0cb57ff9f93a395c67961989ffea915",
+            "collectionId": "8f9ed9b1ab16dfb4f4dbfe23c394e569",
             "rawModeData": ""
         }
     ]

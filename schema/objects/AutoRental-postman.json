@@ -1,5 +1,5 @@
 {
-    "id": "b2b7793183a07732203b3cc0aa23ad87",
+    "id": "76c4335d62cc1833bb491832c4dc7e33",
     "name": "Auto Rental",
     "description": "Autogeneration of Auto Rental Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "8c429863298a1b14948bed3d94c9b399",
-            "name": "\/Auto-Rental\/",
-            "url": "{{url}}\/Auto-Rental\/",
+            "id": "6e3f9bfb322bd6ab2bccd7d7c547b2f0",
+            "name": "\/auto-rental\/",
+            "url": "{{url}}\/auto-rental\/",
             "description": "Autogeneration of Auto Rental Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "8c429863298a1b14948bed3d94c9b399",
+                    "id": "6e3f9bfb322bd6ab2bccd7d7c547b2f0",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Auto-Rental\/",
+                        "url": "{{url}}\/auto-rental\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "f1cf669416a56c1ca93e2aa09e838775",
-                    "collection": "b2b7793183a07732203b3cc0aa23ad87"
+                    "request": "721b18b31a61919a38a607047ae896a1",
+                    "collection": "76c4335d62cc1833bb491832c4dc7e33"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b2b7793183a07732203b3cc0aa23ad87",
+            "collectionId": "76c4335d62cc1833bb491832c4dc7e33",
             "rawModeData": ""
         }
     ]

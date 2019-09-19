@@ -1,5 +1,5 @@
 {
-    "id": "1f554a12b69f1599d026a49bb460b347",
+    "id": "85bb11a704691f126736874958fc6e74",
     "name": "Store",
     "description": "Autogeneration of Store Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "7be893905221362e5d48998179219ec5",
-            "name": "\/Store\/",
-            "url": "{{url}}\/Store\/",
+            "id": "444c99fb972cd2da3d1a20144049e198",
+            "name": "\/store\/",
+            "url": "{{url}}\/store\/",
             "description": "Autogeneration of Store Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "7be893905221362e5d48998179219ec5",
+                    "id": "444c99fb972cd2da3d1a20144049e198",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Store\/",
+                        "url": "{{url}}\/store\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "59daa0065bb922c64c4aee18940b86d4",
-                    "collection": "1f554a12b69f1599d026a49bb460b347"
+                    "request": "74a6b22197f1bddd14d90cf7e609196f",
+                    "collection": "85bb11a704691f126736874958fc6e74"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1f554a12b69f1599d026a49bb460b347",
+            "collectionId": "85bb11a704691f126736874958fc6e74",
             "rawModeData": ""
         }
     ]

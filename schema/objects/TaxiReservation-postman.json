@@ -1,5 +1,5 @@
 {
-    "id": "d082a74c2e92225998dcdb7eb6cfeeee",
+    "id": "b06a002d5e5d44e443075b0073a4b2e5",
     "name": "Taxi Reservation",
     "description": "Autogeneration of Taxi Reservation Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "4b5c34a386284eed7fab8259a61a8cae",
-            "name": "\/Taxi-Reservation\/",
-            "url": "{{url}}\/Taxi-Reservation\/",
+            "id": "170e728bf29da77ade6c12b2341a99b1",
+            "name": "\/taxi-reservation\/",
+            "url": "{{url}}\/taxi-reservation\/",
             "description": "Autogeneration of Taxi Reservation Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "4b5c34a386284eed7fab8259a61a8cae",
+                    "id": "170e728bf29da77ade6c12b2341a99b1",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Taxi-Reservation\/",
+                        "url": "{{url}}\/taxi-reservation\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "9656a310e94d63931184b93d93dcde6a",
-                    "collection": "d082a74c2e92225998dcdb7eb6cfeeee"
+                    "request": "1ad266ee620797334c7621df6c623ddb",
+                    "collection": "b06a002d5e5d44e443075b0073a4b2e5"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "d082a74c2e92225998dcdb7eb6cfeeee",
+            "collectionId": "b06a002d5e5d44e443075b0073a4b2e5",
             "rawModeData": ""
         }
     ]

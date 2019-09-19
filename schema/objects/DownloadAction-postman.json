@@ -1,5 +1,5 @@
 {
-    "id": "5775ca9227d7146df535ccd94574fbe3",
+    "id": "d243bc135a5417f6eec03a8cbe9c9a49",
     "name": "Download Action",
     "description": "Autogeneration of Download Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "dd7081392c45dbd922d6c6ee5ddf26e4",
-            "name": "\/Download-Action\/",
-            "url": "{{url}}\/Download-Action\/",
+            "id": "cb05953301a35642f0beae6ccf0dfd7b",
+            "name": "\/download-action\/",
+            "url": "{{url}}\/download-action\/",
             "description": "Autogeneration of Download Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "dd7081392c45dbd922d6c6ee5ddf26e4",
+                    "id": "cb05953301a35642f0beae6ccf0dfd7b",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Download-Action\/",
+                        "url": "{{url}}\/download-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "e319a6fa2f3a974381bd1a1b5d4d2df3",
-                    "collection": "5775ca9227d7146df535ccd94574fbe3"
+                    "request": "2f3d20ad3747a8f01ae33bd0766b0699",
+                    "collection": "d243bc135a5417f6eec03a8cbe9c9a49"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5775ca9227d7146df535ccd94574fbe3",
+            "collectionId": "d243bc135a5417f6eec03a8cbe9c9a49",
             "rawModeData": ""
         }
     ]

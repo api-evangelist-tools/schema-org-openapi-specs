@@ -1,5 +1,5 @@
 {
-    "id": "0c33daae8b72d2b24375221642e4beda",
+    "id": "f59562f497dfb123ad4818ff71af3f20",
     "name": "Item List",
     "description": "Autogeneration of Item List Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "f86e1e3e3e9ce586e41a0cf27a6e0b23",
-            "name": "\/Item-List\/",
-            "url": "{{url}}\/Item-List\/",
+            "id": "ad55bc9bbe1930bf70197f625a525f2d",
+            "name": "\/item-list\/",
+            "url": "{{url}}\/item-list\/",
             "description": "Autogeneration of Item List Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "f86e1e3e3e9ce586e41a0cf27a6e0b23",
+                    "id": "ad55bc9bbe1930bf70197f625a525f2d",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Item-List\/",
+                        "url": "{{url}}\/item-list\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "e7a0046fc14ebaedfc1907152c098fb4",
-                    "collection": "0c33daae8b72d2b24375221642e4beda"
+                    "request": "e3c106d44cd15c47bb087e02adcaebc0",
+                    "collection": "f59562f497dfb123ad4818ff71af3f20"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0c33daae8b72d2b24375221642e4beda",
+            "collectionId": "f59562f497dfb123ad4818ff71af3f20",
             "rawModeData": ""
         }
     ]

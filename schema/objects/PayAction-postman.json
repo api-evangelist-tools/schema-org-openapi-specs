@@ -1,5 +1,5 @@
 {
-    "id": "1ca5f15f53fd33cfd563ad8d5cb32be2",
+    "id": "8b45dfb1c5011d5f19a1d92eab33b01a",
     "name": "Pay Action",
     "description": "Autogeneration of Pay Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "9091a9ef8c5d3e97fe035be4e899ed09",
-            "name": "\/Pay-Action\/",
-            "url": "{{url}}\/Pay-Action\/",
+            "id": "20ff0d7e5ac8d26f6ea8ed475561c886",
+            "name": "\/pay-action\/",
+            "url": "{{url}}\/pay-action\/",
             "description": "Autogeneration of Pay Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "9091a9ef8c5d3e97fe035be4e899ed09",
+                    "id": "20ff0d7e5ac8d26f6ea8ed475561c886",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Pay-Action\/",
+                        "url": "{{url}}\/pay-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "d6c93828a8d708609e6986c51da2da02",
-                    "collection": "1ca5f15f53fd33cfd563ad8d5cb32be2"
+                    "request": "6a8c26306adc54170fc4e5e39e4468ca",
+                    "collection": "8b45dfb1c5011d5f19a1d92eab33b01a"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1ca5f15f53fd33cfd563ad8d5cb32be2",
+            "collectionId": "8b45dfb1c5011d5f19a1d92eab33b01a",
             "rawModeData": ""
         }
     ]

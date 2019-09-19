@@ -1,5 +1,5 @@
 {
-    "id": "fdbe8d240a891ccbc9f7e976bf9451b3",
+    "id": "1d74856ddfef50a07a91f2fc465a46af",
     "name": "Pharmacy",
     "description": "Autogeneration of Pharmacy Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "940a7bf01149a0528a4143c81142005c",
-            "name": "\/Pharmacy\/",
-            "url": "{{url}}\/Pharmacy\/",
+            "id": "b536653a1d99301ade1b2de52dcb89eb",
+            "name": "\/pharmacy\/",
+            "url": "{{url}}\/pharmacy\/",
             "description": "Autogeneration of Pharmacy Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "940a7bf01149a0528a4143c81142005c",
+                    "id": "b536653a1d99301ade1b2de52dcb89eb",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Pharmacy\/",
+                        "url": "{{url}}\/pharmacy\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "cffeec5be6d5413d95acb0ac74d7105c",
-                    "collection": "fdbe8d240a891ccbc9f7e976bf9451b3"
+                    "request": "3fbfd73e5846ab4804c53421fda3fae6",
+                    "collection": "1d74856ddfef50a07a91f2fc465a46af"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "fdbe8d240a891ccbc9f7e976bf9451b3",
+            "collectionId": "1d74856ddfef50a07a91f2fc465a46af",
             "rawModeData": ""
         }
     ]

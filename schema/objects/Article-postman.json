@@ -1,5 +1,5 @@
 {
-    "id": "6f45f3fea98e9fbc4308a7728f36a6b1",
+    "id": "4fe6323a3ebe14ef8f74ab0c9226eb17",
     "name": "Article",
     "description": "Autogeneration of Article Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "7b12a539402af39bc4d234b9db1ad851",
-            "name": "\/Article\/",
-            "url": "{{url}}\/Article\/",
+            "id": "854b01a0f705dc760a90e4bbc6abace7",
+            "name": "\/article\/",
+            "url": "{{url}}\/article\/",
             "description": "Autogeneration of Article Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "7b12a539402af39bc4d234b9db1ad851",
+                    "id": "854b01a0f705dc760a90e4bbc6abace7",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Article\/",
+                        "url": "{{url}}\/article\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "539a2b8aa0f63d2d394f63cdc0c3b431",
-                    "collection": "6f45f3fea98e9fbc4308a7728f36a6b1"
+                    "request": "e4281e309f5e2d18aff2f4727870fea3",
+                    "collection": "4fe6323a3ebe14ef8f74ab0c9226eb17"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "6f45f3fea98e9fbc4308a7728f36a6b1",
+            "collectionId": "4fe6323a3ebe14ef8f74ab0c9226eb17",
             "rawModeData": ""
         }
     ]

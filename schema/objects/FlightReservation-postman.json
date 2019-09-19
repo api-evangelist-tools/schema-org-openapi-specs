@@ -1,5 +1,5 @@
 {
-    "id": "1d57e24389f3229aab8bac317f3e4471",
+    "id": "de79d1c9232f5063b1c6bbef892b8a5d",
     "name": "Flight Reservation",
     "description": "Autogeneration of Flight Reservation Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "dfe6722da90beff635272a2ecaa06d4a",
-            "name": "\/Flight-Reservation\/",
-            "url": "{{url}}\/Flight-Reservation\/",
+            "id": "e149084dbae1721afd77c0d59cc3e035",
+            "name": "\/flight-reservation\/",
+            "url": "{{url}}\/flight-reservation\/",
             "description": "Autogeneration of Flight Reservation Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "dfe6722da90beff635272a2ecaa06d4a",
+                    "id": "e149084dbae1721afd77c0d59cc3e035",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Flight-Reservation\/",
+                        "url": "{{url}}\/flight-reservation\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "6c511b32676af0c8739ed24e03b10d41",
-                    "collection": "1d57e24389f3229aab8bac317f3e4471"
+                    "request": "7edce5e632ed3195fcd514a2878e0fb6",
+                    "collection": "de79d1c9232f5063b1c6bbef892b8a5d"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1d57e24389f3229aab8bac317f3e4471",
+            "collectionId": "de79d1c9232f5063b1c6bbef892b8a5d",
             "rawModeData": ""
         }
     ]

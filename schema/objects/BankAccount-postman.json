@@ -1,5 +1,5 @@
 {
-    "id": "c47c6e637d1072fa46485a0c11166865",
+    "id": "a3d3cf0cb3791ce1b5b76d81c250a3a2",
     "name": "Bank Account",
     "description": "Autogeneration of Bank Account Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "d510fa5f824fcfe1ae93d5afdd029134",
-            "name": "\/Bank-Account\/",
-            "url": "{{url}}\/Bank-Account\/",
+            "id": "16b3694c3f24c3c9479ed443e72ebbcf",
+            "name": "\/bank-account\/",
+            "url": "{{url}}\/bank-account\/",
             "description": "Autogeneration of Bank Account Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "d510fa5f824fcfe1ae93d5afdd029134",
+                    "id": "16b3694c3f24c3c9479ed443e72ebbcf",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Bank-Account\/",
+                        "url": "{{url}}\/bank-account\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "7eaaa90265741fc3acc149868f60ef55",
-                    "collection": "c47c6e637d1072fa46485a0c11166865"
+                    "request": "eba79cdd5d9862f7fa65c9bfd7502d5d",
+                    "collection": "a3d3cf0cb3791ce1b5b76d81c250a3a2"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c47c6e637d1072fa46485a0c11166865",
+            "collectionId": "a3d3cf0cb3791ce1b5b76d81c250a3a2",
             "rawModeData": ""
         }
     ]

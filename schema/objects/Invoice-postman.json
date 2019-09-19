@@ -1,5 +1,5 @@
 {
-    "id": "b3f7e943085f9775398c6810a5c6db50",
+    "id": "7c572727fff7ddb75e0e5d4156f5c73b",
     "name": "Invoice",
     "description": "Autogeneration of Invoice Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "ce903538299ea7e2491516eb5bf14ca8",
-            "name": "\/Invoice\/",
-            "url": "{{url}}\/Invoice\/",
+            "id": "b372c5616824772826534e96d3f3d83e",
+            "name": "\/invoice\/",
+            "url": "{{url}}\/invoice\/",
             "description": "Autogeneration of Invoice Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "ce903538299ea7e2491516eb5bf14ca8",
+                    "id": "b372c5616824772826534e96d3f3d83e",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Invoice\/",
+                        "url": "{{url}}\/invoice\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "acab897bace7c394cfde1b7bc00116f2",
-                    "collection": "b3f7e943085f9775398c6810a5c6db50"
+                    "request": "87dc1ffc109d87722785ad774fbbd505",
+                    "collection": "7c572727fff7ddb75e0e5d4156f5c73b"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b3f7e943085f9775398c6810a5c6db50",
+            "collectionId": "7c572727fff7ddb75e0e5d4156f5c73b",
             "rawModeData": ""
         }
     ]

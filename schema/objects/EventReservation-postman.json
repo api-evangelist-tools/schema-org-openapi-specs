@@ -1,5 +1,5 @@
 {
-    "id": "009f1fe00a2287d8c71970b4a08548cc",
+    "id": "f8d8d27d45d5491294876f69c6ad39f9",
     "name": "Event Reservation",
     "description": "Autogeneration of Event Reservation Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "450fce6e526729b4cc57f0de1bedf142",
-            "name": "\/Event-Reservation\/",
-            "url": "{{url}}\/Event-Reservation\/",
+            "id": "79727f844a99da99b5e7cfb732fb06c4",
+            "name": "\/event-reservation\/",
+            "url": "{{url}}\/event-reservation\/",
             "description": "Autogeneration of Event Reservation Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "450fce6e526729b4cc57f0de1bedf142",
+                    "id": "79727f844a99da99b5e7cfb732fb06c4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Event-Reservation\/",
+                        "url": "{{url}}\/event-reservation\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "849f7b4605c1b8698437095f59f717f1",
-                    "collection": "009f1fe00a2287d8c71970b4a08548cc"
+                    "request": "91d3355c73bd051cd0d36dda88b5efe0",
+                    "collection": "f8d8d27d45d5491294876f69c6ad39f9"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "009f1fe00a2287d8c71970b4a08548cc",
+            "collectionId": "f8d8d27d45d5491294876f69c6ad39f9",
             "rawModeData": ""
         }
     ]

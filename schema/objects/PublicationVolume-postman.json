@@ -1,5 +1,5 @@
 {
-    "id": "161400189dd1538543469c5fedd51102",
+    "id": "ff0ed56896df14c5bba431d476854aa5",
     "name": "Publication Volume",
     "description": "Autogeneration of Publication Volume Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "5a2e993394f8b22a9f4ba808b00f0434",
-            "name": "\/Publication-Volume\/",
-            "url": "{{url}}\/Publication-Volume\/",
+            "id": "81696d7fd7a8ef5db7bf3b87a942abb9",
+            "name": "\/publication-volume\/",
+            "url": "{{url}}\/publication-volume\/",
             "description": "Autogeneration of Publication Volume Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "5a2e993394f8b22a9f4ba808b00f0434",
+                    "id": "81696d7fd7a8ef5db7bf3b87a942abb9",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Publication-Volume\/",
+                        "url": "{{url}}\/publication-volume\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "b690d5d345f2a38993f4ef5205a6f9fc",
-                    "collection": "161400189dd1538543469c5fedd51102"
+                    "request": "4e6abdbe5db87fdc13198bdb5b2b9b1b",
+                    "collection": "ff0ed56896df14c5bba431d476854aa5"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "161400189dd1538543469c5fedd51102",
+            "collectionId": "ff0ed56896df14c5bba431d476854aa5",
             "rawModeData": ""
         }
     ]

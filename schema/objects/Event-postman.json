@@ -1,5 +1,5 @@
 {
-    "id": "dbc6c434a786f6df8a7d8204e912b762",
+    "id": "70dce82b485f37fa948bf29bb9612067",
     "name": "Event",
     "description": "Autogeneration of Event Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "10188ce8400fb347c4ca1ae81ff4602c",
-            "name": "\/Event\/",
-            "url": "{{url}}\/Event\/",
+            "id": "8963147652c278918a6b5cb040058a26",
+            "name": "\/event\/",
+            "url": "{{url}}\/event\/",
             "description": "Autogeneration of Event Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "10188ce8400fb347c4ca1ae81ff4602c",
+                    "id": "8963147652c278918a6b5cb040058a26",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Event\/",
+                        "url": "{{url}}\/event\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "34d9fe31a1b7f7f141e49ab7d766b0f3",
-                    "collection": "dbc6c434a786f6df8a7d8204e912b762"
+                    "request": "51e9d29cb4d6eca89cedeb54bc90aa87",
+                    "collection": "70dce82b485f37fa948bf29bb9612067"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "dbc6c434a786f6df8a7d8204e912b762",
+            "collectionId": "70dce82b485f37fa948bf29bb9612067",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "81f63f0b8f3c7723924572458d724920",
+    "id": "40bc24a0df6857b91b1ecdecf2f44125",
     "name": "Order Item",
     "description": "Autogeneration of Order Item Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "d1f1fdf7189ba078494d60d0163f3d2e",
-            "name": "\/Order-Item\/",
-            "url": "{{url}}\/Order-Item\/",
+            "id": "b71c08cba0fa20bb76bbf23618a7f408",
+            "name": "\/order-item\/",
+            "url": "{{url}}\/order-item\/",
             "description": "Autogeneration of Order Item Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "d1f1fdf7189ba078494d60d0163f3d2e",
+                    "id": "b71c08cba0fa20bb76bbf23618a7f408",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Order-Item\/",
+                        "url": "{{url}}\/order-item\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "4e6e18a7bb1cf8a98c9a476522d7e85a",
-                    "collection": "81f63f0b8f3c7723924572458d724920"
+                    "request": "e57d574400d5d3a61e860350436427b8",
+                    "collection": "40bc24a0df6857b91b1ecdecf2f44125"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "81f63f0b8f3c7723924572458d724920",
+            "collectionId": "40bc24a0df6857b91b1ecdecf2f44125",
             "rawModeData": ""
         }
     ]

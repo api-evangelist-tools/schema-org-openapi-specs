@@ -1,5 +1,5 @@
 {
-    "id": "61493869e2752a0e050da2729f864856",
+    "id": "2cf9c8a702a1cce71aab48836ecf129e",
     "name": "Residence",
     "description": "Autogeneration of Residence Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "dd93039ecec37385f4a595eceb163998",
-            "name": "\/Residence\/",
-            "url": "{{url}}\/Residence\/",
+            "id": "4ca123db4889572c5749df65247423e7",
+            "name": "\/residence\/",
+            "url": "{{url}}\/residence\/",
             "description": "Autogeneration of Residence Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "dd93039ecec37385f4a595eceb163998",
+                    "id": "4ca123db4889572c5749df65247423e7",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Residence\/",
+                        "url": "{{url}}\/residence\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "eb9b2960a4ea0a2eb1d2770a900b7d58",
-                    "collection": "61493869e2752a0e050da2729f864856"
+                    "request": "2a646ba77ac657219da0fb17c6af2ffc",
+                    "collection": "2cf9c8a702a1cce71aab48836ecf129e"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "61493869e2752a0e050da2729f864856",
+            "collectionId": "2cf9c8a702a1cce71aab48836ecf129e",
             "rawModeData": ""
         }
     ]

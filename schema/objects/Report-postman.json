@@ -1,5 +1,5 @@
 {
-    "id": "7429dc0de0677e4cc725bd2546c70dff",
+    "id": "1b32f4666ea2c4515ada5624b19b4aab",
     "name": "Report",
     "description": "Autogeneration of Report Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "1a2b3e01ce7f90573da6f6ab10ed208c",
-            "name": "\/Report\/",
-            "url": "{{url}}\/Report\/",
+            "id": "f1d0773bdbf49332c1d425c1700c3118",
+            "name": "\/report\/",
+            "url": "{{url}}\/report\/",
             "description": "Autogeneration of Report Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "1a2b3e01ce7f90573da6f6ab10ed208c",
+                    "id": "f1d0773bdbf49332c1d425c1700c3118",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Report\/",
+                        "url": "{{url}}\/report\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "db1d2e7c914ccf7b52c5ea39a5194d4d",
-                    "collection": "7429dc0de0677e4cc725bd2546c70dff"
+                    "request": "e35bd40e1bf8d5824bbc655cb4460eac",
+                    "collection": "1b32f4666ea2c4515ada5624b19b4aab"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7429dc0de0677e4cc725bd2546c70dff",
+            "collectionId": "1b32f4666ea2c4515ada5624b19b4aab",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "42e2902412ab178d9ab530bbfae3da8d",
+    "id": "828a04f7fdb1e6fd2ddcf7217d788bff",
     "name": "Delivery Event",
     "description": "Autogeneration of Delivery Event Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "a6d14eedc77fb5b93ce249c1538a86b3",
-            "name": "\/Delivery-Event\/",
-            "url": "{{url}}\/Delivery-Event\/",
+            "id": "fbb814d4a88923f4c980ff6f9a391bee",
+            "name": "\/delivery-event\/",
+            "url": "{{url}}\/delivery-event\/",
             "description": "Autogeneration of Delivery Event Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "a6d14eedc77fb5b93ce249c1538a86b3",
+                    "id": "fbb814d4a88923f4c980ff6f9a391bee",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Delivery-Event\/",
+                        "url": "{{url}}\/delivery-event\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "ade55e4dbf987279dbd7f79acdc393c3",
-                    "collection": "42e2902412ab178d9ab530bbfae3da8d"
+                    "request": "96f47e028a45bfad3a732709e8f76a75",
+                    "collection": "828a04f7fdb1e6fd2ddcf7217d788bff"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "42e2902412ab178d9ab530bbfae3da8d",
+            "collectionId": "828a04f7fdb1e6fd2ddcf7217d788bff",
             "rawModeData": ""
         }
     ]

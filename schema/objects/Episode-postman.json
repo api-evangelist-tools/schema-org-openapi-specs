@@ -1,5 +1,5 @@
 {
-    "id": "8aba6b8d6951ddda6e42d5a24c9427e1",
+    "id": "0c4ee9abe8c0de9ce2ca7cee50a68287",
     "name": "Episode",
     "description": "Autogeneration of Episode Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "187bbecfe403786644e2dd34d1de8fdc",
-            "name": "\/Episode\/",
-            "url": "{{url}}\/Episode\/",
+            "id": "32a0ae6b9e28892d19f2e4eee916cdca",
+            "name": "\/episode\/",
+            "url": "{{url}}\/episode\/",
             "description": "Autogeneration of Episode Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "187bbecfe403786644e2dd34d1de8fdc",
+                    "id": "32a0ae6b9e28892d19f2e4eee916cdca",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Episode\/",
+                        "url": "{{url}}\/episode\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "20e9342268c99796ce02b867f45e9ae0",
-                    "collection": "8aba6b8d6951ddda6e42d5a24c9427e1"
+                    "request": "088c94cd4fe09bbc09418278960887ea",
+                    "collection": "0c4ee9abe8c0de9ce2ca7cee50a68287"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "8aba6b8d6951ddda6e42d5a24c9427e1",
+            "collectionId": "0c4ee9abe8c0de9ce2ca7cee50a68287",
             "rawModeData": ""
         }
     ]

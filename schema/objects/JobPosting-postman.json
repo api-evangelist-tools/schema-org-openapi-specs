@@ -1,5 +1,5 @@
 {
-    "id": "f10fa52c9e9aeb6685f95c16911dcc1e",
+    "id": "a9de249e1ecd2cc4098d9ed54fb32188",
     "name": "Job Posting",
     "description": "Autogeneration of Job Posting Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "cf291cd0872ea50a77672a7a53f9d802",
-            "name": "\/Job-Posting\/",
-            "url": "{{url}}\/Job-Posting\/",
+            "id": "72ddf11fea6727aa9c0be50f6fd57be0",
+            "name": "\/job-posting\/",
+            "url": "{{url}}\/job-posting\/",
             "description": "Autogeneration of Job Posting Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "cf291cd0872ea50a77672a7a53f9d802",
+                    "id": "72ddf11fea6727aa9c0be50f6fd57be0",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Job-Posting\/",
+                        "url": "{{url}}\/job-posting\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "b4b34fcb6544a70edf377ea9d4e94289",
-                    "collection": "f10fa52c9e9aeb6685f95c16911dcc1e"
+                    "request": "d619b69facd41e5c39831eef15e29014",
+                    "collection": "a9de249e1ecd2cc4098d9ed54fb32188"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f10fa52c9e9aeb6685f95c16911dcc1e",
+            "collectionId": "a9de249e1ecd2cc4098d9ed54fb32188",
             "rawModeData": ""
         }
     ]

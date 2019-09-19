@@ -1,5 +1,5 @@
 {
-    "id": "0f2395d7e4b4cf84e725923b8313640b",
+    "id": "b7aab0db336d049f800e3fa3799bd55b",
     "name": "News Article",
     "description": "Autogeneration of News Article Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "fae710262bbacea083272b3bc3cff38e",
-            "name": "\/News-Article\/",
-            "url": "{{url}}\/News-Article\/",
+            "id": "906ec17b1062c1b51551066acf7c1f26",
+            "name": "\/news-article\/",
+            "url": "{{url}}\/news-article\/",
             "description": "Autogeneration of News Article Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "fae710262bbacea083272b3bc3cff38e",
+                    "id": "906ec17b1062c1b51551066acf7c1f26",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/News-Article\/",
+                        "url": "{{url}}\/news-article\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "89c7983e0b74a0e6dacc6e7df5bc0a9e",
-                    "collection": "0f2395d7e4b4cf84e725923b8313640b"
+                    "request": "caaf7edd8c854c77067bae26d2aa4176",
+                    "collection": "b7aab0db336d049f800e3fa3799bd55b"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0f2395d7e4b4cf84e725923b8313640b",
+            "collectionId": "b7aab0db336d049f800e3fa3799bd55b",
             "rawModeData": ""
         }
     ]

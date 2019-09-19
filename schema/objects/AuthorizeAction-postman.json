@@ -1,5 +1,5 @@
 {
-    "id": "518a4ff1744f45a7833301f3a9b8f679",
+    "id": "fccea093f68873fd15b538d722910b1f",
     "name": "Authorize Action",
     "description": "Autogeneration of Authorize Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "1807212ea3c2d002b1675aa335bb17c8",
-            "name": "\/Authorize-Action\/",
-            "url": "{{url}}\/Authorize-Action\/",
+            "id": "d21cdaddfe5704bc4c3bfd0d04e87335",
+            "name": "\/authorize-action\/",
+            "url": "{{url}}\/authorize-action\/",
             "description": "Autogeneration of Authorize Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "1807212ea3c2d002b1675aa335bb17c8",
+                    "id": "d21cdaddfe5704bc4c3bfd0d04e87335",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Authorize-Action\/",
+                        "url": "{{url}}\/authorize-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "c2a66093965e0b0630757c350109efef",
-                    "collection": "518a4ff1744f45a7833301f3a9b8f679"
+                    "request": "323272e079ff84b9b2bae171a8ee7625",
+                    "collection": "fccea093f68873fd15b538d722910b1f"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "518a4ff1744f45a7833301f3a9b8f679",
+            "collectionId": "fccea093f68873fd15b538d722910b1f",
             "rawModeData": ""
         }
     ]

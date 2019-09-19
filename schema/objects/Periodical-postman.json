@@ -1,5 +1,5 @@
 {
-    "id": "1e7e4aa9852c23a072e086353267ed83",
+    "id": "acf1c6f0c711ae56395ef4465f3384b1",
     "name": "Periodical",
     "description": "Autogeneration of Periodical Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "90a89c589e7ce3223c9aab337d979de4",
-            "name": "\/Periodical\/",
-            "url": "{{url}}\/Periodical\/",
+            "id": "bda887fb968902b5fb32321d0b6686ba",
+            "name": "\/periodical\/",
+            "url": "{{url}}\/periodical\/",
             "description": "Autogeneration of Periodical Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "90a89c589e7ce3223c9aab337d979de4",
+                    "id": "bda887fb968902b5fb32321d0b6686ba",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Periodical\/",
+                        "url": "{{url}}\/periodical\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "7c98c636135cad30b5980586d2328eb1",
-                    "collection": "1e7e4aa9852c23a072e086353267ed83"
+                    "request": "8adadc73d3424029ade73735b4368eac",
+                    "collection": "acf1c6f0c711ae56395ef4465f3384b1"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1e7e4aa9852c23a072e086353267ed83",
+            "collectionId": "acf1c6f0c711ae56395ef4465f3384b1",
             "rawModeData": ""
         }
     ]

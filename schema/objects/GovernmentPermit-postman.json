@@ -1,5 +1,5 @@
 {
-    "id": "f7f7268814fcdde4b9d52dbe7acbeb68",
+    "id": "b497780c0bffb171b72d3d3d34954327",
     "name": "Government Permit",
     "description": "Autogeneration of Government Permit Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "5f41c65d94ab7222863e9ca3165da664",
-            "name": "\/Government-Permit\/",
-            "url": "{{url}}\/Government-Permit\/",
+            "id": "6d1af3bb27a39b4a305291a085fabf04",
+            "name": "\/government-permit\/",
+            "url": "{{url}}\/government-permit\/",
             "description": "Autogeneration of Government Permit Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "5f41c65d94ab7222863e9ca3165da664",
+                    "id": "6d1af3bb27a39b4a305291a085fabf04",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Government-Permit\/",
+                        "url": "{{url}}\/government-permit\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "ff376ab28028cf5005ef56b61daf88ea",
-                    "collection": "f7f7268814fcdde4b9d52dbe7acbeb68"
+                    "request": "c9ffc38cf785060cee5b762eef2176cc",
+                    "collection": "b497780c0bffb171b72d3d3d34954327"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f7f7268814fcdde4b9d52dbe7acbeb68",
+            "collectionId": "b497780c0bffb171b72d3d3d34954327",
             "rawModeData": ""
         }
     ]

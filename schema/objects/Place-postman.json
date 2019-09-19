@@ -1,5 +1,5 @@
 {
-    "id": "e969ae3d37e10eb4ea72b6fb9ff6c568",
+    "id": "d00361eb54d1458da5e57f5f65bcebb5",
     "name": "Place",
     "description": "Autogeneration of Place Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "26205c515bd96433d77d98bae18344f2",
-            "name": "\/Place\/",
-            "url": "{{url}}\/Place\/",
+            "id": "5bc2f2ded99bf4db1016db50888c9650",
+            "name": "\/place\/",
+            "url": "{{url}}\/place\/",
             "description": "Autogeneration of Place Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "26205c515bd96433d77d98bae18344f2",
+                    "id": "5bc2f2ded99bf4db1016db50888c9650",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Place\/",
+                        "url": "{{url}}\/place\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "d0f5ce538136769ec021701b92a59fff",
-                    "collection": "e969ae3d37e10eb4ea72b6fb9ff6c568"
+                    "request": "0c68d74aa276dba0aad2c10f21f954c2",
+                    "collection": "d00361eb54d1458da5e57f5f65bcebb5"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "e969ae3d37e10eb4ea72b6fb9ff6c568",
+            "collectionId": "d00361eb54d1458da5e57f5f65bcebb5",
             "rawModeData": ""
         }
     ]

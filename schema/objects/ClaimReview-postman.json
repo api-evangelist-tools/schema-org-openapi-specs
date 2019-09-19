@@ -1,5 +1,5 @@
 {
-    "id": "1dbf2ff4aabbebd86f8d07ca7dadf129",
+    "id": "47053d3df9d557fff7a4b8cba979bf12",
     "name": "Claim Review",
     "description": "Autogeneration of Claim Review Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "920daae141726dc6d571352909a31905",
-            "name": "\/Claim-Review\/",
-            "url": "{{url}}\/Claim-Review\/",
+            "id": "2c391193e4ea6d39f939536960c4b3bd",
+            "name": "\/claim-review\/",
+            "url": "{{url}}\/claim-review\/",
             "description": "Autogeneration of Claim Review Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "920daae141726dc6d571352909a31905",
+                    "id": "2c391193e4ea6d39f939536960c4b3bd",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Claim-Review\/",
+                        "url": "{{url}}\/claim-review\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "28786919aef8b009bfe85d9d1a580a73",
-                    "collection": "1dbf2ff4aabbebd86f8d07ca7dadf129"
+                    "request": "3ea13846056d00093b54061dbdb21e27",
+                    "collection": "47053d3df9d557fff7a4b8cba979bf12"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1dbf2ff4aabbebd86f8d07ca7dadf129",
+            "collectionId": "47053d3df9d557fff7a4b8cba979bf12",
             "rawModeData": ""
         }
     ]

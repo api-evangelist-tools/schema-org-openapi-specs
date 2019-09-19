@@ -1,5 +1,5 @@
 {
-    "id": "13be4ca99e30ba3db3f7d53f36c68565",
+    "id": "58d2f131003a6865203c1ca6008abbef",
     "name": "Local Business",
     "description": "Autogeneration of Local Business Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "c5abb8a9e04a97f7b00a0f18498ecc7a",
-            "name": "\/Local-Business\/",
-            "url": "{{url}}\/Local-Business\/",
+            "id": "a16a52ee29e31e3f5b1b6d313389affc",
+            "name": "\/local-business\/",
+            "url": "{{url}}\/local-business\/",
             "description": "Autogeneration of Local Business Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "c5abb8a9e04a97f7b00a0f18498ecc7a",
+                    "id": "a16a52ee29e31e3f5b1b6d313389affc",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Local-Business\/",
+                        "url": "{{url}}\/local-business\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "a8db027ceda5ea40f93c50b193eefec6",
-                    "collection": "13be4ca99e30ba3db3f7d53f36c68565"
+                    "request": "06f5ebb64f3e2bcff47edbf4d6b569d6",
+                    "collection": "58d2f131003a6865203c1ca6008abbef"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "13be4ca99e30ba3db3f7d53f36c68565",
+            "collectionId": "58d2f131003a6865203c1ca6008abbef",
             "rawModeData": ""
         }
     ]

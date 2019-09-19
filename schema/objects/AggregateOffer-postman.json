@@ -1,5 +1,5 @@
 {
-    "id": "1d5ebb8c4f5d96c6eaf2a45d5f3f628e",
+    "id": "0bcb0f12f87eb9ef535e4dc1121d3175",
     "name": "Aggregate Offer",
     "description": "Autogeneration of Aggregate Offer Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "29a22edef7baa2bb33bd17c9cee8e64e",
-            "name": "\/Aggregate-Offer\/",
-            "url": "{{url}}\/Aggregate-Offer\/",
+            "id": "1d651a6ed4a3986fa6b1065039c698e7",
+            "name": "\/aggregate-offer\/",
+            "url": "{{url}}\/aggregate-offer\/",
             "description": "Autogeneration of Aggregate Offer Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "29a22edef7baa2bb33bd17c9cee8e64e",
+                    "id": "1d651a6ed4a3986fa6b1065039c698e7",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Aggregate-Offer\/",
+                        "url": "{{url}}\/aggregate-offer\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "6fa19ae57ac8f58ebb33026ae0b6947a",
-                    "collection": "1d5ebb8c4f5d96c6eaf2a45d5f3f628e"
+                    "request": "398144da2cadb8f5d23938e593251bbb",
+                    "collection": "0bcb0f12f87eb9ef535e4dc1121d3175"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1d5ebb8c4f5d96c6eaf2a45d5f3f628e",
+            "collectionId": "0bcb0f12f87eb9ef535e4dc1121d3175",
             "rawModeData": ""
         }
     ]

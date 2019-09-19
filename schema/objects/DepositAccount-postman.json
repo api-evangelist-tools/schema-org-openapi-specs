@@ -1,5 +1,5 @@
 {
-    "id": "488d65878ea90605bbd678dd1d394863",
+    "id": "16cd61f33c72372ab3dadf3ebedc9d75",
     "name": "Deposit Account",
     "description": "Autogeneration of Deposit Account Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "8d07271f88ba77e6d16a411ee9043947",
-            "name": "\/Deposit-Account\/",
-            "url": "{{url}}\/Deposit-Account\/",
+            "id": "8daf821c966facecf14fec8e599b287a",
+            "name": "\/deposit-account\/",
+            "url": "{{url}}\/deposit-account\/",
             "description": "Autogeneration of Deposit Account Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "8d07271f88ba77e6d16a411ee9043947",
+                    "id": "8daf821c966facecf14fec8e599b287a",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Deposit-Account\/",
+                        "url": "{{url}}\/deposit-account\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "69e7a2ed5c3e34084b164119e724d4f2",
-                    "collection": "488d65878ea90605bbd678dd1d394863"
+                    "request": "2c7521f26c29ca414f65047cbf59630d",
+                    "collection": "16cd61f33c72372ab3dadf3ebedc9d75"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "488d65878ea90605bbd678dd1d394863",
+            "collectionId": "16cd61f33c72372ab3dadf3ebedc9d75",
             "rawModeData": ""
         }
     ]

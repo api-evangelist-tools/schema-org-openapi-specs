@@ -1,5 +1,5 @@
 {
-    "id": "34a1a7254e60d87a444de7536c221a20",
+    "id": "a40029ec7313ac0cd39a6f84ada7afcd",
     "name": "Taxi",
     "description": "Autogeneration of Taxi Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "22fc8d17ef335a96c1cbc0ec377ce305",
-            "name": "\/Taxi\/",
-            "url": "{{url}}\/Taxi\/",
+            "id": "9a0220210bad3ab347be172398118cb4",
+            "name": "\/taxi\/",
+            "url": "{{url}}\/taxi\/",
             "description": "Autogeneration of Taxi Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "22fc8d17ef335a96c1cbc0ec377ce305",
+                    "id": "9a0220210bad3ab347be172398118cb4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Taxi\/",
+                        "url": "{{url}}\/taxi\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "7784c1d4f3166b4c9b2cc3cf2183de44",
-                    "collection": "34a1a7254e60d87a444de7536c221a20"
+                    "request": "dfc8fa9fd8a1dd3aaca67de78e1ace8a",
+                    "collection": "a40029ec7313ac0cd39a6f84ada7afcd"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "34a1a7254e60d87a444de7536c221a20",
+            "collectionId": "a40029ec7313ac0cd39a6f84ada7afcd",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "b1342d125c41d2f9db012e3d92df2a1c",
+    "id": "c3a5291fc9a0cb2b29cbc38d7094c8c9",
     "name": "Dataset",
     "description": "Autogeneration of Dataset Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "3956a3fb8439628e652aefb5e22bf1ce",
-            "name": "\/Dataset\/",
-            "url": "{{url}}\/Dataset\/",
+            "id": "120d0b69335d6a4113142c4f3daed212",
+            "name": "\/dataset\/",
+            "url": "{{url}}\/dataset\/",
             "description": "Autogeneration of Dataset Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "3956a3fb8439628e652aefb5e22bf1ce",
+                    "id": "120d0b69335d6a4113142c4f3daed212",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Dataset\/",
+                        "url": "{{url}}\/dataset\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "94db0f2bd4ff2b3aea6e2146a77ebd59",
-                    "collection": "b1342d125c41d2f9db012e3d92df2a1c"
+                    "request": "add9c521037280560b5380ffc437e18e",
+                    "collection": "c3a5291fc9a0cb2b29cbc38d7094c8c9"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b1342d125c41d2f9db012e3d92df2a1c",
+            "collectionId": "c3a5291fc9a0cb2b29cbc38d7094c8c9",
             "rawModeData": ""
         }
     ]

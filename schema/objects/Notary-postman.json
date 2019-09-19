@@ -1,5 +1,5 @@
 {
-    "id": "4c46a9557400ea734d0730ea42a71904",
+    "id": "d611cc89bf307801ce41de55cb8b489c",
     "name": "Notary",
     "description": "Autogeneration of Notary Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "c0c3d6cb2dc86af6db21309ffd8004f6",
-            "name": "\/Notary\/",
-            "url": "{{url}}\/Notary\/",
+            "id": "70aae6cea2fcdebdfbec7350c95e0058",
+            "name": "\/notary\/",
+            "url": "{{url}}\/notary\/",
             "description": "Autogeneration of Notary Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "c0c3d6cb2dc86af6db21309ffd8004f6",
+                    "id": "70aae6cea2fcdebdfbec7350c95e0058",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Notary\/",
+                        "url": "{{url}}\/notary\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "83fb2f8735647d3735aee237bf3456f8",
-                    "collection": "4c46a9557400ea734d0730ea42a71904"
+                    "request": "ddc57f2f6c85070a2d7d1b3450745c24",
+                    "collection": "d611cc89bf307801ce41de55cb8b489c"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4c46a9557400ea734d0730ea42a71904",
+            "collectionId": "d611cc89bf307801ce41de55cb8b489c",
             "rawModeData": ""
         }
     ]

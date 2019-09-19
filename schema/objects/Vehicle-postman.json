@@ -1,5 +1,5 @@
 {
-    "id": "f9c623efe3eb505f7995f38b8ccae0b6",
+    "id": "2b584c5ac321e3534775b2fa396b4e7e",
     "name": "Vehicle",
     "description": "Autogeneration of Vehicle Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "f764e758c039a37339bbfbec4e605013",
-            "name": "\/Vehicle\/",
-            "url": "{{url}}\/Vehicle\/",
+            "id": "91a37c563f73d126216be8facf350a79",
+            "name": "\/vehicle\/",
+            "url": "{{url}}\/vehicle\/",
             "description": "Autogeneration of Vehicle Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "f764e758c039a37339bbfbec4e605013",
+                    "id": "91a37c563f73d126216be8facf350a79",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Vehicle\/",
+                        "url": "{{url}}\/vehicle\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "dd5202f168838bb8ba75d059bf397be9",
-                    "collection": "f9c623efe3eb505f7995f38b8ccae0b6"
+                    "request": "5ce64ce8a0f1dc660321f05c31f3299c",
+                    "collection": "2b584c5ac321e3534775b2fa396b4e7e"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f9c623efe3eb505f7995f38b8ccae0b6",
+            "collectionId": "2b584c5ac321e3534775b2fa396b4e7e",
             "rawModeData": ""
         }
     ]

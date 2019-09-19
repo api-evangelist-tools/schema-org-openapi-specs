@@ -1,5 +1,5 @@
 {
-    "id": "c841dbb4d541996f2b599de32ce156fb",
+    "id": "6a02b3345fd0bace439a7738b3f354c9",
     "name": "Train Reservation",
     "description": "Autogeneration of Train Reservation Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "3df07b2eccfa4364cd4b77172a8b4e59",
-            "name": "\/Train-Reservation\/",
-            "url": "{{url}}\/Train-Reservation\/",
+            "id": "347927d6035240f72cc195ba461cab59",
+            "name": "\/train-reservation\/",
+            "url": "{{url}}\/train-reservation\/",
             "description": "Autogeneration of Train Reservation Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "3df07b2eccfa4364cd4b77172a8b4e59",
+                    "id": "347927d6035240f72cc195ba461cab59",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Train-Reservation\/",
+                        "url": "{{url}}\/train-reservation\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "9bdf61dfd31f1693df854181ef17f7ec",
-                    "collection": "c841dbb4d541996f2b599de32ce156fb"
+                    "request": "6375c5ab5f9494b96cc2b06239e54838",
+                    "collection": "6a02b3345fd0bace439a7738b3f354c9"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c841dbb4d541996f2b599de32ce156fb",
+            "collectionId": "6a02b3345fd0bace439a7738b3f354c9",
             "rawModeData": ""
         }
     ]

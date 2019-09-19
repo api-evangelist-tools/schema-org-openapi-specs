@@ -1,5 +1,5 @@
 {
-    "id": "623002c351f748a00945cbf56f84897b",
+    "id": "80b58990fdc67a1fcaaf6fffd7758374",
     "name": "Scholarly Article",
     "description": "Autogeneration of Scholarly Article Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "c95d4ef0a71bc6e26a367cb57019241c",
-            "name": "\/Scholarly-Article\/",
-            "url": "{{url}}\/Scholarly-Article\/",
+            "id": "37c1180e634e0ba8c0fd5219b81fa8f3",
+            "name": "\/scholarly-article\/",
+            "url": "{{url}}\/scholarly-article\/",
             "description": "Autogeneration of Scholarly Article Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "c95d4ef0a71bc6e26a367cb57019241c",
+                    "id": "37c1180e634e0ba8c0fd5219b81fa8f3",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Scholarly-Article\/",
+                        "url": "{{url}}\/scholarly-article\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "837d47d543c0fde67663e98b8ece2275",
-                    "collection": "623002c351f748a00945cbf56f84897b"
+                    "request": "96a5d3100ecfea71c40a4ae4e98c80db",
+                    "collection": "80b58990fdc67a1fcaaf6fffd7758374"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "623002c351f748a00945cbf56f84897b",
+            "collectionId": "80b58990fdc67a1fcaaf6fffd7758374",
             "rawModeData": ""
         }
     ]

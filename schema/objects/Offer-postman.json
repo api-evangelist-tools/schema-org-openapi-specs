@@ -1,5 +1,5 @@
 {
-    "id": "1f588806989aff86c2e2ca8c1fdf30ae",
+    "id": "3dc64e9c8f9a6d8fbec48cb6b840da60",
     "name": "Offer",
     "description": "Autogeneration of Offer Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "f639c049501c13b0409ba62f86f8fb20",
-            "name": "\/Offer\/",
-            "url": "{{url}}\/Offer\/",
+            "id": "3c69951c56dcb09df90289866fd99fce",
+            "name": "\/offer\/",
+            "url": "{{url}}\/offer\/",
             "description": "Autogeneration of Offer Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "f639c049501c13b0409ba62f86f8fb20",
+                    "id": "3c69951c56dcb09df90289866fd99fce",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Offer\/",
+                        "url": "{{url}}\/offer\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "b6b527b0693c8233cb686ae69cd765b0",
-                    "collection": "1f588806989aff86c2e2ca8c1fdf30ae"
+                    "request": "7536faadd6c144d312d0d7cfecfa720b",
+                    "collection": "3dc64e9c8f9a6d8fbec48cb6b840da60"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1f588806989aff86c2e2ca8c1fdf30ae",
+            "collectionId": "3dc64e9c8f9a6d8fbec48cb6b840da60",
             "rawModeData": ""
         }
     ]

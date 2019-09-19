@@ -1,5 +1,5 @@
 {
-    "id": "6a75554c737f1dad69edc2bb4599775b",
+    "id": "afbf93ff87cd4dd537a439b931250e20",
     "name": "Receive Action",
     "description": "Autogeneration of Receive Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "21793a77b68561362db815810558608c",
-            "name": "\/Receive-Action\/",
-            "url": "{{url}}\/Receive-Action\/",
+            "id": "d03b1bfec8c635f8089cf271f89fd41a",
+            "name": "\/receive-action\/",
+            "url": "{{url}}\/receive-action\/",
             "description": "Autogeneration of Receive Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "21793a77b68561362db815810558608c",
+                    "id": "d03b1bfec8c635f8089cf271f89fd41a",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Receive-Action\/",
+                        "url": "{{url}}\/receive-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "03e218238755785759d1c09f1fc0d0c7",
-                    "collection": "6a75554c737f1dad69edc2bb4599775b"
+                    "request": "d4abfbe66d9f43271c2c1c1fe9325603",
+                    "collection": "afbf93ff87cd4dd537a439b931250e20"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "6a75554c737f1dad69edc2bb4599775b",
+            "collectionId": "afbf93ff87cd4dd537a439b931250e20",
             "rawModeData": ""
         }
     ]

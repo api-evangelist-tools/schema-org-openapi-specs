@@ -1,5 +1,5 @@
 {
-    "id": "46a2dd1643ac2413989517b7d3ffea87",
+    "id": "80e0b7fe06ae220f9858015106d599d2",
     "name": "Ask Action",
     "description": "Autogeneration of Ask Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "cc4d637c803854fde8d5ea875140105d",
-            "name": "\/Ask-Action\/",
-            "url": "{{url}}\/Ask-Action\/",
+            "id": "cd18e2fdda4802b72ee9d64e587457a8",
+            "name": "\/ask-action\/",
+            "url": "{{url}}\/ask-action\/",
             "description": "Autogeneration of Ask Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "cc4d637c803854fde8d5ea875140105d",
+                    "id": "cd18e2fdda4802b72ee9d64e587457a8",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Ask-Action\/",
+                        "url": "{{url}}\/ask-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2d87e09a0df830756d1582ec71c43726",
-                    "collection": "46a2dd1643ac2413989517b7d3ffea87"
+                    "request": "59aa6b28508bd49747855c468f5fc180",
+                    "collection": "80e0b7fe06ae220f9858015106d599d2"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "46a2dd1643ac2413989517b7d3ffea87",
+            "collectionId": "80e0b7fe06ae220f9858015106d599d2",
             "rawModeData": ""
         }
     ]

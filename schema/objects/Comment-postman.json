@@ -1,5 +1,5 @@
 {
-    "id": "18e8eb547bc7ef20cb20f80cd4975204",
+    "id": "273d139668203e3326966d1c9b500e17",
     "name": "Comment",
     "description": "Autogeneration of Comment Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "67e9ebf7cb59c53bdfa6158d50e57db6",
-            "name": "\/Comment\/",
-            "url": "{{url}}\/Comment\/",
+            "id": "d0866faaa223a4fb7185e877fa73ba11",
+            "name": "\/comment\/",
+            "url": "{{url}}\/comment\/",
             "description": "Autogeneration of Comment Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "67e9ebf7cb59c53bdfa6158d50e57db6",
+                    "id": "d0866faaa223a4fb7185e877fa73ba11",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Comment\/",
+                        "url": "{{url}}\/comment\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "8baa117dc7ec11f90f5dfd030d3e107d",
-                    "collection": "18e8eb547bc7ef20cb20f80cd4975204"
+                    "request": "b2573b9d4f99081eefdd35f57b377a68",
+                    "collection": "273d139668203e3326966d1c9b500e17"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "18e8eb547bc7ef20cb20f80cd4975204",
+            "collectionId": "273d139668203e3326966d1c9b500e17",
             "rawModeData": ""
         }
     ]

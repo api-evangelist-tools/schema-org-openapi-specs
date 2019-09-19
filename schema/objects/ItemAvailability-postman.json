@@ -1,5 +1,5 @@
 {
-    "id": "d91947f73a1bc9a005c8a54b037742e9",
+    "id": "d36f7fce74c99172ce5eb57682e22620",
     "name": "Item Availability",
     "description": "Autogeneration of Item Availability Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "5a350e8ea2be1b1d1ca487766f96f47c",
-            "name": "\/Item-Availability\/",
-            "url": "{{url}}\/Item-Availability\/",
+            "id": "dbb35a073bd377cbec0a90be391ba722",
+            "name": "\/item-availability\/",
+            "url": "{{url}}\/item-availability\/",
             "description": "Autogeneration of Item Availability Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "5a350e8ea2be1b1d1ca487766f96f47c",
+                    "id": "dbb35a073bd377cbec0a90be391ba722",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Item-Availability\/",
+                        "url": "{{url}}\/item-availability\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2502f36c78fc198844ed17ce609a8425",
-                    "collection": "d91947f73a1bc9a005c8a54b037742e9"
+                    "request": "1e5bfdd462e347ba7af0b0e92fba68a7",
+                    "collection": "d36f7fce74c99172ce5eb57682e22620"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "d91947f73a1bc9a005c8a54b037742e9",
+            "collectionId": "d36f7fce74c99172ce5eb57682e22620",
             "rawModeData": ""
         }
     ]

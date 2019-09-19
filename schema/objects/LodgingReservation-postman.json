@@ -1,5 +1,5 @@
 {
-    "id": "b7a7e59c09fe004699faf7181f456049",
+    "id": "7eeaa6585006893d0b86f9d63abe8312",
     "name": "Lodging Reservation",
     "description": "Autogeneration of Lodging Reservation Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "3d2285ab44f74d8da7e1111f5ec4ea70",
-            "name": "\/Lodging-Reservation\/",
-            "url": "{{url}}\/Lodging-Reservation\/",
+            "id": "7764f9f37fc9e9b1d302b4942bdf249b",
+            "name": "\/lodging-reservation\/",
+            "url": "{{url}}\/lodging-reservation\/",
             "description": "Autogeneration of Lodging Reservation Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "3d2285ab44f74d8da7e1111f5ec4ea70",
+                    "id": "7764f9f37fc9e9b1d302b4942bdf249b",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Lodging-Reservation\/",
+                        "url": "{{url}}\/lodging-reservation\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "4c8ff1a747407659d75be2acbbc2c0e7",
-                    "collection": "b7a7e59c09fe004699faf7181f456049"
+                    "request": "1f1f6ae88efc2c033abc4c993a379d60",
+                    "collection": "7eeaa6585006893d0b86f9d63abe8312"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b7a7e59c09fe004699faf7181f456049",
+            "collectionId": "7eeaa6585006893d0b86f9d63abe8312",
             "rawModeData": ""
         }
     ]

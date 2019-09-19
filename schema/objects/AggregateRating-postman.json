@@ -1,5 +1,5 @@
 {
-    "id": "15bb18a39d572965f677d5ab7f846361",
+    "id": "5ec7956a3814f38873609c008219fb43",
     "name": "Aggregate Rating",
     "description": "Autogeneration of Aggregate Rating Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "fe6529fa762afb9d6a777802b5384749",
-            "name": "\/Aggregate-Rating\/",
-            "url": "{{url}}\/Aggregate-Rating\/",
+            "id": "433ccd1ee42340acc7364b3c792a8bee",
+            "name": "\/aggregate-rating\/",
+            "url": "{{url}}\/aggregate-rating\/",
             "description": "Autogeneration of Aggregate Rating Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "fe6529fa762afb9d6a777802b5384749",
+                    "id": "433ccd1ee42340acc7364b3c792a8bee",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Aggregate-Rating\/",
+                        "url": "{{url}}\/aggregate-rating\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "faf517f9ea16c384b206e6f49d6de226",
-                    "collection": "15bb18a39d572965f677d5ab7f846361"
+                    "request": "8ba1049c4af60ac032a24bbb31516ddc",
+                    "collection": "5ec7956a3814f38873609c008219fb43"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "15bb18a39d572965f677d5ab7f846361",
+            "collectionId": "5ec7956a3814f38873609c008219fb43",
             "rawModeData": ""
         }
     ]

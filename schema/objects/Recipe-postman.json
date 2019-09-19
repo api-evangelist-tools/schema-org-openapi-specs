@@ -1,5 +1,5 @@
 {
-    "id": "ca6a77d5c32c0b4c838669e93362ca5d",
+    "id": "fdfc3d38bcf9bdb3d98e43cb5a338874",
     "name": "Recipe",
     "description": "Autogeneration of Recipe Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "df1914793d0d3299f2566be198316403",
-            "name": "\/Recipe\/",
-            "url": "{{url}}\/Recipe\/",
+            "id": "85adfd7f9038d95df3eadb09e5130450",
+            "name": "\/recipe\/",
+            "url": "{{url}}\/recipe\/",
             "description": "Autogeneration of Recipe Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "df1914793d0d3299f2566be198316403",
+                    "id": "85adfd7f9038d95df3eadb09e5130450",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Recipe\/",
+                        "url": "{{url}}\/recipe\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "5bb00b942332d2864f1ee4907cfe8250",
-                    "collection": "ca6a77d5c32c0b4c838669e93362ca5d"
+                    "request": "7bd94a31cb30e0dd53181d303c7ac02a",
+                    "collection": "fdfc3d38bcf9bdb3d98e43cb5a338874"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca6a77d5c32c0b4c838669e93362ca5d",
+            "collectionId": "fdfc3d38bcf9bdb3d98e43cb5a338874",
             "rawModeData": ""
         }
     ]

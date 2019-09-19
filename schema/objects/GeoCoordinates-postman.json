@@ -1,5 +1,5 @@
 {
-    "id": "9e019c61bc28b710a01741fc976aaa0d",
+    "id": "3abe58ecace673f88462d9eaf7408878",
     "name": "Geo Coordinates",
     "description": "Autogeneration of Geo Coordinates Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "a4b9b40faf47a3cf2ea45833b3ce87a5",
-            "name": "\/Geo-Coordinates\/",
-            "url": "{{url}}\/Geo-Coordinates\/",
+            "id": "ce98e0f4911114e8af433aa1d62ebf8f",
+            "name": "\/geo-coordinates\/",
+            "url": "{{url}}\/geo-coordinates\/",
             "description": "Autogeneration of Geo Coordinates Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "a4b9b40faf47a3cf2ea45833b3ce87a5",
+                    "id": "ce98e0f4911114e8af433aa1d62ebf8f",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Geo-Coordinates\/",
+                        "url": "{{url}}\/geo-coordinates\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "461fe25f4022e3e36314c96bcc13ea58",
-                    "collection": "9e019c61bc28b710a01741fc976aaa0d"
+                    "request": "6e8278d3d184e311d181c8eabb266b2c",
+                    "collection": "3abe58ecace673f88462d9eaf7408878"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9e019c61bc28b710a01741fc976aaa0d",
+            "collectionId": "3abe58ecace673f88462d9eaf7408878",
             "rawModeData": ""
         }
     ]

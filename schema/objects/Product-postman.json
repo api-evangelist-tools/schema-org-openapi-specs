@@ -1,5 +1,5 @@
 {
-    "id": "38928bb892c2c7b37b76b14fc21161ad",
+    "id": "578d4142882bf20141a86b745bc047f7",
     "name": "Product",
     "description": "Autogeneration of Product Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "798349959c373fa4b574bbad6f8905ba",
-            "name": "\/Product\/",
-            "url": "{{url}}\/Product\/",
+            "id": "6c2ebcb84c5c47649f8770bb5a477eaa",
+            "name": "\/product\/",
+            "url": "{{url}}\/product\/",
             "description": "Autogeneration of Product Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "798349959c373fa4b574bbad6f8905ba",
+                    "id": "6c2ebcb84c5c47649f8770bb5a477eaa",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Product\/",
+                        "url": "{{url}}\/product\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "25ef7f39ad808307af53996760030581",
-                    "collection": "38928bb892c2c7b37b76b14fc21161ad"
+                    "request": "60ee326e33964562caaced5f1017ae4a",
+                    "collection": "578d4142882bf20141a86b745bc047f7"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "38928bb892c2c7b37b76b14fc21161ad",
+            "collectionId": "578d4142882bf20141a86b745bc047f7",
             "rawModeData": ""
         }
     ]

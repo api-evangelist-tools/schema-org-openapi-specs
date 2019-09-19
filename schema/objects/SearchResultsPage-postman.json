@@ -1,5 +1,5 @@
 {
-    "id": "4e8e53758766a9aa8b7fea2c83d8d0fd",
+    "id": "b1ffd3fd8c8443e6364db717125f0f53",
     "name": "Search Results Page",
     "description": "Autogeneration of Search Results Page Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "26d1428ddf6d9ebf893047f728f76954",
-            "name": "\/Search-Results-Page\/",
-            "url": "{{url}}\/Search-Results-Page\/",
+            "id": "931d0d3df03e094d56def630bdd16a93",
+            "name": "\/search-results-page\/",
+            "url": "{{url}}\/search-results-page\/",
             "description": "Autogeneration of Search Results Page Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "26d1428ddf6d9ebf893047f728f76954",
+                    "id": "931d0d3df03e094d56def630bdd16a93",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Search-Results-Page\/",
+                        "url": "{{url}}\/search-results-page\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "73fa953bceed1b4f8d5a1807587ae762",
-                    "collection": "4e8e53758766a9aa8b7fea2c83d8d0fd"
+                    "request": "7d4e0660915cfd26cb6ba7b06f8c5244",
+                    "collection": "b1ffd3fd8c8443e6364db717125f0f53"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4e8e53758766a9aa8b7fea2c83d8d0fd",
+            "collectionId": "b1ffd3fd8c8443e6364db717125f0f53",
             "rawModeData": ""
         }
     ]

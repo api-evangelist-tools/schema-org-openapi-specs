@@ -1,5 +1,5 @@
 {
-    "id": "633d5fea2fdb3abf5fe9f246466f6a54",
+    "id": "025c749b7abdebd7f7047a8cbba9743c",
     "name": "Map",
     "description": "Autogeneration of Map Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "60e26a41198d2a632b6dffa82e6efb02",
-            "name": "\/Map\/",
-            "url": "{{url}}\/Map\/",
+            "id": "ae66c508e4dc703d7f7f6ddfb2479f8e",
+            "name": "\/map\/",
+            "url": "{{url}}\/map\/",
             "description": "Autogeneration of Map Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "60e26a41198d2a632b6dffa82e6efb02",
+                    "id": "ae66c508e4dc703d7f7f6ddfb2479f8e",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Map\/",
+                        "url": "{{url}}\/map\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "a849d13f9021b0a0e50ab2d43912c08a",
-                    "collection": "633d5fea2fdb3abf5fe9f246466f6a54"
+                    "request": "73bff238bf4947a5a4090f4583da0ce9",
+                    "collection": "025c749b7abdebd7f7047a8cbba9743c"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "633d5fea2fdb3abf5fe9f246466f6a54",
+            "collectionId": "025c749b7abdebd7f7047a8cbba9743c",
             "rawModeData": ""
         }
     ]

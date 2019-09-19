@@ -1,5 +1,5 @@
 {
-    "id": "256d694bf5bd48a0bf538d17e8bb0ef9",
+    "id": "b2b5a5c09f5bcd8431cdaad4c089339b",
     "name": "Energy",
     "description": "Autogeneration of Energy Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "e93bdd07fbba541c913c5ab43164e1fa",
-            "name": "\/Energy\/",
-            "url": "{{url}}\/Energy\/",
+            "id": "1df6b357833cfce87bc6effee3f3429e",
+            "name": "\/energy\/",
+            "url": "{{url}}\/energy\/",
             "description": "Autogeneration of Energy Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "e93bdd07fbba541c913c5ab43164e1fa",
+                    "id": "1df6b357833cfce87bc6effee3f3429e",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Energy\/",
+                        "url": "{{url}}\/energy\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "85295100afef1e442270544f038afc5a",
-                    "collection": "256d694bf5bd48a0bf538d17e8bb0ef9"
+                    "request": "2de89fc36af9a965c910094d10d9a5cf",
+                    "collection": "b2b5a5c09f5bcd8431cdaad4c089339b"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "256d694bf5bd48a0bf538d17e8bb0ef9",
+            "collectionId": "b2b5a5c09f5bcd8431cdaad4c089339b",
             "rawModeData": ""
         }
     ]

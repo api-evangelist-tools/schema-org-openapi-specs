@@ -1,5 +1,5 @@
 {
-    "id": "151a1b7e95d82308aa67ebd3ab748c44",
+    "id": "c839b8a607c25d7ccbd6eed081b39731",
     "name": "Nutrition Information",
     "description": "Autogeneration of Nutrition Information Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "c1701c240171302739fa3e21ed4f4ffc",
-            "name": "\/Nutrition-Information\/",
-            "url": "{{url}}\/Nutrition-Information\/",
+            "id": "20fd3660b9e7e5c9ce602d767c482928",
+            "name": "\/nutrition-information\/",
+            "url": "{{url}}\/nutrition-information\/",
             "description": "Autogeneration of Nutrition Information Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "c1701c240171302739fa3e21ed4f4ffc",
+                    "id": "20fd3660b9e7e5c9ce602d767c482928",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Nutrition-Information\/",
+                        "url": "{{url}}\/nutrition-information\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "782da273bbaa85d746386ec1a2410c54",
-                    "collection": "151a1b7e95d82308aa67ebd3ab748c44"
+                    "request": "347a2e4482e6ccedcd752d820f6aac0c",
+                    "collection": "c839b8a607c25d7ccbd6eed081b39731"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "151a1b7e95d82308aa67ebd3ab748c44",
+            "collectionId": "c839b8a607c25d7ccbd6eed081b39731",
             "rawModeData": ""
         }
     ]

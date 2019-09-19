@@ -1,5 +1,5 @@
 {
-    "id": "472ee8808cdf4c82ade26294296a9903",
+    "id": "0b5103d82a77f62adda23c723e444e36",
     "name": "Review",
     "description": "Autogeneration of Review Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "d83f57827df62de6c40363ec09c36a47",
-            "name": "\/Review\/",
-            "url": "{{url}}\/Review\/",
+            "id": "914ca74a6621158a53720bc2ae3fd2b8",
+            "name": "\/review\/",
+            "url": "{{url}}\/review\/",
             "description": "Autogeneration of Review Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "d83f57827df62de6c40363ec09c36a47",
+                    "id": "914ca74a6621158a53720bc2ae3fd2b8",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Review\/",
+                        "url": "{{url}}\/review\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "10229a65f1751735619e7b96e3e02b15",
-                    "collection": "472ee8808cdf4c82ade26294296a9903"
+                    "request": "8f13d50b582e458bdf801253e7801375",
+                    "collection": "0b5103d82a77f62adda23c723e444e36"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "472ee8808cdf4c82ade26294296a9903",
+            "collectionId": "0b5103d82a77f62adda23c723e444e36",
             "rawModeData": ""
         }
     ]

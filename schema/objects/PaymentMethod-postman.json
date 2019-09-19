@@ -1,5 +1,5 @@
 {
-    "id": "24c159ef56d116af5c9a0e4d6fe121ef",
+    "id": "6587e1047b24df610400f722c666159b",
     "name": "Payment Method",
     "description": "Autogeneration of Payment Method Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "b9bf695d05331bfa58e296d46f91eadf",
-            "name": "\/Payment-Method\/",
-            "url": "{{url}}\/Payment-Method\/",
+            "id": "fa3a5281f248b851d2ed164595e741b8",
+            "name": "\/payment-method\/",
+            "url": "{{url}}\/payment-method\/",
             "description": "Autogeneration of Payment Method Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "b9bf695d05331bfa58e296d46f91eadf",
+                    "id": "fa3a5281f248b851d2ed164595e741b8",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Payment-Method\/",
+                        "url": "{{url}}\/payment-method\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2b0385fe50b701a610d6dabbaa88a3ee",
-                    "collection": "24c159ef56d116af5c9a0e4d6fe121ef"
+                    "request": "f1e102257fbb0f8bce6c510041141f27",
+                    "collection": "6587e1047b24df610400f722c666159b"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "24c159ef56d116af5c9a0e4d6fe121ef",
+            "collectionId": "6587e1047b24df610400f722c666159b",
             "rawModeData": ""
         }
     ]

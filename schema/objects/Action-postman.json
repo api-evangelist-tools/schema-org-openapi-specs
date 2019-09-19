@@ -1,5 +1,5 @@
 {
-    "id": "7180374a73ddd55823e04becab52aab0",
+    "id": "925764ce737c0107783301d824bae7ef",
     "name": "Action",
     "description": "Autogeneration of Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "88e1cf3345c09c77afab76cdf77bbe71",
-            "name": "\/Action\/",
-            "url": "{{url}}\/Action\/",
+            "id": "1470fad269bbdd4e3cc002f8cb09d5c6",
+            "name": "\/action\/",
+            "url": "{{url}}\/action\/",
             "description": "Autogeneration of Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "88e1cf3345c09c77afab76cdf77bbe71",
+                    "id": "1470fad269bbdd4e3cc002f8cb09d5c6",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Action\/",
+                        "url": "{{url}}\/action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "dd159f343cce3fc3b315b70272188847",
-                    "collection": "7180374a73ddd55823e04becab52aab0"
+                    "request": "842b1a45e458d82fd32e7bb647a67a34",
+                    "collection": "925764ce737c0107783301d824bae7ef"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7180374a73ddd55823e04becab52aab0",
+            "collectionId": "925764ce737c0107783301d824bae7ef",
             "rawModeData": ""
         }
     ]

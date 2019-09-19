@@ -1,5 +1,5 @@
 {
-    "id": "76cfea22847058f69fc54f958019d2a2",
+    "id": "93f08b9c475b8a35e50546175a6f8859",
     "name": "Read Action",
     "description": "Autogeneration of Read Action Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "b6328b0f020f8f3ebe58c58c35525296",
-            "name": "\/Read-Action\/",
-            "url": "{{url}}\/Read-Action\/",
+            "id": "7bd44498dfe61ffb34b39c14c9fc43a5",
+            "name": "\/read-action\/",
+            "url": "{{url}}\/read-action\/",
             "description": "Autogeneration of Read Action Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "b6328b0f020f8f3ebe58c58c35525296",
+                    "id": "7bd44498dfe61ffb34b39c14c9fc43a5",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Read-Action\/",
+                        "url": "{{url}}\/read-action\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "4f020206105af9d15153a2c1e1e59eb8",
-                    "collection": "76cfea22847058f69fc54f958019d2a2"
+                    "request": "8c854eaae9e19d938be5c8bbc2b66c29",
+                    "collection": "93f08b9c475b8a35e50546175a6f8859"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "76cfea22847058f69fc54f958019d2a2",
+            "collectionId": "93f08b9c475b8a35e50546175a6f8859",
             "rawModeData": ""
         }
     ]

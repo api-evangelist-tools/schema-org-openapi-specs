@@ -1,5 +1,5 @@
 {
-    "id": "46a98ad12ee8c4d6ce759ac48d7db56b",
+    "id": "6f20b137e52a2c4544f51a29914e52fb",
     "name": "Movie",
     "description": "Autogeneration of Movie Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "9eaaa0671e25318b11aa61bb689bf8b4",
-            "name": "\/Movie\/",
-            "url": "{{url}}\/Movie\/",
+            "id": "046ad2a65a0025933da1d53ac5ed0871",
+            "name": "\/movie\/",
+            "url": "{{url}}\/movie\/",
             "description": "Autogeneration of Movie Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "9eaaa0671e25318b11aa61bb689bf8b4",
+                    "id": "046ad2a65a0025933da1d53ac5ed0871",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Movie\/",
+                        "url": "{{url}}\/movie\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "0a5575a4db5fdba44487f1e9fda6af5b",
-                    "collection": "46a98ad12ee8c4d6ce759ac48d7db56b"
+                    "request": "be98ba61da071989fe039dc25d0d7ed7",
+                    "collection": "6f20b137e52a2c4544f51a29914e52fb"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "46a98ad12ee8c4d6ce759ac48d7db56b",
+            "collectionId": "6f20b137e52a2c4544f51a29914e52fb",
             "rawModeData": ""
         }
     ]

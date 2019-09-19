@@ -1,5 +1,5 @@
 {
-    "id": "bed3827e7c37802e641cdcd1c80e905b",
+    "id": "c4ffb3c6648fc27ec47eecd9f073a8b9",
     "name": "Barcode",
     "description": "Autogeneration of Barcode Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "b4117d2c47c8d28ecca4c98212feee3e",
-            "name": "\/Barcode\/",
-            "url": "{{url}}\/Barcode\/",
+            "id": "5058070d1ed1f3f8dd880bf5480130e4",
+            "name": "\/barcode\/",
+            "url": "{{url}}\/barcode\/",
             "description": "Autogeneration of Barcode Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "b4117d2c47c8d28ecca4c98212feee3e",
+                    "id": "5058070d1ed1f3f8dd880bf5480130e4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Barcode\/",
+                        "url": "{{url}}\/barcode\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "d343c2771a430418d1e08d3f9ee76d53",
-                    "collection": "bed3827e7c37802e641cdcd1c80e905b"
+                    "request": "72405a2d701770761ecf39866d42a52a",
+                    "collection": "c4ffb3c6648fc27ec47eecd9f073a8b9"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "bed3827e7c37802e641cdcd1c80e905b",
+            "collectionId": "c4ffb3c6648fc27ec47eecd9f073a8b9",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "1e3a8617f62465c814c4916bb5fde2bd",
+    "id": "55ac5b408a579780fbc6ed09804c232e",
     "name": "Series",
     "description": "Autogeneration of Series Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "fa5dc3bb24e2022b479c37350d07eb6b",
-            "name": "\/Series\/",
-            "url": "{{url}}\/Series\/",
+            "id": "37c3780f2e381554042e234d8a0ed3e4",
+            "name": "\/series\/",
+            "url": "{{url}}\/series\/",
             "description": "Autogeneration of Series Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "fa5dc3bb24e2022b479c37350d07eb6b",
+                    "id": "37c3780f2e381554042e234d8a0ed3e4",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Series\/",
+                        "url": "{{url}}\/series\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "8cf7bc68a1e88c7f940033bbb3e4ec6e",
-                    "collection": "1e3a8617f62465c814c4916bb5fde2bd"
+                    "request": "8ba93ab9776ab9004d226473db32345f",
+                    "collection": "55ac5b408a579780fbc6ed09804c232e"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1e3a8617f62465c814c4916bb5fde2bd",
+            "collectionId": "55ac5b408a579780fbc6ed09804c232e",
             "rawModeData": ""
         }
     ]

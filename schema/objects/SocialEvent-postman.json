@@ -1,5 +1,5 @@
 {
-    "id": "7c2af7aeda23ad5e34dfbaf99a3267e5",
+    "id": "45ce77ea58fdf79536b47040102eadc1",
     "name": "Social Event",
     "description": "Autogeneration of Social Event Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "ea5af812db20d9770a6818bc195bd1db",
-            "name": "\/Social-Event\/",
-            "url": "{{url}}\/Social-Event\/",
+            "id": "67ce51a283c94ea7116365904608850d",
+            "name": "\/social-event\/",
+            "url": "{{url}}\/social-event\/",
             "description": "Autogeneration of Social Event Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "ea5af812db20d9770a6818bc195bd1db",
+                    "id": "67ce51a283c94ea7116365904608850d",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Social-Event\/",
+                        "url": "{{url}}\/social-event\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "139e7c7808faa45319bcd1136d673b2f",
-                    "collection": "7c2af7aeda23ad5e34dfbaf99a3267e5"
+                    "request": "a5a856259b7313d1bf027cca0e79fc59",
+                    "collection": "45ce77ea58fdf79536b47040102eadc1"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "7c2af7aeda23ad5e34dfbaf99a3267e5",
+            "collectionId": "45ce77ea58fdf79536b47040102eadc1",
             "rawModeData": ""
         }
     ]

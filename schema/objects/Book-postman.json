@@ -1,5 +1,5 @@
 {
-    "id": "1f2537e67a3c2f5a449a503803744e8a",
+    "id": "d16404e2fded0b636a3edd437c972d44",
     "name": "Book",
     "description": "Autogeneration of Book Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "de1719a43e38440050b6b0d4b5011852",
-            "name": "\/Book\/",
-            "url": "{{url}}\/Book\/",
+            "id": "53c67013ed9bb4d690112ae8d2ca7efd",
+            "name": "\/book\/",
+            "url": "{{url}}\/book\/",
             "description": "Autogeneration of Book Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "de1719a43e38440050b6b0d4b5011852",
+                    "id": "53c67013ed9bb4d690112ae8d2ca7efd",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Book\/",
+                        "url": "{{url}}\/book\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "7f50d6e9ae88eb0adf58225564795eed",
-                    "collection": "1f2537e67a3c2f5a449a503803744e8a"
+                    "request": "15a426baec430d754b13172722f18676",
+                    "collection": "d16404e2fded0b636a3edd437c972d44"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "1f2537e67a3c2f5a449a503803744e8a",
+            "collectionId": "d16404e2fded0b636a3edd437c972d44",
             "rawModeData": ""
         }
     ]

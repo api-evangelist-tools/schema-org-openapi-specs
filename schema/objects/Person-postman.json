@@ -1,5 +1,5 @@
 {
-    "id": "73fe22a09caa0270af09cb77d61a0888",
+    "id": "abbf2dd625a05c631ad12329bc45999a",
     "name": "Person",
     "description": "Autogeneration of Person Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "5f3e0eee7e7ad6b3b14c95883fcf807f",
-            "name": "\/Person\/",
-            "url": "{{url}}\/Person\/",
+            "id": "7a9d04c6b4d5411e26af8b49a14f0329",
+            "name": "\/person\/",
+            "url": "{{url}}\/person\/",
             "description": "Autogeneration of Person Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "5f3e0eee7e7ad6b3b14c95883fcf807f",
+                    "id": "7a9d04c6b4d5411e26af8b49a14f0329",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Person\/",
+                        "url": "{{url}}\/person\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "8507c322e773e09b05235559b205ad8e",
-                    "collection": "73fe22a09caa0270af09cb77d61a0888"
+                    "request": "07afc8cb9ac0924ad76f99cd65989e5c",
+                    "collection": "abbf2dd625a05c631ad12329bc45999a"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "73fe22a09caa0270af09cb77d61a0888",
+            "collectionId": "abbf2dd625a05c631ad12329bc45999a",
             "rawModeData": ""
         }
     ]

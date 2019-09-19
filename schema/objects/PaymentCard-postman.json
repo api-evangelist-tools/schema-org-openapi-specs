@@ -1,5 +1,5 @@
 {
-    "id": "fffd23ee6a24f1f79007ec286175d2f2",
+    "id": "8fc7e74c1530238bef5c78a1edda8e93",
     "name": "Payment Card",
     "description": "Autogeneration of Payment Card Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "47fbc33ef899daeff39a4668f1d29e15",
-            "name": "\/Payment-Card\/",
-            "url": "{{url}}\/Payment-Card\/",
+            "id": "a51484ec8e89d0e0d284e1f199c2a9a7",
+            "name": "\/payment-card\/",
+            "url": "{{url}}\/payment-card\/",
             "description": "Autogeneration of Payment Card Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "47fbc33ef899daeff39a4668f1d29e15",
+                    "id": "a51484ec8e89d0e0d284e1f199c2a9a7",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Payment-Card\/",
+                        "url": "{{url}}\/payment-card\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "02de21ccfa31f37f667b325182656b5c",
-                    "collection": "fffd23ee6a24f1f79007ec286175d2f2"
+                    "request": "b705f7243270ccf5e20fd3e82a7a9650",
+                    "collection": "8fc7e74c1530238bef5c78a1edda8e93"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "fffd23ee6a24f1f79007ec286175d2f2",
+            "collectionId": "8fc7e74c1530238bef5c78a1edda8e93",
             "rawModeData": ""
         }
     ]

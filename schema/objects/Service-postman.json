@@ -1,5 +1,5 @@
 {
-    "id": "a81ccb0fde39978e2b9821dd79b31334",
+    "id": "cbdffdcc70e4b3eaebddb31d91d71b75",
     "name": "Service",
     "description": "Autogeneration of Service Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "56a7579265e8b8acda2a7f26a399619a",
-            "name": "\/Service\/",
-            "url": "{{url}}\/Service\/",
+            "id": "9d2a686633521dd5df6bca52d4d29dae",
+            "name": "\/service\/",
+            "url": "{{url}}\/service\/",
             "description": "Autogeneration of Service Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "56a7579265e8b8acda2a7f26a399619a",
+                    "id": "9d2a686633521dd5df6bca52d4d29dae",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Service\/",
+                        "url": "{{url}}\/service\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "7d2ec939098e8fbbf463cb12f1ad2a46",
-                    "collection": "a81ccb0fde39978e2b9821dd79b31334"
+                    "request": "5bfb62d5074a60ad7e9daa30b2f87076",
+                    "collection": "cbdffdcc70e4b3eaebddb31d91d71b75"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a81ccb0fde39978e2b9821dd79b31334",
+            "collectionId": "cbdffdcc70e4b3eaebddb31d91d71b75",
             "rawModeData": ""
         }
     ]

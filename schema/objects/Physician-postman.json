@@ -1,5 +1,5 @@
 {
-    "id": "4a760b67544f72c425ddc6cf6925716e",
+    "id": "dddef60701e5024aeb3045fdd96e01b5",
     "name": "Physician",
     "description": "Autogeneration of Physician Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "bfe24e3d5dd504c456155d138a23d862",
-            "name": "\/Physician\/",
-            "url": "{{url}}\/Physician\/",
+            "id": "e076e2b79cf895b6b051915b63f42ba9",
+            "name": "\/physician\/",
+            "url": "{{url}}\/physician\/",
             "description": "Autogeneration of Physician Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "bfe24e3d5dd504c456155d138a23d862",
+                    "id": "e076e2b79cf895b6b051915b63f42ba9",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Physician\/",
+                        "url": "{{url}}\/physician\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "46e01480ffb46f6ca9d982359b644bbf",
-                    "collection": "4a760b67544f72c425ddc6cf6925716e"
+                    "request": "0dd858bfcbeaf87751ead39ace91ff04",
+                    "collection": "dddef60701e5024aeb3045fdd96e01b5"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4a760b67544f72c425ddc6cf6925716e",
+            "collectionId": "dddef60701e5024aeb3045fdd96e01b5",
             "rawModeData": ""
         }
     ]

@@ -1,5 +1,5 @@
 {
-    "id": "5b326c178cdd3e9b279b6fa7acbfea60",
+    "id": "d1e21e1fbbb691a331fae06aa2838377",
     "name": "Postal Address",
     "description": "Autogeneration of Postal Address Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "7ee9c5c310bc3f3c7c131291971c6912",
-            "name": "\/Postal-Address\/",
-            "url": "{{url}}\/Postal-Address\/",
+            "id": "c6138d0c04d587baa759125b07fdd50b",
+            "name": "\/postal-address\/",
+            "url": "{{url}}\/postal-address\/",
             "description": "Autogeneration of Postal Address Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "7ee9c5c310bc3f3c7c131291971c6912",
+                    "id": "c6138d0c04d587baa759125b07fdd50b",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Postal-Address\/",
+                        "url": "{{url}}\/postal-address\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2b9b2b2d219d85cf570dca0a7fc6af1d",
-                    "collection": "5b326c178cdd3e9b279b6fa7acbfea60"
+                    "request": "53838cfc1e46fd0297b022cad0f0171b",
+                    "collection": "d1e21e1fbbb691a331fae06aa2838377"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b326c178cdd3e9b279b6fa7acbfea60",
+            "collectionId": "d1e21e1fbbb691a331fae06aa2838377",
             "rawModeData": ""
         }
     ]

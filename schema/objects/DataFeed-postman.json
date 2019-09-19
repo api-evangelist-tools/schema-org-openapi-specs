@@ -1,5 +1,5 @@
 {
-    "id": "705166fa860d00db6fa3217177cea953",
+    "id": "9a7c4507b93e84129d9bee70857e9e44",
     "name": "Data Feed",
     "description": "Autogeneration of Data Feed Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "5048aa8384e5c35e81c12e961c27219e",
-            "name": "\/Data-Feed\/",
-            "url": "{{url}}\/Data-Feed\/",
+            "id": "726d58852372c65c98e3b0bc9ecd7807",
+            "name": "\/data-feed\/",
+            "url": "{{url}}\/data-feed\/",
             "description": "Autogeneration of Data Feed Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "5048aa8384e5c35e81c12e961c27219e",
+                    "id": "726d58852372c65c98e3b0bc9ecd7807",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Data-Feed\/",
+                        "url": "{{url}}\/data-feed\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "2f2c919346c3f92a9ef60786096ca429",
-                    "collection": "705166fa860d00db6fa3217177cea953"
+                    "request": "8e78e50ff36e157501630a2bbe92f525",
+                    "collection": "9a7c4507b93e84129d9bee70857e9e44"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "705166fa860d00db6fa3217177cea953",
+            "collectionId": "9a7c4507b93e84129d9bee70857e9e44",
             "rawModeData": ""
         }
     ]

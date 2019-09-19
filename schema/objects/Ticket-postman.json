@@ -1,5 +1,5 @@
 {
-    "id": "3ac4fbbd85ceeb1c5e8547b49f944fc0",
+    "id": "7a9e9dfc7d829c9f5039069519054eb0",
     "name": "Ticket",
     "description": "Autogeneration of Ticket Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "0fa0c9616b1cb283c651efe337460f67",
-            "name": "\/Ticket\/",
-            "url": "{{url}}\/Ticket\/",
+            "id": "1e46aaab6c023f7e62ae059de824f482",
+            "name": "\/ticket\/",
+            "url": "{{url}}\/ticket\/",
             "description": "Autogeneration of Ticket Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "0fa0c9616b1cb283c651efe337460f67",
+                    "id": "1e46aaab6c023f7e62ae059de824f482",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Ticket\/",
+                        "url": "{{url}}\/ticket\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "fe74ad167dd41ae6f023db580c25bc8b",
-                    "collection": "3ac4fbbd85ceeb1c5e8547b49f944fc0"
+                    "request": "b936dce7cc7598a8b779a01757a8b845",
+                    "collection": "7a9e9dfc7d829c9f5039069519054eb0"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ac4fbbd85ceeb1c5e8547b49f944fc0",
+            "collectionId": "7a9e9dfc7d829c9f5039069519054eb0",
             "rawModeData": ""
         }
     ]

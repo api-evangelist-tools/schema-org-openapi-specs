@@ -1,5 +1,5 @@
 {
-    "id": "4d36a833193cfeaf6fb2a8c58689b03c",
+    "id": "09ea8dae745ed3867c48e85bc59b77e4",
     "name": "Auto Wash",
     "description": "Autogeneration of Auto Wash Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "cdb870ed0e30c3c9b1af00b50c50dfb0",
-            "name": "\/Auto-Wash\/",
-            "url": "{{url}}\/Auto-Wash\/",
+            "id": "415b313d280c75f9b29da9d2729120d8",
+            "name": "\/auto-wash\/",
+            "url": "{{url}}\/auto-wash\/",
             "description": "Autogeneration of Auto Wash Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "cdb870ed0e30c3c9b1af00b50c50dfb0",
+                    "id": "415b313d280c75f9b29da9d2729120d8",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Auto-Wash\/",
+                        "url": "{{url}}\/auto-wash\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "f358e382afc8299c7924f6aee51fde89",
-                    "collection": "4d36a833193cfeaf6fb2a8c58689b03c"
+                    "request": "7dddaf3b57b99c0fe5c5177214007ad2",
+                    "collection": "09ea8dae745ed3867c48e85bc59b77e4"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "4d36a833193cfeaf6fb2a8c58689b03c",
+            "collectionId": "09ea8dae745ed3867c48e85bc59b77e4",
             "rawModeData": ""
         }
     ]

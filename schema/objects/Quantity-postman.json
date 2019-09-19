@@ -1,5 +1,5 @@
 {
-    "id": "11220cd74f7c3588dc5e87d6422e5ca0",
+    "id": "9abbfc4bb1af67f1b8bff0a25d5a6e75",
     "name": "Quantity",
     "description": "Autogeneration of Quantity Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "52794e984226bb1139376d8893d57cb0",
-            "name": "\/Quantity\/",
-            "url": "{{url}}\/Quantity\/",
+            "id": "9c61f8015983259fd1b68085b1e70ffd",
+            "name": "\/quantity\/",
+            "url": "{{url}}\/quantity\/",
             "description": "Autogeneration of Quantity Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "52794e984226bb1139376d8893d57cb0",
+                    "id": "9c61f8015983259fd1b68085b1e70ffd",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Quantity\/",
+                        "url": "{{url}}\/quantity\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "403da04fe44614109bdd80bb334624d1",
-                    "collection": "11220cd74f7c3588dc5e87d6422e5ca0"
+                    "request": "fd101ff792a328f579a59f32ce840b46",
+                    "collection": "9abbfc4bb1af67f1b8bff0a25d5a6e75"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "11220cd74f7c3588dc5e87d6422e5ca0",
+            "collectionId": "9abbfc4bb1af67f1b8bff0a25d5a6e75",
             "rawModeData": ""
         }
     ]

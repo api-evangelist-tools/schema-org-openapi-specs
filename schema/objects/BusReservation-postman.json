@@ -1,5 +1,5 @@
 {
-    "id": "426a24a99529c080e71568ac9849ff93",
+    "id": "ac3a0c4411851c40c5125794c4a91063",
     "name": "Bus Reservation",
     "description": "Autogeneration of Bus Reservation Schema.org object.",
     "auth": null,
@@ -10,9 +10,9 @@
     "folders": [],
     "requests": [
         {
-            "id": "f51295e8c60efe7ea71b9f243d8344e9",
-            "name": "\/Bus-Reservation\/",
-            "url": "{{url}}\/Bus-Reservation\/",
+            "id": "7f8e5471585ad5e8dfe4b0d3e60982c0",
+            "name": "\/bus-reservation\/",
+            "url": "{{url}}\/bus-reservation\/",
             "description": "Autogeneration of Bus Reservation Schema.org object.",
             "data": [],
             "dataMode": "raw",
@@ -28,7 +28,7 @@
             },
             "responses": [
                 {
-                    "id": "f51295e8c60efe7ea71b9f243d8344e9",
+                    "id": "7f8e5471585ad5e8dfe4b0d3e60982c0",
                     "name": "Default",
                     "status": "200",
                     "mime": null,
@@ -39,7 +39,7 @@
                         "name": ""
                     },
                     "requestObject": {
-                        "url": "{{url}}\/Bus-Reservation\/",
+                        "url": "{{url}}\/bus-reservation\/",
                         "method": "GET",
                         "data": "",
                         "dataMode": "raw",
@@ -47,13 +47,13 @@
                     },
                     "headers": null,
                     "cookies": null,
-                    "request": "850c754785580b9283f6eeb8c62bad0a",
-                    "collection": "426a24a99529c080e71568ac9849ff93"
+                    "request": "55256a0778d962db2d836cc0516244fc",
+                    "collection": "ac3a0c4411851c40c5125794c4a91063"
                 }
             ],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "426a24a99529c080e71568ac9849ff93",
+            "collectionId": "ac3a0c4411851c40c5125794c4a91063",
             "rawModeData": ""
         }
     ]

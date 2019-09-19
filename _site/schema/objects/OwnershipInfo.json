@@ -1,0 +1,29 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/OwnershipInfo.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A structured value providing information about when a certain organization or person owned a certain product.",
+    "properties": {
+        "typeOfGood": {
+            "description": "The product that this structured value is referring to.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Service"
+            }
+        },
+        "ownedThrough": {
+            "description": "The date and time of giving up ownership on the product.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "acquiredFrom": {
+            "description": "The organization or person from which the product was acquired.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "ownedFrom": {
+            "description": "The date and time of obtaining the product.",
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

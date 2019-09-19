@@ -1,0 +1,45 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/PeopleAudience.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A set of characteristics belonging to people, e.g. who compose an item s target audience.",
+    "properties": {
+        "suggestedMaxAge": {
+            "description": "Maximal age recommended for viewing content.",
+            "type": "number",
+            "format": "float"
+        },
+        "requiredMinAge": {
+            "description": "Audiences defined by a person s minimum age.",
+            "type": "integer",
+            "format": "int32"
+        },
+        "requiredGender": {
+            "description": "Audiences defined by a person s gender.",
+            "type": "string"
+        },
+        "suggestedGender": {
+            "description": "The gender of the person or audience.",
+            "type": "string"
+        },
+        "requiredMaxAge": {
+            "description": "Audiences defined by a person s maximum age.",
+            "type": "integer",
+            "format": "int32"
+        },
+        "suggestedMinAge": {
+            "description": "Minimal age recommended for viewing content.",
+            "type": "number",
+            "format": "float"
+        },
+        "audienceType": {
+            "description": "The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).",
+            "type": "string"
+        },
+        "geographicArea": {
+            "description": "The geographic area associated with the audience.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/AdministrativeArea"
+            }
+        }
+    }
+}

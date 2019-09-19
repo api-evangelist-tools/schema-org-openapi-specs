@@ -1,0 +1,31 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/ShareAction.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "The act of distributing content to people for their amusement or edification.",
+    "properties": {
+        "about": {
+            "description": "The subject matter of the content.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "inLanguage": {
+            "description": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Language"
+            }
+        },
+        "recipient": {
+            "description": "A sub property of participant. The participant who is at the receiving end of the action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "language": {
+            "description": "A sub property of instrument. The language used on this action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Language"
+            }
+        }
+    }
+}

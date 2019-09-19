@@ -1,0 +1,23 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/VoteAction.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "The act of expressing a preference from a fixed\/finite\/structured set of choices\/options.",
+    "properties": {
+        "candidate": {
+            "description": "A sub property of object. The candidate subject of this action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "actionOption": {
+            "description": "A sub property of object. The options subject to this action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "option": {
+            "description": "A sub property of object. The options subject to this action.",
+            "type": "string"
+        }
+    }
+}

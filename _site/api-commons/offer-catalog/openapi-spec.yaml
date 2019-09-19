@@ -1,0 +1,344 @@
+- swagger: "2.0"
+  info:
+    title: Offer Catalog API
+    description: An OfferCatalog is an ItemList that contains related Offers and/or
+      further OfferCatalogs that are offeredBy the same provider.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: offer.catalog.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /offer-catalog/:
+      get:
+        summary: Get Offer Catalog
+        description: Returns Offer Catalog
+        operationId: getOfferCatalog
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/OfferCatalog'
+        tags:
+        - Offer Catalog
+      post:
+        summary: Add Offer Catalog
+        description: Add Offer Catalog
+        operationId: addOfferCatalog
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: hasoffercatalog
+          in: formData
+          description: 'Indicates an OfferCatalog listing for this Organization, Person,
+            or Service. '
+          required: false
+          type: person or organization or service
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: itemlistelement
+          in: formData
+          description: 'For itemListElement values, you can use simple strings (e.g.
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
+            values are best if the elements in the list are plain strings. Existing
+            entities are best for a simple, unordered list of existing things in your
+            data. ListItem is used with ordered lists when you want to provide additional
+            context about the element in that list or when the same item might be in
+            different places in different lists.        Note: The order of elements
+            in your mark-up is not sufficient for indicating the order or elements.  Use
+            ListItem with a \''position\'' property in such cases.'
+          required: false
+          type: thing or  text or  listitem
+        - name: itemlistorder
+          in: formData
+          description: Type of ordering (e.g. Ascending, Descending, Unordered).
+          required: false
+          type: itemlistordertype or  text
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: numberofitems
+          in: formData
+          description: The number of items in an ItemList. Note that some descriptions
+            might not fully describe all items in a list (e.g., multi-page pagination);
+            in such cases, the numberOfItems would be for the entire list.
+          required: false
+          type: integer
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/OfferCatalog'
+        tags:
+        - Offer Catalog
+    /offer-catalog/{id}/:
+      get:
+        summary: Get Offer Catalog
+        description: Returns a single Offer Catalog
+        operationId: getOfferCatalog
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/OfferCatalog'
+        tags:
+        - Offer Catalog
+      put:
+        summary: Update Offer Catalog
+        description: Update a single Offer Catalog
+        operationId: updateOfferCatalogItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: hasoffercatalog
+          in: formData
+          description: 'Indicates an OfferCatalog listing for this Organization, Person,
+            or Service. '
+          required: false
+          type: person or organization or service
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: itemlistelement
+          in: formData
+          description: 'For itemListElement values, you can use simple strings (e.g.
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
+            values are best if the elements in the list are plain strings. Existing
+            entities are best for a simple, unordered list of existing things in your
+            data. ListItem is used with ordered lists when you want to provide additional
+            context about the element in that list or when the same item might be in
+            different places in different lists.        Note: The order of elements
+            in your mark-up is not sufficient for indicating the order or elements.  Use
+            ListItem with a \''position\'' property in such cases.'
+          required: false
+          type: thing or  text or  listitem
+        - name: itemlistorder
+          in: formData
+          description: Type of ordering (e.g. Ascending, Descending, Unordered).
+          required: false
+          type: itemlistordertype or  text
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: numberofitems
+          in: formData
+          description: The number of items in an ItemList. Note that some descriptions
+            might not fully describe all items in a list (e.g., multi-page pagination);
+            in such cases, the numberOfItems would be for the entire list.
+          required: false
+          type: integer
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/OfferCatalog'
+        tags:
+        - Offer Catalog
+      delete:
+        summary: Offer Catalog
+        description: Deletes a single Offer Catalog
+        operationId: deleteOfferCatalog
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/OfferCatalog'
+        tags:
+        - Offer Catalog
+  definitions:
+    OfferCatalog:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        description:
+          description: A short description of the item.
+          type: text
+        hasoffercatalog:
+          description: 'Indicates an OfferCatalog listing for this Organization, Person,
+            or Service. '
+          type: person or organization or service
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        itemlistelement:
+          description: 'For itemListElement values, you can use simple strings (e.g.
+            \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.        Text
+            values are best if the elements in the list are plain strings. Existing
+            entities are best for a simple, unordered list of existing things in your
+            data. ListItem is used with ordered lists when you want to provide additional
+            context about the element in that list or when the same item might be in
+            different places in different lists.        Note: The order of elements
+            in your mark-up is not sufficient for indicating the order or elements.  Use
+            ListItem with a \''position\'' property in such cases.'
+          type: thing or  text or  listitem
+        itemlistorder:
+          description: Type of ordering (e.g. Ascending, Descending, Unordered).
+          type: itemlistordertype or  text
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        name:
+          description: The name of the item.
+          type: text
+        numberofitems:
+          description: The number of items in an ItemList. Note that some descriptions
+            might not fully describe all items in a list (e.g., multi-page pagination);
+            in such cases, the numberOfItems would be for the entire list.
+          type: integer
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        url:
+          description: URL of the item.
+          type: url

@@ -1,0 +1,63 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/MovieSeries.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A series of movies. Included movies can be indicated with the hasPart property.",
+    "properties": {
+        "actor": {
+            "description": "An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "trailer": {
+            "description": "The trailer of a movie or tv\/radio series, season, episode, etc.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/VideoObject"
+            }
+        },
+        "musicBy": {
+            "description": "The composer of the soundtrack.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MusicGroup"
+            }
+        },
+        "directors": {
+            "description": "A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "director": {
+            "description": "A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "productionCompany": {
+            "description": "The production company or studio responsible for the item e.g. series, video game, episode etc.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "actors": {
+            "description": "An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "endDate": {
+            "description": "The end date and time of the item (in ISO 8601 date format).",
+            "type": "string",
+            "format": "date"
+        },
+        "issn": {
+            "description": "The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.",
+            "type": "string"
+        },
+        "startDate": {
+            "description": "The start date and time of the item (in ISO 8601 date format).",
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

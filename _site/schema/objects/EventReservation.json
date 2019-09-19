@@ -1,0 +1,78 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/EventReservation.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A reservation for an event like a concert, sporting event, or lecture.  Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use Offer.",
+    "properties": {
+        "provider": {
+            "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "programMembershipUsed": {
+            "description": "Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ProgramMembership"
+            }
+        },
+        "reservationStatus": {
+            "description": "The current status of the reservation.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ReservationStatusType"
+            }
+        },
+        "underName": {
+            "description": "The person or organization the reservation or ticket is for.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "bookingAgent": {
+            "description": " bookingAgent  is an out-dated term indicating a  broker  that serves as a booking agent.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "totalPrice": {
+            "description": "The total price for the reservation or ticket, including applicable taxes, shipping, etc.",
+            "type": "number",
+            "format": "float"
+        },
+        "reservationFor": {
+            "description": "The thing -- flight, event, restaurant,etc. being reserved.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "priceCurrency": {
+            "description": "The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.",
+            "type": "string"
+        },
+        "broker": {
+            "description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "modifiedTime": {
+            "description": "The date and time the reservation was modified.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "bookingTime": {
+            "description": "The date and time the reservation was booked.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "reservationId": {
+            "description": "A unique identifier for the reservation.",
+            "type": "string"
+        },
+        "reservedTicket": {
+            "description": "A ticket associated with the reservation.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Ticket"
+            }
+        }
+    }
+}

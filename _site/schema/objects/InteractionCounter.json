@@ -1,0 +1,24 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/InteractionCounter.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.",
+    "properties": {
+        "interactionService": {
+            "description": "The WebSite or SoftwareApplication where the interactions took place.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/WebSite"
+            }
+        },
+        "userInteractionCount": {
+            "description": "The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.",
+            "type": "integer",
+            "format": "int32"
+        },
+        "interactionType": {
+            "description": "The Action representing the type of interaction. For up votes, +1s, etc. use LikeAction. For down votes use DislikeAction. Otherwise, use the most specific Action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Action"
+            }
+        }
+    }
+}

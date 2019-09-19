@@ -1,0 +1,462 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Train Trip API",
+		"description": "A trip on a commercial train line.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "train.trip.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/train-trip\/": {
+			"get": {
+				"summary": "Get Train Trip",
+				"description": "Returns Train Trip",
+				"operationId": "getTrainTrip",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/TrainTrip"
+							}
+						}
+					}
+				},
+				"tags": ["Train Trip"]
+			},
+			"post": {
+				"summary": "Add Train Trip",
+				"description": "Add Train Trip",
+				"operationId": "addTrainTrip",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "arrivalplatform",
+					"in": "formData",
+					"description": "The platform where the train arrives.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "arrivalstation",
+					"in": "formData",
+					"description": "The station where the train trip ends.",
+					"required": false,
+					"type": "trainstation"
+				},
+				{
+					"name": "arrivaltime",
+					"in": "formData",
+					"description": "The expected arrival time.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "departureplatform",
+					"in": "formData",
+					"description": "The platform from which the train departs.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "departurestation",
+					"in": "formData",
+					"description": "The station from which the train departs.",
+					"required": false,
+					"type": "trainstation"
+				},
+				{
+					"name": "departuretime",
+					"in": "formData",
+					"description": "The expected departure time.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "provider",
+					"in": "formData",
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "trainname",
+					"in": "formData",
+					"description": "The name of the train (e.g. The Orient Express).",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "trainnumber",
+					"in": "formData",
+					"description": "The unique identifier for the train.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/TrainTrip"
+							}
+						}
+					}
+				},
+				"tags": ["Train Trip"]
+			}
+		},
+		"\/train-trip\/{id}\/": {
+			"get": {
+				"summary": "Get Train Trip",
+				"description": "Returns a single Train Trip",
+				"operationId": "getTrainTrip",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/TrainTrip"
+							}
+						}
+					}
+				},
+				"tags": ["Train Trip"]
+			},
+			"put": {
+				"summary": "Update Train Trip",
+				"description": "Update a single Train Trip",
+				"operationId": "updateTrainTripItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "arrivalplatform",
+					"in": "formData",
+					"description": "The platform where the train arrives.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "arrivalstation",
+					"in": "formData",
+					"description": "The station where the train trip ends.",
+					"required": false,
+					"type": "trainstation"
+				},
+				{
+					"name": "arrivaltime",
+					"in": "formData",
+					"description": "The expected arrival time.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "departureplatform",
+					"in": "formData",
+					"description": "The platform from which the train departs.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "departurestation",
+					"in": "formData",
+					"description": "The station from which the train departs.",
+					"required": false,
+					"type": "trainstation"
+				},
+				{
+					"name": "departuretime",
+					"in": "formData",
+					"description": "The expected departure time.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "provider",
+					"in": "formData",
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "trainname",
+					"in": "formData",
+					"description": "The name of the train (e.g. The Orient Express).",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "trainnumber",
+					"in": "formData",
+					"description": "The unique identifier for the train.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/TrainTrip"
+							}
+						}
+					}
+				},
+				"tags": ["Train Trip"]
+			},
+			"delete": {
+				"summary": "Train Trip",
+				"description": "Deletes a single Train Trip",
+				"operationId": "deleteTrainTrip",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/TrainTrip"
+							}
+						}
+					}
+				},
+				"tags": ["Train Trip"]
+			}
+		}
+	},
+	"definitions": {
+		"TrainTrip": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"arrivalplatform": {
+					"description": "The platform where the train arrives.",
+					"type": "text"
+				},
+				"arrivalstation": {
+					"description": "The station where the train trip ends.",
+					"type": "trainstation"
+				},
+				"arrivaltime": {
+					"description": "The expected arrival time.",
+					"type": "datetime"
+				},
+				"departureplatform": {
+					"description": "The platform from which the train departs.",
+					"type": "text"
+				},
+				"departurestation": {
+					"description": "The station from which the train departs.",
+					"type": "trainstation"
+				},
+				"departuretime": {
+					"description": "The expected departure time.",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"provider": {
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"type": "person or  organization"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"trainname": {
+					"description": "The name of the train (e.g. The Orient Express).",
+					"type": "text"
+				},
+				"trainnumber": {
+					"description": "The unique identifier for the train.",
+					"type": "text"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}
+		}
+	}
+}

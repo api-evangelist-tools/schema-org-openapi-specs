@@ -1,0 +1,1740 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Organization API",
+		"description": "An organization such as a school, NGO, corporation, club, etc.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "organization.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/organization\/": {
+			"get": {
+				"summary": "Get Organization",
+				"description": "Returns Organization",
+				"operationId": "getOrganization",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Organization"
+							}
+						}
+					}
+				},
+				"tags": ["Organization"]
+			},
+			"post": {
+				"summary": "Add Organization",
+				"description": "Add Organization",
+				"operationId": "addOrganization",
+				"parameters": [{
+					"name": "acquiredfrom",
+					"in": "formData",
+					"description": "The organization or person from which the product was acquired. ",
+					"required": false,
+					"type": "ownershipinfo"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "address",
+					"in": "formData",
+					"description": "Physical address of the item.",
+					"required": false,
+					"type": "text or  postaladdress"
+				},
+				{
+					"name": "affiliation",
+					"in": "formData",
+					"description": "An organization that this person is affiliated with. For example, a school\/university, a club, or a team. ",
+					"required": false,
+					"type": "person"
+				},
+				{
+					"name": "agent",
+					"in": "formData",
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book. ",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "aggregaterating",
+					"in": "formData",
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"required": false,
+					"type": "aggregaterating"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "alumni",
+					"in": "formData",
+					"description": "Alumni of an organization. Inverse property: alumniOf.",
+					"required": false,
+					"type": "person"
+				},
+				{
+					"name": "alumniof",
+					"in": "formData",
+					"description": "An organization that the person is an alumni of.  inverse property: alumni.",
+					"required": false,
+					"type": "person"
+				},
+				{
+					"name": "areaserved",
+					"in": "formData",
+					"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+					"required": false,
+					"type": "text or  place or  geoshape or  administrativearea"
+				},
+				{
+					"name": "attendee",
+					"in": "formData",
+					"description": "A person or organization attending the event.  Supersedes attendees.",
+					"required": false,
+					"type": "event"
+				},
+				{
+					"name": "author",
+					"in": "formData",
+					"description": "The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "award",
+					"in": "formData",
+					"description": "An award won by or for this item. Supersedes awards.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "brand",
+					"in": "formData",
+					"description": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.",
+					"required": false,
+					"type": "brand or  organization"
+				},
+				{
+					"name": "broadcastaffiliateof",
+					"in": "formData",
+					"description": "The media network(s) whose content is broadcast on this station. ",
+					"required": false,
+					"type": "broadcastservice"
+				},
+				{
+					"name": "broadcaster",
+					"in": "formData",
+					"description": "The organization owning or operating the broadcast service. ",
+					"required": false,
+					"type": "broadcastservice"
+				},
+				{
+					"name": "broker",
+					"in": "formData",
+					"description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.  Supersedes bookingAgent.",
+					"required": false,
+					"type": "invoice or reservation or order"
+				},
+				{
+					"name": "composer",
+					"in": "formData",
+					"description": "The person or organization who wrote the composition. ",
+					"required": false,
+					"type": "musiccomposition"
+				},
+				{
+					"name": "contactpoint",
+					"in": "formData",
+					"description": "A contact point for a person or organization. Supersedes contactPoints.",
+					"required": false,
+					"type": "contactpoint"
+				},
+				{
+					"name": "contributor",
+					"in": "formData",
+					"description": "A secondary contributor to the CreativeWork. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "copyrightholder",
+					"in": "formData",
+					"description": "The party holding the legal copyright to the CreativeWork. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "creator",
+					"in": "formData",
+					"description": "The creator\/author of this CreativeWork. This is the same as the Author property for CreativeWork. ",
+					"required": false,
+					"type": "usercomments or creativework"
+				},
+				{
+					"name": "creditedto",
+					"in": "formData",
+					"description": "The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to \\\"Stefani Germanotta Band\\\", but by Lady Gaga. ",
+					"required": false,
+					"type": "musicrelease"
+				},
+				{
+					"name": "customer",
+					"in": "formData",
+					"description": "Party placing the order or paying the invoice. ",
+					"required": false,
+					"type": "invoice or order"
+				},
+				{
+					"name": "department",
+					"in": "formData",
+					"description": "A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "dissolutiondate",
+					"in": "formData",
+					"description": "The date that this organization was dissolved.",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "duns",
+					"in": "formData",
+					"description": "The Dun & Bradstreet DUNS number for identifying an organization or business person.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "email",
+					"in": "formData",
+					"description": "Email address.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "employee",
+					"in": "formData",
+					"description": "Someone working for this organization. Supersedes employees.",
+					"required": false,
+					"type": "person"
+				},
+				{
+					"name": "endorsee",
+					"in": "formData",
+					"description": "A sub property of participant. The person\/organization being supported. ",
+					"required": false,
+					"type": "endorseaction"
+				},
+				{
+					"name": "endorsers",
+					"in": "formData",
+					"description": "People or organizations that endorse the plan. ",
+					"required": false,
+					"type": "diet"
+				},
+				{
+					"name": "event",
+					"in": "formData",
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"required": false,
+					"type": "event"
+				},
+				{
+					"name": "faxnumber",
+					"in": "formData",
+					"description": "The fax number.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "followee",
+					"in": "formData",
+					"description": "A sub property of object. The person or organization being followed. ",
+					"required": false,
+					"type": "followaction"
+				},
+				{
+					"name": "founder",
+					"in": "formData",
+					"description": "A person who founded this organization. Supersedes founders.",
+					"required": false,
+					"type": "person"
+				},
+				{
+					"name": "foundingdate",
+					"in": "formData",
+					"description": "The date that this organization was founded.",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "foundinglocation",
+					"in": "formData",
+					"description": "The place where the Organization was founded.",
+					"required": false,
+					"type": "place"
+				},
+				{
+					"name": "globallocationnumber",
+					"in": "formData",
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "hasoffercatalog",
+					"in": "formData",
+					"description": "Indicates an OfferCatalog listing for this Organization, Person, or Service.",
+					"required": false,
+					"type": "offercatalog"
+				},
+				{
+					"name": "haspos",
+					"in": "formData",
+					"description": "Points-of-Sales operated by the organization or person.",
+					"required": false,
+					"type": "place"
+				},
+				{
+					"name": "hiringorganization",
+					"in": "formData",
+					"description": "Organization offering the job position. ",
+					"required": false,
+					"type": "jobposting"
+				},
+				{
+					"name": "hostingorganization",
+					"in": "formData",
+					"description": "The organization (airline, travelers\\' club, etc.) the membership is made with. ",
+					"required": false,
+					"type": "programmembership"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "isicv4",
+					"in": "formData",
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "issuedby",
+					"in": "formData",
+					"description": "The organization issuing the ticket or permit. ",
+					"required": false,
+					"type": "ticket or permit"
+				},
+				{
+					"name": "landlord",
+					"in": "formData",
+					"description": "A sub property of participant. The owner of the real estate property. ",
+					"required": false,
+					"type": "rentaction"
+				},
+				{
+					"name": "legalname",
+					"in": "formData",
+					"description": "The official name of the organization, e.g. the registered company name.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "location",
+					"in": "formData",
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"required": false,
+					"type": "text or  place or  postaladdress"
+				},
+				{
+					"name": "logo",
+					"in": "formData",
+					"description": "An associated logo.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "url or  creativework"
+				},
+				{
+					"name": "makesoffer",
+					"in": "formData",
+					"description": "A pointer to products or services offered by the organization or person. Inverse property: offeredBy.",
+					"required": false,
+					"type": "offer"
+				},
+				{
+					"name": "manufacturer",
+					"in": "formData",
+					"description": "The manufacturer of the product. ",
+					"required": false,
+					"type": "dietarysupplement or drug or product"
+				},
+				{
+					"name": "member",
+					"in": "formData",
+					"description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.",
+					"required": false,
+					"type": "organization or  person"
+				},
+				{
+					"name": "memberof",
+					"in": "formData",
+					"description": "An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member.",
+					"required": false,
+					"type": "programmembership or  organization"
+				},
+				{
+					"name": "naics",
+					"in": "formData",
+					"description": "The North American Industry Classification System (NAICS) code for a particular organization or business person.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "numberofemployees",
+					"in": "formData",
+					"description": "The number of employees in an organization e.g. business.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "offeredby",
+					"in": "formData",
+					"description": "A pointer to the organization or person making the offer.  inverse property: makesOffer.",
+					"required": false,
+					"type": "offer"
+				},
+				{
+					"name": "organizer",
+					"in": "formData",
+					"description": "An organizer of an Event. ",
+					"required": false,
+					"type": "event"
+				},
+				{
+					"name": "owns",
+					"in": "formData",
+					"description": "Products owned by the organization or person.",
+					"required": false,
+					"type": "product or  ownershipinfo"
+				},
+				{
+					"name": "parentorganization",
+					"in": "formData",
+					"description": "The larger organization that this organization is a branch of, if any. Supersedes branchOf. Inverse property: subOrganization.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "participant",
+					"in": "formData",
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*. ",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "performer",
+					"in": "formData",
+					"description": "A performer at the event&#x2014;for example, a presenter, musician, musical group or actor.  Supersedes performers.",
+					"required": false,
+					"type": "event"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "producer",
+					"in": "formData",
+					"description": "The person or organization who produced the work (e.g. music album, movie, tv\/radio series etc.). ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "productioncompany",
+					"in": "formData",
+					"description": "The production company or studio responsible for the item e.g. series, video game, episode etc. ",
+					"required": false,
+					"type": "creativeworkseason or movie or episode or movieseries or mediaobject or radioseries or tvseries or videogameseries"
+				},
+				{
+					"name": "provider",
+					"in": "formData",
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.  Supersedes carrier.",
+					"required": false,
+					"type": "flight or invoice or bustrip or service or creativework or parceldelivery or reservation or traintrip"
+				},
+				{
+					"name": "publisher",
+					"in": "formData",
+					"description": "The publisher of the creative work. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "recipient",
+					"in": "formData",
+					"description": "A sub property of participant. The participant who is at the receiving end of the action. ",
+					"required": false,
+					"type": "returnaction or giveaction or tipaction or communicateaction or payaction or authorizeaction or donateaction or sendaction"
+				},
+				{
+					"name": "recognizingauthority",
+					"in": "formData",
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine. ",
+					"required": false,
+					"type": "medicalentity"
+				},
+				{
+					"name": "recordlabel",
+					"in": "formData",
+					"description": "The label that issued the release. ",
+					"required": false,
+					"type": "musicrelease"
+				},
+				{
+					"name": "review",
+					"in": "formData",
+					"description": "A review of the item. Supersedes reviews.",
+					"required": false,
+					"type": "review"
+				},
+				{
+					"name": "reviewedby",
+					"in": "formData",
+					"description": "People or organizations that have reviewed the content on this web page for accuracy and\/or completeness. ",
+					"required": false,
+					"type": "webpage"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "seeks",
+					"in": "formData",
+					"description": "A pointer to products or services sought by the organization or person (demand).",
+					"required": false,
+					"type": "demand"
+				},
+				{
+					"name": "seller",
+					"in": "formData",
+					"description": "An entity which offers (sells \/ leases \/ lends \/ loans) the services \/ goods.  A seller may also be a provider.  Supersedes vendor.",
+					"required": false,
+					"type": "demand or buyaction or offer or order or flight"
+				},
+				{
+					"name": "sender",
+					"in": "formData",
+					"description": "A sub property of participant. The participant who is at the sending end of the action. ",
+					"required": false,
+					"type": "receiveaction"
+				},
+				{
+					"name": "serviceoperator",
+					"in": "formData",
+					"description": "The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor. ",
+					"required": false,
+					"type": "governmentservice"
+				},
+				{
+					"name": "sourceorganization",
+					"in": "formData",
+					"description": "The Organization on whose behalf the creator was working. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "sponsor",
+					"in": "formData",
+					"description": "Sponsor of the study. ",
+					"required": false,
+					"type": "medicalstudy"
+				},
+				{
+					"name": "suborganization",
+					"in": "formData",
+					"description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific \\'department\\' property. Inverse property: parentOrganization.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "taxid",
+					"in": "formData",
+					"description": "The Tax \/ Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF\/NIF in Spain.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "telephone",
+					"in": "formData",
+					"description": "The telephone number.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "translator",
+					"in": "formData",
+					"description": "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "undername",
+					"in": "formData",
+					"description": "The person or organization the reservation or ticket is for. ",
+					"required": false,
+					"type": "reservation or ticket"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "vatid",
+					"in": "formData",
+					"description": "The Value-added Tax ID of the organization or person.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "worksfor",
+					"in": "formData",
+					"description": "Organizations that the person works for. ",
+					"required": false,
+					"type": "person"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Organization"
+							}
+						}
+					}
+				},
+				"tags": ["Organization"]
+			}
+		},
+		"\/organization\/{id}\/": {
+			"get": {
+				"summary": "Get Organization",
+				"description": "Returns a single Organization",
+				"operationId": "getOrganization",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Organization"
+							}
+						}
+					}
+				},
+				"tags": ["Organization"]
+			},
+			"put": {
+				"summary": "Update Organization",
+				"description": "Update a single Organization",
+				"operationId": "updateOrganizationItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "acquiredfrom",
+					"in": "formData",
+					"description": "The organization or person from which the product was acquired. ",
+					"required": false,
+					"type": "ownershipinfo"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "address",
+					"in": "formData",
+					"description": "Physical address of the item.",
+					"required": false,
+					"type": "text or  postaladdress"
+				},
+				{
+					"name": "affiliation",
+					"in": "formData",
+					"description": "An organization that this person is affiliated with. For example, a school\/university, a club, or a team. ",
+					"required": false,
+					"type": "person"
+				},
+				{
+					"name": "agent",
+					"in": "formData",
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book. ",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "aggregaterating",
+					"in": "formData",
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"required": false,
+					"type": "aggregaterating"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "alumni",
+					"in": "formData",
+					"description": "Alumni of an organization. Inverse property: alumniOf.",
+					"required": false,
+					"type": "person"
+				},
+				{
+					"name": "alumniof",
+					"in": "formData",
+					"description": "An organization that the person is an alumni of.  inverse property: alumni.",
+					"required": false,
+					"type": "person"
+				},
+				{
+					"name": "areaserved",
+					"in": "formData",
+					"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+					"required": false,
+					"type": "text or  place or  geoshape or  administrativearea"
+				},
+				{
+					"name": "attendee",
+					"in": "formData",
+					"description": "A person or organization attending the event.  Supersedes attendees.",
+					"required": false,
+					"type": "event"
+				},
+				{
+					"name": "author",
+					"in": "formData",
+					"description": "The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "award",
+					"in": "formData",
+					"description": "An award won by or for this item. Supersedes awards.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "brand",
+					"in": "formData",
+					"description": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.",
+					"required": false,
+					"type": "brand or  organization"
+				},
+				{
+					"name": "broadcastaffiliateof",
+					"in": "formData",
+					"description": "The media network(s) whose content is broadcast on this station. ",
+					"required": false,
+					"type": "broadcastservice"
+				},
+				{
+					"name": "broadcaster",
+					"in": "formData",
+					"description": "The organization owning or operating the broadcast service. ",
+					"required": false,
+					"type": "broadcastservice"
+				},
+				{
+					"name": "broker",
+					"in": "formData",
+					"description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.  Supersedes bookingAgent.",
+					"required": false,
+					"type": "invoice or reservation or order"
+				},
+				{
+					"name": "composer",
+					"in": "formData",
+					"description": "The person or organization who wrote the composition. ",
+					"required": false,
+					"type": "musiccomposition"
+				},
+				{
+					"name": "contactpoint",
+					"in": "formData",
+					"description": "A contact point for a person or organization. Supersedes contactPoints.",
+					"required": false,
+					"type": "contactpoint"
+				},
+				{
+					"name": "contributor",
+					"in": "formData",
+					"description": "A secondary contributor to the CreativeWork. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "copyrightholder",
+					"in": "formData",
+					"description": "The party holding the legal copyright to the CreativeWork. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "creator",
+					"in": "formData",
+					"description": "The creator\/author of this CreativeWork. This is the same as the Author property for CreativeWork. ",
+					"required": false,
+					"type": "usercomments or creativework"
+				},
+				{
+					"name": "creditedto",
+					"in": "formData",
+					"description": "The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to \\\"Stefani Germanotta Band\\\", but by Lady Gaga. ",
+					"required": false,
+					"type": "musicrelease"
+				},
+				{
+					"name": "customer",
+					"in": "formData",
+					"description": "Party placing the order or paying the invoice. ",
+					"required": false,
+					"type": "invoice or order"
+				},
+				{
+					"name": "department",
+					"in": "formData",
+					"description": "A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "dissolutiondate",
+					"in": "formData",
+					"description": "The date that this organization was dissolved.",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "duns",
+					"in": "formData",
+					"description": "The Dun & Bradstreet DUNS number for identifying an organization or business person.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "email",
+					"in": "formData",
+					"description": "Email address.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "employee",
+					"in": "formData",
+					"description": "Someone working for this organization. Supersedes employees.",
+					"required": false,
+					"type": "person"
+				},
+				{
+					"name": "endorsee",
+					"in": "formData",
+					"description": "A sub property of participant. The person\/organization being supported. ",
+					"required": false,
+					"type": "endorseaction"
+				},
+				{
+					"name": "endorsers",
+					"in": "formData",
+					"description": "People or organizations that endorse the plan. ",
+					"required": false,
+					"type": "diet"
+				},
+				{
+					"name": "event",
+					"in": "formData",
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"required": false,
+					"type": "event"
+				},
+				{
+					"name": "faxnumber",
+					"in": "formData",
+					"description": "The fax number.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "followee",
+					"in": "formData",
+					"description": "A sub property of object. The person or organization being followed. ",
+					"required": false,
+					"type": "followaction"
+				},
+				{
+					"name": "founder",
+					"in": "formData",
+					"description": "A person who founded this organization. Supersedes founders.",
+					"required": false,
+					"type": "person"
+				},
+				{
+					"name": "foundingdate",
+					"in": "formData",
+					"description": "The date that this organization was founded.",
+					"required": false,
+					"type": "date"
+				},
+				{
+					"name": "foundinglocation",
+					"in": "formData",
+					"description": "The place where the Organization was founded.",
+					"required": false,
+					"type": "place"
+				},
+				{
+					"name": "globallocationnumber",
+					"in": "formData",
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "hasoffercatalog",
+					"in": "formData",
+					"description": "Indicates an OfferCatalog listing for this Organization, Person, or Service.",
+					"required": false,
+					"type": "offercatalog"
+				},
+				{
+					"name": "haspos",
+					"in": "formData",
+					"description": "Points-of-Sales operated by the organization or person.",
+					"required": false,
+					"type": "place"
+				},
+				{
+					"name": "hiringorganization",
+					"in": "formData",
+					"description": "Organization offering the job position. ",
+					"required": false,
+					"type": "jobposting"
+				},
+				{
+					"name": "hostingorganization",
+					"in": "formData",
+					"description": "The organization (airline, travelers\\' club, etc.) the membership is made with. ",
+					"required": false,
+					"type": "programmembership"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "isicv4",
+					"in": "formData",
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "issuedby",
+					"in": "formData",
+					"description": "The organization issuing the ticket or permit. ",
+					"required": false,
+					"type": "ticket or permit"
+				},
+				{
+					"name": "landlord",
+					"in": "formData",
+					"description": "A sub property of participant. The owner of the real estate property. ",
+					"required": false,
+					"type": "rentaction"
+				},
+				{
+					"name": "legalname",
+					"in": "formData",
+					"description": "The official name of the organization, e.g. the registered company name.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "location",
+					"in": "formData",
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"required": false,
+					"type": "text or  place or  postaladdress"
+				},
+				{
+					"name": "logo",
+					"in": "formData",
+					"description": "An associated logo.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "url or  creativework"
+				},
+				{
+					"name": "makesoffer",
+					"in": "formData",
+					"description": "A pointer to products or services offered by the organization or person. Inverse property: offeredBy.",
+					"required": false,
+					"type": "offer"
+				},
+				{
+					"name": "manufacturer",
+					"in": "formData",
+					"description": "The manufacturer of the product. ",
+					"required": false,
+					"type": "dietarysupplement or drug or product"
+				},
+				{
+					"name": "member",
+					"in": "formData",
+					"description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.",
+					"required": false,
+					"type": "organization or  person"
+				},
+				{
+					"name": "memberof",
+					"in": "formData",
+					"description": "An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member.",
+					"required": false,
+					"type": "programmembership or  organization"
+				},
+				{
+					"name": "naics",
+					"in": "formData",
+					"description": "The North American Industry Classification System (NAICS) code for a particular organization or business person.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "numberofemployees",
+					"in": "formData",
+					"description": "The number of employees in an organization e.g. business.",
+					"required": false,
+					"type": "quantitativevalue"
+				},
+				{
+					"name": "offeredby",
+					"in": "formData",
+					"description": "A pointer to the organization or person making the offer.  inverse property: makesOffer.",
+					"required": false,
+					"type": "offer"
+				},
+				{
+					"name": "organizer",
+					"in": "formData",
+					"description": "An organizer of an Event. ",
+					"required": false,
+					"type": "event"
+				},
+				{
+					"name": "owns",
+					"in": "formData",
+					"description": "Products owned by the organization or person.",
+					"required": false,
+					"type": "product or  ownershipinfo"
+				},
+				{
+					"name": "parentorganization",
+					"in": "formData",
+					"description": "The larger organization that this organization is a branch of, if any. Supersedes branchOf. Inverse property: subOrganization.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "participant",
+					"in": "formData",
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*. ",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "performer",
+					"in": "formData",
+					"description": "A performer at the event&#x2014;for example, a presenter, musician, musical group or actor.  Supersedes performers.",
+					"required": false,
+					"type": "event"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "producer",
+					"in": "formData",
+					"description": "The person or organization who produced the work (e.g. music album, movie, tv\/radio series etc.). ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "productioncompany",
+					"in": "formData",
+					"description": "The production company or studio responsible for the item e.g. series, video game, episode etc. ",
+					"required": false,
+					"type": "creativeworkseason or movie or episode or movieseries or mediaobject or radioseries or tvseries or videogameseries"
+				},
+				{
+					"name": "provider",
+					"in": "formData",
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.  Supersedes carrier.",
+					"required": false,
+					"type": "flight or invoice or bustrip or service or creativework or parceldelivery or reservation or traintrip"
+				},
+				{
+					"name": "publisher",
+					"in": "formData",
+					"description": "The publisher of the creative work. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "recipient",
+					"in": "formData",
+					"description": "A sub property of participant. The participant who is at the receiving end of the action. ",
+					"required": false,
+					"type": "returnaction or giveaction or tipaction or communicateaction or payaction or authorizeaction or donateaction or sendaction"
+				},
+				{
+					"name": "recognizingauthority",
+					"in": "formData",
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine. ",
+					"required": false,
+					"type": "medicalentity"
+				},
+				{
+					"name": "recordlabel",
+					"in": "formData",
+					"description": "The label that issued the release. ",
+					"required": false,
+					"type": "musicrelease"
+				},
+				{
+					"name": "review",
+					"in": "formData",
+					"description": "A review of the item. Supersedes reviews.",
+					"required": false,
+					"type": "review"
+				},
+				{
+					"name": "reviewedby",
+					"in": "formData",
+					"description": "People or organizations that have reviewed the content on this web page for accuracy and\/or completeness. ",
+					"required": false,
+					"type": "webpage"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "seeks",
+					"in": "formData",
+					"description": "A pointer to products or services sought by the organization or person (demand).",
+					"required": false,
+					"type": "demand"
+				},
+				{
+					"name": "seller",
+					"in": "formData",
+					"description": "An entity which offers (sells \/ leases \/ lends \/ loans) the services \/ goods.  A seller may also be a provider.  Supersedes vendor.",
+					"required": false,
+					"type": "demand or buyaction or offer or order or flight"
+				},
+				{
+					"name": "sender",
+					"in": "formData",
+					"description": "A sub property of participant. The participant who is at the sending end of the action. ",
+					"required": false,
+					"type": "receiveaction"
+				},
+				{
+					"name": "serviceoperator",
+					"in": "formData",
+					"description": "The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor. ",
+					"required": false,
+					"type": "governmentservice"
+				},
+				{
+					"name": "sourceorganization",
+					"in": "formData",
+					"description": "The Organization on whose behalf the creator was working. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "sponsor",
+					"in": "formData",
+					"description": "Sponsor of the study. ",
+					"required": false,
+					"type": "medicalstudy"
+				},
+				{
+					"name": "suborganization",
+					"in": "formData",
+					"description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific \\'department\\' property. Inverse property: parentOrganization.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "taxid",
+					"in": "formData",
+					"description": "The Tax \/ Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF\/NIF in Spain.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "telephone",
+					"in": "formData",
+					"description": "The telephone number.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "translator",
+					"in": "formData",
+					"description": "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "undername",
+					"in": "formData",
+					"description": "The person or organization the reservation or ticket is for. ",
+					"required": false,
+					"type": "reservation or ticket"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "vatid",
+					"in": "formData",
+					"description": "The Value-added Tax ID of the organization or person.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "worksfor",
+					"in": "formData",
+					"description": "Organizations that the person works for. ",
+					"required": false,
+					"type": "person"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Organization"
+							}
+						}
+					}
+				},
+				"tags": ["Organization"]
+			},
+			"delete": {
+				"summary": "Organization",
+				"description": "Deletes a single Organization",
+				"operationId": "deleteOrganization",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Organization"
+							}
+						}
+					}
+				},
+				"tags": ["Organization"]
+			}
+		}
+	},
+	"definitions": {
+		"Organization": {
+			"properties": {
+				"acquiredfrom": {
+					"description": "The organization or person from which the product was acquired. ",
+					"type": "ownershipinfo"
+				},
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"address": {
+					"description": "Physical address of the item.",
+					"type": "text or  postaladdress"
+				},
+				"affiliation": {
+					"description": "An organization that this person is affiliated with. For example, a school\/university, a club, or a team. ",
+					"type": "person"
+				},
+				"agent": {
+					"description": "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book. ",
+					"type": "action"
+				},
+				"aggregaterating": {
+					"description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+					"type": "aggregaterating"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"alumni": {
+					"description": "Alumni of an organization. Inverse property: alumniOf.",
+					"type": "person"
+				},
+				"alumniof": {
+					"description": "An organization that the person is an alumni of.  inverse property: alumni.",
+					"type": "person"
+				},
+				"areaserved": {
+					"description": "The geographic area where a service or offered item is provided. Supersedes serviceArea.",
+					"type": "text or  place or  geoshape or  administrativearea"
+				},
+				"attendee": {
+					"description": "A person or organization attending the event.  Supersedes attendees.",
+					"type": "event"
+				},
+				"author": {
+					"description": "The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably. ",
+					"type": "creativework"
+				},
+				"award": {
+					"description": "An award won by or for this item. Supersedes awards.",
+					"type": "text"
+				},
+				"brand": {
+					"description": "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.",
+					"type": "brand or  organization"
+				},
+				"broadcastaffiliateof": {
+					"description": "The media network(s) whose content is broadcast on this station. ",
+					"type": "broadcastservice"
+				},
+				"broadcaster": {
+					"description": "The organization owning or operating the broadcast service. ",
+					"type": "broadcastservice"
+				},
+				"broker": {
+					"description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.  Supersedes bookingAgent.",
+					"type": "invoice or reservation or order"
+				},
+				"composer": {
+					"description": "The person or organization who wrote the composition. ",
+					"type": "musiccomposition"
+				},
+				"contactpoint": {
+					"description": "A contact point for a person or organization. Supersedes contactPoints.",
+					"type": "contactpoint"
+				},
+				"contributor": {
+					"description": "A secondary contributor to the CreativeWork. ",
+					"type": "creativework"
+				},
+				"copyrightholder": {
+					"description": "The party holding the legal copyright to the CreativeWork. ",
+					"type": "creativework"
+				},
+				"creator": {
+					"description": "The creator\/author of this CreativeWork. This is the same as the Author property for CreativeWork. ",
+					"type": "usercomments or creativework"
+				},
+				"creditedto": {
+					"description": "The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to \\\"Stefani Germanotta Band\\\", but by Lady Gaga. ",
+					"type": "musicrelease"
+				},
+				"customer": {
+					"description": "Party placing the order or paying the invoice. ",
+					"type": "invoice or order"
+				},
+				"department": {
+					"description": "A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
+					"type": "organization"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"dissolutiondate": {
+					"description": "The date that this organization was dissolved.",
+					"type": "date"
+				},
+				"duns": {
+					"description": "The Dun & Bradstreet DUNS number for identifying an organization or business person.",
+					"type": "text"
+				},
+				"email": {
+					"description": "Email address.",
+					"type": "text"
+				},
+				"employee": {
+					"description": "Someone working for this organization. Supersedes employees.",
+					"type": "person"
+				},
+				"endorsee": {
+					"description": "A sub property of participant. The person\/organization being supported. ",
+					"type": "endorseaction"
+				},
+				"endorsers": {
+					"description": "People or organizations that endorse the plan. ",
+					"type": "diet"
+				},
+				"event": {
+					"description": "Upcoming or past event associated with this place, organization, or action. Supersedes events.",
+					"type": "event"
+				},
+				"faxnumber": {
+					"description": "The fax number.",
+					"type": "text"
+				},
+				"followee": {
+					"description": "A sub property of object. The person or organization being followed. ",
+					"type": "followaction"
+				},
+				"founder": {
+					"description": "A person who founded this organization. Supersedes founders.",
+					"type": "person"
+				},
+				"foundingdate": {
+					"description": "The date that this organization was founded.",
+					"type": "date"
+				},
+				"foundinglocation": {
+					"description": "The place where the Organization was founded.",
+					"type": "place"
+				},
+				"globallocationnumber": {
+					"description": "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+					"type": "text"
+				},
+				"hasoffercatalog": {
+					"description": "Indicates an OfferCatalog listing for this Organization, Person, or Service.",
+					"type": "offercatalog"
+				},
+				"haspos": {
+					"description": "Points-of-Sales operated by the organization or person.",
+					"type": "place"
+				},
+				"hiringorganization": {
+					"description": "Organization offering the job position. ",
+					"type": "jobposting"
+				},
+				"hostingorganization": {
+					"description": "The organization (airline, travelers\\' club, etc.) the membership is made with. ",
+					"type": "programmembership"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"isicv4": {
+					"description": "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+					"type": "text"
+				},
+				"issuedby": {
+					"description": "The organization issuing the ticket or permit. ",
+					"type": "ticket or permit"
+				},
+				"landlord": {
+					"description": "A sub property of participant. The owner of the real estate property. ",
+					"type": "rentaction"
+				},
+				"legalname": {
+					"description": "The official name of the organization, e.g. the registered company name.",
+					"type": "text"
+				},
+				"location": {
+					"description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+					"type": "text or  place or  postaladdress"
+				},
+				"logo": {
+					"description": "An associated logo.",
+					"type": "url or  imageobject"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				},
+				"makesoffer": {
+					"description": "A pointer to products or services offered by the organization or person. Inverse property: offeredBy.",
+					"type": "offer"
+				},
+				"manufacturer": {
+					"description": "The manufacturer of the product. ",
+					"type": "dietarysupplement or drug or product"
+				},
+				"member": {
+					"description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes musicGroupMember, members. Inverse property: memberOf.",
+					"type": "organization or  person"
+				},
+				"memberof": {
+					"description": "An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member.",
+					"type": "programmembership or  organization"
+				},
+				"naics": {
+					"description": "The North American Industry Classification System (NAICS) code for a particular organization or business person.",
+					"type": "text"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"numberofemployees": {
+					"description": "The number of employees in an organization e.g. business.",
+					"type": "quantitativevalue"
+				},
+				"offeredby": {
+					"description": "A pointer to the organization or person making the offer.  inverse property: makesOffer.",
+					"type": "offer"
+				},
+				"organizer": {
+					"description": "An organizer of an Event. ",
+					"type": "event"
+				},
+				"owns": {
+					"description": "Products owned by the organization or person.",
+					"type": "product or  ownershipinfo"
+				},
+				"parentorganization": {
+					"description": "The larger organization that this organization is a branch of, if any. Supersedes branchOf. Inverse property: subOrganization.",
+					"type": "organization"
+				},
+				"participant": {
+					"description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*. ",
+					"type": "action"
+				},
+				"performer": {
+					"description": "A performer at the event&#x2014;for example, a presenter, musician, musical group or actor.  Supersedes performers.",
+					"type": "event"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"producer": {
+					"description": "The person or organization who produced the work (e.g. music album, movie, tv\/radio series etc.). ",
+					"type": "creativework"
+				},
+				"productioncompany": {
+					"description": "The production company or studio responsible for the item e.g. series, video game, episode etc. ",
+					"type": "creativeworkseason or movie or episode or movieseries or mediaobject or radioseries or tvseries or videogameseries"
+				},
+				"provider": {
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.  Supersedes carrier.",
+					"type": "flight or invoice or bustrip or service or creativework or parceldelivery or reservation or traintrip"
+				},
+				"publisher": {
+					"description": "The publisher of the creative work. ",
+					"type": "creativework"
+				},
+				"recipient": {
+					"description": "A sub property of participant. The participant who is at the receiving end of the action. ",
+					"type": "returnaction or giveaction or tipaction or communicateaction or payaction or authorizeaction or donateaction or sendaction"
+				},
+				"recognizingauthority": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine. ",
+					"type": "medicalentity"
+				},
+				"recordlabel": {
+					"description": "The label that issued the release. ",
+					"type": "musicrelease"
+				},
+				"review": {
+					"description": "A review of the item. Supersedes reviews.",
+					"type": "review"
+				},
+				"reviewedby": {
+					"description": "People or organizations that have reviewed the content on this web page for accuracy and\/or completeness. ",
+					"type": "webpage"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"seeks": {
+					"description": "A pointer to products or services sought by the organization or person (demand).",
+					"type": "demand"
+				},
+				"seller": {
+					"description": "An entity which offers (sells \/ leases \/ lends \/ loans) the services \/ goods.  A seller may also be a provider.  Supersedes vendor.",
+					"type": "demand or buyaction or offer or order or flight"
+				},
+				"sender": {
+					"description": "A sub property of participant. The participant who is at the sending end of the action. ",
+					"type": "receiveaction"
+				},
+				"serviceoperator": {
+					"description": "The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor. ",
+					"type": "governmentservice"
+				},
+				"sourceorganization": {
+					"description": "The Organization on whose behalf the creator was working. ",
+					"type": "creativework"
+				},
+				"sponsor": {
+					"description": "Sponsor of the study. ",
+					"type": "medicalstudy"
+				},
+				"suborganization": {
+					"description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific \\'department\\' property. Inverse property: parentOrganization.",
+					"type": "organization"
+				},
+				"taxid": {
+					"description": "The Tax \/ Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF\/NIF in Spain.",
+					"type": "text"
+				},
+				"telephone": {
+					"description": "The telephone number.",
+					"type": "text"
+				},
+				"translator": {
+					"description": "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market. ",
+					"type": "creativework"
+				},
+				"undername": {
+					"description": "The person or organization the reservation or ticket is for. ",
+					"type": "reservation or ticket"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				},
+				"vatid": {
+					"description": "The Value-added Tax ID of the organization or person.",
+					"type": "text"
+				},
+				"worksfor": {
+					"description": "Organizations that the person works for. ",
+					"type": "person"
+				}
+			}
+		}
+	}
+}

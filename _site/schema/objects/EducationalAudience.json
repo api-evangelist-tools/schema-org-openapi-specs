@@ -1,0 +1,21 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/EducationalAudience.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "An EducationalAudience.",
+    "properties": {
+        "educationalRole": {
+            "description": "An educationalRole of an EducationalAudience.",
+            "type": "string"
+        },
+        "audienceType": {
+            "description": "The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).",
+            "type": "string"
+        },
+        "geographicArea": {
+            "description": "The geographic area associated with the audience.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/AdministrativeArea"
+            }
+        }
+    }
+}

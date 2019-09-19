@@ -1,0 +1,37 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/MonetaryAmount.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between \u00a31,000 and \u00a31,000,000 GBP, or the value of a salary, etc. It is recommended to use PriceSpecification Types to describe the price of an Offer, Invoice, etc.",
+    "properties": {
+        "minValue": {
+            "description": "The lower value of some characteristic or property.",
+            "type": "number",
+            "format": "float"
+        },
+        "currency": {
+            "description": "The currency in which the monetary amount is expressed (in 3-letter ISO 4217 format).",
+            "type": "string"
+        },
+        "value": {
+            "description": "The value of the quantitative value or property value node.   For QuantitativeValue and MonetaryAmount, the recommended type for values is  Number . For PropertyValue, it can be  Text; ,  Number ,  Boolean , or  StructuredValue .  ",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/StructuredValue"
+            }
+        },
+        "validFrom": {
+            "description": "The date when the item becomes valid.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "validThrough": {
+            "description": "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "maxValue": {
+            "description": "The upper value of some characteristic or property.",
+            "type": "number",
+            "format": "float"
+        }
+    }
+}

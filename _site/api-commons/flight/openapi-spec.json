@@ -1,0 +1,606 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Flight API",
+		"description": "An airline flight.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "flight.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/flight\/": {
+			"get": {
+				"summary": "Get Flight",
+				"description": "Returns Flight",
+				"operationId": "getFlight",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Flight"
+							}
+						}
+					}
+				},
+				"tags": ["Flight"]
+			},
+			"post": {
+				"summary": "Add Flight",
+				"description": "Add Flight",
+				"operationId": "addFlight",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "aircraft",
+					"in": "formData",
+					"description": "The kind of aircraft (e.g., \\\"Boeing 747\\\").",
+					"required": false,
+					"type": "text or  vehicle"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "arrivalairport",
+					"in": "formData",
+					"description": "The airport where the flight terminates.",
+					"required": false,
+					"type": "airport"
+				},
+				{
+					"name": "arrivalgate",
+					"in": "formData",
+					"description": "Identifier of the flight\\'s arrival gate.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "arrivalterminal",
+					"in": "formData",
+					"description": "Identifier of the flight\\'s arrival terminal.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "arrivaltime",
+					"in": "formData",
+					"description": "The expected arrival time.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "boardingpolicy",
+					"in": "formData",
+					"description": "The type of boarding policy used by the airline (e.g. zone-based or group-based).",
+					"required": false,
+					"type": "boardingpolicytype"
+				},
+				{
+					"name": "departureairport",
+					"in": "formData",
+					"description": "The airport where the flight originates.",
+					"required": false,
+					"type": "airport"
+				},
+				{
+					"name": "departuregate",
+					"in": "formData",
+					"description": "Identifier of the flight\\'s departure gate.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "departureterminal",
+					"in": "formData",
+					"description": "Identifier of the flight\\'s departure terminal.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "departuretime",
+					"in": "formData",
+					"description": "The expected departure time.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "estimatedflightduration",
+					"in": "formData",
+					"description": "The estimated time the flight will take.",
+					"required": false,
+					"type": "duration or  text"
+				},
+				{
+					"name": "flightdistance",
+					"in": "formData",
+					"description": "The distance of the flight.",
+					"required": false,
+					"type": "text or  distance"
+				},
+				{
+					"name": "flightnumber",
+					"in": "formData",
+					"description": "The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is \\'UA\\', the flightNumber is \\'UA110\\'.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "mealservice",
+					"in": "formData",
+					"description": "Description of the meals that will be provided or available for purchase.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "provider",
+					"in": "formData",
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "seller",
+					"in": "formData",
+					"description": "An entity which offers (sells \/ leases \/ lends \/ loans) the services \/ goods.  A seller may also be a provider. Supersedes vendor, merchant.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "webcheckintime",
+					"in": "formData",
+					"description": "The time when a passenger can check into the flight online.",
+					"required": false,
+					"type": "datetime"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Flight"
+							}
+						}
+					}
+				},
+				"tags": ["Flight"]
+			}
+		},
+		"\/flight\/{id}\/": {
+			"get": {
+				"summary": "Get Flight",
+				"description": "Returns a single Flight",
+				"operationId": "getFlight",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Flight"
+							}
+						}
+					}
+				},
+				"tags": ["Flight"]
+			},
+			"put": {
+				"summary": "Update Flight",
+				"description": "Update a single Flight",
+				"operationId": "updateFlightItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "aircraft",
+					"in": "formData",
+					"description": "The kind of aircraft (e.g., \\\"Boeing 747\\\").",
+					"required": false,
+					"type": "text or  vehicle"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "arrivalairport",
+					"in": "formData",
+					"description": "The airport where the flight terminates.",
+					"required": false,
+					"type": "airport"
+				},
+				{
+					"name": "arrivalgate",
+					"in": "formData",
+					"description": "Identifier of the flight\\'s arrival gate.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "arrivalterminal",
+					"in": "formData",
+					"description": "Identifier of the flight\\'s arrival terminal.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "arrivaltime",
+					"in": "formData",
+					"description": "The expected arrival time.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "boardingpolicy",
+					"in": "formData",
+					"description": "The type of boarding policy used by the airline (e.g. zone-based or group-based).",
+					"required": false,
+					"type": "boardingpolicytype"
+				},
+				{
+					"name": "departureairport",
+					"in": "formData",
+					"description": "The airport where the flight originates.",
+					"required": false,
+					"type": "airport"
+				},
+				{
+					"name": "departuregate",
+					"in": "formData",
+					"description": "Identifier of the flight\\'s departure gate.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "departureterminal",
+					"in": "formData",
+					"description": "Identifier of the flight\\'s departure terminal.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "departuretime",
+					"in": "formData",
+					"description": "The expected departure time.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "estimatedflightduration",
+					"in": "formData",
+					"description": "The estimated time the flight will take.",
+					"required": false,
+					"type": "duration or  text"
+				},
+				{
+					"name": "flightdistance",
+					"in": "formData",
+					"description": "The distance of the flight.",
+					"required": false,
+					"type": "text or  distance"
+				},
+				{
+					"name": "flightnumber",
+					"in": "formData",
+					"description": "The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is \\'UA\\', the flightNumber is \\'UA110\\'.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "mealservice",
+					"in": "formData",
+					"description": "Description of the meals that will be provided or available for purchase.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "provider",
+					"in": "formData",
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "seller",
+					"in": "formData",
+					"description": "An entity which offers (sells \/ leases \/ lends \/ loans) the services \/ goods.  A seller may also be a provider. Supersedes vendor, merchant.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "webcheckintime",
+					"in": "formData",
+					"description": "The time when a passenger can check into the flight online.",
+					"required": false,
+					"type": "datetime"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Flight"
+							}
+						}
+					}
+				},
+				"tags": ["Flight"]
+			},
+			"delete": {
+				"summary": "Flight",
+				"description": "Deletes a single Flight",
+				"operationId": "deleteFlight",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Flight"
+							}
+						}
+					}
+				},
+				"tags": ["Flight"]
+			}
+		}
+	},
+	"definitions": {
+		"Flight": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"aircraft": {
+					"description": "The kind of aircraft (e.g., \\\"Boeing 747\\\").",
+					"type": "text or  vehicle"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"arrivalairport": {
+					"description": "The airport where the flight terminates.",
+					"type": "airport"
+				},
+				"arrivalgate": {
+					"description": "Identifier of the flight\\'s arrival gate.",
+					"type": "text"
+				},
+				"arrivalterminal": {
+					"description": "Identifier of the flight\\'s arrival terminal.",
+					"type": "text"
+				},
+				"arrivaltime": {
+					"description": "The expected arrival time.",
+					"type": "datetime"
+				},
+				"boardingpolicy": {
+					"description": "The type of boarding policy used by the airline (e.g. zone-based or group-based).",
+					"type": "boardingpolicytype"
+				},
+				"departureairport": {
+					"description": "The airport where the flight originates.",
+					"type": "airport"
+				},
+				"departuregate": {
+					"description": "Identifier of the flight\\'s departure gate.",
+					"type": "text"
+				},
+				"departureterminal": {
+					"description": "Identifier of the flight\\'s departure terminal.",
+					"type": "text"
+				},
+				"departuretime": {
+					"description": "The expected departure time.",
+					"type": "datetime"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"estimatedflightduration": {
+					"description": "The estimated time the flight will take.",
+					"type": "duration or  text"
+				},
+				"flightdistance": {
+					"description": "The distance of the flight.",
+					"type": "text or  distance"
+				},
+				"flightnumber": {
+					"description": "The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is \\'UA\\', the flightNumber is \\'UA110\\'.",
+					"type": "text"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"mealservice": {
+					"description": "Description of the meals that will be provided or available for purchase.",
+					"type": "text"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"provider": {
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"type": "person or  organization"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"seller": {
+					"description": "An entity which offers (sells \/ leases \/ lends \/ loans) the services \/ goods.  A seller may also be a provider. Supersedes vendor, merchant.",
+					"type": "person or  organization"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				},
+				"webcheckintime": {
+					"description": "The time when a passenger can check into the flight online.",
+					"type": "datetime"
+				}
+			}
+		}
+	}
+}

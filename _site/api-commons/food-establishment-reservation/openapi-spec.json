@@ -1,0 +1,570 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Food Establishment Reservation API",
+		"description": "A reservation to dine at a food-related business.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "food.establishment.reservation.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/food-establishment-reservation\/": {
+			"get": {
+				"summary": "Get Food Establishment Reservation",
+				"description": "Returns Food Establishment Reservation",
+				"operationId": "getFoodEstablishmentReservation",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/FoodEstablishmentReservation"
+							}
+						}
+					}
+				},
+				"tags": ["Food Establishment Reservation"]
+			},
+			"post": {
+				"summary": "Add Food Establishment Reservation",
+				"description": "Add Food Establishment Reservation",
+				"operationId": "addFoodEstablishmentReservation",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "bookingtime",
+					"in": "formData",
+					"description": "The date and time the reservation was booked.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "broker",
+					"in": "formData",
+					"description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes bookingAgent.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "endtime",
+					"in": "formData",
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "imageobject or  url"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "modifiedtime",
+					"in": "formData",
+					"description": "The date and time the reservation was modified.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "partysize",
+					"in": "formData",
+					"description": "Number of people the reservation should accommodate.",
+					"required": false,
+					"type": "integer or  quantitativevalue"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "pricecurrency",
+					"in": "formData",
+					"description": "The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "programmembershipused",
+					"in": "formData",
+					"description": "Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.",
+					"required": false,
+					"type": "programmembership"
+				},
+				{
+					"name": "provider",
+					"in": "formData",
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "reservationfor",
+					"in": "formData",
+					"description": "The thing -- flight, event, restaurant,etc. being reserved.",
+					"required": false,
+					"type": "thing"
+				},
+				{
+					"name": "reservationid",
+					"in": "formData",
+					"description": "A unique identifier for the reservation.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "reservationstatus",
+					"in": "formData",
+					"description": "The current status of the reservation.",
+					"required": false,
+					"type": "reservationstatustype"
+				},
+				{
+					"name": "reservedticket",
+					"in": "formData",
+					"description": "A ticket associated with the reservation.",
+					"required": false,
+					"type": "ticket"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "starttime",
+					"in": "formData",
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "totalprice",
+					"in": "formData",
+					"description": "The total price for the reservation or ticket, including applicable taxes, shipping, etc.",
+					"required": false,
+					"type": "number or  text or  pricespecification"
+				},
+				{
+					"name": "undername",
+					"in": "formData",
+					"description": "The person or organization the reservation or ticket is for.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/FoodEstablishmentReservation"
+							}
+						}
+					}
+				},
+				"tags": ["Food Establishment Reservation"]
+			}
+		},
+		"\/food-establishment-reservation\/{id}\/": {
+			"get": {
+				"summary": "Get Food Establishment Reservation",
+				"description": "Returns a single Food Establishment Reservation",
+				"operationId": "getFoodEstablishmentReservation",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/FoodEstablishmentReservation"
+							}
+						}
+					}
+				},
+				"tags": ["Food Establishment Reservation"]
+			},
+			"put": {
+				"summary": "Update Food Establishment Reservation",
+				"description": "Update a single Food Establishment Reservation",
+				"operationId": "updateFoodEstablishmentReservationItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "bookingtime",
+					"in": "formData",
+					"description": "The date and time the reservation was booked.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "broker",
+					"in": "formData",
+					"description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes bookingAgent.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "endtime",
+					"in": "formData",
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "imageobject or  url"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "modifiedtime",
+					"in": "formData",
+					"description": "The date and time the reservation was modified.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "partysize",
+					"in": "formData",
+					"description": "Number of people the reservation should accommodate.",
+					"required": false,
+					"type": "integer or  quantitativevalue"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "pricecurrency",
+					"in": "formData",
+					"description": "The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "programmembershipused",
+					"in": "formData",
+					"description": "Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.",
+					"required": false,
+					"type": "programmembership"
+				},
+				{
+					"name": "provider",
+					"in": "formData",
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "reservationfor",
+					"in": "formData",
+					"description": "The thing -- flight, event, restaurant,etc. being reserved.",
+					"required": false,
+					"type": "thing"
+				},
+				{
+					"name": "reservationid",
+					"in": "formData",
+					"description": "A unique identifier for the reservation.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "reservationstatus",
+					"in": "formData",
+					"description": "The current status of the reservation.",
+					"required": false,
+					"type": "reservationstatustype"
+				},
+				{
+					"name": "reservedticket",
+					"in": "formData",
+					"description": "A ticket associated with the reservation.",
+					"required": false,
+					"type": "ticket"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "starttime",
+					"in": "formData",
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "totalprice",
+					"in": "formData",
+					"description": "The total price for the reservation or ticket, including applicable taxes, shipping, etc.",
+					"required": false,
+					"type": "number or  text or  pricespecification"
+				},
+				{
+					"name": "undername",
+					"in": "formData",
+					"description": "The person or organization the reservation or ticket is for.",
+					"required": false,
+					"type": "person or  organization"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/FoodEstablishmentReservation"
+							}
+						}
+					}
+				},
+				"tags": ["Food Establishment Reservation"]
+			},
+			"delete": {
+				"summary": "Food Establishment Reservation",
+				"description": "Deletes a single Food Establishment Reservation",
+				"operationId": "deleteFoodEstablishmentReservation",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/FoodEstablishmentReservation"
+							}
+						}
+					}
+				},
+				"tags": ["Food Establishment Reservation"]
+			}
+		}
+	},
+	"definitions": {
+		"FoodEstablishmentReservation": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"bookingtime": {
+					"description": "The date and time the reservation was booked.",
+					"type": "datetime"
+				},
+				"broker": {
+					"description": "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred. Supersedes bookingAgent.",
+					"type": "person or  organization"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"endtime": {
+					"description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "imageobject or  url"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"modifiedtime": {
+					"description": "The date and time the reservation was modified.",
+					"type": "datetime"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"partysize": {
+					"description": "Number of people the reservation should accommodate.",
+					"type": "integer or  quantitativevalue"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"pricecurrency": {
+					"description": "The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.",
+					"type": "text"
+				},
+				"programmembershipused": {
+					"description": "Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.",
+					"type": "programmembership"
+				},
+				"provider": {
+					"description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+					"type": "person or  organization"
+				},
+				"reservationfor": {
+					"description": "The thing -- flight, event, restaurant,etc. being reserved.",
+					"type": "thing"
+				},
+				"reservationid": {
+					"description": "A unique identifier for the reservation.",
+					"type": "text"
+				},
+				"reservationstatus": {
+					"description": "The current status of the reservation.",
+					"type": "reservationstatustype"
+				},
+				"reservedticket": {
+					"description": "A ticket associated with the reservation.",
+					"type": "ticket"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"starttime": {
+					"description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December.Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+					"type": "datetime"
+				},
+				"totalprice": {
+					"description": "The total price for the reservation or ticket, including applicable taxes, shipping, etc.",
+					"type": "number or  text or  pricespecification"
+				},
+				"undername": {
+					"description": "The person or organization the reservation or ticket is for.",
+					"type": "person or  organization"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}
+		}
+	}
+}

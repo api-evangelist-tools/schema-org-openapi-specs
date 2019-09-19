@@ -1,0 +1,53 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/BarOrPub.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A bar or pub.",
+    "properties": {
+        "servesCuisine": {
+            "description": "The cuisine of the restaurant.",
+            "type": "string"
+        },
+        "hasMenu": {
+            "description": "Either the actual menu as a structured representation, as text, or a URL of the menu.",
+            "type": "string"
+        },
+        "menu": {
+            "description": "Either the actual menu as a structured representation, as text, or a URL of the menu.",
+            "type": "string"
+        },
+        "starRating": {
+            "description": "An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Rating"
+            }
+        },
+        "acceptsReservations": {
+            "description": "Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings Yes or No.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "priceRange": {
+            "description": "The price range of the business, for example $$$.",
+            "type": "string"
+        },
+        "branchOf": {
+            "description": "The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical)branch.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "paymentAccepted": {
+            "description": "Cash, credit card, etc.",
+            "type": "string"
+        },
+        "openingHours": {
+            "description": "The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day.",
+            "type": "string"
+        },
+        "currenciesAccepted": {
+            "description": "The currency accepted (in ISO 4217 currency format).",
+            "type": "string"
+        }
+    }
+}

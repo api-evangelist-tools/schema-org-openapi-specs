@@ -1,0 +1,77 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/NutritionInformation.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "Nutritional information about the recipe.",
+    "properties": {
+        "saturatedFatContent": {
+            "description": "The number of grams of saturated fat.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Mass"
+            }
+        },
+        "fatContent": {
+            "description": "The number of grams of fat.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Mass"
+            }
+        },
+        "unsaturatedFatContent": {
+            "description": "The number of grams of unsaturated fat.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Mass"
+            }
+        },
+        "sugarContent": {
+            "description": "The number of grams of sugar.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Mass"
+            }
+        },
+        "cholesterolContent": {
+            "description": "The number of milligrams of cholesterol.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Mass"
+            }
+        },
+        "carbohydrateContent": {
+            "description": "The number of grams of carbohydrates.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Mass"
+            }
+        },
+        "proteinContent": {
+            "description": "The number of grams of protein.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Mass"
+            }
+        },
+        "sodiumContent": {
+            "description": "The number of milligrams of sodium.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Mass"
+            }
+        },
+        "transFatContent": {
+            "description": "The number of grams of trans fat.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Mass"
+            }
+        },
+        "fiberContent": {
+            "description": "The number of grams of fiber.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Mass"
+            }
+        },
+        "calories": {
+            "description": "The number of calories.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Energy"
+            }
+        },
+        "servingSize": {
+            "description": "The serving size, in terms of the number of volume or mass.",
+            "type": "string"
+        }
+    }
+}

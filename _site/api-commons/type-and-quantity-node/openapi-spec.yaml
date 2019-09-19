@@ -1,0 +1,355 @@
+- swagger: "2.0"
+  info:
+    title: Type And Quantity Node API
+    description: A structured value indicating the quantity, unit of measurement, and
+      business function of goods included in a bundle offer.
+    termsOfService: http://apievangelist.com/terms-of-service.html
+    version: v1
+  host: type.and.quantity.node.example.com
+  basePath: /
+  schemes:
+  - http
+  produces:
+  - application/json
+  paths:
+    /type-and-quantity-node/:
+      get:
+        summary: Get Type And Quantity Node
+        description: Returns Type And Quantity Node
+        operationId: getTypeAndQuantityNode
+        parameters:
+        - name: q
+          in: query
+          description: Keyword search for item
+          required: false
+          type: string
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TypeAndQuantityNode'
+        tags:
+        - Type And Quantity Node
+      post:
+        summary: Add Type And Quantity Node
+        description: Add Type And Quantity Node
+        operationId: addTypeAndQuantityNode
+        parameters:
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: amountofthisgood
+          in: formData
+          description: The quantity of the goods included in the offer.
+          required: false
+          type: number
+        - name: businessfunction
+          in: formData
+          description: The business function (e.g. sell, lease, repair, dispose) of
+            the offer or component of a bundle (TypeAndQuantityNode). The default is
+            http://purl.org/goodrelations/v1#Sell.
+          required: false
+          type: businessfunction
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: includesobject
+          in: formData
+          description: 'This links to a node or nodes indicating the exact quantity
+            of the products included in the offer. '
+          required: false
+          type: demand or offer
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: typeofgood
+          in: formData
+          description: The product that this structured value is referring to.
+          required: false
+          type: product
+        - name: unitcode
+          in: formData
+          description: The unit of measurement given using the UN/CEFACT Common Code
+            (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may
+            be used with a prefix followed by a colon.
+          required: false
+          type: text or  url
+        - name: unittext
+          in: formData
+          description: A string or text indicating the unit of measurement. Useful if
+            you cannot provide a standard unit code forunitCode.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TypeAndQuantityNode'
+        tags:
+        - Type And Quantity Node
+    /type-and-quantity-node/{id}/:
+      get:
+        summary: Get Type And Quantity Node
+        description: Returns a single Type And Quantity Node
+        operationId: getTypeAndQuantityNode
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TypeAndQuantityNode'
+        tags:
+        - Type And Quantity Node
+      put:
+        summary: Update Type And Quantity Node
+        description: Update a single Type And Quantity Node
+        operationId: updateTypeAndQuantityNodeItem
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        - name: additionaltype
+          in: formData
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          required: false
+          type: url
+        - name: alternatename
+          in: formData
+          description: An alias for the item.
+          required: false
+          type: text
+        - name: amountofthisgood
+          in: formData
+          description: The quantity of the goods included in the offer.
+          required: false
+          type: number
+        - name: businessfunction
+          in: formData
+          description: The business function (e.g. sell, lease, repair, dispose) of
+            the offer or component of a bundle (TypeAndQuantityNode). The default is
+            http://purl.org/goodrelations/v1#Sell.
+          required: false
+          type: businessfunction
+        - name: description
+          in: formData
+          description: A short description of the item.
+          required: false
+          type: text
+        - name: image
+          in: formData
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          required: false
+          type: url or  imageobject
+        - name: includesobject
+          in: formData
+          description: 'This links to a node or nodes indicating the exact quantity
+            of the products included in the offer. '
+          required: false
+          type: demand or offer
+        - name: mainentityofpage
+          in: formData
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          required: false
+          type: creativework or  url
+        - name: name
+          in: formData
+          description: The name of the item.
+          required: false
+          type: text
+        - name: potentialaction
+          in: formData
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          required: false
+          type: action
+        - name: sameas
+          in: formData
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          required: false
+          type: url
+        - name: typeofgood
+          in: formData
+          description: The product that this structured value is referring to.
+          required: false
+          type: product
+        - name: unitcode
+          in: formData
+          description: The unit of measurement given using the UN/CEFACT Common Code
+            (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may
+            be used with a prefix followed by a colon.
+          required: false
+          type: text or  url
+        - name: unittext
+          in: formData
+          description: A string or text indicating the unit of measurement. Useful if
+            you cannot provide a standard unit code forunitCode.
+          required: false
+          type: text
+        - name: url
+          in: formData
+          description: URL of the item.
+          required: false
+          type: url
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TypeAndQuantityNode'
+        tags:
+        - Type And Quantity Node
+      delete:
+        summary: Type And Quantity Node
+        description: Deletes a single Type And Quantity Node
+        operationId: deleteTypeAndQuantityNode
+        parameters:
+        - name: id
+          in: path
+          description: Unique id for item
+          required: true
+          type: integer
+        responses:
+          200:
+            description: A successful response.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/TypeAndQuantityNode'
+        tags:
+        - Type And Quantity Node
+  definitions:
+    TypeAndQuantityNode:
+      properties:
+        additionaltype:
+          description: An additional type for the item, typically used for adding more
+            specific types from external vocabularies in microdata syntax. This is a
+            relationship between something and a class that the thing is in. In RDFa
+            syntax, it is better to use the native RDFa syntax - the \'typeof\' attribute
+            - for multiple types. Schema.org tools may have only weaker understanding
+            of extra types, in particular those defined externally.
+          type: url
+        alternatename:
+          description: An alias for the item.
+          type: text
+        amountofthisgood:
+          description: The quantity of the goods included in the offer.
+          type: number
+        businessfunction:
+          description: The business function (e.g. sell, lease, repair, dispose) of
+            the offer or component of a bundle (TypeAndQuantityNode). The default is
+            http://purl.org/goodrelations/v1#Sell.
+          type: businessfunction
+        description:
+          description: A short description of the item.
+          type: text
+        image:
+          description: An image of the item. This can be a URL or a fully described
+            ImageObject.
+          type: url or  imageobject
+        includesobject:
+          description: 'This links to a node or nodes indicating the exact quantity
+            of the products included in the offer. '
+          type: demand or offer
+        mainentityofpage:
+          description: 'Indicates a page (or other CreativeWork) for which this thing
+            is the main entity being described.            See background notes for
+            details.       Inverse property: mainEntity.'
+          type: creativework or  url
+        name:
+          description: The name of the item.
+          type: text
+        potentialaction:
+          description: Indicates a potential Action, which describes an idealized action
+            in which this thing would play an \'object\' role.
+          type: action
+        sameas:
+          description: URL of a reference Web page that unambiguously indicates the
+            item\'s identity. E.g. the URL of the item\'s Wikipedia page, Freebase page,
+            or official website.
+          type: url
+        typeofgood:
+          description: The product that this structured value is referring to.
+          type: product
+        unitcode:
+          description: The unit of measurement given using the UN/CEFACT Common Code
+            (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may
+            be used with a prefix followed by a colon.
+          type: text or  url
+        unittext:
+          description: A string or text indicating the unit of measurement. Useful if
+            you cannot provide a standard unit code forunitCode.
+          type: text
+        url:
+          description: URL of the item.
+          type: url

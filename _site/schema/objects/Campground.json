@@ -1,0 +1,47 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/Campground.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A camping site, campsite, or campground is a place used for overnight stay in the outdoors. In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or parks a camper; a campground may contain many campsites (Source: Wikipedia, the free encyclopedia, see http:\/\/en.wikipedia.org\/wiki\/Campsite).    See also the dedicated document on the use of schema.org for marking up hotels and other forms of accommodations.",
+    "properties": {
+        "audience": {
+            "description": "An intended audience, i.e. a group for whom something was created.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Audience"
+            }
+        },
+        "checkinTime": {
+            "description": "The earliest someone may check into a lodging establishment.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "petsAllowed": {
+            "description": "Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.",
+            "type": "string"
+        },
+        "availableLanguage": {
+            "description": "A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. See also inLanguage",
+            "type": "string"
+        },
+        "amenityFeature": {
+            "description": "An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/LocationFeatureSpecification"
+            }
+        },
+        "starRating": {
+            "description": "An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Rating"
+            }
+        },
+        "checkoutTime": {
+            "description": "The latest someone may check out of a lodging establishment.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "openingHours": {
+            "description": "The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day.",
+            "type": "string"
+        }
+    }
+}

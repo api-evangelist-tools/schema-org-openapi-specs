@@ -1,0 +1,33 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/OpeningHoursSpecification.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A structured value providing information about the opening hours of a place or a certain service inside a place.  The place is open if the opens property is specified, and closed otherwise.  If the value for the closes property is less than the value for the opens property then the hour range is assumed to span over the next day.",
+    "properties": {
+        "validFrom": {
+            "description": "The date when the item becomes valid.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "validThrough": {
+            "description": "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "opens": {
+            "description": "The opening hour of the place or service on the given day(s) of the week.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "closes": {
+            "description": "The closing hour of the place or service on the given day(s) of the week.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "dayOfWeek": {
+            "description": "The day of the week for which these opening hours are valid.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/DayOfWeek"
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/RsvpAction.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "The act of notifying an event organizer as to whether you expect to attend the event.",
+    "properties": {
+        "additionalNumberOfGuests": {
+            "description": "If responding yes, the number of guests who will attend in addition to the invitee.",
+            "type": "number",
+            "format": "float"
+        },
+        "comment": {
+            "description": "Comments, typically from users.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Comment"
+            }
+        },
+        "rsvpResponse": {
+            "description": "The response (yes, no, maybe) to the RSVP.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/RsvpResponseType"
+            }
+        },
+        "event": {
+            "description": "Upcoming or past event associated with this place, organization, or action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Event"
+            }
+        }
+    }
+}

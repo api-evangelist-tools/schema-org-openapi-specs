@@ -1,0 +1,24 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/GameServer.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "Server that provides game interaction in a multiplayer game.",
+    "properties": {
+        "game": {
+            "description": "Video game which is played on this server.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/VideoGame"
+            }
+        },
+        "playersOnline": {
+            "description": "Number of players on the server.",
+            "type": "integer",
+            "format": "int32"
+        },
+        "serverStatus": {
+            "description": "Status of a game server.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/GameServerStatus"
+            }
+        }
+    }
+}

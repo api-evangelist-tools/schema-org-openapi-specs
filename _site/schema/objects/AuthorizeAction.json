@@ -1,0 +1,13 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/AuthorizeAction.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "The act of granting permission to an object.",
+    "properties": {
+        "recipient": {
+            "description": "A sub property of participant. The participant who is at the receiving end of the action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        }
+    }
+}

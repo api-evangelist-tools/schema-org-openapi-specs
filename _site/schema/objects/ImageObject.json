@@ -1,0 +1,104 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/ImageObject.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "An image file.",
+    "properties": {
+        "exifData": {
+            "description": "exif data for this object.",
+            "type": "string"
+        },
+        "representativeOfPage": {
+            "description": "Indicates whether this image is representative of the content of the page.",
+            "type": "boolean"
+        },
+        "thumbnail": {
+            "description": "Thumbnail image for an image or video.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ImageObject"
+            }
+        },
+        "caption": {
+            "description": "The caption for this object.",
+            "type": "string"
+        },
+        "uploadDate": {
+            "description": "Date when this media object was uploaded to this site.",
+            "type": "string",
+            "format": "date"
+        },
+        "playerType": {
+            "description": "Player type required&#x2014;for example, Flash or Silverlight.",
+            "type": "string"
+        },
+        "height": {
+            "description": "The height of the item.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Distance"
+            }
+        },
+        "bitrate": {
+            "description": "The bitrate of the media object.",
+            "type": "string"
+        },
+        "requiresSubscription": {
+            "description": "Indicates if use of the media require a subscription  (either paid or free). Allowed values are true or false (note that an earlier version had  yes ,  no ).",
+            "type": "boolean"
+        },
+        "regionsAllowed": {
+            "description": "The regions where the media is allowed. If not specified, then it s assumed to be allowed everywhere. Specify the countries in ISO 3166 format.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Place"
+            }
+        },
+        "contentSize": {
+            "description": "File size in (mega\/kilo) bytes.",
+            "type": "string"
+        },
+        "embedUrl": {
+            "description": "A URL pointing to a player for a specific video. In general, this is the information in the src element of an embed tag and should not be the same as the content of the loc tag.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "width": {
+            "description": "The width of the item.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Distance"
+            }
+        },
+        "contentUrl": {
+            "description": "Actual bytes of the media object, for example the image file or video file.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "associatedArticle": {
+            "description": "A NewsArticle associated with the Media Object.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/NewsArticle"
+            }
+        },
+        "productionCompany": {
+            "description": "The production company or studio responsible for the item e.g. series, video game, episode etc.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "duration": {
+            "description": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Duration"
+            }
+        },
+        "encodesCreativeWork": {
+            "description": "The CreativeWork encoded by this media object.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWork"
+            }
+        },
+        "encodingFormat": {
+            "description": "mp3, mpeg4, etc.",
+            "type": "string"
+        }
+    }
+}

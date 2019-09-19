@@ -1,0 +1,19 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/Airport.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "An airport.",
+    "properties": {
+        "iataCode": {
+            "description": "IATA identifier for an airline or airport.",
+            "type": "string"
+        },
+        "icaoCode": {
+            "description": "ICAO identifier for an airport.",
+            "type": "string"
+        },
+        "openingHours": {
+            "description": "The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day.",
+            "type": "string"
+        }
+    }
+}

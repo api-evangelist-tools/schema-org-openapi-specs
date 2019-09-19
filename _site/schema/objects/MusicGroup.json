@@ -1,0 +1,43 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/MusicGroup.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.",
+    "properties": {
+        "albums": {
+            "description": "A collection of music albums.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MusicAlbum"
+            }
+        },
+        "track": {
+            "description": "A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ItemList"
+            }
+        },
+        "genre": {
+            "description": "Genre of the creative work, broadcast channel or group.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "tracks": {
+            "description": "A music recording (track)&#x2014;usually a single song.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MusicRecording"
+            }
+        },
+        "musicGroupMember": {
+            "description": "A member of a music group&#x2014;for example, John, Paul, George, or Ringo.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "album": {
+            "description": "A music album.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MusicAlbum"
+            }
+        }
+    }
+}

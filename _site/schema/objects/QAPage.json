@@ -1,0 +1,58 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/QAPage.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g. in a question answering site or documenting Frequently Asked Questions (FAQs).",
+    "properties": {
+        "breadcrumb": {
+            "description": "A set of links that can help a user understand and navigate a website hierarchy.",
+            "type": "string"
+        },
+        "significantLink": {
+            "description": "One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "relatedLink": {
+            "description": "A link related to this web page, for example to other related web pages.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "lastReviewed": {
+            "description": "Date on which the content on this web page was last reviewed for accuracy and\/or completeness.",
+            "type": "string",
+            "format": "date"
+        },
+        "mainContentOfPage": {
+            "description": "Indicates if this web page element is the main subject of the page.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/WebPageElement"
+            }
+        },
+        "reviewedBy": {
+            "description": "People or organizations that have reviewed the content on this web page for accuracy and\/or completeness.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "primaryImageOfPage": {
+            "description": "Indicates the main image on the page.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ImageObject"
+            }
+        },
+        "significantLinks": {
+            "description": "The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "specialty": {
+            "description": "One of the domain specialities to which this web page s content applies.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Specialty"
+            }
+        }
+    }
+}

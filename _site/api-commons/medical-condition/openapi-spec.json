@@ -1,0 +1,768 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Medical Condition API",
+		"description": "Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "medical.condition.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/medical-condition\/": {
+			"get": {
+				"summary": "Get Medical Condition",
+				"description": "Returns Medical Condition",
+				"operationId": "getMedicalCondition",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalCondition"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Condition"]
+			},
+			"post": {
+				"summary": "Add Medical Condition",
+				"description": "Add Medical Condition",
+				"operationId": "addMedicalCondition",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "associatedanatomy",
+					"in": "formData",
+					"description": "The anatomy of the underlying organ system or structures associated with this entity.",
+					"required": false,
+					"type": "anatomicalsystem or  superficialanatomy or  anatomicalstructure"
+				},
+				{
+					"name": "cause",
+					"in": "formData",
+					"description": "An underlying cause. More specifically, one of the causative agent(s) that are most directly responsible for the pathophysiologic process that eventually results in the occurrence.",
+					"required": false,
+					"type": "medicalcause"
+				},
+				{
+					"name": "code",
+					"in": "formData",
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"required": false,
+					"type": "medicalcode"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "diagnosis",
+					"in": "formData",
+					"description": "One or more alternative conditions considered in the differential diagnosis process. ",
+					"required": false,
+					"type": "ddxelement"
+				},
+				{
+					"name": "differentialdiagnosis",
+					"in": "formData",
+					"description": "One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.",
+					"required": false,
+					"type": "ddxelement"
+				},
+				{
+					"name": "epidemiology",
+					"in": "formData",
+					"description": "The characteristics of associated patients, such as age, gender, race etc.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "expectedprognosis",
+					"in": "formData",
+					"description": "The likely outcome in either the short term or long term of the medical condition.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "guideline",
+					"in": "formData",
+					"description": "A medical guideline related to this entity.",
+					"required": false,
+					"type": "medicalguideline"
+				},
+				{
+					"name": "healthcondition",
+					"in": "formData",
+					"description": "Expectations for health conditions of target audience. ",
+					"required": false,
+					"type": "peopleaudience"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "medicinesystem",
+					"in": "formData",
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"required": false,
+					"type": "medicinesystem"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "naturalprogression",
+					"in": "formData",
+					"description": "The expected progression of the condition if it is not treated and allowed to progress naturally.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "pathophysiology",
+					"in": "formData",
+					"description": "Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "possiblecomplication",
+					"in": "formData",
+					"description": "A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "possibletreatment",
+					"in": "formData",
+					"description": "A possible treatment to address this condition, sign or symptom.",
+					"required": false,
+					"type": "medicaltherapy"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "primaryprevention",
+					"in": "formData",
+					"description": "A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.",
+					"required": false,
+					"type": "medicaltherapy"
+				},
+				{
+					"name": "recognizingauthority",
+					"in": "formData",
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "relatedcondition",
+					"in": "formData",
+					"description": "A medical condition associated with this anatomy. ",
+					"required": false,
+					"type": "anatomicalsystem or superficialanatomy or anatomicalstructure"
+				},
+				{
+					"name": "relevantspecialty",
+					"in": "formData",
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"required": false,
+					"type": "medicalspecialty"
+				},
+				{
+					"name": "riskfactor",
+					"in": "formData",
+					"description": "A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.",
+					"required": false,
+					"type": "medicalriskfactor"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "secondaryprevention",
+					"in": "formData",
+					"description": "A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.",
+					"required": false,
+					"type": "medicaltherapy"
+				},
+				{
+					"name": "signorsymptom",
+					"in": "formData",
+					"description": "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.",
+					"required": false,
+					"type": "medicalsignorsymptom"
+				},
+				{
+					"name": "stage",
+					"in": "formData",
+					"description": "The stage of the condition, if applicable.",
+					"required": false,
+					"type": "medicalconditionstage"
+				},
+				{
+					"name": "study",
+					"in": "formData",
+					"description": "A medical study or trial related to this entity.",
+					"required": false,
+					"type": "medicalstudy"
+				},
+				{
+					"name": "subtype",
+					"in": "formData",
+					"description": "A more specific type of the condition, where applicable, for example \\'Type 1 Diabetes\\', \\'Type 2 Diabetes\\', or \\'Gestational Diabetes\\' for Diabetes.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "typicaltest",
+					"in": "formData",
+					"description": "A medical test typically performed given this condition.",
+					"required": false,
+					"type": "medicaltest"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "usedtodiagnose",
+					"in": "formData",
+					"description": "A condition the test is used to diagnose. ",
+					"required": false,
+					"type": "medicaltest"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalCondition"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Condition"]
+			}
+		},
+		"\/medical-condition\/{id}\/": {
+			"get": {
+				"summary": "Get Medical Condition",
+				"description": "Returns a single Medical Condition",
+				"operationId": "getMedicalCondition",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalCondition"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Condition"]
+			},
+			"put": {
+				"summary": "Update Medical Condition",
+				"description": "Update a single Medical Condition",
+				"operationId": "updateMedicalConditionItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "associatedanatomy",
+					"in": "formData",
+					"description": "The anatomy of the underlying organ system or structures associated with this entity.",
+					"required": false,
+					"type": "anatomicalsystem or  superficialanatomy or  anatomicalstructure"
+				},
+				{
+					"name": "cause",
+					"in": "formData",
+					"description": "An underlying cause. More specifically, one of the causative agent(s) that are most directly responsible for the pathophysiologic process that eventually results in the occurrence.",
+					"required": false,
+					"type": "medicalcause"
+				},
+				{
+					"name": "code",
+					"in": "formData",
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"required": false,
+					"type": "medicalcode"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "diagnosis",
+					"in": "formData",
+					"description": "One or more alternative conditions considered in the differential diagnosis process. ",
+					"required": false,
+					"type": "ddxelement"
+				},
+				{
+					"name": "differentialdiagnosis",
+					"in": "formData",
+					"description": "One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.",
+					"required": false,
+					"type": "ddxelement"
+				},
+				{
+					"name": "epidemiology",
+					"in": "formData",
+					"description": "The characteristics of associated patients, such as age, gender, race etc.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "expectedprognosis",
+					"in": "formData",
+					"description": "The likely outcome in either the short term or long term of the medical condition.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "guideline",
+					"in": "formData",
+					"description": "A medical guideline related to this entity.",
+					"required": false,
+					"type": "medicalguideline"
+				},
+				{
+					"name": "healthcondition",
+					"in": "formData",
+					"description": "Expectations for health conditions of target audience. ",
+					"required": false,
+					"type": "peopleaudience"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "medicinesystem",
+					"in": "formData",
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"required": false,
+					"type": "medicinesystem"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "naturalprogression",
+					"in": "formData",
+					"description": "The expected progression of the condition if it is not treated and allowed to progress naturally.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "pathophysiology",
+					"in": "formData",
+					"description": "Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "possiblecomplication",
+					"in": "formData",
+					"description": "A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "possibletreatment",
+					"in": "formData",
+					"description": "A possible treatment to address this condition, sign or symptom.",
+					"required": false,
+					"type": "medicaltherapy"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "primaryprevention",
+					"in": "formData",
+					"description": "A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.",
+					"required": false,
+					"type": "medicaltherapy"
+				},
+				{
+					"name": "recognizingauthority",
+					"in": "formData",
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "relatedcondition",
+					"in": "formData",
+					"description": "A medical condition associated with this anatomy. ",
+					"required": false,
+					"type": "anatomicalsystem or superficialanatomy or anatomicalstructure"
+				},
+				{
+					"name": "relevantspecialty",
+					"in": "formData",
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"required": false,
+					"type": "medicalspecialty"
+				},
+				{
+					"name": "riskfactor",
+					"in": "formData",
+					"description": "A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.",
+					"required": false,
+					"type": "medicalriskfactor"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "secondaryprevention",
+					"in": "formData",
+					"description": "A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.",
+					"required": false,
+					"type": "medicaltherapy"
+				},
+				{
+					"name": "signorsymptom",
+					"in": "formData",
+					"description": "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.",
+					"required": false,
+					"type": "medicalsignorsymptom"
+				},
+				{
+					"name": "stage",
+					"in": "formData",
+					"description": "The stage of the condition, if applicable.",
+					"required": false,
+					"type": "medicalconditionstage"
+				},
+				{
+					"name": "study",
+					"in": "formData",
+					"description": "A medical study or trial related to this entity.",
+					"required": false,
+					"type": "medicalstudy"
+				},
+				{
+					"name": "subtype",
+					"in": "formData",
+					"description": "A more specific type of the condition, where applicable, for example \\'Type 1 Diabetes\\', \\'Type 2 Diabetes\\', or \\'Gestational Diabetes\\' for Diabetes.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "typicaltest",
+					"in": "formData",
+					"description": "A medical test typically performed given this condition.",
+					"required": false,
+					"type": "medicaltest"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "usedtodiagnose",
+					"in": "formData",
+					"description": "A condition the test is used to diagnose. ",
+					"required": false,
+					"type": "medicaltest"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalCondition"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Condition"]
+			},
+			"delete": {
+				"summary": "Medical Condition",
+				"description": "Deletes a single Medical Condition",
+				"operationId": "deleteMedicalCondition",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalCondition"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Condition"]
+			}
+		}
+	},
+	"definitions": {
+		"MedicalCondition": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"associatedanatomy": {
+					"description": "The anatomy of the underlying organ system or structures associated with this entity.",
+					"type": "anatomicalsystem or  superficialanatomy or  anatomicalstructure"
+				},
+				"cause": {
+					"description": "An underlying cause. More specifically, one of the causative agent(s) that are most directly responsible for the pathophysiologic process that eventually results in the occurrence.",
+					"type": "medicalcause"
+				},
+				"code": {
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"type": "medicalcode"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"diagnosis": {
+					"description": "One or more alternative conditions considered in the differential diagnosis process. ",
+					"type": "ddxelement"
+				},
+				"differentialdiagnosis": {
+					"description": "One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.",
+					"type": "ddxelement"
+				},
+				"epidemiology": {
+					"description": "The characteristics of associated patients, such as age, gender, race etc.",
+					"type": "text"
+				},
+				"expectedprognosis": {
+					"description": "The likely outcome in either the short term or long term of the medical condition.",
+					"type": "text"
+				},
+				"guideline": {
+					"description": "A medical guideline related to this entity.",
+					"type": "medicalguideline"
+				},
+				"healthcondition": {
+					"description": "Expectations for health conditions of target audience. ",
+					"type": "peopleaudience"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"medicinesystem": {
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"type": "medicinesystem"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"naturalprogression": {
+					"description": "The expected progression of the condition if it is not treated and allowed to progress naturally.",
+					"type": "text"
+				},
+				"pathophysiology": {
+					"description": "Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.",
+					"type": "text"
+				},
+				"possiblecomplication": {
+					"description": "A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.",
+					"type": "text"
+				},
+				"possibletreatment": {
+					"description": "A possible treatment to address this condition, sign or symptom.",
+					"type": "medicaltherapy"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"primaryprevention": {
+					"description": "A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.",
+					"type": "medicaltherapy"
+				},
+				"recognizingauthority": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"type": "organization"
+				},
+				"relatedcondition": {
+					"description": "A medical condition associated with this anatomy. ",
+					"type": "anatomicalsystem or superficialanatomy or anatomicalstructure"
+				},
+				"relevantspecialty": {
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"type": "medicalspecialty"
+				},
+				"riskfactor": {
+					"description": "A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.",
+					"type": "medicalriskfactor"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"secondaryprevention": {
+					"description": "A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.",
+					"type": "medicaltherapy"
+				},
+				"signorsymptom": {
+					"description": "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.",
+					"type": "medicalsignorsymptom"
+				},
+				"stage": {
+					"description": "The stage of the condition, if applicable.",
+					"type": "medicalconditionstage"
+				},
+				"study": {
+					"description": "A medical study or trial related to this entity.",
+					"type": "medicalstudy"
+				},
+				"subtype": {
+					"description": "A more specific type of the condition, where applicable, for example \\'Type 1 Diabetes\\', \\'Type 2 Diabetes\\', or \\'Gestational Diabetes\\' for Diabetes.",
+					"type": "text"
+				},
+				"typicaltest": {
+					"description": "A medical test typically performed given this condition.",
+					"type": "medicaltest"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				},
+				"usedtodiagnose": {
+					"description": "A condition the test is used to diagnose. ",
+					"type": "medicaltest"
+				}
+			}
+		}
+	}
+}

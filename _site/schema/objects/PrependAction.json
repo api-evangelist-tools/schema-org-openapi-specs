@@ -1,0 +1,13 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/PrependAction.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "The act of inserting at the beginning if an ordered collection.",
+    "properties": {
+        "toLocation": {
+            "description": "A sub property of location. The final location of the object or the agent after the action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Place"
+            }
+        }
+    }
+}

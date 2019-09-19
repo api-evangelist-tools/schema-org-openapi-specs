@@ -1,0 +1,34 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/TypeAndQuantityNode.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.",
+    "properties": {
+        "unitCode": {
+            "description": "The unit of measurement given using the UN\/CEFACT Common Code (3 characters) or a URL. Other codes than the UN\/CEFACT Common Code may be used with a prefix followed by a colon.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "typeOfGood": {
+            "description": "The product that this structured value is referring to.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Service"
+            }
+        },
+        "amountOfThisGood": {
+            "description": "The quantity of the goods included in the offer.",
+            "type": "number",
+            "format": "float"
+        },
+        "businessFunction": {
+            "description": "The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http:\/\/purl.org\/goodrelations\/v1#Sell.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/BusinessFunction"
+            }
+        },
+        "unitText": {
+            "description": "A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for unitCode.",
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,129 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/FindAction.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "The act of finding an object.  Related actions:   SearchAction: FindAction is generally lead by a SearchAction, but not necessarily.  ",
+    "properties": {
+        "result": {
+            "description": "The result produced in the action. e.g. John wrote a book.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "actionStatus": {
+            "description": "Indicates the current disposition of the Action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ActionStatusType"
+            }
+        },
+        "target": {
+            "description": "Indicates a target EntryPoint for an Action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/EntryPoint"
+            }
+        },
+        "agent": {
+            "description": "The direct performer or driver of the action (animate or inanimate). e.g. John wrote a book.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "startTime": {
+            "description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December.  Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "endTime": {
+            "description": "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December.  Note that Event uses startDate\/endDate instead of startTime\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "instrument": {
+            "description": "The object that helped the agent perform the action. e.g. John wrote a book with a pen.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "participant": {
+            "description": "Other co-agents that participated in the action indirectly. e.g. John wrote a book with Steve.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "object": {
+            "description": "The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn t). e.g. John read a book.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "error": {
+            "description": "For failed actions, more information on the cause of the failure.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "location": {
+            "description": "The location of for example where the event is happening, an organization is located, or where an action takes place.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Place"
+            }
+        },
+        "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item s identity. E.g. the URL of the item s Wikipedia page, Wikidata entry, or official website.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "url": {
+            "description": "URL of the item.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "image": {
+            "description": "An image of the item. This can be a URL or a fully described ImageObject.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ImageObject"
+            }
+        },
+        "additionalType": {
+            "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the  typeof  attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "name": {
+            "description": "The name of the item.",
+            "type": "string"
+        },
+        "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/PropertyValue"
+            }
+        },
+        "potentialAction": {
+            "description": "Indicates a potential Action, which describes an idealized action in which this thing would play an  object  role.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Action"
+            }
+        },
+        "mainEntityOfPage": {
+            "description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "description": {
+            "description": "A description of the item.",
+            "type": "string"
+        },
+        "disambiguatingDescription": {
+            "description": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+            "type": "string"
+        },
+        "alternateName": {
+            "description": "An alias for the item.",
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/DiscussionForumPosting.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A posting to a discussion forum.",
+    "properties": {
+        "sharedContent": {
+            "description": "A CreativeWork such as an image, video, or audio clip shared as part of this posting.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWork"
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/Flight.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "An airline flight.",
+    "properties": {
+        "arrivalAirport": {
+            "description": "The airport where the flight terminates.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Airport"
+            }
+        },
+        "provider": {
+            "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "arrivalGate": {
+            "description": "Identifier of the flight s arrival gate.",
+            "type": "string"
+        },
+        "flightNumber": {
+            "description": "The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is  UA , the flightNumber is  UA110 .",
+            "type": "string"
+        },
+        "carrier": {
+            "description": " carrier  is an out-dated term indicating the  provider  for parcel delivery and flights.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "boardingPolicy": {
+            "description": "The type of boarding policy used by the airline (e.g. zone-based or group-based).",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/BoardingPolicyType"
+            }
+        },
+        "aircraft": {
+            "description": "The kind of aircraft (e.g.,  Boeing 747 ).",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Vehicle"
+            }
+        },
+        "arrivalTime": {
+            "description": "The expected arrival time.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "seller": {
+            "description": "An entity which offers (sells \/ leases \/ lends \/ loans) the services \/ goods.  A seller may also be a provider.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "webCheckinTime": {
+            "description": "The time when a passenger can check into the flight online.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "mealService": {
+            "description": "Description of the meals that will be provided or available for purchase.",
+            "type": "string"
+        },
+        "departureGate": {
+            "description": "Identifier of the flight s departure gate.",
+            "type": "string"
+        },
+        "departureTerminal": {
+            "description": "Identifier of the flight s departure terminal.",
+            "type": "string"
+        },
+        "estimatedFlightDuration": {
+            "description": "The estimated time the flight will take.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Duration"
+            }
+        },
+        "flightDistance": {
+            "description": "The distance of the flight.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Distance"
+            }
+        },
+        "arrivalTerminal": {
+            "description": "Identifier of the flight s arrival terminal.",
+            "type": "string"
+        },
+        "departureAirport": {
+            "description": "The airport where the flight originates.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Airport"
+            }
+        },
+        "departureTime": {
+            "description": "The expected departure time.",
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

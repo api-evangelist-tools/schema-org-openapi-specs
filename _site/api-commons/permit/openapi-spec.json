@@ -1,0 +1,426 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Permit API",
+		"description": "A permit issued by an organization, e.g. a parking pass.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "permit.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/permit\/": {
+			"get": {
+				"summary": "Get Permit",
+				"description": "Returns Permit",
+				"operationId": "getPermit",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Permit"
+							}
+						}
+					}
+				},
+				"tags": ["Permit"]
+			},
+			"post": {
+				"summary": "Add Permit",
+				"description": "Add Permit",
+				"operationId": "addPermit",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "issuedby",
+					"in": "formData",
+					"description": "The organization issuing the ticket or permit.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "issuedthrough",
+					"in": "formData",
+					"description": "The service through with the permit was granted.",
+					"required": false,
+					"type": "service"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "url or  creativework"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "permitaudience",
+					"in": "formData",
+					"description": "The target audience for this permit.",
+					"required": false,
+					"type": "audience"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "validfor",
+					"in": "formData",
+					"description": "The time validity of the permit.",
+					"required": false,
+					"type": "duration"
+				},
+				{
+					"name": "validfrom",
+					"in": "formData",
+					"description": "The date when the item becomes valid.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "validin",
+					"in": "formData",
+					"description": "The geographic area where the permit is valid.",
+					"required": false,
+					"type": "administrativearea"
+				},
+				{
+					"name": "validuntil",
+					"in": "formData",
+					"description": "The date when the item is no longer valid.",
+					"required": false,
+					"type": "date"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Permit"
+							}
+						}
+					}
+				},
+				"tags": ["Permit"]
+			}
+		},
+		"\/permit\/{id}\/": {
+			"get": {
+				"summary": "Get Permit",
+				"description": "Returns a single Permit",
+				"operationId": "getPermit",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Permit"
+							}
+						}
+					}
+				},
+				"tags": ["Permit"]
+			},
+			"put": {
+				"summary": "Update Permit",
+				"description": "Update a single Permit",
+				"operationId": "updatePermitItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "issuedby",
+					"in": "formData",
+					"description": "The organization issuing the ticket or permit.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "issuedthrough",
+					"in": "formData",
+					"description": "The service through with the permit was granted.",
+					"required": false,
+					"type": "service"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "url or  creativework"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "permitaudience",
+					"in": "formData",
+					"description": "The target audience for this permit.",
+					"required": false,
+					"type": "audience"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "validfor",
+					"in": "formData",
+					"description": "The time validity of the permit.",
+					"required": false,
+					"type": "duration"
+				},
+				{
+					"name": "validfrom",
+					"in": "formData",
+					"description": "The date when the item becomes valid.",
+					"required": false,
+					"type": "datetime"
+				},
+				{
+					"name": "validin",
+					"in": "formData",
+					"description": "The geographic area where the permit is valid.",
+					"required": false,
+					"type": "administrativearea"
+				},
+				{
+					"name": "validuntil",
+					"in": "formData",
+					"description": "The date when the item is no longer valid.",
+					"required": false,
+					"type": "date"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Permit"
+							}
+						}
+					}
+				},
+				"tags": ["Permit"]
+			},
+			"delete": {
+				"summary": "Permit",
+				"description": "Deletes a single Permit",
+				"operationId": "deletePermit",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Permit"
+							}
+						}
+					}
+				},
+				"tags": ["Permit"]
+			}
+		}
+	},
+	"definitions": {
+		"Permit": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"issuedby": {
+					"description": "The organization issuing the ticket or permit.",
+					"type": "organization"
+				},
+				"issuedthrough": {
+					"description": "The service through with the permit was granted.",
+					"type": "service"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "url or  creativework"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"permitaudience": {
+					"description": "The target audience for this permit.",
+					"type": "audience"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				},
+				"validfor": {
+					"description": "The time validity of the permit.",
+					"type": "duration"
+				},
+				"validfrom": {
+					"description": "The date when the item becomes valid.",
+					"type": "datetime"
+				},
+				"validin": {
+					"description": "The geographic area where the permit is valid.",
+					"type": "administrativearea"
+				},
+				"validuntil": {
+					"description": "The date when the item is no longer valid.",
+					"type": "date"
+				}
+			}
+		}
+	}
+}

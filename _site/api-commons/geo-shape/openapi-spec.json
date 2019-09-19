@@ -1,0 +1,516 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Geo Shape API",
+		"description": "The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude\/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "geo.shape.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/geo-shape\/": {
+			"get": {
+				"summary": "Get Geo Shape",
+				"description": "Returns Geo Shape",
+				"operationId": "getGeoShape",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/GeoShape"
+							}
+						}
+					}
+				},
+				"tags": ["Geo Shape"]
+			},
+			"post": {
+				"summary": "Add Geo Shape",
+				"description": "Add Geo Shape",
+				"operationId": "addGeoShape",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "address",
+					"in": "formData",
+					"description": "Physical address of the item.",
+					"required": false,
+					"type": "text or  postaladdress"
+				},
+				{
+					"name": "addresscountry",
+					"in": "formData",
+					"description": "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+					"required": false,
+					"type": "text or  country"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "areaserved",
+					"in": "formData",
+					"description": "The geographic area where a service or offered item is provided.  Supersedes serviceArea.",
+					"required": false,
+					"type": "demand or offer or deliverychargespecification or organization or contactpoint or service"
+				},
+				{
+					"name": "box",
+					"in": "formData",
+					"description": "A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "circle",
+					"in": "formData",
+					"description": "A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "elevation",
+					"in": "formData",
+					"description": "The elevation of a location (WGS 84).",
+					"required": false,
+					"type": "text or  number"
+				},
+				{
+					"name": "eligibleregion",
+					"in": "formData",
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.       See also ineligibleRegion.     ",
+					"required": false,
+					"type": "demand or offer or deliverychargespecification"
+				},
+				{
+					"name": "geo",
+					"in": "formData",
+					"description": "The geo coordinates of the place. ",
+					"required": false,
+					"type": "place"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "ineligibleregion",
+					"in": "formData",
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.       See also eligibleRegion.       ",
+					"required": false,
+					"type": "demand or offer or deliverychargespecification"
+				},
+				{
+					"name": "line",
+					"in": "formData",
+					"description": "A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "polygon",
+					"in": "formData",
+					"description": "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "postalcode",
+					"in": "formData",
+					"description": "The postal code. For example, 94043.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/GeoShape"
+							}
+						}
+					}
+				},
+				"tags": ["Geo Shape"]
+			}
+		},
+		"\/geo-shape\/{id}\/": {
+			"get": {
+				"summary": "Get Geo Shape",
+				"description": "Returns a single Geo Shape",
+				"operationId": "getGeoShape",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/GeoShape"
+							}
+						}
+					}
+				},
+				"tags": ["Geo Shape"]
+			},
+			"put": {
+				"summary": "Update Geo Shape",
+				"description": "Update a single Geo Shape",
+				"operationId": "updateGeoShapeItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "address",
+					"in": "formData",
+					"description": "Physical address of the item.",
+					"required": false,
+					"type": "text or  postaladdress"
+				},
+				{
+					"name": "addresscountry",
+					"in": "formData",
+					"description": "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+					"required": false,
+					"type": "text or  country"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "areaserved",
+					"in": "formData",
+					"description": "The geographic area where a service or offered item is provided.  Supersedes serviceArea.",
+					"required": false,
+					"type": "demand or offer or deliverychargespecification or organization or contactpoint or service"
+				},
+				{
+					"name": "box",
+					"in": "formData",
+					"description": "A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "circle",
+					"in": "formData",
+					"description": "A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "elevation",
+					"in": "formData",
+					"description": "The elevation of a location (WGS 84).",
+					"required": false,
+					"type": "text or  number"
+				},
+				{
+					"name": "eligibleregion",
+					"in": "formData",
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.       See also ineligibleRegion.     ",
+					"required": false,
+					"type": "demand or offer or deliverychargespecification"
+				},
+				{
+					"name": "geo",
+					"in": "formData",
+					"description": "The geo coordinates of the place. ",
+					"required": false,
+					"type": "place"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "ineligibleregion",
+					"in": "formData",
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.       See also eligibleRegion.       ",
+					"required": false,
+					"type": "demand or offer or deliverychargespecification"
+				},
+				{
+					"name": "line",
+					"in": "formData",
+					"description": "A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "polygon",
+					"in": "formData",
+					"description": "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "postalcode",
+					"in": "formData",
+					"description": "The postal code. For example, 94043.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/GeoShape"
+							}
+						}
+					}
+				},
+				"tags": ["Geo Shape"]
+			},
+			"delete": {
+				"summary": "Geo Shape",
+				"description": "Deletes a single Geo Shape",
+				"operationId": "deleteGeoShape",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/GeoShape"
+							}
+						}
+					}
+				},
+				"tags": ["Geo Shape"]
+			}
+		}
+	},
+	"definitions": {
+		"GeoShape": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"address": {
+					"description": "Physical address of the item.",
+					"type": "text or  postaladdress"
+				},
+				"addresscountry": {
+					"description": "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+					"type": "text or  country"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"areaserved": {
+					"description": "The geographic area where a service or offered item is provided.  Supersedes serviceArea.",
+					"type": "demand or offer or deliverychargespecification or organization or contactpoint or service"
+				},
+				"box": {
+					"description": "A box is the area enclosed by the rectangle formed by two points. The first point is the lower corner, the second point is the upper corner. A box is expressed as two points separated by a space character.",
+					"type": "text"
+				},
+				"circle": {
+					"description": "A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.",
+					"type": "text"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"elevation": {
+					"description": "The elevation of a location (WGS 84).",
+					"type": "text or  number"
+				},
+				"eligibleregion": {
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.       See also ineligibleRegion.     ",
+					"type": "demand or offer or deliverychargespecification"
+				},
+				"geo": {
+					"description": "The geo coordinates of the place. ",
+					"type": "place"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"ineligibleregion": {
+					"description": "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.       See also eligibleRegion.       ",
+					"type": "demand or offer or deliverychargespecification"
+				},
+				"line": {
+					"description": "A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.",
+					"type": "text"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"polygon": {
+					"description": "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.",
+					"type": "text"
+				},
+				"postalcode": {
+					"description": "The postal code. For example, 94043.",
+					"type": "text"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}
+		}
+	}
+}

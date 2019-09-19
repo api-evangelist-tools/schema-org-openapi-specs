@@ -1,0 +1,13 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/EngineSpecification.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "Information about the engine of the vehicle. A vehicle can have multiple engines represented by multiple engine specification entities.",
+    "properties": {
+        "fuelType": {
+            "description": "The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/QualitativeValue"
+            }
+        }
+    }
+}

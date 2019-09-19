@@ -1,0 +1,37 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/AskAction.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "The act of posing a question \/ favor to someone.  Related actions:   ReplyAction: Appears generally as a response to AskAction.  ",
+    "properties": {
+        "question": {
+            "description": "A sub property of object. A question.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Question"
+            }
+        },
+        "about": {
+            "description": "The subject matter of the content.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "inLanguage": {
+            "description": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Language"
+            }
+        },
+        "recipient": {
+            "description": "A sub property of participant. The participant who is at the receiving end of the action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "language": {
+            "description": "A sub property of instrument. The language used on this action.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Language"
+            }
+        }
+    }
+}

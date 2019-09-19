@@ -1,0 +1,48 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/MusicAlbum.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A collection of music tracks.",
+    "properties": {
+        "albumProductionType": {
+            "description": "Classification of the album by it s type of content: soundtrack, live album, studio album, etc.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MusicAlbumProductionType"
+            }
+        },
+        "albumReleaseType": {
+            "description": "The kind of release which this album is: single, EP or album.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MusicAlbumReleaseType"
+            }
+        },
+        "byArtist": {
+            "description": "The artist that performed this album or recording.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MusicGroup"
+            }
+        },
+        "albumRelease": {
+            "description": "A release of this album.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MusicRelease"
+            }
+        },
+        "track": {
+            "description": "A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ItemList"
+            }
+        },
+        "numTracks": {
+            "description": "The number of tracks in this album or playlist.",
+            "type": "integer",
+            "format": "int32"
+        },
+        "tracks": {
+            "description": "A music recording (track)&#x2014;usually a single song.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MusicRecording"
+            }
+        }
+    }
+}

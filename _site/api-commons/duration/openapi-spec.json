@@ -1,0 +1,480 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Duration API",
+		"description": "Quantity: Duration (use ISO 8601 duration format).",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "duration.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/duration\/": {
+			"get": {
+				"summary": "Get Duration",
+				"description": "Returns Duration",
+				"operationId": "getDuration",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Duration"
+							}
+						}
+					}
+				},
+				"tags": ["Duration"]
+			},
+			"post": {
+				"summary": "Add Duration",
+				"description": "Add Duration",
+				"operationId": "addDuration",
+				"parameters": [{
+					"name": "activityduration",
+					"in": "formData",
+					"description": "Length of time to engage in the activity. ",
+					"required": false,
+					"type": "exerciseplan"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "billingperiod",
+					"in": "formData",
+					"description": "The time interval used to compute the invoice. ",
+					"required": false,
+					"type": "invoice"
+				},
+				{
+					"name": "cooktime",
+					"in": "formData",
+					"description": "The time it takes to actually cook the dish, in ISO 8601 duration format. ",
+					"required": false,
+					"type": "recipe"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "duration",
+					"in": "formData",
+					"description": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format. ",
+					"required": false,
+					"type": "movie or musicrelease or event or musicrecording or mediaobject"
+				},
+				{
+					"name": "estimatedflightduration",
+					"in": "formData",
+					"description": "The estimated time the flight will take. ",
+					"required": false,
+					"type": "flight"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "preptime",
+					"in": "formData",
+					"description": "The length of time it takes to prepare the recipe, in ISO 8601 duration format. ",
+					"required": false,
+					"type": "recipe"
+				},
+				{
+					"name": "processingtime",
+					"in": "formData",
+					"description": "Estimated processing time for the service using this channel. ",
+					"required": false,
+					"type": "servicechannel"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "timerequired",
+					"in": "formData",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \\'P30M\\', \\'P1H25M\\'. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "totaltime",
+					"in": "formData",
+					"description": "The total time it takes to prepare and cook the recipe, in ISO 8601 duration format. ",
+					"required": false,
+					"type": "recipe"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "validfor",
+					"in": "formData",
+					"description": "The time validity of the permit. ",
+					"required": false,
+					"type": "permit"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Duration"
+							}
+						}
+					}
+				},
+				"tags": ["Duration"]
+			}
+		},
+		"\/duration\/{id}\/": {
+			"get": {
+				"summary": "Get Duration",
+				"description": "Returns a single Duration",
+				"operationId": "getDuration",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Duration"
+							}
+						}
+					}
+				},
+				"tags": ["Duration"]
+			},
+			"put": {
+				"summary": "Update Duration",
+				"description": "Update a single Duration",
+				"operationId": "updateDurationItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "activityduration",
+					"in": "formData",
+					"description": "Length of time to engage in the activity. ",
+					"required": false,
+					"type": "exerciseplan"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "billingperiod",
+					"in": "formData",
+					"description": "The time interval used to compute the invoice. ",
+					"required": false,
+					"type": "invoice"
+				},
+				{
+					"name": "cooktime",
+					"in": "formData",
+					"description": "The time it takes to actually cook the dish, in ISO 8601 duration format. ",
+					"required": false,
+					"type": "recipe"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "duration",
+					"in": "formData",
+					"description": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format. ",
+					"required": false,
+					"type": "movie or musicrelease or event or musicrecording or mediaobject"
+				},
+				{
+					"name": "estimatedflightduration",
+					"in": "formData",
+					"description": "The estimated time the flight will take. ",
+					"required": false,
+					"type": "flight"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "preptime",
+					"in": "formData",
+					"description": "The length of time it takes to prepare the recipe, in ISO 8601 duration format. ",
+					"required": false,
+					"type": "recipe"
+				},
+				{
+					"name": "processingtime",
+					"in": "formData",
+					"description": "Estimated processing time for the service using this channel. ",
+					"required": false,
+					"type": "servicechannel"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "timerequired",
+					"in": "formData",
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \\'P30M\\', \\'P1H25M\\'. ",
+					"required": false,
+					"type": "creativework"
+				},
+				{
+					"name": "totaltime",
+					"in": "formData",
+					"description": "The total time it takes to prepare and cook the recipe, in ISO 8601 duration format. ",
+					"required": false,
+					"type": "recipe"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "validfor",
+					"in": "formData",
+					"description": "The time validity of the permit. ",
+					"required": false,
+					"type": "permit"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Duration"
+							}
+						}
+					}
+				},
+				"tags": ["Duration"]
+			},
+			"delete": {
+				"summary": "Duration",
+				"description": "Deletes a single Duration",
+				"operationId": "deleteDuration",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Duration"
+							}
+						}
+					}
+				},
+				"tags": ["Duration"]
+			}
+		}
+	},
+	"definitions": {
+		"Duration": {
+			"properties": {
+				"activityduration": {
+					"description": "Length of time to engage in the activity. ",
+					"type": "exerciseplan"
+				},
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"billingperiod": {
+					"description": "The time interval used to compute the invoice. ",
+					"type": "invoice"
+				},
+				"cooktime": {
+					"description": "The time it takes to actually cook the dish, in ISO 8601 duration format. ",
+					"type": "recipe"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"duration": {
+					"description": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format. ",
+					"type": "movie or musicrelease or event or musicrecording or mediaobject"
+				},
+				"estimatedflightduration": {
+					"description": "The estimated time the flight will take. ",
+					"type": "flight"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"preptime": {
+					"description": "The length of time it takes to prepare the recipe, in ISO 8601 duration format. ",
+					"type": "recipe"
+				},
+				"processingtime": {
+					"description": "Estimated processing time for the service using this channel. ",
+					"type": "servicechannel"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"timerequired": {
+					"description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. \\'P30M\\', \\'P1H25M\\'. ",
+					"type": "creativework"
+				},
+				"totaltime": {
+					"description": "The total time it takes to prepare and cook the recipe, in ISO 8601 duration format. ",
+					"type": "recipe"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				},
+				"validfor": {
+					"description": "The time validity of the permit. ",
+					"type": "permit"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/BusTrip.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A trip on a commercial bus line.",
+    "properties": {
+        "provider": {
+            "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "busName": {
+            "description": "The name of the bus (e.g. Bolt Express).",
+            "type": "string"
+        },
+        "departureBusStop": {
+            "description": "The stop or station from which the bus departs.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/BusStation"
+            }
+        },
+        "arrivalBusStop": {
+            "description": "The stop or station from which the bus arrives.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/BusStation"
+            }
+        },
+        "arrivalTime": {
+            "description": "The expected arrival time.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "busNumber": {
+            "description": "The unique identifier for the bus.",
+            "type": "string"
+        },
+        "departureTime": {
+            "description": "The expected departure time.",
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

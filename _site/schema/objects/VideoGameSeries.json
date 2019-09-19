@@ -1,0 +1,649 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/VideoGameSeries.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A video game series.",
+    "properties": {
+        "gameItem": {
+            "description": "An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "seasons": {
+            "description": "A season in a media series.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWorkSeason"
+            }
+        },
+        "gamePlatform": {
+            "description": "The electronic systems used to play video games.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "actor": {
+            "description": "An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "numberOfEpisodes": {
+            "description": "The number of episodes in this season or series.",
+            "type": "integer",
+            "format": "int32"
+        },
+        "trailer": {
+            "description": "The trailer of a movie or tv\/radio series, season, episode, etc.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/VideoObject"
+            }
+        },
+        "season": {
+            "description": "A season in a media series.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWorkSeason"
+            }
+        },
+        "episodes": {
+            "description": "An episode of a TV\/radio series or season.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Episode"
+            }
+        },
+        "cheatCode": {
+            "description": "Cheat codes to the game.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWork"
+            }
+        },
+        "characterAttribute": {
+            "description": "A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "gameLocation": {
+            "description": "Real or fictional location of the game (or part of game).",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/PostalAddress"
+            }
+        },
+        "musicBy": {
+            "description": "The composer of the soundtrack.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MusicGroup"
+            }
+        },
+        "containsSeason": {
+            "description": "A season that is part of the media series.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWorkSeason"
+            }
+        },
+        "directors": {
+            "description": "A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "playMode": {
+            "description": "Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/GamePlayMode"
+            }
+        },
+        "numberOfSeasons": {
+            "description": "The number of seasons in this series.",
+            "type": "integer",
+            "format": "int32"
+        },
+        "director": {
+            "description": "A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "productionCompany": {
+            "description": "The production company or studio responsible for the item e.g. series, video game, episode etc.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "quest": {
+            "description": "The task that a player-controlled character, or group of characters may complete in order to gain a reward.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "numberOfPlayers": {
+            "description": "Indicate how many people can play this game (minimum, maximum, or range).",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/QuantitativeValue"
+            }
+        },
+        "actors": {
+            "description": "An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "episode": {
+            "description": "An episode of a tv, radio or game media within a series or season.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Episode"
+            }
+        },
+        "endDate": {
+            "description": "The end date and time of the item (in ISO 8601 date format).",
+            "type": "string",
+            "format": "date"
+        },
+        "issn": {
+            "description": "The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.",
+            "type": "string"
+        },
+        "startDate": {
+            "description": "The start date and time of the item (in ISO 8601 date format).",
+            "type": "string",
+            "format": "date-time"
+        },
+        "about": {
+            "description": "The subject matter of the content.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "educationalAlignment": {
+            "description": "An alignment to an established educational framework.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/AlignmentObject"
+            }
+        },
+        "associatedMedia": {
+            "description": "A media object that encodes this CreativeWork. This property is a synonym for encoding.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MediaObject"
+            }
+        },
+        "funder": {
+            "description": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "position": {
+            "description": "The position of an item in a series or sequence of items.",
+            "type": "integer",
+            "format": "int32"
+        },
+        "audio": {
+            "description": "An embedded audio object.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/AudioObject"
+            }
+        },
+        "workExample": {
+            "description": "Example\/instance\/realization\/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWork"
+            }
+        },
+        "provider": {
+            "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "encoding": {
+            "description": "A media object that encodes this CreativeWork. This property is a synonym for associatedMedia.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MediaObject"
+            }
+        },
+        "interactivityType": {
+            "description": "The predominant mode of learning supported by the learning resource. Acceptable values are  active ,  expositive , or  mixed .",
+            "type": "string"
+        },
+        "accessibilitySummary": {
+            "description": "A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as  short descriptions are present but long descriptions will be needed for non-visual users  or  short descriptions are present and no long descriptions are needed. ",
+            "type": "string"
+        },
+        "character": {
+            "description": "Fictional person connected with a creative work.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "audience": {
+            "description": "An intended audience, i.e. a group for whom something was created.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Audience"
+            }
+        },
+        "sourceOrganization": {
+            "description": "The Organization on whose behalf the creator was working.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "isPartOf": {
+            "description": "Indicates a CreativeWork that this CreativeWork is (in some sense) part of.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWork"
+            }
+        },
+        "video": {
+            "description": "An embedded video object.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/VideoObject"
+            }
+        },
+        "publisher": {
+            "description": "The publisher of the creative work.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "publication": {
+            "description": "A publication event associated with the item.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/PublicationEvent"
+            }
+        },
+        "text": {
+            "description": "The textual content of this CreativeWork.",
+            "type": "string"
+        },
+        "expires": {
+            "description": "Date the content expires and is no longer useful or available. For example a VideoObject or NewsArticle whose availability or relevance is time-limited, or a ClaimReview fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.",
+            "type": "string",
+            "format": "date"
+        },
+        "contributor": {
+            "description": "A secondary contributor to the CreativeWork or Event.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "reviews": {
+            "description": "Review of the item.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Review"
+            }
+        },
+        "typicalAgeRange": {
+            "description": "The typical expected age range, e.g.  7-9 ,  11- .",
+            "type": "string"
+        },
+        "releasedEvent": {
+            "description": "The place and time the release was issued, expressed as a PublicationEvent.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/PublicationEvent"
+            }
+        },
+        "educationalUse": {
+            "description": "The purpose of a work in the context of education; for example,  assignment ,  group work .",
+            "type": "string"
+        },
+        "contentLocation": {
+            "description": "The location depicted or described in the content. For example, the location in a photograph or painting.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Place"
+            }
+        },
+        "schemaVersion": {
+            "description": "Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http:\/\/schema.org\/version\/2.0\/ if precise indication of schema version was required by some application.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "accessibilityFeature": {
+            "description": "Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).",
+            "type": "string"
+        },
+        "aggregateRating": {
+            "description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/AggregateRating"
+            }
+        },
+        "alternativeHeadline": {
+            "description": "A secondary title of the CreativeWork.",
+            "type": "string"
+        },
+        "locationCreated": {
+            "description": "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Place"
+            }
+        },
+        "accessModeSufficient": {
+            "description": "A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Expected values include:  auditory, tactile, textual, visual.",
+            "type": "string"
+        },
+        "temporalCoverage": {
+            "description": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in ISO 8601 time interval format. In       the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written  2011\/2012 ). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL.       Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via  1939\/1945 .",
+            "type": "string",
+            "format": "date-time"
+        },
+        "accountablePerson": {
+            "description": "Specifies the Person that is legally accountable for the CreativeWork.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "spatialCoverage": {
+            "description": "The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of       contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates       areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Place"
+            }
+        },
+        "offers": {
+            "description": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Offer"
+            }
+        },
+        "editor": {
+            "description": "Specifies the Person who edited the CreativeWork.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "discussionUrl": {
+            "description": "A link to the page containing the comments of the CreativeWork.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "award": {
+            "description": "An award won by or for this item.",
+            "type": "string"
+        },
+        "copyrightHolder": {
+            "description": "The party holding the legal copyright to the CreativeWork.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "accessibilityHazard": {
+            "description": "A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3 (WebSchemas wiki lists possible values).",
+            "type": "string"
+        },
+        "copyrightYear": {
+            "description": "The year during which the claimed copyright for the CreativeWork was first asserted.",
+            "type": "number",
+            "format": "float"
+        },
+        "awards": {
+            "description": "Awards won by or for this item.",
+            "type": "string"
+        },
+        "recordedAt": {
+            "description": "The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Event"
+            }
+        },
+        "commentCount": {
+            "description": "The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
+            "type": "integer",
+            "format": "int32"
+        },
+        "fileFormat": {
+            "description": "Media type, typically MIME format (see IANA site) of the content e.g. application\/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations,  encoding  can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "inLanguage": {
+            "description": "The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Language"
+            }
+        },
+        "accessibilityAPI": {
+            "description": "Indicates that the resource is compatible with the referenced accessibility API (WebSchemas wiki lists possible values).",
+            "type": "string"
+        },
+        "interactionStatistic": {
+            "description": "The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/InteractionCounter"
+            }
+        },
+        "contentRating": {
+            "description": "Official rating of a piece of content&#x2014;for example, MPAA PG-13 .",
+            "type": "string"
+        },
+        "learningResourceType": {
+            "description": "The predominant type or kind characterizing the learning resource. For example,  presentation ,  handout .",
+            "type": "string"
+        },
+        "accessMode": {
+            "description": "The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Expected values include: auditory, tactile, textual, visual, colorDependent, chartOnVisual, chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.",
+            "type": "string"
+        },
+        "material": {
+            "description": "A material that something is made from, e.g. leather, wool, cotton, paper.",
+            "type": "string"
+        },
+        "isFamilyFriendly": {
+            "description": "Indicates whether this content is family friendly.",
+            "type": "boolean"
+        },
+        "exampleOfWork": {
+            "description": "A creative work that this work is an example\/instance\/realization\/derivation of.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWork"
+            }
+        },
+        "version": {
+            "description": "The version of the CreativeWork embodied by a specified resource.",
+            "type": "string"
+        },
+        "dateModified": {
+            "description": "The date on which the CreativeWork was most recently modified or when the item s entry was modified within a DataFeed.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "mainEntity": {
+            "description": "Indicates the primary entity described in some page or other CreativeWork.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "genre": {
+            "description": "Genre of the creative work, broadcast channel or group.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "keywords": {
+            "description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "type": "string"
+        },
+        "author": {
+            "description": "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "isBasedOnUrl": {
+            "description": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http:\/\/example.com\/great-multiplication-intro.html.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Product"
+            }
+        },
+        "timeRequired": {
+            "description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g.  P30M ,  P1H25M .",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Duration"
+            }
+        },
+        "translator": {
+            "description": "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "thumbnailUrl": {
+            "description": "A thumbnail image relevant to the Thing.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "hasPart": {
+            "description": "Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWork"
+            }
+        },
+        "comment": {
+            "description": "Comments, typically from users.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Comment"
+            }
+        },
+        "review": {
+            "description": "A review of the item.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Review"
+            }
+        },
+        "license": {
+            "description": "A license document that applies to this content, typically indicated by URL.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWork"
+            }
+        },
+        "accessibilityControl": {
+            "description": "Identifies input methods that are sufficient to fully control the described resource (WebSchemas wiki lists possible values).",
+            "type": "string"
+        },
+        "encodings": {
+            "description": "A media object that encodes this CreativeWork.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/MediaObject"
+            }
+        },
+        "isBasedOn": {
+            "description": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http:\/\/example.com\/great-multiplication-intro.html.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Product"
+            }
+        },
+        "creator": {
+            "description": "The creator\/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "publishingPrinciples": {
+            "description": "The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle) the principles are those of the party primarily responsible for the creation of the CreativeWork.  While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a funder) can be expressed using schema.org terminology.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWork"
+            }
+        },
+        "sponsor": {
+            "description": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Person"
+            }
+        },
+        "producer": {
+            "description": "The person or organization who produced the work (e.g. music album, movie, tv\/radio series etc.).",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "mentions": {
+            "description": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        },
+        "dateCreated": {
+            "description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+            "type": "string",
+            "format": "date"
+        },
+        "datePublished": {
+            "description": "Date of first broadcast\/publication.",
+            "type": "string",
+            "format": "date"
+        },
+        "isAccessibleForFree": {
+            "description": "A flag to signal that the item, event, or place is accessible for free.",
+            "type": "boolean"
+        },
+        "headline": {
+            "description": "Headline of the article.",
+            "type": "string"
+        },
+        "citation": {
+            "description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/CreativeWork"
+            }
+        },
+        "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item s identity. E.g. the URL of the item s Wikipedia page, Wikidata entry, or official website.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "url": {
+            "description": "URL of the item.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "image": {
+            "description": "An image of the item. This can be a URL or a fully described ImageObject.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ImageObject"
+            }
+        },
+        "additionalType": {
+            "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the  typeof  attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "name": {
+            "description": "The name of the item.",
+            "type": "string"
+        },
+        "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/PropertyValue"
+            }
+        },
+        "potentialAction": {
+            "description": "Indicates a potential Action, which describes an idealized action in which this thing would play an  object  role.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Action"
+            }
+        },
+        "mainEntityOfPage": {
+            "description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/URL"
+            }
+        },
+        "description": {
+            "description": "A description of the item.",
+            "type": "string"
+        },
+        "disambiguatingDescription": {
+            "description": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+            "type": "string"
+        },
+        "alternateName": {
+            "description": "An alias for the item.",
+            "type": "string"
+        }
+    }
+}

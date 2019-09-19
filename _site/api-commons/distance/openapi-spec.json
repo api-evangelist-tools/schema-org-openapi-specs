@@ -1,0 +1,408 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Distance API",
+		"description": "Properties that take Distances as values are of the form \\'&lt;Number&gt; &lt;Length unit of measure&gt;\\'. E.g., \\'7 ft\\'.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "distance.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/distance\/": {
+			"get": {
+				"summary": "Get Distance",
+				"description": "Returns Distance",
+				"operationId": "getDistance",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Distance"
+							}
+						}
+					}
+				},
+				"tags": ["Distance"]
+			},
+			"post": {
+				"summary": "Add Distance",
+				"description": "Add Distance",
+				"operationId": "addDistance",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "depth",
+					"in": "formData",
+					"description": "The depth of the item. ",
+					"required": false,
+					"type": "visualartwork or product"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "distance",
+					"in": "formData",
+					"description": "The distance travelled, e.g. exercising or travelling. ",
+					"required": false,
+					"type": "exerciseaction or travelaction"
+				},
+				{
+					"name": "flightdistance",
+					"in": "formData",
+					"description": "The distance of the flight. ",
+					"required": false,
+					"type": "flight"
+				},
+				{
+					"name": "georadius",
+					"in": "formData",
+					"description": "Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation). ",
+					"required": false,
+					"type": "geocircle"
+				},
+				{
+					"name": "height",
+					"in": "formData",
+					"description": "The height of the item. ",
+					"required": false,
+					"type": "person or visualartwork or product or mediaobject"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "width",
+					"in": "formData",
+					"description": "The width of the item. ",
+					"required": false,
+					"type": "visualartwork or product or mediaobject"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Distance"
+							}
+						}
+					}
+				},
+				"tags": ["Distance"]
+			}
+		},
+		"\/distance\/{id}\/": {
+			"get": {
+				"summary": "Get Distance",
+				"description": "Returns a single Distance",
+				"operationId": "getDistance",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Distance"
+							}
+						}
+					}
+				},
+				"tags": ["Distance"]
+			},
+			"put": {
+				"summary": "Update Distance",
+				"description": "Update a single Distance",
+				"operationId": "updateDistanceItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "depth",
+					"in": "formData",
+					"description": "The depth of the item. ",
+					"required": false,
+					"type": "visualartwork or product"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "distance",
+					"in": "formData",
+					"description": "The distance travelled, e.g. exercising or travelling. ",
+					"required": false,
+					"type": "exerciseaction or travelaction"
+				},
+				{
+					"name": "flightdistance",
+					"in": "formData",
+					"description": "The distance of the flight. ",
+					"required": false,
+					"type": "flight"
+				},
+				{
+					"name": "georadius",
+					"in": "formData",
+					"description": "Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation). ",
+					"required": false,
+					"type": "geocircle"
+				},
+				{
+					"name": "height",
+					"in": "formData",
+					"description": "The height of the item. ",
+					"required": false,
+					"type": "person or visualartwork or product or mediaobject"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "width",
+					"in": "formData",
+					"description": "The width of the item. ",
+					"required": false,
+					"type": "visualartwork or product or mediaobject"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Distance"
+							}
+						}
+					}
+				},
+				"tags": ["Distance"]
+			},
+			"delete": {
+				"summary": "Distance",
+				"description": "Deletes a single Distance",
+				"operationId": "deleteDistance",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/Distance"
+							}
+						}
+					}
+				},
+				"tags": ["Distance"]
+			}
+		}
+	},
+	"definitions": {
+		"Distance": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"depth": {
+					"description": "The depth of the item. ",
+					"type": "visualartwork or product"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"distance": {
+					"description": "The distance travelled, e.g. exercising or travelling. ",
+					"type": "exerciseaction or travelaction"
+				},
+				"flightdistance": {
+					"description": "The distance of the flight. ",
+					"type": "flight"
+				},
+				"georadius": {
+					"description": "Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation). ",
+					"type": "geocircle"
+				},
+				"height": {
+					"description": "The height of the item. ",
+					"type": "person or visualartwork or product or mediaobject"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				},
+				"width": {
+					"description": "The width of the item. ",
+					"type": "visualartwork or product or mediaobject"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/HowToTip.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "An explanation in the instructions for how to achieve a result. It provides supplementary information about a technique, supply, author s preference, etc. It can explain what could be done, or what should not be done, but doesn t specify what should be done (see HowToDirection).",
+    "properties": {
+        "nextItem": {
+            "description": "A link to the ListItem that follows the current one.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ListItem"
+            }
+        },
+        "position": {
+            "description": "The position of an item in a series or sequence of items.",
+            "type": "integer",
+            "format": "int32"
+        },
+        "previousItem": {
+            "description": "A link to the ListItem that preceeds the current one.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/ListItem"
+            }
+        },
+        "item": {
+            "description": "An entity represented by an entry in a list or data feed (e.g. an  artist  in a list of  artists )\u2019.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Thing"
+            }
+        }
+    }
+}

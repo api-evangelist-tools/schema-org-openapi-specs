@@ -1,0 +1,552 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Medical Trial API",
+		"description": "A medical trial is a type of medical study that uses scientific process used to compare the safety and efficacy of medical therapies or medical procedures. In general, medical trials are controlled and subjects are allocated at random to the different treatment and\/or control groups.",
+		"termsOfService": "http:\/\/apievangelist.com\/terms-of-service.html",
+		"version": "v1"
+	},
+	"host": "medical.trial.example.com",
+	"basePath": "\/",
+	"schemes": ["http"],
+	"produces": ["application\/json"],
+	"paths": {
+		"\/medical-trial\/": {
+			"get": {
+				"summary": "Get Medical Trial",
+				"description": "Returns Medical Trial",
+				"operationId": "getMedicalTrial",
+				"parameters": [{
+					"name": "q",
+					"in": "query",
+					"description": "Keyword search for item",
+					"required": false,
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalTrial"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Trial"]
+			},
+			"post": {
+				"summary": "Add Medical Trial",
+				"description": "Add Medical Trial",
+				"operationId": "addMedicalTrial",
+				"parameters": [{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "code",
+					"in": "formData",
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"required": false,
+					"type": "medicalcode"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "guideline",
+					"in": "formData",
+					"description": "A medical guideline related to this entity.",
+					"required": false,
+					"type": "medicalguideline"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "medicinesystem",
+					"in": "formData",
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"required": false,
+					"type": "medicinesystem"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "outcome",
+					"in": "formData",
+					"description": "Expected or actual outcomes of the study.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "phase",
+					"in": "formData",
+					"description": "The phase of the trial.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "population",
+					"in": "formData",
+					"description": "Any characteristics of the population used in the study, e.g. \\'males under 65\\'.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "recognizingauthority",
+					"in": "formData",
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "relevantspecialty",
+					"in": "formData",
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"required": false,
+					"type": "medicalspecialty"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "sponsor",
+					"in": "formData",
+					"description": "Sponsor of the study.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "status",
+					"in": "formData",
+					"description": "The status of the study (enumerated).",
+					"required": false,
+					"type": "medicalstudystatus"
+				},
+				{
+					"name": "study",
+					"in": "formData",
+					"description": "A medical study or trial related to this entity.",
+					"required": false,
+					"type": "medicalstudy"
+				},
+				{
+					"name": "studylocation",
+					"in": "formData",
+					"description": "The location in which the study is taking\/took place.",
+					"required": false,
+					"type": "administrativearea"
+				},
+				{
+					"name": "studysubject",
+					"in": "formData",
+					"description": "A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
+					"required": false,
+					"type": "medicalentity"
+				},
+				{
+					"name": "trialdesign",
+					"in": "formData",
+					"description": "Specifics about the trial design (enumerated).",
+					"required": false,
+					"type": "medicaltrialdesign"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalTrial"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Trial"]
+			}
+		},
+		"\/medical-trial\/{id}\/": {
+			"get": {
+				"summary": "Get Medical Trial",
+				"description": "Returns a single Medical Trial",
+				"operationId": "getMedicalTrial",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalTrial"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Trial"]
+			},
+			"put": {
+				"summary": "Update Medical Trial",
+				"description": "Update a single Medical Trial",
+				"operationId": "updateMedicalTrialItem",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				},
+				{
+					"name": "additionaltype",
+					"in": "formData",
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "alternatename",
+					"in": "formData",
+					"description": "An alias for the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "code",
+					"in": "formData",
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"required": false,
+					"type": "medicalcode"
+				},
+				{
+					"name": "description",
+					"in": "formData",
+					"description": "A short description of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "guideline",
+					"in": "formData",
+					"description": "A medical guideline related to this entity.",
+					"required": false,
+					"type": "medicalguideline"
+				},
+				{
+					"name": "image",
+					"in": "formData",
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"required": false,
+					"type": "url or  imageobject"
+				},
+				{
+					"name": "mainentityofpage",
+					"in": "formData",
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"required": false,
+					"type": "creativework or  url"
+				},
+				{
+					"name": "medicinesystem",
+					"in": "formData",
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"required": false,
+					"type": "medicinesystem"
+				},
+				{
+					"name": "name",
+					"in": "formData",
+					"description": "The name of the item.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "outcome",
+					"in": "formData",
+					"description": "Expected or actual outcomes of the study.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "phase",
+					"in": "formData",
+					"description": "The phase of the trial.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "population",
+					"in": "formData",
+					"description": "Any characteristics of the population used in the study, e.g. \\'males under 65\\'.",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"name": "potentialaction",
+					"in": "formData",
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"required": false,
+					"type": "action"
+				},
+				{
+					"name": "recognizingauthority",
+					"in": "formData",
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "relevantspecialty",
+					"in": "formData",
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"required": false,
+					"type": "medicalspecialty"
+				},
+				{
+					"name": "sameas",
+					"in": "formData",
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"required": false,
+					"type": "url"
+				},
+				{
+					"name": "sponsor",
+					"in": "formData",
+					"description": "Sponsor of the study.",
+					"required": false,
+					"type": "organization"
+				},
+				{
+					"name": "status",
+					"in": "formData",
+					"description": "The status of the study (enumerated).",
+					"required": false,
+					"type": "medicalstudystatus"
+				},
+				{
+					"name": "study",
+					"in": "formData",
+					"description": "A medical study or trial related to this entity.",
+					"required": false,
+					"type": "medicalstudy"
+				},
+				{
+					"name": "studylocation",
+					"in": "formData",
+					"description": "The location in which the study is taking\/took place.",
+					"required": false,
+					"type": "administrativearea"
+				},
+				{
+					"name": "studysubject",
+					"in": "formData",
+					"description": "A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
+					"required": false,
+					"type": "medicalentity"
+				},
+				{
+					"name": "trialdesign",
+					"in": "formData",
+					"description": "Specifics about the trial design (enumerated).",
+					"required": false,
+					"type": "medicaltrialdesign"
+				},
+				{
+					"name": "url",
+					"in": "formData",
+					"description": "URL of the item.",
+					"required": false,
+					"type": "url"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalTrial"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Trial"]
+			},
+			"delete": {
+				"summary": "Medical Trial",
+				"description": "Deletes a single Medical Trial",
+				"operationId": "deleteMedicalTrial",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"description": "Unique id for item",
+					"required": true,
+					"type": "integer"
+				}],
+				"responses": {
+					"200": {
+						"description": "A successful response.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#\/definitions\/MedicalTrial"
+							}
+						}
+					}
+				},
+				"tags": ["Medical Trial"]
+			}
+		}
+	},
+	"definitions": {
+		"MedicalTrial": {
+			"properties": {
+				"additionaltype": {
+					"description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the \\'typeof\\' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+					"type": "url"
+				},
+				"alternatename": {
+					"description": "An alias for the item.",
+					"type": "text"
+				},
+				"code": {
+					"description": "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+					"type": "medicalcode"
+				},
+				"description": {
+					"description": "A short description of the item.",
+					"type": "text"
+				},
+				"guideline": {
+					"description": "A medical guideline related to this entity.",
+					"type": "medicalguideline"
+				},
+				"image": {
+					"description": "An image of the item. This can be a URL or a fully described ImageObject.",
+					"type": "url or  imageobject"
+				},
+				"mainentityofpage": {
+					"description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described.            See background notes for details.       Inverse property: mainEntity.",
+					"type": "creativework or  url"
+				},
+				"medicinesystem": {
+					"description": "The system of medicine that includes this MedicalEntity, for example \\'evidence-based\\', \\'homeopathic\\', \\'chiropractic\\', etc.",
+					"type": "medicinesystem"
+				},
+				"name": {
+					"description": "The name of the item.",
+					"type": "text"
+				},
+				"outcome": {
+					"description": "Expected or actual outcomes of the study.",
+					"type": "text"
+				},
+				"phase": {
+					"description": "The phase of the trial.",
+					"type": "text"
+				},
+				"population": {
+					"description": "Any characteristics of the population used in the study, e.g. \\'males under 65\\'.",
+					"type": "text"
+				},
+				"potentialaction": {
+					"description": "Indicates a potential Action, which describes an idealized action in which this thing would play an \\'object\\' role.",
+					"type": "action"
+				},
+				"recognizingauthority": {
+					"description": "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+					"type": "organization"
+				},
+				"relevantspecialty": {
+					"description": "If applicable, a medical specialty in which this entity is relevant.",
+					"type": "medicalspecialty"
+				},
+				"sameas": {
+					"description": "URL of a reference Web page that unambiguously indicates the item\\'s identity. E.g. the URL of the item\\'s Wikipedia page, Freebase page, or official website.",
+					"type": "url"
+				},
+				"sponsor": {
+					"description": "Sponsor of the study.",
+					"type": "organization"
+				},
+				"status": {
+					"description": "The status of the study (enumerated).",
+					"type": "medicalstudystatus"
+				},
+				"study": {
+					"description": "A medical study or trial related to this entity.",
+					"type": "medicalstudy"
+				},
+				"studylocation": {
+					"description": "The location in which the study is taking\/took place.",
+					"type": "administrativearea"
+				},
+				"studysubject": {
+					"description": "A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
+					"type": "medicalentity"
+				},
+				"trialdesign": {
+					"description": "Specifics about the trial design (enumerated).",
+					"type": "medicaltrialdesign"
+				},
+				"url": {
+					"description": "URL of the item.",
+					"type": "url"
+				}
+			}
+		}
+	}
+}

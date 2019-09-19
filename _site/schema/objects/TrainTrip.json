@@ -1,0 +1,51 @@
+{
+    "$id": "http:\/\/schema.org.apievangelist.com\/schema\/objects\/TrainTrip.json",
+    "schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+    "description": "A trip on a commercial train line.",
+    "properties": {
+        "departureStation": {
+            "description": "The station from which the train departs.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/TrainStation"
+            }
+        },
+        "provider": {
+            "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/Organization"
+            }
+        },
+        "arrivalPlatform": {
+            "description": "The platform where the train arrives.",
+            "type": "string"
+        },
+        "departurePlatform": {
+            "description": "The platform from which the train departs.",
+            "type": "string"
+        },
+        "trainName": {
+            "description": "The name of the train (e.g. The Orient Express).",
+            "type": "string"
+        },
+        "trainNumber": {
+            "description": "The unique identifier for the train.",
+            "type": "string"
+        },
+        "arrivalStation": {
+            "description": "The station where the train trip ends.",
+            "schema": {
+                "$ref": "http://schema.org.apievangelist.com/schema/objects/TrainStation"
+            }
+        },
+        "arrivalTime": {
+            "description": "The expected arrival time.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "departureTime": {
+            "description": "The expected departure time.",
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}
